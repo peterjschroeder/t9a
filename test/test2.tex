@@ -1,0 +1,32 @@
+
+%Language is defined here
+\def\languageisenglish{}
+
+% Preamble
+\subimport{../Layout/}{AB_layout.tex}
+
+\newcommand{\booktitle}{TEST}
+\newcommand{\preversion}{TEST}
+\newcommand{\version}{TEST}
+\newcommand{\booklogo}{logo_9th.png}
+\def\bookprefix{TEST}
+\hypersetup{pdftitle={T9A - \booktitle}}
+
+\newcommand{\footerleft}{nothing}
+\newcommand{\footerright}{nothing}
+
+\newwrite\tempfile
+\begin{document}
+
+test
+
+\immediate\openout\tempfile=outputoftest2.txt
+\immediate\write\tempfile{this is interesting}
+\pdfstringdef\test{\{test\}}
+\immediate\write\tempfile{\test}
+\immediate\closeout\tempfile
+
+
+
+
+\end{document}

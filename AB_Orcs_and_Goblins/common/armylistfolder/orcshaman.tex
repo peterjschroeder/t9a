@@ -1,0 +1,58 @@
+
+\unitentry{%
+	name=\orcshaman{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\bignnastyInitial}{\bignnasty},
+	cost=130,
+	unitsize=1,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\wizardapprentice{}},
+	defensename=\commonorc{},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	defensenameB=\feralorc{},
+	defenseB@HP=3,
+	defenseB@Df=2,
+	defenseB@Re=4,
+	defenseB@Arm=0,
+	defenserulesB={\aegis{} {(5+)}},
+	offensename=\orcshaman{},
+	offense@At=2,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={},
+	magic={\wizardadept{}=95,\wizardmaster{}=265},
+	paths={\shamanism{}=shamanism,\thaumaturgy{}=thaumaturgy,\pyromancy{}=pyromancy},	
+	options={%
+		\ghchoice{%
+			\commonorc{}=\free{},
+			\feralorc{}=20,
+		},
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,		
+		\pw{}=5,
+	},
+	additionalframe={%
+		\ghentry{\commonorc{}}{}{%
+			\warboar{}=30,
+			\orcboarchariot{}=60,
+			\wyvern{} \only{\wizardmaster{}} (\bignnastyInitial{})=75,
+		}%
+		\ghentry{\feralorc{}}{}{%
+			\warboar{}=30,
+			\wyvern{} \only{\wizardmaster{}} (\bignnastyInitial{})=75,
+		}%
+	},
+}%

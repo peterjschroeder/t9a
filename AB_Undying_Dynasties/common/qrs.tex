@@ -1,0 +1,74 @@
+
+\maintitle{UDQRS}{\quickrefsheet}
+
+\subimport{../../Layout/}{AB_qrs.tex}
+
+\vspace*{20pt}
+
+\centeredsubtitle{\shootingweapons}
+
+\startartillerytable
+\petrifyinggaze{} & - & \distance{12} & - & 10 & 2 & \magicalattacks{} \par \towoundagainstheight{} \tabularnewline
+\aspenbow{} & - & \distance{24} & 3 & 0 & 1 & \volleyfire{} \tabularnewline
+\greataspenbow{} & - & \distance{36} & 5 & 2 & 1 & \volleyfire{} \tabularnewline
+\giantaspenbow{} & - & \distance{48} & 3 [6] & 10 & 1 & \alphaorderlistpar{\areaattack{} (1\timess{}5),[\multiplewounds{\Dthree{}}{}]} \tabularnewline
+\charnelcatapult{} & \catapult{6\timess{}6} & \distance{12--48} & 3 [7] & 0 [4] & 1 & \alphaorderlistpar{\flamingattacks{},\magicalattacks{},[\multiplewounds{D3}{}]} \par\panictestcharnelcatapult{} \tabularnewline
+\closeartillerytable
+
+\vspace*{20pt}
+
+\centeredsubtitle{\aimtable}
+
+\startaimtable
+\petrifyinggaze{} & \auto{} & \sandstalkers{} \tabularnewline
+\aspenbow{} & 4+\refsymbol{} & \characters{} \tabularnewline
+& 5+\refsymbol{} & \QRSothers{} \tabularnewline
+\greataspenbow{} & 4+\refsymbol{} & \characters{} \tabularnewline
+& 5+\refsymbol{} & \shabtiarcher{} \tabularnewline
+\giantaspenbow{} & 5+\refsymbol{} & \colossus{} \tabularnewline
+\charnelcatapult{} & 5+\refsymbol{} & \charnelcatapult{} \tabularnewline
+\closeaimtable
+\artillerytablenote{\refsymbolbis{}\aimnote{}}
+
+\vspace*{20pt}
+
+\centeredsubtitle{\resurrected}
+
+{\normalfontsize\renewcommand{\arraystretch}{1.5}%
+\newcommand{\printitemwithcommaandspace}[1]{#1, }%
+\newcounter{QRSResLineNumberTotal}%
+\newcounter{QRSResLineNumber}%
+\newcommand{\printQRSRsrLine}[1]{%
+	\expandafter\ifblank\expandafter{#1}{}{%
+		\setcounter{QRSResLineNumberTotal}{0}%
+		\forlistloop{\stepcounter{QRSResLineNumberTotal}\void}{#1}%
+		\setcounter{QRSResLineNumber}{0}%
+		\forlistloop{%
+			\stepcounter{QRSResLineNumber}%
+			\ifnumequal{\value{QRSResLineNumber}}{\value{QRSResLineNumberTotal}}%
+			{}% print the last item as it is
+			{\printitemwithcommaandspace}% print the item and add a commad and a space
+		}{#1}%
+	}%
+}
+\begin{center}\begin{tabular}{m{0.3cm}m{10cm}}%
+\toprule%
+\DTLsort*{globalRsrSortLabel}{profiles}% Sort list
+\newcounter{rsr}\setcounter{rsr}{1}% Rsr value
+\newcommand{\changeRsrcounter}[1]{\setcounter{rsr}{#1}}%
+\global\def\QRSRsrLineList{}%
+	\DTLforeach*{profiles}{\QRSRsr=globalRsrSortLabel,\QRSunitname=unitname}{% Print the ordered table
+		\expandafter\ifnumcomp\expandafter{\QRSRsr}{>}{\value{rsr}}{%
+			% Then we have finished a line (if there was one), and we need to print it
+			\expandafter\ifblank\expandafter{\QRSRsrLineList}{}{\textbf{\arabic{rsr}} & \printQRSRsrLine{\QRSRsrLineList} \tabularnewline}%
+			\setcounter{rsr}{\QRSRsr}% the counter get the new value
+			\global\def\QRSRsrLineList{}% we empty the list
+		}{}%
+		\expandafter\ifnumcomp\expandafter{\QRSRsr}{<}{\value{rsr}}{}{%
+			\listxadd{\QRSRsrLineList}{\QRSunitname}%
+		}%
+		% If it was the last row, we need to print the last line
+		\DTLiflastrow{\expandafter\ifblank\expandafter{\QRSRsrLineList}{}{\textbf{\arabic{rsr}} & \printQRSRsrLine{\QRSRsrLineList} \tabularnewline\bottomrule}}{}%
+	}%
+\end{tabular}\end{center}
+}

@@ -1,0 +1,126 @@
+
+\part{Characteristics}
+\idx[main=y]{Characteristics}\label{characteristics}
+
+\RBbmc
+
+\section{Characteristic Profiles}
+\idx[main=y]{Characteristic Profiles}\label{the_characteristics_profiles}
+
+Each unit entry contains the following Characteristic Profiles: Global Characteristics, Defensive Characteristics, and Offensive Characteristics.
+
+\subsection{Global Characteristics}
+\idx[main=y]{Global Characteristics}
+
+Each model has three Global Characteristics:
+
+\paragraph{\AdvanceRateInitials{} (\AdvanceRate{})}
+\idx[main=y]{Advance Rate (\AdvanceRateInitials)}
+
+\flufffont{The distance the model can Advance Move in inches.}
+
+\paragraph{\MarchRateInitials{} (\MarchRate{})}
+\idx[main=y]{March Rate (\MarchRateInitials)}
+
+\flufffont{The distance the model can March Move in inches.}
+
+\paragraph{\DisciplineInitials{} (\Discipline{})}
+\idx[main=y]{Discipline (\DisciplineInitials)}
+
+\flufffont{The model's ability to stand and fight.}
+
+\subsection{Defensive Characteristics}
+\idx[main=y]{Defensive Characteristics}
+
+Each model has four Defensive Characteristics:
+
+\paragraph{\HealthPointsInitials{} (\HealthPoints{})}
+\idx[main=y]{Health Points (\HealthPointsInitials)}
+
+\flufffont{When the model loses this many Health Points, it is removed as a casualty.}
+
+\paragraph{\DefensiveSkillInitials{} (\DefensiveSkill{})}
+\idx[main=y]{Defensive Skill (\DefensiveSkillInitials)}
+
+\flufffont{How well the model avoids being hit in melee.}
+
+\paragraph{\ResilienceInitials{} (\Resilience{})}
+\idx[main=y]{Resilience (\ResilienceInitials)}
+
+\flufffont{How easily the model withstands blows.}
+
+\paragraph{\ArmourInitials{} (\Armour{})}
+\idx[main=y]{Armour (\ArmourInitials)}
+
+\flufffont{The innate Armour of the model.}
+
+\subsection{Offensive Characteristics}
+\idx[main=y]{Offensive Characteristics}
+
+If a model consists of more than one model part, each model part has its own set of Offensive Characteristics. Each model part has five Offensive Characteristics:
+
+\paragraph{\AgilityInitials{} (\Agility{})}
+\idx[main=y]{Agility (\AgilityInitials)}
+
+\flufffont{Model parts with a higher Agility strike first in melee.}
+
+\paragraph{\AttackValueInitials{} (\AttackValue{})}
+\idx[main=y]{Attack Value (\AttackValueInitials)}
+
+\flufffont{The number of times the model part can strike in a Round of Combat.}
+
+\paragraph{\OffensiveSkillInitials{} (\OffensiveSkill{})}
+\idx[main=y]{Offensive Skill (\OffensiveSkillInitials)}
+
+\flufffont{How good the model part is at scoring hits in melee.}
+
+\paragraph{\StrengthInitials{} (\Strength{})}
+\idx[main=y]{Strength (\StrengthInitials)}
+
+\flufffont{How easily the model part can wound enemy models.}
+
+\paragraph{\ArmourPenetrationInitials{} (\ArmourPenetration{})}
+\idx[main=y]{Armour Penetration (\ArmourPenetrationInitials)}
+
+\flufffont{How well the model part can penetrate the Armour of enemy models.} 
+
+\section{Characteristic Values}
+\label{characteristic_values}
+
+Usually each Characteristic is rated with a value between 0 and 10. A higher value of a given Characteristic indicates that a model is more accomplished in that Characteristic. These values are used for various game mechanics like moving units and attacking with models, which will be explained in later chapters.
+
+\subsection{Random Characteristics}
+\idx[main=y]{Random Characteristics}
+
+Some model parts have random values for one or more Characteristics (e.g. Attack Value D6+1). Roll for the value each time immediately before it is needed. In the case of Defensive and Offensive Characteristics, the rolled value is used for all simultaneous attacks from that model part (such as Shooting Attacks  or Melee Attacks at the same Initiative Step). When several model parts in the same unit have a random value for a Characteristic, roll separately for each model part.
+
+A random value for Advance Rate means that the model has the Random Movement Universal Rule (see \totalref{random_movement}).
+
+\subsection[Special Cases of Characteristic Values]{Special Cases of Characteristic\\ Values}
+\label{special_cases_of_characteristic_values}
+
+Sometimes Characteristic values in the Defensive or Global Characteristic Profile of mounts may contain a \enquote{\ascharacter{}} instead of a value. In this case, \enquote{\ascharacter{}} refers to the value in the Character’s profile, which is used instead.
+
+Sometimes a value is written as \enquote{\ascharacter{} + X}. In this case, use the Character’s value, increased by X (see \totalref{defensive_and_global_characteristics}).
+
+In other cases, a model part may not have any values for certain Characteristics (e.g. the chassis of a chariot). These cannot be modified in any way.
+
+\section{Characteristic Tests}
+\idx[main=y]{Characteristic Test}\label{characteristic_tests}
+
+To perform a Characteristic Test, roll a D6. If the result is lower than or equal to the value of the tested Characteristic, the test is passed. Otherwise the test is failed. A test always fails on the result of \result{6}.
+
+When a model with more than one value for a Characteristic takes a Characteristic Test, take a single test for the Multipart Model, using the highest value available. For instance, if a Sylvan Elf Character with Strength 4 riding an Elven Horse with Strength 3 has to take a Strength test, the Multipart Model uses Strength 4 for this test.
+
+When a unit as a whole takes a Characteristic Test, the highest value is used.
+
+\subsection{Discipline Tests}
+\idx{Discipline (\DisciplineInitials)}\idx{Break Test}\label{discipline_tests}
+
+Discipline Tests are a special type of Characteristic Test and follow their own rules. To perform a Discipline Test, roll 2D6 and compare the result with the model's Discipline Characteristic. If the result is lower than or equal to the Discipline value, the test is passed. Otherwise, the test is failed.
+
+When a unit as a whole takes a Discipline Test, the owner chooses a single model in the unit to take the test for the whole unit. If there are different Discipline values in the unit, the owner chooses which model to use. This often occurs when Characters are joined to units. If the model passes the Discipline Test, every model in the unit is considered to have passed the test. If the model fails the Discipline Test, every model in the unit is considered to have failed the Discipline Test.
+
+Many different game mechanics call for a Discipline Test, such as performing a Panic Test or a Break Test. All these mechanics are Discipline Tests, regardless of any additional rules and modifications described in the relevant rules sections.
+
+\RBemc

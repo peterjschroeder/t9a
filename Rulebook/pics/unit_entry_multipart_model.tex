@@ -1,0 +1,45 @@
+
+\begin{tikzpicture}[overlay,every node/.style={draw=red,circle,thick, inner sep=0pt,minimum size=12pt}]
+	\node at (9.6,-0.35) {\textcolor{red}{a}};
+	\node at (5.4,-1.85) {\textcolor{red}{b}};
+	\node at (-0.05,-4.5) {\textcolor{red}{c}};
+\end{tikzpicture}
+\scalebox{0.8}{%
+	\unitentry{%
+		name=\wingedmonkeychariot{},
+		logo=character,
+		maxmountsperarmy=1,
+		type=\construct{},
+		size=\heightlarge{},
+		basesize=50\timess{}100,
+		global@Ad=2,
+		global@Ma=2,
+		global@Adfly=9,
+		global@Mafly=9,
+		global@Di=\ascharacter{},
+		globalrules={\fly{9}{9},\lighttroops{},\swiftstride{}},
+		defense@HP=4,
+		defense@Df=\ascharacter{},
+		defense@Re=4,
+		defense@Arm=\ascharacter{}+1,
+		defenserules={\hardtarget{} (1)},
+		offensename=\crew{} (2),
+		offense@At=1,
+		offense@Of=4,
+		offense@St=3,
+		offense@AP=0,
+		offense@Ag=5,
+		offenseweapons={\lightlance},
+		offensenameB={\wingedmonkey{} (2)},
+		offenseB@At=2,
+		offenseB@Of=4,
+		offenseB@St=4,
+		offenseB@AP=1,
+		offenseB@Ag=4,
+		offenserulesB={\harnessed{},\hatred{}},
+		offensenameI=\chassis{},
+		offenseI@St=5,
+		offenseI@AP=2,
+		offenserulesI={\impacthits{D6},\inanimate{}},
+	}
+}

@@ -1,0 +1,50 @@
+
+%Language is defined here
+%\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+
+% Preamble
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{common/}{layout.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_armylist.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_modelrules.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_others.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_totems.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_specialequipment.tex}
+\subimport{common/}{toc.tex}
+\subimport{common/}{footer.tex}
+
+\newcommand{\booktitle}{Beast Herds}
+\newcommand{\preversion}{\nth{2} Edition, version~}
+\newcommand{\version}{2.0}
+%\newcommand\releasedate{November 16, 2018} % Comment if you want to use today's date in your default language
+%\newcommand{\translationversion}{PROOFREADING VERSION} % Translation version, or anything related to version
+\newcommand{\booklogo}{pics/logo_big_BH.png}
+\def\bookprefix{BH}
+\hypersetup{pdftitle={T9A -- \booktitle{} -- \version}}
+
+\begin{document}
+
+% all main sections are in specific files
+\subimport{../Layout/}{Titlepage.tex}
+\subimport{common/}{modelrules.tex}
+\newpage
+\subimport{common/}{totems.tex}
+\additionalspacebeforemaintitle{}
+\subimport{common/}{hereditaryspell.tex}
+\newpage
+\subimport{common/}{specialequipment.tex}
+\newpage
+\subimport{common/}{armyorg.tex}
+\additionalspacebeforemaintitle{}
+\subimport{common/}{armylist.tex}
+\newpage
+\subimport{common/}{qrs.tex}
+%\newpage
+%\subimport{language_specific/\languagetag/}{changelog.tex}
+
+\end{document}

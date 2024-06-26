@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\infernalengine{},
+	logo=IoD,
+	cost=400,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\construct{},
+	size=\heightgigantic{},
+	basesize=60\timess{}100,
+	global@Ad=6,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={,\infernalbrand{},\unbreakable{},\fearless{},\hidebf{\fullsteamahead{}},\furnacebreach{}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=7,
+	defense@Arm=4,
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={},
+	offensenameB=\chassis{},
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=2,
+	offenserulesB={\harnessed{},\impacthits{} (\Dsix{}+1),\grindattacks{} (\Dthree{})},
+	modelrulesdef={%
+		\modelruledef{\fullsteamahead}{\ruletype{\universalrule}\fullsteamaheaddef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\rockcrusher}{\ruletype{\universalrule}\rockcrusherdef}
+	},
+	options={%
+		\optionschoice{\thechassismustchoose{} \onechoiceonlyNOC{}\Scolon{}}{\AlCoOrder{%
+			\naphthathrower{} \wordand{} \firesofindustrySHORT{} (2)=25,
+			\rocketbattery{} (4+) \wordand{} \firesofindustrySHORT{} (2)=30,
+			\titanmortar{} (4+) \wordand{} \firesofindustrySHORT{} (2)=\free{},
+			\textbf{\rockcrusher{}}=50,
+		}},
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\kncdr{},
+	logo=character,
+	cost=175,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\cavalry{},
+	size=\seemount{},
+	basesize=\seemount{},
+	basesizenotag=yes,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules=\hidebf{\firstkn{}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour=\pa{},
+	offensename=\kncdr{},
+	offense@Ag=6,
+	offense@At=4,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	options={%
+		\specialitemsallowance{}=\upto{}200,
+		\shield{}=5,
+		\onechoiceonlyACO{%
+            \pick{}=30,
+            \gw{}=5,
+            \halberd{}=5,
+            \lance{}=10,
+		},
+    },
+	mounts={%
+			\void{AAA}\musttakeamount{}\spacebeforecolon{}:=\void{0},
+			\suboptionindent{}\horse{}=\free{},
+			\suboptionindent{}\younggriff{}=40,
+	},
+	modelrulesdef={%
+		\modelruledef{\firstkn{}}{\ruletype{\universalrule{}}\firstkndef{}}
+	},
+} % END UNIT ENTRY

@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\caimanwarriors{},
+	logo=core,
+	cost=230,
+	unitsize=4,
+	maxunitsize=9,
+	costpermodel=55,
+	scoring=yes,
+	maxmodelsperarmy=9,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=7,
+	globalrules={\swiftreform{},\communalbond{},\scoring{}, \strider{\waterterrain{}},\minimised{} (\disciplinetest{})},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=3,
+	offensename=\caimanwarrior{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=1,
+	offenseweapons={},
+	commandgroup={%
+		\champion{} \withenclavewizard{}=30,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+options={
+	\mustchooseonechoiceonly{
+		\halberd{}=4\permodel{},
+		\toothandclaw{}=\free{},
+	},
+},
+	wizardconclave={%
+		\enclavewizardspellsintro{%
+			\spellformat{\shamanismspellone}{\shamanism},
+		}
+	},
+}% END UNIT ENTRY

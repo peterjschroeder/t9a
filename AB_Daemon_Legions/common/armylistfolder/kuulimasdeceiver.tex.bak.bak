@@ -1,0 +1,84 @@
+<<<<<<< HEAD
+\unitentry{%
+	name=\kuulimasdeceiver{},
+	logo=character,
+	optionallogo=bird,
+	categorynote={\upgradecategorynote{\avesinitials}{\aves}},
+	cost=310,
+	unitsize=1,
+	type=\beast{},
+	size=\heightstandard{},
+	maxunitsperarmy=3,
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\fear{},\supernal{},\fearless{},\proteanmagic{},\wizardapprentice{},\hidebf{\dominionofenvy},\lighttroops{}},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\kuulimasdeceivershort{},
+	offense@At=1,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=5,
+	offenserules={\hidebf{\knowthyself},\poisonattacks{}},
+	magic={\wizardadept{}=85,\wizardmaster{}=225,},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\witchcraft{}=witchcraft,\evocation{}=evocation},
+	options={%
+		\musttakegreaterdominion{} \only{\general{}}=30,
+		\fly{7}{14} [\avesinitials{}]=35,
+		\manifestationsoffatherchaosandenvy{}=\upto{}150,
+	},
+	modelrulesdef={%
+		\modelruledef{\knowthyself}{\ruletype{\universalrule}\knowthyselfdef}
+		\modelruledef{\dominionofenvy}{\ruletype{\universalrule}\dominionofenvydef}
+	},
+} % END UNIT ENTRY
+=======
+
+\unitentry{%
+	name=\kuulimasdeceiver{},
+	logo=character,
+	optionallogo=bird,
+	categorynote={\upgradecategorynote{\avesinitials}{\aves}},
+	cost=310,
+	unitsize=1,
+	type=\beast{},
+	size=\heightstandard{},
+	maxunitsperarmy=3,
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\fear{},\supernal{},\fearless{},\proteanmagic{},\wizardapprentice{},\hidebf{\dominionofenvy},\lighttroops{}},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\kuulimasdeceiver{},
+	offense@At=1,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=5,
+	offenserules={\hidebf{\knowthyself},\poisonattacks{}},
+	magic={\wizardadept{}=85,\wizardmaster{}=225,},
+	paths={\divination{}=divination,\thaumaturgy{}=thaumaturgy,\witchcraft{}=witchcraft,\evocation{}=evocation},
+	options={%
+		\musttakegreaterdominion{} \only{\general{}}=30,
+		\fly{7}{14} [\avesinitials{}]=35,
+		\manifestationsoffatherchaosandenvy{}=\upto{}150,
+	},
+	modelrulesdef={%
+		\modelruledef{\knowthyself}{\ruletype{\universalrule}\knowthyselfdef}
+		\modelruledef{\dominionofenvy}{\ruletype{\universalrule}\dominionofenvydef}
+	},
+} % END UNIT ENTRY
+>>>>>>> release/may-update

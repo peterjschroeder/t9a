@@ -1,0 +1,167 @@
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\beastlord}{Beast Lord}
+\newcommand{\beastchieftain}{Beast Chieftain}
+\newcommand{\soothsayer}{Soothsayer}
+\newcommand{\minotaurwarlord}{Minotaur Warlord}
+\newcommand{\minotaurchieftain}{Minotaur Chieftain}
+\newcommand{\centaurchieftain}{Centaur Chieftain}
+
+% MOUNTS
+
+\newcommand{\raidingchariot}{Raiding Chariot}
+\newcommand{\wildhorncrew}{Wildhorn Crew}
+\newcommand{\warhog}{War Hog}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\razortuskchariot}{Razortusk Chariot}
+\newcommand{\razortusk}{Razortusk}
+
+% CORE
+
+\newcommand{\wildhornherd}{Wildhorn Herd}
+\newcommand{\wildhorn}{Wildhorn}
+
+\newcommand{\mongrelherd}{Mongrel Herd}
+\newcommand{\mongrel}{Mongrel}
+
+\newcommand{\mongrelraiders}{Mongrel Raiders}
+\newcommand{\mongrelraider}{Mongrel Raider}
+
+% SPECIAL
+
+\newcommand{\feralhound}{Feral Hound}
+\newcommand{\feralhounds}{Feral Hounds}
+
+\newcommand{\longhornherd}{Longhorn Herd}
+\newcommand{\longhorn}{Longhorn}
+
+\newcommand{\minotaur}{Minotaur}
+\newcommand{\minotaurs}{Minotaurs}
+
+\newcommand{\centaur}{Centaur}
+\newcommand{\centaurs}{Centaurs}
+
+% Raiding Chariot - already defined in mounts
+\newcommand{\raidingchariots}{Raiding Chariots}
+\newcommand{\longhorncrew}{Longhorn Crew}
+
+\newcommand{\razortuskherd}{Razortusk Herd}
+
+% Razortusk Chariot - already defined in mounts
+
+\newcommand{\briarbeast}{Briar Beast}
+\newcommand{\briarbeasts}{Briar Beasts}
+
+\newcommand{\gargoyle}{Gargoyle}
+\newcommand{\gargoyles}{Gargoyles}
+
+% TERRORS OF THE WILD
+
+\newcommand{\cyclops}{Cyclops}
+
+\newcommand{\gortach}{Gortach}
+
+\newcommand{\jabberwock}{Jabberwock}
+
+\newcommand{\beastgiant}{Beast Giant}
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Beast Lord and Beast Chieftain
+
+\newcommand{\generalonfootonly}{(General on foot only)}
+\newcommand{\generalonly}{(General only)}
+
+% Soothsayer
+
+\newcommand{\bloodoffering}{Blood Offering}
+\newcommand{\bloodofferingdef}{%
+A unit that includes at least one Character with \bloodoffering{} may reroll failed Panic Tests at the cost of inflicting one wound with no saves of any kind allowed on a Character with \bloodoffering{} in the unit.
+}
+
+
+%% MOUNTS
+
+% Razortusk Chariot
+
+\newcommand{\huntinghorn}{Hunting Horn}
+\newcommand{\huntinghorndef}{%
+While within \distance{6} of one or more models with Hunting Horn, friendly units gain \textbf{\devastatingcharge{\distance{+1} Adv}}.
+}
+
+
+%% CORE
+
+% Wildhorn Herd
+
+\newcommand{\ambushcategorynote}{The unit also counts towards \ambushpredators{} when taking Ambush.}%Also for Characters.
+
+
+%% SPECIAL
+
+% Feral Hounds
+
+\newcommand{\unitadditionallycounttowardsambush}{The unit also counts towards \ambushpredators{}.}
+
+% Briar Beast
+
+\newcommand{\sleeper}{Sleeper}
+\newcommand{\sleeperdef}{%
+The model gains \textbf{Special Ambush (Field, Forest, or Water Terrain)}, with the following exceptions: immediately after step 2 of the owner’s Movement Phase Sequence (including the owner’s Player Turn 1), the owner may decide for each of their Briar Beasts if they will enter the Battlefield or not (no dice rolls are required).
+}
+
+
+%% TERRORS OF THE WILD
+
+% Cyclops
+
+\newcommand{\hurlattack}{Hurl Attack}
+\newcommand{\hurlattackdef}{%
+\textbf{\catapult{} (4\timess{}4)}. \range{24}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], \textbf{\divineattacks}, \textbf{\magicalattacks}, \textbf{\quicktofire}, [\textbf{\multiplewounds{D3, \clippedwings{}}{}}].
+}
+
+% Gortarch
+
+\newcommand{\strengthfromflesh}{Strength from Flesh}
+\newcommand{\strengthfromfleshdef}{%
+Whenever a \gortach{} inflicts an unsaved wound with \lethalstrike{} (rolling a natural \result{6} to wound with a Close Combat Attack with \lethalstrike{}), the attack gains \textbf{\multiplewounds{D3}{}}, and the \gortach{} Recovers 1 Health Point at the end of the Initiative Step (unless the Gortach was removed as a casualty in this Initiative Step). No more than 1 Health Point may be Recovered by each \gortach{} per phase in this manner.
+}
+
+% Jabberwock
+
+\newcommand{\auraofmadness}{Aura of Madness}
+\newcommand{\auraofmadnessdef}{%
+Enemy units within \distance{6} of one or more models with \auraofmadness{} suffer \minuss{}1 Discipline.
+}
+
+% Beast Giant
+
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\uprootedtree}{Uprooted Tree}
+\newcommand{\beerbarrel}{Beer Barrel}
+
+\newcommand{\giantseegiantdodef}{%
+The model gains \textbf{\drunkard} and \textbf{\strider{\forest}}. At the end of a friendly Movement Phase, if the model is in contact with a Forest Terrain Feature it may lose all its current weapons and gain \textbf{\uprootedtree{}}.
+}
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}.\ The model gains \textbf{\maximised{\stompattacks{}}}.}
+
+\newcommand{\giantclubdef}{%
+Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.
+}
+\newcommand{\uprootedtreedef}{%
+Attacks made with this weapon hit automatically and have their Strength \textbf{always} set to 5 and their Armour Penetration \textbf{always} set to 0.
+}
+\newcommand{\beerbarreldef}{%
+The model gains \textbf{\lootedbooze}. Once per game, the weapon may be used as a Shooting Weapon with the following profile: \newline
+\range{8}, \shots{1}, \St{} 4, \AP{} 0, \textbf{\areaattack{3\timess{}3}}, \textbf{\reload}, hits automatically. After being used as a Shooting Weapon, the model loses \lootedbooze{}.
+}

@@ -1,0 +1,102 @@
+
+% Army Model Rules Names
+
+\newcommand{\tunnelmarkers}{Tunnel Markers}
+\newcommand{\tunnelmarker}{Tunnel Marker}
+\newcommand{\tunnelreserve}{Tunnel Reserve}
+
+\newcommand{\eaglestandard}{Eagle Standard}
+\newcommand{\callous}{Callous}
+\newcommand{\lifeischeap}{Life is Cheap}
+\newcommand{\valorousdiscretion}{Valorous Discretion}
+\newcommand{\holytriumvirate}{Holy Triumvirate}
+
+\newcommand{\cohortcoordination}{Cohort Coordination}
+\newcommand{\trialandterror}{Trial and Terror}
+\newcommand{\mishap}{Mishap}
+\newcommand{\lightningattacks}{Lightning Attacks}
+
+\newcommand{\cultoferrahman}{Cult of Errahman}
+
+\newcommand{\canisterlauncher}{Canister Launcher}
+\newcommand{\deepfirethrower}{Deepfire Thrower}
+\newcommand{\rotarygun}{Rotary Gun}
+\newcommand{\jezail}{Jezail}
+
+\newcommand{\bloodpoxblades}{Bloodpox Blades}
+
+
+% Army Specific Rules Texts
+
+\newcommand{\tunnelmarkersdef}{%
+	Each Vermin Swarm army gains two Tunnel Markers and can gain additional Tunnel Markers by including certain units in the Army List. At the start of step 7 of the Pre-Game Sequence (Spell Selection), for each of your army's Tunnel Markers, mark a point inside your half of the Battlefield with a Tunnel Marker. A player can only use up to 4 Tunnel Markers.%
+}
+
+\newcommand{\tunnelreservedef}{%
+	Certain units have the ability to either enter or start the game in Tunnel Reserve. These units gain \textbf{\specialambush{} (within \distance{1.5} of a friendly Tunnel Marker)}.
+}
+
+% Army Model Rules Texts
+
+\newcommand{\eaglestandarddef}{%
+	While a non-Fleeing unit with one or more Eagle Standards is within range of a friendly non-Fleeing model's Commanding Presence, the unit gains \textbf{Rally Around the Flag (\distance{8}, max. \distance{8})}.
+	 While within range of one or more instances of Rally Around the Flag from a friendly Eagle Standard, units gain \textbf{\minimised{Discipline Tests}} .%
+}
+
+\newcommand{\callousdef}{%
+	Health Point losses of the model that are caused by friendly models are ignored for Panic (including units destroyed due to attacks from friendly models). The model may use Shooting Attacks against enemy units Engaged in Combat, with the following rules and restrictions:%
+	\begin{itemize}%
+		\item Friendly units Engaged in this Combat are ignored for Cover purposes (but not for drawing Line of Sight).%
+		\item Roll to hit as normal against the intended target.  Immediately after determining the number of hits, roll a D6 for each hit. On a roll of 4+, the hit is distributed onto a randomly chosen friendly unit Engaged with the original target. Otherwise, proceed as normal.%
+	\end{itemize}%
+}
+
+\newcommand{\lifeischeapdef}{%
+	When calculating Combat Score, halve the number of Health Point losses of models with Life is Cheap, rounding fractions up. This does not include Combat Score bonuses from Overkill.%
+}
+
+\newcommand{\holytriumviratedef}{%
+	\zerotoXmodelsperarmy{3}.\newline
+	If there are at least 3 models with \textbf{\holytriumvirate{}} on your Army List, and they all have either \caelysianpantheon{} or they all have \cultoferrahman{}, these models can all select spells as follows:%
+	\begin{itemize}%
+		\item \textbf{Wizard Apprentices}: select from the Learned Spells 1, 2, 3, and 4 of their chosen Path and the Hereditary Spell.%
+		\item \textbf{Wizard Adepts}: select from the Learned Spells 1, 2, 3, 4, 5, and 6 of their chosen Path and the Hereditary Spell.%
+	\end{itemize}	%
+}
+
+\newcommand{\cohortcoordinationdef}{%
+	While the model's unit is Steadfast and does not suffer from Disrupted Ranks, the model gains  \textbf{\fightinextrarank{}}. Check if the conditions are met and apply the effects at the start of each Initiative Step.%
+}
+
+\newcommand{\trialandterrordef}{%
+	Immediately before performing a Shooting Attack with the weapon, the owner may choose to use the Trial and Terror shooting mode. If one model uses the Trial and Terror shooting mode, then all models in its unit \textbf{must} use it. If so, the Shooting Attack gains +1 to wound. The effects last until the end of the phase.%
+}
+
+\newcommand{\mishapdef}{%
+	The model suffers a Mishap when it rolls a natural \result{1} for the type of roll described in brackets (X). If X is \enquote{Misfire}, the model suffers a Mishap instead of suffering effects from Misfire.
+	A roll resulting in a Mishap can never be rerolled and an attack resulting in a Mishap is always lost.
+	When suffering a Mishap, after all simultaneous Shooting Attacks have been resolved, the model's unit suffers 1 hit that wounds automatically with Armour Penetration 10.
+	If the \textbf{\trialandterror{}} shooting mode was used, the model’s unit suffers 3 hits that wound automatically with Armour Penetration 10 instead.%
+}
+
+\newcommand{\cultoferrahmandef}{%
+	Whenever a natural \result{1} is rolled to hit for an enemy Close Combat Attack allocated towards a model with Cult of Errahman, the model part inflicts 1 hit with Toxic Attacks on the attacking model's unit in the same Initiative Step, before any casualties are removed.\newline%
+	\rnf{} models with Cult of Errahman cannot be joined by models without Cult of Errahman.%
+}
+
+\newcommand{\deepfirethrowerdef}{%
+	The model gains \textbf{\flammable{}}. The total number of simultaneous hits from a unit with this weapon cannot exceed the number of models in the target unit.\newline%
+	%
+}
+
+\newcommand{\bloodpoxbladesdef}{%
+	\pw{}. Attacks made with \bloodpoxblades{} become \textbf{\poisonattacks}.%
+}
+
+\newcommand{\rollfornumberofshots}{Roll for number of Shots}
+
+\newcommand{\tohitroll}{To-hit roll}
+\newcommand{\jezaildef}{%
+	The model part gains \textbf{Aegis (4+)} that can only be used against wounds from Mishaps. The model part loses \quicktofire{} if it had it (and cannot gain it in any way).%
+	%
+}

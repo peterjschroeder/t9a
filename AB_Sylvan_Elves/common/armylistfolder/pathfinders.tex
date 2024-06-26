@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\pathfinders{},
+	logo=arrows,
+	cost=175,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=50,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\skirmisher{},\forestwalker{},\scout{},\lighttroops{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\hardtarget{} (1)},
+	offensename=\pathfinder{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\masterarcher{}},
+	offenseweapons={\sylvanlongbow{} (2+),\sylvanblades{}},
+	commandgroup={%
+		\champion{}=10,
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\masterarcher{}}{\ruletype{\universalrule}\masterarcherdef}
+		\modelruledef{\sylvanlongbow{}}{\ruletype{\shootingweapon}\sylvanlongbowdef}
+		\modelruledef{\sylvanblades{}}{\ruletype{\closecombatweapon}\sylvanbladesdef}
+	},
+} % END UNIT ENTRY

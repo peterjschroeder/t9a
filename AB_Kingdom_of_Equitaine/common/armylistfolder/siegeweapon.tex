@@ -1,0 +1,47 @@
+
+\unitentry{%
+	name=\siegeweapon{},
+	logo=special,
+	cost=\newrule{110},
+	unitsize=1,
+	addrestriction=\zerotoXunitsperarmy{2},
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=75,
+	global@Ad=0,
+	global@Ma=0,
+	global@Di=7,
+	globalrules=\warmachine{},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	defenserules={\honesty{}},
+	offensename=\crew{},
+	forceoffensenameprint=yes,
+	offense@At=4,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules=\moveorfire{},
+	optionalmodelrulesdef={%
+		\modelruledef{\trebuchet}{\ruletype{\artilleryweapon}%
+			\textbf{\catapult{4\timess{}4}}, \range{12--72}, \shots{1}, \St{} 4, \AP{} 1. \trebuchetlarge{}.%
+		}
+		\modelruledef{\scorpion}{\ruletype{\artilleryweapon}%
+			\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{[\multiplewounds{\Dthree{}, \clippedwings{}}{}], \areaattack{1\timess{}5}}.%
+		}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\trebuchet{} (4+)}=\newrule{55},
+			\textbf{\scorpion{} (4+)}=\free{},
+		}},
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}
+		\togglefalse{twocolprintoptionalmodelrulesdef}
+	},
+}% END UNIT ENTRY

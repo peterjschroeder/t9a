@@ -1,0 +1,240 @@
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Marge reduction.
+
+%% Font and typing packages
+\usepackage{fontspec}
+\setmainfont[
+	Ligatures=TeX,
+	SmallCapsFont={Caladea}
+	]{Caladea} % default is Latin Modern
+
+\newfontfamily\titlefont[Ligatures=TeX]{Georgia} % font for front page title
+\usepackage{microtype}			% Greatly improves general appearance of the text.
+\usepackage{SIunits}			% Unit appearance.
+\usepackage{ulem}				% To cross words out. Use \sout{}.
+\usepackage{anyfontsize}  % Disable the warnings when a font size isn't available.
+\usepackage{unicode-math} % Math characters are copy pasted correctly
+
+\ifdefined\languageisfrench
+	%% Language specific package
+	\usepackage[french]{babel}
+	\frenchbsetup{StandardLists=true} % Necessary to use enumitem with babel/french.
+\fi
+\ifdefined\languageisenglish
+	%% Language specific package
+	\usepackage[super]{nth}
+\fi
+
+%% Array utilities
+\usepackage{array}				% Additionnal options for arrays.
+\usepackage{colortbl}			% Additionnal options for coloring arrays.
+\usepackage[table]{xcolor}		% Auto alternate grey-white rows. Xcolor must be loaded before mdframed.
+\usepackage[export]{adjustbox}		% Centered pics in tables
+\usepackage{diagbox}		% diagonal slash in a cell
+
+%% List utilities
+\usepackage[inline]{enumitem}   % Display inline lists.
+\usepackage{etoolbox}           % General utility. Good for lists for instance.
+\usepackage{xparse}             % List utilities.
+
+%% Frames
+\usepackage{framed}				% Boxes.
+\usepackage[framemethod=TikZ]{mdframed}% For fancy frames.
+\usepackage{tikz}				% For fancy frames.
+\usepackage{wrapfig}			% Fancy insertion of pics in text.
+
+%% Page utilities
+\usepackage{graphicx}        % for the \includegraphics command
+\usepackage{parskip} 			% no paragraph indentation and spaces between paragraphs.
+\usepackage{multicol}			% Allows to divide a part of the page in multiple columns.
+\usepackage{titlesec} 			% titles customization
+\usepackage{caption}			% captions customization
+\usepackage{float}				% Forces float in a specific position with H
+\usepackage{fancyhdr}		% For custom headers and foot texts
+\pagestyle{fancy}
+\usepackage{csquotes}		% automatic quotation marks adapted of the current language. can be summoned with \enquote{X}
+
+%% TOC
+\usepackage{tocloft} % http://ctan.org/pkg/tocloft
+\usepackage[toc]{multitoc}
+	
+%% Others
+\usepackage{refcount}			% extract number from page number
+\usepackage{epstopdf}         % needed to use the .eps format in LuaTeX
+\usepackage{xr}					% for FAQ cross-referencing
+\usepackage{xstring}            % String parsing, cutting, etc.
+\usepackage[hyphens]{url} % for ocgcolorlinks debug code
+\definecolor{linkcolour}{RGB}{131,25,139}
+\usepackage[unicode, ocgcolorlinks, colorlinks=true, linkcolor=linkcolour, urlcolor=linkcolour, bookmarks=false, pdfdisplaydoctitle=true, pdfstartview=FitH, pdfpagelabels=false]{hyperref} % Links in PDF.
+
+\graphicspath{{pics/}{./../Layout/pics/}}
+
+\makeatletter
+
+%%% Language specific stuff
+
+\ifdefined\languageisenglish
+	\subimport{}{AB_language_specific_EN.tex}
+\fi
+\ifdefined\languageisfrench
+	\subimport{}{AB_language_specific_FR.tex}
+\fi
+
+\def\removespaces#1{\zap@space#1 \@empty}
+
+\newcommand{\MacroName}[1]{\StrGobbleLeft{\string#1}{1}}
+\newcommand{\macroname}[1]{\string#1}
+
+\pdfstringdefDisableCommands{\def\textcolor#1{}}
+
+%%% Technical commands %%%
+
+\newcommand{\newrule}{\textcolor{blue!80!black}}
+\newcommand{\removedrule}[1]{\textcolor{blue!80!black}{\sout{#1}}}
+\newcommand{\starsymbol}{$\star$}
+\newcommand{\refsymbol}{$^\star$}
+\newcommand{\flufffont}[1]{\textit{#1}}
+
+\newcommand{\inch}{″}
+\newcommand{\foot}{′}
+\newcommand{\range}[1] {\labels@range~#1\inch}
+\newcommand{\distance}[1] {#1\inch}
+\newcommand{\result}[1] {‘#1’}
+\newcommand{\plusone}{+1}
+
+\newcommand{\pts}[1]{#1~\labels@points}
+
+%%% Fonts and sizes %%%
+
+\newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
+\newcommand{\smallfontsize}{\fontsize{6}{7.2}\selectfont}
+\newcommand{\normalfontsize}{\fontsize{8}{9.6}\selectfont}
+\newcommand{\largefontsize}{\fontsize{10}{12}\selectfont}
+\newcommand{\largerfontsize}{\fontsize{12}{14.4}\selectfont}
+\newcommand{\Largefontsize}{\fontsize{14}{16.8}\selectfont}
+\newcommand{\Largerfontsize}{\fontsize{15}{18}\selectfont}
+\newcommand{\hugefontsize}{\fontsize{18}{21.6}\selectfont}
+\newcommand{\Hugefontsize}{\fontsize{25}{30}\selectfont}
+
+
+%%% Headers %%%
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{}
+\fancyfoot[L]{}
+\fancyhead[R]{}
+\fancyhead[L]{}
+
+%%% Page formatting
+
+\newcommand{\spaceaftersection}{\vspace{0.8cm}}
+
+\newcommand{\separator}{\noindent\begin{center}\textcolor{black!30}{\rule{0.7\columnwidth}{2pt}}\end{center}}
+
+\def\columnseprulecolor{\color{black!30}}
+
+
+%%% Custom lists and description for first sections of the army books
+
+\setlength{\columnsep}{1cm}
+
+
+%%% Table parameters %%%
+
+\newcolumntype{M}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\renewcommand{\arraystretch}{1.5}
+\arrayrulecolor{black!30}
+\setlength{\arrayrulewidth}{0.5pt}
+
+
+%%% Titles %%%
+
+\newcommand{\getpage}[1]{\pageref*{#1}}
+
+\newcommand{\questiontitle}[2]{\paragraph{#1 \textnormal{(\pageforref{} #2)}}%
+
+\begin{minipage}{\textwidth}}
+\newcommand{\erratatitle}[2]{\paragraph{#1 \textnormal{(\pageforref{} #2)}}%
+
+\begin{minipage}{\textwidth}}
+
+\newcommand{\newquestiontitle}[2]{\paragraph{\newrule{#1 \textnormal{(\pageforref{} #2)}}}%
+
+\begin{minipage}{\textwidth}}
+\newcommand{\newerratatitle}[2]{\paragraph{\newrule{#1 \textnormal{(\pageforref{} #2)}}}%
+
+\begin{minipage}{\textwidth}}
+
+\newcounter{Qcounter}
+\setcounter{Qcounter}{0}
+\newcommand{\QandA}[2]{%
+\stepcounter{Qcounter}%
+\textbf{\QuestionInitial\theQcounter\spacebeforecolon{}:} \textit{#1}\newline%
+\textbf{\AnswerInitial\theQcounter\spacebeforecolon{}:} #2%
+\end{minipage}%
+}
+
+\newcommand{\additionalQandA}[2]{%
+\stepcounter{Qcounter}%
+
+\vspace*{1ex}\begin{minipage}{\textwidth}%
+\textbf{\QuestionInitial\theQcounter\spacebeforecolon{}:} \textit{#1}\newline%
+\textbf{\AnswerInitial\theQcounter\spacebeforecolon{}:} #2%
+\end{minipage}%
+}
+
+\newcommand{\erratatext}[1]{%
+#1%
+\end{minipage}%
+}
+
+\newcommand{\newQandA}[2]{%
+\stepcounter{Qcounter}%
+\newrule{\textbf{\QuestionInitial\theQcounter\spacebeforecolon{}:} \textit{#1}}\newline%
+\newrule{\textbf{\AnswerInitial\theQcounter\spacebeforecolon{}:} #2}%
+\end{minipage}%
+}
+
+\newcommand{\newadditionalQandA}[2]{%
+\stepcounter{Qcounter}%
+
+\vspace*{1ex}\begin{minipage}{\textwidth}%
+\newrule{\textbf{\QuestionInitial\theQcounter\spacebeforecolon{}:} \textit{#1}\newline}%
+\newrule{\textbf{\AnswerInitial\theQcounter\spacebeforecolon{}:} #2}%
+\end{minipage}%
+}
+
+\newcommand{\newerratatext}[1]{%
+\newrule{#1}%
+\end{minipage}%
+}
+
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{2.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+\newcounter{isthereabigtitle}
+
+\newcommand{\basicbigtitle}[1]{%
+\ifnum\value{isthereabigtitle}=0%
+\setcounter{isthereabigtitle}{1}\vspace*{2ex}\else%
+\vspace*{5ex}%
+\fi%
+\setcounter{Qcounter}{0}\noindent\begin{center}\hugefontsize\uppercase{\textbf{#1}}\end{center}\vspace*{-2ex}
+}
+
+\newcounter{isthereabasictitle}
+
+\newcommand{\basictitle}[1]{%
+\vspace*{4ex}\noindent\setcounter{Qcounter}{0}\begin{center}\Largerfontsize\textbf{#1}\end{center}\vspace*{2ex}\setcounter{isthereabasictitle}{1}
+}
+
+\newcommand{\basicsubtitle}[1]{%
+\ifnum\value{isthereabasictitle}=1%
+\setcounter{isthereabasictitle}{0}\else%
+\vspace*{3ex}%
+\fi%
+\setcounter{Qcounter}{0}\noindent{\Largefontsize\textbf{#1}}\vspace*{-2ex}
+}

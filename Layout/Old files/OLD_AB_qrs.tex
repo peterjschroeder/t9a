@@ -1,0 +1,223 @@
+% Script to automatically draw the Quick Ref Sheet
+
+\renewcommand{\arraystretch}{1.2}
+
+\providebool{QRSbool}
+
+\providebool{whiterow}
+
+\newcommand{\QRSrowcolor}{\ifbool{whiterow}{\global\boolfalse{whiterow}}{\rowcolor{black!10}\global\booltrue{whiterow}}}
+
+\newcommand{\QRSstarttab}[1]{%
+	\noindent%
+	\setlength{\tabcolsep}{2pt}%
+	\begin{tabular}{@{}cp{3.2cm}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}@{}M{\profilecellsize}}%
+
+	& \antiquefont\large{\textbf{#1}} & \textbf{\labels@M} & \textbf{\labels@WS} & \textbf{\labels@BS} & \textbf{\labels@S} & \textbf{\labels@T} & \textbf{\labels@W} & \textbf{\labels@I} & \textbf{\labels@A} & \textbf{\labels@Ld}%
+}%
+
+\newcommand{\QRSclosetab}{\end{tabular}\bigskip}%
+
+\newcommand{\QRSprintline}[4]{%
+	\tabularnewline%
+	\ifnumequal{\rowmulti}{1}{\QRSrowcolor}{}%
+	\DTLifeq*{\rowcategory}{\labels@lords}{\antiquefont\bfseries \labels@lordsInitial}{}%
+	\DTLifeq*{\rowcategory}{\labels@heroes}{\antiquefont\bfseries \labels@heroesInitial}{}%
+	\DTLifeq*{\rowcategory}{\labels@coreunits}{\antiquefont\bfseries \labels@coreunitsInitial}{}%
+	\DTLifeq*{\rowcategory}{\labels@specialunits}{\antiquefont\bfseries \labels@specialunitsInitial}{}%
+	\DTLifeq*{\rowcategory}{\labels@rareunits}{\antiquefont\bfseries \labels@rareunitsInitial}{}%
+	\DTLifeq*{\rowcategory}{\labels@mounts}{\antiquefont\bfseries \labels@mountsInitial}{}%
+	&%
+	\ifnumequal{\rowmulti}{1}{%no Multiprofile
+		\expandafter\hyperlink\expandafter{\rowhypertag}{\rowname}%
+		\expandafter\parselist\expandafter{\rowprofile}{\locallists@profileslist}%
+		\forlistloop{\QRSmonoprofile}{\locallists@profileslist}%
+	}{% Multiprofile
+		\expandafter\hyperlink\expandafter{\rowhypertag}{\rowname} &&&&&&&&&%
+		\expandafter\parselist\expandafter{\rowprofile}{\locallists@profileslist}%
+		\forlistloop{\QRSmultiprofile}{\locallists@profileslist}%
+	}%
+}
+
+\newcommand{\QRSmultiprofile}[1]{%
+	\tabularnewline%
+	\QRSrowcolor{}&%
+	\splitatinf{#1}\local@unitname\local@unitprofile%
+	- \local@unitname \expandafter\caraclist\expandafter{\local@unitprofile}%
+}%
+
+\newcommand{\QRSmonoprofile}[1]{%
+	\splitatinf{#1}\local@unitname\local@unitprofile%
+	\expandafter\caraclist\expandafter{\local@unitprofile}%
+}%
+
+\newcommand{\QRSprinttab}[1]{%
+	\global\booltrue{whiterow}%
+	\DTLforeach*[#1]%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile, \rowhypertag=hypertag}{%
+      		\QRSprintline{\rowname}{\rowcategory}{\rowprofile}{\rowmulti}%
+	}%
+}%
+
+\providebool{QRSisempty}
+\global\boolfalse{QRSisempty}%
+
+\newcommand{\QRScheckifempty}[1]{%
+	\global\booltrue{QRSisempty}%
+	\DTLforeach*[#1]%
+	{profiles}{\rowname=name, \rowtrooptype=trooptype, \rowcategory=category, \rowprofile=profile, \rowmulti=multipleprofile}{%
+		\global\boolfalse{QRSisempty}\dtlbreak%
+	}%
+}%
+
+\newcommand{\QRSifnotempty}[1]{%
+	\ifbool{QRSisempty}{}{#1}%
+}%
+
+\begin{center}
+{\antiquefont\bfseries \labels@lordsInitial}\spacebeforecolon{}: \labels@lords{} - %
+{\antiquefont\bfseries \labels@heroesInitial}\spacebeforecolon{}: \labels@heroes{} - %
+{\antiquefont\bfseries \labels@coreunitsInitial}\spacebeforecolon{}: \labels@coreunits{} - %
+{\antiquefont\bfseries \labels@specialunitsInitial}\spacebeforecolon{}: \labels@specialunits{} - %
+{\antiquefont\bfseries \labels@rareunitsInitial}\spacebeforecolon{}: \labels@rareunits{} - %
+{\antiquefont\bfseries \labels@mountsInitial}\spacebeforecolon{}: \labels@charactermounts{} \labels@only{}%
+\end{center}
+
+\setlength{\columnsep}{0pt}
+\begin{multicols}{2}\raggedcolumns
+
+\QRScheckifempty{%
+	\DTLiseq{\rowcategory}{\labels@lords}\or\DTLiseq{\rowcategory}{\labels@heroes}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\characters}%
+	\QRSprinttab{%
+		\DTLiseq{\rowcategory}{\labels@lords}\or\DTLiseq{\rowcategory}{\labels@heroes}%
+	}%
+	\QRSclosetab{}%
+}%
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\infantry}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\infantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}% 
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\monstrousinfantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\monstrousinfantry}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\monstrousinfantry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}% 
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\warbeasts}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\warbeast}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}% 
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\monstrousbeasts}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\monstrousbeast}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}% 
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\cavalry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\cavalry}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\cavalry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\monstrouscavalry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\monstrouscavalry}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\monstrouscavalry}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\chariot}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\chariots}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\chariot}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\warmachine}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\warmachines}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\warmachine}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\monsters}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\monster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\riddenmonster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\riddenmonsters}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\riddenmonster}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\QRScheckifempty{%
+	\DTLiseq{\rowtrooptype}{\swarm}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+}%
+\QRSifnotempty{%
+	\QRSstarttab{\swarms}%
+	\QRSprinttab{%
+		\DTLiseq{\rowtrooptype}{\swarm}\and\not\DTLiseq{\rowcategory}{\labels@heroes}\and\not\DTLiseq{\rowcategory}{\labels@lords}%
+	}%
+	\QRSclosetab{}%
+}% 
+
+\ifdef{\QRSnote}{\QRSnote}{}
+
+\end{multicols}

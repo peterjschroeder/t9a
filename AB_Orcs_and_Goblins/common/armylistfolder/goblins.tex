@@ -1,0 +1,103 @@
+
+\unitentry{%
+	name=\goblins{},
+	logo=core,
+	unitsize=20,
+	cost=120,
+	maxunitsize=60,
+	costpermodel=5,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	globalname=\commongoblin{},
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	globalrules={\scoring{}},
+	globalnameB=\cavegoblin{},
+	globalB@Ad=4,
+	globalB@Ma=8,
+	globalB@Di=5,
+	globalrulesB={\scoring{}},
+	globalnameC=\forestgoblin{},
+	globalC@Ad=4,
+	globalC@Ma=8,
+	globalC@Di=6,
+	globalrulesC={\scoring{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour=,
+	offensename=\commongoblin{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offensenameB=\cavegoblin{},
+	offenseB@At=1,
+	offenseB@Of=2,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=3,
+	offensenameC=\forestgoblin{},
+	offenseC@At=1,
+	offenseC@Of=2,
+	offenseC@St=3,
+	offenseC@AP=0,
+	offenseC@Ag=2,
+	offenserulesC={\poisonattacks{}\refsymbol{}},
+	offenseCcomment={\refsymbolbis{}\forestgoblinspoisonrestriction{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},%
+	},
+	options={%
+		\mustchooseonechoiceonly{%
+			\commongoblin{} \wordand{} \la{}=\free{},
+			\cavegoblin{}=\free{},
+			\forestgoblin{}=1\permodel{},
+		},
+		\onechoiceonly{%
+			\shield{}=\free{},
+			\spear{} \wordand{} \shield{}=\free{},
+			\suboptionindent \ifforestgoblininstead{}=2\permodel{},
+			\bow{} (4+) (\NOTESTzerotoXunitsperarmy{3})\newline\suboptionindent  (\NOTESTzerotoXmodelsperarmy{100})=1\permodel{},			
+		},
+	},
+	additionalframe={%
+		\ghentry{\commongoblin{}}{%
+			\shield{} (\ifarmedwithbows{})=\free{},
+			\textbf{\shadygit{}} (\NOTESTzerotoXmodelsperunit{X})\refsymbolB{}=10\pershadygit{},
+			\refsymbolBbis{}\gitexplanation{}
+			\vspace*{3pt}\begin{center}\setlength{\tabcolsep}{3pt}\begin{tabular}{rcc}
+				\hline
+				\unitsstartingsize{} & 20--29 & 30+ \tabularnewline
+				X & 2 & 3 \tabularnewline
+				\hline
+			\end{tabular}\end{center}=,
+		}{}%
+		\ghentry{\cavegoblin{}}{%
+			\nets{}=50,
+			\textbf{\madgit{}} (\NOTESTzerotoXmodelsperunit{X})\refsymbolB{}=65\permadgit{},
+			\refsymbolBbis{}\gitexplanation{}
+			\vspace*{3pt}\begin{center}\setlength{\tabcolsep}{3pt}\begin{tabular}{rccc}
+				\hline
+				\unitsstartingsize{} & 20--29 & 30--44 & 45+ \tabularnewline
+				X & 1 & 2 & 3 \tabularnewline
+				\hline
+			\end{tabular}\end{center}=,
+		}{}%
+		\ghentry{\forestgoblin{}}{%
+			\textbf{\creepers{}} (\NOTESTzerotoXmodelsperunit{20})=\free{},
+			\throwingweapons{} (5+)=1\permodel{},%
+		}{}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\creepers{}}{\ruletype{\universalrule{}}\creepersdef{}}
+	},
+}% END UNIT ENTRY

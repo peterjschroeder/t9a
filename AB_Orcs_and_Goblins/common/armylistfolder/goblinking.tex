@@ -1,0 +1,65 @@
+
+\unitentry{%
+	name=\goblinking{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\bignnastyInitial}{\bignnasty},
+	cost=120,
+	unitsize=1,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	offensename=\goblinking{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={},
+	options={%
+		+1 \Discipline{} \only{\general{}}\hideinQRS{\refsymbol{}}=\free{},	
+		\ghchoice{%
+			\commongoblin{}=\free{},
+			\cavegoblin{}=\free{},
+			\forestgoblin{} \wordand{} \poisonattacks{}=35,
+		},		
+		\specialitemsallowance{}=\upto{}200,
+		\AlCoOrder{%
+			\shield{}=5,
+			\ha{}=10,
+		},
+		\bow{} (3+)=5,
+		\onechoiceonly{\AlCoOrder{%
+			\pw{}=5,
+			\gw{}=10,
+			\lightlance{}=5,
+			\lance{}=10,
+		}},
+	},
+	additionalframe={%
+		\ghentry{\commongoblin{}}{}{%
+			\wolf{}=35,
+			\goblinwolfchariot{}=50,
+		}%
+		\ghentry{\cavegoblin{}}{}{%
+			\cavegnasher{}=65,
+		}%
+		\ghentry{\forestgoblin{}}{}{%
+			\scuttlerspider{}=30,
+			\huntsmenspider{}=40,
+			\gargantula{} (\bignnastyInitial{})=440,
+		}%
+	},
+	endtext={%
+    \refsymbolbis{}\goblinkingDisciplineCondition{}\\%    
+},
+}

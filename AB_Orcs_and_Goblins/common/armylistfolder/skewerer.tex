@@ -1,0 +1,33 @@
+
+\unitentry{%
+	name=\skewerer{},
+	logo=cannonballs,
+	unitsize=1,
+	cost=90,
+	maxunitsperarmy=4,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=4,
+	global@Ma=4,
+	global@Di=6,
+	globalrules={\warmachine{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	offensename=\goblincrew{},
+	offense@At=3,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\commongoblin{},\moveorfire{}},
+	offenseweapons={\hidebf{\ballista{} (4+)}},
+	modelrulesdef={%
+		\modelruledef{\ballista}{\ruletype{\artilleryweapon}%
+			\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{[\multiplewounds{\Dthree{}}{}], \areaattack{1\timess{}5}}.%
+		}%
+	},
+}% END UNIT ENTRY

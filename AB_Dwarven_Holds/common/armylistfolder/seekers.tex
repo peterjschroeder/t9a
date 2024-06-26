@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\seekers{},
+	logo=special,
+	cost=105,
+	unitsize=5,
+	maxunitsize=25,
+	costpermodel=20,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=10,
+	globalrules={\unbreakable{},\fearless{},\thebiggertheyare{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (6+)},
+	offensename=\seeker{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenseweapons={\gw{},\pw{}},
+	offenserules={\weaponmaster{},\sturdy{},\yercomingwithme{}},
+	options={%
+		{\textbf{\brothersofvengeance{}} (\zerotoXmodelsperarmy{15},\newline \zerotoXunitsperarmy{1})}=1\permodel{},
+		\vanguard{}=3\permodel{},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\brothersofvengeance}{\ruletype{\universalrule}{\brothersofvengeancedef}}%
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

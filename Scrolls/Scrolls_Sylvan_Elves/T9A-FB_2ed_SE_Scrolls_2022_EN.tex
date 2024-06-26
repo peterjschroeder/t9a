@@ -1,0 +1,54 @@
+
+%\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+\def\thisisascrollcompendium{}
+%\def\noprintpoints{}
+
+% Preamble
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../}{Layout_scrolls.tex} %instead of \subimport{../../Layout}{Layout.tex}
+\graphicspath{{../../Layout/pics/}{../../Arcane_Compendium/pics/}}
+
+
+
+\subimport{../../AB_Sylvan_Elves/common}{layout.tex}
+\subimport{../../AB_Sylvan_Elves/language_specific/\languagetag}{dictionnary_modelrules.tex}
+\subimport{../../AB_Sylvan_Elves/language_specific/\languagetag}{dictionnary_kindredsandaspects.tex}
+\subimport{../../AB_Sylvan_Elves/language_specific/\languagetag}{dictionnary_specialequipment.tex}
+\subimport{../../AB_Sylvan_Elves/language_specific/\languagetag}{dictionnary_armylist.tex}
+\subimport{../../AB_Sylvan_Elves/language_specific/\languagetag}{dictionnary_others.tex}
+%\subimport{../../AB_Sylvan_Elves/common}{toc.tex}
+%\subimport{../../AB_Sylvan_Elves/common/}{footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Sylvan Elves}
+\newcommand{\balanceversion}{2022}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+%\newcommand{\betaversion}{2}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\hotfixversion}{2}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{July 22, 2022}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{}% anything related to the version
+\newcommand{\booklogo}{../../AB_Sylvan_Elves/pics/logo_big_SE.jpg}
+\def\bookprefix{SE}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\subimport{../../Layout/}{Titlepage.tex}
+
+
+\subimport{../../AB_Sylvan_Elves/common/}{hereditaryspell.tex}
+\newpage
+\subimport{../../AB_Sylvan_Elves/common/}{kindredsandaspects.tex}
+\newpage
+\subimport{../../AB_Sylvan_Elves/common/}{specialequipment.tex}
+\newpage
+\subimport{../../AB_Sylvan_Elves/common/}{armylist.tex}
+
+
+
+\end{document}

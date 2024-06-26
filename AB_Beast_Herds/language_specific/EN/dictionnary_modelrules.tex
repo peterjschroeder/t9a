@@ -1,0 +1,49 @@
+
+% Army Model Rules Names
+
+\newcommand{\packtactics}{Pack Tactics}
+\newcommand{\drunkard}{Drunkard}
+\newcommand{\sober}{Sober}
+\newcommand{\drunk}{Drunk}
+\newcommand{\lootedbooze}{Looted Booze}
+\newcommand{\huntingcall}{Hunting Call}
+
+\newcommand{\primalinstinct}{Primal Instinct}
+
+\newcommand{\beastaxe}{Beast Axe}
+
+
+% Army Model Rules Texts
+
+\newcommand{\packtacticsdef}{%
+	Units consisting entirely of models with Pack Tactics gain \textbf{\devastatingcharge{\swiftstride}} while they are Located in the Charged unit's Flank or Rear Arc.%
+}
+\newcommand{\drunkarddef}{%
+	The unit may gain one of two different sets of effects depending on whether it shows up \sober{} or \drunk{} on the Battlefield. At step 8 of the Pre-Game Sequence (after Spell Selection), the player \textbf{must} choose whether a \drunkard{} unit is \sober{} or \drunk{}. \drunk{} Characters cannot join units containing any \sober{} models and vice versa (models without \drunkard{} are considered neither \drunk{} nor \sober{}).%
+}
+\newcommand{\soberdef}{%
+	The model gains \textbf{\lighttroops} and \textbf{\vanguard}. A unit that has been \sober{} once loses \scoring{} for the rest of the game. If playing Capture the Flags, \scoring{} is not lost.%
+}
+\newcommand{\drunkdef}{%
+	The model gains \textbf{\devastatingcharge{+1 \St{}, +1 \AP{}}} and \textbf{\fearless}. \drunk{} units cannot Ambush.%
+}
+\newcommand{\lootedboozedef}{%
+	One use only. May be activated at the start of any Player Turn. All models with \drunkard{} in the model's unit change from \sober{} to \drunk{}.%
+}
+\newcommand{\huntingcalldef}{%
+	If the army includes a model with Hunting Call, the owner may:
+	\begin{itemize}%
+		\item Choose to roll for \ambush{} for units with one or more models with \packtactics{} starting from the owner's Player Turn 1 (but still at the end of step 2 of the Movement Phase Sequence), unless the owner has the first Player Turn.
+		\item Reroll \ambush{} rolls of 1--2 for units with one or more models with \packtactics{}.
+		\end{itemize}%
+	Hunting Call is in effect even if the model is Ambushing and has not arrived on the Battlefield yet.%
+}
+
+\newcommand{\primalinstinctdef}{%
+	At the start of each Round of Combat that the model's unit is fighting, each unit with one or more model parts with this Attack Attribute \textbf{must} take a Discipline Test. If the test is passed, all model parts with \primalinstinct{} in the unit \textbf{must} reroll failed to-hit rolls during this Round of Combat.%
+}
+
+\newcommand{\beastaxedef}{%
+	Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and always strike at Initiative Step 0. The wielder gains +2 Defensive Skill unless wielding another weapon.\newline
+This weapon cannot be enchanted with Weapon Enchantments from the list of Common Special Items.%
+}

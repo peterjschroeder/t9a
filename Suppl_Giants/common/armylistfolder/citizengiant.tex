@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\citizengiant{},
+	logo=IoD,
+	cost=\newrule{340},
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\hidebf{\giantseegiantdo}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={},
+	offensename=\citizengiant{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=3,
+	offenserules={\hidebf{\rage}},
+	options={%
+		\textbf{\bigbrother}=\newrule{25},
+\mustchooseonechoiceonlyblue{\AlCoOrder{%
+			\textbf{\oilkegs}=\free{},
+			\textbf{\towershield}=\newrule{\free},
+			\textbf{\giantclub}=\newrule{5},
+			\textbf{\infernallash}=\newrule{\free},
+		}
+	}},%
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\IDgiantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\towershield{}}{\ruletype{\personalprotection{}}\towershielddef{}}
+		\modelruledef{\infernallash{}}{\ruletype{\closecombatweapon{}}\infernallashdef{}}%
+		\modelruledef{\oilkegs{}}{\ruletype{\universalrule{}}\oilkegsdef{}}%
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

@@ -1,0 +1,57 @@
+%Language is defined here
+\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+%\def\noprintpoints{}
+
+% Preamble
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{common/}{layout.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_modelrules.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_specialequipment.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_howdah.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_arcanemasteries.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_armylist.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_others.tex}
+\subimport{common/}{toc.tex}
+\subimport{common/}{footer.tex}
+
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Saurian Ancients}
+\newcommand{\balanceversion}{2023}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\alphaversion}{1}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\betaversion}{1}% 1 if first beta, 2 if second beta, etc.
+\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{March 30, 2023}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{}% anything related to the version
+\newcommand{\booklogo}{pics/logo_big_SA.jpg}
+\def\bookprefix{SA}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\subimport{../Layout/}{Titlepage.tex}
+\subimport{common/}{modelrules.tex}
+\additionalspacebeforemaintitle{}
+\subimport{common/}{hereditaryspell.tex}
+\newpage
+\subimport{common/}{howdahdevices.tex}
+\newpage
+\subimport{common/}{specialequipment.tex}
+\newpage
+\subimport{common/}{armyorg.tex}
+\subimport{common/}{armylist.tex}
+\newpage
+\subimport{common/}{qrs.tex}
+\ifdef{\thereisachangelog}{%
+	\newpage
+	\subimport{language_specific/\languagetag/}{changelog.tex}
+}
+
+\end{document}

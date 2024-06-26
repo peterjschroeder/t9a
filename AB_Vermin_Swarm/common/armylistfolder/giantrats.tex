@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\giantrats{},
+	logo=special,
+	optionallogo=core,
+	cost=80,
+	unitsize=10,
+	maxunitsize=30,
+	costpermodel=5,
+	maxunitsperarmy=4,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	categorynote=\unitsofXormoremodelscounttowardscore{20},
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=5,
+	globalrules={\callous{},\insignificant{},\unstable{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=2,
+	defense@Arm=0,
+	offensename=\giantrat{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\devastatingcharge{} (+1 \AttackValueInitials{})},
+	options={%
+		{\textbf{\firerats} (\newrule{\zerotoXmodelsperunit{20}},\newline
+		\zerotoXunitsperarmy{2})=3\permodel{}},
+	},%
+	optionalmodelrulesdef={%
+		\modelruledef{\firerats{}}{\ruletype{\universalrule{}}\fireratsdef{}}
+	},
+}% END UNIT ENTRY

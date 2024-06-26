@@ -1,0 +1,415 @@
+
+% Definitions
+
+\newcommand{\hexShort}{H}
+\newcommand{\damageShort}{Da}
+\newcommand{\directShort}{Di}
+\newcommand{\missileShort}{M}
+\newcommand{\augmentShort}{A}
+\newcommand{\focusedShort}{F}
+\newcommand{\universalShort}{U}
+\newcommand{\groundShort}{G}
+\newcommand{\casterShort}{Cast.}
+
+\newcommand{\auraShort}{A}
+
+\newcommand{\oneturnShort}{OneT}
+\newcommand{\permanentShort}{Perm}
+\newcommand{\instantShort}{Inst}
+
+\newcommand{\paths}{Paths}
+
+\newcommand{\typescapital}{TYPES}
+\newcommand{\rangecapital}{RANGE}
+\newcommand{\durationcapital}{DURATION}
+
+
+% Alchemy
+
+\newcommand{\alchemyattributeshort}{%
+	Flammable against Melee Attacks%
+}
+\newcommand{\alchemyspelloneshort}{%
+	D3+1 hits with Flaming, Magical, \AP{} 10, always wound on \enquote{7 \minuss{} target's Arm}+%
+}
+\newcommand{\alchemyspelltwoshort}{%
+	\base{+1} \boosted{+2} Armour%
+}
+\newcommand{\alchemyspellthreeshort}{%
+	+1 \AP{}, Flaming, Magical%
+}
+\newcommand{\alchemyspellfourshort}{%
+	1 hit \St{} 4 [6], \AP{} 10, Magical, [MW (D3)], Area Attack (1\timess{}5)%
+}
+\newcommand{\alchemyspellfiveshort}{%
+	\minuss{}1 Armour%
+}
+\newcommand{\alchemyspellsixshort}{%
+	D3+4 hits \St{} as target's Arm, \AP{} 4, Flaming, Magical%
+}
+
+
+% Cosmology
+
+\newcommand{\cosmologypassiveshort}{%
+	Two versions: Cosmos (first) and Chaos (second). If spell successful, next Cosmo spell, if opposite version, gets CV \minuss{}1%
+}
+\newcommand{\cosmologyspelloneshort}{%
+	+2/\minuss{}2 Off, Aim improved/worsened by 1%
+}
+\newcommand{\cosmologyspelltwoshort}{%
+	Charge, Flee, Pursuit, Overrun: 2 times Maximised/Minimised Roll%
+}
+\newcommand{\cosmologyspellthreeshort}{%
+	2D6 hits \St{} 4, \AP{} 0, Magical, reroll successful Special/Armour Saves%
+}
+\newcommand{\cosmologyspellfourshort}{%
+	+1/\minuss{}1 \St{} and \AP{}%
+}
+\newcommand{\cosmologyspellfiveshort}{%
+	All models in the unit: Aegis (5+)\newline
+Each model in the unit: 1 hit \St{} 3, \AP{} 0, Magical%
+}
+\newcommand{\cosmologyspellsixshort}{%
+	Recovers 1 HP\newline
+1 hit that wounds automatically, \AP{} 10, Magical%
+}
+
+
+% Divination
+
+\newcommand{\divinationpassiveshort}{%
+	Divination Spells: +\distance{3} (up to +\distance{9}) range for each add. friendly Wizard within \distance{12} of the Caster%
+}
+\newcommand{\divinationattributeshort}{%
+	Discipline Tests: Minimised Roll (only one instance per Magic Phase)%
+}
+\newcommand{\divinationspelloneshort}{%
+	+2 Off, +2 Def, +2 Agi%
+}
+\newcommand{\divinationspelltwoshort}{%
+	\base{D3} \boosted{D6} hits that wound automatically, \AP{} 0, Magical, no Special Saves allowed%
+}
+\newcommand{\divinationspellthreeshort}{%
+	Distracting and Hard Target (1)%
+}
+\newcommand{\divinationspellfourshort}{%
+	Divine, must reroll failed to-hit rolls with Close Combat \base{and Shooting} Attacks%
+}
+\newcommand{\divinationspellfiveshort}{%
+	2D6 \boosted{with Maximised Roll} hits that wound on 4+, \AP{} 1, Divine, Magical%
+}
+\newcommand{\divinationspellsixshort}{%
+	\minuss{}X Combat Score with X = number of Characters in + 1 if at least a \rnf{}%
+}
+
+
+% Druidism
+
+\newcommand{\druidismpassiveshort}{%
+	Wizards that know at least one non-Bound Druidism spell know the 0 spell in addition to their other spells%
+}
+\newcommand{\druidismattributeshort}{%
+	\base{Recovers} \specialboosted{Raises} 1 HP (max. 1 HP per model and per phase)%
+}
+\newcommand{\druidismspelloneshort}{%
+	Fortitude (\base{5+} \specialboosted{4+}). Can cast from Water Terrain%
+}
+\newcommand{\druidismspelltwoshort}{%
+	D6 hits \St{} \base{4} \specialboosted{5}, \AP{} \base{1} \specialboosted{2}, Magical. Can cast from Impassable Terrain%
+}
+\newcommand{\druidismspellthreeshort}{%
+	\base{\minuss{}1} \specialboosted{\minuss{}2} Off, \base{\minuss{}1} \specialboosted{\minuss{}2} Def, \base{\minuss{}1} \specialboosted{\minuss{}2} to hit with Shooting. Can cast from Forest%
+}
+\newcommand{\druidismspellfourshort}{%
+	Raise \base{4} \specialboosted{6} HP if Standard Inf/Beast, 1 HP if Towering, \base{2} \specialboosted{3} HP else%
+}
+\newcommand{\druidismspellfiveshort}{%
+	\base{+2} \specialboosted{+3} Res. Can cast from Hill%
+}
+\newcommand{\druidismspellsixshort}{%
+	Forest on the target's Unit Boundary. If friendly, Strider (Forest) \base{if Engaged enemy: no effect}%
+}
+
+
+% Evocation
+
+\newcommand{\evocationattributeshort}{%
+		Gain 1 Veil Token if you have less than 3 in pool (max. 1 per phase)%
+}
+\newcommand{\evocationspelloneshort}{%
+	Reroll failed to-wound with Melee Attacks \boosted{and gain Lethal Strike}%
+}
+\newcommand{\evocationspelltwoshort}{%
+	\minuss{}1 Res and \minuss{}1 Dis (for one or more instances)%
+}
+\newcommand{\evocationspellthreeshort}{%
+	\base{1} \boosted{up to 3} models in target unit:1 hit that wounds automatically, \AP{} 10, Magical%
+}
+\newcommand{\evocationspellfourshort}{%
+	Reroll failed to-hit with Close Combat Attacks%
+}
+\newcommand{\evocationspellfiveshort}{%
+	D3 hits \St{} 10, \AP{} 10, Magical, wound against Discipline%
+}
+\newcommand{\evocationspellsixshort}{%
+	\base{\distance{12}} \boosted{\distance{6}} Magical Move with Ghost Step%
+}
+
+
+% Occultism
+
+\newcommand{\occultismpassiveshort}{%
+	Sacrifice X HP in a unit within \distance{24} to get \specialboosted{ } (before Dispelling Attempt). X = 3/2/1 if Dis without modifiers = 0--4/5--7/8--10%
+}
+\newcommand{\occultismspelloneshort}{%
+	Breath Attack (Magical, Toxic) \specialboosted{\distance{18} range}. \boosted{Target: 1 model unit/Char./Chp.}%
+}
+\newcommand{\occultismspelltwoshort}{%
+	Target: \boosted{1 model unit/Char./Champ.} \specialboosted{all models}. Aegis (6+) and (+1, max. 3+)%
+}
+\newcommand{\occultismspellthreeshort}{%
+	\minuss{}1 Off and Def. \specialboosted{Caster +1 Off and Def}%
+}
+\newcommand{\occultismspellfourshort}{%
+	D6 hits \St{} 4, \AP{} 1, Magical. \boosted{Caster's unit unaffected.} \specialboosted{Caster Recovers 1 HP if unsaved wounds caused}%
+}
+\newcommand{\occultismspellfiveshort}{%
+	1 hit \St{} 10, \AP{} 10, Magical, MW (D3). \specialboosted{Within \distance{12}: choose a Char./Champ. in unit: it suffers the hit}%
+}
+\newcommand{\occultismspellsixshort}{%
+	2D6 hits \St{} 5 \specialboosted{+1}, \AP{} 2 \specialboosted{+1}, Magical%
+}
+
+
+% Pyromancy
+
+\newcommand{\pyromancyattributeshort}{%
+	1 hit \St{} 5, \AP{} 2, Flaming, Magical%
+}
+\newcommand{\pyromancyspelloneshort}{%
+	D6 hits \St{} 4, \AP{} 0, Flaming, Magical%
+}
+\newcommand{\pyromancyspelltwoshort}{%
+	D6/2D6 hits \St{} 4, \AP{} 0, Flaming, Magical%
+}
+\newcommand{\pyromancyspellthreeshort}{%
+	Gains Flaming and Magical. Melee and Shooting Attacks: +1 to-wound modifier%
+}
+\newcommand{\pyromancyspellfourshort}{%
+	2D6/3D6 hits \St{} 4, \AP{} 0, Flaming, Magical%
+}
+\newcommand{\pyromancyspellfiveshort}{%
+	D3+1 hits \St{} 4, \AP{} 0, Flaming, Magical%
+}
+\newcommand{\pyromancyspellsixshort}{%
+	Each model: 1 hit \St{} 3, \AP{} 0, Flaming, Magical%
+}
+
+
+% Shamanism
+
+\newcommand{\shamanismattributeshort}{%
+	Can never be wounded on better than 5+ by Melee Attacks%
+}
+\newcommand{\shamanismspelloneshort}{%
+	Gains \base{+1 \St{} and \AP{}} \boosted{+1 Res}%
+}
+\newcommand{\shamanismspelltwoshort}{%
+	5D6 hits \St{} 1, \AP{} 0, Magical. If unsaved wounds, \minuss{}1 to hit with Shooting until move%
+}
+\newcommand{\shamanismspellthreeshort}{%
+	Gains Battle Focus, Fearless, and Frenzy%
+}
+\newcommand{\shamanismspellfourshort}{%
+	Units within \base{\distance{6}} \boosted{\distance{12}} when spell cast: \minuss{}1 to wound with \base{Shooting} \boosted{Ranged}%
+}
+\newcommand{\shamanismspellfiveshort}{%
+	Summon a Totemic Beast within \base{\distance{1}} \boosted{\distance{10}} of the Board Edge%
+}
+\newcommand{\shamanismspellsixshort}{%
+	\minuss{}1 to-hit modifier, treats all Terrain (including Open) as DT (2)%
+}
+
+
+% Thaumaturgy
+
+\newcommand{\thaumaturgypassiveshort}{%
+	Casting non-Bound Thaumaturgy spells: reroll Magic Dice resulting in \result{1} (unless causing Miscast), +1 Miscast modifier%
+}
+\newcommand{\thaumaturgyspelloneshort}{%
+	\base{D6} \boosted{D6+1} hits \St{} \base{D6} \boosted{D6+1}, \AP{} \base{2} \boosted{3}, Magical%
+}
+\newcommand{\thaumaturgyspelltwoshort}{%
+	\base{Randomise} \boosted{Choose} \minuss{}1 Res OR \minuss{}1 \St{} and \AP{}%
+}
+\newcommand{\thaumaturgyspellthreeshort}{%
+	If target is friendly, unit may reroll failed Discipline Tests. If target is an enemy unit, the
+	target can never reroll failed Discipline Tests%
+}
+\newcommand{\thaumaturgyspellfourshort}{%
+	Breath Attack (\St{} D3+2, \AP{} 1, Magical). \boosted{Target: 1 model unit/Char./Champ.}%
+}
+\newcommand{\thaumaturgyspellfiveshort}{%
+	Place a counter. End of each subsequent Magic Phase: 1--3 add counter, 4--6 all units within \distance{(2D6+X)}: 2D6 hits \St{} 5, \AP{} 2, Magical. X = number of counters%
+}
+\newcommand{\thaumaturgyspellsixshort}{%
+	Caster rolls D3+1, target rolls D3. If Caster rolls higher, difference = number of hits that wound automatically with \AP{} 10, Magical%
+}
+
+
+% Witchcraft
+
+\newcommand{\witchcraftattributeshort}{%
+	Friend: +1 Adv, +2 Mar. Enemy: \minuss{}1 Adv, \minuss{}2 Mar (min. 3/6). Two max. per unit%
+}
+\newcommand{\witchcraftspelloneshort}{%
+	\base{\distance{8}} \boosted{\distance{12}} Magical Move with Fly and Light Troops.\newline Sweeping Attack: D6 hits \St{} 4, \AP{} 1, Magical%
+}
+\newcommand{\witchcraftspelltwoshort}{%
+	\base{\minuss{}1} \boosted{\minuss{}2} Off, Def, and Agi%
+}
+\newcommand{\witchcraftspellthreeshort}{%
+	Target cannot use Shooting Attacks \boosted{and \minuss{}2 to its casting rolls}%
+}
+\newcommand{\witchcraftspellfourshort}{%
+	Melee Attacks from \boosted{and against} \rnf{} in target are set to wound on 4+, CC Attacks from \boosted{and against} \rnf{} in target are set to hit on 4+ (before any modifiers)%
+}
+\newcommand{\witchcraftspellfiveshort}{%
+	Target gains Random Movement (2D6\distance{}) or (3D6\distance{})%
+}
+\newcommand{\witchcraftspellsixshort}{%
+	Melee \boosted{and Shooting} Attacks against the target must reroll failed to-wound rolls%
+}
+
+
+% Hereditaries
+
+\newcommand{\beastherdsinitial}{BH}
+\newcommand{\hereditarybeastherds}{Echoes of the Dark Forest}
+\newcommand{\hereditarybeastherdsshort}{%
+	The target gains Fear, Fearless, and Terror. Enemy units in base contact with the target suffer \minuss{}1 Dis%
+}
+
+\newcommand{\daemonlegionsinitial}{DL}
+\newcommand{\hereditarydaemonlegions}{Spear of Infinity}
+\newcommand{\hereditarydaemonlegionsshort}{%
+	Target suffers 1 hit \St{} 2 [5], \AP{} 2, \areaattack{} (1\timess{}5), [\multiplewounds{}{} (2)]. Hits gain +1 \St{} for each previous non-Attribute Spell successfully cast%
+}
+
+\newcommand{\dreadelvesinitial}{DE}
+\newcommand{\hereditarydreadelves}{Curse of the Phantom Queen}
+\newcommand{\hereditarydreadelvesshort}{%
+	If causing HP losses within 18″, enemy unit suffers D3+1 hits, Str 4 AP 2, Magical for every discarded Veil Token%
+}
+
+\newcommand{\empireofsonnstahlinitial}{EoS}
+\newcommand{\hereditaryempireofsonnstahl}{Liberal Magics}
+\newcommand{\hereditaryempireofsonnstahlshort}{%
+	Learned Spell \#{}1 from a Path available other than the chosen one%
+}
+
+\newcommand{\highbornelvesinitial}{HE}
+\newcommand{\hereditaryhighbornelves}{Favour of Meladis}
+\newcommand{\hereditaryhighbornelvesshort}{%
+	Gain one Veil Token. When a friendly unit within \distance{18} of the Caster would lose a Health Point, you may discard a Veil Token instead (before Special Saves): the loss is ignored. Attack with Multiple Wounds inflict one less wound. For Standard Infantry, 2 HP losses are ignored per token (if they are simultaneous). Max. 2 per phase. Max. 1 per Character and Gigantic model per phase%
+}
+
+\newcommand{\infernaldwarvesinitial}{ID}
+\newcommand{\hereditaryinfernaldwarves}{Curse of Nezibkesh}
+\newcommand{\hereditaryinfernaldwarvesshort}{%
+	+1 Incendiary marker, \minuss{}1 Off and Def \boosted{and additional \minuss{}1 for each Incendiary marker on the target up to \minuss{}3}%
+}
+
+\newcommand{\kingdomofequitaineinitial}{KoE}
+\newcommand{\hereditarykingdomofequitaine}{Breath of the Lady}
+\newcommand{\hereditarykingdomofequitaineshort}{%
+	Add two Orison Tokens to your Orison Token pool%
+}
+
+\newcommand{\ogrekhansinitial}{OK}
+\newcommand{\hereditaryogrekhans}{Children of Umi}
+\newcommand{\hereditaryogrekhansshort}{%
+	All Melee Attacks against the target suffer \minuss{}1 to wound. \boosted{In addition, all Shamans in the target unit gain +1 Res}%
+}
+
+\newcommand{\orcsandgoblinsinitial}{OnG}
+\newcommand{\hereditaryorcsandgoblins}{\hspace*{3pt}Bring the Pain}
+\newcommand{\hereditaryorcsandgoblinsshort}{%
+	Failed to-hit rolls with CC Attacks against the target must be rerolled%
+}
+
+\newcommand{\saurianancientsinitial}{SA}
+\newcommand{\hereditarysaurianancients}{Spark of Creation}
+\newcommand{\hereditarysaurianancientsshort}{%
+	Target suffers D6 hits \St{} \base{5} \boosted{6}, \AP{} \base{2} \boosted{3}, Magical%
+}
+
+\newcommand{\sylvanelvesinitial}{SE}
+\newcommand{\hereditarysylvanelves}{Forest Embrace}
+\newcommand{\hereditarysylvanelvesshort}{%
+	Place a Forest underneath the target. This Forest always extends to the edges of the target's Unit Boundary. \boosted{Enemy units in base contact with the target must reroll natural to-hit rolls of \result{6}}%
+}
+
+\newcommand{\verminswarminitial}{VS}
+\newcommand{\hereditaryverminswarm}{The Awakened Swarm}
+\newcommand{\hereditaryverminswarmshort}{%
+	Summon a Rat Swarm on the targeted point; range measured from Caster or Tunnel Marker%
+}
+
+\newcommand{\undyingdynatiesinitial}{UD}
+\newcommand{\hereditaryundyingdynaties}{Death is only the Beginning}
+\newcommand{\hereditaryundyingdynatiesshort}{%
+	Attribute Spell cast when a non-Attribute non-Bound Spell of type Augment is successfully cast and augmented (+2 CV). Same target as trigger spell. Target Raises the Res value of the \rnf{} models of the unit in HP. Or a Character in the unit Recovers its Res value in HP. No more than 2 HP per phase for Characters and models with Towering Presence%
+}
+
+\newcommand{\vampirecountsinitial}{VC}
+\newcommand{\hereditaryvampirecounts}{Arise!}
+\newcommand{\hereditaryvampirecountsshort}{%
+	Either the \rnf{} part of target Raises its Rea value in HP, either one Character within target Recovers its Rea value in HP. Models with Towering Presence cannot Recover more than 2 HP per phase%
+}
+
+\newcommand{\warriorsinitial}{WDG}
+\newcommand{\hereditarywarriors}{Hellfire}
+\newcommand{\hereditarywarriorsshort}{%
+	Target suffers \base{2D3} \boosted{2D6} hits \St{} 6, \AP{} 0, Magical. \refsymbolbis{}Can target enemy in base contact with Caster's Front Facing%
+}
+
+
+% DH Battle Runes
+
+\newcommand{\battlerunes}{Battle Runes}
+\newcommand{\dhbattlerunes}{DH Battle Runes}
+\newcommand{\dhbattlerunesdef}{%
+	Battle Runes are Bound Spells with Power Level (5/8). If taken by a Runic Smith they have Range \distance{18}, and if taken by an Anvil of Power they have Range \distance{36}.%
+}
+
+\newcommand{\runeofrevocation}{Rune of Revocation}
+\newcommand{\runeofrevocationdef}{%
+	The effects of all other spells with duration One Turn affecting the target immediately come to an end. In addition, the next successfully cast enemy spell which targets the unit, including Aura and Attribute Spells, is automatically dispelled%
+}
+
+\newcommand{\runeofreckoning}{Rune of Reckoning}
+\newcommand{\runeofreckoningdef}{%
+	Target must reroll failed to-hit rolls with its CC Attacks%
+}
+
+\newcommand{\runeofoaths}{Rune of Oaths}
+\newcommand{\runeofoathsdef}{%
+	Target must reroll failed to-wound rolls with its Melee Attacks%
+}
+
+\newcommand{\runeofresolve}{Rune of Resolve}
+\newcommand{\runeofresolvedef}{%
+	Target may perform an \distance{8} Magical Move and with Light Troops%
+}
+
+\newcommand{\runeofgleaming}{Rune of Gleaming}
+\newcommand{\runeofgleamingdef}{%
+	Target gains Distracting and Hard Target (1)%
+}
+
+\newcommand{\runeofresilience}{Rune of Resilience}
+\newcommand{\runeofresiliencedef}{%
+	All to-wound rolls against the target suffer a \minuss{}1 modifier%
+}

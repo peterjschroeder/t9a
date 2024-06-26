@@ -1,0 +1,84 @@
+
+% Special Equipment Names
+
+\newcommand{\divinejudgement}{Divine Judgement}
+\newcommand{\tristansresolve}{Tristan's Resolve}
+\newcommand{\uthermettle}{Uther's Mettle}
+\newcommand{\mortalreminder}{Mortal Reminder}
+
+\newcommand{\prayeretched}{Prayer\minuss{}Etched}
+\newcommand{\percivalpanoply}{Percival's Panoply}
+\newcommand{\fortressoffaith}{Fortress of Faith}
+
+\newcommand{\oriflamme}{Oriflamme}
+\newcommand{\bannerofroland}{Banner of Roland}
+\newcommand{\bannerofelan}{Banner of Elan}
+\newcommand{\castellancrest}{Castellan's Crest}
+\newcommand{\relicshroud}{Relic Shroud}
+
+\newcommand{\sacredchalice}{Sacred Chalice}
+\newcommand{\blackknightstabard}{Black Knight's Tabard}
+
+% Special Equipment Texts
+
+\newcommand{\divinejudgementdef}{%
+	After the wielder completes a Charge, attacks made with this weapon gain +2 Strength and +2 Armour Penetration  until the wielder is no longer Engaged in Combat.%
+}
+\newcommand{\tristansresolvedef}{%
+	While using this weapon, the wielder gains +1 Attack Value, and attacks made with this weapon  gain +1 Armour Penetration. After a successful to-hit roll, the attacker may discard one of the hits with this weapon and choose an enchanted weapon carried by the model the attack was allocated towards. Any Weapon Enchantment of the chosen weapon is ignored for the rest of the game.%
+}
+\newcommand{\uthermettledef}{%
+	\newrule{Once per Round of Combat, unless fighting a Duel, after one or more successful to-hit rolls made with this weapon against an enemy model, the target's unit suffers 1 hit with \areaattack{} (1\timess{}5) in the same Initiative Step as the initial Close Combat Attack. The hits from the Area Attack have the same Strength, Armour Penetration, and Attack Attributes as the initial Close Combat Attack. This is considered a Special Attack.}
+}
+
+\newcommand{\mortalreminderdef}{%
+	The wielder gains \textbf{Fear} and \textbf{\terror{}}. Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.%
+}
+
+\newcommand{\prayeretcheddef}{%
+	The wearer gains +1 Armour and \textbf{\aegis{+1, max. 4+}}.%
+}
+\newcommand{\percivalpanoplyrestriction}{Cavalry models without \toweringpresence{} only}
+\newcommand{\percivalpanoplydef}{%
+	The wearer gains +2 Armour.%
+}
+
+\newcommand{\fortressoffaithdef}{%
+	While using this Shield, the bearer \textbf{must} reroll Armour Save rolls of \result{1}.\columnbreak%
+}
+
+\newcommand{\oriflammerestriction}{Cannot be taken by units that count towards Core}
+\newcommand{\oriflammedef}{%
+	The bearer gains \textbf{\fear} while Engaged in Combat. Enemy units in base contact with the bearer’s unit cannot benefit from Rally Around the Flag.%
+}
+\newcommand{\bannerofrolanddef}{%
+	The bearer's unit gains \textbf{\removedrule{\aegis{}} (\removedrule{+1,}\removedrule{max. 4+, against Ranged Attacks)}} \newrule{\textbf{\devastatingcharge{\aegis{} (4+)}}}. In addition, enemy units cannot choose Stand and Shoot as a Charge Reaction against Charges declared by the bearer's unit.%
+}
+\newcommand{\bannerofelandef}{%
+	Close Combat Attacks made with Lances by the bearer’s unit gain +2 Strength and +2 Armour Penetration in the First Round of Combat if the following conditions are met:%
+	\begin{itemize}
+		\item The bearer’s unit is only Engaged in its Front Facing.
+		\item The bearer’s unit is not Charging.
+		\item The bearer’s unit failed a Charge in its previous Charge Phase.
+	\end{itemize}
+}
+
+\newcommand{\castellancrestrestriction}{Cavalry models only}
+\newcommand{\castellancrestdef}{%
+	One use only. May be activated immediately before declaring a Charge with the bearer or the bearer’s unit in the Charge Phase. Failed Charge Range rolls of the bearer or the bearer’s unit must be rerolled until the end of the phase. Other Characters Charging out of the bearer’s unit are not affected.%
+}
+
+\newcommand{\relicshroudrestriction}{Models with \courage{} or \honesty{} only}
+\newcommand{\relicshrouddef}{%
+	The bearer can cast \spellformat{\breathofthelady}{\hereditaryspell} as a Bound Spell with Power Level (4/8).%
+}
+
+\newcommand{\sacredchalicrestriction}{Models with \orison{} (X) only}
+\newcommand{\sacredchalicedef}{%
+	The bearer gains \textbf{\magicresistance{1}}. When the bearer’s unit is the target of an enemy Casting Attempt, including Attribute Spells, the bearer’s owner gains 1 Veil Token.
+	%
+}
+\newcommand{\blackknightstabarddef}{%
+	\newrule{One use only.} The first time the bearer’s model suffers an unsaved wound from an attack with Multiple Wounds (X), the \removedrule{bearer's} model gains \textbf{\immune{} (\multiplewounds{X}{})} until the end of the phase.
+	%
+}

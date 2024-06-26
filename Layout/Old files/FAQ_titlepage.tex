@@ -1,0 +1,51 @@
+
+\begin{titlepage}
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing title}}
+\ifdef{\version}{}{\newcommand{\version}{Missing version}}
+
+{\titlefont\fontsize{40}{48}\selectfont\noindent\labels@NinthAge
+
+\labels@fantasybattles}
+
+\vspace*{10pt}
+
+{\titlefont\fontsize{50}{60}\selectfont \booktitle
+\vspace{5pt}
+
+\fontsize{14}{16.8}\selectfont \forversion{} - \today{}
+
+\faqversion{}
+
+\ifdef{\translationversion}{{\fontsize{14}{16.8}\selectfont \vspace{3pt}\noindent{}\translationversion}}{}}
+
+\vspace*{20pt}
+\includegraphics[width=\textwidth]{banner_9th.png}
+
+%\vspace*{20pt}
+\end{center}
+
+\basictitle{\howtousethisdocumenttitle}
+
+\howtousethisdocumenttext{}
+
+\newrule{\recentchangessentence}
+
+\vfill
+
+\begin{center}
+\begin{tabular}{@{}m{2cm}@{\hskip 20pt}m{13cm}@{}}
+\includegraphics[width=2cm]{../Layout/pics/seal_9th.png} &
+{\fontsize{10}{12}\selectfont \textcolor{black!50}{\noindent\labels@frontpagecredits}}
+
+\ifdef{\frontpageaddstuff}{{\fontsize{10}{12}\selectfont \noindent\textcolor{black!50}{\frontpageaddstuff}}}{}
+
+\vspace*{10pt}
+\noindent{\fontsize{10}{12}\selectfont \textcolor{black!50}{\labels@license}}
+\tabularnewline
+\end{tabular}
+
+
+\end{center}
+\end{titlepage}

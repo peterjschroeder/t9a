@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\carnosaur{},
+	logo=monster,
+	cost=380,
+	type=\beast{},
+	size=\heightgigantic{},
+	unitsize=1,
+	basesize=50\timess{}100,
+	maxunitsperarmy=2,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=7,
+	globalrules={\frenzy{},\fearless{},\communalbond{},\minimised{} (\disciplinetest{})},
+	defense@HP=5,
+	defense@Df=2,
+	defense@Re=5,
+	defense@Arm=4,
+	offensename=\tegurider{},
+	offense@At=2,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules=\lodestone{},
+	offensenameB=\carnosaur{},
+	offenseB@At=5,
+	offenseB@Of=3,
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=3,
+	offenserulesB={\harnessed{},\battlefocus{},{\multiplewounds{}{} (2, \against{} \heightstandard{}, \heightlarge{})},\predatorsenses{}},
+	options={%
+	\textbf{\huntleader{}}=20,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\lightlance{}=\free{},
+			\halberd{}=10,
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\huntleader}{\ruletype{\universalrule}\huntleaderdef}
+	},
+} % END UNIT ENTRY

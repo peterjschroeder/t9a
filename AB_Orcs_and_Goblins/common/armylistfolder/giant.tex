@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\giant{},
+	logo=monster,
+	cost=255,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\hidebf{\giantseegiantdo{}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	offensename=\giant{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=3,
+	offenserules={\rage{}},
+	options={%
+		\textbf{\bigbrother{}}=25,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\giantclub{}}=55,
+			\nets{}=60,
+			\textbf{\wreckingball{}}=\free{},
+		}},
+	},
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo}{\ruletype{\universalrule}\giantseegiantdodef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother}{\ruletype{\universalrule}\bigbrotherdef}
+		\modelruledef{\textbf{\giantclub}}{\ruletype{\closecombatweapon}\giantclubdef}
+		\modelruledef{\textbf{\wreckingball}}{\ruletype{\closecombatweapon}\wreckingballdef}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}%

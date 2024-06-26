@@ -1,0 +1,36 @@
+
+\unitentry{%
+	name=\treefather{},
+	logo=special,
+	cost=445,
+	unitsize=1,
+	%maxunitsperarmy=2,
+	addrestriction=\zerotoXunitsperarmy{2}\refsymbol{},
+	categorynote=\refsymbolbis{}\treefathercategorynote{},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=75\timess{}50,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={,\forestwalker{},\stubborn{},\treesinging{},\sylvanspirit{}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=6,
+	defense@Arm=4,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\treefather{},
+	offense@At=5,
+	offense@Of=5,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=2,
+	offenserules={\crushattack{}},
+	offenseweapons={\impalingroots{} (3+)},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\treesinging{}}{\ruletype{\universalrule}\treesingingdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+		\modelruledef{\impalingroots{}}{\ruletype{\shootingweapon}\impalingrootsdef}
+	},
+} % END UNIT ENTRY

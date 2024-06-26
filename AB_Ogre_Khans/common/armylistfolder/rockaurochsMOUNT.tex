@@ -1,0 +1,29 @@
+
+\unitentry{%
+	name=\rockaurochs{},
+	logo=character_monster,
+	categorynote=\mountcategorynote{\chainedbeasts},
+	maxmountsperarmy=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=100\timess{}150,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=\ascharacter{},
+	globalrules={\frenzy{},\fearless{}},
+	defense@HP=6,
+	defense@Df=2,
+	defense@Re=6,
+	defense@Arm=3,
+	defenserules={\mountainhide{}},
+	offensename=\rockaurochs{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=2,
+	offenserules={\impacthits{\XDthree{3}},\harnessed{},\battlefocus{},\devastatingcharge{+1 \St{}, +1 \AP{}},\hidebf{\livingavalanche{}}},
+	modelrulesdef={%
+		\modelruledef{\livingavalanche}{\ruletype{\attackattribute}\livingavalanchedef}
+	},
+} % END UNIT ENTRY

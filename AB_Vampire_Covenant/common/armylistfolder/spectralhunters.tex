@@ -1,0 +1,53 @@
+
+{\renewcommand{\labels@mountsoptions}{\bloodtiestitle{\nosferatu{}}}
+\unitentry{%
+	name=\spectralhunters{},
+	logo=tower,
+	cost=175,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=33,
+	maxunitsperarmy=2,
+	type=\cavalry{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=5,
+	global@Rsr=1,
+	globalrules={\undead{},\ashestoashes{},\fear{},\ghostlyform{},\fearless{},\lighttroops{},\terror{},\wizardconclave{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=1,
+	defenserules={\aegis{} (5+),{\aegis{} (3+, \againstnonmagicalattacks{})}},
+	offensename=\spectralhunter{},
+	offense@At=2,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=10,
+	offense@Ag=2,
+	offenseweapons={\gw{}},
+	offenserules={\flamingattacks{},\magicalattacks{}},
+	offensenameB=\ghoststeed{},
+	offenseB@At=1,
+	offenseB@Of=2,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=2,
+	offenserulesB={\flamingattacks{},\harnessed{}},
+	commandgroup={%
+		\champion{}=100,
+	},
+%	mounts={%
+%		=,
+%	},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\cosmologyspellfour}{\cosmology},
+			\spellformat{\evocationspelltwo}{\evocation},
+			\spellformat{\witchcraftspellone}{\witchcraft},
+		}
+	},
+} % END UNIT ENTRY
+} % END of renewcommand

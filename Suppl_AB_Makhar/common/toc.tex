@@ -1,0 +1,19 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{MAKModelRules}{\armymodelrules}\par
+	\tocentry{MAKHereditarySpell}{\hereditaryspell}\par
+	\tocentry{MAKSpecialEquip}{\specialequipment}\par
+	\tocentry{MAKArmyOrganisation}{\armyorganisation}\par
+	\tocentry{MAKQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{MAKchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{MAKCharacters}{\characters}\par
+	\tocentry{MAKMounts}{\charactermounts}\par
+	\tocentry{MAKCore}{\core}\par
+	\tocentry{MAKSpecial}{\specialcategory}\par
+	\tocentry{MAKRainingDeath}{\rainingdeath}\par
+}

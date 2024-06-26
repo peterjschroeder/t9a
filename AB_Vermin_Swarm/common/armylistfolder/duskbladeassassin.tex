@@ -1,0 +1,33 @@
+
+\unitentry{%
+	name=\duskbladeassassin{},
+	logo=character,
+	categorynote=,
+	cost=125,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\callous{},\notaleader{},,\hidden{},\hidebf{\sicsempertyrannis{}},\hidebf{\disdainforplebs{}},},
+	defense@HP=2,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\distracting{}},
+	offensename=\duskbladeassassin{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=3,
+	offense@Ag=8,
+	offenseweapons={\pw{},\throwingweapons{} (2+)},
+	offenserules={\divineattacks{},\multiplewounds{2, \againstcharacter{}}{}},
+	modelrulesdef={%
+		\modelruledef{\sicsempertyrannis}{\ruletype{\universalrule}\sicsempertyrannisdef}
+		\modelruledef{\disdainforplebs}{\ruletype{\universalrule}\disdainforplebsdef}
+	},
+}% END UNIT ENTRY

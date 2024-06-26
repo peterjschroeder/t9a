@@ -1,0 +1,230 @@
+
+\part{Terrain}
+\idx[main=y]{Terrain}\label{terrain}
+
+\RBbmc
+
+\section{Terrain Types}
+\idx[main=y]{Terrain Types}\label{terrain_types}
+
+\subsection{Dangerous Terrain (X)}
+\idx[main=y]{Dangerous Terrain}\label{dangerous_terrain}
+
+A model must take a Dangerous Terrain Test if it is in contact with a Terrain Feature that counts as Dangerous Terrain at any point during its March, Charge, Failed Charge, Flee, Pursuit, or Overrun Move. Take a Dangerous Terrain Test by rolling a number of D6 depending on the model's Height and Model Rules:
+
+\vspace*{-2pt}\begin{center}\begin{tabular}{lcccc}%
+	\hline
+	& \textbf{\heightstandard} & \textbf{\heightlarge} & \textbf{\heightgigantic} & \textbf{\chariot}\tabularnewline
+	D6 & 1 & 2 & 3 & +1 \tabularnewline
+	\hline
+\end{tabular}\end{center}
+
+For each dice that rolled equal to or below X (where X is the value stated in brackets), the model suffers a hit with Armour Penetration 10 that wounds automatically.
+
+Immediately before one or more models in a unit take a Dangerous Terrain Test (e.g. when the first model in a unit moves into contact with a Terrain Feature that counts as Dangerous Terrain), apply the following procedure:
+\begin{enumerate}
+	\item Interrupt the move.
+	\item Determine which models will have to take Dangerous Terrain Tests by extrapolating the unit's move to the position where the corresponding models are in contact with the source of the Dangerous Terrain Tests. For this purpose, the owner announces how they intend to move the unit to this position.
+	\item Take the Dangerous Terrain Tests. All Dangerous Terrain Tests caused by a single source are always taken at the same time.
+	\item Move the unit as announced or as close to that as possible while following any other rules affecting the move (e.g. Maximising Contact during Charge Moves), i.e. it must face the announced direction and the centre of its Front Facing must be as close to the position where it would be if the unit had not suffered any casualties.
+	\item Continue the unit's move. In case of a March Move, the owner may choose not to continue moving the unit. No model in the unit that did not take a Dangerous Terrain Test for the Terrain Feature may move into contact with that Terrain Feature during the rest of the unit’s move. Note that:
+\end{enumerate}
+\begin{itemize}
+	\item Hits suffered from Dangerous Terrain Tests are distributed onto the model's Health Pool.
+	\item A model never takes more than one Dangerous Terrain Test for the same Terrain Feature during a single move, but it might have to take several Dangerous Terrain Tests caused by different Terrain Features or abilities.
+	\item Use the position of the unit when taking the Dangerous Terrain Tests for all rules purposes (e.g. for determining the range of \hyperref[commanding_presence]{Commanding Presence} and \hyperref[rally_around_the_flag]{Rally Around the Flag}, for determining the direction of the Flee Move if the unit fails a Panic Test, for causing Panic Tests in friendly units if the unit is removed as a casualty, etc.).
+\end{itemize}
+	
+
+
+\subsection{Opaque Terrain}
+\idx[main=y]{Opaque Terrain}\label{opaque_terrain}
+
+Line of Sight cannot be drawn through Opaque Terrain, but can be drawn into it. Models always ignore any Terrain they are inside for drawing Line of Sight.
+
+\subsection{Covering Terrain}
+\idx{Cover}\idx[main=y]{Covering Terrain}\label{covering_terrain}
+
+Like models, Terrain Features may contribute to Cover when obscuring a fraction of the Target Facing or the Target Point from the enemy's Line of Sight (see \totalref{cover}, and remember that Cover modifiers only apply if more than half of the Target Facing or the Target Point is obscured by Cover).
+
+For the purpose of counting as Cover, Terrain Features may distinguish:
+
+\begin{itemize}
+	\item Targets obscured \textbf{behind} the Terrain Feature. These units must have more than half of their Target Facing or their Target Point off the Terrain Feature, and the part of the Terrain Feature obscuring Line of Sight must be between the shooting model and its target.
+	\item Targets obscured \textbf{inside} the Terrain Feature. These units must have more than half of their Target Facing or their Target Point inside the Terrain Feature.
+	\item Targets obscured \textbf{behind and/or inside} the Terrain Feature: there is no need to determine where more than half of these units' Target Facing or their Target Point lies (as long as it is obscured).
+\end{itemize}
+
+Models always ignore any Terrain they are inside for drawing Line of Sight.
+
+\columnbreak
+
+\section{Terrain Features}
+\idx[main=y]{Terrain Features}\label{terrain_features}
+
+A Terrain Feature is a topographical area on the Battlefield that may be a mixture of Dangerous, Opaque, or Covering Terrain and may possess its own set of rules.
+
+\subsection{Open Terrain}
+\idx[main=y]{Open Terrain}\label{open_terrain}
+
+Open Terrain normally doesn't have any effect on Line of Sight, Cover modifiers, or movement. All parts of the board that are not covered by any other kind of Terrain are considered to be Open Terrain.
+
+\subsection{Fields}
+\idx[main=y]{Fields}\label{fields}
+
+Fields can be represented in the game for example by meadows or agricultural fields.
+
+\paragraph{Types}
+
+Fields are \hyperref[covering_terrain]{Covering Terrain} for units \textbf{inside} them.
+
+\paragraph{Cover}
+
+Fields contribute to \hyperref[covering_terrain]{Soft Cover}, except for \hyperref[boundary_rectangle]{Unit Boundaries} with \hyperref[towering_presence]{Towering Presence}.
+
+\subsection{Forests}
+\idx[main=y]{Forests}\label{forests}
+
+Forests can be represented in the game for example by jungles, brushwoods, or coniferous forests.
+
+\paragraph{Types}
+
+Forests are \hyperref[covering_terrain]{Covering Terrain} for units \textbf{inside and/or behind them}, and \hyperref[dangerous_terrain]{Dangerous} \hyperref[dangerous_terrain]{Terrain (1)} for Cavalry, Constructs, and units making a \hyperref[fly]{Flying Movement}.
+
+\paragraph{Cover}
+
+Forests contribute to \hyperref[covering_terrain]{Soft Cover}.
+
+\paragraph{Broken Ranks}
+\idx[main=y]{Broken Ranks}
+
+Units with more than half of their models with the centre of their base inside a Forest can never be \hyperref[steadfast]{Steadfast}, unless specifically stated otherwise.
+
+\paragraph{Guerilla Warfare}
+\idx[main=y]{Guerilla Warfare}
+
+Units consisting entirely of Infantry models with \hyperref[light_troops]{Light Troops} are \hyperref[stubborn]{\textbf{Stubborn}} if more than half of their models are inside a Forest with the centre of their bases, unless any model in the unit has \hyperref[towering_presence]{Towering Presence} and/or \hyperref[fly]{Fly}.
+
+\columnbreak
+
+\subsection{Hills}
+\idx[main=y]{Hills}\label{hills}
+
+Hills can be represented in the game for example by elevated plateaus or burial mounds.
+
+\paragraph{Types}
+
+Hills are \hyperref[opaque_terrain]{Opaque Terrain}.\newline
+Hills are \hyperref[covering_terrain]{Covering Terrain} for units \textbf{behind} them.
+
+\paragraph{Cover}
+
+Hills contribute to \hyperref[covering_terrain]{Soft Cover} for targets behind \textbf{but partially on} them.\newline
+Hills contribute to \hyperref[covering_terrain]{Hard Cover} for targets behind \textbf{and entirely off} them.
+
+\paragraph{Elevated Position}
+\idx[main=y]{Elevated Position}
+
+Models with the centre of their base on a Hill are considered to be Elevated. Ignore all intervening non-Elevated models if you are:
+\begin{itemize}
+	\item Drawing Line of Sight to or from Elevated models.
+	\item Determining Cover when shooting with:
+	\begin{itemize}
+		\item Elevated models
+		\item Non-Elevated models at units which have more than half of their models Elevated
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Charging Downhill}
+\idx[main=y]{Charging Downhill}
+
+A unit initiating a Charge Move with more than half of its models with the centre of their base on a Hill towards an enemy with more than half of its models with the centre of their base off a Hill must reroll failed Charge Range rolls.
+
+\subsection{Impassable Terrain}
+\idx[main=y]{Impassable Terrain}\label{impassable_terrain}
+
+Impassable Terrain can be represented in the game for example by monoliths, massive boulders, or buildings.
+
+\paragraph{ Types}
+
+Impassable Terrain is \hyperref[opaque_terrain]{Opaque Terrain}.%
+
+\paragraph{Cover}
+
+Impassable Terrain contributes to \hyperref[covering_terrain]{Hard Cover} for units behind it.
+
+\paragraph{Mission Impassible}
+\idx[main=y]{Mission Impassible}
+
+Models cannot move into or through Impassable Terrain.
+
+\columnbreak
+
+\subsection{Ruins}
+\idx[main=y]{Ruins}\label{ruins}
+
+Ruins can be represented in the game for example by rubble or abandoned farmsteads.
+
+\paragraph{Types}
+
+Ruins are \hyperref[covering_terrain]{Covering Terrain} for units \textbf{inside} them, \hyperref[dangerous_terrain]{Dangerous Terrain~(2)} for Cavalry and Constructs, and \hyperref[dangerous_terrain]{Dangerous Terrain~(1)} for any other unit. Units with \hyperref[skirmisher]{Skirmisher} automatically pass Dangerous Terrain Tests caused by Ruins.
+
+\paragraph{Cover}
+
+Ruins contribute to \hyperref[covering_terrain]{Hard Cover}, except for \hyperref[boundary_rectangle]{Unit Boundaries} with \hyperref[towering_presence]{Towering Presence}.
+
+\subsection{Walls}
+\idx[main=y]{Walls}\label{walls}
+
+Walls can be represented in the game for example by wooden barricades, stone walls, or hedges.
+
+\paragraph{Types}
+
+Walls are \hyperref[covering_terrain]{Covering Terrain} for models \textbf{behind} them while Defending the Wall (see below) and \hyperref[dangerous_terrain]{Dangerous Terrain~(2)} for Constructs.
+
+\paragraph{Cover}
+
+Walls contribute to \hyperref[covering_terrain]{Hard Cover}, except for \hyperref[boundary_rectangle]{Unit Boundaries} with \hyperref[towering_presence]{Towering Presence}.
+
+\paragraph{Defending a Wall}
+\idx[main=y]{Defending a Wall}
+
+In order to Defend a Wall, more than half of a unit's Front Facing must be in contact with it.
+
+\paragraph{Fortified Position}
+\idx[main=y]{Fortified Position}
+
+Units Defending a Wall gain \hyperref[distracting]{\textbf{Distracting}} against Close Combat Attacks from Charging enemies in their Front Facing.
+
+\columnbreak
+
+\subsection{Water Terrain}
+\idx[main=y]{Water Terrain}\label{water_terrain}
+
+Water Terrain can be represented in the game for example by ponds, swamps, or rivers.
+
+\paragraph{Types}
+
+Water Terrain is \hyperref[dangerous_terrain]{Dangerous Terrain~(1)} for Standard Height models on foot.
+
+\paragraph{Broken Ranks}
+\idx{Broken Ranks}
+
+Units with more than half of their models with the centre of their base inside Water Terrain can never be \hyperref[steadfast]{Steadfast}, unless specifically stated otherwise. 
+
+\paragraph{Doused Flames}
+\idx[main=y]{Doused Flames}
+
+All Melee Attacks against or by models in units with more than half of their models with the centre of their base inside Water Terrain are no longer \hyperref[flaming_attacks]{Flaming Attacks} (if they were before).
+
+\section{Board Edge}
+\idx[main=y]{Board Edge}\label{board_edge}
+
+The Board Edge represents the boundaries of the game. A unit is allowed to temporarily and partially move off the board (during any move) with by the following restrictions:
+
+\begin{itemize}
+	\item The unit's Front Facing must remain entirely on the board at all times, except during \hyperref[aligning_units]{align moves}.
+	\item The unit must finish its move with its Unit Boundary entirely on the board.
+\end{itemize}
+
+\RBemc

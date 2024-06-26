@@ -1,0 +1,51 @@
+
+\unitentry{%
+	name=\bladedancers{},
+	logo=special,
+	cost=210,
+	unitsize=7,
+	maxunitsize=15,
+	costpermodel=31,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\magicresistance{1},\fearless{},\forestwalker{},\lighttroops{},\hidebf{\dancesofcenyrn}},
+	defense@HP=1,
+	defense@Df=6,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\hardtarget{} (1),\aegis{} (6+)},
+	offensename=\bladedancer{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenserules={\lightningreflexes{}},
+	offenseweapons={\sylvanblades{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},%	
+		\alphaorderstickto{\standardbearer{}=11}**\suboptionindent{}\optionline%
+	},
+	modelrulesdef={%
+		\modelruledef{\dancesofcenyrn}{\ruletype{\universalrule}\dancesofcenyrndef}
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\sylvanblades{}}{\ruletype{\closecombatweapon}\sylvanbladesdef}
+		\modelruledef{\dancesofcenyrn}{\ruletype{\universalrule}\dancesofcenyrndef}
+	},
+	endtext={\vspace*{5pt}\dancesofcenyrntable{}},
+	scrollendtext={\vspace*{5pt}\dancesofcenyrntable{}},
+	toggles={%
+		\toggletrue{twocolprintcommandgroup}%
+		\togglefalse{onecolprintcommandgroup}%
+	},
+}% END UNIT ENTRY

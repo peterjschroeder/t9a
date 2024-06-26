@@ -1,0 +1,1659 @@
+
+\def\languageisenglish{}
+\def\thisistherulebook{}
+%\def\totalrefwithpartname{}% define if you want \totalref to print "chapter", "section, etc before the title of the referred part
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{common/}{layout.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_summary.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Summaries}
+\def\bookprefix{SUM}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\newcommand{\headersummaries}{Summaries -- \editionversion{}, 2022 -- June 16, 2022}
+
+\begin{document}
+
+\startsummaries
+
+\begin{center}
+	\largerfontsize\headersummaries
+\end{center}
+
+\vspace*{-10pt}
+\summarysection{General}
+
+\begin{minipage}[t]{0.34\textwidth}
+
+\summarysubsection{Turn}
+
+A standard game lasts for 6 \textbf{Game Turns}, each divided into two \textbf{Player Turns}. Each Player Turn is divided into five phases, performed in the following order:
+
+\startsumseqtable
+1 & Charge Phase \tabularnewline
+2 & Movement Phase \tabularnewline
+3 & Magic Phase \tabularnewline
+4 & Shooting Phase \tabularnewline
+5 & Melee Phase \tabularnewline
+\closesumseqtable
+
+\end{minipage}\hfill\begin{minipage}[t]{0.63\textwidth}
+
+\summarysubsection{Priority of Modifiers}
+
+  \vspace*{-3pt}\alternaterowcolors\begin{tabular}{M{1.5cm} m{\textwidth -1.5cm -24pt}}
+  \hline
+    \textbf{Priority} \textbf{Step} & \textbf{Modifier} \\
+    \textbf{1} & Values \textbf{set} to a certain number and values \textbf{set} to another model's value. If the other model's Characteristic is modified, apply these modifiers before setting the Characteristic. \\
+    \textbf{2} & Multiplication and division. Round fractions up. \\
+    \textbf{3} & Addition and subtraction. \\
+    \textbf{4} & Rolls \textbf{always} or \textbf{never} succeeding or failing on certain results, and Characteristics \textbf{always} or \textbf{never} set to a certain value or range of values. \\
+    \hline
+  \end{tabular}
+
+When several modifiers within a group are to be applied to a value or dice roll, apply them in the order that results in the lowest value or success chance of the dice roll.
+
+\end{minipage}
+
+\vspace*{-5pt}
+\summarysubsection{Model Type and Height -- related Model Rules}
+
+\hspace*{\fill}\begin{tabular}[t]{M{1.2cm} M{1.5cm} M{1.5cm} M{2cm}}
+\hline
+  \textbf{Infantry} &
+  \textbf{Beast} &
+  \textbf{Cavalry} &
+  \textbf{Construct} \\
+   None &
+  Swiftstride &
+  Cannot be Stomped\par
+  Swiftstride\par
+  Tall &
+  Cannot use Stomp Attacks\par
+  Chariot\\
+    \hline
+\end{tabular}\hfill{\alternaterowcolors\begin{tabular}[t]{M{1.9cm} M{1.6cm} M{2.2cm} M{2.3cm}}
+  \hline
+  &%
+  \textbf{Standard} &%
+  \textbf{Large} &%
+  \textbf{Gigantic} \\
+   \textbf{Model Rules} &%
+   None &%
+  Stomp Attacks (1)&
+  Fear\par
+  Massive Bulk\par
+  Stomp Attacks (D6)\par
+  Terror\par
+  Towering Presence\\
+  \textbf{Full Ranks}&%
+  5 &%
+  3 &%
+  1 \\
+  \textbf{Supporting Attacks}&%
+  1&%
+  3&%
+  5\\
+  \hline
+\end{tabular}}\hspace*{\fill}
+
+\vspace*{-45pt}
+\summarysection{Pre-Game}
+
+\begin{minipage}[t]{0.29\textwidth}
+\summarysubsection{Pre-Game Sequence}
+
+\hbadness=10000
+\startsumseqtable
+1 & Decide on the size of the game \tabularnewline
+2 & Share your Army List with your\newline opponent \tabularnewline
+3 & Build the Battlefield \tabularnewline
+4 & Determine the Deployment Type \tabularnewline
+5 & Determine the Secondary Objective \tabularnewline
+6 & Determine the Deployment Zones \tabularnewline
+7 & Select Spells \tabularnewline
+8 & Declare Special Deployment\newline (Ambush, Scout) \tabularnewline
+9 & Deployment Phase \tabularnewline
+\closesumseqtable
+
+\summarysubsection{Deployment Phase Sequence}
+
+\startsumseqtable
+1 & Determine who deploys first \tabularnewline
+2 & Take turns deploying units \tabularnewline
+3 & Declare intent to go first or second \tabularnewline
+4 & Deploy remaining units \tabularnewline
+5 & Deploy Scouting units (starting with the player who completed their normal deployment first) \tabularnewline
+6 & Move Vanguarding units (starting with the player who completed their normal deployment last) \tabularnewline
+7 & Other rules and abilities \tabularnewline
+8 & Roll for First Turn \tabularnewline
+\closesumseqtable
+\end{minipage}\hspace{0.01\textwidth}\begin{minipage}[t]{0.70\textwidth}
+\summarysubsection{Deployment Types}
+\begin{minipage}{0.315\textwidth}
+\textbf{1 -- \frontlineclash{}}\newline
+\def\svgwidth{\textwidth}
+\subimport{pics/}{deployment_1_frontline.pdf_tex}
+\end{minipage}\begin{minipage}{0.37\textwidth}
+\hspace*{10pt}\textbf{2 -- \dawnassault{}}\newline
+\def\svgwidth{\textwidth}
+\subimport{pics/}{deployment_2_dawnassault.pdf_tex}
+\end{minipage}\begin{minipage}{0.315\textwidth}
+\textbf{3 -- \counterthrust{}}\newline
+\def\svgwidth{\textwidth}
+\subimport{pics/}{deployment_3_counterthrust.pdf_tex}
+\end{minipage}
+
+\begin{minipage}{0.315\textwidth}
+\def\deploymentfigAttacker{Attacker}
+\def\deploymentfigDefender{Defender}
+\textbf{4 -- \encircle{}}\newline
+\def\svgwidth{\textwidth}
+\subimport{pics/}{deployment_4_encircle.pdf_tex}
+\end{minipage}\hfill\begin{minipage}{0.315\textwidth}
+\textbf{5 -- \refusedflank{}}\newline
+\def\svgwidth{\textwidth}
+\subimport{pics/}{deployment_5_refusedflank.pdf_tex}
+\end{minipage}\hfill\begin{minipage}{0.315\textwidth}
+\textbf{6 -- \marchingcolumns{}}\newline
+\def\svgwidth{\textwidth}
+\def\MarchColfontsize{\fontsize{5.5}{7}\selectfont}
+\subimport{pics/}{deployment_6_marchingcolumns.pdf_tex}
+\end{minipage}
+
+The player who chooses the Deployment Zone also chooses the short Board Edges for 2, who is the attacker for 4, and the diagonal for 5.
+
+\textbf{2 -- \dawnassault{}}: Players may choose up to two units as Ambushers coming from their short Board Edge.
+
+\textbf{3 -- \counterthrust{}}: Players must only deploy a single non-Character unit during their first 3 turns. Units must be deployed more than \distance{20} away from enemies.
+
+\textbf{6 -- \marchingcolumns{}}: Players must only deploy a single unit during their first 3 turns other than Character, War Machine or War Platform. Each unit must be farther from the short Board Edge chosen by the owner than the previous friendly units (War Machines, War Platforms, Characters, and Scouts ignore and are ignored for this). Possibility to make units Delayed.
+\end{minipage}
+
+\vspace*{-5pt}
+\summarysubsection{Secondary Objectives}
+
+\begin{minipage}[t]{0.32\textwidth}
+\textbf{1 -- Hold the Ground}\newline
+Have more Scoring Units than your opponent within \distance{6} of the centre of the board at the end of a Game Turn (other than the first) to gain a counter.
+\end{minipage}\hfill\begin{minipage}[t]{0.32\textwidth}
+\textbf{2 -- Breakthrough}\newline
+Be the player with the most Scoring Units inside their opponent’s Deployment Zone at the end of the game (up to 3).
+\end{minipage}\hfill\begin{minipage}[t]{0.32\textwidth}
+\textbf{3 -- Spoils of War}\newline
+Three markers on the Centre Line that can be picked up by Scoring Units by being in contact with them at the start of their Player Turn. At the end of the game, be the player with the most units carrying markers.
+\end{minipage}
+
+\begin{minipage}[t]{0.32\textwidth}
+\textbf{4 -- King of the Hill}\newline
+After Spell Selection, each player chooses a non-Impassable Terrain Feature not entirely in their Deployment Zone. At the end of the game, have Scoring Units inside your opponent's Terrain Feature.
+\end{minipage}\hfill\begin{minipage}[t]{0.32\textwidth}
+\textbf{5 -- Capture the Flags}\newline
+Destroy more Scoring Units than your opponent. Each player must have at least 3 Scoring Units; else, the opponent marks non-Scoring Units to destroy.
+\end{minipage}\hfill\begin{minipage}[t]{0.32\textwidth}
+\textbf{6 -- Secure Target}\newline
+Both players place a marker more than \distance{12} from their Deployment Zones and at least \distance{24} away from the other marker. Control a marker by having more Scoring Units within \distance{6} of it. Be the player controlling most markers at the end of the game.
+\end{minipage}
+
+The player who chooses the Deployment Zone also starts choosing or placing in 4, 5, and 6.
+
+
+\newpage
+
+\summarysection{Charge Phase}
+
+\begin{minipage}[t]{0.42\textwidth}
+\summarysubsection{Charge Phase Sequence}
+
+\startsumseqtable
+1 & Start of the Charge Phase (and start of the Player Turn) \tabularnewline
+2 & The Active Player chooses a unit and declares a Charge \tabularnewline
+3 & The Reactive Player declares and resolves their Charge Reaction \tabularnewline
+4 & Repeat steps 2--3 of this sequence until all units that wish to declare a Charge have done so \tabularnewline
+5 & The Active Player chooses a unit that declared a Charge, then rolls for Charge Range, and moves the unit \tabularnewline
+6 & Repeat step 5 of this sequence until all units that declared a Charge have moved \tabularnewline
+7 & End of the Charge Phase \tabularnewline
+\closesumseqtable
+\end{minipage}\hfill\begin{minipage}[t]{0.55\textwidth}
+\summarysubsection{Maximising Contact}
+
+Charge Moves must be made so the following conditions are satisfied as best as possible, in decreasing priority order.
+
+\begin{itemize}
+\item \nth{1} priority: Make contact with no enemy units other than the one that was Charged. If it will be unavoidable to make contact with more than one enemy unit, make contact with as few enemy units as possible. Follow the rules for Multiple Charges.
+\item \nth{2} priority: Maximise the total number of Charging units that make contact (note that this is only applicable when multiple units Charge the same unit).
+\item \nth{3} priority: Avoid rotating the Charged unit. If it is unavoidable, rotate the unit as little as possible. Remember that units Engaged in Combat cannot be rotated.
+\item \nth{4} priority: Maximise the number of models (on both sides) in base contact with at least one enemy model (including models fighting across gaps).
+\end{itemize}
+\end{minipage}
+
+
+\separator
+\vspace*{-10pt}
+
+\summarysection{Movement Phase}
+
+\begin{minipage}[t]{0.44\textwidth}
+\summarysubsection{Movement Phase Sequence}
+
+\startsumseqtable
+1 & Start of the Movement Phase \tabularnewline
+2 & Rally Fleeing units and perform any Flee Moves \tabularnewline
+3 & Select one of your units and a type of move (Advance, March, Reform), then move the unit \tabularnewline
+4 & Repeat step 3, each time choosing a new unit that has not yet moved in the Movement Phase \tabularnewline
+5 & End of the Movement Phase \tabularnewline
+\closesumseqtable
+\end{minipage}\hfill\begin{minipage}[t]{0.53\textwidth}
+\summarysubsection{Chances to Pass a Charge Range Roll}
+
+Probabilities (in percentage) to pass a Charge Range roll depending on the remaining distance (i.e. the total distance minus the Advance Rate Characteristic):
+
+\setlength{\tabcolsep}{2.5pt}
+\alternaterowcolors\begin{tabular}{M{1.55cm}*{11}{M{0.58cm}}}
+\hline
+& \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\
+\textbf{Charge} & \num{100} & \num{97} & \num{92} & \num{83} & \num{72} & \num{58} & \num{42} & \num{28} & \num{17} & \num{8} & \num{3} \\
+\textbf{Charge +}\newline \textbf{Swiftstride} & \num{100} & \num{99} & \num{98} & \num{95} & \num{89} & \num{81} & \num{68} & \num{52} & \num{36} & \num{20} & \num{7} \\
+\textbf{Charge +}\newline \textbf{reroll} & \num{100} & \num{99} & \num{99} & \num{97} & \num{92} & \num{83} & \num{66} & \num{48} & \num{31} & \num{16} & \num{5} \\
+\textbf{Charge +}\newline \textbf{Swiftstride}\newline \textbf{+ reroll} & \num{100} & \num{99} & \num{99} & \num{99} & \num{99} & \num{96} & \num{90} & \num{77} & \num{59} & \num{36} & \num{14} \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\separator\vspace*{-10pt}
+
+\summarysection{Terrain}
+
+\summarysubsection{Dangerous Terrain Tests}
+
+Dangerous Terrain (DT) Test during March, Charge, Failed Charge, Flee, Pursuit, or Overrun Moves. 1 hit with Armour Penetration 10 that wounds automatically for each failed roll.
+
+\begin{center}\begin{tabular}{lcccc}%
+\hline
+& \textbf{\heightstandard} & \textbf{\heightlarge} & \textbf{\heightgigantic} & \textbf{\chariot}\tabularnewline
+Number of D6 rolled & 1 & 2 & 3 & +1 \tabularnewline
+\hline
+\end{tabular}\end{center}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{>{\bfseries}m{2.2cm}M{1.5cm}M{1.5cm}M{1.5cm}M{1.5cm}m{4.5cm}}%
+\hline
+& \textbf{\infantry} & \textbf{\beast} & \textbf{\cavalry} & \textbf{\construct} & \textbf{Notes} \\
+Forests & & & DT (1) & DT (1) & DT (1) for Flying Movement \\
+Ruins & DT (1)\refsymbol{} & DT (1)\refsymbol{} & DT (2)\refsymbol{} & DT (2)\refsymbol{} & \refsymbolbis{}Unless Skirmisher \\
+Water Terrain & DT (1)\refsymbol{}\refsymbol{} & DT (1)\refsymbol{}\refsymbol{} & & & \refsymbolbis{}\refsymbolbis{}Standard Height and on foot only \\
+Walls & & & & DT (2) & \\
+\hline
+\end{tabular}\end{center}
+
+\summarysubsection{Other Terrain Rules}
+
+Cover and Line of Sight rules described in Shooting Phase.
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{>{\bfseries}m{3cm}p{10cm}}
+\hline
+ & \textbf{Rules (not including Cover and Line of Sight)} \\
+Fields & None \\
+Forests & No Steadfast\newline Infantry with Light Troops are Stubborn (unless Towering Presence or Fly) \\
+Hills & Reroll failed Charge Range rolls when Charging from a Hill \\
+Impassable Terrain & Models cannot move into or through \\
+Ruins & None \\
+Walls & Units with Front Facing in contact gain Distracting against Charging enemies \\
+Water Terrain & No Steadfast\newline Lose Flaming Attacks when attacking from or into it with Melee Attacks \\
+\hline
+\end{tabular}\end{center}
+
+\newpage
+
+\summarysection{Magic Phase}
+
+\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Magic Phase Sequence}
+
+\startsumseqtable
+1 & Start of the Magic Phase \tabularnewline
+2 & Draw a Flux Card \tabularnewline
+3 & Siphon the Veil \tabularnewline
+4 & Cast a spell with one of your models (see \enquote{Spell Casting Sequence})\tabularnewline
+5 & Repeat step 4 for each spell the Active Player wishes to cast \tabularnewline
+6 & End of the Magic Phase \tabularnewline
+\closesumseqtable
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Spell Casting Sequence}
+
+\startsumseqtable
+A & Casting Attempt. If failed, skip steps B--F \tabularnewline
+B & Dispelling Attempt. If successful, skip steps C--F \tabularnewline
+C & In case of Broken Concentration, skip steps D--E and go directly to step F \tabularnewline
+D & Resolve the spell effect \tabularnewline
+E & If applicable, choose target(s) for the \attributespell{} and resolve its effect \tabularnewline
+F & If applicable, apply the Miscast effect \tabularnewline
+\closesumseqtable
+\end{minipage}
+
+\vspace*{-5pt}
+\summarysubsection{Casting Attempt}
+
+\startsumseqtable
+1 & The Active Player declares which Wizard is casting which spell and how many Magic Dice will be used. If applicable, they also declare which version of the spell is used and what its targets are. Between 1 and 5 dice from the Active Player's Magic Dice pool must be used. \tabularnewline
+2 & The Active Player rolls the chosen number of Magic Dice from the Magic Dice pool and adds the results of the rolled dice and any Casting Modifiers together. This total is referred to as the total casting roll. \tabularnewline
+3 & The Casting Attempt is passed if the total casting roll is \textbf{equal to or greater} than the spell's Casting Value. The Casting Attempt fails if the total casting roll is less than the spell's Casting Value. Note that the Casting Attempt may Fizzle if 2 or more dice were used (see \enquote{Fizzle}). \tabularnewline
+\closesumseqtable
+
+\summarysubsection{Dispelling Attempt}
+
+\startsumseqtable
+1 & The Reactive Player declares how many Magic Dice will be used from their pool. The Reactive Player must use at least 1 dice for a Dispelling Attempt. Note that there is no maximum number of Magic Dice allowed to be used for a Dispelling Attempt. \tabularnewline
+2 & The Reactive Player rolls the chosen number of dice and adds the results of the rolled dice and any Dispelling Modifiers together, to get the total dispelling roll. \tabularnewline
+3 & The Dispelling Attempt is successful if the total dispelling roll is \textbf{equal to or greater} than the total casting roll. If so, the spell is dispelled and the spell is not cast. The Dispelling Attempt fails if the total dispelling roll is less than the total casting roll. If so, the spell is successfully cast. Note that the Dispelling Attempt may Fizzle if 2 or more dice were used (see \enquote{Fizzle}). \tabularnewline
+\closesumseqtable
+
+\summarysubsection{Bound Spell Casting Attempt}
+
+\startsumseqtable
+1 & The Active Player declares which model will cast which Bound Spell, and whether they will use 2 or 3 Magic Dice. If applicable, the Active Player also declares the targets of the spell. The spell is always cast with the basic version as Bound Spells cannot be Boosted. \tabularnewline
+2 & The Active Player removes the chosen number of Magic Dice (2 or 3) from their Magic Dice pool (do not roll them). \tabularnewline
+3 & The Casting Attempt is always passed.
+\closesumseqtable
+
+\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Fizzle}
+
+When a Casting Attempt or Dispelling Attempt is failed for which 2 dice or more were used, any Magic Dice that rolled a natural \result{1} are returned to the Magic Dice pool they were taken from. Note that this does not apply to passed Casting Attempts that are then dispelled.
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Flux Cards}
+
+\begingroup\alternaterowcolors\begin{tabular}{>{\bfseries}lcccccccc}
+\hline
+Flux Card & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+Magic Dice & 4 & 5 & 5 & 5 & 5 & 6 & 6 & 7 \\
+Veil Tokens & 3 & 2 & 5 & 7 & 9 & 5 & 7 & 7 \\
+Miscast Modifiers & +1 & & & & & & & -1 \\
+\hline
+\end{tabular}\endgroup
+\end{minipage}
+
+\vspace*{-10pt}
+\summarysubsection{Miscast}
+
+\begin{center}\alternaterowcolors\begin{tabular}{>{\raggedleft}p{2.5cm}p{14cm}}
+\hline
+
+\textbf{Three of a kind:}&
+\textbf{\miscast{} Effects} (after resolving the spell and Attribute effects, unless 111)\tabularnewline
+
+\textbf{000} or lower & No effect.\tabularnewline
+
+\textbf{111} & \textbf{\brokenconcentration}
+
+\vspace*{5pt}
+The Casting Attempt fails (apply Fizzle as normal).\tabularnewline
+
+\textbf{222} & \textbf{\witchfire}
+
+\vspace*{5pt}
+The Caster's unit suffers \textbf{D6 hits} with Armour Penetration 2, \magicalattacks{}, and a Strength equal to the number of Magic Dice that were used for the casting roll.\tabularnewline
+
+\textbf{333} & \textbf{\magicalinferno}
+
+\vspace*{5pt}
+The Caster's unit suffers \textbf{2D6 hits} with Armour Penetration 2, \magicalattacks{}, and a Strength equal to the number of Magic Dice that were used for the casting roll.\tabularnewline
+
+\textbf{444} & \textbf{\amnesia}
+
+\vspace*{5pt}
+The Caster cannot cast the Miscast spell anymore this game.\tabularnewline
+
+\textbf{555} & \textbf{\backlash}
+
+\vspace*{5pt}
+The Caster suffers \textbf{2 hits} that wound on 4+ with Armour Penetration 10 and \magicalattacks{}.\tabularnewline
+
+\textbf{666} & \textbf{\implosion}
+
+\vspace*{5pt}
+The Caster suffers \textbf{4 hits} that wound on 4+ with Armour Penetration 10 and \magicalattacks{}.\tabularnewline
+
+\textbf{777} or higher & \textbf{\breachintheveil}
+
+\vspace*{5pt}
+The Caster's model is removed as a casualty (no saves of any kind allowed).\tabularnewline
+\hline
+\end{tabular}\end{center}
+
+\newpage
+
+\summarysection{Shooting Phase}
+
+\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Shooting Phase Sequence}
+
+\startsumseqtable
+1 & Start of the Shooting Phase\\
+2 & Select one of your units and perform a Shooting Attack\\
+3 & Repeat step 2 with a different unit that has not performed a Shooting Attack during this phase yet\\
+4 & When all units that can (and want to) shoot have done so, the Shooting Phase ends\\
+\closesumseqtable
+
+\summarysubsection{To-Hit Modifiers}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{p{2.5cm} c p{0.1cm} p{2.5cm} c}
+\hline
+Long Range & \minuss{}1 & & Stand and Shoot & \minuss{}1 \\
+\hspace*{0.3cm}(if Accurate) & 0 & & Soft Cover & \minuss{}1 \\
+Moving and Shooting & \minuss{}1 & & Hard Cover & \minuss{}2 \\
+\hspace*{0.3cm}(if Quick to Fire) & 0 & & Hard Target (X) & \minuss{}X \\
+\hspace*{0.3cm}(if Unwieldy) & \minuss{}2 & &  &  \\
+\hspace*{0.3cm}(if both) & \minuss{}1 & &  &  \\
+\hline
+\end{tabular}
+\end{center}
+
+\summarysubsection{Line of Sight and Cover}
+
+Determine Line of Sight, range, and Cover for each shooting model. A model is considered to have Line of Sight to a unit if it can draw Line of Sight (endpoint in the unit's Front Arc) to any model inside that other unit or to any part of the other unit's Unit Boundary.
+
+Choose a point on the shooting model's Front Facing. From the chosen point, check how large the fraction of the Target Facing is that is behind obstructions. If half or more of the Target Facing is obscured, the target benefits from Cover.
+
+Models always ignore their own unit and the Terrain Feature they are inside for Cover purposes.
+
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{Selection of Shooting Rules}
+
+Each unit can only shoot once per phase. All models in the same unit must shoot at the same target. Only models in the first and second rank may shoot. All \rnf{} models except Champions must use the same type of Shooting Attack. In case of Multipart Models, each model part can make a Shooting Attack in the same phase.
+
+\textbf{Hopeless Shots:} In order to hit on 7+, hit on 6+ and then roll 4+.
+
+\summarysubsection{Misfire Table for Artillery Weapons}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{M{1.4cm}m{\textwidth -1.4cm - 24pt}}
+\hline
+\textbf{Result} & \centering\textbf{Misfire Effect} \tabularnewline
+\textbf{0\newline (or less)} & \textbf{Explosion!}\vspace*{3pt}\newline
+All models within \distance{D6} of the Misfiring model suffer a hit with Strength 5 and Armour Penetration 2. The shooting model is then destroyed and removed as a casualty. \tabularnewline
+\textbf{1--2} & \textbf{Breakdown}\vspace*{3pt}\newline
+The model cannot shoot with the weapon for the rest of the game. \tabularnewline
+\textbf{3--4} & \textbf{Jammed}\vspace*{3pt}\newline
+The Artillery Weapon may not shoot in the owner's next Player Turn. If the model is a War Machine, the model is Shaken until the end of the owner's next Player Turn instead.\tabularnewline
+\textbf{5+} & \textbf{Malfunction}\vspace*{3pt}\newline
+The shooting model loses a Health Point with no saves of any kind allowed. \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\end{minipage}
+
+\newcommand{\figureLoSCSoftcover}{\largerfontsize{Soft Cover (\minuss{}1 to hit)}}
+\newcommand{\figureLoSCNocover}{\largerfontsize{No Cover}}
+\newcommand{\figureLoSCStandard}{Standard}
+\newcommand{\figureLoSCLarge}{Large}
+\newcommand{\figureLoSCGigantic}{Gigantic}
+
+\begin{center}
+\def\svgwidth{0.6\textwidth}
+\subimport{pics/}{soft_cover_and_intervening_models.pdf_tex}
+\end{center}
+
+All other Height combinations yield either Hard Cover or no Line of Sight, depending on whether the target is completely obscured by the intervening model or not.
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{>{\bfseries}m{3cm}m{4.5cm}m{5cm}}
+\hline
+ & \textbf{Line of Sight} & \textbf{Cover} \\
+Fields & Covering (inside) & Soft Cover for non-Towering Presence \\
+Forests & Covering (inside or behind) & Soft Cover \\
+Hills & Opaque Terrain\newline Covering (behind) & Soft Cover if partially on\newline Hard Cover if entirely off \\
+Impassable Terrain & Opaque Terrain & Hard Cover \\
+Ruins & Covering (inside) & Hard Cover for non-Towering Presence \\
+Walls & Covering (behind and Defending) & Hard Cover for non-Towering Presence \\
+\hline
+\end{tabular}\end{center}
+
+
+\newpage
+
+\summarysection{Melee Phase}
+
+\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Melee Phase Sequence}
+
+\startsumseqtable
+1 & Start of the Melee Phase \tabularnewline
+2 & Apply any No Longer Engaged \tabularnewline
+3 & The Active Player chooses a combat that has not already been fought during this Melee Phase \tabularnewline
+4 & Fight a Round of Combat \tabularnewline
+5 & Repeat steps 2--4 \tabularnewline
+6 & Once all units that were Engaged in Combat at the start of the phase have fought, the Melee Phase ends \tabularnewline
+\closesumseqtable
+
+\summarysubsection{Combat Score Summary}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{>{\raggedleft}m{0.4\textwidth -12pt}m{0.6\textwidth -12pt}}
+\hline
+Health Points Lost by Enemy Units & +1 for each Health Point\\
+Overkill & +1 for each Health Point (maximum +3)\\
+Charge & +1 \\
+Rank Bonus & +1 for each Full Rank after the first\newline (maximum +3)\\
+Standard & +1 for each Standard and Battle Standard Bearer \\
+Flank Bonus & +1 or +2 \\
+Rear Bonus & +2 or +3\\
+\hline
+\end{tabular}\end{center}
+
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{Round of Combat Sequence}
+
+\startsumseqtable
+1 & Start of the Round of Combat\\
+2 & Choose a weapon\\
+3 & Make Way\\
+4 & Issue and accept Duels\\
+5 & Determine the Initiative Order \\
+6 & Roll Melee Attacks, starting with the first Initiative Step:
+	\begin{enumerate}[parsep=0cm,itemsep=0.05cm, topsep=3pt]
+		\item Allocate attacks
+		\item Roll to hit, to wound, saves, and remove casualties
+		\item Repeat 1. and 2. for the next Initative Step
+ 	\end{enumerate}
+\tabularnewline[-12pt]
+7 & Calculate which side wins the Round of Combat. Losers roll Break Tests\\
+8 & Roll Panic Tests for units within \distance{6} of friendly Broken units \\
+9 & Decide to Restrain or to Pursue \\
+10 & Roll Flee Distances \\
+11 & Roll Pursuit Distances \\
+12 & Move Fleeing units \\
+13 & Move Pursuing units \\
+14 & Post-Combat Pivots and Post-Combat Reforms \\
+15 & Combat Reforms \\
+16 & End of the Round of Combat. Proceed to the next combat\\
+\closesumseqtable
+
+\end{minipage}
+
+\separator\vspace*{-10pt}
+
+\summarysection{Post-Game}
+
+\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Battle Points}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{M{2.5cm}@{}M{2.5cm}cc}
+\hline
+\multicolumn{2}{c}{\textbf{Victory Point Difference}} & \multicolumn{2}{c}{\textbf{Battle Points}} \tabularnewline
+\textbf{Percentage of\newline Army Points} & (if playing with\newline 4500 Army Points) & \textbf{Winner} & \textbf{Loser} \tabularnewline
+\hline
+0--\SI{5}{\percent} & 0--225 & 10 & 10 \tabularnewline
+>5--\SI{10}{\percent} & 226--450 & 11 & 9 \tabularnewline
+>10--\SI{20}{\percent} & 451--900 & 12 & 8 \tabularnewline
+>20--\SI{30}{\percent} & 901--1350 & 13 & 7 \tabularnewline
+>30--\SI{40}{\percent} & 1351--1800 & 14 & 6 \tabularnewline
+>40--\SI{50}{\percent} & 1801--2250 & 15 & 5 \tabularnewline
+>50--\SI{70}{\percent} & 2251--3150 & 16 & 4 \tabularnewline
+>\SI{70}{\percent} & >3150 & 17 & 3 \tabularnewline
+\hline
+\multicolumn{2}{c}{Winning Secondary Objective} & +3 & −3 \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+\summarysubsection{Scoring Victory Points}
+
+\begin{center}\alternaterowcolors
+\begin{tabular}{m{0.45\textwidth -12pt}m{0.55\textwidth -12pt}}
+\hline
+\textbf{Enemy unit} & \textbf{VP provided} \\
+Removed as a casualty & \SI{100}{\percent} of Point Cost \\
+Fleeing & \SI{50}{\percent} of Point Cost \\
+Shattered & \SI{50}{\percent} of Point Cost \\
+Shattered and Fleeing & \SI{100}{\percent} of Point Cost \\
+General or BSB removed as\newline casualties & \SI{100}{\percent} of Point Cost plus 200 VP each \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Shattered:} Units at \SI{25}{\percent} or less of their starting number of Health Points at the end of the game. Characters are counted separately from the units they have joined.
+\end{minipage}
+
+\separator\vspace*{-10pt}
+
+\summarysection{Attacks}
+
+\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{Attack Sequence}
+
+\startsumseqtable
+1 & Attacker allocates attacks if applicable.\\
+2 & Determine number of hits.\\
+3 & Attacker distributes hits if applicable.\\
+4 & Attacker rolls to wound; if successful, proceed.\\
+5 & Defender makes Armour Save rolls; if failed, proceed.\\
+6 & Defender makes Special Save rolls; if failed, proceed.\\
+7 & Defender suffers unsaved wounds.\\
+8 & Defender loses Health Points.\\
+9 & Defender removed casualties.\\
+10 & Defender takes Panic Tests if necessary.\\
+\closesumseqtable
+
+\summarysubsection{Close Combat To-Hit Table}
+
+\begin{center}
+\begin{tabular}{r l}
+  \hline
+  \textbf{Offensive Skill minus Defensive Skill} & \textbf{Needed roll to hit}\\
+  4 or more & 2+ \\
+  1 to 3 & 3+ \\
+  0 to −3 & 4+\\
+  −4 to −7 & 5+\\
+  −8 or less & 6+\\
+  \hline
+\end{tabular}
+\end{center}
+
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{To-Wound Table}
+
+\begin{center}
+  \begin{tabular}{r l}
+    \hline
+    \textbf{Strength minus Resilience} & \textbf{Needed roll to wound} \\
+    2 or more & 2+\\
+    1 & 3+ \\
+    0 & 4+ \\
+    −1 & 5+ \\
+    −2 or less & 6+\\
+    \hline
+  \end{tabular}
+\end{center}
+
+\summarysubsection{Armour Saves}
+
+\begin{center}
+  \begin{tabular}{r l}
+  \hline
+    \textbf{\Armour{} minus \AP{}} & \textbf{Needed roll to disregard the wound} \\
+    0 or less & No save possible \\
+    1 & 6+ \\
+    2 & 5+ \\
+    3 & 4+ \\
+    4 & 3+ \\
+    5 or 6 & 2+ \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\end{minipage}
+
+\newpage
+\summarysection{Psychology}
+
+\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{Panic Test Triggers}
+
+\begin{itemize}[itemsep=0pt]
+\item A friendly unit is destroyed within \distance{6} of the unit (including Fleeing off the board).
+\item A friendly unit Breaks from Combat within \distance{6} of the unit.
+\item A friendly unit Flees through the unit's Unit Boundary.
+\item In a single phase, the unit suffers Health Point losses equal to or greater than \SI{25}{\percent} of the number of Health Points that it had at the start of the phase. This does not apply to single model units that started the game as a single model (i.e. with a starting number of 1 model on the Army List).
+\end{itemize}
+
+Units that fail a Panic Test Flee directly away from the closest enemy unit, or from the enemy unit which caused the Panic Test (Centre to Centre). Units do not take Panic Tests if they are Engaged in Combat, if they are already Fleeing, or if they already passed a Panic Test during this phase.
+
+\summarysubsection{Shaken}
+
+A Shaken model cannot perform any of the following actions:
+
+\begin{itemize}[itemsep=0pt]
+\item Declare Charges
+\item Pursuit
+\item Overrun
+\item Advance Move
+\item March Move
+\item Reform (it can Combat Reform and Post-Combat Reform)
+\item Random Movement
+\item Shooting Attack
+\end{itemize}
+
+\end{minipage}\hfill\begin{minipage}[t]{0.485\textwidth}
+
+\summarysubsection{Fleeing}
+
+When a unit is Fleeing, it cannot perform any voluntary actions (a voluntary action is an action that a unit would have the option to not perform). This includes (but is not limited to):
+
+\begin{itemize}[itemsep=0pt]
+\item Declare Charges
+\item Charge Reactions other than Flee
+\item Move in any way other than a Flee Move
+\item Shoot
+\item Channel
+\item Cast spells or activate One use only Special Items which need to be activated voluntarily
+\end{itemize}
+
+Models cannot receive Commanding Presence or Rally Around the Flag from a Fleeing model.
+
+\summarysubsection{Decimated}
+
+Units at \SI{25}{\percent} or less of their starting Health Points (the number taken from the Army List), including joined Characters, are referred to as Decimated. Decimated units must take their Rally Test at half their Discipline, rounding fractions up.
+
+\end{minipage}
+
+\separator\vspace*{-10pt}
+
+\summarysection{Probabilities}
+
+\summarysubsection{Chances to Pass a Discipline Test}
+
+Probabilities (in percentage) to pass a Discipline Test depending on the Discipline value of the unit (after modifiers) and the available rules:
+
+{
+\begin{center}
+\setlength{\tabcolsep}{3pt}
+\alternaterowcolors\begin{tabular}{M{4.5cm}*{9}{M{0.58cm}}}
+\hline
+\textbf{Discipline} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
+\textbf{2D6} & \num{3} & \num{8} & \num{17} & \num{28} & \num{42} & \num{58} & \num{72} & \num{83} & \num{92} \\
+\textbf{2D6 + reroll} & \num{5} & \num{16} & \num{31} & \num{48} & \num{66} & \num{83} & \num{92} & \num{97} & \num{99} \\
+\textbf{2D6 + Minimised} & \num{7} & \num{20} & \num{36} & \num{52} & \num{68} & \num{81} & \num{89} & \num{95} & \num{98} \\
+\textbf{2D6 + Minimised + reroll} & \num{14} & \num{36} & \num{59} & \num{77} & \num{90} & \num{96} & \num{99} & \num{99} & \num{99} \\
+\textbf{2D6 + Maximised} & \num{1} & \num{2} & \num{5} & \num{11} & \num{19} & \num{32} & \num{48} & \num{64} & \num{80} \\
+\textbf{2D6 + Maximised + reroll} & \num{1} & \num{4} & \num{10} & \num{20} & \num{35} & \num{54} & \num{73} & \num{87} & \num{96} \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\summarysubsection{Chances to Successfully Cast a Spell}
+
+Mind that these probabilities slightly change when there are special Miscast Modifiers, depending on which triple leads to an automatic failure.
+
+Probabilities (in percentage) to successfully cast a spell depending on the Casting Value of the spell (after any modifiers to the casting roll) and on the number of Magic Dice:
+{
+\begin{center}
+\setlength{\tabcolsep}{3pt}
+\alternaterowcolors\begin{tabular}{M{3cm}*{16}{M{0.58cm}}M{1.5cm}}
+\hline
+\textbf{Casting Value} & 3+ & 4+ & 5+ & 6+ & 7+ & 8+ & 9+ & 10+ & 11+ & 12+ & 13+ & 14+ & 15+ & 16+ & 17+ & 18+ & \textbf{Miscast} \\
+\textbf{1D6} & \num{67} & \num{50} & \num{33} & \num{17} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} \\
+\textbf{2D6} & \num{97} & \num{92} & \num{83} & \num{72} & \num{58} & \num{42} & \num{28} & \num{17} & \num{8} & \num{3} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} \\
+\textbf{3D6} & \num{99} & \num{99} & \num{98} & \num{95} & \num{91} & \num{84} & \num{74} & \num{63} & \num{50} & \num{38} & \num{26} & \num{16} & \num{10} & \num{5} & \num{2} & \num{1} & \num{3} \\
+\textbf{4D6} & \num{98} & \num{98} & \num{98} & \num{98} & \num{98} & \num{97} & \num{94} & \num{90} & \num{84} & \num{76} & \num{66} & \num{56} & \num{44} & \num{34} & \num{24} & \num{16} & \num{10} \\
+\textbf{5D6} & \num{100} & \num{100} & \num{100} & \num{99} & \num{99} & \num{99} & \num{99} & \num{98} & \num{97} & \num{94} & \num{90} & \num{85} & \num{78} & \num{70} & \num{60} & \num{50} & \num{21} \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+With Thaumaturgy:
+{
+\begin{center}
+\setlength{\tabcolsep}{3pt}
+\alternaterowcolors\begin{tabular}{M{3cm}*{16}{M{0.58cm}}M{1.5cm}}
+\hline
+\textbf{Casting Value} & 3+ & 4+ & 5+ & 6+ & 7+ & 8+ & 9+ & 10+ & 11+ & 12+ & 13+ & 14+ & 15+ & 16+ & 17+ & 18+ & \textbf{Miscast} \\
+\textbf{1D6} & \num{78} & \num{58} & \num{39} & \num{19} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} \\
+\textbf{2D6} & \num{99} & \num{99} & \num{94} & \num{85} & \num{73} & \num{57} & \num{38} & \num{23} & \num{11} & \num{4} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} & \num{0} \\
+\textbf{3D6} & \num{99} & \num{99} & \num{99} & \num{99} & \num{98} & \num{95} & \num{89} & \num{80} & \num{68} & \num{54} & \num{39} & \num{36} & \num{15} & \num{7} & \num{3} & \num{1} & \num{4} \\
+\textbf{4D6} & \num{100} & \num{100} & \num{99} & \num{99} & \num{99} & \num{99} & \num{98} & \num{97} & \num{95} & \num{90} & \num{84} & \num{75} & \num{64} & \num{52} & \num{39} & \num{27} & \num{14} \\
+\textbf{5D6} & \num{100} & \num{100} & \num{100} & \num{99} & \num{99} & \num{99} & \num{99} & \num{99} & \num{98} & \num{97} & \num{96} & \num{94} & \num{91} & \num{86} & \num{80} & \num{71} & \num{30} \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\newpage
+
+%%% MAGIC
+
+\summarysubsection{\paths{}}
+
+\textbf{\typescapital{}} \alphaorderlistX{ -- }{\augmentShort{}: \augment{},\damageShort{}: \damage{},\directShort{}: \direct{},\focusedShort{}: \focused{},\groundShort{}: \ground{},\hexShort{}: \hex{},\missileShort{}: \missile{},\universalShort{}: \universal{}}.\newline
+\textbf{\rangecapital{}} \auraShort{}: \aura{}. \textbf{\durationcapital{}} \alphaorderlistX{ -- }{\instantShort{}: \instant{},\oneturnShort{}: \oneturn{},\permanentShort{}: \permanent{}}.
+
+\startspellsummariestable
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ALCHEMY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{white}&
+	\attributespellnumber{} &
+	\alchemyattribute{} &
+	&
+	\distance{18} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\alchemyattributeshort{}\\
+\cellcolor{white}&
+	1 &
+	\alchemyspellone{} &
+	7+ &
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\alchemyspelloneshort{}\\
+\cellcolor{white}&
+	2 &
+	\alchemyspelltwo{} &
+	\cbase{5+}/\cboosted{9+} &
+	\cbase{\distance{24}}/\cboosted{\distance{18}} &
+	\augmentShort &
+	\oneturnShort{} &
+	\alchemyspelltwoshort{}\\
+\cellcolor{white}&
+	3 &
+	\alchemyspellthree{} &
+	8+ &
+	\distance{18} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\alchemyspellthreeshort{}\\
+\cellcolor{white}&
+	4 &
+	\alchemyspellfour{} &
+	\cbase{6+}/\cboosted{9+} &
+	\cbase{\distance{18}}/\cboosted{\distance{36}} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\alchemyspellfourshort{}\\
+\cellcolor{white}&
+	5 &
+	\alchemyspellfive{} &
+	8+ &
+	\distance{36} &
+	\hexShort{} &
+	\permanentShort{} &
+	\alchemyspellfiveshort{}\\
+\summarypathrotated{7}{\alchemy{}}{white}&
+	6 &
+	\alchemyspellsix{} &
+	7+ &
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\alchemyspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% COSMOLOGY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{\lightgreycolor}&
+&
+\cosmologypassive{} &
+\multicolumn{5}{m{\passivelength}}{\cosmologypassiveshort}\\
+\cellcolor{\lightgreycolor}&
+	1 &
+	\cosmologyspellone{} &
+	5+ &
+	\distance{24} &
+	\augmentShort{}/\hexShort{} &
+	\oneturnShort{} &
+	\cosmologyspelloneshort{}\\
+\cellcolor{\lightgreycolor}&
+	2 &
+	\cosmologyspelltwo{} &
+	5+ &
+	\distance{24} &
+	\augmentShort{}/\hexShort{} &
+	\oneturnShort{} &
+	\cosmologyspelltwoshort{}\\
+\cellcolor{\lightgreycolor}&
+	3 &
+	\cosmologyspellthree{} &
+	8+ &
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\cosmologyspellthreeshort{}\\
+\cellcolor{\lightgreycolor}&
+	4 &
+	\cosmologyspellfour{} &
+	8+ &
+	\distance{24} &
+	\augmentShort{}/\hexShort{} &
+	\oneturnShort{} &
+	\cosmologyspellfourshort{}\\
+\cellcolor{\lightgreycolor}&
+	5 &
+	\cosmologyspellfive{} &
+	9+ &
+	\distance{24} &
+	\augmentShort{}\newline \alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\oneturnShort{}\newline \instantShort{}&
+	\cosmologyspellfiveshort{}\\
+\summarypathrotated{8}{\cosmology{}}{\lightgreycolor}&
+	6 &
+	\cosmologyspellsix{} &
+	7+ &
+	\distance{24} &
+	\augmentShort{}, \focusedShort{}\newline \alphaorderlist{\damageShort{},\hexShort{},\focusedShort{},\missileShort{}} &
+	\instantShort{} &
+	\cosmologyspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DIVINATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{white}&
+	&
+	\divinationpassive{} &
+	\multicolumn{5}{m{\passivelength}}{\divinationpassiveshort}\\
+\cellcolor{white}&
+	\attributespellnumber{} &
+	\divinationattribute{} &
+	&
+	\distance{12} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\divinationattributeshort{}\\
+\cellcolor{white}&
+	1 &
+	\divinationspellone{} &
+	\cbase{7+}/\cboosted{12+} &
+	\cbase{\distance{18}}/\cboosted{\distance{6}\auraShort{}} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\divinationspelloneshort{}\\
+\cellcolor{white}&
+	2 &
+	\divinationspelltwo{} &
+	\cbase{5+}/\cboosted{9+} &
+	\distance{18} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\divinationspelltwoshort{}\\
+\cellcolor{white}&
+	3 &
+	\divinationspellthree{} &
+	\cbase{7+}/\cboosted{12+} &
+	\cbase{\distance{18}}/\cboosted{\distance{6}\auraShort{}} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\divinationspellthreeshort{}\\
+\cellcolor{white}&
+	4 &
+	\divinationspellfour{} &
+	\cbase{8+}/\cboosted{12+} &
+	\cbase{\distance{18}}/\cboosted{\distance{6}\auraShort{}} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\divinationspellfourshort{}\\
+\cellcolor{white}&
+	5 &
+	\divinationspellfive{} &
+	\cbase{9+}/\cboosted{12+} &
+	\distance{18} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\divinationspellfiveshort{}\\
+\summarypathrotated{8}{\divination{}}{white}&
+	6 &
+	\divinationspellsix{} &
+	8+ &
+	\distance{24} &
+	\hexShort{} &
+	\permanentShort{} &
+	\divinationspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DRUIDISM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{\lightgreycolor}&
+	& \druidismpassive{} &
+	\multicolumn{5}{m{\passivelength}}{\druidismpassiveshort}\\
+\cellcolor{\lightgreycolor}&
+	\attributespellnumber{} &
+	\druidismattribute{} &
+	&
+	\distance{18} &
+	\alphaorderlist{\augmentShort{}, \focusedShort{}} &
+	\instantShort{} &
+	\druidismattributeshort{}\\
+\cellcolor{\lightgreycolor}&
+	1 &
+	\druidismspellone{} &
+	\cbase{7+}/\cspecialboosted{6+} &
+	\distance{18} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\druidismspelloneshort{}\\
+\cellcolor{\lightgreycolor}&
+	2 &
+	\druidismspelltwo{} &
+	\cbase{6+}/\cspecialboosted{5+} &
+	\distance{18} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\instantShort{} &
+	\druidismspelltwoshort{}\\
+\cellcolor{\lightgreycolor}&
+	3 &
+	\druidismspellthree{} &
+	\cbase{6+}/\cspecialboosted{5+} &
+	\distance{12} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\druidismspellthreeshort{}\\
+\cellcolor{\lightgreycolor}&
+	4 &
+	\druidismspellfour{} &
+	\cbase{11+}/\cspecialboosted{10+} &
+	\distance{24} &
+	\augmentShort{} &
+	\instantShort{} &
+	\druidismspellfourshort{}\\
+\cellcolor{\lightgreycolor}&
+	5 &
+	\druidismspellfive{} &
+	\cbase{10+}/\cspecialboosted{9+} &
+	\distance{12} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\druidismspellfiveshort{}\\
+\summarypathrotated{9}{\druidism{}}{\lightgreycolor}&
+	6 &
+	\druidismspellsix{} &
+	\cbase{7+}/\cspecialboosted{6+} &
+	\distance{12} &
+	\universalShort &
+	\oneturnShort{} &
+	\druidismspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EVOCATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{white}&
+	\attributespellnumber{} &
+	\evocationattribute{} &
+	&
+	&
+	&
+	\instantShort{} &
+	\evocationattributeshort{}\\
+\cellcolor{white}&
+	1 &
+	\evocationspellone{} &
+	\cbase{6+}/\cboosted{9+} &
+	\distance{18} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\evocationspelloneshort{}\\
+\cellcolor{white}&
+	2 &
+	\evocationspelltwo{} &
+	8+&
+	\distance{24} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\evocationspelltwoshort{}\\
+\cellcolor{white}&
+	3 &
+	\evocationspellthree{} &
+	\cbase{7+}/\cboosted{10+} &
+	\cbase{\distance{24}}/\cboosted{\distance{18}} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\instantShort{} &
+	\evocationspellthreeshort{}\\
+\cellcolor{white}&
+	4 &
+	\evocationspellfour{} &
+	\cbase{6+}/\cboosted{7+} &
+	\cbase{\distance{12}}/\cboosted{\distance{18}} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\evocationspellfourshort{}\\
+\cellcolor{white}&
+	5 &
+	\evocationspellfive{} &
+	\cbase{7+}/\cboosted{9+} &
+	\cbase{\distance{24}}/\cboosted{\distance{18}} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}}, \boosted{\alphaorderlist{\focusedShort{},\missileShort{}}} &
+	\instantShort{} &
+	\evocationspellfiveshort{}\\
+\summarypathrotated{8}{\evocation{}}{white}&
+	6 &
+	\evocationspellsix{} &
+	\cbase{6+}/\cboosted{9+} &
+	\cbase{\distance{18}}/\cboosted{\distance{9}\auraShort{}} &
+	\augmentShort{} &
+	\instantShort{} &
+	\evocationspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% OCCULTISM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{\lightgreycolor}&
+	&
+	\occultismpassive{} &
+	\multicolumn{5}{m{\passivelength}}{\occultismpassiveshort}\\
+\cellcolor{\lightgreycolor}&
+	1 &
+	\occultismspellone{} &
+	\cbase{6+}/\cboosted{9+} &
+	\cbase{\casterShort{}}/\cboosted{\distance{12}} &
+	\focusedShort{}, \boosted{\augmentShort{}} &
+	\oneturnShort{} &
+	\occultismspelloneshort{}\\
+\cellcolor{\lightgreycolor}&
+	2 &
+	\occultismspelltwo{} &
+	\cbase{6+}/\cboosted{8+} &
+	\cbase{\casterShort{}}/\cboosted{\distance{12}} &
+	\focusedShort{}, \boosted{\augmentShort{}} &
+	\oneturnShort{} &
+	\occultismspelltwoshort{}\\
+\cellcolor{\lightgreycolor}&
+	3 &
+	\occultismspellthree{} &
+	6+ &
+	\distance{24} &
+	\hexShort{} &
+	\permanentShort{} &
+	\occultismspellthreeshort{}\\
+\cellcolor{\lightgreycolor}&
+	4 &
+	\occultismspellfour{} &
+	\cbase{5+}/\cboosted{6+} &
+	\cbase{\distance{24}}/\cboosted{\distance{12}\auraShort{}} &
+	\base{\alphaorderlist{\hexShort{}}}, \boosted{\universalShort{}} &
+	\instantShort{} &
+	\occultismspellfourshort{}\\
+\cellcolor{\lightgreycolor}&
+	5 &
+	\occultismspellfive{} &
+	9+ &
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\instantShort{} &
+	\occultismspellfiveshort{}\\
+\summarypathrotated{8}{\occultism{}}{\lightgreycolor}&
+	6 &
+	\occultismspellsix{} &
+	11+ &
+	\distance{12} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\instantShort{} &
+	\occultismspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PYROMANCY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{white}&
+	\attributespellnumber{} &
+	\pyromancyattribute{} &
+	&
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\pyromancyattributeshort{}\\
+\cellcolor{white}&
+	1 &
+	\pyromancyspellone{} &
+	4+ &
+	\distance{36} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\pyromancyspelloneshort{}\\
+\cellcolor{white}&
+	2 &
+	\pyromancyspelltwo{} &
+	\cbase{5+}/\cboosted{8+} &
+	\cbase{\distance{24}}/\cboosted{\distance{12}} &
+	\alphaorderlist{\hexShort{}} &
+	\instantShort{} &
+	\pyromancyspelltwoshort{}\\
+\cellcolor{white}&
+	3 &
+	\pyromancyspellthree{} &
+	\cbase{8+}/\cboosted{11+} &
+	\cbase{\distance{18}}/\cboosted{\distance{6}\auraShort{}} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\pyromancyspellthreeshort{}\\
+\cellcolor{white}&
+	4 &
+	\pyromancyspellfour{} &
+	\cbase{7+}/\cboosted{10+} &
+	\cbase{\distance{24}}/\cboosted{\distance{12}} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\pyromancyspellfourshort{}\\
+\cellcolor{white}&
+	5 &
+	\pyromancyspellfive{} &
+	8+ &
+	\distance{24}\auraShort{} &
+	\alphaorderlist{\damageShort{},\hexShort{}} &
+	\instantShort{} &
+	\pyromancyspellfiveshort{}\\
+\summarypathrotated{7}{\pyromancy{}}{white}&
+	6 &
+	\pyromancyspellsix{} &
+	9+ &
+	\distance{24} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}} &
+	\instantShort{} &
+	\pyromancyspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SHAMANISM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{\lightgreycolor}&
+	\attributespellnumber{} &
+	\shamanismattribute{} &
+	&
+	\caster{} &
+	&
+	\oneturnShort{} &%
+	\shamanismattributeshort{}\\
+\cellcolor{\lightgreycolor}&
+	1 &
+	\shamanismspellone{} &
+	\cbase{6+}/\cboosted{7+} &
+	\distance{18} &
+	\augmentShort{} &
+	\oneturnShort{} &
+	\shamanismspelloneshort{}\\
+\cellcolor{\lightgreycolor}&
+	2 &
+	\shamanismspelltwo{} &
+	\cbase{5+}/\cboosted{8+} &
+	\cbase{\distance{24}}/\cboosted{\distance{48}} &
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}} &
+	\permanentShort{} &
+	\shamanismspelltwoshort{}\\
+\cellcolor{\lightgreycolor}&
+	3 &
+	\shamanismspellthree{} &
+	\cbase{5+}/\cboosted{8+} &
+	\cbase{\distance{12}}/\cboosted{\distance{24}} &
+	\universalShort{} &
+	\oneturnShort{} &
+	\shamanismspellthreeshort{}\\
+\cellcolor{\lightgreycolor}&
+	4 &
+	\shamanismspellfour{} &
+	\cbase{6+}/\cboosted{10+} &
+	\distance{36} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\shamanismspellfourshort{}\\
+\cellcolor{\lightgreycolor}&
+	5 &
+	\shamanismspellfive{} &
+	\cbase{10+}/\cboosted{12+} &
+	\distance{96} &
+	\groundShort{} &
+	\instantShort{} &
+	\shamanismspellfiveshort{}\\
+\summarypathrotated{7}{\shamanism{}}{\lightgreycolor}&
+	6 &
+	\shamanismspellsix{} &
+	\cbase{9+}/\cboosted{11+} &
+	\cbase{\distance{18}}/\cboosted{\distance{36}} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\shamanismspellsixshort{}\\
+\hline
+\closespellsummariestable
+
+\newpage
+
+\startspellsummariestable
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% THAUMATURGY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{white}&
+	&
+	\thaumaturgypassive{} &
+	\multicolumn{5}{m{\passivelength}}{\thaumaturgypassiveshort}\\
+\cellcolor{white}&
+	1 &
+	\thaumaturgyspellone{} &
+	\cbase{5+}/\cboosted{8+} &
+	\distance{24} &
+	\alphaorderlist{\damageShort{}, \hexShort{},\missileShort{}} &
+	\instantShort{} &
+	\thaumaturgyspelloneshort{}\\
+\cellcolor{white}&
+	2 &
+	\thaumaturgyspelltwo{} &
+	\cbase{6+}/\cboosted{9+} &
+	\distance{24} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\thaumaturgyspelltwoshort{}\\
+\cellcolor{white}&
+	3 &
+	\thaumaturgyspellthree{} &
+	7+ &
+	\distance{18} &
+	\universalShort{} &
+	\oneturnShort{} &
+	\thaumaturgyspellthreeshort{}\\
+\cellcolor{white}&
+	4 &
+	\thaumaturgyspellfour{} &
+	\cbase{5+}/\cboosted{8+} &
+	\cbase{\casterShort{}}/\cboosted{\distance{18}} &
+	\focusedShort{}, \boosted{\augmentShort{}} &
+	\oneturnShort{} &
+	\thaumaturgyspellfourshort{}\\
+\cellcolor{white}&
+	5 &
+	\thaumaturgyspellfive{} &
+	12+ &
+	\distance{96} &
+	\groundShort{} &
+	\permanentShort{} &
+	\thaumaturgyspellfiveshort{}\\
+\summarypathrotated{8}{\thaumaturgy{}}{white}&
+	6 &
+	\thaumaturgyspellsix{} &
+	\cbase{7+}/\cboosted{10+} &
+	\cbase{\distance{24}}/\cboosted{\distance{18}} &
+	\alphaorderlist{\damageShort{},\directShort{},\hexShort{}}, \boosted{\alphaorderlist{\focusedShort{},\missileShort{}}}
+	&
+	\instantShort{} &
+	\thaumaturgyspellsixshort{}\\
+\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% WITCHCRAFT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cellcolor{\lightgreycolor}&
+	\attributespellnumber{} &
+	\witchcraftattribute{} &
+	&
+	\distance{24} &
+	\universalShort{} &
+	\oneturnShort{} &
+	\witchcraftattributeshort{}\\
+\cellcolor{\lightgreycolor}&
+	1 &
+	\witchcraftspellone{} &
+	\cbase{7+}/\cboosted{9+} &
+	\distance{18} &
+	\augmentShort{} &
+	\instantShort{} &
+	\witchcraftspelloneshort{}\\
+\cellcolor{\lightgreycolor}&
+	2 &
+	\witchcraftspelltwo{} &
+	\cbase{4+}/\cboosted{6+} &
+	\distance{24} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\witchcraftspelltwoshort{}\\
+\cellcolor{\lightgreycolor}&
+	3 &
+	\witchcraftspellthree{} &
+	\cbase{6+}/\cboosted{8+} &
+	\distance{36} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\witchcraftspellthreeshort{}\\
+\cellcolor{\lightgreycolor}&
+	4 &
+	\witchcraftspellfour{} &
+	\cbase{8+}/\cboosted{10+} &
+	\distance{24} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\witchcraftspellfourshort{}\\
+\cellcolor{\lightgreycolor}&
+	5 &
+	\witchcraftspellfive{} &
+	8+ &
+	\distance{18} &
+	\universalShort{} &
+	\oneturnShort{} &
+	\witchcraftspellfiveshort{}\\
+\summarypathrotated{9}{\witchcraft{}}{\lightgreycolor}&
+	6 &
+	\witchcraftspellsix{} &
+	\cbase{8+}/\cboosted{12+} &
+	\distance{18} &
+	\hexShort{} &
+	\oneturnShort{} &
+	\witchcraftspellsixshort{}\\
+\hline
+\closespellsummariestable
+
+\summarysubsection{\hereditaryspells{}}
+
+\startsumhereditaries
+\addsumhereditary{\beastherdsinitial}{\hereditarybeastherds}{%
+	\cbase{4+}/\cboosted{8+}%
+	}{%
+	\cbase{\distance{18}}/\cboosted{\distance{36}}%
+	}{%
+	\augmentShort{}%
+	}{%
+	\oneturnShort{}%
+	}{%
+	\hereditarybeastherdsshort{}%
+}%
+\addsumhereditary{\daemonlegionsinitial}{\hereditarydaemonlegions}{%
+	4+%
+}{%
+	\distance{24}%
+}{%
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditarydaemonlegionsshort{}%
+}%
+\addsumhereditary{\dreadelvesinitial}{\hereditarydreadelves}
+{7+}
+{} %distance is void
+{\caster{}}
+{\oneturnShort{}}
+{\hereditarydreadelvesshort{}}
+
+\addsumhereditary{\empireofsonnstahlinitial}{\hereditaryempireofsonnstahl}{%
+}{}{}{}{%
+	\hereditaryempireofsonnstahlshort%
+}%
+\addsumhereditary{\highbornelvesinitial}{\hereditaryhighbornelves}
+{10+}
+{} %distance is void
+{\caster{}}
+{\oneturnShort{}}
+{\hereditaryhighbornelvesshort{}}
+
+\addsumhereditary{\infernaldwarvesinitial}{\hereditaryinfernaldwarves}{%
+	\cbase{6+}/\cboosted{7+}%
+}{%
+	\cbase{\distance{36}}/\cboosted{\distance{18}}%
+}{%
+	\hexShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\hereditaryinfernaldwarvesshort{}%
+}%
+\addsumhereditary{\kingdomofequitaineinitial}{\hereditarykingdomofequitaine}
+{7+}
+{}
+{\caster{}}
+{\instantShort{}}
+{\hereditarykingdomofequitaineshort{}}
+
+\addsumhereditary{\ogrekhansinitial}{\hereditaryogrekhans}{%
+	\cbase{7+}/\cboosted{10+}%
+}{%
+	\distance{18}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\hereditaryogrekhansshort{}%
+}%
+\addsumhereditary{\orcsandgoblinsinitial}{\hereditaryorcsandgoblins}{%
+	8+%
+}{%
+	\distance{18}%
+}{%
+	\hexShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\hereditaryorcsandgoblinsshort{}%
+}%
+\addsumhereditary{\saurianancientsinitial}{\hereditarysaurianancients}{%
+	\cbase{6+}/\cboosted{9+}%
+}{%
+	\cbase{\distance{30}}/\cboosted{\distance{18}}%
+}{%
+	\alphaorderlist{\damageShort{},\hexShort{},\missileShort{}}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditarysaurianancientsshort{}%
+}%
+\addsumhereditary{\sylvanelvesinitial}{\hereditarysylvanelves}{%
+	\cbase{4+}/\cboosted{7+}%
+}{%
+	\distance{18}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\hereditarysylvanelvesshort{}%
+}%
+\addsumhereditary{\verminswarminitial}{\hereditaryverminswarm}{%
+	\cbase{5+}/\cboosted{8+}%
+}{%
+	\cbase{\distance{12}}/\cboosted{\distance{24}}%
+}{%
+	\groundShort{}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditaryverminswarmshort{}%
+}%
+\addsumhereditary{\undyingdynatiesinitial}{\hereditaryundyingdynaties}{%
+%
+}{%
+	\specialTYPE{}%
+}{%
+	\augmentShort{}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditaryundyingdynatiesshort{}%
+}%
+\addsumhereditary{\vampirecountsinitial}{\hereditaryvampirecounts}{%
+	\cbase{4+}/\cboosted{8+}\newline\cspecialboosted{11+}%
+}{%
+	\cbase{\distance{18}}/\cboosted{\distance{6}\auraShort{}}\newline\cspecialboosted{\distance{12}\auraShort{}} %
+}{%
+	\augmentShort{}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditaryvampirecountsshort{}%
+}%
+\addsumhereditary{\warriorsinitial}{\hereditarywarriors}{%
+	\cbase{6+}/\cboosted{10+}%
+}{%
+	\distance{18}%
+}{%
+	\alphaorderlist{\damageShort{}\refsymbol{},\directShort{},\hexShort{}}%
+}{%
+	\instantShort{}%
+}{%
+	\hereditarywarriorsshort{}%
+}
+\closesumhereditaries
+
+\summarysubsection{\dhbattlerunes{}}
+\onlyinspanish{\newpage{}}
+\dhbattlerunesdef{}
+
+\startbattlerunes
+\addbattlerune{\runeofrevocation}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\universalShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\runeofrevocationdef{}%
+}%
+\addbattlerune{\runeofreckoning}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\runeofreckoningdef{}%
+}%
+\addbattlerune{\runeofoaths}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\runeofoathsdef{}%
+}%
+\addbattlerune{\runeofresolve}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\augmentShort{}%
+}{%
+	\instantShort{}%
+}{%
+	\runeofresolvedef{}%
+}%
+\addbattlerune{\runeofgleaming}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\runeofgleamingdef{}%
+}%
+\addbattlerune{\runeofresilience}{%
+	5/8%
+}{%
+	\distance{18}/\distance{36}%
+}{%
+	\augmentShort{}%
+}{%
+	\oneturnShort{}%
+}{%
+	\runeofresiliencedef{}%
+}
+\closebattlerunes
+
+\closesummaries
+
+\end{document}

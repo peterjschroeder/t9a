@@ -1,0 +1,7 @@
+
+\DTLforeach*{giantsbook}{\giantsTOC=TOC,\giantspath=giantpath,\giantsicon=icon,\giantsname=name,\giantsprefluff=prefluff}{%
+	\armylisttitlelogo{\giantsTOC}{\giantsname}{\giantsicon}
+	\vfill\fluffbox{\giantsprefluff{}}\vfill\newpage
+	\subimport{armylistfolder/}{\giantspath.tex}
+	\DTLiflastrow{}{\clearpage}
+}%

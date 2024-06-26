@@ -1,0 +1,88 @@
+
+\unitentry{%
+	name=\orcwarlord{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\bignnastyInitial}{\bignnasty},
+	cost=200,
+	unitsize=1,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	defensename=\commonorc{},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	defensenameB=\feralorc{},
+	defenseB@HP=3,
+	defenseB@Df=5,
+	defenseB@Re=5,
+	defenseB@Arm=0,
+	defenserulesB={\aegis{} {(5+)}},
+	defensenameC=\ironorc{},
+	defenseC@HP=3,
+	defenseC@Df=7,
+	defenseC@Re=5,
+	defenseC@Arm=0,
+	defensearmourC={\pa{}},	
+	offensename=\commonorc{},
+	offense@At=4,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offensenameB=\feralorc{},
+	offenseB@At=4,
+	offenseB@Of=6,
+	offenseB@St=5,
+	offenseB@AP=2,
+	offenseB@Ag=4,
+	offensenameC=\ironorc{},
+	offenseC@At=4,
+	offenseC@Of=7,
+	offenseC@St=5,
+	offenseC@AP=2,
+	offenseC@Ag=4,
+	offenserules={},
+	options={%
+		\ghchoice{%
+			\commonorc{}=\free{},
+			\feralorc{}=60,
+			\ironorc{}=85,
+		},
+		\specialitemsallowance{}=\upto{}200,
+		\shield{}=5,
+		\AlCoOrder{%
+			\pw{}=10,
+			\gw{}=20,
+			\lance{}=20,
+		},
+	},
+	additionalframe={%
+		\ghentry{\commonorc{}}{%
+			\bow{} (4+)=5,%
+		}{%
+			\warboar{}=40,
+			\orcboarchariot{}=75,
+			\wyvern{} (\bignnastyInitial{})=150,
+		}%
+		\ghentry{\feralorc{}}{%
+			\la{}=10,%
+			\bow{} (4+)=5,%
+		}{%
+			\warboar{}=30,
+			\wyvern{} (\bignnastyInitial{})=160,
+		}%
+		\ghentry{\ironorc{}}{}{%
+			\warboar{}=55,
+			\orcboarchariot{}=105,
+			\wyvern{} (\bignnastyInitial{})=180,
+		}%
+	},
+}%

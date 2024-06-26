@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\statemilitia{},
+	logo=core,
+	secondlogo=pistols,
+	categorynote=\twocategoriesnote{\core}{\impaux},
+	cost=140,
+	unitsize=10,
+	maxunitsize=25,
+	costpermodel=6,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	globalrules={\hidebf{\reserves{}},\lighttroops{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\statemilitiaSINGULAR{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\pw{},\bow{} (4+),\pistol{} (4+)},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	options={%
+		\textbf{\irregulars{}} (\zerotoXmodelsperunit{15})=\free{},
+	},	
+	modelrulesdef={%
+	\modelruledef{\reserves}{\ruletype{\universalrule}{\reservesdef}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\irregulars}{\ruletype{\universalrule}{\irregularsdef}}
+	},
+} % END UNIT ENTRY

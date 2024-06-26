@@ -1,0 +1,267 @@
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\vampirecount}{Vampire Count}
+
+\newcommand{\vampirecourtier}{Vampire Courtier}
+
+\newcommand{\necromancer}{Necromancer}
+
+\newcommand{\barrowking}{Barrow King}
+
+\newcommand{\fellwraith}{Fell Wraith}
+
+\newcommand{\banshee}{Banshee}
+
+% MOUNTS
+
+\newcommand{\skeletalsteed}{Skeletal Steed}
+
+\newcommand{\spectralsteed}{Spectral Steed}
+
+\newcommand{\cadaverwagon}{Cadaver Wagon}
+\newcommand{\shamblinghorde}{Shambling Horde}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\courtofthedamned}{Court of the Damned}
+\newcommand{\paramour}{Paramour}
+\newcommand{\spectralpallbearers}{Spectral Pallbearers}
+
+\newcommand{\shriekinghorror}{Shrieking Horror}
+
+\newcommand{\monstrousrevenant}{Monstrous Revenant}
+
+\newcommand{\zombiedragon}{Zombie Dragon}
+
+\newcommand{\colossalzombiedragon}{Colossal Zombie Dragon}
+\newcommand{\colossalzombiedragonQRS}{Colossal ZD}
+
+
+% CORE
+
+\newcommand{\zombie}{Zombie}
+\newcommand{\zombies}{Zombies}
+
+\newcommand{\skeleton}{Skeleton}
+\newcommand{\skeletons}{Skeletons}
+
+\newcommand{\ghoul}{Ghoul}
+\newcommand{\ghouls}{Ghouls}
+
+\newcommand{\batswarms}{Bat Swarms}
+\newcommand{\batswarm}{Bat Swarm}
+
+
+% SPECIAL
+
+\newcommand{\direwolves}{Dire Wolves}
+\newcommand{\direwolf}{Dire Wolf}
+
+\newcommand{\barrowguard}{Barrow Guard}
+\newcommand{\barrowguardSINGULAR}{Barrow Guard}
+
+\newcommand{\barrowknights}{Barrow Knights}
+\newcommand{\barrowknight}{Barrow Knight}
+
+\newcommand{\ghasts}{Ghasts}
+\newcommand{\ghast}{Ghast}
+
+\newcommand{\greatbats}{Great Bats}
+\newcommand{\greatbat}{Great Bat}
+
+% Cadaver Wagon, already defined in Mounts
+\newcommand{\cadavermaster}{Cadaver Master}
+
+\newcommand{\altarofundeath}{Altar of Undeath}
+\newcommand{\darkconductor}{Dark Conductor}
+\newcommand{\ghoststeeds}{Ghost Steeds}
+
+\newcommand{\darkcoach}{Dark Coach}
+\newcommand{\coachman}{Coachman}
+\newcommand{\vampire}{Vampire}
+\newcommand{\undeadmount}{Undead Mount}
+
+% The Suffering
+
+\newcommand{\phantomhosts}{Phantom Hosts}
+\newcommand{\phantomhost}{Phantom Host}
+
+\newcommand{\wraiths}{Wraiths}
+\newcommand{\wraith}{Wraith}
+
+\newcommand{\spectralhunters}{Spectral Hunters}
+\newcommand{\spectralhunter}{Spectral Hunter}
+\newcommand{\ghoststeed}{Ghost Steed}
+
+
+% Swift Death
+
+% Shrieking Horror already defined
+
+\newcommand{\vampireknights}{Vampire Knights}
+\newcommand{\vampireknight}{Vampire Knight}
+\newcommand{\knight}{Knight}
+
+\newcommand{\wingedreapers}{Winged Reapers}
+\newcommand{\wingedreaper}{Winged Reaper}
+
+\newcommand{\varkolak}{Varkolak}
+
+\newcommand{\vampirespawn}{Vampire Spawn}
+\newcommand{\vampirespawnSINGULAR}{Vampire Spawn}
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Vampire Count
+
+\newcommand{\pathaccesschangesinabloodlinearmy}{Path access changes in a Bloodline Army.}
+\newcommand{\deadariseoption}{\textbf{Must} take \textbf{\thedeadarise}}
+\newcommand{\asinglebloodpower}{A single Blood Power}
+\newcommand{\musttakeoneortwobloodpowers}{\textbf{Must} take 1 or 2 Blood Powers}
+\newcommand{\ancientbloodpowernote}{Or an Ancient Blood Power in a Bloodline Army}
+\newcommand{\strigoionly}{models with Strigoi only}
+
+% Vampire Courtier
+
+\newcommand{\nosferatuonly}{Nosferatu only}
+
+% Necromancer
+
+\newcommand{\wizardmasteronly}{Wizard Master only}
+
+% Barrow King
+
+\newcommand{\againststandard}{against Standard}
+\newcommand{\unlivingshield}{Unliving Shield}
+\newcommand{\unlivingshielddef}{%
+	Enemy models cannot allocate Close Combat Attacks towards a Necromancer as long as they can allocate attacks towards a model with Unliving Shield in the same unit as the Necromancer. This rule cannot be used if there are also models with Vampiric in the same unit as the Necromancer.%
+}
+
+% Fell Wraith
+
+\newcommand{\monstrousrevenantrestriction}{A mount marked with (\swiftdeathinitials{}) counts towards \swiftdeath{}. Additionally, the mount and its rider count towards Characters and no longer towards \thesuffering{}.}
+\newcommand{\reaperrestriction}{Fell Wraiths and Banshees share the same \zerotoXmodelsperarmy{3} limitation.}
+\newcommand{\againstnonmagicalattacks}{against non-Magical Attacks}
+\newcommand{\againstmagicalattacks}{against Magical Attacks}
+\newcommand{\andloseaegis}{and lose \aegis{} (3+, \againstnonmagicalattacks{})}
+
+% Banshee
+
+\newcommand{\wailofwoe}{Wail of Woe}
+\newcommand{\wailofwoedef}{%
+	A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a Special Attack when Engaged in Combat.%
+	\begin{enumerate}%
+		\item Choose a target using the normal rules for Shooting Attacks. The attack has \range{8}, \textbf{March and Shoot}, and inflicts D6+2 hits with Strength 4, Armour Penetration 1, and \textbf{Magical Attacks}.%
+		\item The attack is made at the model part's Agility. Declare that you are using Wail of Woe when allocating attacks. If used, the model part cannot perform any Close Combat Attacks. Choose a single unit in base contact as the target. The target unit suffers D3+1 hits with Strength 4, Armour Penetration 1, and \textbf{Magical Attacks}.%
+	\end{enumerate}%
+}
+
+
+%% MOUNTS
+
+% Cadaver Wagon
+
+\newcommand{\norestforthewicked}{No Rest for the Wicked}
+\newcommand{\norestforthewickeddef}{%
+	All \rnf{} models in friendly units within \distance{6} gain \textbf{\fortitude{} (6+)}. Ghasts in friendly units within \distance{6} gain \textbf{\fortitude{} (4+)} instead. In addition, all \rnf{} models in friendly units that count towards Core within \distance{6} of one or more Cadaver Wagons gain \textbf{\fortitude{} (+1, \maxi{} 5+)} during their First Round of Combat.%
+}
+
+% Court of the Damned
+
+\newcommand{\chillofthegrave}{Chill of the Grave}
+\newcommand{\chillofthegravedef}{%
+	Enemy units within \distance{6} of one or more models with Chill of the Grave suffer \minuss{}2 Agility and \minuss{}2 Defensive Skill.%
+}
+\newcommand{\musttakeaegis}{\textbf{Must} take \aegis{} (4+)}
+
+% Shrieking Horror
+
+\newcommand{\chillingshriek}{Chilling Shriek}
+\newcommand{\chillingshriekdef}{%
+	A model with this Special Attack can use it as 1. a Shooting Attack, and as 2. a Special Attack when Engaged in Combat.%
+	\begin{enumerate}%
+		\item Choose a target using the normal rules for Shooting Attacks. The attack has \range{8} and \textbf{March and Shoot}.%
+		\item The attack is made at the model part's Agility. Declare that you are using Chilling Shriek when allocating attacks. If used, the model part cannot perform any Close Combat Attacks. Choose a single unit in base contact as the target.%
+	\end{enumerate}%
+	Regardless of whether it is used as a Shooting or Melee Attack, the Chilling Shriek inflicts 1 hit for each Health Point the model with Chilling Shriek currently has. These hits \textbf{always} have Strength 10, Armour Penetration 10, and \textbf{Magical Attacks}. When rolling to wound with this attack, use the enemy's Discipline instead of its Resilience.%
+}
+
+% Monstrous Revenant
+
+\newcommand{\greatmonstrousrevenant}{Great Monstrous Revenant}
+\newcommand{\greatmonstrousrevenantdef}{%
+	The Monstrous Revenant gains \textbf{\devastatingcharge{} (+1 \St{}, +1 \AP{})} and its base size is changed to 60\timess{}\SI{100}{\milli\meter}.%
+}
+
+% Zombie Dragon
+
+\newcommand{\zombiedragonnote}{Zombie Dragon and Colossal Zombie Dragon share the same \zerotoXmountsperarmy{1} limitation.}
+
+
+%% CORE
+
+% Ghouls
+
+\newcommand{\firstraised}{First Raised}
+\newcommand{\firstraiseddef}{Ghoul Champions gain \textbf{Swift Reform}.}
+\newcommand{\ghoulsvanguardnote}{If the General has Strigoi.}
+
+% Bat Swarm
+
+\newcommand{\stormofwings}{Storm of Wings}
+\newcommand{\stormofwingsdef}{%
+	Enemy units in base contact with one or more models with Storm of Wings suffer \minuss{}1 Offensive Skill and \minuss{}1 Defensive Skill.%
+}
+
+
+%% SPECIAL
+
+% Cadaver Wagon, already defined for mounts
+
+% Court of the Damned, already defined for mounts
+
+% Altar of Undeath
+
+\newcommand{\lashofsouls}{Lash of Souls}
+\newcommand{\lashofsoulsdef}{%
+	The model can cast \spellformat{\occultismspellfour}{\occultism} as a Bound Spell with Power Level (4/8).%
+}
+\newcommand{\auraofundeath}{Aura of Undeath}
+\newcommand{\auraofundeathdef}{%
+	During its Shooting Phase, the model part can make a Shooting Attack that targets all enemy units within \distance{12} of the model (including those Engaged in Combat and outside Front Arc and/or Line of Sight). This attack can be used even if the Altar is Engaged in Combat. The targets suffer D6 hits with a Strength equal to the current Game Turn number and Armour Penetration 2.%
+}
+
+% Dark Coach
+
+\newcommand{\unholyconduit}{Unholy Conduit}
+\newcommand{\unholyconduitdef}{Friendly units within \distance{6} gain \textbf{Autonomous}.}
+\newcommand{\extendedchassis}{Extended Chassis}
+\newcommand{\extendedchassisdef}{%
+	The Dark Coach's base size is changed to 50\timess{}\SI{150}{\milli\meter}, and its Undead Mounts' Attack Value is \textbf{set} to 2.%
+}
+\newcommand{\musttakestubborn}{\textbf{Must} take \stubborn{}}
+
+
+%% THE SUFFERING
+
+% Everything already defined
+
+
+%% SWIFT DEATH
+
+% Shrieking Horror, already defined in Mounts
+
+\newcommand{\shriekinghorrorrestriction}{%
+	For each Gigantic Character in the army, the maximum number is reduced by 1.%
+}
+
+% Vampire Knights
+
+\newcommand{\vampireknightsbloodtiesoption}{%
+	  %
+}

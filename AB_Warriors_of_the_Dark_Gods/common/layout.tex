@@ -1,0 +1,164 @@
+
+%%%% Favours %%%%
+
+\newcommand{\startfavours}{%
+	\raggedcolumns%
+	\begin{multicols}{2}%
+	\DTLifdbexists{favourlist}{\DTLcleardb{favourlist}}{\DTLnewdb{favourlist}}% Create new/discard old list
+}
+
+\define@key{favour}{pic}{\def\favour@pic{#1}}
+\define@key{favour}{sortlabel}{\def\favour@sortlabel{#1}}
+\define@key{favour}{ruletype}{\def\favour@ruletype{#1}}
+\define@key{favour}{fulltitle}{\def\favour@fulltitle{#1}}
+\define@key{favour}{text}{\def\favour@text{#1}}
+
+\newcommand{\deffavour}{%
+	\setkeys{favour}{%
+		pic=, sortlabel=, ruletype=, fulltitle=, text=,
+	}%
+	\setkeys{favour}%
+}
+
+\newcommand{\addfavour}[1]{%
+	\deffavour{#1}%
+	\DTLnewrow{favourlist}%
+	\pdfstringdef\textwithoutformatting{\favour@sortlabel}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{favourlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\def\DTLentrycommand{\DTLnewdbentry{favourlist}{pic}}%
+	\expandafter\DTLentrycommand\expandafter{\favour@pic}%
+	\def\DTLentrycommand{\DTLnewdbentry{favourlist}{ruletype}}%
+	\expandafter\DTLentrycommand\expandafter{\favour@ruletype}%
+	\def\DTLentrycommand{\DTLnewdbentry{favourlist}{fulltitle}}%
+	\expandafter\DTLentrycommand\expandafter{\favour@fulltitle}%
+	\def\DTLentrycommand{\DTLnewdbentry{favourlist}{text}}%
+	\expandafter\DTLentrycommand\expandafter{\favour@text}%
+}
+
+\newcommand{\closefavours}{%
+	\DTLsort*{sortlabel}{favourlist}% Sort list
+	\DTLforeach*{favourlist}{\favourpic=pic,\favourruletype=ruletype,\favourfulltitle=fulltitle,\favourtext=text}{%
+		\printfavour{\favourpic}{\favourfulltitle}{\favourruletype}{\favourtext}%
+	}
+	\DTLcleardb{favourlist}%
+	\end{multicols}%
+}
+
+\newcommand{\printfavour}[4]{%
+	\begin{minipage}[c]{0.18\columnwidth}%
+		\includegraphics[width=\textwidth]{#1.png}%
+	\end{minipage}\hfill%
+	\begin{minipage}[c]{0.8\columnwidth}%
+		\textbf{#2}\newline%
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#2}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add		
+		}{%
+			{\textit{(\csname \tempENname EN\endcsname)}\newline}%
+		}%		
+		#3%
+	\end{minipage}\vspace*{5pt}\newline%
+	#4\par%
+}
+
+
+%%%% Manifestations %%%%
+
+\newcommand{\manifestationtabledef}[3]{%
+	\DTLnewrow{manifestationlist}%
+	\DTLnewdbentry{manifestationlist}{name}{#1}%
+	\DTLnewdbentry{manifestationlist}{ruletext}{#2}%
+	\DTLnewdbentry{manifestationlist}{spellstext}{#3}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{manifestationlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+}
+
+\newcommand{\manifestationtablecolumnwidths}{\begin{tabular}{m{0.20\textwidth} m{0.365\textwidth} m{0.355\textwidth}}}
+
+\newcommand{\manifestationtable}[1]{%
+	\DTLifdbexists{manifestationlist}{\DTLcleardb{manifestationlist}}{\DTLnewdb{manifestationlist}}% Create new/discard old list
+	#1%
+	\DTLsort*{sortlabel}{manifestationlist}% Sort list
+	\begin{innerframenopts}[\labels@optionalmodelrulesdef]%
+		\vspace*{-8pt}\begin{center}%
+			\renewcommand{\arraystretch}{1.7}%
+			\manifestationtablecolumnwidths%
+			& \textbf{\theexaltedheraldgains} & \textbf{\theexaltedheraldknows} \tabularnewline%
+			\hline%
+			\DTLforeach*{manifestationlist}{\ruletext=ruletext,\nameoftherule=name,\spellstext=spellstext}{% Print back the ordered table
+				\textbf{\nameoftherule}%
+				\def\tempENname{}%
+				\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\nameoftherule}{1}[\tempENname]%
+				\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add		
+				}{%
+				{\newline\textit{(\csname \tempENname EN\endcsname)}}%
+				}%					
+				& \ruletext & \spellstext \tabularnewline%
+			}%
+		\end{tabular}\end{center}%
+		\DTLcleardb{manifestationlist}%
+	\end{innerframenopts}%
+}
+
+%%%% Gifts of the Dark Gods %%%%
+
+% Use the following with \itementry
+\newcommand{\giftsofthedarkgodslist}[2]{%
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+#2%
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+\begin{innerframenopts}[\labels@optionalmodelrulesdef]%
+\begin{center}#1\end{center}%
+\vspace*{8pt}%
+\raggedcolumns%
+\begin{multicols}{2}\startpricelistNSP%
+\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\isenchantment=enchantment}{% Print back the ordered table
+\pricelistitem{\nameoftheitem}{\cost}{% Check if we need \itemrestriction
+		\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+		\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+		\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+		\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+		\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+		\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
+			\itemrestriction{%
+				\iftoggle{isdominant}{\dominant{}. }{}%
+				\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+				\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+				\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
+				\iftoggle{hasrestriction}{\restriction{}.}{}%			
+			}%
+		}{}%
+		\expandafter\ifblank\expandafter{\isenchantment}{}{%
+			\enchantmentrestriction{\isenchantment{}}%
+		}%
+		\ruletext{}%
+		}%
+}%
+\endpricelistNSP\end{multicols}%
+\DTLcleardb{sortedpricelist}%
+\end{innerframenopts}%
+}
+
+%%%% Favours summary in QRS %%%%
+
+\newcommand{\startfavoursummarytable}{%
+	\alternaterowcolors\normalfontsize%
+	\begin{center}\begin{tabular}{M{4.5cm}m{11cm}}%
+	\toprule%
+}
+\newcommand{\addfavoursummary}[3]{%
+	\textbf{#1}\newline #2 &%
+	#3 \tabularnewline%
+}
+\newcommand{\closefavoursummarytable}{%
+	\bottomrule%
+	\end{tabular}\end{center}\largefontsize%
+}

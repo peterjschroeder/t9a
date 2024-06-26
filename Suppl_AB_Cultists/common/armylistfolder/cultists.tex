@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\cultists{},
+	fluff=\cultistsfluff{},
+	logo=core,
+	cost=105,
+	unitsize=15,
+	maxunitsize=40,
+	costpermodel=3,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	globalrules={\scoring{},\unstable{},\pledgedtodarkness{},\sacrificialofferings{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=,
+	printAeg=defined,
+	offensename=\cultist{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\devastatingcharge{} (\battlefocus{})},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+	},
+	options={%
+		\onechoiceonlyACO{%
+			\textbf{\eldritchtome{}} (\NOTESTzerotoXunitsperarmy{3})=40,
+			\textbf{\abyssalconduit{}} (\NOTESTzerotoXunitsperarmy{3})=70,
+			\textbf{\infiltrators{}} (\NOTESTzerotoXmodelsperunit{15}{,}\newline\NOTESTzerotoXunitsperarmy{3})=10,
+		},
+		\throwingweapons{} (5+) \only{\textbf{\infiltrators{}}}=20,
+		\spear{}=1\permodel{},
+	},
+	mounts={% Species Archetype
+		\waywardchildren{}=1\permodel{},
+		\fallenheroes{}=1\permodel{},
+		\thedishonoured{}=1\permodel{},
+		\kinslayers{}=\free{},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\eldritchtome}{\ruletype{\universalrule}\eldritchtomedef}
+		\modelruledef{\abyssalconduit}{\ruletype{\universalrule}\abyssalconduitdef}
+		\modelruledef{\infiltrators}{\ruletype{\universalrule}\infiltratorsdef}
+	},
+}% END UNIT ENTRY

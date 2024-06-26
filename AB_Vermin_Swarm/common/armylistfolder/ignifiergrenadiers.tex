@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\ignifiergrenadiers{},
+	logo=pistols,
+	cost=130,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=13,
+	maxunitsperarmy=3,
+	scoring=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	categorynote=,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\callous{},\skirmisher{},\lighttroops{},\lifeischeap{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	defenserules={\flammable{},\hardtarget{} (1)},
+	offensename=\ignifiergrenadier{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenseweapons={\hidebf{\deepfiregrenades{} (5+)}},
+	modelrulesdef={%
+		\modelruledef{\deepfiregrenades}{\ruletype{\shootingweapon}%
+			\range{8}, \shots{2}, \St{} 6, \AP{} 2, \alphaorderlistbf{\accurate{},\flamingattacks{}, \quicktofire{},\volleyfire{}}. \deepfiregrenadesdef{}%
+		}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,67 @@
+% Army Model Rules Names
+
+\newcommand{\academytrained}{Academy Trained}
+\newcommand{\huntingbolas}{Hunting Bolas}
+\newcommand{\scentofblood}{Scent of Blood}
+\newcommand{\professionalcourtesy}{Professional Courtesy}
+\newcommand{\coastalpredator}{Coastal Predator}%
+
+\newcommand{\ruthlessefficiency}{Ruthless Efficiency}
+\newcommand{\artistryofdeath}{Artistry of Death}
+
+\newcommand{\krakenshide}{Kraken's Hide}
+
+\newcommand{\repeatercrossbow}{Repeater Crossbow}
+\newcommand{\repeaterhandbow}{Repeater Handbow}
+\newcommand{\bladesofdarag}{Blades of Darag}
+
+% Army Model Rules Texts
+
+\newcommand{\scentofblooddef}{%
+	The model gains \textbf{\fearless{}} and \textbf{\frenzy{}} while Engaged in Combat. In addition, the model gains \textbf{\devastatingcharge{+\distance{1} Adv}} for Charges against units that have at least one Health Pool that contains fewer Health Points than it did when the unit was deployed or otherwise entered the Battlefield for the first time.
+}
+
+\newcommand{\coastalpredatordef}{%
+	The model gains \textbf{\strider{} (Water Terrain)}. In addition, units gain \textbf{\devastatingcharge{\distance{+2} \Ad{}}} and \textbf{\hardtarget{}~(1)} while both the following conditions are met:%
+	\begin{itemize}
+		\item More than half of their models have Coastal Predator.
+		\item More than half of their models have the centre of their base inside a Water Terrain Feature.
+	\end{itemize}
+	Characters without Coastal Predator that Charge out of a unit do not benefit from Coastal Predator.
+}%
+
+\newcommand{\academytraineddef}{%
+	A unit with more than half of its models with Academy Trained is subject to the following rules:
+	\begin{itemize}
+		\item It gains \textbf{\devastatingcharge{\distance{+1} \Ad{}}} when declaring its first Charge in any Charge Phase. The effect lasts until the end of the Charge Phase. Characters without Academy Trained that Charge out of the unit are not affected.
+		\item It counts as having one additional Full Rank for the purpose of Steadfast and Disrupted if it has at least one Full Rank.
+	\end{itemize}
+	The effects are only applied if both the following conditions are met:
+	\begin{itemize}
+		\item The unit consists entirely of Infantry models.
+		\item The unit is within \distance{8} of one or more non-Fleeing models with Academy Trained from one or more other friendly units.
+	\end{itemize}
+}
+
+\newcommand{\professionalcourtesydef}{%
+	The model cannot join units that contain another model from the same unit entry.%
+}
+
+\newcommand{\ruthlessefficiencydef}{%
+	The attack gains +1 to wound during the First Round of Combat.%
+}
+\newcommand{\artistryofdeathdef}{%
+	The attack gains +1 to wound. Attacks with \artistryofdeath{} lose \ruthlessefficiency{} if they had it.%
+}
+
+\newcommand{\krakenshidedef}{%
+	 The wearer gains +1 \Armour{} and \textbf{\coastalpredator{}}.%
+}
+
+\newcommand{\bladesofdaragdef}{%
+	\pw{}. Attacks made with this weapon become \textbf{\magicalattacks{}}. If at least one model in the model part's unit is the target of one or more friendly non-Attribute Spells with duration One Turn, the Strength of attacks made with this weapon is \textbf{always} set to 5 for as long as the spell's effect is applied. This weapon cannot be enchanted.%
+}
+
+\newcommand{\repeatercrossbowrule}{%
+	When shooting from Short Range, the weapon gains +1 Armour Penetration.%
+}

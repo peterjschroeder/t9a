@@ -1,0 +1,20 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{HOBArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{HOBModelRules}{\armymodelrules}\par
+	\tocentry{HOBHereditarySpell}{\hereditaryspell}\par
+	\tocentry{HOBSpecialEquip}{\specialequipment}\par
+	\tocentry{HOBArmyOrganisation}{\armyorganisation}\par
+	\tocentry{HOBQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{HOBchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{HOBCharacters}{\characters}\par
+	\tocentry{HOBMounts}{\charactermounts}\par
+	\tocentry{HOBCore}{\core}\par
+	\tocentry{HOBSpecial}{\specialcategory}\par
+	\tocentry{HOBBlottingTheSun}{\blottingthesun}\par
+}

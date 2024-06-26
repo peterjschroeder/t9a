@@ -1,0 +1,53 @@
+
+\unitentry{%
+	name=\rangers{},
+	logo=special,
+	optionallogo=pistols,
+	categorynote={\upgradecategorynote{\clansthunderInitial}{\clansthunder}},
+	cost=120,
+	unitsize=8,
+	maxunitsize=20,
+	costpermodel=12,
+	maxunitsperarmy=2,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\scoring{},\scout{},\strider{\forest}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	defenserules={\shieldwall{}},
+	offensename=\ranger{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\sturdy{},\quicktofire{}},
+	options={%
+		\textbf{\cragwarden{}}\ESnewline{}\DEnewline{} (\zerotoXmodelsperunit{15})=2\permodel{},
+		\shield{}=2\permodel{},
+		\AlCoOrder{%
+			\throwingweapons{} (4+) [\clansthunderInitial{}]=1\permodel{},
+			\crossbow{} (3+) [\clansthunderInitial{}]=6\permodel{},
+		},
+		\onechoiceonlyACO{%
+			\pw{}=\free,
+			\gw{}=2\permodel{},
+		},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\cragwarden}{\ruletype{\universalrule}{\cragwardendef}}%
+	},
+}% END UNIT ENTRY

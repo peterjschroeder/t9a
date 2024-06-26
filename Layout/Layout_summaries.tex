@@ -1,0 +1,45 @@
+
+\newcommand{\summarysection}[1]{\subsection*{#1}}
+\newcommand{\summarysubsection}[1]{\subsubsection*{#1}}
+
+\newcommand{\startsummaries}{%
+	\newgeometry{top=1cm, bottom=1cm, left=1cm, right=1cm, footskip=15pt}
+	\setlength{\tabcolsep}{6pt}
+	
+	\pagestyle{plain}
+	
+	\fontsize{8}{9.6}\selectfont
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}} % Else paragraph and title spaces behave differently when inside or outside a minipage
+	\renewcommand{\arraystretch}{1.2}
+}
+
+\newcommand{\closesummaries}{}
+
+\newlength{\passivelength}
+
+\newcommand{\summarypathrotated}[3]{\cellcolor{#3}\multirow{-#1}{*}{\begin{tabular}{@{}c@{}}\cellcolor{#3}\rotatebox[origin=c]{90}{\textbf{\expandafter\MakeUppercase\expandafter{#2}}}\end{tabular}}}
+
+\newcommand{\startspellsummariestable}{%
+	\begin{center}\alternaterowcolors
+	\renewcommand{\arraystretch}{1.21}
+	\setlength{\tabcolsep}{1.5pt}
+	\setlength{\passivelength}{\textwidth - 3.38cm - 12pt}
+	\begin{tabular}{M{0.35cm}>{\bfseries}M{0.25cm}m{2.78cm}M{1.08cm}M{1.15cm}M{1.2cm}M{0.8cm}m{\textwidth -7.61cm - 24pt}}
+}
+
+\newcommand{\closespellsummariestable}{%
+	\end{tabular}\end{center}
+}
+
+\newcommand{\starthereditarysummariestable}{%
+	\begin{center}\alternaterowcolors
+	\renewcommand{\arraystretch}{1.21}
+	\setlength{\tabcolsep}{1.5pt}
+	\setlength{\passivelength}{\textwidth - 3.38cm - 12pt}
+	\begin{tabular}{>{\bfseries}M{0.6cm+3pt}m{2.78cm}M{1.08cm}M{1.15cm}M{1.2cm}M{0.8cm}m{\textwidth -7.61cm - 24pt}}
+	\hline
+}
+
+\newcommand{\closehereditarysummariestable}{%
+	\\\hline\end{tabular}\end{center}
+}

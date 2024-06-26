@@ -1,0 +1,88 @@
+
+%%% String manipulation %%%
+
+\def\removespaces#1{\zap@space#1 \@empty}
+
+\pdfstringdefDisableCommands{\def\textcolor#1{}}
+\pdfstringdefDisableCommands{\def\newline{}}
+\pdfstringdefDisableCommands{\def\removedrule{}}
+\pdfstringdefDisableCommands{\def\removedreworded{}}
+\pdfstringdefDisableCommands{\def\void{}}
+\pdfstringdefDisableCommands{\def\guidingversion#1{}}
+\pdfstringdefDisableCommands{\def\refsymbolB{}}
+\pdfstringdefDisableCommands{\def\refsymbolBbis{}}
+\pdfstringdefDisableCommands{\def\refsB{}}
+\pdfstringdefDisableCommands{\def\refsBbis{}}
+\pdfstringdefDisableCommands{\def\refsymbolC{}}
+\pdfstringdefDisableCommands{\def\refsymbolCbis{}}
+\pdfstringdefDisableCommands{\def\refsC{}}
+\pdfstringdefDisableCommands{\def\refsCbis{}}
+\pdfstringdefDisableCommands{\def\base#1{}}
+\pdfstringdefDisableCommands{\def\boosted#1{}}
+\pdfstringdefDisableCommands{\def\specialboosted#1{}}
+\pdfstringdefDisableCommands{\def\nth#1{}}
+
+\newcommand{\substitute}[3]{%
+  \protected@edef\sub@temp{#1}%
+  \saveexpandmode%
+  \expandarg\StrSubstitute{\sub@temp}{#2}{#3}[#1]%
+  \restoreexpandmode%
+}
+
+\newcommand{\pdfsubstitute}[3]{%
+	% #1 is the string in which we need to substitute something
+	% #2 need to be replaced by #3
+	\pdfstringdef\specialcharcode{a#2}%
+	\pdfstringdef\tempcharcode{a}%
+	\substitute\specialcharcode{\tempcharcode}{}%
+	\pdfstringdef\replacementcharcode{a#3}%
+	\substitute\replacementcharcode{\tempcharcode}{}%
+	\substitute{#1}{\specialcharcode}{\replacementcharcode}%
+}
+
+\newcommand{\splitatinf}[3]{%
+  \protected@edef\split@temp{#1}%
+  \saveexpandmode%
+  \expandarg\StrCut{\split@temp}{<}#2#3%
+  \restoreexpandmode%
+}
+
+\newcommand{\splitatstickto}[3]{%
+  \protected@edef\split@temp{#1}%
+  \saveexpandmode%
+  \expandarg\StrCut{\split@temp}{<STICKTO<}#2#3%
+  \restoreexpandmode%
+}
+
+\newcommand{\splitatequal}[3]{%
+  \protected@edef\split@temp{#1}%
+  \saveexpandmode%
+  \expandarg\StrCut{\split@temp}{=}#2#3%
+  \restoreexpandmode%
+}
+
+
+%%% String tests %%%
+
+\newcommand{\ifsubstring}[4]{%
+\protected@edef\split@temp{#1}%
+\protected@edef\split@tempbis{#2}%
+\saveexpandmode%
+\expandarg\IfSubStr{\split@temp}{\split@tempbis}{#3}{#4}%
+\restoreexpandmode%
+}
+
+\newcommand{\isitoneornot}[3]{%
+% First step is to remove spaces if there are some
+\def\numberwithoutspaces{\expandafter\removespaces\expandafter{#1}}%
+% Next step is getting rid of formatting if there are any (bold, color, ...)
+\pdfstringdef\cleannumber{\numberwithoutspaces}%
+%Defining 1 in \pdfstringdef terms (it will add \376\377\000 before usually - unicode identifier)
+\pdfstringdef\numberone{1}%
+% Now we can try if it is 1 or not
+\ifsubstring{\numberone}{\cleannumber}{#2}{#3}%
+}
+
+\newcommand{\isthereaplusornot}[3]{%
+\ifsubstring{#1}{+}{#2}{#3}%
+}

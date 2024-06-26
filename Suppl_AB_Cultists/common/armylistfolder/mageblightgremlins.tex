@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\mageblightgremlins{},
+	logo=summoned,
+	categorynote=\summonedcategorynote{},
+	cost=\newrule{140},
+	unitsize=2,
+	maxunitsize=4,
+	costpermodel=\newrule{25},
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\supernal{},\fearless{},\skirmisher{},\lighttroops{}},
+	defense@HP=4,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\hardtarget{} (1)},
+	offensename=\mageblightgremlin{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=2,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\poisonattacks{},\hidebf{\spellcraving}},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=envy,hypertag=greenfireeyes,name=\greenfireeyes{},cost=5\permodel{}}
+			\addsortedexploption{prename=envy,hypertag=venomsacs,name=\venomsacs{},cost=15\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=livingshield,name=\livingshield{},cost=10\permodel{}}
+			\addsortedexploption{prename=envy,hypertag=piercingspike,name=\piercingspike{},cost=10\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=unnaturalroots,name=\unnaturalroots{},cost=10}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\spellcraving}{\ruletype{\attackattributeclosecombat}\spellcravingdef}
+	},
+}

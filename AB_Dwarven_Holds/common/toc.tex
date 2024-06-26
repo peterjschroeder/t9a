@@ -1,0 +1,22 @@
+ 
+% TOC
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{DHArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{DHModelRules}{\armymodelrules}\par
+	\tocentry{DHRunicSpecialItems}{\runicspecialitems}\par
+	\tocentry{DHBattleRunes}{\battlerunes}\par
+	\tocentry{DHArmyOrganisation}{\armyorganisation}\par
+	\tocentry{DHQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{DHchangelog}{\changelog}\par
+	}{}%
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{DHCharacters}{\characters}\par
+	\tocentry{DHMounts}{\charactermounts}\par
+	\tocentry{DHCore}{\core}\par
+	\tocentry{DHSpecial}{\specialcategory}\par
+	\tocentry{DHClansThunder}{\clansthunder}\par
+	\tocentry{DHEnginesofWar}{\enginesofwar}\par
+}

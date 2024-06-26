@@ -1,0 +1,73 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'multiple_charges_1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1730.35694051bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.50151052)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{multiple_charges_1.pdf}}%
+    \put(0.0538642,0.46878874){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figMulChaA}}}%
+    \put(0.35279903,0.38218582){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{multiple_charges_1.pdf}}%
+    \put(0.22984556,0.39896792){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{multiple_charges_1.pdf}}%
+    \put(0.36909136,0.25151268){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{multiple_charges_1.pdf}}%
+    \put(0.88511983,0.38223308){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{multiple_charges_1.pdf}}%
+    \put(0.7622559,0.39896792){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{multiple_charges_1.pdf}}%
+    \put(0.90150165,0.25151268){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{multiple_charges_1.pdf}}%
+    \put(0.70086637,0.27597017){\color[rgb]{1,1,1}\rotatebox{0.0572155}{\makebox(0,0)[b]{\smash{\figbigletter{A}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{multiple_charges_1.pdf}}%
+    \put(0.10888075,0.08161604){\color[rgb]{1,1,1}\rotatebox{-29.942785}{\makebox(0,0)[b]{\smash{\figbigletter{A}}}}}%
+    \put(0.52893799,0.46878874){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figMulChaA}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{multiple_charges_1.pdf}}%
+    \put(0.17791348,0.16376832){\color[rgb]{1,1,1}\rotatebox{52.035196}{\makebox(0,0)[lb]{\smash{\figMulChaCharge}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,45 @@
+
+\newnarrativescenario{8}{Strategic Objections}
+\label{StrategicObjections}
+
+\flufffont{When two factions both firmly believe they have the ultimate claim to the same land, there can only be war.}
+
+\subsection*{Deployment}
+
+Standard Deployment Type: Frontline Clash.
+
+\printmap{pics/deployment_8_strategic_objections.pdf_tex}
+
+\subsection*{Pre-Game Set-up}
+
+At the end of step 6 of the Pre-Game Sequence (immediately after determining Deployment Zones), both players must place a Strategic Objective anywhere on the Battlefield entirely outside their own Deployment Zone and at least \distance{1} away from Impassable Terrain, starting with the player who chose their Deployment Zone. 
+
+\subsection*{Scenario Special Rules}
+
+\newcommand{\strategicobjective}{Strategic Objective}
+\newcommand{\unmovable}{Unmoveable}
+\newcommand{\unmovabledef}{%
+	The Strategic Objective cannot move in any way once deployed, and for rules purposes its Pursuit and Overrun Distance is always \distance{0}. It cannot be joined by Characters.%
+}
+\newcommand{\themed}{Themed}
+\newcommand{\themeddef}{%
+	During step 7 of the Deployment Phase Sequence (after moving Vanguarding units but before rolling for first turn), each player must give their own Strategic Objective 2 upgrades from the list belowstarting with the player who chose their Deployment Zone:
+	\begin{itemize}
+	\item \magicresistance{4}
+	\item \aegis{5+}
+	\item \fortitude{4}
+	\item Armour \textbf{set} to 4
+	\item Toxic Attacks can \textbf{never} wound the model and attacks that are Poison Attacks against the model lose this Attack Attribute
+	\item Resilience \textbf{set} to 8
+	\item \distracting{}
+	\item \hardtarget{} (1)
+	\item Health Points \textbf{set} to 9
+	\item At the start of each Game Turn, roll a D6. On a 5+, this model Recovers 1 Health Point
+	\end{itemize}%
+}
+
+\subimport{layout/}{strategicobjective.tex}
+
+\subsection*{Winning the Scenario}
+
+A player is immediately declared the winner when their opponent's Strategic Objective is removed as a casualty or when all enemy units have been removed as casualties. If no winner has been declared after 7 Game Turns, the game is a draw.

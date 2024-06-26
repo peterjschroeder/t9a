@@ -1,0 +1,95 @@
+
+\maintitle{WDGModelRules}{\armymodelrules}
+
+\subtitle{\favoursofthedarkgods{}%
+	\ifdef{\favoursofthedarkgodsEN}{%	
+		{ \textit{(\favoursofthedarkgodsEN)}\newline}%
+	}{}%
+}
+
+\favoursofthedarkgodsintro
+
+\startfavours{}
+% ENVY
+\addfavour{%
+	sortlabel=\envy,
+	pic=envy,
+	fulltitle=\envyfulltitle{},
+	ruletype=\attackattributeclosecombat,
+	text=\envydef,
+}
+% GLUTTONY
+\addfavour{%
+	sortlabel=\gluttony,
+	pic=gluttony,
+	fulltitle=\gluttonyfulltitle{},
+	ruletype=\attackattributeclosecombat,
+	text=\gluttonydef,
+}
+% GREED
+\addfavour{%
+	sortlabel=\greed,
+	pic=greed,
+	fulltitle=\greedfulltitle{},
+	ruletype=\universalrule,
+	text=\greeddef,
+}
+
+% LUST
+\addfavour{%
+	sortlabel=\lust,
+	pic=lust,
+	fulltitle=\lustfulltitle{},
+	ruletype=\universalrule,
+	text=\lustdef,
+}
+% PRIDE
+\addfavour{%
+	sortlabel=\pride,
+	pic=pride,
+	fulltitle=\pridefulltitle{},
+	ruletype=\universalrule,
+	text=\pridedef,
+}
+% SLOTH
+\addfavour{%
+	sortlabel=\sloth,
+	pic=sloth,
+	fulltitle=\slothfulltitle{},
+	ruletype=\universalrule,
+	text=\slothdef,
+}
+% WRATH
+\addfavour{%
+	sortlabel=\wrath,
+	pic=wrath,
+	fulltitle=\wrathfulltitle{},
+	ruletype=\attackattributeclosecombat,
+	text=\wrathdef,
+}
+\closefavours{}
+\clearpage
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\pathfavoured{}}{\pathfavoureddef}
+\AMRsortedlistentry{\pathexiled{}}{\pathexileddef}
+\AMRsortedlistentry{\trophyrack{}}{\trophyrackdef{}}
+\AMRsortedlistentry{\irredeemable{}}{\irredeemabledef}
+\AMRsortedlistentry{\veilwalker{}}{\veilwalkerdef}
+\AMRsortedlistentry{\battlefever{}}{\battlefeverdef}
+\AMRsortedlistentry{\legendarybeasts{} (X)}{\legendarybeastsdef}
+\closeAMRsortedlist
+
+\subtitle{\personalprotections}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\unburnt{}}{\unburntdef}
+\closeAMRsortedlist
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\armour]{\hellforgedarmor{}}{\hellforgedarmordef}
+\AMRsortedlistentry[\armour]{\spikedshield{}}{\spikedshielddef}
+\closeAMRsortedlist

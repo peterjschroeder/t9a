@@ -1,0 +1,39 @@
+
+\maintitle{VSModelRules}{\armymodelrules}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+	\AMRsortedlistentry{\eaglestandard{}}{\eaglestandarddef}
+	\AMRsortedlistentry{\callous{}}{\callousdef}
+	\AMRsortedlistentry{\lifeischeap{}}{\lifeischeapdef}
+	\AMRsortedlistentry{\holytriumvirate{}}{\holytriumviratedef}
+\closeAMRsortedlist
+
+\subtitle{\attackattributes}
+
+\startAMRsortedlist
+	\AMRsortedlistentry{\cohortcoordination{}}{\cohortcoordinationdef}
+	\AMRsortedlistentry[\shooting]{\trialandterror{}}{\trialandterrordef}
+	\AMRsortedlistentry[\shooting]{\mishap{} (X)}{\mishapdef}
+\closeAMRsortedlist
+
+\subtitle{\specialattacks}
+
+\startAMRsortedlist
+	\AMRsortedlistentry{\cultoferrahman{}}{\cultoferrahmandef}
+\closeAMRsortedlist
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+	\AMRsortedlistentry[\closecombatweapon]{\bloodpoxblades{}}{\bloodpoxbladesdef}
+
+	\AMRsortedlistentry[\shootingweapon]{\rotarygun{}}{\itemrestriction{\zerotoXmodelsperarmy{12}.}\range{18}, \shots{\Dsix{}}, \St{} 4, \AP{} 2, \textbf{\mishap{} (\rollfornumberofshots{})}, \textbf{\trialandterror{}}.}
+	\AMRsortedlistentry[\shootingweapon]{\jezail{}}{\itemrestriction{\zerotoXmodelsperarmy{18}.}\range{36}, \shots{1}, \St{} 5, \AP{} 3, \alphaorderlistbf{\accurate{},\mishap{} (\tohitroll{}),\unwieldy{},\trialandterror{}}.\newline\jezaildef}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+	\AMRsortedlistentry[\artilleryweapon]{\deepfirethrower{}}{\itemrestriction{\zerotoXmodelsperarmy{6}.}\textbf{\flamethrower{}}. \range{18}, \shots{1}, \St{} 3, \AP{} 0, \alphaorderlistbf{\flamingattacks{},\mishap{} (\misfire{}),\trialandterror{}}. \deepfirethrowerdef}
+	\AMRsortedlistentry[\artilleryweapon]{\canisterlauncher{}}{\itemrestriction{\zerotoXmodelsperarmy{9}.}\textbf{\catapult{} (1\timess{}3)}. \range{18}, \alphaorderlistbf{\toxicattacks{},\mishap{} (\misfire{}),\trialandterror{}}.}
+\closeAMRsortedlist

@@ -1,0 +1,52 @@
+
+\unitentry{%
+	name=\phoenix{},
+	logo=special,
+	cost=340,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=50\timess{}100,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=9,
+	global@Mafly=18,
+	global@Di=8,
+	globalrules={\fly{9}{18},\lighttroops{},\hidebf{\rebirth},\ancientallies{} (1)},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=3,
+	offensename={\phoenix{}},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={},
+	options={%
+		\mustchooseonechoiceonly{%
+			\AlCoOrder{%
+				\textbf{\frostphoenix}=\free{},
+				\textbf{\firephoenix}=25,
+			},
+		},
+		\columnbreak\textbf{\wardensbond}=40,
+	},
+	modelrulesdef={\modelruledef{\rebirth}{\ruletype{\universalrule}\rebirthdef}},
+	optionalmodelrulesdef={%
+		\modelruledef{\firephoenix}{\ruletype{\universalrule}{\firephoenixdef}}%
+		\modelruledef{\frostphoenix}{\ruletype{\universalrule}{\frostphoenixdef}}%
+		\modelruledef{\wardensbond}{\ruletype{\universalrule}{\wardensbonddef}}%		
+	},
+	toggles={%
+		\toggletrue{printoffensename}%
+		\toggletrue{onecolprintmodelrulesdef}%
+		\togglefalse{twocolprintmodelrulesdef}%
+		\toggletrue{onecolprintoptionalmodelrulesdef}%
+		\togglefalse{twocolprintoptionalmodelrulesdef}%
+		\toggletrue{onecolprintoptions}%
+		\togglefalse{twocolprintoptions}%	
+	},
+}

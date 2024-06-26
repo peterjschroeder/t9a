@@ -1,0 +1,56 @@
+
+\unitentry{%
+	name=\skeletonchariots{},
+	logo=core,
+	cost=250,
+	unitsize=3,
+	maxunitsize=7,
+	costpermodel=70,
+	maxunitsperarmy=5,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=8,
+	global@Ma=10,
+	global@Di=7,
+	global@Rsr=2,
+	globalrules={\undead{},\dusttodust{},\swiftstride{},\lighttroops{},\hidebf{\boundindeath},\fearless{}},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=1,
+	defensearmour={\ha{}},
+	offensename=\charioteer{} (2),
+	offense@At=2,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenseweapons={\halberd{},\aspenbow{} (5+)},
+	offensenameB=\skeletalhorse{} (2),
+	offenseB@At=1,
+	offenseB@Of=2,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=2,
+	offenserulesB={\harnessed{}},
+	offensenameI=\chassis{},
+	offenseI@St=4,
+	offenseI@AP=1,
+	offenserulesI={\impacthits{\Dthree{}+1},,\inanimate{}},
+	options={%
+		\textbf{\legioncharioteers}=10\permodel{},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		{\modelruledef{\boundindeath}{\ruletype{\universalrule}{\boundindeathdef}}}
+	},
+	optionalmodelrulesdef={%
+		{\modelruledef{\legioncharioteers}{\ruletype{\universalrule}{\legioncharioteersdef}}}
+	},
+} % END UNIT ENTRY

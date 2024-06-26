@@ -1,0 +1,75 @@
+
+% ARMY MODEL RULES NAMES
+
+\newcommand{\hewnoutofmountains}{Hewn out of Mountains}
+\newcommand{\ancientgrudge}{Ancient Grudge}
+\newcommand{\holdstone}{Holdstone}
+\newcommand{\runeofresonance}{Rune of Resonance}
+\newcommand{\ancestralmemory}{Ancestral Memory}
+\newcommand{\thebiggertheyare}{The bigger they are\dots{}}
+
+\newcommand{\shieldwall}{Shield Wall}
+
+\newcommand{\sturdy}{Sturdy}
+\newcommand{\yercomingwithme}{Yer comin' with me!}
+
+\newcommand{\guildcraftedhandgun}{Guild-Crafted Handgun}
+\newcommand{\forgerepeater}{Forge Repeater}
+
+\newcommand{\hewnoutofmountainsdef}{%
+	The Casting Values of all spells cast by enemy models are increased by 1 as long as at least one friendly model from a Dwarven Holds army is on the Battlefield.%
+}
+
+\newcommand{\ancientgrudgedef}{%
+	Dwarven Holds armies have a number of Grudges which confer a bonus when attacking specific enemies.
+	The total number of Grudges held by a Dwarven Holds army is calculated in the following manner:%
+	\begin{itemize}%
+		\item \textbf{One Grudge} for a General with Ancestral Memory on the Army List%
+		\item \textbf{One Grudge} for each King on the Army List%
+		\item \textbf{Two Grudges} for each War Throne on the Army List%
+	\end{itemize}%
+	Right before the battle (during step 7 of the Deployment Phase Sequence), you \textbf{must} choose a single unit from the opponent's Army List for each Grudge in your army (this may also be a Character). The models of this unit are considered \enquote{marked}. All models in the Dwarven Holds army gain \textbf{\hatred{}} against marked models, and against models joined to units with more than half of their models marked.%
+}
+
+\newcommand{\holdstonedef}{%
+	One use only. May be activated at the start of any Round of Combat. Apply the following effects:%
+	\begin{itemize}%
+		\item Enemy units cannot claim Combat Score bonuses for fighting the Flank or the Rear of the unit.%
+		\item The unit cannot be Disrupted.%
+		\item \parry{}, \shieldwall{}, and \wallofiron{} can be used in any Facing.%
+		\item For the purpose of Supporting Attacks, all Facings are considered to be the Front Facing (i.e. a model can perform Supporting Attacks also to the Flanks and Rear).%
+		\item The unit cannot Pursue nor Overrun.%
+	\end{itemize}%
+	The effects last until the unit is no longer Engaged in Combat.%
+}
+
+\newcommand{\ancestralmemorydef}{%
+	A General with Ancestral Memory affects the number of Grudges held by a Dwarven Holds army (see "Ancient Grudge" above).%
+}
+
+\newcommand{\thebiggertheyaredef}{%
+The model gains \textbf{\devastatingcharge{Swiftstride}} for Charges against units that contain at least one Large or Gigantic model. %
+}
+
+\newcommand{\shieldwalldef}{%
+	While using a Shield, the model gains \textbf{Aegis (6+, against Close Combat Attacks)}. This is improved to \textbf{Aegis (5+, against Close Combat Attacks)} if the attacker is Charging. This Special Save can only be used against attacks from enemies Engaged in the model's unit's Front Facing.%
+}
+
+\newcommand{\sturdydef}{%
+	The model part gains \textbf{Devastating Charge (+1 Str, +1 AP)} and \textbf{\steadyaim{}}.%
+}
+
+\newcommand{\yercomingwithmedef}{%
+	In order to use this Attack Attribute, the unit \textbf{must} be at least as wide as it is deep at the start of the Round of Combat.
+	Natural to-wound rolls of '4', '5'\newrule{,} and '6' with Close Combat Attacks made by models with this Attack Attribute are \textbf{always} considered successful. In addition, when a model with this Attack Attribute is removed as a casualty during the Melee Phase due to an enemy Melee Attack, it \textbf{must} immediately, before removal, perform a single Close Combat Attack with the following rules and restrictions:%
+	\begin{itemize}%
+		\item The attack is \textbf{always} resolved with Strength 5 and Armour Penetration 2.%
+		\item The owner \textbf{must} choose one of the following options:%
+		\begin{enumerate}%
+			\item The attack is allocated towards the model that caused the casualty.%
+			\item The attack is allocated towards a \rnf{} model in that model's unit. %
+		\end{enumerate}%
+		In either case, the model with \yercomingwithme{} is considered in base contact with the attacked model, and the models count as Engaged in the same Facings as their units.%
+		\item This Attack Attribute cannot be used for casualties caused by Impact Hits.%
+	\end{itemize}%
+}

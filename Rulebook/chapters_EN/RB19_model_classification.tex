@@ -1,0 +1,114 @@
+\addtocontents{toc}{\protect\columnbreak}
+\part{Model Classification}
+\idx[main=y]{Model Classification}\label{model_classification}
+
+\raggedcolumns
+\begin{multicols}{2}
+
+\section{Classification of Models}
+\idx[main=y]{Classification of Models}
+
+All models have a Height and a Type, defined in their unit entry.
+
+\subsection{Height}
+\idx[main=y]{Model Heights}\idx[main=y]{Heights}\label{height}
+
+Models come in three Heights, which are connected to the rules described in table \ref{table/height_rules}.
+
+\subsection{Type}
+\idx[main=y]{Model Types}\idx[main=y]{Types}\label{type}
+
+Models come in four Types, which are associated with the following rules:
+
+\begin{itemize}
+	\item \idx[main=y]{Infantry}\textbf{Infantry}: None
+	\item \idx[main=y]{Beast}\textbf{Beast}: \hyperref[swiftstride]{Swiftstride}
+	\item \idx[main=y]{Cavalry}\textbf{Cavalry}: \hyperref[cannot_be_stomped]{Cannot be Stomped}, \hyperref[swiftstride]{Swiftstride}, \hyperref[tall]{Tall}
+	\item \idx[main=y]{Construct}\textbf{Construct}: Cannot use \hyperref[stomp_attacks]{Stomp Attacks}, \hyperref[chariot]{Chariot}
+\end{itemize}
+
+\columnbreak
+
+\subsection[Models on Foot and Mounted Models]{Models on Foot and Mounted\\ Models}
+\idx[main=y]{Mounted Models}\label{model_on_foot_and_mounted_models}
+
+Certain spells and rules affect models on foot and mounted models differently. Models that don't include any model parts with \hyperref[harnessed]{Harnessed} are considered to be on foot. Models with at least one model part with Harnessed are considered to be mounted.
+
+\end{multicols}
+
+\begin{table}[!hbpt]
+	\renewcommand{\arraystretch}{1.3}
+	\centering
+	\begin{tabular}{M{5cm} M{2.5cm} M{2.8cm} M{3cm}}
+		\hline
+		&%
+		\idx[main=y]{Standard (Height)}\textbf{Standard} &%
+		\idx[main=y]{Large}\textbf{Large} &%
+		\idx[main=y]{Gigantic}\textbf{Gigantic} \\
+		\textbf{Model Rules} &%
+		None &%
+		\hyperref[stomp_attacks]{Stomp Attacks (1)}&
+		\hyperref[fear]{Fear}\par
+		\hyperref[massive_bulk]{Massive Bulk}\par
+		\hyperref[stomp_attacks]{Stomp Attacks (D6)}\par
+		\hyperref[terror]{Terror}\par
+		\hyperref[towering_presence]{Towering Presence}\\
+		\idx{Full Ranks}\textbf{Full Ranks}\par
+		{\normalfontsize Minimum number of models required to form Full Ranks}&%
+		5 &%
+		3 &%
+		1 \\
+		\idx{Supporting Attacks}\textbf{Supporting Attacks}\par
+		{\normalfontsize Maximum number of Supporting Attacks}&%
+		1&%
+		3&%
+		5\\
+		\textbf{Dangerous Terrain}\par
+		{\normalfontsize Number of D6 rolled when performing Dangerous Terrain Tests}&%
+		1&%
+		2&%
+		3\\
+		\hline
+	\end{tabular}
+	\caption{Rules connected to Height.}
+	\label{table/height_rules}
+\end{table}
+
+\newpage
+
+\RBbmc
+
+\section{Character Mounts}
+\idx[main=y]{Rider}\idx[main=y]{Mounts}\idx[main=y]{Character Mounts}
+
+Many Characters can select mounts from the mount section of their Army Book. When a Character, referred to as the rider, selects a mount, apply the following rules:
+
+\subsubsection{Height, Type, and Base}
+
+Always use the Height, Type, and base of the mount.
+
+\subsubsection{Offensive Characteristics}
+
+Rider and mount use their own respective Offensive Characteristics.
+
+\subsubsection{Global and Defensive Characteristics}
+\label{defensive_and_global_characteristics}
+
+The Multipart Model has a single set of Global Characteristics and a single set of Defensive Characteristics. Always use the values in the mount's profile, except when that value is \enquote{\ascharacter}. In this case, \enquote{\ascharacter} refers to the value in the Character's profile that is used instead. Sometimes, a value is written as \enquote{\ascharacter{} + X}. In this case, use the Character's value, increased by X.
+
+For example, if a Character (Armour 0) rides a horse (Armour \ascharacter{} + 2), wears Heavy Armour (+2 Armour), and carries a Shield (+1 Armour), the Multipart Model has an Armour equal to: 0 + 2 + 2 + 1 = 5.
+
+\subsubsection{Model Rules}
+
+Model Rules connected to specific model parts (such as Attack Attributes, Special Attacks, and weapons) are only applied to this model part. Other Model Rules (such as Universal Rules, Character, Armour, and Personal Protections) are applied to the Multipart Model as normal.
+
+Remember that models with \hyperref[massive_bulk]{Massive Bulk} (all models of Gigantic Height) ignore Armour and Personal Protections from the rider.
+
+\columnbreak
+
+\section{Classification of Units}
+\idx[main=y]{Classification of Units}\label{classification_of_units}
+
+Some rules call for a unit's Height or Type, e.g. for determining how many models are required for Full Ranks. In case a unit contains a mix of different Heights, the unit's Height is the same as that of the largest fraction of its models. Likewise, a unit's Type is the same as that of the largest fraction of its models. In case of a tie, the opponent chooses which fraction to use.
+
+\RBemc

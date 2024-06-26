@@ -1,0 +1,95 @@
+
+% Army Model Rules Names
+
+\newcommand{\infernalbrand}{Infernal Brand}
+\newcommand{\boundorbroken}{Bound or Broken}
+\newcommand{\taurukhritual}{Taurukh Ritual}
+\newcommand{\incendiary}{Incendiary}
+\newcommand{\firesofindustry}{Fires of Industry}
+\newcommand{\furnacebreach}{Furnace Breach}
+
+\newcommand{\oilflasks}{Oil Flasks}
+
+\newcommand{\volcanicembrace}{Volcanic Embrace}
+
+\newcommand{\infernalarmour}{Infernal Armour}
+
+\newcommand{\flintlockaxe}{Flintlock Axe}
+\newcommand{\blunderbuss}{Blunderbuss}
+
+\newcommand{\naphthathrower}{Naphtha Thrower}
+\newcommand{\rocketbattery}{Rocket Battery}
+\newcommand{\titanmortar}{Titan Mortar}
+
+\newcommand{\infernalweapon}{Infernal Weapon}
+
+% Army Model Rules Texts
+
+\newcommand{\infernalbranddef}{%
+	The model gains \textbf{\commandingpresence~(\distance{6}, Insignificant).} 
+	 In addition, when losing a Round of Combat, Standard Height units with more than half of their models with Infernal Brand double their number of Full Ranks for the purpose of Steadfast in the First Round of Combat unless Charging.%
+}
+
+\newcommand{\taurukhritualdef}{%
+	The model is subject to the following modifications:%
+	\begin{itemize}%
+		\item It gains \textbf{\cannotbestomped{}}, \textbf{\impacthits{} (1)}, and \textbf{\tall{}}.
+		\item Its Advance Rate is \textbf{set} to \distance{7} and its March Rate is \textbf{set} to \distance{14}.
+		\item Its base size is changed to 25\timess{}\SI{50}{\milli\meter}.
+		\item Its Type is changed to Beast.%
+	\end{itemize}	%
+}
+
+\newcommand{\incendiarydef}{%
+	Place one Incendiary marker for each instance of \incendiary{} next to the unit. A unit with one or more \incendiary{} markers gains \textbf{\flammable{}}. Remove one \incendiary{} marker:%
+	\begin{itemize}%
+		\item Immediately when the unit suffers one or more wounds (before saves are performed) from Ranged Attacks that are Flaming Attacks.%
+		\item At the end of a Round of Combat in which the unit suffers one or more wounds (before saves are performed) from Melee Attacks that are Flaming Attacks.%
+	\end{itemize}%
+	A Character leaving a unit affected by \incendiary{} is no longer affected, unless the Character was a single model unit when it gained \incendiary{}. In that case, the Character keeps those \incendiary{} markers.%
+}
+\newcommand{\firesofindustrydef}{%
+	The sum of the \firesofindustry{} values stated in brackets of all models in the army is restricted to 1 per 750 Army Points, rounding fractions up.%
+}
+
+\newcommand{\oilflasksdef}{%
+	If one or more simultaneous attacks with Oil Flasks hit, after resolving these attacks, the target unit gains one Incendiary marker.%
+}
+
+\newcommand{\furnacebreachdef}{%
+	Instead of rolling on the Misfire Table as normal, apply the following Misfire Effects:%
+	\begin{itemize}
+		\item \textbf{2 or less}: The model may not shoot its Artillery Weapon until the end of the game. In addition, the model's Grind Attacks become \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}.%
+		\item \textbf{3+}: The model loses 1 Health Point with no saves of any kind allowed.%
+	\end{itemize}%
+}
+
+\newcommand{\volcanicembracedef}{%
+	Attacks made by the model part, including Special Attacks, become \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}. In addition, the model part gains \textbf{\grindattacks{} (X)}, where X corresponds to the value stated in brackets. These Grind Attacks are resolved with Armour Penetration 10 and they \textbf{always} wound on a roll equal to or greater than \enquote{7 minus the Armour of the model that the hit is distributed onto}. A natural \result{6} \textbf{always} wounds and a natural \result{1} \textbf{always} fails to wound. %
+}
+
+\newcommand{\infernalarmourdef}{%
+	Plate Armour. The wearer gains \textbf{\aegis{} (5+, against \flamingattacks{})}.%
+}
+
+\newcommand{\infernalweapondef}{%
+	Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.%
+}
+
+\newcommand{\flintlockandblunderbussrestriction}{%
+	0--60 \rnf{} Models with \blunderbuss{} or \flintlockaxe{} or \pistol{} per Army%
+}
+\newcommand{\flintlockaxedef}{%
+	Counts as \halberd{}  in close combat. %
+}
+\newcommand{\blunderbussdef}{%
+	%
+}
+
+\newcommand{\naphthathrowerdef}{%
+	The hits from an Explosion! Misfire Effect gain \textbf{\flamingattacks{}}.%
+}
+
+\newcommand{\rocketbatterydef}{%
+	When rolling to hit, if two or more dice rolled a natural \result{1}, all hits are ignored and the weapon Misfires. %
+}

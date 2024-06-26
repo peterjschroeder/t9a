@@ -1,0 +1,80 @@
+
+\vspace*{0.6cm}
+\begin{tikzpicture}[overlay]
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt}]	(0.1,1.58) -- (6.88,1.58) node [black,midway,align=center,yshift=0.45cm] {\figTINMENProfileEight};
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt}]	(6.95,1.58) -- (13.65,1.58) node [black,midway,align=center,yshift=0.45cm] {\figTINMENProfileNine};
+\end{tikzpicture}
+\scalebox{0.8}{%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}%
+	\hbadness=10000%
+	\begin{minipage}{\textwidth}
+		%%%%%%%%%%%%%%%%%%%%%%
+		% Characteristics and rules
+		%%%%%%%%%%%%%%%%%%%%%%
+		% Global Characteristics
+		\renewcommand{\arraystretch}{1.4}%
+		\startcharacteristicstable{}%
+			\hspace*{3pt}{\ChLab{\GlobalCharacteristics}}&%
+			{\ChLab{\AdvanceRateInitials}}&%
+			{\ChLab{\MarchRateInitials}}&%
+			{\ChLab{\DisciplineInitials}}&%
+			&%
+			&%
+			\ChLab{\ModelRules}\tabularnewline%
+			&%
+			\ChVal{\distance{5}}%
+			&%
+			\ChVal{\distance{10}}%
+			&%
+			\ChVal{7}&%
+			&%
+			&%
+			\strut\alphaorderlist{\tinmenglobalrules}%
+			\tabularnewline%
+		\end{tabular}%
+		
+		%%%%%%%%%%%%%%%%%%%%%%
+		% Defensive Characteristics
+		\vspace*{-7pt}%
+		\startcharacteristicstable{}%
+			\hspace*{3pt}\ChLab{\DefensiveCharacteristics{}}&%
+			{\ChLab{\HealthPointsInitials}}&%
+			{\ChLab{\DefensiveSkillInitials}}&%
+			{\ChLab{\ResilienceInitials}}& %
+			{\ChLab{\ArmourInitials}}&%
+			&%
+			\tabularnewline%
+			&% no defensive name
+			\ChVal{1}&%
+			\ChVal{4}&%
+			\ChVal{4}&%
+			\ChVal{2}&%
+			&%
+			\strut\alphaorderlist{\tinmendefrules}%
+			\tabularnewline%
+		\end{tabular}%
+		
+		%%%%%%%%%%%%%%%%%%%%%%
+		% Offensive Characteristics
+		\vspace*{-7pt}%
+		\startcharacteristicstable{}%
+			\hspace*{3pt}\ChLab{\OffensiveCharacteristics{}}&%
+			{\ChLab{\AttackValueInitials}}&%
+			{\ChLab{\OffensiveSkillInitials}}&%
+			{\ChLab{\StrengthInitials}}& %
+			{\ChLab{\ArmourPenetrationInitials}}&%
+			{\ChLab{\AgilityInitials}}&%
+			\tabularnewline%
+			&%
+			\ChVal{1}&%
+			\ChVal{4}&%
+			\ChVal{3}&%
+			\ChVal{0}&%
+			\ChVal{3}&%
+			\strut\alphaorderlist{\tinmenoffrules}%
+			, %
+			\alphaorderlist{\tinmenoffweapons}%
+			\tabularnewline%
+		\end{tabular}\newline%
+	\end{minipage}
+}

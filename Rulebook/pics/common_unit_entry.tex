@@ -1,0 +1,63 @@
+
+\hspace*{0.12\textwidth}%
+\begin{tikzpicture}[overlay]
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt,mirror}]
+(0,0.19) -- (0.0,-1.05) node [black,midway,xshift=-0.9cm] 
+{\figTINMENHeader};
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt,mirror}]
+(0.0,-1.09) -- (0.0,-4.1) node [align=right,black,midway,xshift=-0.9cm] 
+{\figTINMENUnitProfile};
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt,mirror}]
+(0.0,-4.15) -- (0.0,-7.25) node [black,midway,xshift=-0.9cm] 
+{\figTINMENOptions};
+\end{tikzpicture}
+\scalebox{0.8}{%
+	\unitentry{%
+		name=\tinmen{},
+		logo=core,
+		cost=120,
+		unitsize=15,
+		maxunitsize=50,
+		costpermodel=10,
+		maxunitsperarmy=4,
+		scoring=yes,
+		size=\heightstandard{},
+		type=\infantry{},
+		basesize=25\timess{}25,
+		global@Ad=5,
+		global@Ma=10,
+		global@Di=7,
+		globalrules={\scoring{},\strider{} (\forest{})},
+		defense@HP=1,
+		defense@Df=4,
+		defense@Re=4,
+		defense@Arm=2,
+		defensearmour={\la{}},
+		offensename=\tinman{},
+		offense@At=1,
+		offense@Of=4,
+		offense@St=3,
+		offense@AP=0,
+		offense@Ag=3,
+		offenserules={\textbf{\tinmansheart}},
+		offenseweapons={\halberd{}},
+		commandgroup={%
+			\champion{}=10,
+			\musician{}=10,
+			\standardbearer{}=10,
+			\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+		},
+		options={%
+			\ambush{} ({\zerotoXmodelsperunit{25}, \zerotoXunitsperarmy{2}})=20,
+			\onechoiceonlyACO{%
+				\shield{}=1\permodel{},
+				\pw{}=2\permodel{},
+			},
+			\throwingweapons{} (5+)=2\permodel{},
+		},
+		modelrulesdef={%
+			\modelruledef{\tinmansheart}{\ruletype{\attackattributeclosecombat}\tinmansheartdef}
+		},
+		toggles={\togglefalse{twocolprintmodelrulesdef}\toggletrue{onecolprintmodelrulesdef}},
+	} % END UNIT ENTRY
+}

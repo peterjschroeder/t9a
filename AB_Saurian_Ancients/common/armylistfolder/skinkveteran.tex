@@ -1,0 +1,59 @@
+
+\unitentry{%
+	name=\skinkveteran{},
+	logo=character,
+	optionallogo=arrows,
+	secondoptionallogo=character_monster,
+	categorynote={\charactermountnotefull{\guerrillawarriorsInitial}{\guerrillawarriors}\newline%
+		\charactermountnote{\magnasauriaInitial}{\magnasauria}},
+	cost=80,
+	unitsize=1,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=7,
+	globalrules={\swiftreform{},\communalbond{},\strider{\waterterrain{}},\lighttroops{},\minimised{} (\disciplinetest{})},
+	defense@HP=2,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\fortitude{} (6+)},
+	defensearmour=\la{},
+	offensename=\skinkveteran{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+		\shield{}=5,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+				\blowpipe{} (3+)=5,
+				\poisonedjavelin{} (2+)=\free{},
+				\magneticshortbow{} (2+)=5,
+		}},
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\lightlance{}=5,
+			\halberd{}=5,
+		},
+		\onechoiceonlyACO{%
+			\chameleon{} \wordand{} \hardtarget{} (1) =,
+			(\NOTESTzerotoXunitsperarmy{2}) (\onfootonly{})=15,
+			\textbf{\masterstrategist{}} (\zerotooneunitsperarmy{}) \newline (\onfootonly{})=35,
+		},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\masterstrategist}{\ruletype{\universalrule}\masterstrategistdef}
+	},
+	mounts={%
+		\mountainpteradon{} [\guerrillawarriorsInitial]=70,
+		\pouakaiskytyrant{} [\guerrillawarriorsInitial](\magnasauriaInitial)=140,
+		\taurosaur{}\refsymbol{} (\magnasauriaInitial)=380,
+		\refsymbol{}\taurosaurrestriction{}=\void{9999},
+	},
+}% END UNIT ENTRY

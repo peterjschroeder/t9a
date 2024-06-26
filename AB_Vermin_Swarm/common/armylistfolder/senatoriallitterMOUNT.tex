@@ -1,0 +1,27 @@
+
+\unitentry{%
+	name=\senatoriallitter{},
+	logo=character,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=\ascharacter{},
+	globalrules={\hidebf{\thedieiscast{}},\tall{}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=4,
+	defense@Arm=\ascharacter{},
+	defenserules={\cannotbestomped{}},
+	offensename=\blackfurveteran{} (4),
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\harnessed{}},
+	modelrulesdef={%
+		\modelruledef{\thedieiscast}{\ruletype{\universalrule}\thedieiscastdef}
+	},
+}% END UNIT ENTRY

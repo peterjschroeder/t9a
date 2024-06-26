@@ -1,0 +1,191 @@
+
+%%% Titles
+
+\newcommand{\newtitle}[1]{\part*{#1}\phantomsection}
+\newcommand{\newsubtitle}[1]{\subsection*{#1}\phantomsection}
+
+\newcommand{\brandninthagelogotype}{BRAND9AgeLogotype}
+\ifdefined\languageisfrench
+	\renewcommand{\brandninthagelogotype}{BRAND9AgeLogotype_FR}
+\fi
+\ifdefined\languageisspanish
+	\renewcommand{\brandninthagelogotype}{BRAND9AgeLogotype_ES}
+\fi
+\ifdefined\languageisitalian
+	\renewcommand{\brandninthagelogotype}{BRAND9AgeLogotype_IT}
+\fi
+
+%%% Card sets
+
+\newcommand{\startcards}{\newgeometry{margin=16.8mm}}
+\newcommand{\stopcards}{\restoregeometry}
+
+% Card Settings
+
+\pgfmathsetmacro{\cardroundingradius}{0mm}
+\pgfmathsetmacro{\striproundingradius}{0mm}
+\pgfmathsetmacro{\cardwidth}{6.3}
+\pgfmathsetmacro{\cardheight}{8.8}
+\pgfmathsetmacro{\strippadding}{0.1}
+\pgfmathsetmacro{\textpadding}{0.3}
+\pgfmathsetmacro{\ruleheight}{0.025}
+\newcommand{\cardnumbersize}{\fontsize{25}{30}\selectfont}
+\newcommand{\cardtitlesize}{\fontsize{17.3}{20.8}\selectfont}
+\newcommand{\magicdicesize}{\fontsize{14.4}{17.3}\selectfont}
+\newcommand{\cardbacktitlesize}{\fontsize{14.4}{17.3}\selectfont}
+\newcommand{\subtitleysize}{\fontsize{9}{10.8}\selectfont}
+\newcommand{\magicdicenotesize}{\fontsize{8}{9.6}\selectfont}
+\newcommand{\cardnotesize}{\fontsize{7}{8.4}\selectfont}
+
+%%% Card Entry
+
+% Input parameters
+
+\define@key{fluxcardfront}{logo}{\def\fluxcardfront@logo{#1}}
+\define@key{fluxcardfront}{number}{\def\fluxcardfront@number{#1}}
+\define@key{fluxcardfront}{title}{\def\fluxcardfront@title{#1}}
+\define@key{fluxcardfront}{subtitle}{\def\fluxcardfront@subtitle{#1}}
+\define@key{fluxcardfront}{magicdice}{\def\fluxcardfront@magicdice{#1}}
+\define@key{fluxcardfront}{submagicdice}{\def\fluxcardfront@submagicdice{#1}}
+\define@key{fluxcardfront}{veiltokens}{\def\fluxcardfront@veiltokens{#1}}
+\define@key{fluxcardfront}{note}{\def\fluxcardfront@note{#1}}
+
+\define@key{fluxcardback}{title}{\def\fluxcardback@title{#1}}
+\define@key{fluxcardback}{logo}{\def\fluxcardback@logo{#1}}
+
+\newcommand{\deffluxcardfront}{%
+	\setkeys{fluxcardfront}{%
+		logo=, number=, title=, subtitle=, magicdice=, submagicdice=, veiltokens=, note=,
+	}%
+	\setkeys{fluxcardfront}%
+}
+
+\newcommand{\deffluxcardback}{%
+	\setkeys{fluxcardback}{%
+		logo=, title=,
+	}%
+	\setkeys{fluxcardback}%
+}
+
+% Definition
+
+\newcommand{\fluxcardfrontentry}[1]{%
+	\deffluxcardfront{#1}%
+	\begin{tikzpicture}%
+		\expandafter\ifblank\expandafter{\fluxcardfront@logo}{}{%
+			\node at (\cardwidth-\strippadding-0.7,\cardheight-\strippadding-0.75){\includegraphics[width=6.8mm,height=6.8mm,keepaspectratio]{\fluxcardfront@logo.png}};
+		}%
+		\draw[rounded corners=\cardroundingradius] (0,0) rectangle (\cardwidth,\cardheight);
+		\node[text width=(\cardwidth-\strippadding-3*\textpadding)*1cm,below right,inner sep=0] at (\textpadding+0.2,\cardheight-\textpadding) 
+		{%
+			\tikz{\fill (0,0) rectangle (\cardwidth-\strippadding-3*\textpadding,\ruleheight);}\\[-0.2cm]%
+				{\cardnumbersize\centerline{\cardnumberfont{\fluxcardfront@number}}}\vspace{-0.25cm}%
+			\tikz{\fill (0,0) rectangle (\cardwidth-\strippadding-3*\textpadding,\ruleheight);}\\[0.3cm]%
+			\begin{center}%
+					\expandafter\ifblank\expandafter{\fluxcardfront@title}{\cardtitlesize\cardtitlefont\strut\\}{%
+						\begin{spacing}{0.9}%
+							\cardtitlesize\cardtitlefont{\fluxcardfront@title}%
+						\end{spacing}\vspace*{-0.1cm}%
+					}%
+						\expandafter\ifblank\expandafter{\fluxcardfront@subtitle}{\subtitleysize\cardsubtitlefont\strut}{%
+							\subtitleysize\cardsubtitlefont{\fluxcardfront@subtitle}%
+						}\\[0.4cm]%
+			        \expandafter\ifblank\expandafter{\fluxcardfront@magicdice}{\magicdicesize\magicdicefont\strut}{%
+			        	{\magicdicesize\magicdicefont{\expandafter\magicdicenbr\expandafter{\fluxcardfront@magicdice}}}%
+			        }\\%
+		        	\expandafter\ifblank\expandafter{\fluxcardfront@magicdice}{\magicdicenotesize\magicdicenotefont\strut}{%
+		        		\magicdicenotesize\magicdicenotefont{\fluxcardbothplayers{}%
+		        			\expandafter\ifblank\expandafter{\fluxcardfront@submagicdice}{}{%
+		        				~\fluxcardfront@submagicdice{}%
+		        			}%
+		        		}%
+		        	}\\[0.15cm]%
+			        \expandafter\ifblank\expandafter{\fluxcardfront@veiltokens}{\magicdicesize\magicdicefont\strut}{%
+			        {\magicdicesize\magicdicefont{\expandafter\veiltokensnbr\expandafter{\fluxcardfront@veiltokens}}}%
+			        }\\%
+			        {\magicdicenotesize\magicdicenotefont{\fluxcardactiveplayer}}\\[0.4cm]%
+			\end{center}%
+						{\cardnotesize\cardnotenotefont{%
+							\begin{justify}\fluxcardfront@note\end{justify}}}%
+		};
+	\end{tikzpicture}%
+}
+
+\newcommand{\fluxcardbackentry}[1]{%
+	\deffluxcardback{#1}%
+	\begin{tikzpicture}%
+		\expandafter\ifblank\expandafter{\fluxcardback@logo}{}{%
+			\node at (\cardwidth-\strippadding-3.15,\cardheight-\strippadding-3.75){\includegraphics[width=3.5cm,height=3.5cm,keepaspectratio]{\fluxcardback@logo.png}};
+		}%
+		\node at (\cardwidth-\strippadding-3.15,\cardheight-\strippadding-7.5){\includegraphics[width=3.5cm,height=3.5cm,keepaspectratio]{\brandninthagelogotype.pdf}};
+		\draw[rounded corners=\cardroundingradius] (0,0) rectangle (\cardwidth,\cardheight);
+		\node[text width=(\cardwidth-\strippadding-2*\textpadding)*1cm,below right,inner sep=0] at (\textpadding,\cardheight-\textpadding-0.5) 
+		{
+			\begin{center}%
+				{\cardbacktitlesize\cardtitlefont{\cardbacktitle}}\\[4.5cm]%
+				{\subtitleysize\cardtitlefont{\fluxcardback@title}}\\%
+			\end{center}%
+		};
+	\end{tikzpicture}%
+}
+
+% Fronts page
+
+\newcommand{\fluxcardsfrontpage}[2]{%
+	\begin{center}%
+	\rotatebox[origin=c]{90}{%
+		#1%
+	}%
+	\rotatebox[origin=c]{90}{%
+		#2%
+	}%
+	\end{center}%
+}
+
+% Backs page
+
+\newcommand{\fluxcardsbackpage}[2]{%
+	\begin{center}%
+	\rotatebox[origin=c]{270}{%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+	}%
+	\rotatebox[origin=c]{270}{%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+		\fluxcardbackentry{%
+			logo=#1,
+			title=#2,
+		}%
+	}%
+	\end{center}%
+}
+
+
+% Dark Gods
+
+\newcommand{\sinversion}[1]{\base{#1}}% same as base version of spells

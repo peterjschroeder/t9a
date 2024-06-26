@@ -1,0 +1,111 @@
+
+\newenvironment{hidewhenprinted}{\begin{ocg}[printocg=never]{HideWhenPrinted}{id1}{1}}{\end{ocg}}
+
+\newcommand{\debugfooter}{\par\vspace*{-10pt}\hfill{\fontsize{4}{4.8}\selectfont\textcolor{white}{d}}}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{}
+\fancyhead[L]{}
+
+\newcommand{\footerlogosize}{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Rulebook %%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisistherulebook
+
+\fancypagestyle{brb}{%
+	\fancyhf{}
+	\fancyfoot[R]{%
+		\strut\begin{minipage}{0.4\textwidth}\begin{hidewhenprinted}%
+			\hyperref[terrain]{\normalfontsize\terrainfooter}%
+			\hspace*{\fill}%
+			\hyperlink{specialrulestable}{\normalfontsize\specialrulesfooter}%
+			\hspace*{\fill}%
+			\hyperref[index]{\normalfontsize\indexfooter}%
+		\end{hidewhenprinted}\end{minipage}%
+	}%
+	\fancyfoot[L]{%
+		\strut\begin{minipage}{0.4\textwidth}\begin{hidewhenprinted}%
+			\hyperlink{toc}{\normalfontsize\tableofcontentsfooter}%
+			\hspace*{\fill}%
+			\hyperref[the_pre_game_sequence]{\normalfontsize\pregamesequencefooter}%
+			\hspace*{\fill}%
+			\hyperref[victory_conditions]{\normalfontsize\victoryconditionsfooter}%
+		\end{hidewhenprinted}\end{minipage}%
+	}%
+	\fancyfoot[C]{\thepage}%
+}
+
+\pagestyle{brb}
+
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%% Arcane Compendium %%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisthepathsbook
+
+\fancypagestyle{brb}{
+	\fancyhf{}
+	\fancyfoot[R]{%
+		\strut\begin{hidewhenprinted}%
+		\pathsrightfooter%		
+		\end{hidewhenprinted}%
+	}
+	\fancyfoot[L]{%
+		\strut\begin{hidewhenprinted}%
+		\pathsleftfooter%		
+		\end{hidewhenprinted}%
+	}
+	\fancyfoot[C]{\thepage}
+}
+
+\pagestyle{brb}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Army Book %%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisanarmybook
+
+\newcommand{\standardfooterspace}{\hspace*{0.4cm}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerright%
+\end{hidewhenprinted}%
+}
+\fancyfoot[L]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerleft%
+\end{hidewhenprinted}%
+}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Supplement %%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisasupplement
+
+\newcommand{\standardfooterspace}{\hspace*{0.4cm}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerright%
+\end{hidewhenprinted}%
+}
+\fancyfoot[L]{%
+\strut\begin{hidewhenprinted}%
+\normalfontsize\footerleft%
+\end{hidewhenprinted}%
+}
+
+\fi

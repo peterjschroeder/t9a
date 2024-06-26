@@ -1,0 +1,36 @@
+
+% ARMY MODEL RULES
+
+\maintitle{DHModelRules}{\armymodelrules}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\holdstone{}}{\holdstonedef}
+\AMRsortedlistentry{\ancestralmemory{}}{\ancestralmemorydef}
+\AMRsortedlistentry{\thebiggertheyare{}}{\thebiggertheyaredef}
+\closeAMRsortedlist
+
+\subtitle{\personalprotections}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\shieldwall{}}{\shieldwalldef}
+\closeAMRsortedlist
+
+\subtitle{\attackattributes}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\closecombat, \shooting]{\sturdy{}}{\sturdydef}
+\AMRsortedlistentry[\closecombat]{\yercomingwithme{}}{\yercomingwithmedef}
+\closeAMRsortedlist
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\shootingweapon]{\guildcraftedhandgun{}}{%
+	\range{24}, \shots{1}, \St{} 4, \AP{} 2, \alphaorderlistbf{\accurate{},\unwieldy{}}.%
+}
+\AMRsortedlistentry[\shootingweapon]{\forgerepeater{}}{%
+	\range{18}, \shots{4}, \St{} 5, \AP{} 2, \alphaorderlistbf{\flamingattacks{},\quicktofire{}}.%
+}
+\closeAMRsortedlist

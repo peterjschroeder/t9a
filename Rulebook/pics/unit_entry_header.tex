@@ -1,0 +1,110 @@
+	
+\centering
+\vspace*{0.8cm}%
+\begingroup
+	% Scaling down fonts by a 0.8 factor
+	\normalfontsize%
+	\renewcommand{\ChLab}[1]{{\fontsize{6.4}{7.68}\selectfont\greytextcolor{\textit{#1}}}} % Font for Characteristic's labels
+	\renewcommand{\largerfontsize}{\fontsize{9.6}{11.52}\selectfont}%
+	\renewcommand{\Largerfontsize}{\fontsize{12}{14.4}\selectfont}%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}%
+	\setlength{\lengthbeforemodelsize}{5.2cm}
+	\begin{minipage}{0.8\textwidth}%
+	\rule{\textwidth}{0.4pt}\par\vspace{-4pt}%
+	% Logos
+	\hspace*{-2.4pt}%
+	\begin{minipage}[b]{0.08\textwidth}%
+	\strut\tikz[remember picture] \node [inner sep=0pt] (ArmyCategory) {\includegraphics[width=\textwidth]{{logo_core}.png}};\strut%
+	\vspace*{-3.2pt}%
+	\end{minipage}%
+	%
+	% Title, unit cost and size
+	\setlength{\lengthbeforemodelsizetwologos}{\lengthbeforemodelsize - 0.08\textwidth}
+	\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
+	% Title with hyperlink, scoring logo
+	\strut\tikz[remember picture] \node [inner sep=0pt] (UnitName) {\Largerfontsize\textbf{\tinmen}};\strut%
+	\vspace*{3pt}\newline%
+	% Unit cost and size
+	\strut\tikz[remember picture] \node [inner sep=0pt] (UnitCost) {\strut{\largerfontsize\pts{\textbf{120}}} + \pts{\textbf{10}}\perextramodel{}\strut};\strut%
+	\hspace*{\lengthbeforemodelsize}%
+	\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{120}}} + \pts{\textbf{10}}\perextramodel{}}}%		
+	\hspace*{-\lengthoftheptsblock}\hspace*{-1.5pt}%
+	\strut\tikz[remember picture] \node [inner sep=0pt] (UnitSize) {\strut\textbf{15--50} \Models{}\strut};\strut%
+	\vspace{0pt}%
+	\end{minipage}%
+	%
+	% Restrictions
+	\hfill\begin{minipage}[b]{0.2\textwidth}%
+	\setlength{\parskip}{0pt}%
+	\begin{center}%
+		\strut\tikz[remember picture] \node [inner sep=0pt] (Scoring) {\includegraphics[height=9.6pt]{logo_scoring.png}};\strut\par%
+		\strut\tikz[remember picture] \node [inner sep=0pt] (UnitCap) {\strut\zerotoXunitsperarmy{4}};\strut\par%
+	\end{center}%
+	\vspace{0pt}%
+	\end{minipage}%
+	%
+	% Size, Type and Base
+	\begin{minipage}[b]{0.2\textwidth}%
+	\renewcommand{\arraystretch}{1}%
+	\strut\tikz[remember picture] \node [inner sep=0pt] (ModelSpecifications) {%
+		\begin{tabular}{@{}>{\raggedleft}p{0.25\textwidth}@{\hskip 0.03\textwidth}p{0.72\textwidth}@{}}%
+		\ChLab{\Height}&\heightstandard{}\tabularnewline%
+		\ChLab{\type}&\infantry{}\tabularnewline%
+		\ChLab{\basesize}&25\timess{}25 \si{\milli\meter}%
+		\tabularnewline%
+		\end{tabular}%
+	};\strut%
+	\vspace*{-3.2pt}%
+	\end{minipage}\vspace{-2pt}\par%
+	\vspace{-10pt}\rule{\textwidth}{0.4pt}\par%
+	\end{minipage}
+\endgroup
+\vspace*{0.8cm}%
+\newlength{\unitnameboxwidth}%
+\setlength{\unitnameboxwidth}{\widthof{\Largerfontsize\textbf{\tinmen}}}%
+\newlength{\unitnameboxheight}%
+\setlength{\unitnameboxheight}{\heightof{\Largerfontsize\textbf{\tinmen}}}%
+\newlength{\armycategoryboxwidth}%
+\setlength{\armycategoryboxwidth}{0.064\textwidth}%
+\newlength{\armycategoryboxheight}%
+\setlength{\armycategoryboxheight}{\heightof{\includegraphics[width=0.064\textwidth]{{logo_core}.png}}}%
+\newlength{\unitcostboxwidth}%
+\setlength{\unitcostboxwidth}{\widthof{{\largerfontsize\pts{\textbf{120}}} + \pts{\textbf{10}}\perextramodel{}}}%
+\newlength{\unitcostboxheight}%
+\setlength{\unitcostboxheight}{\heightof{{\largerfontsize\pts{\textbf{120}}} + \pts{\textbf{10}}\perextramodel{}}}%
+\newlength{\unitsizeboxwidth}%
+\setlength{\unitsizeboxwidth}{\widthof{\textbf{15--50} \Models{}}}%
+\newlength{\unitsizeboxheight}%
+\setlength{\unitsizeboxheight}{\heightof{\textbf{15--50} \Models{}}}%
+\newlength{\unitcapboxwidth}%
+\setlength{\unitcapboxwidth}{\widthof{\zerotoXunitsperarmy{4}}}%
+\newlength{\unitcapboxheight}%
+\setlength{\unitcapboxheight}{\heightof{\zerotoXunitsperarmy{4}}}%
+\newlength{\scoringboxwidth}%
+\setlength{\scoringboxwidth}{\widthof{\includegraphics[height=9.6pt]{logo_scoring.png}}}%
+\newlength{\scoringboxheight}%
+\setlength{\scoringboxheight}{9.6pt}%
+\begin{tikzpicture}[remember  picture, overlay, highlight/.style = {draw=red,rounded corners=3pt,thick},comment/.style = {align=center, fill= black!5,minimum height=0.55cm},every edge/.append style = { ->, thick, >=stealth,black!50,dashed,line width=1pt},]
+	\node [highlight,minimum width=\unitnameboxwidth-2pt,minimum height=\unitnameboxheight+2pt] (UnitNameFrame) at (UnitName) {};
+	\node [highlight,minimum width=\armycategoryboxwidth-2pt,minimum height=\armycategoryboxheight+2pt] (ArmyCategoryFrame) at (ArmyCategory) {};
+	\node [highlight,yshift=0.05cm,minimum width=\unitcostboxwidth-18pt,minimum height=\unitcostboxheight+3pt] (UnitCostFrame) at (UnitCost) {};
+	\node [highlight,yshift=0.03cm,minimum width=\unitsizeboxwidth-4pt,minimum height=\unitsizeboxheight+3pt] (UnitSizeFrame) at (UnitSize) {};
+	\node [highlight,yshift=0.02cm,minimum width=\unitcapboxwidth-8pt,minimum height=\unitcapboxheight+3pt] (UnitCapFrame) at (UnitCap) {};
+	\node [highlight,minimum width=\scoringboxwidth+8pt,minimum height=\scoringboxheight+4pt,yshift=1pt] (ScoringFrame) at (Scoring) {};
+	\node [highlight,minimum width=2.6cm,minimum height=1.1cm,xshift=-0.3cm,yshift=0.035cm] (ModelSpecificationsFrame) at (ModelSpecifications) {};
+	\node [comment,above right= 1cm and 0.4cm of ArmyCategoryFrame.center] (UnitNameComment) {\figTMHOne};
+	\node [comment,right=1.8cm of UnitNameComment] (UnitSizeComment) {\figTMHThree};
+	\node [comment,right=1cm of UnitSizeComment] (ScoringComment) {\figTMHFive};
+	\node [comment,right=1cm of ScoringComment] (ModelSpecificationsComment) {\figTMHSeven};
+	\node [comment,below= 1cm of ArmyCategoryFrame.center] (ArmyCategoryComment) {\figTMHTwo};
+	\node [comment,right=1cm of ArmyCategoryComment] (UnitCostComment) {\figTMHFour};
+	\node [comment,right=3.3cm of UnitCostComment] (UnitCapComment) {\figTMHSix};
+	\draw (UnitNameComment) edge (UnitNameFrame);
+	\draw (UnitSizeComment) edge (UnitSizeFrame);
+	\draw (ScoringComment) edge (ScoringFrame);
+	\draw (ArmyCategoryComment) edge (ArmyCategoryFrame);
+	\draw (UnitCostComment) edge (UnitCostFrame);
+	\draw (UnitCapComment) edge (UnitCapFrame);
+	\draw (ModelSpecificationsComment) edge (ModelSpecificationsFrame);
+\end{tikzpicture}
+	

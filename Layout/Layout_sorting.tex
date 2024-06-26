@@ -1,0 +1,191 @@
+
+\newcommand{\addtosortedlist}[1]{%
+	\ifsubstring{#1}{<STICKTO<}{%
+		\def\prefixforsorting{}%
+		\def\actualname{}%
+		\splitatstickto{#1}{\prefixforsorting}{\actualname}%
+		\pdfstringdef\textwithoutformatting{#1}%
+		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
+		\pdfsubstitute\textwithoutformatting{[}{}%
+		\pdfsubstitute\textwithoutformatting{\{}{}%
+		\pdfsubstitute\textwithoutformatting{'}{}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\def\tempoaddcommand{\sortitem{\textwithoutformatting}}%
+		\expandafter\tempoaddcommand\expandafter{\actualname}%	
+	}{%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{[}{}%
+	\pdfsubstitute\textwithoutformatting{\{}{}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\sortitem{\textwithoutformatting}{#1}%
+	}%
+}%
+
+\newcommand{\addtosortedlistwithcost}[1]{%
+	\ifsubstring{#1}{<STICKTO<}{%
+		\def\prefixforsorting{}%
+		\def\actualname{}%
+		\splitatstickto{#1}{\prefixforsorting}{\actualname}%
+		\pdfstringdef\textwithoutformatting{\prefixforsorting}%
+		\pdfsubstitute\textwithoutformatting{[}{}%
+		\pdfsubstitute\textwithoutformatting{\{}{}%
+		\pdfsubstitute\textwithoutformatting{'}{}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\def\textwithoutcost{}%
+		\def\costwewanttoextract{}%
+		\StrCut{\prefixforsorting}{=}{\textwithoutcost}{\costwewanttoextract}%
+		\pdfstringdef\costwithoutformatting{\costwewanttoextract}%
+		\pdfsubstitute\costwithoutformatting{ }{}%
+		\pdfsubstitute\costwithoutformatting{\free}{0}%
+		\pdfsubstitute\costwithoutformatting{\permodel}{}%
+		\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+		\substitute\costwithoutformatting{\string\376}{}%
+		\substitute\costwithoutformatting{\string\377}{}%
+		\substitute\costwithoutformatting{\string\000}{}%
+		\def\tempoaddcommand{\sortitemwithcost{\textwithoutformatting}}%
+		\expandafter\tempoaddcommand\expandafter{\actualname}{\costwithoutformatting}%
+	}{%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{[}{}%
+	\pdfsubstitute\textwithoutformatting{\{}{}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\textwithoutcost{}%
+	\def\costwewanttoextract{}%
+	\StrCut{#1}{=}{\textwithoutcost}{\costwewanttoextract}%
+	\pdfstringdef\costwithoutformatting{\costwewanttoextract}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\permodel}{}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\sortitemwithcost{\textwithoutformatting}{#1}{\costwithoutformatting}%
+	}%
+}%
+
+\newcommand{\addtopathlist}[1]{%
+	\DTLnewrow{pathlist}% Create a new entry
+	\def\textwithouticon{}%
+	\def\pathiconname{}%
+	\noexpandarg\StrCut{#1}{=}{\textwithouticon}{\pathiconname}%
+	\def\DTLentrycommand{\DTLnewdbentry{pathlist}{name}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithouticon}% Add name
+	\def\DTLentrycommand{\DTLnewdbentry{pathlist}{icon}}%
+	\expandafter\DTLentrycommand\expandafter{\pathiconname}% Add icon name
+	\pdfstringdef\textwithoutformatting{\textwithouticon}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\substitute\textwithoutformatting{\string\376}{}%
+	\substitute\textwithoutformatting{\string\377}{}%
+	\substitute\textwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{pathlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel	
+}%
+
+\newcommand{\sortitem}[2]{%
+	\DTLnewrow{alphaorderlist}% Create a new entry
+	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{#1}% Add entry sortlabel
+	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{description}}%
+	\DTLentrycommand{#2}% Add entry description
+}
+
+\newcommand{\sortitemwithcost}[3]{%
+	\DTLnewrow{alphaandcostorderlist}% Create a new entry
+	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{#1}% Add entry sortlabel
+	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{description}}%
+	\DTLentrycommand{#2}% Add entry description
+	\def\DTLentrycommand{\DTLnewdbentry{alphaandcostorderlist}{cost}}%
+	\expandafter\DTLentrycommand\expandafter{#3}% Add entry cost
+}
+
+\newenvironment{sortedlist}{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+}{%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\setlength{\parskip}{0pt}%
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print each item
+		\theDesc{}\par%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderstickto}[1]{%
+#1<STICKTO<%
+}
+
+\newcommand{\alphaorderlist}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{, }%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistbf}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\textbf{\theDesc{}}\DTLiflastrow{}{, }%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistpar}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{\DTLpar}%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\calculatepenultimate}[1]{\DTLsub{\dtlpenultimate}{#1}{1}}
+\newcommand{\alphaorderlistand}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{%
+			\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{\oxfordcomma{} \wordand{} }{, }%
+		}%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistandbf}[1]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#1}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\expandafter\calculatepenultimate\expandafter{\DTLrowcount{alphaorderlist}}%
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\textbf{\theDesc{}}\DTLiflastrow{}{%
+			\dtlifnumeq{\dtlpenultimate}{\DTLcurrentindex}{\oxfordcomma{} \wordand{} }{, }%
+		}%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\alphaorderlistX}[2]{%
+	\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlist}{#2}%
+	\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+	\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+		\theDesc{}\DTLiflastrow{}{#1}%
+	}%
+	\DTLcleardb{alphaorderlist}%
+}

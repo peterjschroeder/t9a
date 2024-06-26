@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\ritualaltar{},
+	fluff=\ritualaltarfluff{},
+	logo=special,
+	cost=\newrule{190},
+	unitsize=1,
+	type=\construct{},
+	size=\heightstandard{},
+	maxunitsperarmy=1,
+	basesize=60,
+	global@Ad=2,
+	global@Ma=2,
+	global@Di=6,
+	globalrules={\hidebf{\darkconclave},\fearless{},\wizardadept{},\sacrificialofferings{},\daemonicsummon{},\unstable{},\tall{},\warmachine{}},
+	defense@HP=5,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\councilmembers{},
+	offense@At=5,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	options={%
+		\textbf{\grandcouncil{}}=\newrule{60},
+	},
+	modelrulesdef={%
+		\modelruledef{\darkconclave}{\ruletype{\universalrule}\darkconclavedef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\grandcouncil}{\ruletype{\universalrule}\grandcouncildef}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\engineer{},
+	logo=character,
+	secondlogo=cannonballs,
+	optionallogo=,
+	categorynote=\twocategoriesnote{\characters}{\enginesofwar},
+	cost=120,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\engineer{} (3+),\hidebf{\entrench{}}},
+	defense@HP=2,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{}},
+	defenserules={\shieldwall{}},
+	offensename=\engineer{},
+	offense@Ag=3,
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={\sturdy{}},
+	options={%
+		\ancestralmemory{} \only{\general{}}=35,
+		\runicspecialitems{}=\upto{}100,
+		\shield{}=5,
+		\onechoiceonlyACO{%
+			\pistol{} (3+)=5,
+			\guildcraftedhandgun{} (3+)=5,
+			\crossbow{} (3+)=5,
+			\forgerepeater{} (4+)=20,
+			\wyrmslayerrocket{} (3+)=30,
+		},
+		\gw{}=5,
+     },
+ 	magic={%
+ 		\uptoonebattlerune{}=35,
+ 	},
+	modelrulesdef={%
+		\modelruledef{\entrench}{\ruletype{\universalrule}{\entrenchdef}}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\wyrmslayerrocket}{\ruletype{\shootingweapon}%
+			\range{24}, \shots{1}, \St{} 6, \AP{} 3, \alphaorderlistbf{\flamingattacks{},\multiplewounds{}{} (\Dthree{}),\reload{}}.%
+		}
+	},
+}% END UNIT ENTRY

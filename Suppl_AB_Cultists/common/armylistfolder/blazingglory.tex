@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\blazingglory{},
+	logo=summoned,
+	optionallogo=bird,
+	categorynote=\flycategorynote{}\newline \summonedcategorynote{},
+	cost=300,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=8,
+	globalrules={\supernal{},\fearless{},\fear{},\toweringpresence{},\hidebf{\fallingstar{}}},
+	defense@HP=5,
+	defense@Df=\starsymbol{},
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\blazingglory{},
+	offense@At=5,
+	offense@Of=\starsymbol{},
+	offense@St=5,
+	offense@AP=5,
+	offense@Ag=5,
+	explicitoptions={%
+		\setexploption{\fly{8}{16}}{\newrule{40}}
+		\manifestationonechoice{%
+			\addsortedexploption{prename=pride,hypertag=bronzebackbone,name=\bronzebackbone{},cost=35}
+			\addsortedexploption{prename=pride,hypertag=stiffupperlip,name=\stiffupperlip{},cost=20}
+			\addsortedexploption{prename=chaos,hypertag=brimstonesecretions,name=\brimstonesecretions{},cost=10}
+			\addsortedexploption{prename=chaos,hypertag=clovenhooves,name=\clovenhooves{},cost=25}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\fallingstar}{\ruletype{\universalrule}\fallingstardef}
+	},
+}

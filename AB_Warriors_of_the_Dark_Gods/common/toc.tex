@@ -1,0 +1,18 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{WDGModelRules}{\armymodelrules}\par
+	\tocentry{WDGHereditarySpell}{\hereditaryspell}\par
+	\tocentry{WDGSpecialEquip}{\specialequipment}\par
+	\tocentry{WDGArmyOrganisation}{\armyorganisation}\par
+	\tocentry{WDGQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{WDGchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{WDGCharacters}{\characters}\par
+	\tocentry{WDGMounts}{\charactermounts}\par
+	\tocentry{WDGCore}{\core}\par
+	\tocentry{WDGSpecial}{\specialcategory}\par	
+}

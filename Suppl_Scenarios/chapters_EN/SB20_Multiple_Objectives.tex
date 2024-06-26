@@ -1,0 +1,77 @@
+
+\newgamingscenario{3}{6}{Multiple Objectives}
+\label{MultipleObjectives}
+
+\subsection*{Deployment}
+
+Any of the standard Deployment Types.
+
+\subsection*{Pre-Game Set-up}
+
+After step 8 of the Pre-Game Sequence (immediately before the DeploymentPhase), each player generates 3 Tasks for themselves from the list below, starting with the player that chose their Deployment Zone. To generate a Task, roll a D3 and a D6.
+
+\subsection*{Winning the Secondary Objective}
+
+At the end of the game, the player who has completed the most of their assigned Tasks wins this Secondary Objective.
+
+\startmultipletaskstable{D3 Result}{D6 Result}{Task}
+\newtaskfortable{1}{1}{Many Spies have Many Eyes}{%
+	All enemy units with Scout must be removed as casualties at the end of the game. If there are no units with Scout in the opponent's Army List, all enemy units with Vanguard must be removed as casualties at the end of the game instead. Generate another Task if there are no units with Scout or Vanguard in the opponent's Army List.%
+}
+\newtaskfortable{1}{2}{Knowledge is Power}{%
+	Immediately choose a Wizard in your army. That Wizard must still be alive at the end of the game. Generate another Task if there is no Wizard in your army.%
+}
+\newtaskfortable{1}{3}{There can be Only One}{%
+	You must have exactly one Character still alive at the end of the game. Generate another Task if you only have a single Character in your Army List. Unless selected as a mount for a Character, War Platforms are ignored for this Task.%
+}
+\newtaskfortable{1}{4}{Steal their Land}{%
+	You must have at least one Scoring Unit inside the enemy Deployment Zone at the start of any of your first four Player Turns. Units that used Special Deployment are ignored for this purpose.%
+}
+\newtaskfortable{1}{5}{Seize that Resource}{%
+	Immediately choose a Terrain Feature completely outside your Deployment Zone. You must have more Scoring Units within \distance{6} of that Terrain Feature than your opponent at the end of Game Turn 5.%
+}
+\newtaskfortable{1}{6}{Spring the Trap}{%
+	At least one of your units must successfully Charge an enemy unit in the Rear Facing.%
+}
+\closemultipletaskstable
+
+\newpage
+\startmultipletaskstable{D3 Result}{D6 Result}{Task}
+\newtaskfortable{2}{1}{Precious Cargo}{%
+	Immediately choose a Scoring Unit in your army. That Scoring Unit must still be alive at the end of the game.%
+}
+\newtaskfortable{2}{2}{Honour is Everything}{%
+	None of your units must ever declare a Flee Charge Reaction (not even involuntarily). Generate another Task if there are no units in your Army List that can declare a Flee Charge Reaction.%
+}
+\newtaskfortable{2}{3}{Onwards Men}{%
+	Your Battle Standard Bearer must successfully Charge an enemy unit and survive until the end of the following Player Turn at least once. Generate another Task if there is no Battle Standard Bearer in your Army List.%
+}
+\newtaskfortable{2}{4}{Bring It Down!}{%
+	Immediately choose a model with Towering Presence in the opponent's army. That model must have been removed as a casualty before the end of Game Turn 4. Generate another Task if there are no models with Towering Presence in the opponent's Army List.%
+}
+\newtaskfortable{2}{5}{Thinning Out the Herd}{%
+	When you generate this Task, identify the unit with the most models in your Army List. In case of a tie, choose one of them. That unit must have been removed as a casualty by the end of the game.%
+}
+\newtaskfortable{2}{6}{Assassination}{%
+	The enemy General must be removed as a casualty before your own General is removed as a casualty.%
+}
+\hline
+\newtaskfortable{3}{1}{Domination}{%
+	You must have more Scoring Units within \distance{6} of the centre of the board than your opponent at the end of the game.%
+}
+\newtaskfortable{3}{2}{Clear the Skies}{%
+	All enemy models with Fly must be removed as casualties at the end of the game. Generate another Task if there are no models with Fly in the opponent's Army List.%
+}
+\newtaskfortable{3}{3}{Magical Relic}{%
+	Immediately place a Relic Marker with its centre inside your Deployment Zone. Each time a friendly model successfully casts a non-Bound non-Attribute Spell, you may move the Relic Marker up to \distance{3} in any direction. There must never be any enemy units within \distance{6} of the Relic Marker's centre at the beginning of any of your Players Turns.%
+}
+\newtaskfortable{3}{4}{Mutiny}{%
+	Your General must have been removed as a casualty and at least one of your other Characters must still be on the board by the end of the game. Generate another Task if there is only a single Character in your Army List.%
+}
+\newtaskfortable{3}{5}{Message}{%
+	Immediately choose a Character in your army. That Character must be inside the opponent's Deployment Zone at the start of at least one of your Player Turns during Game Turn 4 or later.%
+}
+\newtaskfortable{3}{6}{Target Strike}{%
+	Immediately choose an enemy Scoring Unit. That unit must have been removed as a casualty by the end of the game.%
+}
+\closemultipletaskstable

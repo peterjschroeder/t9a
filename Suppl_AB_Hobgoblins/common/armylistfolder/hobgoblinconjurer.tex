@@ -1,0 +1,47 @@
+
+\unitentry{%
+	name=\hobgoblinconjurer{},
+	fluff=\conjurerfluff{},
+	logo=character,
+	cost=\newrule{115},
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\wizardapprentice{}},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={},
+	offensename=\hobgoblinconjurer{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules=\removedrule{\ironrain{}},
+	options={%
+			\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,
+	\newrule{\onechoiceonlyACO{%
+				\la{}=5,
+				{\infernalarmour{} \infernalarmourrestriction{}}=25,}
+	},
+},
+	magic={%
+		\onechoiceonlyACO{%
+				\wizardadept{}=\newrule{95},
+				\wizardmaster{}=\newrule{265},
+		},
+	},
+	paths={\pyromancy{}=pyromancy,\shamanism{}=shamanism,\witchcraft{}=witchcraft},
+	mounts={%
+		\ifnotwizardapprentice{}\Scolon{}=\void{0},
+		\suboptionindent\mountainwolf{}=45,
+		\suboptionindent\plainstusker{}=\newrule{140},
+	},
+}% END UNIT ENTRY

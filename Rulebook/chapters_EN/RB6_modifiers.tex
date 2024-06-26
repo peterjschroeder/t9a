@@ -1,0 +1,62 @@
+
+\part{Modifiers}
+\idx[main=y]{Modifiers}\label{modifiers}
+
+The values of Characteristics and dice rolls or other values can be the target of modifiers from numerous sources, like spells, weapons, and armour. They can be set to a certain value, and they can be subject to addition, subtraction, multiplication, and division.
+
+\RBbmc
+
+\section{Values Set to a Fixed Number}
+\idx[main=y]{Set to a Fixed Number}\label{values_set_to_a_fixed_number}
+
+When a value or a roll is set to a certain value, replace the modified value or the required roll with that value. For example, if an attack is subject to the effect \enquote{The attack's Armour Penetration is \textbf{set} to 10}, you replace the attack's Armour Penetration value with 10.
+
+A Characteristic may be set to the value of another model's Characteristic. In this case, the value of the other model's Characteristic is taken after applying any modifiers that the other model is subject to. Modifiers that affect the recipient model will then be applied to this value (following the rules in \nameref{priority_of_modifiers} below). For example, if a model has the rule \enquote{The Discipline of all units within \distance{12} may be \textbf{set} to the Discipline value of the model}, all units affected by this modifier may ignore their own Discipline and use the model's Discipline instead.
+
+\section{Multiplication and Division}
+\label{multiplication_and_division}
+
+Sometimes values or rolls can be modified by multiplication or division. In case of the latter, round fractions up. For example, if a model attacks an enemy model that is subject to the rule \enquote{All attacks made against this model are performed at half Strength}, the Strength of its attacks is divided by 2, rounding fractions up.
+
+\section{Addition and Subtraction}
+\label{addition_and_subtraction}
+
+Sometimes values or rolls are modified by addition or subtraction. For example, if a model is subject to the rule \enquote{The wearer gains +1 Armour and suffers \minuss{}2 Offensive Skill}, you add 1 to its Armour and subtract 2 from its Offensive Skill.
+
+\section{Priority of Modifiers}
+\idx[main=y]{Priority of Modifiers}\label{priority_of_modifiers}
+
+If any value or roll is affected by more than one modifier, these modifiers are applied in a strict order, following table \ref{table/priority_of_modifiers}. First apply modifiers listed with priority step 1, then apply modifiers with priority step 2 to the result, and so on (whenever you see the terms set/always/never used in bold in such a modifier, this indicates its priority).
+
+When several modifiers within a priority step are to be applied to a value (e.g. a Characteristic value), apply them in the order that results in the lowest value.
+
+When several modifiers within a priority step are to be applied to a dice roll (e.g. for \hyperref[aegis]{Aegis} Saves, to-hit rolls, to-wound rolls), apply them in the order that results in the lowest success chance of the roll.
+
+After all modifications via multiplication, division, addition, or subtraction, unless specifically stated otherwise:
+
+\begin{itemize}
+	\item \textbf{Agility} and \textbf{Attack Value} cannot be modified to lower than 1, unless they were lower than 1 before modifications.\idx{Agility (\AgilityInitials)}
+	\item The value of all other Characteristics modified to lower than 0 is treated as 0, unless it is used for another rule or effect that is subject to further modifiers (for example, a model part's \ArmourPenetration{} modified to \minuss{}1 is treated as 0; but when it is used for determining the \ArmourPenetration{} of the model part's Close Combat Attacks, the corresponding modifiers will be based on the value of -1).
+	\item \textbf{Armour} cannot be modified to exceed a maximum of 6.\idx{Armour (\ArmourInitials)}
+	\item \textbf{Agility} and \textbf{Discipline} cannot be modified to exceed a maximum of 10.\idx{Discipline (\DisciplineInitials)}
+\end{itemize}
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\begin{tabular}{M{1.5cm} m{\linewidth-1.5cm-25pt}}
+		\hline
+		\textbf{Priority\newline Step} & \textbf{Modifier} \\
+		1 & Values \textbf{set} to a certain number and values \textbf{set} to another model's value. If the other model's Characteristic is modified, apply these modifiers before setting the Characteristic. \\
+		2 & Multiplication and division.\newline Round fractions up. \\
+		3 & Addition and subtraction. \\
+		4 & Rolls \textbf{always} or \textbf{never} succeeding or failing on certain results, and Characteristics \textbf{always} or \textbf{never} set to a certain value or range of values. \\
+		\hline
+	\end{tabular}
+	\caption{Priority of modifiers.\captionposttitle%
+		For example, if a model is affected by (A) \enquote{The model's attacks gain +1 to hit} and (B) \enquote{Attacks made with this weapon are \textbf{set} to hit on 4+}, first apply modifier (B), since modifiers using the \enquote{\textbf{set}} mechanic are applied in priority step 1, and then apply the +1 modifier, as modifiers using addition are applied in priority step 3. The final result would be the model's attacks hitting on 3+.%
+	}
+	\label{table/priority_of_modifiers}
+\end{Figure}
+
+\RBemc

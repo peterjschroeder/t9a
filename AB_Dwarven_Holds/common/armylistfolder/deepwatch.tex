@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\deepwatch{},
+	logo=special,
+	cost=230,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=19,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\scoring{},\bodyguard{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{},\shield{}},
+	defenserules={\hidebf{\wallofiron{}}},
+	offensename=\deepwatchSINGULAR{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\sturdy{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+			\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\runicbannerenchantment{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		\modelruledef{\wallofiron}{\ruletype{\personalprotection}\wallofirondef}
+	},
+	toggles={\toggletrue{twocolprintcommandgroup}\togglefalse{onecolprintcommandgroup}},
+}% END UNIT ENTRY

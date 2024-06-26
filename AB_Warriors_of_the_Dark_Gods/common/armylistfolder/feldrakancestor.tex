@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\feldrakancestor{},
+	logo=character,
+	cost=640,
+	unitsize=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	maxunitsperarmy=2,
+	basesize=75\timess{}100,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=9,
+	globalrules={\hidebf{\primallegend}, \legendarybeasts{} (2)},
+	defense@HP=8,
+	defense@Df=6,
+	defense@Re=6,
+	defense@Arm=3,
+	defensearmour={\la{}},
+	defenserules={\unburnt{}},
+	offensename=\feldrakancestor{},
+	offense@Ag=3,
+	offense@At=6,
+	offense@Of=6,
+	offense@St=7,
+	offense@AP=4,
+	offenserules={%
+		\hatred{} (\againstfly{}),%
+		\breathattack{\St{} 4, \AP{} 1, \hidebf{\dyingembers{}}, \flamingattacks{}}%
+	},
+	options={%
+		\specialequipmentfeldrak{}=\nolimit{},
+		\onechoiceonlyACO{%
+			\gw{}=10,
+			\halberd{}=35,
+			\pw{}=90,
+		},
+	},
+	modelrulesdef={%
+		{\modelruledef{\dyingembers}{\ruletype{\attackattribute}{\dyingembersdef}}}
+		{\modelruledef{\primallegend}{\ruletype{\universalrule}{\primallegenddef}}}
+	},
+}

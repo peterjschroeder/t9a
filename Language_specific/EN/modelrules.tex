@@ -1,0 +1,187 @@
+
+% Model rules type
+
+\newcommand{\armyspecificrule}{Army Specific Rule}
+\newcommand{\universalrule}{Universal Rule}
+\newcommand{\universalrules}{Universal Rules}
+\newcommand{\personalprotection}{Personal Protection}
+\newcommand{\personalprotections}{Personal Protections}
+\newcommand{\attackattribute}{Attack Attribute}
+\newcommand{\attackattributes}{Attack Attributes}
+\newcommand{\attackattributeclosecombat}{Attack Attribute -- Close Combat}
+\newcommand{\attackattributeclosecombatandshooting}{Attack Attribute -- Close Combat, Shooting}
+\newcommand{\attackattributeshooting}{Attack Attribute -- Shooting}
+\newcommand{\closecombat}{Close Combat}
+\newcommand{\closecombatandshooting}{Close Combat, Shooting}
+\newcommand{\shooting}{Shooting}
+\newcommand{\specialattack}{Special Attack}
+\newcommand{\specialattacks}{Special Attacks}
+
+% Universal Rules
+
+\newcommand{\ambush}{Ambush}
+\newcommand{\attached}{Attached}
+\newcommand{\bsb}{Battle Standard Bearer}
+\newcommand{\bodyguard}[1]{Bodyguard\ifblank{#1}{}{~(#1)}}
+\newcommand{\channel}[1]{Channel\ifblank{#1}{}{~(#1)}}
+\newcommand{\chariot}{Chariot}
+\newcommand{\commandingpresence}{Commanding Presence}
+\newcommand{\deafeningclamour}{Deafening Clamour}
+\newcommand{\engineer}{Engineer}
+\newcommand{\exclusive}[1]{Exclusive\ifblank{#1}{}{~(\alphaorderlist{#1})}}
+\newcommand{\fear}{Fear}
+\newcommand{\fearless}{Fearless}
+\newcommand{\feignedflight}{Feigned Flight}
+\newcommand{\fly}[2]{Fly\ifblank{#1}{}{~(\distance{#1}\ifblank{#2}{}{, \distance{#2}})}}
+\newcommand{\frenzy}{Frenzy}
+\newcommand{\frontrank}{Front Rank}
+\newcommand{\ghoststep}{Ghost Step}
+\newcommand{\hidden}{Hidden}
+\newcommand{\holdtheline}{Hold the Line}
+\newcommand{\insignificant}{Insignificant}
+\newcommand{\lighttroops}{Light Troops}
+\newcommand{\magicresistance}[1]{Magic Resistance\ifblank{#1}{}{~(#1)}}
+\newcommand{\massivebulk}{Massive Bulk}
+\newcommand{\maximised}[1]{Maximised\ifblank{#1}{}{~(#1)}}
+\newcommand{\meetingofminds}{Meeting of Minds}
+\newcommand{\minimised}[1]{Minimised\ifblank{#1}{}{~(#1)}}
+\newcommand{\notaleader}{Not a Leader}
+\newcommand{\proteanmagic}{Protean Magic}
+\newcommand{\rallyaroundtheflag}{Rally Around the Flag}
+\newcommand{\randommovement}[1]{Random Movement\ifblank{#1}{}{~(\distance{#1})}}
+\newcommand{\scoring}{Scoring}
+\newcommand{\scout}{Scout}
+\newcommand{\skirmisher}{Skirmisher}
+\newcommand{\specialambush}{Special Ambush}
+\newcommand{\standbehind}{Stand Behind}
+\newcommand{\strider}[1]{Stri\-der\ifblank{#1}{}{ (#1)}}
+\newcommand{\stubborn}{Stubborn}
+\newcommand{\supernal}{Su\-per\-nal}
+\newcommand{\swiftstride}{Swift\-stride}
+\newcommand{\swiftreform}{Swift Reform}
+\newcommand{\tall}{Tall}
+\newcommand{\terror}{Terror}
+\newcommand{\toweringpresence}{To\-wer\-ing Presence}
+\newcommand{\unbreakable}{Un\-break\-able}
+\newcommand{\undead}{Undead}
+\newcommand{\unstable}{Un\-stable}
+\newcommand{\vanguard}{Van\-guard}
+\newcommand{\warmachine}{War Machine}
+\newcommand{\warplatform}{War Platform}
+\newcommand{\wizardapprentice}{Wizard Apprentice}
+\newcommand{\wizardapprentices}{Wizard Apprentices}% plural form as we may use it in texts
+\newcommand{\wizardadept}{Wiz\-ard Adept}
+\newcommand{\wizardadepts}{Wizard Adepts}% plural form as we may use it in texts
+\newcommand{\wizardmaster}{Wizard Master}
+\newcommand{\wizardmasters}{Wizard Masters}% plural form as we may use it in texts
+\newcommand{\wizardconclave}{Wizard Conclave}
+
+
+% Characters
+
+\newcommand{\makeway}{Make Way}
+
+% Personal Protections
+
+\newcommand{\aegis}[1]{Aegis\ifblank{#1}{}{\isthereaplusornot{#1}{~(#1)}{~(#1+)}}}
+\newcommand{\cannotbestomped}{Cannot be Stomped}
+\newcommand{\distracting}{Dis\-trac\-ting}
+\newcommand{\flammable}{Flammable}
+\newcommand{\fortitude}[1]{Fortitude\ifblank{#1}{}{\isthereaplusornot{#1}{~(#1)}{~(#1+)}}}
+\newcommand{\hardtarget}{Hard Target}
+\newcommand{\immune}{Immune}
+\newcommand{\parry}{Parry}
+
+% Armour Equipment
+
+\newcommand{\armour}{Armour Equipment}
+
+\newcommand{\suitofarmour}{Suit of Armour}
+\newcommand{\la}{Light Armour}
+\newcommand{\ha}{Heavy Armour}
+\newcommand{\pa}{Plate Armour}
+
+\newcommand{\shield}{Shield}
+
+% Close Combat Weapons
+
+\newcommand{\closecombatweapon}{Close Combat Weapon}
+\newcommand{\closecombatweapons}{Close Combat Weapons}
+
+\newcommand{\gw}{Great Weapon}
+\newcommand{\hw}{Hand Weapon}
+\newcommand{\halberd}{Halberd}
+\newcommand{\lance}{Lance}
+\newcommand{\lightlance}{Light Lance}
+\newcommand{\pw}{Paired Weapons}
+\newcommand{\spear}{Spear}
+
+% Shooting Weapons
+
+\newcommand{\shootingweapons}{Shooting Weapons}
+\newcommand{\shootingweapon}{Shooting Weapon}
+
+\newcommand{\bow}{Bow}
+\newcommand{\longbow}{Longbow}
+\newcommand{\crossbow}{Crossbow}
+\newcommand{\handgun}{Handgun}
+\newcommand{\pistol}{Pistol}
+\newcommand{\throwingweapons}{Throwing Weapons}
+
+\newcommand{\shots}[1]{Shots #1}
+
+% Artillery Weapons
+
+\newcommand{\artilleryweapon}{Artillery Weapon}
+\newcommand{\artilleryweapons}{Artillery Weapons}
+
+\newcommand{\cannon}{Cannon}
+\newcommand{\catapult}[1]{Catapult\ifblank{#1}{}{~(#1)}}
+\newcommand{\flamethrower}{Flamethrower}
+\newcommand{\volleygun}[1]{Volley Gun\ifblank{#1}{}{~(#1)}}
+
+% Attack Attributes
+
+\newcommand{\accurate}{Accurate}
+\newcommand{\areaattack}[1]{Area Attack\ifblank{#1}{}{~(#1)}}
+\newcommand{\battlefocus}{Battle Focus}
+\newcommand{\crushattack}{Crush Attack}
+\newcommand{\devastatingcharge}[1]{Devastating Charge\ifblank{#1}{}{~(#1)}}
+\newcommand{\divineattacks}{Divine Attacks}
+\newcommand{\extrasupport}{Extra Support}
+\newcommand{\fightinextrarank}{Fight in Extra Rank}
+\newcommand{\flamingattacks}{Flaming Attacks}
+\newcommand{\harnessed}{Harnessed}
+\newcommand{\hatred}{Hatred}
+\newcommand{\inanimate}{Inanimate}
+\newcommand{\lethalstrike}{Lethal Strike}
+\newcommand{\lightningreflexes}{Lightning Reflexes}
+\newcommand{\magicalattacks}{Magical Attacks}
+\newcommand{\marchandshoot}{March and Shoot}
+\newcommand{\moveorfire}{Move or Fire}
+\newcommand{\multiplewounds}[2]{Multiple Wounds\ifblank{#1}{}{~(#1\ifblank{#2}{)}{, #2)}}}
+\newcommand{\clippedwings}{Clipped Wings}
+\newcommand{\penetrating}{Penetrating}
+\newcommand{\poisonattacks}{Poison Attacks}
+\newcommand{\quicktofire}{Quick to Fire}
+\newcommand{\rage}{Rage}
+\newcommand{\reload}{Reload!}
+\newcommand{\shootinextrarank}{Shoot in Extra Rank}
+\newcommand{\steadyaim}{Steady Aim}
+\newcommand{\toxicattacks}{Toxic Attacks}
+\newcommand{\twohanded}{Two-Handed}
+\newcommand{\unwieldy}{Unwieldy}
+\newcommand{\volleyfire}{Volley Fire}
+\newcommand{\weaponmaster}{Weapon Master}
+
+% Special Attacks
+
+\newcommand{\breathattack}[1]{Breath Attack\ifblank{#1}{}{~(#1)}}
+\newcommand{\grindattacks}[1]{Grind Attacks\ifblank{#1}{}{~(#1)}}
+\newcommand{\impacthits}[1]{Impact Hits\ifblank{#1}{}{~(#1)}}
+\newcommand{\stompattacks}[1]{Stomp Attacks\ifblank{#1}{}{~(#1)}}
+\newcommand{\sweepingattack}{Sweeping Attack}
+
+% Miscellanous
+
+\newcommand{\maxi}{max.}% for example Aegis (+1, max. 4+)

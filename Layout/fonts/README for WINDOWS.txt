@@ -1,0 +1,1 @@
+When installing a font on Windows, for LaTeX to be able to find it, you need to install the font "for all users". You have the option to do it when you right click on a font install file.

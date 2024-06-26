@@ -1,0 +1,272 @@
+
+\part{Pre-Game Sequence}
+\idx[main=y]{Pre-Game Sequence}\label{the_pre_game_sequence}
+
+When setting up a game of \nameofthegame{}, players need to go through the following steps, referred to as the Pre-Game Sequence:
+
+\raggedcolumns
+\begin{multicols}{2}
+
+\idx{Declaring Special Deployment}\startseqtablemc
+1 & Decide on the size of the game \tabularnewline
+2 & Share your Army List with your opponent \tabularnewline
+3 & Build the Battlefield \tabularnewline
+4 & Determine the Deployment Type \tabularnewline
+5 & Determine the Secondary Objective \tabularnewline
+6 & Determine the Deployment Zones \tabularnewline
+7 & Select Spells \tabularnewline
+8 & Declare Special Deployment \tabularnewline
+9 & Deployment Phase \tabularnewline
+\closeseqtablemc
+
+\section{Size of the Game}
+\label{the_size_of_the_game}
+
+In \nameofthegame{}, two armies opposing each other on the Battlefield must have roughly the same Point Cost. This is to ensure that the battle will be decided through clever strategies and tactics rather than unfair differences in army size.
+
+The first step to setting up a game is to agree on the Army Points (see \totalref{army_points}), which will determine the size of the game. The size of the game is typically between 1500 and 3000 points for small engagements, between 3000 and 8000 points for serious battles, and beyond 8000 points for mighty clashes between epic armies. For an optimal gaming experience, we recommend playing at 4500 points.
+
+\section{Sharing Army Lists}
+\label{sharing_army_lists}
+
+After deciding on the size of the game, the next step is for both players to swap Army Lists and share all relevant information about the upcoming game.
+
+Alternatively, players may agree to keep certain aspects about their armies secret, which they will progressively reveal during the course of the game. For more information, please see \totalref{optional_rules_for_hidden_lists}.
+
+\columnbreak
+
+\section{Building the Battlefield}
+\idx[main=y]{Building the Battlefield}\label{building_the_battlefield}
+
+\nameofthegame{} is intended to be played on a board that is \distance{72} wide and \distance{48} deep. For smaller battles involving Warbands, we recommend playing on a board that is \distance{36} wide and \distance{48} deep (half the standard board). In this case, all references to the \enquote{short Board Edge} below refer to the \distance{48} edge, and the \enquote{long Board Edge} refers to the \distance{36} edge. For bigger games involving Grand Armies we recommend that the players increase the size of the board as they see fit in order to accommodate the larger armies.
+
+While some battles may take place on a completely open board, a Battlefield typically has Terrain Features placed upon it (see \totalref{terrain}). These pieces of Terrain could represent exactly what they are, but they could also be representations of far greater things for the purpose of the game. So a copse of trees could represent a forest, a stream could actually be a wide river, a single house could denote a hamlet, and a tower could represent a keep. The players can freely agree on the size, type, and number of Terrain Features to be placed, as well as their positions. If an agreement cannot be reached, the game provides the following default rules for setting up a randomly generated Battlefield.
+
+{\hbadness=10000
+\startseqtablemc
+ 1 &  Divide the board into 24\timess{}\distance{24} sections (18\timess{}\distance{24} if the board is 36\timess{}\distance{48}).\\
+
+2 & Place the following Terrain Features in the centre of three different randomly selected sections: \begin{itemize}
+\item One \impassableterrain{}
+\item One \hill{}
+\item One \forest{}
+\end{itemize}\tabularnewline[-12pt]
+
+3 & Move each Terrain Feature \distance{2D6} in a random direction.\\
+
+4 & Add 2D3 additional Terrain Features in the centre of different randomly selected sections (1D3 if the board is 36\timess{}\distance{48}, 3D3 or more for boards larger than 72\timess{}\distance{48}). Roll 2D6 and consult table \ref{table/terrain_randomisation} to determine the type of each additional Terrain Feature.\\
+
+5 & Move each additional Terrain Feature \distance{2D6} in a random direction.\\
+\closeseqtablemc
+}
+
+\end{multicols}
+
+\begin{table}[!ht]
+	\vspace{-3pt}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\tabcolsep}{3pt}
+	\begin{tabular}{M{2.1cm}M{2.1cm}M{2.1cm}M{2.1cm}M{2.1cm}M{2.1cm}M{2.1cm}}
+		\hline
+		2--4 & 5 & 6 & 7 & 8 & 9--10 & 11--12 \tabularnewline
+		\hill{} & \waterterrain{} & \field{} & \forest{} & \ruins{} & \impassableterrain{} & \wall{} \tabularnewline
+		\hline
+	\end{tabular}
+	\caption{Randomisation of Terrain Features.}
+	\label{table/terrain_randomisation}
+\end{table}
+
+\RBbmc
+
+Terrain Features cannot be moved to be closer than \distance{6} from each other. You may move them as little as possible from their rolled position in order to meet this criterion. If it is not possible to place the Terrain Feature more than \distance{6} away from any other Terrain, then discard the problematic piece.
+
+Recommended Terrain Feature sizes are between 6\timess{}\distance{8} and 6\timess{}\distance{10}, except for Walls, which are 1\timess{}\distance{8}, and \impassableterrain{}, which is between 6\timess{}\distance{6} and 6\timess{}\distance{8}.
+
+\section{Deployment Types}
+\idx[main=y]{Deployment Types}\label{deployment_type}
+
+If no outside source tells you what Deployment Type to use (e.g. tournament organiser, campaign rules, etc.), players may agree on a Deployment Type. Otherwise randomise by rolling a D6 and consulting the list below.
+
+Certain Deployment Types refer to the Centre Line. This is the line drawn through the centre of the board and parallel to the long Board Edges, dividing the board into halves.
+
+\hypertarget{frontline_clash}{\paragraph{1\spacebeforecolon{}: \frontlineclash}}
+\idx[main=y]{\frontlineclash}
+\label{figure/deployment}
+
+Deployment Zones are areas more than \distance{12} away from the Centre Line.
+\begin{center}
+	\def\svgwidth{0.36\textwidth}
+	\subimport{../pics/}{deployment_1_frontline.pdf_tex}
+\end{center}
+\vspace{-3pt}
+
+\hypertarget{dawn_assault}{\paragraph{2\spacebeforecolon{}: \dawnassault}}
+\idx[main=y]{\dawnassault}
+
+The player choosing the Deployment Zone also chooses a short Board Edge and the other player gets the opposite short Board Edge. Deployment Zones are areas more than \distance{12} away from the Centre Line and more than 1/4 of the board's length from the opponent's short Board Edge (\distance{18} on a \distance{72} board).
+
+When declaring Special Deployment, players may choose to keep up to two of their units as reinforcement. These units follow the rules for \hyperref[ambush]{Ambush}ing units, except that they must be placed touching the owner's short Board Edge when they arrive.
+
+\begin{center}
+	\def\svgwidth{0.42\textwidth}
+	\subimport{../pics/}{deployment_2_dawnassault.pdf_tex}
+\end{center}
+\vspace{-3pt}
+
+\hypertarget{counterthrust}{\paragraph{3\spacebeforecolon{}: \counterthrust}}
+\idx[main=y]{\counterthrust}
+
+Deployment Zones are areas more than \distance{8} away from the Centre Line. Units must be deployed more than \distance{20} away from enemy units. During their first 3 deployment turns, each player must deploy a single unit if possible, and cannot deploy any Characters unless they have to.
+
+Units using Special Deployment, such as \hyperref[scout]{\scout}, ignore these restrictions and follow their Special Deployment rules.
+
+\begin{center}
+	\def\svgwidth{0.36\textwidth}
+	\subimport{../pics/}{deployment_3_counterthrust.pdf_tex}
+\end{center}
+\vspace{-3pt}
+
+\hypertarget{encircle}{\paragraph{4\spacebeforecolon{}: \encircle}}
+\idx[main=y]{\encircle}
+
+The player choosing the Deployment Zone decides if they want to be the attacker or the defender. The attacker must deploy more than \distance{9} from the Centre Line if entirely within a quarter of the board's length from either short Board Edge (\distance{18} on a \distance{72} board), and more than \distance{15} from the Centre Line elsewhere. The defender does the opposite: more than \distance{15} away from the Centre Line if within a quarter of the board's length from the short Board Edge, and more than \distance{9} away from the Centre Line elsewhere.
+
+\begin{center}
+	\def\svgwidth{0.36\textwidth}
+	\def\deploymentfigAttacker{Attacker}
+	\def\deploymentfigDefender{Defender}
+	\subimport{../pics/}{deployment_4_encircle.pdf_tex}
+\end{center}
+\vspace{-3pt}
+
+\hypertarget{refused_flank}{\paragraph{5\spacebeforecolon{}: \refusedflank}}
+\idx[main=y]{\refusedflank}
+
+The board is divided into halves by a diagonal line across the board. Whoever gets to choose the Deployment Zone decides which diagonal to use. Deployment Zones are areas more than \distance{9} away from this line.
+
+\begin{center}
+	\def\svgwidth{0.36\textwidth}
+	\subimport{../pics/}{deployment_5_refusedflank.pdf_tex}
+\end{center}
+\vspace{-3pt}
+
+\hypertarget{marching_columns}{\paragraph{6\spacebeforecolon{}: \marchingcolumns}}
+\idx[main=y]{\marchingcolumns}
+
+Deployment Zones are areas more than \distance{12} away from the Centre Line.
+
+Each player must choose a short Board Edge when deploying their first unit. Each unit this player deploys afterwards must be deployed with its Centre farther away from the chosen short Board Edge than the Centre of the last unit this player deployed (measure from the closest point on the short Board Edge). \hyperref[characters]{Characters}, \hyperref[war_machine]{War Machines}, \hyperref[war_platform]{War Platforms}, and \hyperref[scout]{Scouting} units ignore these rules and are ignored by other units for the purpose of these rules.
+
+During their first 3 deployment turns, each player must deploy a single unit if possible, and cannot deploy any Characters, \hyperref[war_machine]{War Machines}, or \hyperref[war_platform]{War Platforms} unless they have to.
+
+Instead of deploying a unit, a player may choose to make all their undeployed units Delayed that are not using Special Deployment. Delayed units follow the rules for Ambushing units with the following exceptions:
+\begin{itemize}
+\item In each Player Turn, after rolling for all \hyperref[ambush]{Ambushing} units, the Reactive Player chooses the order in which all Delayed units that passed the 3+ roll enter the Battlefield.
+\item In the chosen order, each unit must be placed one after the other with the centre of its rear rank as close as possible to the centre of the long Board Edge in their owner's Deployment Zone, before any non-Delayed Ambushers are placed on the Battlefield.
+\item After all arriving units have been placed, they can be moved as described in the rules for Ambush (see page \pageref{ambush}).
+\end{itemize}
+
+\begin{center}
+	\def\MarchColfontsize{\fontsize{7}{8.4}\selectfont}
+	\def\svgwidth{0.36\textwidth}
+	\subimport{../pics/}{deployment_6_marchingcolumns.pdf_tex}
+\end{center}
+
+\columnbreak
+
+\section{Secondary Objectives}
+\idx[main=y]{Secondary Objectives}\label{secondary_objectives}
+
+Once the Deployment Type is established, determine the Secondary Objective. If no outside source tells you which one to use (e.g. tournament organiser, campaign rule, etc.), players may agree on a Secondary Objective. Otherwise, randomise by rolling a D6 and consulting the list below. See \totalref{victory_conditions} for more details on how capturing an objective affects who is the winner.
+
+\paragraph{1: Hold the Ground}
+\idx[main=y]{Hold the Ground}
+
+\flufffont{Secure and hold the centre of the Battlefield.}\newline
+Mark the centre of the board.
+
+At the end of each Game Turn after the first, the player with the most \hyperref[scoring]{Scoring Units} within \distance{6} of the centre of the board gains a counter. At the end of the game, the player with the most such counters wins this Secondary Objective.
+
+\paragraph{2: Breakthrough}
+\idx[main=y]{Breakthrough}
+
+\flufffont{Invade the enemy territory.}\newline
+The player with the most \hyperref[scoring]{Scoring Units} inside their opponent's Deployment Zone at the end of the game, up to a maximum of 3, wins this Secondary Objective.
+
+\paragraph{3: Spoils of War}
+\idx[main=y]{Spoils of War}
+
+\flufffont{Gather precious loot.}\newline
+Place 3 markers along the line dividing the board into halves (the dashed line in the figures describing Deployment Types). One marker is placed with its centre on a point on this line that is as close as possible to the centre of the board while still being more than \distance{1} away from Impassable Terrain. The other two markers are placed with their centres on points on this line that are on either side of the central marker, as close to the centre of the board as possible but at least a third of the length of the long Board Edge (\distance{24} on a standard board) away from it, and more than \distance{1} away from Impassable Terrain.
+
+At the start of each of your Player Turns, each of your Scoring units that is not carrying a marker may pick up a single marker whose centre they are in contact with. Remove the marker from the Battlefield: the unit is now carrying the marker. Units carrying a marker with fewer than 3 \hyperref[full_ranks]{Full Ranks} cannot perform March Moves. If a unit carrying a marker is destroyed or loses \hyperref[scoring]{Scoring}, the opponent must immediately place the marker carried by this unit with its centre on a point within \distance{3} of it. Ignore \hyperref[post_combat_reform]{Post-Combat Reform} for this purpose. This point cannot be within \distance{1} of Impassable Terrain, but it can be inside a unit.
+
+At the end of the game, the player with the most units carrying markers wins this Secondary Objective.
+
+\columnbreak
+
+\paragraph{4: King of the Hill}
+\idx[main=y]{King of the Hill}
+
+\flufffont{Desecrate your opponent's holy ground while protecting yours.}\newline
+After Spell Selection (at the end of step 7 of the Pre-Game Sequence), both players choose a Terrain Feature that isn't Impassable Terrain and that is not fully inside their Deployment Zone, starting with the player who chose their Deployment Zone (note that both players may choose the same Terrain Feature).
+
+A player captures their opponent's chosen Terrain Feature if any of the player's \hyperref[scoring]{Scoring Units} are inside that Terrain Feature at the end of the game. If a player captures their opponent's chosen Terrain Feature while not allowing their own to be captured, they win this Secondary Objective.
+
+\paragraph{5: Capture the Flags}
+\idx[main=y]{Capture the Flags}
+
+\flufffont{Valuable targets must be annihilated.}\newline
+After Spell Selection (at the end of step 7 of the Pre-Game Sequence), mark all \hyperref[scoring]{Scoring Units} on both players' Army Lists. If either player has fewer than 3 marked units, their opponent must mark enough units from this player's Army List so that there are exactly 3 marked units in the army, starting with the player who chose their Deployment Zone.
+
+The player who has the lowest number of their marked units removed as casualties at the end of the game wins this Secondary Objective.
+
+\paragraph{6: Secure Target}
+\idx[main=y]{Secure Target}
+
+\flufffont{Critical resources must not fall into enemy hands.}\newline
+Immediately after determining Deployment Zones, both players place one marker on the Battlefield, starting with the player who chose their Deployment Zone. Each player must place the marker with its centre on a point that is more than \distance{12} away from their Deployment Zone and at least a third of the long Board Edge length (\distance{24} on a standard board) from the point marked by the other marker.
+
+At the end of the game, the player controlling the most markers wins this Secondary Objective. A marker is controlled by the player with the most Scoring Units within \distance{6} of the centre of the marker. If a unit is within \distance{6} of the centres of both markers, it only counts as within \distance{6} of the centre of the marker which is closest to its Centre (randomise if both markers' centres are equally close).
+
+\columnbreak
+
+\section{Deployment Zones}
+\idx[main=y]{Deployment Zones}\label{deployment_zones}
+
+After the Secondary Objective is determined, both players roll a D6. The player who rolls higher chooses their Deployment Zone and follows the Deployment Type specific instructions if applicable. In case of a tie, roll again.
+
+\section{Spell Selection}
+\idx[main=y]{Spell Selection}\label{spell_selection}
+
+The player who chose their Deployment Zone must now select spells for their Wizards. Afterwards, their opponent selects spells for their Wizards. All Magic Paths can be found in \nameofthegame{} -- Arcane Compendium. \hereditaryspells{} can be found in the corresponding Army Books.
+
+\subsection{\wizardapprentice}
+
+\begin{itemize}
+\item Knows \textbf{1 spell}
+\item Can select between the \learnedspell{} \textbf{1} of its chosen Path and the \textbf{Hereditary} Spell of its army
+\end{itemize}
+
+\subsection{\wizardadept}
+
+\begin{itemize}
+\item Knows \textbf{2} different \textbf{spells}
+\item Can select from the \learnedspells{} \textbf{1, 2, 3, and 4} of its chosen Path and the \textbf{Hereditary} Spell of its army
+\end{itemize}
+
+\subsection{\wizardmaster}
+
+\begin{itemize}
+\item Knows \textbf{4} different \textbf{spells}
+\item Can select from the \learnedspells{} \textbf{1, 2, 3, 4, 5, and 6} of its chosen Path and the \textbf{Hereditary} Spell of its army
+\end{itemize}
+
+\section[Declaring Special Deployment]{Declaring Special\\ Deployment}
+\idx[main=y]{Special Deployment}\idx[main=y]{Declaring Special Deployment}\label{declare_special_deployment}
+
+
+Starting with the player who chose their Deployment Zone, each player must nominate which units with Special Deployment options (such as \hyperref[scout]{\scout{}} or \hyperref[ambush]{\ambush{}}) will use their Special Deployment, or if they will deploy using the normal rules.
+
+\RBemc

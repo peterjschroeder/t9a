@@ -1,0 +1,130 @@
+\def\ashuruktempodef{%
+	\prophetofashurukdef\vspace*{2pt}\newline%
+	\hspace*{0.8cm}\begin{minipage}{\textwidth-1.6cm}%
+		\startsubframetwocols%
+		\def\tempmounts{%
+			\seatofauthority{}=50,
+		}%
+		{\renewcommand{\labels@options}{\labels@mountsoptions}%
+			\options{\tempmounts}%
+		}\columnbreak%
+		\closesubframetwocols%
+	\end{minipage}%
+	\vspace*{\prophetspacing}%
+}
+
+\def\lugartempodef{%
+	\prophetoflugardef\vspace*{2pt}\newline%
+	\hspace*{0.8cm}\begin{minipage}{\textwidth-1.6cm}%
+	\startsubframetwocols%
+		\def\tempmounts{%
+				\kadimchariot{}=65,
+		}%
+		\def\tempaddoptions{%
+			\onechoiceonlyACO{%
+				\pw{}=5,
+				\gw{}=5,
+			},%
+		}%
+		{\renewcommand{\labels@options}{\labels@mountsoptions}%
+			\options{\tempmounts}%
+		}\columnbreak%
+		\addoptions{\tempaddoptions}%
+	\closesubframetwocols%
+	\end{minipage}%
+	\vspace*{\prophetspacing}%
+}
+
+\def\shamuttempodef{%
+	\prophetofshamutdef\vspace*{2pt}\newline%
+	\hspace*{0.8cm}\begin{minipage}{\textwidth-1.6cm}%
+	\startsubframetwocols%
+		\def\tempaddoptionsone{%
+			\mustchooseonechoiceonly{\AlCoOrder{%
+				\taurukhritual{}=\free{},
+				\bullofshamut{} (\mount{}) (\instrumentsofdestructioninitials{})=140,
+				\greatbullofshamut{} (\mount{}) (\instrumentsofdestructioninitials{})\newline\optionnewlineindent{} \only{\wizardmaster{}}=430,
+			}},%
+		}%
+		\def\tempaddoptionstwo{%
+			\onechoiceonlyACO{%
+				\pw{}=5,
+				\gw{}=5,
+				\infernalweapon{}=5,
+			},%
+		}%
+		\addoptions{\tempaddoptionsone}%
+		\addoptions{\tempaddoptionstwo}%
+	\closesubframetwocols%
+	\end{minipage}%
+	\vspace*{\prophetspacing}%
+}
+
+\def\nezibkeshtempodef{%
+	\prophetofnezibkeshdef\vspace*{2pt}\newline%
+	\hspace*{0.8cm}\begin{minipage}{\textwidth-1.6cm}%
+	\startsubframetwocols%
+		\def\tempmounts{%
+			\infernalbastion{}=260,
+		}%
+		\def\tempaddoptions{%
+			\onechoiceonlyACO{%
+				\flintlockaxe{} (2+)=5,
+				\blunderbuss{} (5+)=5,
+			},%
+		}%
+		\mounts{\tempmounts}\columnbreak%
+		\addoptions{\tempaddoptions}%
+	\closesubframetwocols%
+	\end{minipage}%
+	\vspace*{\prophetspacing}%
+}
+
+\unitentry{%
+	name=\prophet{},
+	logo=character,
+	optionallogo=character_IoD,
+	categorynote=\charactermountnote{\instrumentsofdestructioninitials}{\instrumentsofdestruction},
+	cost=165,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\infernalbrand{},\wizardapprentice{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	offensename=\prophet{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\prophetofashuruk{}}\refsymbol{}=45,
+			\textbf{\prophetoflugar{}}\refsymbol{}=25,
+			\textbf{\prophetofshamut{}}\refsymbol{}=\free{},
+			\textbf{\prophetofnezibkesh{}}\refsymbol{}=30,
+		}},
+		\suboptionindent\refsymbolbis{}\eachoptionis{} \zerotoXmodelsperarmy{2}.=,
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,
+		\shield{}=15,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\prophetofashuruk{}}{\ruletype{\universalrule}\ashuruktempodef}
+		\modelruledef{\prophetoflugar{}}{\ruletype{\universalrule}\lugartempodef}
+		\modelruledef{\prophetofshamut{}}{\ruletype{\universalrule}\shamuttempodef}
+		\modelruledef{\prophetofnezibkesh{}}{\ruletype{\universalrule}\nezibkeshtempodef}
+	},
+	magic={\wizardadept{}=95,\wizardmaster{}=265},
+	paths={\alchemy{}=alchemy,\pyromancy{}=pyromancy,\occultism{}=occultism},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

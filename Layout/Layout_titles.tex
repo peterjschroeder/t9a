@@ -1,0 +1,139 @@
+
+\newlength{\mycurrentparskip}
+\setlength{\mycurrentparskip}{\parskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% RULEBOOK %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisistherulebook
+
+% Chapters
+\titleformat{\part}[block]{\Hugefontsize\bfseries\filcenter}{\thepart}{1em}{}
+\renewcommand{\thepart}{\textcolor{black!60}{\arabic{part}}}
+\titlespacing*{\part}{0pt}{-20pt}{15pt}
+%Debugging part name not being updated correctly for ref
+\makeatletter
+\let\oldpart\part
+\def\part#1{\def\@currentlabelname{#1}\oldpart{#1}}
+
+% Sections
+\renewcommand{\thesection}{\thepart\textcolor{black!60}{.\Alph{section}}}
+\makeatletter\@addtoreset{section}{part}
+
+% Subsections
+\renewcommand{\thesubsection}{%
+\ifnum\value{section}=0%
+	\thepart\textcolor{black!60}{.\alph{subsection}}%
+\else%
+	\thesection\textcolor{black!60}{.\alph{subsection}}%
+\fi}
+
+% Subsubsections
+\renewcommand{\thesubsubsection}{%
+\ifnum\value{section}=0%
+	\ifnum\value{subsection}=0%
+		\thepart\textcolor{black!60}{.\arabic{subsubsection}}%
+	\else%
+		\thepart\textcolor{black!60}{.\alph{subsection}.\arabic{subsubsection}}%
+	\fi%
+\else%
+	\ifnum\value{subsection}=0%
+		\thesection\textcolor{black!60}{.\arabic{subsubsection}}%
+	\else%
+		\thesection\textcolor{black!60}{.\alph{subsection}.\arabic{subsubsection}}%
+	\fi%
+\fi}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%\titlespacing*{\subsubsection}{0pt}{20.75pt plus 4.3pt minus .86pt}{12.15pt plus .86pt}
+
+% Paragraphs
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\paragraph}{0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% PATHS %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisthepathsbook
+
+%\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%\titlespacing*{\subsubsection}{0pt}{2.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+%
+%\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}{0pt}{2.5ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+\newcommand{\basictitle}[2]{%
+\toctarget{#1}{\section*{#2}}%
+}
+
+\newcommand{\basicsubtitle}[1]{%
+\subsection*{#1}%
+}
+
+\newcommand{\basicsubsubtitle}[1]{%
+\subsubsection*{#1}%
+}
+
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% ARMY BOOK %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\thisisanarmybook
+
+%\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}} % Else paragraph and title spaces behave differently when inside or outside a minipage
+
+\titleformat{\section}{\Hugefontsize\bfseries\filcenter}{}{0pt}{}
+\titleformat{\subsection}{\Largerfontsize\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\largerfontsize\bfseries}{}{0pt}{}
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+
+%\titlespacing*{\paragraph}{0pt}{\parskip}{-0.5\parskip}
+%\titlespacing*{\subsubsection}{0pt}{\parskip}{-0.5\parskip}
+%\titlespacing*{\subsection}{0pt}{1.5\parskip}{0pt plus .2ex}
+
+\newcommand{\maintitle}[2]{\hypertarget{#1}{\section{#2}}\label{#1}}
+
+\newcommand{\additionalspacebeforemaintitle}{\vspace*{15pt}}
+
+\newcommand{\subtitle}[1]{\subsection{#1}}
+\newcommand{\centeredsubtitle}[1]{\subsection*{\hfill#1\hfill}}
+
+\newcommand{\titleruletype}[1]{\textnormal{\largefontsize{} -- #1}}
+
+\newcommand{\subsubtitle}[1]{\subsubsection{#1}}
+\newcommand{\centeredsubsubtitle}[1]{\subsubsection*{\hfill#1\hfill}}
+
+\ifdefined\thisisascrollcompendium
+\newcommand{\armylisttitle}[3]{}
+\newcommand{\armylistsubtitle}[1]{}
+\newcommand{\armylistsubtitlewithlink}[2]{}
+\else
+\newcommand{\armylisttitle}[3]{%
+	\hypertarget{#1}{%
+	\section*{#2\ifblank{#3}{}{\textnormal{ (#3)}}}% \expandafter\uppercase\expandafter{#2}
+	}\label{#1}%
+	\stepcounter{categorynumber}%
+	\DTLnewrow{categories}%
+	\DTLnewdbentry{categories}{name}{#2}%
+	\vspace{5pt}%
+}
+
+\newcommand{\armylistsubtitle}[1]{%
+	\subsection*{#1}%
+}
+
+\newcommand{\armylistsubtitlewithlink}[2]{%
+	\hypertarget{#1}{%
+	\subsection*{#2}%
+	}\label{#1}%
+}
+
+\fi
+\fi

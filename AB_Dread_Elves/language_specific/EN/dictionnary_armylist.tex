@@ -1,0 +1,280 @@
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\dreadprince}{Dread Prince}
+\newcommand{\beastmaster}{Beastmaster}
+\newcommand{\silexianofficer}{Silexian Officer}
+\newcommand{\templeexarch}{Temple Exarch}
+\newcommand{\warlockoutcast}{Warlock Outcast}
+\newcommand{\silentassassin}{Silent Assassin}
+
+% MOUNTS
+
+\newcommand{\elvenhorse}{Elven Horse}
+\newcommand{\daebraptor}{Daeb Raptor}
+\newcommand{\blackmanepegasus}{Blackmane Pegasus}
+\newcommand{\raptorchariot}{Raptor Chariot}
+\newcommand{\crew}{Crew}
+\newcommand{\chassis}{Chassis}
+\newcommand{\manticore}{Manticore}
+\newcommand{\imperiousdragon}{Imperious Dragon}
+
+% CORE
+
+\newcommand{\silexianspears}{Silexian Spears}
+\newcommand{\silexianspear}{Silexian Spear}
+
+\newcommand{\silexianauxiliaries}{Silexian Auxiliaries}
+\newcommand{\silexianauxiliary}{Silexian Auxiliary}
+
+\newcommand{\corsairs}{Corsairs}
+\newcommand{\corsair}{Corsair}
+
+\newcommand{\beastbreakers}{Beast Breakers}
+\newcommand{\beastbreaker}{Beast Breaker}
+
+\newcommand{\templemilitants}{Temple Militants}
+\newcommand{\templemilitant}{Temple Militant}
+
+% SPECIAL
+
+\newcommand{\obsidianguard}{Obsidian Guard}
+\newcommand{\obsidianguardSINGULAR}{Obsidian Guard}
+
+\newcommand{\judicators}{Judicators}
+\newcommand{\judicator}{Judicator}
+
+\newcommand{\dreadknights}{Dread Knights}
+\newcommand{\dreadknight}{Dread Knight}
+\newcommand{\knight}{Knight}
+
+\newcommand{\harpies}{Harpies}
+\newcommand{\harpy}{Harpy}
+
+\newcommand{\gorgons}{Gorgons}
+\newcommand{\gorgon}{Gorgon}
+
+\newcommand{\thunderpack}{Thunder Pack}
+\newcommand{\thunderbeast}{Thunder Beast}
+\newcommand{\lashmaster}{Lashmaster}
+
+\newcommand{\warlockacolytes}{Warlock Acolytes}
+\newcommand{\warlockacolyte}{Warlock Acolyte}
+\newcommand{\acolyte}{Acolyte}
+
+\newcommand{\divinealtar}{Divine Altar}
+\newcommand{\attendant}{Attendant}
+
+\newcommand{\shadowriders}{Shadow Riders}
+\newcommand{\shadowrider}{Shadow Rider}
+
+% RAIDERS
+
+\newcommand{\blackcloaks}{Black Cloaks}
+\newcommand{\blackcloak}{Black Cloak}
+
+
+% DESTROYERS
+
+\newcommand{\huntingchariot}{Hunting Chariot}
+
+\newcommand{\repeaterbattery}{Repeater Battery}
+
+
+% THE MENAGERIE
+
+\newcommand{\kraken}{Kraken}
+
+\newcommand{\hydra}{Hydra}
+
+\newcommand{\mistleviathan}{Mist Leviathan}
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Dread Prince
+
+\newcommand{\deadlyriposte}{}%
+\newcommand{\deadlyripostedef}{%
+	%
+}%
+
+%Beastmaster
+
+\newcommand{\willbreakerscraft}{Willbreaker's Craft}
+\newcommand{\willbreakerscraftdef}{%
+	While within \distance{12} of one or more non-Fleeing models with \willbreakerscraft{}:
+	\begin{itemize}
+		\item Friendly non-Construct models with \toweringpresence{} gain \textbf{\minimised{} (Discipline Tests)}.
+		\item Friendly models gain \textbf{\maximised{} (Stomp Attacks)}.
+		\item Enemy models gain \textbf{\minimised{} (Stomp Attacks)}.
+	\end{itemize}
+}%
+
+%Silexian Officer
+
+\newcommand{\tactician}{Tactician}
+\newcommand{\tacticiandef}{%
+	Units count as being within \distance{8} of a non-Fleeing model with Academy Trained from another friendly unit if all of the following conditions are met:
+	\begin{itemize}
+		\item They consist entirely of Infantry models.
+		\item More than half of their models have Academy Trained.
+		\item They are joined by a model with Tactitian or they are within range of Commanding Presence of a non-Fleeing friendly model with Tactician.
+	\end{itemize}
+}
+
+
+%Temple Exarch
+
+\newcommand{\againstmeleeattacks}{against Melee Attacks}
+\newcommand{\warsmith}{War Smith}
+\newcommand{\warsmithdef}{%
+	The model gains \textbf{\wizardadept{}}. In addition, the model part and \rnf{} model parts without Harnessed in its unit gain \textbf{\battlefocus{}} and \textbf{\frenzy{}}. \templemilitants{} additionally gain \textbf{\hatred{}} while a \warsmith{} is joined to their unit.%
+}
+
+\newcommand{\oracleofdoom}{Oracle of Doom}
+\newcommand{\oracleofdoomdef}{%
+	The model gains \textbf{\wizardadept{}}. In addition, the model part and \rnf{} model parts without Harnessed in its unit gain \textbf{\battlefocus{}} and \textbf{\frenzy{}}. \templemilitants{} additionally gain \textbf{\hatred{}} while an \oracleofdoom is joined to their unit.%
+}
+
+% Warlock Outcast
+
+\newcommand{\irresistiblewill}{Irresistible Will}
+\newcommand{\irresistiblewilldef}{%
+	Dispelling rolls against spells cast by the model suffer a -2 Dispelling Modifier if the Casting Attempt was performed with 4 or more Magic Dice.
+}
+
+\newcommand{\mistrusted}{Mistrusted}
+\newcommand{\mistrusteddef}{
+	If the model is the General, Discipline Tests using its Commanding Presence suffer \minuss{}1 Discipline.
+}
+
+%% MOUNTS
+
+% Manticore
+
+\newcommand{\extraordinaryspecimen}{Extraordinary Specimen}%
+\newcommand{\extraordinaryspecimendef}{%
+	The \manticore{} gains \textbf{\stompattacks{\Dthree{}}} and \textbf{\toweringpresence{}}, and its base size is changed to 50\timess{}100 \si{\milli\meter}.%
+}
+\newcommand{\solitary}{Solitary}
+\newcommand{\solitarydef}{%
+	%
+}
+% Imperious Dragon
+
+\newcommand{\meetingofmindsdef}{%
+	The model gains \textbf{\scentofblood{}} and treats all friendly \beast{} models as \insignificant{}.%
+}
+
+%% CORE
+
+% Corsairs
+
+\newcommand{\viciousslavers}{Vicious Slavers}%
+\newcommand{\viciousslaversdef}{%
+	 Enemy models that are not immune to the effects of \fear{} in units in base contact with one or more models with \viciousslavers{} suffer -1 Discipline.
+}
+
+% Beast Breakers
+
+\newcommand{\lashsting}{Lash's Sting}%
+\newcommand{\lashstingdef}{%
+	Units containing one or more models with \lashsting{} gain \textbf{\cannotbestomped{}}. At the start of each friendly Player Turn, for each unit that contains one or more models with \lashsting{}, choose another friendly unit within \distance{8} of that unit. Mounted models in a unit chosen once or more gain +\distance{1} Advance Rate until the end of the Movement Phase.%
+}
+
+%% SPECIAL
+
+%Raptor Chariot
+\newcommand{\thecrewmustchoose}{The Crew \textbf{must} choose}
+
+% Obsidian Guard
+
+\newcommand{\willofthesenate}{Will of the Senate}%
+\newcommand{\willofthesenatedef}{%
+
+	%
+}%
+
+\newcommand{\rakingclaws}{Raking Claws}
+\newcommand{\rakingclawsdef}{
+	Sweeping Attack. The enemy unit suffers 1 hit for each model with \rakingclaws{} in the unit. These hits are resolved with the Strength and Armour Penetration of model part with \rakingclaws{}.
+}
+
+% Gorgons
+
+\newcommand{\petrifyingstare}{Petrifying Stare}
+\newcommand{\petrifyingstaredef}{%
+	At Initiative Step 10, each enemy unit in base contact with the model suffers 2 hits with \ArmourPenetration{} 10 and \magicalattacks{} that wound on\spacebeforecolon{}:%
+			\begin{smallitemize}%
+				\item 4+ for models of \heightstandard{} Height%
+				\item 5+ for models of \heightlarge{} Height%
+				\item 6+ for models of \heightgigantic{} Height%
+			\end{smallitemize}%
+}
+
+% Divine Altar
+
+\newcommand{\crucibleofslaughter}{Crucible of Slaughter}%
+\newcommand{\crucibleofslaughterdef}{%
+	The model gains \textbf{\attached{}}, \textbf{\exclusive{} (\rnf{} Infantry)}, \textbf{\frenzy{}}, \textbf{\notaleader{}}, and \textbf{\warplatform{}},  and it loses \channel{} (3). In addition, the following elements gain the corresponding rules while in units within \distance{12} of a friendly \crucibleofslaughter{}:
+	\begin{itemize}
+		\item \rnf{} model parts without \harnessed{} gain \textbf{\battlefocus{}} and \textbf{\frenzy{}}
+		\item Temple Militants gain \textbf{\hatred{}}
+	\end{itemize}%
+}%
+
+
+\newcommand{\effigyofdread}{Effigy of Dread}%
+\newcommand{\effigyofdreaddef}{%
+	The model gains \textbf{\fear{}}, \textbf{\fearless{}}, and  \textbf{\unbreakable{}}. Its Health Points are \textbf{set} to 6 and   and its \AdvanceRate{} and \MarchRate{} are \textbf{always} set to \distance{0}. The model cannot declare any Charges nor perform any Advance Moves, March Moves, Magical Moves, Pursuit Moves, nor Random Movement.
+	In addition, friendly units within \distance{24} of the model gain \textbf{\fear{}}. Enemy units within \distance{24} of the model cannot benefit from \rallyaroundtheflag{} for \fear{} Tests.\newline
+	%
+}%
+
+% Hunting Chariot
+
+\newcommand{\destroyerrestriction}{
+	For each \huntingchariot{} in the army, the maximum number is reduced by 1
+}
+
+\newcommand{\harpoonlauncher}{Harpoon Launcher}
+\newcommand{\harpoonlauncherdef}{
+	Units that suffer one or more  hits from this weapon lose \swiftstride{} (and cannot gain it in any way) until the start of the next friendly Player Turn.
+}
+
+% Repeater Battery
+
+\newcommand{\daebboltthrower}{Daeb Bolt Thrower}%
+\newcommand{\daebboltthrowerdef}{Note that the model can move and shoot.}%
+
+%% THE MENAGERIE
+
+% Kraken
+
+\newcommand{\colossalkraken}{Colossal Kraken}%
+\newcommand{\colossalkrakendef}{%
+	The model gains +2 \HealthPoints{}, 2 additional \lashmaster{}s, and its base size is changed to 100\timess{}150 \si{\milli\meter}.%
+}%
+\newcommand{\colossalkrakencondition}{Armies with one or more \beastmaster{}s only}%
+
+% Hydra
+
+\newcommand{\ragedef}{%
+	Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.%
+}
+
+\newcommand{\cutoneoff}{Cut one off\dots{}}%
+\newcommand{\cutoneoffdef}{%
+	For each successful \fortitude{} Save roll of a natural \result{6}, the model disregards another simultaneously suffered wound. If there aren't enough simultaneously suffered wounds to disregard, the model immediately Recovers 1 Health Point instead.%
+}
+
+% Mist Leviathan
+
+\newcommand{\underthecoverofmists}{Under the Cover of Mists}%
+\newcommand{\underthecoverofmistsdef}{%
+	Enemy units within \distance{8} of one or more \mistleviathan{}s suffer \minuss{}1 to hit for Shooting Attacks. In addition, during the first Game Turn, friendly Infantry units gain \textbf{\hardtarget{}~(1)} while within \distance{8} of one or more \mistleviathan{}s.%
+}

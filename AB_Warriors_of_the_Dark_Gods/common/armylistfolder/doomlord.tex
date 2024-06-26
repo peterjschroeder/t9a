@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\doomlord{},
+	logo=character,
+	cost=355,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\pathexiled{},\fearless{}},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={\hellforgedarmor{}},
+	offensename=\doomlord{},
+	offense@Ag=5,
+	offense@At=5,
+	offense@Of=7,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hidebf{\masterofdestruction{}}},
+	options={%
+		\trophyrack{}=25,
+		\specialitemsallowance{}=\upto{}150,
+		\allowanceifgeneral{}=\upto{}200,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=\free{},
+			\spikedshield{}=50,
+		}},
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\halberd{}=25,
+			\gw{}=45,
+		},
+	},
+	mounts={%
+          \wastelandbehemoth{}=210,
+	},
+	modelrulesdef={%
+	\modelruledef{\masterofdestruction{}}{\ruletype{\attackattributeclosecombat{}}\masterofdestructiondef{}}
+	},
+}% END UNIT ENTRY

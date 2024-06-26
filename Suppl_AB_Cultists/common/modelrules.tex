@@ -1,0 +1,35 @@
+
+\maintitle{CUModelRules}{\armymodelrules}
+
+\newcommand{\waywardchildrendef}{%
+	\item +\distance{1} \precharacmodifier{}\AdvanceRateInitials{}
+	\item +\distance{2} \precharacmodifier{}\MarchRateInitials{}
+	\item +1 \Agility{}
+}
+
+\newcommand{\fallenheroesdef}{%
+	\item \basesize\spacebeforecolon{}: 25\timess{}\SI{25}{\milli\meter}
+	\item \resiliencesetto{} 4
+	\item \minuss{}1 \precharacmodifier{}\AgilityInitials{}
+}
+
+\newcommand{\thedishonoureddef}{%
+	\item \minuss{}\distance{1} \precharacmodifier{}\AdvanceRateInitials{}
+	\item \marchratesetto{} \distance{9}\refsymbol{}
+	\item \resiliencesetto{} 4
+	\item \minuss{}1 \precharacmodifier{}\AgilityInitials{}
+}
+
+\newcommand{\kinslayersdef}{%
+	\item \basesize{}\spacebeforecolon{}: 25\timess{}\SI{25}{\milli\meter}
+	\item +1 \precharacmodifier{}\OffensiveSkillInitials{}
+	\item +1 \precharacmodifier{}\DefensiveSkillInitials{}
+}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\pledgedtodarkness{}}{\pledgedtodarknessdef}
+\AMRsortedlistentry{\sacrificialofferings{}}{\sacrificialofferingsdef}
+\AMRsortedlistentry{\daemonicsummon{}}{\daemonicsummondef}
+\closeAMRsortedlist

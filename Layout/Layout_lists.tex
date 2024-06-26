@@ -1,0 +1,100 @@
+
+%\setlist[itemize]{label=\textbullet}
+\newcommand{\listsymbol}{\textbullet}
+
+\ifdefined\thisistherulebook
+
+	\setlist[itemize]{leftmargin=10pt}
+	\setlist[enumerate]{leftmargin=13pt}
+	
+\fi
+
+%%% Captions lists %%%
+
+\newcommand{\captionlist}{\vspace*{3pt}\newline}
+\newcommand{\captionitem}{\hspace*{5pt}}
+
+
+%%% Lists with prices %%%
+
+\newcommand{\startpricelist}{\raggedcolumns\begin{multicols}{2}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\endpricelist{\end{description}\end{multicols}}
+\newcommand{\pricelistitem}[3]{%
+		% Should we add an English name after the standard name of the item?
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#1}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+				\item \begin{samepage}\textbf{#1}\predotfill\hfill\nobreak\pointsblock{\pts{#2}}%
+		}{% then we add the English name
+			% Now see if it all fits on a single line
+			\setbox0=\vbox{XX\textbf{#1} \textit{(\csname \tempENname EN\endcsname)}\predotfill\hfill\nobreak\pointsblock{\pts{#2}}}%
+			\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+			\ifdim\categorynoteheight>15pt\relax% Name's too big we need to put it on two lines
+					\item \begin{samepage}\textbf{#1}\predotfill\hfill\nobreak\pointsblock{\pts{#2}}\newline%
+				\textit{(\csname \tempENname EN\endcsname)}%
+			\else%
+					\item \begin{samepage}\textbf{#1} \textit{(\csname \tempENname EN\endcsname)}\predotfill\hfill\nobreak\pointsblock{\pts{#2}}%
+			\fi%
+		}%
+		\newline{}#3%
+	\end{samepage}\par%
+}
+\newcommand{\nopricelistitem}[1]{\item \textbf{#1}\newline}
+
+\newcommand{\startpricelistNSP}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\endpricelistNSP{\end{description}}
+
+
+
+\newcommand{\startitemlist}{\raggedcolumns\begin{multicols}{2}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\enditemlist{\end{description}\end{multicols}}
+\newcommand{\listitem}[1]{\item[#1\spacebeforecolon{}:]}
+
+\newcommand{\startitemlistonecol}{\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]}
+\def\enditemlistonecol{\end{description}}
+\newcommand{\listitemonecol}[1]{\item \textbf{#1\spacebeforecolon{}:}\newline}
+
+\newenvironment{smallitemize}{\begin{itemize}[itemsep=3pt,topsep=3pt]}{\end{itemize}}
+\newenvironment{smallitemizeitem}{\begin{itemize}[noitemsep,topsep=-6pt]}{\end{itemize}}
+\newenvironment{smallenumerate}{\begin{enumerate}[itemsep=3pt,topsep=3pt]}{\end{enumerate}}
+\newenvironment{smallenumerateitem}{\begin{enumerate}[noitemsep,topsep=-6pt]}{\end{enumerate}}
+
+%%% Army Model Rules sorting
+
+\newcommand{\startAMRsortedlist}{%
+	\DTLifdbexists{AMRlist}{\DTLcleardb{AMRlist}}{\DTLnewdb{AMRlist}}% Create new/discard old list
+}
+
+\newcommand{\closeAMRsortedlist}{%
+	\DTLsort*{sortlabel}{AMRlist}% Sort list
+	\DTLforeach*{AMRlist}{\name=name,\ruletext=ruletext,\AMRruletype=ruletype}{%
+		% Should we add an English name after the standard name of the item?
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\name}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+			\subsubtitle{\name{}%
+				\ifdefempty{\AMRruletype}{}{\textnormal{\largefontsize{} -- \AMRruletype}}%
+			}%
+			\ruletext{}\par%
+		}{%
+			\subsubtitle{\name{} \textnormal{\largefontsize{} \textit{(\csname \tempENname EN\endcsname)}}%
+				\ifdefempty{\AMRruletype}{}{\textnormal{\largefontsize{} -- \AMRruletype}}%
+			}%
+			\ruletext{}\par%
+		}%
+	}
+	\DTLcleardb{AMRlist}%
+}
+
+\newcommand{\AMRsortedlistentry}[3][]{%
+	\DTLnewrow{AMRlist}%
+	\pdfstringdef\textwithoutformatting{#2}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{AMRlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{AMRlist}{name}{#2}%
+	\DTLnewdbentry{AMRlist}{ruletext}{#3}%
+	\DTLnewdbentry{AMRlist}{ruletype}{#1}%
+}

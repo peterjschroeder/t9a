@@ -1,0 +1,52 @@
+
+%%%% Pledged to Darkness
+
+\newcommand{\addpledged}[2]{%
+	\DTLnewrow{pledgedlist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{pledgedlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{pledgedlist}{title}{#1}%
+	\DTLnewdbentry{pledgedlist}{content}{#2}%
+}
+
+\newcommand{\pledgedtodarknesstable}{%
+	\begingroup%
+	\setlength{\multicolsep}{0pt}%
+	\setlength{\columnsep}{10pt}%
+	\raggedcolumns%
+	\vspace*{10pt}\begin{multicols}{4}%
+		\DTLifdbexists{pledgedlist}{\DTLcleardb{pledgedlist}}{\DTLnewdb{pledgedlist}}% Create new/discard old list
+		\addpledged{\waywardchildren}{\waywardchildrendef}%
+		\addpledged{\fallenheroes}{\fallenheroesdef}%
+		\addpledged{\thedishonoured}{\thedishonoureddef}%
+		\addpledged{\kinslayers}{\kinslayersdef}%
+		\DTLsort*{sortlabel}{pledgedlist}% Sort list
+		\DTLforeach*{pledgedlist}{\pledgedtitle=title,\pledgedcontent=content}{%
+			\begin{center}\textbf{\pledgedtitle{}}\end{center}%
+			\ifundef{\languageisfrench}{%
+				\begin{itemize}[leftmargin=*, noitemsep]%
+			}{%
+				\begin{itemize}[leftmargin=*, noitemsep,label=$\textbullet$]%
+			}%
+				\pledgedcontent{}%
+			\end{itemize}%
+			\DTLiflastrow{}{\columnbreak}%
+		}%
+		\DTLcleardb{pledgedlist}%
+	\end{multicols}%
+	\refsymbolbis{}\thedishonourednote{}%
+	\endgroup%
+}
+
+
+%%%% Tiny rule
+
+\newcommand{\tinylayout}[2]{%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+		\item[#1\spacebeforecolon{}:]#2%
+	\end{description}%
+}

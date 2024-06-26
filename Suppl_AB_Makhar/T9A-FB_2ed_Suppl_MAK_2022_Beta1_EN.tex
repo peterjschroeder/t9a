@@ -1,0 +1,61 @@
+%Language is defined here
+\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+%\def\noprintpoints{}
+\def\thisbookhasacover{makhar_cover_pic_compressed.jpeg}
+\def\addbooktitletocover{MAKHAR}% full caps, use \titlesmallcaps{XXX} for link words
+%\def\uncompressedcover % uncomment if you want an uncompressed background for the cover
+\def\thisisasupplementarmy{Warriors of the Dark Gods}
+
+% Preamble
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{common/}{layout.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_armylist.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_fluff.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_modelrules.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_others.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_specialequipment.tex}
+\subimport{common/}{toc.tex}
+\subimport{common/}{footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Makhar}
+\newcommand{\balanceversion}{2022}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\betaversion}{1}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{April 21, 2022}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{CET pre-release}% anything related to the version
+\newcommand{\booklogo}{pics/logo_MAK.jpg}
+\def\bookprefix{MAK}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\subimport{../Layout/}{Titlepage.tex}
+\fluffbox{\fluffone}
+\additionalspacebeforemaintitle{}
+\subimport{common/}{modelrules.tex}
+\newpage
+\subimport{common/}{hereditaryspell.tex}
+\additionalspacebeforemaintitle{}
+%\newpage
+\subimport{common/}{specialequipment.tex}
+\fluffbox{\flufftwo}
+\subimport{common/}{armyorg.tex}
+%\additionalspacebeforemaintitle{}
+\subimport{common/}{armylist.tex}
+\fluffbox{\fluffthree}
+\newpage
+\subimport{common/}{qrs.tex}
+\ifdef{\thereisachangelog}{%
+	\newpage
+	\subimport{language_specific/\languagetag/}{changelog.tex}
+}{}
+
+\end{document}

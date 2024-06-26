@@ -1,0 +1,31 @@
+
+\unitentry{%
+	name=\cadaverwagon{},
+	logo=character,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=60\timess{}100,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=\ascharacter{},
+	globalrules={\warplatform{},\necromanticaura{},\hidebf{\norestforthewicked}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=4,
+	defense@Arm=\ascharacter{}+2,
+	defenserules={\fortitude{} (4+)},
+	offensename=\shamblinghorde{},
+	offense@At=8,
+	offense@Of=1,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=1,
+	offenserules={\harnessed{}},
+	offensenameI=\chassis{},
+	offenseI@St=4,
+	offenseI@AP=1,
+	offenserulesI={\impacthits{1},\inanimate{}},
+	modelrulesdef={%
+		\modelruledef{\norestforthewicked}{\ruletype{\universalrule}\norestforthewickeddef}
+	},
+} % END UNIT ENTRY

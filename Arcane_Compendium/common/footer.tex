@@ -1,0 +1,47 @@
+
+\newcommand{\hyperlinkedicon}[2]{\hyperlink{#1}{\includegraphics[height=\footerlogosize]{#2}}}
+
+\DTLgetvalue{\currentpathiconA}{pathsbook}{1}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconB}{pathsbook}{2}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconC}{pathsbook}{3}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconD}{pathsbook}{4}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconE}{pathsbook}{5}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconF}{pathsbook}{6}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconG}{pathsbook}{7}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconH}{pathsbook}{8}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconI}{pathsbook}{9}{\dtlcolumnindex{pathsbook}{icon}}
+\DTLgetvalue{\currentpathiconJ}{pathsbook}{10}{\dtlcolumnindex{pathsbook}{icon}}
+
+\DTLgetvalue{\currentpathtagA}{pathsbook}{1}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagB}{pathsbook}{2}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagC}{pathsbook}{3}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagD}{pathsbook}{4}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagE}{pathsbook}{5}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagF}{pathsbook}{6}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagG}{pathsbook}{7}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagH}{pathsbook}{8}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagI}{pathsbook}{9}{\dtlcolumnindex{pathsbook}{tag}}
+\DTLgetvalue{\currentpathtagJ}{pathsbook}{10}{\dtlcolumnindex{pathsbook}{tag}}
+
+\newcommand{\pathsleftfooter}{%
+	\normalfontsize%
+	\hyperlink{tableofcontents}{\tableofcontentsInitials}\hspace*{0.3cm}%
+	\hyperlink{pathsofmagic}{\pathsofmagicInitials}\hspace*{0.7cm}%
+	\hyperlinkedicon{\currentpathtagA}{\currentpathiconA}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagB}{\currentpathiconB}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagC}{\currentpathiconC}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagD}{\currentpathiconD}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagE}{\currentpathiconE}%
+}
+
+\DTLgetvalue{\currentpathicon}{pathsbook}{1}{\dtlcolumnindex{pathsbook}{icon}}
+
+\newcommand{\pathsrightfooter}{%
+	\normalfontsize
+	\hyperlinkedicon{\currentpathtagF}{\currentpathiconF}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagG}{\currentpathiconG}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagH}{\currentpathiconH}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagI}{\currentpathiconI}\hspace*{0.3cm}%
+	\hyperlinkedicon{\currentpathtagJ}{\currentpathiconJ}\hspace*{0.7cm}%
+	\hyperlink{specialitems}{\specialitemsInitials}%
+}

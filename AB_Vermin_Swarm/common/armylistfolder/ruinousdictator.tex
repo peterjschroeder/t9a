@@ -1,0 +1,67 @@
+
+{
+\let\labels@optionalmodelrulesdefTEMPO\labels@optionalmodelrulesdef
+\renewcommand{\labels@optionalmodelrulesdef}{\labels@optionalmodelrulesdefTEMPO{} (\patrondeity{})}
+\renewcommand{\additionalframename}{\labels@optionalmodelrulesdefTEMPO{} (\mortalorigin{})}
+
+\unitentry{%
+	name=\ruinousdictator{},
+	logo=character,
+	categorynote=,
+	cost=445,
+	unitsize=1,
+	addrestriction=\oneofakind{},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=75\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=6,
+	globalrules={\fearless{},\supernal{},\callous{},\wizardadept{},\hidebf{\unlimitedpower{}},\stubborn{},\holytriumvirate},
+	defense@HP=7,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=2,
+	defenserules={\aegis{} (5+)},
+	offensename=\ruinousdictator{},
+	offense@At=4,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=4,
+	offense@Ag=8,
+	offenseweapons={\halberd{}},
+	options={%
+		\optionschoice{\mustchooseamortalorigin{} \onechoiceonlyNOC{}\Scolon{}}{\AlCoOrder{%
+			\textbf{\iamthesenate{}}=30,
+			\textbf{\lordofthelegions{}}=\free{},
+			\textbf{\pontifexmaximus{}}=20,
+		}},
+		\optionschoice{\mustchooseapatrondeity{} \onechoiceonlyNOC{}\Scolon{}}{\AlCoOrder{%
+			\textbf{\avatarofacratos{}}=20,
+			\textbf{\avataroffavana{}}=25,
+			\textbf{\avatarofudius{}}=\free{},
+		}},
+	},
+	modelrulesdef={%
+		\modelruledef{\unlimitedpower}{\ruletype{\universalrule}\unlimitedpowerdef}
+	},
+	paths={\occultism{}=occultism},
+	magicnoptstag=yes,
+	optionalmodelrulesdef={%
+		\modelruledef{\avatarofacratos}{\ruletype{\universalrule}\avatarofacratosdef}
+		\modelruledef{\avataroffavana}{\ruletype{\universalrule}\avataroffavanadef}
+		\modelruledef{\avatarofudius}{\ruletype{\universalrule}\avatarofudiusdef}
+	},	
+	additionalframe={%
+		\additionaloptionalmodelrulesdef{%
+			\modelruledef{\iamthesenate}{\ruletype{\universalrule}\iamthesenatedef}
+			\modelruledef{\lordofthelegions}{\ruletype{\universalrule}\lordofthelegionsdef}		
+			\modelruledef{\pontifexmaximus}{\ruletype{\universalrule}\pontifexmaximusdef}		
+		}%
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}%
+		\toggletrue{onecolprintadditionalframe}\togglefalse{twocolprintadditionalframe}%
+	},
+}% END UNIT ENTRY
+}

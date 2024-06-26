@@ -1,0 +1,50 @@
+
+\unitentry{%
+	name=\teguwarriors{},
+	logo=core,
+	cost=210,
+	unitsize=15,
+	maxunitsize=35,
+	costpermodel=15,
+	scoring=yes,
+	maxunitsperarmy=5,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\swiftreform{},\communalbond{},\scoring{}, \strider{\waterterrain{}},\minimised{} (\disciplinetest{})},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=2,
+	defensearmour=\shield{},
+	offensename=\teguwarrior{},
+	offense@At=2,
+	offense@Of=2,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\lodestone{}},
+	options={%
+		\spear{}=2\permodel{},		
+		{\caimanmentors{} (\caimanelders{})}=,
+		(\zerotoXmodelsperunit{2})\refsymbol{}=95\permodel,
+		\suboptionindent{}\halberd{}\refsymbolB{}=5\permodel,
+		\suboptionindent{}\gw{}\refsymbolB{}=10\permodel,
+	\caimanelderrestriction{}=,
+	\caimanmentorweapons{}=,
+	},
+	wizardconclave={%
+		\enclavewizardspellsintro{%
+			\spellformat{\shamanismspellone}{\shamanism},
+		}
+	},
+	commandgroup={%
+		\champion{}=10,
+		\alphaorderstickto{\champion{}=10}\suboptionindent{}\enclavewizard{} (50\timess{}50 mm)=30,%
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},%
+	},
+}% END UNIT ENTRY

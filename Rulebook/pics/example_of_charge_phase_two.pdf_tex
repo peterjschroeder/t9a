@@ -1,0 +1,130 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'example_of_charge_phase_two.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1828.34628368bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.64503473)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{example_of_charge_phase_two.pdf}}%
+    \put(0.88641353,2.25082177){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtChargeRangeRoll\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{example_of_charge_phase_two.pdf}}%
+    \put(0.88658445,2.18083879){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtPassed\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004466,2.39898099){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{example_of_charge_phase_two.pdf}}%
+    \put(0.16302476,2.53502635){\color[rgb]{1,1,1}\rotatebox{14.43532}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293315,2.51067328){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{example_of_charge_phase_two.pdf}}%
+    \put(0.18446054,2.12423976){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtChargeRangeRoll\end{tabular}}}}%
+    \put(0.18471692,2.05425678){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtPassed\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004465,1.83308947){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293315,1.9447819){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004464,1.28770831){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293316,1.39940073){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{example_of_charge_phase_two.pdf}}%
+    \put(0.20790985,1.5690147){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtDisciplineTest\end{tabular}}}}%
+    \put(0.20808077,1.50067254){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtPassed\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{example_of_charge_phase_two.pdf}}%
+    \put(0.16623146,0.59984208){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtChargeRangeRoll\end{tabular}}}}%
+    \put(0.16648784,0.52985904){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtPassed\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{example_of_charge_phase_two.pdf}}%
+    \put(0.85132478,1.02122752){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtChargeRangeRoll\end{tabular}}}}%
+    \put(0.85158116,0.95124456){\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figEOCPtFailed\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{example_of_charge_phase_two.pdf}}%
+    \put(0.00753387,2.63281571){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtA\end{tabular}}}}%
+    \put(0.00753387,2.11286742){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtB\end{tabular}}}}%
+    \put(0.00753387,1.55308698){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtC\end{tabular}}}}%
+    \put(0.00753387,0.441446){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtE\end{tabular}}}}%
+    \put(0.06989955,2.50205109){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.07377547,2.33150869){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.64354292,2.24625608){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.95362046,2.52918296){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.30778513,2.56328609){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{E}\end{tabular}}}}%
+    \put(0.48075221,2.47491954){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{F}\end{tabular}}}}%
+    \put(0.56408555,2.25788395){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{G}\end{tabular}}}}%
+    \put(0.18673313,1.9318013){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.07377549,1.76561724){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.64354292,1.68036452){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.95362046,1.96329161){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.48075221,1.90902809){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{F}\end{tabular}}}}%
+    \put(0.56408555,1.69199239){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{G}\end{tabular}}}}%
+    \put(0.18675288,1.38641986){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.07377542,1.22023586){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.64354292,1.13498325){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.95362046,1.41791033){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.48075221,1.36364671){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{F}\end{tabular}}}}%
+    \put(0.56408555,1.14661111){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{G}\end{tabular}}}}%
+    \put(0.18675289,0.31534732){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.32958941,0.22668275){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.64354292,0.06391078){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.84988681,0.34000253){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.48075221,0.29257419){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{F}\end{tabular}}}}%
+    \put(0.56408555,0.07553865){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{G}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{example_of_charge_phase_two.pdf}}%
+    \put(0.24004465,0.72181681){\color[rgb]{1,1,1}\rotatebox{19.411468}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{example_of_charge_phase_two.pdf}}%
+    \put(0.71293318,0.83350923){\color[rgb]{1,1,1}\rotatebox{6.5462977}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtcharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{example_of_charge_phase_two.pdf}}%
+    \put(0.00753389,1.00688545){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figEOCPtD\end{tabular}}}}%
+    \put(0.18675288,0.82052841){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.0531574,0.65434435){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figbigletter{B}\end{tabular}}}}%
+    \put(0.64354292,0.56909174){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.95362046,0.85201883){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.48075221,0.79775521){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{F}\end{tabular}}}}%
+    \put(0.56408555,0.58071961){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{G}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{example_of_charge_phase_two.pdf}}%
+  \end{picture}%
+\endgroup%

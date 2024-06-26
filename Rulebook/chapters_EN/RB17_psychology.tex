@@ -1,0 +1,99 @@
+
+\part{Psychology}
+\idx[main=y]{Psychology}\label{psychology}
+
+\RBbmc
+
+\section{Panic Test}
+\idx[main=y]{Panic Test}\label{panic_test}
+
+A Panic Test is a Discipline Test that a unit has to take immediately after any of the following situations arise:
+
+\begin{itemize}
+\item A friendly unit is destroyed within \distance{6} of the unit (including Fleeing off the board).
+\item A friendly unit Breaks from Combat within \distance{6} of the unit.
+\item A friendly unit Flees through the unit's Unit Boundary, after completing its Flee Move.
+\item In a single phase, the unit suffers Health Point losses equal to or greater than \SI{25}{\percent} of the number of Health Points that it had at the start of the phase. This does not apply to single model units that started the game as a single model (i.e. with a starting number of 1 model on the Army List). Ignore Health Point losses suffered while Engaged in Combat. Take the Panic Test immediately after possible casualties have been removed.
+\end{itemize}
+
+Unless specifically stated otherwise, units that fail a Panic Test immediately Flee directly away from the closest enemy unit (Centre of Unit to Centre of Unit). If several enemy units are equally close, randomise which one the unit will Flee away from. If there are no enemy units on the Battlefield, randomise the direction. If the Panic Test was caused by any of the cases listed below, the unit Flees directly away from the enemy unit that caused the Panic Test (Centre of Unit to Centre of Unit) instead, unless that unit no longer is on the Battlefield.
+\begin{itemize}
+\item A spell cast by an enemy model
+\item A Model Rule on an enemy model (such as \hyperref[terror]{Terror})
+\item Losing \SI{25}{\percent} or more Health Points, and the final wounds causing the Health Point losses to reach or go above \SI{25}{\percent} were due to an attack by an enemy unit
+\end{itemize}
+
+If several units have to take a Panic Test at the same time, take all Panic Tests before performing any Flee Moves caused by failed Panic Tests.
+
+\idx{Engaged in Combat}Units do not take Panic Tests if they are Engaged in Combat, if they are already Fleeing, or if they already passed a Panic Test during this phase.
+
+\columnbreak
+
+\section{Shaken}
+\idx[main=y]{Shaken}\label{shaken}
+
+Under certain circumstances, models may become Shaken. The most common situations are:
+
+\begin{itemize}
+\item Charging a Fleeing unit (page \pageref{charging_a_fleeing_unit})
+\item Failing a Charge (page \pageref{failed_charge})
+\item Rallying a Fleeing Unit (page \pageref{rally_fleeing_units})
+\item Failing a Fear Test (see \totalref{fear})
+\item War Machines failing a Panic Test (see \totalref{war_machine})
+\item War Machines suffering a Jammed Misfire Effect (page \pageref{table/misfire})
+\end{itemize}
+
+\vspace*{5pt}
+
+A Shaken model cannot perform any of the following actions:
+
+\begin{itemize}
+\item Declare Charges
+\item Pursuit
+\item \hyperref[overrun]{Overrun}
+\item Advance Move\idx{Advance Move}
+\item March Move\idx{March Move}
+\item Reform (it can Combat Reform and Post-Combat Reform)
+\item \hyperref[random_movement]{Random Movement}
+\item Shooting Attack
+\end{itemize}
+
+\columnbreak
+
+\section{Fleeing}
+\idx[main=y]{Fleeing Units}\idx{Channel}\label{fleeing}
+
+A unit is considered Fleeing from the moment:
+\begin{itemize}
+\item It fails a Break Test (after potential rerolls)
+\item It fails a Panic Test (after potential rerolls)
+\item Its Flee Distance is rolled
+\end{itemize}
+
+As soon as a unit passes its Rally Test, it is no longer considered Fleeing.
+
+When a unit is Fleeing, it cannot perform any voluntary actions (a voluntary action is an action that a unit would have the option to not perform). This includes (but is not limited to):
+
+\begin{itemize}
+\item Declare Charges
+\item Charge Reactions other than Flee
+\item Move in any way other than a Flee Move
+\item Shoot
+\item \hyperref[channel]{Channel}
+\item Cast spells or activate One use only Special Items that need to be activated voluntarily
+\end{itemize}
+
+\idx{\commandingpresence{}}\idx{Rally Around the Flag}Models cannot receive \hyperref[commanding_presence]{Commanding Presence} or \hyperref[rally_around_the_flag]{Rally Around the Flag} from a Fleeing model.
+
+\columnbreak
+
+\section{Decimated}
+\idx[main=y]{Decimated}\label{decimated}
+
+A unit without any Characters is considered Decimated if the sum of the Health Points of its models is \SI{25}{\percent} or less of its starting Health Points (the number taken from the Army List).
+A Combined Unit with \rnf{} models is considered Decimated if the sum of the Health Points of all its models is \SI{25}{\percent} or less of the sum of the \rnf{} models' starting Health Points. A unit without any \rnf{} models is considered Decimated if the sum of the Health Points of its models is \SI{25}{\percent} or less of the sum of its models' starting Health Points.
+Decimated units must take their Rally Test at half their Discipline, rounding fractions up (this is not considered a Characteristic modifier).
+
+For example, if a unit with Discipline 8 started the game with 40 models with 1 Health Point each is reduced to 9 models and Flees, it takes Rally Tests at Discipline 4. However, if a Character with Discipline 8 and 2 Health Points is part of the unit, the Combined Unit would instead take its Rally Test at Discipline 8.
+
+\RBemc

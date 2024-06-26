@@ -1,0 +1,81 @@
+
+% Special Equipment Names
+
+\newcommand{\onyxcore}{Onyx Core}
+\newcommand{\flameoftheeast}{Flame of the East}
+\newcommand{\eyeofthebull}{Eye of the Bull}
+
+\newcommand{\kadimbinding}{Kadim Binding}
+\newcommand{\blazeofprotection}{Blaze of Protection}
+
+\newcommand{\bannerofthetwicebranded}{Banner of the Twice-Branded}
+\newcommand{\iconofashuruk}{Icon of Ashuruk}
+\newcommand{\theirmastersbanner}{Their Master's Banner}
+
+\newcommand{\maskofages}{Mask of Ages}
+\newcommand{\goldenidolofshamut}{Golden Idol of Shamut}
+\newcommand{\tabletofvezodinezh}{Tablet of Vezodinezh}
+\newcommand{\lugarsdice}{Lugar's Dice}
+\newcommand{\breathofthebrassbull}{Breath of the Brass Bull}
+\newcommand{\ringofdesiccation}{Ring of Desiccation}
+
+
+
+% Special Equipment Texts
+
+\newcommand{\onyxcoredef}{%
+	Attacks made with this weapon become \textbf{Flaming Attacks}  and gain \textbf{Multiple Wounds (D3, against Flammable)}. In addition, their Strength is \textbf{always} set to 6. %
+}
+\newcommand{\flameoftheeastdef}{%
+	The wielder gains \textbf{\volcanicembrace{} (D3)} in the Melee Phase while using this weapon.%
+}
+
+\newcommand{\eyeofthebulldef}{%
+	Close Combat Attacks and Shooting Attacks made with this weapon hit automatically. The Strength of these hits is \textbf{always} set to 5 and their Armour Penetration is \textbf{always} set to 10. . In addition, while using this weapon, the wielder's Attack Value is \textbf{set} to 1 and Close Combat Attacks made with this weapon gain \textbf{Multiple Wounds (2)}.%
+}
+
+\newcommand{\kadimbindingrestriction}{}
+\newcommand{\kadimbindingdef}{%
+	The bearer's weapons lose \twohanded{} if they had it. While using this Shield, the bearer gains \textbf{\aegis{} (+1, against Flaming Attacks, \maxi{}  3+)} and \textbf{\parry{}}.%
+}
+\newcommand{\blazeofprotectionrestriction}{Infantry models only}
+\newcommand{\blazeofprotectiondef}{%
+	The wearer gains +3 Armour. Every enemy model in base contact with the wearer's model that could allocate one or more Close Combat Attacks towards it but doesn't, after resolving its Close Combat Attacks, suffers 1 hit with Strength 4, Armour Penetration 0, and \textbf{\flamingattacks{}}, distributed onto the model's Health Pool. This is considered a Special Attack.%
+}
+
+\newcommand{\bannerofthetwicebrandeddef}{%
+	One use only. May be activated at the end of the Charge Phase, immediately after all Charge Moves have been resolved. If the bearer’s unit was successfully Charged during this phase, it may perform a Combat Reform (following the normal rules for Combat Reforms).%
+}
+\newcommand{\theirmastersbannerrestriction}{Vassal Levies and Vassal Cavalry only}
+\newcommand{\theirmastersbannerdef}{%
+	Apply the following effects while the bearer's unit is within \distance{6} of one or more models with Infernal Brand:%
+		\begin{smallitemizeitem}%
+			\item Models in the bearer's unit without Infernal Brand gain \textbf{Battle Focus}.%
+			\item If the bearer's unit is composed entirely of models without Infernal Brand, it may reroll failed Charge Range rolls in the Charge Phase.%
+		\end{smallitemizeitem}%
+}
+\newcommand{\iconofashurukrestriction}{Cannot be taken by units that count towards Core}
+\newcommand{\iconofashurukdef}{%
+	One use only. May be activated at the start of any Melee Phase. The bearer gains \textbf{Volcanic Embrace~(X)}, where X is the number of friendly units within \distance{6} of the bearer's unit that contain at least one model with Magical Attacks. In addition, attacks made by friendly units within \distance{6} of the bearer's unit, except attacks made by the bearer, lose Flaming Attacks and Magical Attacks (if applicable). The effects last until the end of the Player Turn.%
+}
+
+\newcommand{\breathofthebrassbullrestriction}{Cannot be taken by models with Towering Presence or Fly}
+\newcommand{\breathofthebrassbulldef}{%
+	The bearer's model gains +1 Health Point and the bearer gains \textbf{\breathattack{} (\toxicattacks{})}.%
+}
+\newcommand{\goldenidolofshamutdef}{%
+	If the bearer's model is Infantry, its Advance Rate is \textbf{set} to \distance{4} and its March Rate is \textbf{set} to \distance{12}. In addition, the bearer can cast \spellformat{\alchemyspellthree}{\alchemy} as a Bound Spell with Power Level (4/8).%
+}
+\newcommand{\tabletofvezodinezhdef}{%
+	When the bearer attempts to cast a non-Bound Spell using three or more Magic Dice, treat a single rolled \result{1} or \result{2} as a natural \result{3}. If the bearer would suffer a Witchfire Miscast effect, treat it as Magical Inferno instead.%
+}
+\newcommand{\ringofdesiccationdef}{%
+	At the start of each Round of Combat that the bearer's unit is fighting, every enemy unit in base contact with the bearer's model gains one \incendiary{} marker.%
+}
+\newcommand{\maskofagesrestriction}{Infantry models only}
+\newcommand{\maskofagesdef}{%
+	The bearer gains \textbf{\aegis{} (5+, \againstspecialattacks{})}, \textbf{\aegis{} (5+, against Magical Attacks)}, and \textbf{\fear{}}. In addition, the bearer \textbf{must} reroll failed to-hit rolls with its Close Combat Attacks.%
+}
+\newcommand{\lugarsdicedef}{%
+	A single model part of the bearer's model can reroll a single failed to-hit, to-wound, or Armour Save roll per Player Turn. Crush Attacks are not affected.%
+}

@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\maraudinggiant{},
+	logo=special,
+	cost=290,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\hidebf{\giantseegiantdo}, \legendarybeasts{} (1)},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	offensename=\maraudinggiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\rage},
+	options={%
+		\textbf{\bigbrother}=25,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\monstrousfamiliar}=15,
+			\textbf{\giantclub}=\free{},
+			\textbf{\tribalwarspear}=10,
+		}},
+	},%
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\giantseegiantdodef{}}
+	},%
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\monstrousfamiliar{}}{\ruletype{\universalrule{}}\monstrousfamiliardef{}}
+		\modelruledef{\tribalwarspear{}}{\ruletype{\closecombatweapon{}}\tribalwarspeardef{}}%
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+} % END UNIT

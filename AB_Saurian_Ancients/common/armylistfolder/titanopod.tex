@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\titanopod{},
+	logo=monster,
+	cost=520,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=100\timess{}200,
+	global@Ad=4,
+	global@Ma=14,
+	global@Di=6,
+	globalrules={\communalbond{},\strider{},\walkingmountain{},\deafeningclamour{},\minimised{} (\disciplinetest{})},
+	defense@HP=10,
+	defense@Df=3,
+	defense@Re=6,
+	defense@Arm=4,
+	offensename=\rockreleaser{} (6),
+	offense@At=1,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=0,
+	offense@Ag=3,
+	offensenameB=\titanopod{},
+	offenseB@At=2,
+	offenseB@Of=3,
+	offenseB@St=6,
+	offenseB@AP=2,
+	offenseB@Ag=0,
+	offenserulesB={\pathofdestruction{},\harnessed{}, \stompattacks{\XDthree{5}}},
+	options={%
+		\titanopodhowdah{}=\nolimit{},
+	},
+	modelrulesdef={%
+	\modelruledef{\walkingmountain}{\ruletype{\universalrule}\walkingmountaindef}
+	\modelruledef{\pathofdestruction}{\ruletype{\specialattack}\pathofdestructiondef}
+},
+}% END UNIT ENTRY

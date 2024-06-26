@@ -1,0 +1,167 @@
+
+%%%% Honours
+%%%%%%%%%%%%
+
+\define@key{honour}{name}{\def\honour@name{#1}}
+\define@key{honour}{logo}{\def\honour@logo{#1}}
+\define@key{honour}{cost}{\def\honour@cost{#1}}
+\define@key{honour}{text}{\def\honour@text{#1}}
+\define@key{honour}{frames}{\def\honour@frames{#1}}
+
+\newcommand{\defhonour}{%
+	\setkeys{honour}{%
+		name=, logo=, cost=, text=, frames=,%
+	}%
+	\setkeys{honour}%
+}
+
+\newtoggle{honourleftlogo}
+
+\newcommand{\starthonourslist}{%
+\toggletrue{honourleftlogo}%
+\DTLifdbexists{honourslist}{\DTLcleardb{honourslist}}{\DTLnewdb{honourslist}}% Create new/discard old list
+}
+
+\newcommand{\addnewhonour}[1]{%
+	\defhonour{#1}% get the keys
+	\DTLnewrow{honourslist}% Create a new database entry
+	\pdfstringdef\textwithoutformatting{\honour@name}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\pdfstringdef\costwithoutformatting{\honour@cost}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{sortname}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{sortcost}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{name}}%
+	\expandafter\DTLentrycommand\expandafter{\honour@name}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{cost}}%
+	\expandafter\DTLentrycommand\expandafter{\honour@cost}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{logo}}%
+	\expandafter\DTLentrycommand\expandafter{\honour@logo}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{text}}%
+	\expandafter\DTLentrycommand\expandafter{\honour@text}%
+	\def\DTLentrycommand{\DTLnewdbentry{honourslist}{frames}}%
+	\expandafter\DTLentrycommand\expandafter{\honour@frames}%
+}
+
+\newcommand{\closehonourslist}{%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}%
+	\DTLsort*{sortcost=descending,sortname}{honourslist}% Sort list
+	\DTLforeach*{honourslist}{\HonourName=name,\HonourCost=cost,\HonourLogo=logo,\HonourText=text,\HonourFrames=frames}{% Print each honour
+		\iftoggle{honourleftlogo}{% if the logo is to be printed on the left
+			\hbadness=10000% remove warnings for underfull lines
+			\honoursidepic{\HonourLogo}\hfill%
+			\honourstartsidetext{\HonourName}{\HonourCost}%
+			\HonourText%
+			\honourmulticols{}%
+			\HonourFrames%
+			\honourclosesidetext{}%
+			\togglefalse{honourleftlogo}%
+		}{% if the logo is to be printed on the right
+			\hbadness=10000% remove warnings for underfull lines
+			\honourstartsidetext{\HonourName}{\HonourCost}%
+			\HonourText%
+			\honourmulticols{}%
+			\HonourFrames%
+			\honourclosesidetext{}%
+			\hfill\honoursidepic{\HonourLogo}%
+			\toggletrue{honourleftlogo}%
+		}%
+		\newline\debugfooter\DTLiflastrow{}{\spacebetweenhonours}\par%
+	}%
+	\DTLcleardb{honourslist}%
+}
+
+\newcommand{\honoursidepic}[1]{%
+	\begin{minipage}[t][][b]{0.10\textwidth}%
+	\includegraphics[width=\textwidth]{pics/logo_#1.png}%
+	\end{minipage}%
+}
+\newcommand{\honourstartsidetext}[2]{%
+	\begin{minipage}[t]{0.87\textwidth}%
+	{\largerfontsize\option{\textbf{#1}%
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#1}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+		}{%
+			 {\largefontsize{} \textit{(\csname \tempENname EN\endcsname)}}%
+		}%
+	}{\textbf{\pts{#2}}}}\vspace*{3pt}\newline%
+}
+
+\newcommand{\honourmulticols}{%
+	\setlength{\columnsep}{10pt}%
+	\vspace*{-5pt}%
+	\begin{multicols}{2}%
+}
+
+\newcommand{\honourclosesidetext}{%
+	\end{multicols}%
+	\end{minipage}%
+}
+
+\newcommand{\spacebetweenhonours}{\vspace{0.5cm}}
+
+\newcommand{\honourpathlogoheight}{0.7cm}
+\newcommand{\honourpathspacebetween}{\hspace*{0.3cm}}
+\newcommand{\masterofcanreigtowerlogos}{%
+\DTLpar\begin{center}%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_alchemy.pdf}\honourpathspacebetween%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_cosmology.pdf}\honourpathspacebetween%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_druidism.pdf}\honourpathspacebetween%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_shamanism.pdf}\honourpathspacebetween%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_witchcraft.pdf}%
+\end{center}%
+}
+
+\newcommand{\orderofthefieryheartlogos}{%
+\DTLpar\begin{center}%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_alchemy.pdf}\honourpathspacebetween%
+\includegraphics[height=\honourpathlogoheight]{../Arcane_Compendium/pics/Icon_pyromancy.pdf}%
+\end{center}%
+}
+
+%%%% Phoenix
+%%%%%%%%%%%%%
+
+
+\newcommand{\wardenprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\warden{}%
+	&%
+	{\ChVal{2}}&%
+	{\ChVal{5}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{6}}&%
+	\strut{\alphaorderlist{\lightningreflexes}}%
+	{, }\alphaorderlist{\halberd}%
+	\tabularnewline%
+	\end{tabular}%
+}
+
+
+%%%%%% Options in Honours testi-test
+
+\newcommand{\honoursoption}[2]{%
+	\newline{}\suboptionindent{}\option{#1}{\pts{#2}}%
+}

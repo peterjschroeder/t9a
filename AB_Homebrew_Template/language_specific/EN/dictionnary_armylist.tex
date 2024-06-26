@@ -1,0 +1,87 @@
+
+%%%% Unit entries names
+
+% Here are listed all the unit entries names that appear in the Army Book. Different entry for singular and plural if necessary.
+% There are some examples from the Beast Herds book, remove or replace it for your book.
+
+% CHARACTERS
+
+\newcommand{\beastlord}{Beast Lord}
+
+% MOUNTS
+
+\newcommand{\raidingchariot}{Raiding Chariot}
+\newcommand{\wildhorncrew}{Wildhorn Crew}
+\newcommand{\warhog}{War Hog}
+\newcommand{\chassis}{Chassis}
+
+% CORE
+
+\newcommand{\wildhornherd}{Wildhorn Herd}
+\newcommand{\wildhorn}{Wildhorn}
+
+\newcommand{\mongrelherd}{Mongrel Herd}
+\newcommand{\mongrel}{Mongrel}
+
+% SPECIAL
+
+\newcommand{\feralhound}{Feral Hound}
+\newcommand{\feralhounds}{Feral Hounds}
+
+% TERRORS OF THE WILD
+
+\newcommand{\cyclops}{Cyclops}
+
+
+%%%% Unit entries rules
+
+% Here are listed the rule names and the rule texts, for each unit entry, if they are not defined in the Army Wide rules.
+% There are some examples from the Beast Herds book, remove or replace it for your book.
+
+%% CHARACTERS
+
+% Beast Lord and Beast Chieftain
+
+\newcommand{\generalonly}{(General only)}
+
+% Soothsayer
+
+\newcommand{\bloodoffering}{Blood Offering}
+\newcommand{\bloodofferingdef}{%
+	A unit that includes at least one Character with Blood Offering may reroll failed Panic Tests at the cost of inflicting one wound with no saves of any kind allowed to a Character with Blood Offering in the unit.%
+}
+
+
+%% MOUNTS
+
+% Razortusk Chariot
+
+\newcommand{\huntinghorn}{Hunting Horn}
+\newcommand{\huntinghorndef}{%
+	All friendly units within \distance{6} of one or more models with Hunting Horn gain \distance{+1} to their Charge Range rolls.%
+}
+
+
+%% CORE
+
+% Wildhorn Herd
+
+\newcommand{\replaceshieldwith}{Replace Shield with:}
+\newcommand{\ambushcategorynote}{This unit additionally counts towards Ambush Predators if Ambushing.} %Also for Characters.
+
+
+%% SPECIAL
+
+% Feral Hounds
+
+\newcommand{\unitadditionallycounttowardsambush}{This unit additionally counts towards Ambush Predators.}
+
+
+%% TERRORS OF THE WILD
+
+% Cyclops
+
+\newcommand{\hurlattack}{Hurl Attack}
+\newcommand{\hurlattackdef}{%
+	\textbf{\catapult{} (4\timess{}4)}. \range{6--36}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], \textbf{\divineattacks}, \textbf{\magicalattacks}, [\textbf{\multiplewounds{D3, \clippedwings{}}{}}]. A Cyclops that only Pivots (and moves no further) during its owner's Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.%
+}

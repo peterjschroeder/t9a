@@ -1,0 +1,24 @@
+% TOC
+%%%
+
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{KoEArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{KoEModelRules}{\armymodelrules}\par
+	\tocentry{KoEHereditarySpell}{\hereditaryspell}\par
+%	\tocentry{KoEKnightlyprinciples}{\knightlyprinciples}\par
+%	\tocentry{KoEHeroicTraits}{\heroictraits}\par
+	\tocentry{KoESpecialEquipment}{\specialequipment}\par
+	\tocentry{KoEArmyOrganisation}{\armyorganisation}\par
+	\tocentry{KoEQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{KoEchangelog}{\changelog}\par
+	}{}%
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{KoECharacters}{\characters}\par
+	\tocentry{KoEMounts}{\charactermounts}\par
+	\tocentry{KoECore}{\core}\par
+	\tocentry{KoESpecial}{\specialcategory}\par
+	\tocentry{KoEFey}{\fey}\par
+}

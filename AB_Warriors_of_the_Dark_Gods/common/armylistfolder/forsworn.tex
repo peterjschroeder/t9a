@@ -1,0 +1,49 @@
+
+\unitentry{%
+	name=\forsworn{},
+	logo=special,
+	cost=200,
+	unitsize=3,
+	maxunitsize=9,
+	costpermodel=60,
+	scoring=yes,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	globalrules={\bodyguard{\doomlord{}},\pathexiled{},\scoring{},\fearless{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=1,
+	defensearmour={\hellforgedarmor{}},
+	offensename=\forswornSINGULAR{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\spikedshield{}=15\permodel{},
+		\replacewithdamnation{}\refsymbol{}=10\permodel{},
+		\onechoiceonlyACO{%
+			\pw{}=\free{},
+			\halberd{}=2\permodel{},
+			\gw{}=2\permodel{},
+		},%
+		\refsymbolbis{}\zerotoXunitsperarmy{2} \wordand{} \zerotoXmodelsperunit{6},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\damnation}{\ruletype{\universalrule}{\damnationdef}}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+} % END UNIT ENTRY

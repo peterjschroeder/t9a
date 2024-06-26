@@ -1,0 +1,109 @@
+% Army Model Rules Names
+
+\newcommand{\favoursofthedarkgods}{Favours of the Dark Gods}
+
+\newcommand{\envy}{Envy}
+\newcommand{\envyfulltitle}{Favour of Kuulima, Goddess of \envy{}}
+\newcommand{\gluttony}{Gluttony}
+\newcommand{\gluttonyfulltitle}{Favour of Akaan, God of \gluttony{}}
+\newcommand{\greed}{Greed}
+\newcommand{\greedfulltitle}{Favour of Sugulag, God of \greed{}}
+\newcommand{\lust}{Lust}
+\newcommand{\lustfulltitle}{Favour of Cibaresh, God of \lust{}}
+\newcommand{\pride}{Pride}
+\newcommand{\pridefulltitle}{Favour of Savar, God of \pride{}}
+\newcommand{\sloth}{Sloth}
+\newcommand{\slothfulltitle}{Favour of Nukuja, Goddess of \sloth{}}
+\newcommand{\wrath}{Wrath}
+\newcommand{\wrathfulltitle}{Favour of Vanadra, Goddess of \wrath{}}
+
+\newcommand{\pathfavoured}{Path of the Favoured}
+\newcommand{\pathexiled}{Path of the Exiled}
+\newcommand{\irredeemable}{Irredeemable}
+\newcommand{\veilwalker}{Veil Walker}
+\newcommand{\legendarybeasts}{Legendary Beasts}
+\newcommand{\battlefever}{Battle Fever}
+\newcommand{\unburnt}{Unburnt}
+\newcommand{\trophyrack}{Trophy Rack}
+\newcommand{\hellforgedarmor}{Hell-Forged Armour}
+\newcommand{\spikedshield}{Spiked Shield}
+
+% Army Model Rules Texts
+
+\newcommand{\favoursofthedarkgodsintro}{%
+	A Character with a Favour cannot join a unit that contains any models with a different Favour.%
+}
+
+\newcommand{\envydef}{%
+	Units with more than half of their models with this Favour gain \textbf{\maximised{Charge Range, Pursuit Distance, Overrun Distance}}.
+	%
+}
+
+\newcommand{\gluttonydef}{%
+	The first time a model with this Favour is on the winning side of a combat, its model parts with this Favour gain +1 Strength until the end of the game. The Strength bonus from this Favour also affects the model parts’ attacks with Spiked Shields .%
+}
+
+\newcommand{\greeddef}{%
+	The model part gains \gw{}, \halberd{}, \pw{}, and \textbf{\weaponmaster}. The Special Item allowance of Characters with this Favour is increased by 50 pts.%	
+}
+
+\newcommand{\lustdef}{%
+	 Units with more than half of their models with this Favour are subject to the following rules:%
+	\begin{itemize}%
+		\item They gain \textbf{\feignedflight{}}.%
+		\item They may declare Flee as a Charge Reaction even if they have Fearless.%
+		\item Their Rally Test in their next Player Turn after voluntarily declaring Flee as a Charge Reaction is subject to Minimised Roll. This does not apply if a unit fails to rally on the next friendly Player Turn or Flees involuntarily.%
+	\end{itemize}%
+}
+
+\newcommand{\pridedef}{%
+	Units with at least one model with this Favour gain \textbf{\minimised{Discipline Tests}}.%
+}
+
+\newcommand{\slothdef}{%
+	Attacks against the model suffer -1 to wound. When the model's unit declares a Charge or performs a March Move, the effect is lost until the start of the Melee Phase in the next Player Turn.\newline%
+	%
+	%
+}
+
+\newcommand{\wrathdef}{%
+	The model part gains \textbf{\lightningreflexes}  in the First Round of Combat.%
+}
+
+\newcommand{\legendarybeastsdef}{%
+	The sum of the Legendary Beasts values stated in brackets of all models in the army is restricted to 1 per 750 Army Points, rounding fractions up.%
+}
+
+\newcommand{\pathfavoureddef}{%
+	Units with more than half of their models with Path of the Favoured \textbf{must} reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion gain +1 Health Point to a maximum of 3, and their Discipline is \textbf{set} to 9.%
+}
+\newcommand{\pathexileddef}{%
+	Units with more than half of their models with Path of the Exiled \textbf{must} reroll failed Break Tests. At the end of step 7 of a Round of Combat (after taking Break Tests), models with Path of the Exiled in a unit that failed a Break Test simultaneously perform Close Combat Attacks (ignoring the rules for Initiative Order, but otherwise following the normal rules such as Supporting Attacks and Allocating Attacks). Afterwards, they are removed as casualties. Models with Path of the Exiled cannot join or be joined by models with \pathfavoured{}.%
+}
+\newcommand{\irredeemabledef}{%
+	The model cannot make Stomp Attacks and, when in the second rank and not in base contact with any enemy models, can make \grindattacks{} across models in the first rank directly in front of it. When a model with \irredeemable{} is killed by a Melee Attack, remove it as a casualty only at the end of Initiative Step 0. A unit with at least one model with \irredeemable{} may never have more ranks than files.%
+}
+\newcommand{\veilwalkerdef}{%
+	When a model with \veilwalker{} casts a non-Bound Spell, you may discard a single Veil Token when declaring the target(s) of the spell and activate one of the following effects:
+	\begin{itemize}%
+		\item \spellformat{Secret of Flesh}{}: Failed to-wound rolls from this spell that occur during a Magic Phase \textbf{must} be rerolled.%
+		\item \spellformat{Secret of Separation}{}: The spell's range is increased by \distance{6}. Aura spells only gain +\distance{3} range. Spells with type Caster are unaffected.%
+		\item \spellformat{Secret of Substance}{}: Successful Armour Saves against wounds caused by this spell's effect \textbf{must} be rerolled.%
+	\end{itemize}%
+}
+\newcommand{\battlefeverdef}{%
+	Units with more than half of their models with \battlefever{} \textbf{must} reroll failed Panic and Break Tests.%
+}
+\newcommand{\unburntdef}{%
+	Successful to-wound rolls of attacks that are Flaming Attacks made against the model \textbf{must} be rerolled. In addition, the model considers all units consisting entirely of models without Unburnt as Insignificant.%
+}
+\newcommand{\trophyrackdef}{%
+	The model's unit may reroll failed Discipline Tests unless Fleeing. Each time attacks made by the model kill an enemy model that it is fighting a Duel with, the model gains a +1 Combat Score modifier for the rest of the game (this also applies to attacks made outside the Melee Phase). In addition, the model may take a single Banner Enchantment (using the bearer's Special Item allowance as normal).%
+}
+\newcommand{\hellforgedarmordef}{%
+	\pa{}. The wearer's model gains \textbf{\aegis{} (5+, against Toxic Attacks)}.%
+}
+\newcommand{\spikedshielddef}{%
+	\itemrestriction{Models on foot only.}
+	Shield. For each \textbf{successful} Armour Save roll of \textbf{4+} made by the model part against an enemy Melee Attack while using a Spiked Shield, the model part immediately inflicts 1 hit with its \Strength{} and \ArmourPenetration{} on the model that caused the wound, before any casualties are removed, distributed onto the model's Health Pool. This is considered a Special Attack.%
+}

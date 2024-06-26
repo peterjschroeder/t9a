@@ -1,0 +1,115 @@
+
+\newcommand{\getpathssortlabel}[1]{%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{pathsbook}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel	
+}
+
+\DTLifdbexists{pathsbook}{\DTLcleardb{pathsbook}}{\DTLnewdb{pathsbook}}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{alchemy}
+	\getpathssortlabel{\alchemy}%
+	\DTLnewdbentry{pathsbook}{icon}{\alchemyicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\alchemyTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{cosmology}
+	\getpathssortlabel{\cosmology}%
+	\DTLnewdbentry{pathsbook}{icon}{\cosmologyicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\cosmologyTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{divination}
+	\getpathssortlabel{\divination}%
+	\DTLnewdbentry{pathsbook}{icon}{\divinationicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\divinationTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{druidism}
+	\getpathssortlabel{\druidism}%
+	\DTLnewdbentry{pathsbook}{icon}{\druidismicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\druidismTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{evocation}
+	\getpathssortlabel{\evocation}%
+	\DTLnewdbentry{pathsbook}{icon}{\evocationicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\evocationTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{occultism}
+	\getpathssortlabel{\occultism}%
+	\DTLnewdbentry{pathsbook}{icon}{\occultismicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\occultismTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{pyromancy}
+	\getpathssortlabel{\pyromancy}%
+	\DTLnewdbentry{pathsbook}{icon}{\pyromancyicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\pyromancyTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{shamanism}
+	\getpathssortlabel{\shamanism}%
+	\DTLnewdbentry{pathsbook}{icon}{\shamanismicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\shamanismTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{thaumaturgy}
+	\getpathssortlabel{\thaumaturgy}%
+	\DTLnewdbentry{pathsbook}{icon}{\thaumaturgyicon}
+	\DTLnewdbentry{pathsbook}{TOC}{\thaumaturgyTOC}
+\DTLnewrow{pathsbook}
+	\DTLnewdbentry{pathsbook}{tag}{witchcraft}
+	\getpathssortlabel{\witchcraft}%
+	\DTLnewdbentry{pathsbook}{icon}{\witchcrafticon}
+	\DTLnewdbentry{pathsbook}{TOC}{\witchcraftTOC}
+	
+\DTLsort*{sortlabel}{pathsbook}% Sort list
+
+
+
+
+\newcommand{\addnewspelltype}[2]{%
+	\DTLnewrow{spelltypes}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{spelltypes}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel	
+	\DTLnewdbentry{spelltypes}{name}{#1}%
+	\DTLnewdbentry{spelltypes}{rule}{#2}%
+}
+
+\newcommand{\startspelltypestable}{%
+	\DTLifdbexists{spelltypes}{\DTLcleardb{spelltypes}}{\DTLnewdb{spelltypes}}%
+}
+
+\newcommand{\closespelltypestable}{%
+	\DTLsort*{sortlabel}{spelltypes}% Sort list
+	% DTL for each introducing unwanted space?!
+	%\DTLforeach*{spelltypes}{\typename=name,\typerule=rule}{%
+		%\typename{} & \typerule{}\DTLiflastrow{}{\tabularnewline}%
+	%}%
+	\DTLassign{spelltypes}{1}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{2}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{3}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{4}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{5}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{6}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{7}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{8}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{9}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{10}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{11}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLassign{spelltypes}{12}{\typename=name,\typerule=rule}
+	\basicsubsubtitle{\typename{}} \typerule{}
+	\DTLcleardb{spelltypes}%
+}

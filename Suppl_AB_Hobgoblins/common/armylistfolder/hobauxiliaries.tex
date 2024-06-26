@@ -1,0 +1,47 @@
+
+\unitentry{%
+	name=\hobauxiliaries{},
+    fluff=\hobslingersfluff{},
+	logo=core,
+	secondlogo=arrows,
+	categorynote={\twocategoriesnote{\core}{\blottingthesun}},
+	cost=125,
+	unitsize=10,
+	maxunitsize=20,
+	costpermodel=6,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\lighttroops{},\vanguard{} (\distance{6})},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules=,
+	offensename=\hobauxiliary{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\ironrain{},\removedrule{\hidebf{\boilingoil{}}}},
+	offenseweapons={\pw{}},
+	commandgroup={%
+		\newrule{\champion{}}=\newrule{10},
+		\newrule{\musician{}}=\newrule{10},
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+		\textbf{\slingers{} (\NOTESTzerotoXunitsperarmy{2})}=\free{},
+		\textbf{\disciples{} (\NOTESTzerotoXunitsperarmy{2})}=\newrule{\free},
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\slingers{}}{\ruletype{\universalrule{}}\slingersdef{}}%
+		\modelruledef{\disciples{}}{\ruletype{\universalrule{}}\disciplesdef{}}%
+		\modelruledef{\sling{}}{\ruletype{\shootingweapon{}}\range{18}, \shots{1}, \St{} 3, \AP{} 0. \slingdef{}}%
+	},
+}% END UNIT ENTRY

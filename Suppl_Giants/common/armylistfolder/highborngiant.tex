@@ -1,0 +1,47 @@
+
+\unitentry{%
+	name=\highborngiant{},
+	logo=special,
+	cost=\newrule{270},
+	unitsize=1,
+	maxunitsperarmy=3,
+	categorynote={\themodelcountstowards{\newrule{\specialcategory}}},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\hidebf{\giantseegiantdo{}}, \AncientAllies},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={},
+	offensename=\highborngiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hidebf{\rage{}}},
+	options={%
+		\textbf{\bigbrother{}}=\newrule{25},
+\mustchooseonechoiceonlyblue{\AlCoOrder{%
+			\textbf{\giantclub{}}=\newrule{\free},
+			\textbf{\shoreguardianbow{} (4+)} \wordand{} \newline \optionnewlineindent\spear{} (\zerotooneunitsperarmy{})=\newrule{30},
+			\textbf{\lioncloakandaxe{}}=\newrule{25},
+		},
+	}},
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\HEgiantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\shoreguardianbow{}}{\ruletype{\artilleryweapon{}}\range{24}, \shots{4}, \St{} 5, \AP{} 3.}
+		\modelruledef{\lioncloakandaxe{}}{\ruletype{\universalrule{}}\lioncloakandaxedef{}}
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT

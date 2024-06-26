@@ -1,0 +1,64 @@
+
+\unitentry{%
+	name=\equitanlord{},
+	logo=character,
+	cost=\newrule{140},
+	unitsize=1,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	defensearmour={\ha{},},
+	defenserules={\courage{}},
+	offensename=\equitanlord{},
+	offense@At=4,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenserules={\lanceformation{}},
+	options={%
+		\asingleknightlyprinciple{}=\nolimit{},
+		\onechoiceonlyACO{
+			\sainted{}=\newrule{105},
+			\bsb{}=50,
+		},
+		\specialitemsallowance{}=\upto{}150,
+		\suboptionindent\ifbsb{}=\upto{}100,
+		\suboptionindent\ifgeneral{} \wordor{} \sainted{}=\upto{}200,
+		\shield{}=20,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\gw{}=40,
+			\halberd{}=5,
+			\lance{}=15,
+			\bastardsword{}=20,
+		},
+	},
+	mounts={%
+		\destrier{}=85,
+		\reveredunicorn{} \only{\sainted{}}=\newrule{75},
+		\pegasuscharger{}=\newrule{135},
+		\feysteed{} \only{\sainted{}}=\newrule{150},
+		\hippogriff{}=\newrule{210},
+	},
+		endtext={%
+		\knightlyprincipleslist{\textbf{\knightlyprinciples{}}}{%
+			\subimport{../knightlyprinciplesfolder/}{excellence.tex}
+			\subimport{../knightlyprinciplesfolder/}{faith.tex}
+			\subimport{../knightlyprinciplesfolder/}{forbearance.tex}
+			\subimport{../knightlyprinciplesfolder/}{generosity.tex}
+	 		\subimport{../knightlyprinciplesfolder/}{honour.tex}
+			\subimport{../knightlyprinciplesfolder/}{justice.tex}
+			\subimport{../knightlyprinciplesfolder/}{valour.tex}
+		}
+	},
+} % END UNIT ENTRY

@@ -1,0 +1,118 @@
+
+%% Battlerunes
+
+\newcommand{\startbattlerunestable}{%
+	\DTLifdbexists{battleruneslist}{\DTLcleardb{battleruneslist}}{\DTLnewdb{battleruneslist}}% Create new/discard old list
+	\begingroup%
+	\setlength{\tabcolsep}{0pt}%
+	\renewcommand{\arraystretch}{2}%
+	\hspace*{0.06\linewidth}% for the rune pic
+	\begin{minipage}[c]{0.3\linewidth}%
+	\begin{tabular}{m{0.52\linewidth}m{0.48\linewidth}}%
+	\textit{\spellsType}&
+	\textit{\spellsDuration}\tabularnewline
+	\end{tabular}\end{minipage}\begin{minipage}[c]{0.63\linewidth}%
+	\begin{tabular}{m{\textwidth}}\textit{\spellsEffect}\end{tabular}\end{minipage}%
+	\vspace*{-3pt}\spellrule%
+}
+
+\newcommand{\newbattlerune}[6]{%
+	\DTLnewrow{battleruneslist}%
+	\DTLnewdbentry{battleruneslist}{logo}{#1}%
+	\DTLnewdbentry{battleruneslist}{name}{#2}%
+	\DTLnewdbentry{battleruneslist}{type}{#3}%
+	\DTLnewdbentry{battleruneslist}{duration}{#4}%
+	\DTLnewdbentry{battleruneslist}{rule}{#5}%
+	\DTLnewdbentry{battleruneslist}{smallrule}{#6}%
+	\pdfstringdef\textwithoutformatting{#2}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{battleruneslist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+}
+
+\newcommand{\closebattlerunestable}{%
+	\DTLsort*{sortlabel}{battleruneslist}% Sort list
+	\DTLforeach*{battleruneslist}{\BRname=name,\BRtype=type,\BRrule=rule,\BRduration=duration,\BRlogo=logo}{% Print back the ordered table
+		\begin{minipage}[c]{0.06\linewidth}%
+			\vspace*{5pt}\includegraphics[width=0.75\textwidth]{pics/battlerune_\BRlogo.png}\vspace*{5pt}%
+		\end{minipage}%
+		\begin{minipage}[c]{0.3\linewidth}%
+			\vspace*{5pt}{\Largefontsize\textbf{\BRname}}\newline%
+			\begin{tabular}{m{0.52\linewidth}m{0.48\linewidth}}%
+				\expandafter\alphaorderlistpar\expandafter{\BRtype} &%
+				 \expandafter\alphaorderlistpar\expandafter{\BRduration} \tabularnewline%
+			\end{tabular}\vspace*{5pt}%
+		\end{minipage}%
+		\begin{minipage}[c]{0.63\linewidth}%
+		\vspace*{5pt}%
+		\BRrule{}\vspace*{5pt}\end{minipage}%
+		\DTLiflastrow{}{\spellrule}%
+	}%
+	\endgroup%
+}
+
+\newcommand{\battlerunesqrstable}{%
+	\begin{center}%
+	\alternaterowcolors\normalfontsize%
+	\begin{tabular}{m{2.6cm}m{1.6cm}m{1.6cm}m{9.5cm}}%
+	\DTLforeach*{battleruneslist}{\BRname=name,\BRtype=type,\BRsmallrule=smallrule,\BRduration=duration}{% Print back the ordered table
+		\BRname & \BRtype & \BRduration & \BRsmallrule
+		\DTLiflastrow{}{\tabularnewline}%
+	}
+	\end{tabular}%
+	\end{center}%
+}
+
+% Field Artillery
+
+\newcommand{\artillerytablearraystretch}{1.8}
+\newcommand{\startfieldartillerytable}{%
+	\DTLifdbexists{fieldartillerylist}{\DTLcleardb{fieldartillerylist}}{\DTLnewdb{fieldartillerylist}}% Create new/discard old list
+	\begingroup%
+	\setlength{\tabcolsep}{0pt}%
+	\renewcommand{\arraystretch}{\artillerytablearraystretch}%
+	\begin{tabular}{m{0.53\linewidth}@{\hskip 10pt}m{0.47\linewidth -10pt}}%
+	{\normalfontsize\fieldartillerytablelabelA{}} & {\normalfontsize\fieldartillerytablelabelB{}} \tabularnewline%
+	\hline%
+}
+
+\newcommand{\fieldartilleryentry}[7]{%
+	\DTLnewrow{fieldartillerylist}%
+	\DTLnewdbentry{fieldartillerylist}{name}{#1}%
+	\DTLnewdbentry{fieldartillerylist}{cost}{#2}%
+	\DTLnewdbentry{fieldartillerylist}{ruletypeA}{#3}%
+	\DTLnewdbentry{fieldartillerylist}{rule}{#4}%
+	\DTLnewdbentry{fieldartillerylist}{ruletypeB}{#5}%
+	\DTLnewdbentry{fieldartillerylist}{runecost}{#6}%
+	\DTLnewdbentry{fieldartillerylist}{runerule}{#7}%
+	\pdfstringdef\costwithoutformatting{#2}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\permodel}{}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{fieldartillerylist}{sortcost}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+}
+
+\newcommand{\closefieldartillerytable}{%
+	\DTLsort*{sortcost}{fieldartillerylist}% Sort list
+	\DTLforeach*{fieldartillerylist}{\FAname=name,\FAruletypeA=ruletypeA,\FArule=rule,\FAruletypeB=ruletypeB,\FArunecost=runecost,\FArunerule=runerule}{% Print back the ordered table
+		\strut\vspace*{-10pt}\begin{description}[topsep=0pt, leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+				\item[\FAname{}\spacebeforecolon{}:]\ruletype{\FAruletypeA}\FArule{}%
+		\end{description}\vspace*{-10pt}\strut%
+		&%
+		\strut\vspace*{-10pt}\begin{description}[topsep=0pt, leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+				\item[\runecrafted{}\spacebeforecolon{}:]\FAruletypeB{}.\nobreak\hspace*{3pt}\hfill\nobreak\pointsblock{\expandafter\ifsubstring\expandafter{\FArunecost}{\free}{\free}{\pts{\FArunecost}}}\newline%
+					\FArunerule{}%
+		\end{description}\vspace*{-10pt}\strut\tabularnewline%
+		\DTLiflastrow{}{\hline}%
+	}%
+	\end{tabular}%
+	\endgroup%
+	\DTLcleardb{fieldartillerylist}%
+}

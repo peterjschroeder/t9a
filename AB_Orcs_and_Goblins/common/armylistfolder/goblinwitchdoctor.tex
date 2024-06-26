@@ -1,0 +1,56 @@
+
+\unitentry{%
+	name=\goblinwitchdoctor{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\bignnastyInitial}{\bignnasty},
+	cost=105,
+	unitsize=1,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	globalrules={\wizardapprentice{}},
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	defense@HP=2,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\goblinwitchdoctor{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={},
+	magic={\wizardadept{}=95,\wizardmaster{} \wordand{} +1 \HealthPoint{}=275},
+	paths={\witchcraft{}=witchcraft,\thaumaturgy{}=thaumaturgy,\pyromancy{}=pyromancy},	
+	options={%
+		\ghchoice{%
+			\commongoblin{} \wordand{} \la{}=\free{},
+			\cavegoblin{} \wordand{} \textbf{2 \timess{} \powershroom{}}=30,
+			\forestgoblin{}=\free{},
+		},
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,	
+	},
+	additionalframe={%
+		\ghentry{\commongoblin{}}{}{%
+			\wolf{}=20,
+			\goblinwolfchariot{}=35,
+		}%
+		\ghentry{\cavegoblin{}}{%
+			\la{}=5,
+		}{}%
+		\ghentry{\forestgoblin{}}{}{%
+			\scuttlerspider{}=20,
+			\gargantula{} \only{\wizardmaster} (\bignnastyInitial{})=460,
+		}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\powershroom}{\ruletype{\universalrule}\powershroomdef}%
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}%

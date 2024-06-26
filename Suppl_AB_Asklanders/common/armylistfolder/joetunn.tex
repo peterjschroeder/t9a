@@ -1,0 +1,32 @@
+
+\unitentry{%
+	name=\joetunn{},
+	fluff=\joetunnfluff{},
+	logo=monster,
+	cost=\newrule{450},
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=75\timess{}100,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\stubborn{},\removedrule{\hidebf{\freezingmist{}}},\newrule{\hidebf{\freezingaura{}}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=7,
+	defense@Arm=3,
+	defenserules={\newrule{\unburnt{}}},
+	offensename=\joetunn{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=7,
+	offense@AP=3,
+	offense@Ag=1,
+	offenserules={\newrule{\maximised{\stompattacks{}}}},
+	modelrulesdef={%
+		\modelruledef{\removedrule{\freezingmist{}}}{\ruletype{\removedrule{\universalrule{}}}\freezingmistdef{}}
+		\modelruledef{\newrule{\freezingaura{}}}{\ruletype{\newrule{\universalrule{}}}\freezingauradef{}}
+	},
+} % END UNIT

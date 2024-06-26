@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\arcengine{},
+	logo=character,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=8,
+	global@Ma=8,
+	global@Di=\ascharacter{},
+	globalrules={\swiftstride{},\toweringpresence{},\channel{} (1)},
+	defense@HP=5,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{}+2,
+	offensename=\crew{} (2),
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offensenameB=\horse{} (2),
+	offenseB@At=1,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=3,
+	offenserulesB=\harnessed{},
+	offensenameI=\chassis{},
+	offenseI@St=5,
+	offenseI@AP=2,
+	offenserulesI={\impacthits{\Dsix{}},\inanimate{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\arcanesh{}}=20,
+			\textbf{\foresight{}}=\free{},
+			}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\arcanesh}{\ruletype{\universalrule}{\arcaneshdef}}%
+		\modelruledef{\foresight}{\ruletype{\universalrule}{\foresightdef}}%
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+} % END UNIT ENTRY

@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\thicketbeasts{},
+	logo=special,
+	cost=355,
+	unitsize=4,
+	maxunitsize=6,
+	costpermodel=100,
+	scoring=yes,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\bodyguard{\thicketshepherd{}},\emboldeningboughs{},\forestwalker{},\scoring{},\sylvanspirit{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=3,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\thicketbeast{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=3,
+	commandgroup={%
+		\champion{}=10,
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\emboldeningboughs{}}{\ruletype{\universalrule}\emboldeningboughsdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+	},
+} % END UNIT ENTRY

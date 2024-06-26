@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\runicsmith{},
+	logo=character,
+	optionallogo=,
+	categorynote=,
+	cost=130,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\channel{1},\magicresistance{1},\hidebf{\runecraftmastery{}}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{}},
+	defenserules={\shieldwall{}},
+	offensename=\runicsmith{},
+	offense@Ag=3,
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={\sturdy{}},
+	options={%
+		\ancestralmemory{} \only{\general{}}=45,
+		\runicspecialitems{}=\upto{}200,
+		\shield{}=10,
+		\gw{}=5,
+     },
+     magic={%
+     	\uptothreedifferentbattlerunes{}=30\penalty0\hbox{}\nobreak/\Rune{},
+     },
+	modelrulesdef={%
+		\modelruledef{\textbf{\runecraftmastery}}{\ruletype{\universalrule}{\runecraftmasterydef}}%
+	},
+}% END UNIT ENTRY

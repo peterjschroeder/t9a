@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\templeexarch{},
+	logo=character,
+	optionallogo=,
+	categorynote=,
+	cost=250,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\fearless{},,\wizardapprentice{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	defenserules={\aegis{} {(4+, \againstmeleeattacks{})}},
+	offensename=\templeexarch{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenserules={\battlefocus{},\lightningreflexes{},\ruthlessefficiency{}},
+	paths={\alchemy{}=alchemy,\divination{}=divination},
+	magicnoptstag=yes,
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\bsb{}=\free{},
+			\textbf{\oracleofdoom{}}=95,
+			}},
+		\specialitemsallowance{}=\upto{}100,
+		\onechoiceonlyACO{%
+			\pw{}=10,
+			\halberd{}=10,
+			\bladesofdarag{}=\free{},
+			\gw{}=10,
+			\spear{}=10,
+		},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\oracleofdoom{}}{\ruletype{\universalrule}\oracleofdoomdef}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\verminvelites{},
+	logo=core,
+	categorynote=,
+	cost=130,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=5,
+	scoring=yes,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\callous{},\lifeischeap{},\scoring{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=2,
+	defense@Arm=0,
+	defensearmour=\la{}, 
+	offensename=\verminvelite{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\cohortcoordination{}},
+	offenseweapons={\pw{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{} \witheaglestandard{}=25,
+	},
+	options={%
+		\mustchooseonechoiceonly{%
+			\textbf{\sling{}} (4+)=\free{},
+			{\bow{} (4+) (\zerotoXmodelsperarmy{30})}=1\permodel{},
+		},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\sling}{\ruletype{\shootingweapon}\range{18}, \shots{1}, \St{} 3, \AP{} 0. \slingdef}
+	},
+}% END UNIT ENTRY

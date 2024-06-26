@@ -1,0 +1,93 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'blocked_path.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{2632.44100255bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.6381909)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{blocked_path.pdf}}%
+    \put(0.24139461,0.41734463){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.11056721,0.42152748){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.20145565,0.59016364){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.89959334,0.41734465){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.73965557,0.43780665){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.8611739,0.55840964){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{blocked_path.pdf}}%
+    \put(0.0125002,0.61188829){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPAOne}}}%
+    \put(0.34252327,0.61188829){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPATwo}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{blocked_path.pdf}}%
+    \put(0.24452819,0.0847828){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.01121812,0.29081448){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPBOne}}}%
+    \put(0.34124119,0.29081448){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPBTwo}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{blocked_path.pdf}}%
+    \put(0.22669239,0.23300011){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{blocked_path.pdf}}%
+    \put(0.08085265,0.20003687){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{blocked_path.pdf}}%
+    \put(0.56613623,0.10201179){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{blocked_path.pdf}}%
+    \put(0.40246066,0.20003687){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{blocked_path.pdf}}%
+    \put(0.57448864,0.41734471){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.44366125,0.42152753){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0.5345497,0.55840968){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.67294526,0.61188835){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPAThree}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{blocked_path.pdf}}%
+    \put(0.90496679,0.10200547){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{F}}}}%
+    \put(0.67166318,0.29081452){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figBPBThree}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{blocked_path.pdf}}%
+    \put(0.54830041,0.23300015){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{blocked_path.pdf}}%
+    \put(0.74129771,0.20003694){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{blocked_path.pdf}}%
+    \put(0.90497325,0.19963968){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{blocked_path.pdf}}%
+    \put(0.16328077,0.52472423){\color[rgb]{1,1,1}\rotatebox{61.66563948}{\makebox(0,0)[lb]{\smash{\figBPCharge}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{blocked_path.pdf}}%
+    \put(0.23011509,0.20155643){\color[rgb]{1,1,1}\rotatebox{-83.2995997}{\makebox(0,0)[lb]{\smash{\figBPCharge}}}}%
+  \end{picture}%
+\endgroup%

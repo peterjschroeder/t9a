@@ -1,0 +1,56 @@
+
+\unitentry{%
+	name=\imps{},
+	logo=core,
+	cost=205,
+	unitsize=10,
+	maxunitsize=25,
+	costpermodel=15,
+	scoring=yes,
+	maxmodelsperarmy=40,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\supernal{},\scoring{},\fearless{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\impsaegis{}},
+	offensename=\imp{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=2,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\hidebf{\energybolts{} (4+)}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\alphaorderstickto{\standardbearer{}=20}\standardbearer{} \wordwith{} \onechoiceonlyNOC{}\spacebeforecolon{}:=,
+		\alphaorderstickto{\standardbearer{}=22}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\thaumaturgyspellone{}}{\thaumaturgy})=50,
+		\alphaorderstickto{\standardbearer{}=21}\suboptionindent{}\textbf{\firestarter{}} (\spellformat{\spearofinfinity{}\newline\suboptionindent{}}{\hereditaryspell})=45,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}	
+			\addsortedexploption{prename=sloth,hypertag=auraofdespair,name=\auraofdespair{},cost=1\permodel{}}	
+			\addsortedexploption{prename=chaos,hypertag=darkhide,name=\darkhide{},cost=3\permodel}		
+			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},postname=\newline\suboptionindent{}\suboptionindent{}\only{\champion},cost=30}
+			\addsortedexploption{prename=sloth,hypertag=sorcerousantennae,name=\sorcerousantennae{},cost=50}	
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\energybolts}{%
+			\ruletype{\shootingweapon}\range{24}, \shots{1}, \St{} 5, \AP{} 0, \alphaorderlistbf{\reload{},\volleyfire{}}.%
+		}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\firestarter{} (X)}{\ruletype{\universalrule}\firestarterdef}
+	},
+}% END UNIT ENTRY

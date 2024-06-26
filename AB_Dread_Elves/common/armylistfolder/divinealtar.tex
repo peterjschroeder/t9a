@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\divinealtar{},
+	logo=special,
+	cost=200,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=60\timess{}100,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={,\toweringpresence{},{\channel{} (3)}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=2,
+	defenserules={\aegis{} (5+)},
+	offensename=\attendant{} (3),
+	offense@At=2,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\ruthlessefficiency{},\battlefocus{}},
+	offenseweapons={\bladesofdarag{}},	
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\crucibleofslaughter{}}=85,
+			\textbf{\effigyofdread{}}=\free{},
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\textbf{\crucibleofslaughter{}}}{\ruletype{\universalrule}\crucibleofslaughterdef}
+		\modelruledef{\textbf{\effigyofdread{}}}{\ruletype{\universalrule}\effigyofdreaddef}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

@@ -1,0 +1,538 @@
+
+\part{Charge Phase}
+\idx[main=y]{Charge Phase}\label{charge_phase}
+
+The Charge Phase is when the Active Player has the chance to move their units into combat with enemy units. Declaring a Charge and then performing a successful Charge Move is usually the only way to engage an enemy unit in combat.
+
+\RBbmc
+
+\section{Charge Phase Sequence}
+\label{the_charge_phase_sequence}
+
+The Charge Phase is divided into the following steps:
+
+\startseqtablemc
+	1 & Start of the Charge Phase (and start of the Player Turn) \tabularnewline
+	2 & The Active Player chooses a unit and declares a Charge \tabularnewline
+	3 & The Reactive Player declares and resolves their Charge Reaction \tabularnewline
+	4 & Repeat steps 2--3 of this sequence until all units that wish to declare a Charge have done so \tabularnewline
+	5 & The Active Player chooses a unit that declared a Charge, then rolls for Charge Range, and moves the unit \tabularnewline
+	6 & Repeat step 5 of this sequence until all units that declared a Charge have moved \tabularnewline
+	7 & End of the Charge Phase \tabularnewline
+\closeseqtablemc
+
+See figures \ref{figure/example_of_charge_phase_one} and \ref{figure/example_of_charge_phase_two}, page \pageref{figure/example_of_charge_phase_one} and \pageref{figure/example_of_charge_phase_two}, for the illustration of a Charge Phase with several units Charging enemy units and those enemy units declaring and performing their Charge Reactions.
+
+\section{Declaring Charges}
+\idx[main=y]{Declaring Charges}\label{declaring_charges}
+
+Select one of your units that is not already Charging, Engaged in Combat, Fleeing, or contains any Shaken models and declare which enemy unit it will Charge. Each time the Active Player declares a Charge, the Reactive Player must declare the Charged unit's Charge Reaction. In order to be able to declare a Charge:
+
+\begin{itemize}
+	\item At least one model in the Charging unit's first rank must be able to draw Line of Sight to the Charged unit.
+	\item The Charged unit must be within the Charging unit's maximum potential Charge Range (which usually is the Charging unit's Advance Rate + \distance{12}); only take into account effects affecting the Charging unit's Charge Range, like Devastating Charge (+\distance{X} Adv), that are present at the moment the Charge is declared.
+	\item There must be enough room to move the Charging unit into base contact with the Charged unit and to align the units.
+\end{itemize}
+
+\columnbreak
+
+When determining if there is enough room for the Charging unit:
+\begin{itemize}
+	\item Take into account already declared Charges (including align moves of Charging and Charged units)
+	\item Do not take into account any potential Flee Charge Reactions (including mandatory ones)
+	\item Do not take into account any potential casualties inflicted on any Charging unit (e.g. by Stand and Shoot Charge Reactions or failed Dangerous Terrain Tests)
+	\item Do not take into account any potential Combat Reforms due to \hyperref[blocked_path]{Blocked Path}
+\end{itemize}
+
+The unit declaring a Charge is now considered Charging until it has:
+
+\begin{itemize}
+	\item Finished its First Round of Combat after making a Charge Move
+	\item Successfully Charged a Fleeing unit
+	\item Performed a \hyperref[failed_charge]{Failed Charge Move}
+	\item Failed a Panic Test before completing the Charge Move
+	\item Been subject to the rules for \hyperref[no_longer_engaged]{No Longer Engaged}
+\end{itemize}
+
+\section{Charge Reactions}
+\idx[main=y]{Charge Reactions}\label{charge_reactions}
+
+Before declaring a Charge Reaction, determine in which Facing the unit will be Charged. This is determined by the unit's Arc which the Charging unit is \hyperref[unit_arcs]{Located in} (see figure \ref{figure/charge_frontage}).
+
+\newcommand{\chargefrontageCharge}{\smallfontsize{\flufffont{Charge!}}}
+\newcommand{\chargefrontageA}{a)}
+\newcommand{\chargefrontageB}{b)}
+
+\begin{Figure}
+	\Fanchor
+	\vspace{-5pt}
+	\renewcommand{\figbiglettersize}{21}
+	\def\svgwidth{\columnwidth}
+	\subimport{../pics/}{charge_frontage.pdf_tex}
+	\caption{Front or Flank?\captionposttitle
+		a) The Charging unit is Located in the enemy's Front Arc (since this is where the centre of its Front Facing is).\captionpar
+		b) The Charging unit must contact the Charged unit's Front Facing.%
+	}
+	\label{figure/charge_frontage}
+\end{Figure}
+	
+A unit must declare and then resolve its Charge Reaction immediately after a Charge is declared against it and the Facing in which it will be Charged is determined, before any further Charges are declared. There are three different Charge Reactions: \enquote{Hold}, \enquote{Stand and Shoot}, and \enquote{Flee}.
+
+\subsection{Hold}
+\idx[main=y]{Hold (Charge Reaction)}\idx{Engaged in Combat}
+
+A Hold Charge Reaction means that the unit does nothing.
+
+Units Engaged in Combat can only choose to declare the Hold Charge Reaction.
+
+\subsection{Stand and Shoot}
+\idx[main=y]{Stand and Shoot}
+
+A Stand and Shoot Charge Reaction means that the Charged unit immediately performs a Shooting Attack as if in the Shooting Phase, even if the enemy is beyond the attack's maximum range. In this case, the Charging unit is considered to be at Long Range for the Shooting Attack. Remember to apply any modifiers like Long Range and Stand and Shoot. After this, follow the rules for Hold Charge Reactions.
+
+A Stand and Shoot Charge Reaction can only be taken if all of the following conditions are met:
+
+\begin{itemize}
+	\item The Charged unit can perform Shooting Attacks.
+	\item The Charging unit is Located in the Charged unit's Front Arc.
+	\item The Charging unit is farther away than its Advance Rate; use the lowest value among the Charging models if it has more than one.
+ \end{itemize}
+
+Units can only choose to declare a Stand and Shoot Charge Reaction once per Player Turn (even if they are Charged more than once).
+
+\subsection{Flee}
+\idx[main=y]{Flee Charge Reaction}
+
+A Flee Charge Reaction means that the Charged unit starts Fleeing. It is immediately Pivoted to face directly away from the Charging enemy (along a line drawn from the Centre of the Charging unit through the Centre of the Charged unit) and performs a Flee Move (see \totalref{flee_moves}). After a unit completes this Flee Move, any unit that declared a Charge against this unit may immediately attempt to Redirect the Charge. Any unit that does not do so may attempt to Redirect the Charge at a later point during the Charge Phase immediately after the Fleeing unit performs another Flee Charge Reaction.
+
+If the Fleeing unit's Front Facing comes into contact with any unit that declared a Charge against it in this phase (regardless whether the enemy unit Redirected its Charge), the Fleeing unit is removed as a casualty.
+
+Units already Fleeing when Charged can only choose to declare a Flee Charge Reaction.
+
+\columnbreak
+
+\section{Redirecting a Charge}
+\idx[main=y]{Redirecting a Charge}
+
+Immediately after a unit performs a Flee Charge Reaction, the Charging unit may attempt to Redirect the Charge by rolling a Discipline Test. If failed, the unit will try to complete the Charge against the unit that Fled. If passed, the unit may immediately, before declaring a Charge with any other unit, declare a new Charge against another viable target unit, which may choose their Charge Reaction as normal. If more than one unit declared a Charge against the Fleeing unit, each may attempt to Redirect the Charge in any order chosen by the Active Player. If a unit Redirects a Charge and the second target also Flees, the Charging unit may opt to Charge either target, but must declare which before rolling the Charge Range.
+
+Units can only attempt to Redirect a Charge once per Player Turn.
+
+\section{Move Chargers}
+\idx[main=y]{Moving Chargers}\label{move_chargers}
+
+After all Charges have been declared and all Charge Reactions have been declared and completed, Chargers will attempt to move into combat. Choose a unit that has declared a Charge in this phase, roll its Charge Range, and then perform the Charge Move. Repeat these steps with all units that have declared a Charge in this phase.
+
+\subsection{Charge Range}
+\idx{Failed Charge}\idx[main=y]{Charge Range}
+
+A unit's Charge Range is normally \distance{2D6} plus the unit's Advance Rate, using the lowest Advance Rate among the unit's models.
+
+\begin{itemize}
+	\item If the Charge Range is \textbf{equal to or higher} than the distance between the Charger and the Charged unit, and if there is enough space to complete the Charge, the Charge is successful and the Charger performs a Charge Move.
+	\item If the Charge Range is less than the distance between the Charger and the Charged unit, or if there is not enough space to complete the Charge (see \totalref{impossible_charge}), the Charge has failed and the Charger performs a Failed Charge Move.
+\end{itemize}
+
+\newcommand{\alignA}{a)}
+\newcommand{\alignB}{b)}
+\newcommand{\alignC}{c)}
+\newcommand{\alignD}{d)}
+\newcommand{\alignE}{e)}
+\newcommand{\alignCharge}{\smallfontsize{\flufffont{Charge!}}}
+\newcommand{\alignFlyingCharge}{\smallfontsize{\flufffont{Flying Charge!}}}
+
+\begin{figure*}[!b]
+	\vspace*{-10pt}%
+	\renewcommand{\figbiglettersize}{15}
+	\centering
+	\def\svgwidth{\textwidth}
+	\vspace{-5pt}
+	\subimport{../pics/}{align.pdf_tex}
+	\caption{Align moves.\captionposttitlepremc
+	\raggedcolumns\begin{multicols}{2}%
+		In all 5 examples, unit A Charges the Front Facing of unit B.\captionpar
+		a), b), and c) The align move of the Charging unit is made in the direction of alignment with the Charged Facing, so these align moves are legal.\captionpar
+		d) The Charging unit cannot align due to the Impassable Terrain. In this situation, the Charged unit has to perform the align move.\columnbreak\newline
+		e) When contacting the Charged Facing during its Charge Move using Flying Movement, unit A overlaps the Impassable Terrain. Rotating clockwise, unit A would still overlap the Impassable Terrain at the end of its Charge Move, which is not allowed. In order to clear the Impassable Terrain, unit A would have to rotate counter-clockwise. This align move is not legal because it it is not made in the direction of alignment with the Charged Facing.
+	\end{multicols}%
+	}%
+	\label{figure/align}%
+	\vspace*{15pt}%
+\end{figure*}
+
+\columnbreak
+
+\subsection{Charge Move}
+\idx[main=y]{Charge Move}\label{charge_move}
+
+A Charge Move is resolved as follows:
+\begin{itemize}
+	\item The unit can move forwards an unlimited distance.
+	\item A single \hyperref[pivots_and_wheels]{Wheel} can be performed during the move (a Wheel may not exceed \SI{90}{\degree}, see \totalref{pivots_and_wheels}).
+	\item The Front Facing of the Charging unit must contact the Charged unit in the Facing determined when declaring the Charge Reaction.
+	\item The Charging unit is allowed to come within \distance{0.5} of other units and Impassable Terrain as per the Unit Spacing rule. It can only move into base contact with an enemy unit that it declared a Charge against (remember that it is allowed to come into base contact with friendly units and Impassable Terrain).
+	\item Align units (see \nameref{aligning_units} below).
+\end{itemize}
+
+\columnbreak
+
+\subsection{Aligning Units}
+\idx[main=y]{Aligning Units}\label{aligning_units}
+
+After the Charger manages to move into base contact with the Charged unit, the units must now be aligned towards each other. An align move is performed as follows:
+
+\startseqtablemc
+	1 & The owner rotates the Charging unit around the point where it contacted the enemy (see figure \ref{figure/align}), so that the Charging unit's Front Facing and the Charged unit's Facing in which it was contacted are parallel.\\
+	2 & Instead, if this will not align the two units properly, for example due to interfering Terrain or other units, players may rotate the Charged unit so that the Charged unit’s contacted Facing and the Charging unit’s Front Facing are parallel if this will achieve proper contact between them, or do a combination of the two, starting with the Charging unit and rotating the enemy unit as little as possible.\\
+\closeseqtablemc
+
+\newcommand{\maxcontactA}{a)}
+\newcommand{\maxcontactBOne}{b1)}
+\newcommand{\maxcontactBTwo}{b2)}
+\newcommand{\maxcontactCharge}{\smallfontsize{\flufffont{Charge!}}}
+
+\begin{figure*}[!b]
+	\vspace{-15pt}
+	\renewcommand{\figbiglettersize}{15}
+	\centering
+	\hypertarget{maximising_contact_figure}{%
+		\def\svgwidth{\textwidth}
+		\subimport{../pics/}{maximising_contact.pdf_tex}
+	}
+	\vspace*{-12pt}
+	\caption{Maximising contact.\captionposttitlepremc
+	\raggedcolumns
+	\begin{multicols}{2}%
+		a) Unit B Charges an enemy unit. Follow the priority order given by Maximising Contact when moving the Charger.\captionlist
+		\captionitem 1. Not Charging multiple enemy units\newline
+		\captionitem 2. Maximising the number of units Engaged in Combat\newline
+		\captionitem 3. Not rotating the enemy unit\newline
+		\captionitem 4. Maximising the number of models in contact with one or more enemy models
+		\captionpar
+		b1) OK.\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Not applicable\newline
+		\captionitem 3. The Charged unit is not rotated\newline
+		\captionitem 4. The number of models is maximised without brea\-king priority 3. A total of 11 (5 vs 6) models is in base contact with one or more enemy models
+		\captionpar
+		b2) Not OK.\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Not applicable\newline
+		\captionitem 3. The Charged unit is rotated. The Charge is illegal\newline
+		\captionitem 4. The number of models is maximised. A total of 12 (5 vs 7) models is in base contact with one or more enemy models, which is more than b1). This is irrelevant though since the Charge is illegal due to the Charged unit being rotated%
+	\end{multicols}%
+	}%
+	\label{figure/maximising_contact}
+	\vspace*{-15pt}
+\end{figure*}
+
+\columnbreak
+
+Align moves can only be made in the direction of alignment with the enemy unit's Charged Facing (see
+figure \ref{figure/charge_frontage}). The Charged unit must only be moved if it is the only way to align the units. Units can never be moved if they are already Engaged in Combat. These moves are considered part of the Charge Move, so they may bring the units within \distance{0.5} of other units and Impassable Terrain as per the Unit Spacing rule. A unit that is forced to make an align move when it is Charged never has to take Dangerous Terrain Tests due to this move.
+
+\subsection{Maximising Contact}
+\idx[main=y]{Maximising Contact}\label{maximising_contact}
+
+Charge Moves must be made so the following conditions are satisfied as well as possible, in decreasing priority order.
+
+\begin{itemize}
+	\item \nth{1} priority: Make contact with no enemy units other than the one that was Charged. If it will be unavoidable to make contact with more than one enemy unit, make contact with as few enemy units as possible. Follow the rules for Multiple Charges.
+	\item \nth{2} priority: Maximise the total number of Charging units that make contact (note that this is only applicable when multiple units Charge the same unit).
+	\item \nth{3} priority: Avoid rotating the Charged unit (see \totalref{aligning_units}). If it is unavoidable, rotate the unit as little as possible. Remember that units Engaged in Combat cannot be rotated.
+	\item \nth{4} priority: Maximise the number of models (on both sides) in base contact with at least one enemy model (including models fighting across gaps).
+\end{itemize}
+
+See figure \ref{figure/maximising_contact} for an example.
+
+If it is unavoidable to break one or more of the above conditions, you must avoid breaking the higher priority order conditions, even if this means the total number of conditions you break is higher. As long as all above conditions are satisfied as best is possible, Charging units are free to move as they please (following the rules for Moving Chargers).
+
+\newcommand{\figMulChaA}{a)}
+\newcommand{\figMulChaB}{b)}
+\newcommand{\figMulChaOne}{1}
+\newcommand{\figMulChaTwo}{2}
+\newcommand{\figMulChaCharge}{\smallfontsize\flufffont{Charge!}}
+
+\begin{figure*}[!b]
+	\vspace{2pt}
+	\centering
+	\renewcommand{\figbiglettersize}{15}
+	\def\svgwidth{0.8\textwidth}
+	\subimport{../pics/}{multiple_charges_1.pdf_tex}
+	\def\svgwidth{0.8\textwidth}
+	\subimport{../pics/}{multiple_charges_2.pdf_tex}
+	\caption{Multiple Charges.\captionposttitlepremc
+	\raggedcolumns\begin{multicols}{2}%
+		a) When Charging unit D in the Front Facing, unit A cannot avoid contacting unit C, so the rules for Multiple Charges apply. Unit A declares a Charge against D as its initial target and a secondary Charge against C. Both Charged units have to Hold as they are already Engaged in Combat.\captionpar
+		b) Units B, C, and D are aligned and in base contact with one another (this situation may arise if all 3 units had previously Charged and destroyed an enemy unit). Unit A cannot avoid contacting more than one enemy unit when Charging unit C, so the rules for Multiple Charges apply.\columnbreak\newline As per the rules for Maximising Contact as few enemy units as possible must be contacted (\nth{1} priority), so A must declare a secondary Charge against either unit B or unit D. In case neither unit C nor the target of the secondary Charge Flee as a Charge Reaction, A moves into contact with both units, maximising the number of models in base contact according to the \nth{4} priority (position 1 in case unit B was Charged, position 2 in case unit D was Charged).%
+	\end{multicols}%
+	}
+	\label{figure/multiple_charges}
+	\vspace*{-15pt}
+\end{figure*}
+
+\subsection{Multiple Charges}
+\idx[main=y]{Multiple Charges}\label{multiple_charges}
+
+If it will be unavoidable for a Charging unit to contact more than one enemy unit during the Charge Move, the rules for Multiple Charges are applied when declaring Charges:
+
+\begin{itemize}
+	\item First declare a Charge against a single initial target as normal.
+	\item If the initial target of the Charge declares a Charge Reaction other than Flee, the Charging unit must, after the initial target has declared and resolved its Charge Reaction, successively declare secondary Charges against all enemy units it cannot avoid contacting, in an order chosen by the Active Player.
+	\item The targets of secondary Charges declare and perform Charge Reactions as normal.
+	\item If the initial target of the Charge Flees or is destroyed before the Charging unit is moved, ignore all secondary Charges and treat the Charge as a normal Charge against the initial target only.
+\end{itemize}
+
+\columnbreak
+
+\begin{itemize}	
+	\item If a target of a secondary Charge Flees, the Charging unit is not allowed to redirect the Charge, unless the initial target also Flees.
+	\item If a Multiple Charge no longer is unavoidable after all Charges have been declared and after all Charge Reactions have been performed, ignore all secondary Charges and treat the Charge as a normal Charge against the initial target only.
+\end{itemize}
+
+\columnbreak
+
+Note that if contacting more than one enemy unit becomes unavoidable only after all Charges have been declared and all Charge Reactions have been performed, the rules for Multiple Charges do not apply and the Charging unit performs a Failed Charge Move.
+
+See figure \ref{figure/multiple_charges} for examples in which the rules for Multiple Charges apply.
+
+\newpage
+\subsection{Combined Charges}
+\idx[main=y]{Combined Charges}\label{combined_charges}
+
+When declaring a Charge against a unit against which one or more other friendly units already declared Charges during the same Charge Phase, you are allowed to declare the Charge even if the Charged Facing is not wide enough to enable contact with all Charging units. In addition, when more than one unit has declared a Charge against the same enemy unit, Chargers are moved in a slightly different order:
+
+\startseqtablemc
+	1 & Roll Charge Range for each unit Charging that same unit before moving any of them.\\
+	2 & Check which units would be able to reach their target (sufficiently high Charge Range rolls, no other units blocking the Charge Move, etc.).\\
+	3 & Perform the Charge Moves of all Charging units (including those failing their Charge) in the order that best satisfies the priority order of the Maximising Contact rule after all Charge Moves are completed. For determining the order, do not take into account any potential casualties inflicted on any Charging unit (e.g. by failed Dangerous Terrain Tests). The Charged unit may only be rotated if this is required to enable the first Charging unit to complete its Charge.\\
+\closeseqtablemc
+
+See figure \ref{figure/combined_charges} for an example.
+
+
+\newcommand{\combinedchargesCharge}{\smallfontsize\flufffont{Charge!}}
+\newcommand{\combinedchargesA}{a)}
+\newcommand{\combinedchargesBOne}{b1)}
+\newcommand{\combinedchargesBTwo}{b2)}
+\newcommand{\combinedchargesBThree}{b3)}
+\newcommand{\combinedchargesBFour}{b4)}
+
+\begin{figure*}[!htbp]
+\renewcommand{\figbiglettersize}{12}
+	\begin{minipage}{0.5\textwidth}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{combined_charges.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.47\textwidth}
+	\caption{Combined Charges.\captionposttitle
+		a) Multiple units declaring a Charge against a single unit. Follow the priority order given by Maximising Contact.\captionlist
+		\captionitem 1. Not Charging multiple enemy units\newline
+		\captionitem 2. Maximising the number of Charging units in the combat\newline
+		\captionitem 3. Not rotating the Charged unit\newline
+		\captionitem 4. Maximising the number of models in contact with one or more enemy models
+		\vspace*{0.45cm}\captionpar
+		b1) OK\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Maximised. 4 Charging units are Engaged (unit A's Front Facing is only wide enough for 3 of the 4 Charging units in the Front Arc)\newline
+		\captionitem 3. Not applicable\newline
+		\captionitem 4. Maximised without breaking priority 2. A total of 12 (4 vs 8) models is in contact with one or more enemy models. Notice that the flanking unit is only in contact with one enemy model. This is allowed because other models it could contact are already in contact with enemy models
+		\vspace*{1.1cm}\captionpar
+		b2) Not OK\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Maximised. 4 Charging units are Engaged\newline
+		\captionitem 3. Not applicable\newline
+		\captionitem 4. Not maximised. A total of 10 (4 vs 6) models is in contact with one or more enemy models
+		\vspace*{1.8cm}\captionpar
+		b3) Not OK\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Not maximised. Only 3 Charging units are Engaged. The Charge is illegal\newline
+		\captionitem 3. Not applicable\newline
+		\captionitem 4. Maximised. A total of 13 (4 vs 9) models is in contact with one or more enemy models, which is more than all the above. This is irrelevant though since the Charge is illegal due to the number of units not being maximised
+		\vspace*{1cm}\captionpar
+		b4) Not OK\captionlist
+		\captionitem 1. Not applicable\newline
+		\captionitem 2. Maximised. 4 Charging units are Engaged\newline
+		\captionitem 3. Not applicable\newline
+		\captionitem 4. Not maximised. A total of 10 (4 vs 6) models is in contact with one or more enemy models. The Charge is illegal
+}
+	\label{figure/combined_charges}
+	\end{minipage}
+\end{figure*}
+
+\subsection{Engaged in Combat}
+\idx[main=y]{Engaged in Combat}\label{engaged_in_combat}
+
+As soon as a unit completes a Charge, it is Engaged in Combat. Units are considered Engaged in Combat (or short Engaged) as long as one or more models in the unit are in base contact and aligned with an enemy unit. In addition, if a unit is Engaged at the start of a Round of Combat, it counts as Engaged until the start of step 7 of the Round of Combat Sequence (before calculating Combat Score and taking Break Tests, even if it loses base contact with all enemy units before then).
+
+If a unit is Engaged in Combat, all models in the unit are also considered to be Engaged in Combat. Units that are Engaged in Combat cannot move unless specifically stated otherwise (such as during \hyperref[combat_reform]{Combat Reforms} or when \hyperref[break_test]{Breaking from Combat}).
+
+\subsection{Charging a Fleeing Unit}
+\idx{Fleeing Units}\idx[main=y]{Charging a Fleeing Unit}\label{charging_a_fleeing_unit}
+
+When Charging a Fleeing unit, follow the rules for Charge Moves, except that the Charging unit can move into contact with any Facing of the Charged unit. Do not align or maximise base contact. Once the Charger makes contact with the Fleeing unit, the Fleeing unit is removed as a casualty. Once the Fleeing unit has been removed, the Charging unit can take a Discipline Test. If the test is passed, the unit may perform a \hyperref[post_combat_pivot]{Post-Combat Pivot} manoeuvre.
+
+A unit that has Charged a Fleeing unit is \hyperref[shaken]{Shaken} until the end of the Player Turn.
+
+\columnbreak
+
+\subsection{Impossible Charge}
+\idx[main=y]{Impossible Charge}\label{impossible_charge}
+
+Sometimes units block each other from reaching combat when moving the Chargers (or there is not enough space to fit all Chargers). When this happens, the units that can no longer make it into combat must make a Failed Charge Move.
+
+Sometimes a unit can no longer complete its Charge Move due to casualties suffered during the Charge Move. When this happens, backtrack the move to the unit's position before the Charge Move, and perform a Failed Charge Move with the unit.
+
+\subsection{Failed Charge}
+\idx[main=y]{Failed Charge}\label{failed_charge}
+
+When a unit does not roll a sufficient Charge Range, or is otherwise unable to complete the Charge, it performs a Failed Charge Move, comprising an initial Wheel and a subsequent straight forward move, as follows:
+
+\startseqtablemc
+	1 & The move distance of a Failed Charge Move is equal to the highest D6 of the Charge Range roll.\\
+	2 & Wheel the unit until it is facing directly towards the Centre of its intended target, or if it was destroyed, towards the final position of the Centre of the unit, or until it cannot Wheel anymore due to obstructions (whichever comes first).\\
+	3 & Move the unit straight forward the remaining move distance.\\
+\closeseqtablemc
+
+A Failed Charge Move may bring the unit within \distance{0.5} of other units and Impassable Terrain as per the Unit Spacing rule.
+
+Models in a unit that performs a Failed Charge Move are Shaken until the end of the Player Turn. Units that have completed a Failed Charge Move are no longer considered Charging.
+
+\newcommand{\figBPAOne}{a1)}
+\newcommand{\figBPATwo}{a2)}
+\newcommand{\figBPAThree}{a3)}
+\newcommand{\figBPBOne}{b1)}
+\newcommand{\figBPBTwo}{b2)}
+\newcommand{\figBPBThree}{b3)}
+\newcommand{\figBPCharge}{\fontsize{4}{5}\selectfont{\flufffont{Charge!}}}
+
+\begin{figure*}[!b]
+	\renewcommand{\figbiglettersize}{13}
+	\vspace{-10pt}
+	\centering
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{blocked_path.pdf_tex}
+	\caption{Examples of Charges where Blocked Path is applicable.\captionposttitlepremc
+	\raggedcolumns\begin{multicols}{2}%
+		a1) Unit B Charges unit A, but the units cannot be aligned towards each other, solely due to the enemy unit C.\captionpar
+		a2) Unit B performs a Blocked Path move: it moves forwards until it contacts unit A.\captionpar
+		a3) Unit A then performs a Combat Reform to align the units.\columnbreak\newline
+		b1) Unit F Charges unit E, but the units cannot be aligned towards each other due to the enemy unit D and the Impassable Terrain.\captionpar
+		b2) Unit F performs a Blocked Path move: it moves forwards until it contacts unit E.\captionpar
+		b3) Unit E then performs a Combat Reform to align the units.%
+	\end{multicols}%
+	}
+	\vspace{-10pt}
+	\label{figure/blocked_path}
+\end{figure*}
+
+\newpage
+
+\subsection{Blocked Path}
+\idx[main=y]{Blocked Path}\label{blocked_path}
+
+To prevent abusive situations where a unit cannot Charge an enemy unit well within Charge Range and Line of Sight due to a convoluted positioning of enemy units, potentially in conjunction with Impassable Terrain or the Board Edge, the following rules are applied.
+
+A unit can declare a Charge against an unengaged enemy unit and make a special Charge Move as described below, if it is unable to declare a normal Charge in the Charge Phase solely due to any of the following reasons:
+\begin{itemize}
+	\item Unengaged enemy units
+	\item The combination of at least two unengaged enemy units and one or more Impassable Terrain Features
+	\item The Board Edge preventing alignment
+\end{itemize}
+
+Move the unit straight forward up to its Charge Range. If this brings the Charging unit into base contact with the enemy unit against which the Charge was declared, that unit is Charged. Instead of Aligning Units as normal, the enemy unit performs a Combat Reform to bring the units into alignment with each other (see \totalref{combat_reform}).
+
+\columnbreak
+
+Combat Reform, ignoring the restriction for models moving only up to their \MarchRate{} during the Combat Reform, so that:
+
+\begin{itemize}
+	\item The Charged Facing determined when declaring the Charge Reaction is aligned with the Charging unit.
+	\item The Charging unit is Engaged in its Front Facing.
+	\item The Charged unit does not change its number of ranks or files.
+	\item The number of models (on both sides) in base contact with an enemy is maximised.
+\end{itemize}
+
+If it is not possible to align the units without changing the number of ranks or files, you may change the number of ranks and files and do not have to maximise models in base contact. If this does not enable the Charged unit to align, it must be aligned with a Facing other than the Charged Facing. If the enemy unit is unable to perform a Combat Reform to align the units, the Blocked Path Charge Move cannot be performed.
+
+Figure \ref{figure/blocked_path} illustrates Blocked Path situations.
+
+\newcommand{\figEOCPoA}{a)}
+\newcommand{\figEOCPoB}{b)}
+\newcommand{\figEOCPoC}{c)}
+\newcommand{\figEOCPoD}{d)}
+\newcommand{\figEOCPoE}{e)}
+\newcommand{\figEOCPoOne}{1}
+\newcommand{\figEOCPoTwo}{2}
+\newcommand{\figEOCPoThree}{3}
+\newcommand{\figEOCPoFour}{4}
+\newcommand{\figEOCPoHold}{\normalfontsize\flufffont{Hold!}}
+\newcommand{\figEOCPoStandAndShoot}{\normalfontsize\flufffont{Stand and Shoot!}}
+\newcommand{\figEOCPoCharge}{\smallfontsize\flufffont{Charge!}}
+\newcommand{\figEOCPocharge}{\smallfontsize\flufffont{Charge}}
+\newcommand{\figEOCPoFlee}{\normalfontsize\flufffont{Flee!}}
+\newcommand{\figEOCPoBigFlee}{\smallfontsize\flufffont{Flee}}
+\newcommand{\figEOCPoFleeDistance}{\normalfontsize Flee Distance}
+\newcommand{\figEOCPoPanicTest}{\normalfontsize Panic Test}
+\newcommand{\figEOCPoPassed}{\normalfontsize Passed}
+\newcommand{\figEOCPoRedirect}{\normalfontsize Redirect}
+\newcommand{\figEOCPoFailed}{\normalfontsize Failed}
+
+
+\begin{figure*}[!htbp]
+	\begin{minipage}{0.61\textwidth}
+	\renewcommand{\figbiglettersize}{12}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{example_of_charge_phase_one.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.37\textwidth}
+	\caption{Example of a Charge Phase involving multiple units.\captionposttitle
+		a) 1. Unit A declares a Charge against unit E.\newline
+		2. Unit E declares and resolves a Hold Charge Reaction.\newline
+		3. Unit C declares a Charge against unit G.\newline
+		4. Unit G declares and resolves a Stand and Shoot Charge Reaction, inflicting 1 casualty on unit C.\captionpar
+		b) 1. Unit B declares a Charge against unit E.\newline
+		2. Unit E declares and resolves a Flee Charge Reaction, rolling \distance{5} for the Flee Distance. The Flee Move would make unit E end its move inside unit F's Unit Boundary, so the Flee Distance is extended for unit E to get clear of unit F.\newline
+		3. Unit F takes a Panic Test for the friendly unit E Fleeing through its Unit Boundary and passes the test.\captionpar
+		c) 1. Since unit E performed a Flee Charge Reaction, unit A may attempt to Redirect the Charge. The unit however fails the Discipline Test, so it must try to complete the Charge against unit E.\newline
+		2. Unit B also attempts to Redirect the Charge and passes the Discipline Test. Unit B now declares a Charge against unit F.\newline
+		3. Unit F declares and performs a Hold Charge Reaction.\captionpar
+		d) 1. Unit D declares a Charge against the Fleeing unit E. Note that this Charge is legal although at this point unit D could not complete this Charge as unit C would block the Charge Move, because already declared Charges are taken into account when determining if there is enough room for a Charging unit to complete the Charge.\newline
+		2. Since unit E is already Fleeing, it must declare and perform another Flee Charge Reaction, rolling \distance{3} for the Flee Distance. As before, the Flee Distance is extended until unit E gets clear of unit F. Unit F does not take a Panic Test for a friendly unit Fleeing through its Unit Boundary as it already passed a Panic Test during this phase.\captionpar
+		e) 1. Unit D attempts to Redirect the Charge and passes the Discipline Test. Unit D declares a Charge against unit F.\newline
+		2. Unit F declares and performs a Stand and Shoot Charge Reaction, inflicting 2 casualties on unit D.\newline
+		3. Unit D takes and passes a Panic Test for losing \SI{25}{\percent} or more Health Points.%
+	}
+	\label{figure/example_of_charge_phase_one}
+	\end{minipage}
+\end{figure*}
+
+\newcommand{\figEOCPtA}{a)}
+\newcommand{\figEOCPtB}{b)}
+\newcommand{\figEOCPtC}{c)}
+\newcommand{\figEOCPtD}{d)}
+\newcommand{\figEOCPtE}{e)}
+\newcommand{\figEOCPtcharge}{\smallfontsize\flufffont{Charge}}
+\newcommand{\figEOCPtChargeRangeRoll}{\normalfontsize Charge Range roll}
+\newcommand{\figEOCPtDisciplineTest}{\normalfontsize Discipline Test}
+\newcommand{\figEOCPtPassed}{\normalfontsize Passed}
+\newcommand{\figEOCPtFailed}{\normalfontsize Failed}
+
+\begin{figure*}[!htbp]
+	\begin{minipage}{0.41\textwidth}
+	\caption{Example of a Charge Phase involving multiple units -- part 2.\captionposttitle
+		After all Charges have been declared and all Charge Reactions have been declared and performed, the Active Player moves all the units that declared Charges this turn, by rolling a unit's Charge Range and then moving the unit, in an order chosen by the Active Player.\captionpar
+		a) Unit C rolls a sufficiently high Charge Range to reach unit G. Unit C performs a Charge Move against unit G.\vspace*{0.6cm}\captionpar
+		b) Unit A rolls a sufficiently high Charge Range to reach the Fleeing unit E. Unit A performs a Charge Move against unit E. Since unit E was Fleeing, it is removed as a casualty as soon as the Charging unit moves into contact (without aligning or maximising base contact).\vspace*{3.1cm}\captionpar
+		c) Unit A performs and passes a Discipline Test in order to perform a Post-Combat Pivot after successfully Charging a Fleeing unit.\vspace*{3.1cm}\captionpar
+		d) Since units B and D both Charge the same enemy unit, both units roll their Charge Range before any of the units that are part of the Combined Charge is moved. Unit B rolls a sufficiently high Charge Range, while unit D fails the Charge Range roll.\vspace*{2.4cm}\captionpar
+		e) Unit B performs a Charge Move against unit F, following the rules for \totalref{maximising_contact}. Unit D performs a Failed Charge Move towards unit F.\vspace*{1.2cm}%
+	}
+	\label{figure/example_of_charge_phase_two}
+	\end{minipage}\hfill\begin{minipage}{0.569\textwidth}
+	\renewcommand{\figbiglettersize}{12}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{example_of_charge_phase_two.pdf_tex}
+	\end{minipage}
+	\debugfooter
+\end{figure*}
+
+\RBemc

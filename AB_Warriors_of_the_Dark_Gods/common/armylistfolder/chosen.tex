@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\chosen{},
+	logo=special,
+	cost=235,
+	unitsize=5,
+	maxunitsperarmy=4,
+	maxunitsize=10,
+	costpermodel=45,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\pathfavoured{},\scoring{},\fearless{}},
+	defense@HP=2,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\hellforgedarmor{},\spikedshield{}},
+	offensename=\chosenSINGULAR{},
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={\extrasupport{} (3)\hidebf{}},
+	offense@Ag=5,
+	commandgroup={%
+		\champion{}=30,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\mustchoosefavour{%
+			\envy{}=5\permodel{},
+			\gluttony{}=4\permodel{},
+			\greed{}=12\permodel{},
+			\lust{}=2\permodel{},
+			\pride{}=\free{},
+			\sloth{}=6\permodel{},
+			\wrath{}=14\permodel{},
+		},%
+		\onechoiceonlyACO{%
+			\pw{}=\free{},
+			\gw{}=3\permodel{},
+			\halberd{}=7\permodel{},
+		},%
+	},
+%	modelrulesdef={%
+%		\modelruledef{}{\ruletype{}}
+%	},
+} % END UNIT ENTRY

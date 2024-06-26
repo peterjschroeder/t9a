@@ -1,0 +1,21 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{VSArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{VSModelRules}{\armymodelrules}\par
+	\tocentry{VSHereditarySpell}{\hereditaryspell}\par
+	\tocentry{VSSpecialEquip}{\specialequipment}\par
+	\tocentry{VSArmyOrganisation}{\armyorganisation}\par
+	\tocentry{VSQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{VSchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{VSCharacters}{\characters}\par
+	\tocentry{VSMounts}{\charactermounts}\par
+	\tocentry{VSCore}{\core}\par
+	\tocentry{VSSpecial}{\specialcategory}\par
+	\tocentry{VSTunnelGunners}{\tunnelgunners}\par
+	\tocentry{VSBreadandGames}{\breadandgames}\par
+}

@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\naiads{},
+	logo=fey,
+	cost=\newrule{165},
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=22,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	globalrules={\fearless{}, \scout{}, \strider{\waterterrain{}}, \specialambush{} (\waterterrain{}), \lighttroops{},\wizardconclave{}},
+	defense@HP=2,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	offensename=\naiad{},
+	offense@At=,
+	offense@Of=,
+	offense@St=3,
+	offense@AP=3,
+	offense@Ag=5,
+	offenserules={\grindattacks{} (2)},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\witchcraftspelltwo}{\witchcraft},
+			\spellformat{\newrule{\druidismspellone}}{\druidism},
+			\spellformat{\shamanismspellthree}{\shamanism},
+			\spellformat{\divinationspellthree}{\divination},
+		}
+	},
+	commandgroup={%
+		\champion{}=100,
+	},
+}

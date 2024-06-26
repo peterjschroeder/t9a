@@ -1,0 +1,11 @@
+Files in this folder are only to be used to reduce size of Anurarchs page.
+
+In order to do so, only some of the files here included are taken into account for compilation.
+
+Masteries should be ordered by price followed by alphabetical order. The first four masteries will be listed in
+anurarcharchmage.tex as opotions. The last three masteries will be included in anurarcharchmagecont.tex, were they
+use special items format (which happens to be the same), and the files in this folder.
+
+Therefore, in case masteries prices change, and order needs to be modified, the three last masteries have to be 
+commented out in anurarcharchmage.tex, and included in anurarcharchmagecont.tex. For consistency reasons, it would
+be good to update point values in all files.

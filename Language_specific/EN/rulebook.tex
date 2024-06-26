@@ -1,0 +1,35 @@
+
+% Index
+
+\newcommand{\indexofkeywordstitle}{Alphabetical Index}
+
+% References
+
+\newcommand{\pageforref}{page}% As in: See "page" XX to have more details
+\AfterEndPreamble{%
+	\def\partautorefname{chapter}% As in: See "chapter" XX to have more details - only available if \totalrefpartname is defined in the preamble of the Rulebook
+	\def\sectionautorefname{section}% etc
+	\def\subsectionautorefname{subsection}
+	\def\subsubsectionautorefname{subsubsection}
+	\def\paragraphautorefname{paragraph}
+}
+
+%%% Other rules %%%
+
+\newcommand{\oneofakind}{One of a Kind}
+
+\newcommand{\hardcover}{Hard Cover}
+\newcommand{\softcover}{Soft Cover}
+
+\newcommand{\rnf}{R\&{}F}
+\newcommand{\general}{General}
+\newcommand{\swirlingmelee}{Swirling Melee}
+
+%%% Deployment types %%%
+
+\newcommand{\frontlineclash}{Frontline Clash}
+\newcommand{\dawnassault}{Dawn Assault}
+\newcommand{\counterthrust}{Counterthrust}
+\newcommand{\encircle}{Encircle}
+\newcommand{\refusedflank}{Refused Flank}
+\newcommand{\marchingcolumns}{Marching Columns}

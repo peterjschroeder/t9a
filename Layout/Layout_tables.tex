@@ -1,0 +1,108 @@
+
+\newcommand{\alternaterowcolors}{\rowcolors{1}{white}{\lightgreycolor}}
+
+\newcolumntype{M}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}%
+}
+  
+\arrayrulecolor{\greycolor}
+\setlength{\arrayrulewidth}{0.5pt}
+
+\ifdefined\thisisthepathsbook
+	\setlength{\tabcolsep}{0pt}
+	\renewcommand{\arraystretch}{1.65}
+	\ifdef{\languageisfrench}{\renewcommand{\arraystretch}{1.6}}{}
+	\ifdef{\languageisrussian}{\renewcommand{\arraystretch}{1.6}}{}
+\else
+	\renewcommand{\arraystretch}{1.5}
+\fi
+
+\ifdefined\thisisanarmybook
+
+	\newcommand{\resetarraystretch}{%
+		\renewcommand{\arraystretch}{1.2}
+	}
+	\resetarraystretch
+
+\fi
+
+
+%%% Sequence tables %%%
+
+\newcommand{\startseqtable}{%
+	\hspace*{0.3cm}%
+	\begin{tabular}{M{0.4cm} | m{14cm}}%
+}%
+
+\newcommand{\closeseqtable}{%
+	\end{tabular}\par%
+}
+
+\newcommand{\startseqtablemc}{%
+	\begin{tabular}{@{}M{0.4cm} | m{\linewidth-0.4cm-19pt}}%
+}%
+
+\newcommand{\closeseqtablemc}{%
+	\end{tabular}\par%
+}
+
+\newcommand{\startsumseqtable}{%
+	\begin{tabular}{M{0.35cm} | m{\textwidth -24.5pt -0.35cm}}%
+}%
+
+\newcommand{\closesumseqtable}{%
+	\end{tabular}\par%
+}
+
+%%% Army Organization part %%%
+
+\newcommand{\openarmyorganizationtable}[1]{%
+\begin{center}%
+\renewcommand{\arraystretch}{1}%
+\begin{tabular}{@{}*{#1}{M{\textwidth/#1}@{}}}%
+}
+
+\newcommand{\closearmyorganizationtable}{%
+\end{tabular}\end{center}%
+}
+
+\newcommand{\armyorganizationlogo}[1]{%
+\includegraphics[width=0.142\textwidth]{{logo_#1}.png}
+}
+
+\newcommand{\armyorganizationcategoryandlimit}[2]{%
+\vspace*{-0.65cm}\par%
+\textbf{#1}\par%
+#2%
+}
+
+
+%%% Model Rules table %%%
+
+%\newcounter{specialruletablepagecounter}
+
+\newcommand{\specialruletableentry}[2]{%
+	\hyperref[#1]{#2}%
+	\hfill\pageref{#1}\newline%
+}
+%\newcommand{\specialruletableentry}[2]{\hyperref[#1]{#2}%
+%\ifnum\getpagerefnumber{#1}>\value{specialruletablepagecounter}%
+%\hfill\pageref{#1}%
+%\setcounter{specialruletablepagecounter}{\getpagerefnumber{#1}}%
+%\fi\newline}
+
+\newcommand{\specialruletablesubtitle}[2]{%
+	\hbadness=10000\vspace{-8pt}{\largerfontsize\hyperref[#1]{\textbf{#2}}%
+	\hfill\textbf{\pageref{#1}}}\vspace{3pt}\newline%
+	%\setcounter{specialruletablepagecounter}{\getpagerefnumber{#1}}%
+}
+
+
+%%% Terrain tables %%%
+
+\newenvironment{tableterrain}%
+	{\setlength{\tabcolsep}{6pt}\noindent\begin{tabular}{>{\bfseries\raggedleft}p{2.2cm}p{13.5cm}}}
+	{\end{tabular}}

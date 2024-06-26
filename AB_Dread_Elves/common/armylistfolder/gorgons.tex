@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\gorgons{},
+	logo=special,
+	cost=155,
+	unitsize=1,
+	maxunitsize=3,
+	costpermodel=120,
+	scoring=,
+	maxunitsperarmy=2,
+	maxmodelsperarmy=3,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\fearless{},\fear{},\supernal{},\strider{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+)}, 
+	offensename=\gorgon{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\hidebf{\petrifyingstare{}},\ruthlessefficiency{}},
+	modelrulesdef={%
+		\modelruledef{\petrifyingstare}{\ruletype{\specialattack}\petrifyingstaredef}
+	},
+	options={%
+		\onechoiceonlyACO{%
+			\halberd{}=15\permodel{},
+			\pw{}=5\permodel{},
+		},
+	},
+}% END UNIT ENTRY

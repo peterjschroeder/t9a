@@ -1,0 +1,107 @@
+%Army Specific Rules
+\newcommand{\nogodsnokings}{No Gods, No Kings}
+
+% ARMY MODEL RULES
+\newcommand{\combinedstrength}{}
+\newcommand{\communalbond}{Communal Bond}
+\newcommand{\caimanmentors}{Caiman Mentors}
+\newcommand{\preyscent}{Prey Scent}
+\newcommand{\predatorsenses}{Predator Senses}
+\newcommand{\packhunter}{Pack Hunter}
+\newcommand{\chameleon}{Chameleon}
+\newcommand{\enclavewizard}{Enclave Wizard}
+\newcommand{\markinglure}{Marking Lure}
+\newcommand{\lodestone}{Lodestone}
+
+\newcommand{\toothandclaw}{Tooth and Claw}
+\newcommand{\poisonedjavelin}{Poisoned Javelin}
+\newcommand{\blowpipe}{Blowpipe}
+\newcommand{\magneticshortbow}{Magnetic Short Bow}
+
+\newcommand{\nogodsnokingsdef}{
+	Saurian Ancients armies do not have to contain at least one Character, and they cannot name any Character the General.
+}
+
+
+
+\newcommand{\communalbonddef}{
+When the model's unit takes a Discipline Test, the owner may choose to apply the following rules:
+	\begin{enumerate}
+		\item Choose a single model in the unit to take the test for the whole unit as usual.
+		\item Determine the model with the highest Discipline value in any other friendly non-Fleeing unit within \distance{8} of the unit.
+		\item \textbf{Set} the Discipline value of the model chosen in step 1 to the value determined in step 2.
+	\end{enumerate}
+}
+
+\newcommand{\caimanmentorsdef}{
+Caiman Mentors may be added to the unit. Caiman Mentors use the unit profile of the models stated in brackets (X). In addition, they follow the rules for Matching Bases (see Front Rank) and gain Fight in Extra Rank and Stand Behind.\\
+\\
+Caiman Mentors count as Characters for the purpose of distributing hits. They are not forced to choose the same Close Combat Weapons as other \rnf{} models in the unit. Excess Health Point losses \textbf{never} transfer between Caiman Mentors and other Health Pools.\\
+\\
+Instead of allocating Close Combat Attacks as usual, \rnf{} models can allocate Close Combat Attacks towards any non-Champion \rnf{} model in a unit with Caiman Mentors, even when they are not in base contact. Attacks allocated against Caiman Mentors that are not in base contact with the attacker, including attacks from Swirling Melee but excluding Supporting Attacks that could normally be allocated towards \caimanmentors{}, suffer \minuss{}1 to hit.\\
+\\
+Units with Caiman Mentors cannot be joined by War Platforms.
+}
+
+\newcommand{\preyscentdef}{
+	Certain units from this Army Book have the ability to mark enemy units with \preyscent{}. If a unit is marked, place a Scent Marker next to the unit. A unit is considered marked if at least one model in the unit is marked by a Scent Marker. A Character leaving a unit affected by a Scent Marker is no longer affected, unless the Character was a single model unit when it gained the Scent Marker. In that case, the Character keeps the Scent Marker. Marking a unit more than once does not offer any additional benefits.
+}
+
+
+\newcommand{\predatorsensesdef}{
+	Right before the battle (during step 7 of the Deployment Phase Sequence), if your Army List contains one or more models with this rule, you \textbf{must} mark a single unit from your opponent's Army List with \preyscent{}. In addition,  the model part \textbf{must} reroll failed to-hit rolls with Close Combat Attacks against models in units that are marked with \preyscent{} and with Shooting Attacks against units that are marked with \preyscent{}.
+}
+
+
+\newcommand{\packhunterdef}{
+	In the Charge Phase, units with more than half of their models with Pack Hunter may reroll failed Charge Range rolls if their Charge is part of a Combined Charge.
+}
+
+
+\newcommand{\chameleondef}{
+	The model gains \textbf{\ambush{}}, \textbf{\hardtarget{} (1)}, and \textbf{\scout{}}.
+}
+
+
+\newcommand{\withenclavewizard}{with Enclave Wizard}
+\newcommand{\enclavewizarddef}{
+	The Champion is a Wizard  Apprentice with the following additional rules:
+	\begin{itemize}
+		\item The model gains +1 Health Point, up to a maximum of 3.
+		\item The model may select a number of spells given in the unit entry from the predetermined spells also given in the unit entry. This overrides the Spell Selection rules for Wizard  Apprentices. Models that know two Learned Spells gain Channel (1).
+		\item If applicable, the model's base size is changed to the base size stated in brackets (X). If so, the model gains Stand Behind.
+	\end{itemize}
+}
+
+
+\newcommand{\markingluredef}{
+	Units hit by one or more attacks with \markinglure{} gain a \textbf{Scent Marker} until the end of the game.
+}
+
+
+\newcommand{\lodestonedef}{
+	Attacks with \lodestone{} are subject to the following rules when rolling to hit:
+	\begin{itemize}
+		\item Close Combat Attacks against which the target has Armour 3 or more gain +1 to hit. 
+		\item Shooting Attacks made against a unit with more than half of its models with Armour 3 or more gain +1 to hit. 
+	\end{itemize}	
+}
+
+\newcommand{\toothandclawdef}{
+	Two-Handed. Attacks made with this weapon gain \textbf{\lightningreflexes{}} and \textbf{\lethalstrike{}}. This weapon cannot be enchanted.
+}
+
+
+\newcommand{\poisonedjavelindef}{% Shooting Weapon
+	\range{12}, \shots{1}, \St{} as user, \AP{} as user, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}.%
+}
+
+
+\newcommand{\blowpipedef}{% Shooting Weapon
+	\range{12}, \shots{2}, \St{} 2, \AP{} 0, \textbf{\poisonattacks{}}, \textbf{\quicktofire{}}.
+}
+
+\newcommand{\magneticshortbowrestriction}{0-25 R\&F Models with \magneticshortbow{} per Army.}
+\newcommand{\magneticshortbowdef}{
+	\range{18}, \shots{1}, \St{} 3, \AP{} 1, \textbf{\volleyfire{}}, \textbf{\lodestone{}}.%
+}

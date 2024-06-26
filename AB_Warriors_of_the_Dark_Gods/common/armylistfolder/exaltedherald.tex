@@ -1,0 +1,58 @@
+
+\unitentry{%
+	name=\exaltedherald{},
+	logo=character,
+	cost=780,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=9,
+	globalrules={\fear{}, \fearless{}, \supernal{}, \wizardadept{}, \hidebf{\manifestation}, \legendarybeasts{} (2)},
+	defense@HP=5,
+	defense@Df=8,
+	defense@Re=5,
+	defense@Arm=3,
+	defensearmour={\aegis{} (4+)},
+	offensename=\exaltedherald{},
+	offense@Ag=8,
+	offense@At=6,
+	offense@Of=9,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={},
+	modelrulesdef={%
+			\modelruledef{\manifestation}{\ruletype{\universalrule}{\manifestationdef}}
+		},
+	endtext={%
+			\manifestationtable{%
+				\manifestationtabledef{\abidingspirit}{%
+					\textbf{\hardtarget{} (1)}. \abidingspiritrule{}%
+				}{%
+					\spellformat{\thaumaturgyspelltwo}{\thaumaturgy}%
+				}%
+				\manifestationtabledef{\brandofthedragon}{%
+					\alphaorderlistandbf{\fly{7}{14},\swiftstride{},\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}}%
+				}{%
+					\spellformat{\occultismspellone}{\occultism}%
+				}%
+				\manifestationtabledef{\emissaryofchaos}{%
+					\alphaorderlistandbf{\stompattacks{\Dsix{}},\stubborn{},\tall{},\terror{}}%
+				}{%
+					\spellformat{\occultismspellfour}{\occultism}%
+				}%
+				\manifestationtabledef{\sorcererimmortal}{%
+					\alphaorderlistandbf{\textbf{\veilwalker},\channel{1}}%
+				}{%
+					\spellformat{\occultismspellfive}{\occultism} \wordand{}\newline \spellformat{\occultismspellsix}{\occultism}%
+				}%
+				\manifestationtabledef{\unholyavatar}{%
+					+1 \Strength{}, +1 \ArmourPenetration{}\oxfordcomma{} \wordand{} \textbf{\divineattacks}%
+				}{%
+					\spellformat{\occultismspellthree}{\occultism}%
+				}%
+			}
+		},
+}

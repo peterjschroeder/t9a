@@ -1,0 +1,30 @@
+
+\unitentry{%
+	name=\vengeanceseeker{},
+	logo=special,
+	cost=120,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=10,
+	globalrules={\unbreakable{},\fearless{},\thebiggertheyare{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (6+),\distracting{},\hardtarget{} (1)},
+	offensename=\vengeanceseeker{},
+	offense@At=\XDthree{3},
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenseweapons={\yercomingwithme{},\hidebf{\whirlingchainsofdoom{}}},
+	modelrulesdef={%
+		\modelruledef{\whirlingchainsofdoom}{\ruletype{\closecombatweapon}{\whirlingchainsofdoomdef}}%
+	},
+}% END UNIT ENTRY

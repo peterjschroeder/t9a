@@ -1,0 +1,46 @@
+\definecolor{customcyan}{RGB}{0,162,171}
+\definecolor{customorange}{RGB}{236,130,0}
+
+\vspace{0.3cm}
+\begin{tikzpicture}[%
+	keyword/.style = {rectangle, draw, top color=customcyan!80, bottom color=white, align=center, rounded corners, inner sep=7pt, line width=1pt, shading=axis, shading angle=45},%
+	action/.style = {ellipse, draw, top color=customorange!80, bottom color=white, align=center, line width=1pt, shading=axis, shading angle=45},%
+	line/.style = {draw, line width=1pt, -latex'},%
+	]
+	% Place nodes
+	\node [keyword] (attack) {\figATPAttack};
+	\node [action, right=0.7cm of attack] (tohitroll) {\figATPTohitroll};
+	\node [keyword, right=0.7cm of tohitroll] (hit) {\figATPHit};
+	\node [action, right=0.7cm of hit] (towoundroll) {\figATPTowoundroll};
+	\node [keyword, right=0.7cm of towoundroll] (wound) {\figATPWound};
+	\node [action, right=0.7cm of wound] (armoursave) {\figATPArmoursave};
+    \node [right=0.5cm of armoursave] (continueA) {};
+	% Draw edges
+	\path [line] (attack) -- (tohitroll);
+	\path [line] (tohitroll) -- (hit);
+	\path [line] (hit) -- (towoundroll);
+	\path [line] (towoundroll) -- (wound);
+	\path [line] (wound) -- (armoursave);
+	\path [draw, dashed, line width=1pt] (armoursave) --  (continueA);
+\end{tikzpicture}
+
+\vspace*{0.5cm}\begin{tikzpicture}[%
+	keyword/.style = {rectangle, draw, top color=customcyan!60, bottom color=white, align=center, rounded corners, inner sep=7pt, line width=1pt, shading=axis, shading angle=45},%
+	action/.style = {ellipse, draw, top color=customorange!60, bottom color=white, align=center, line width=1pt, shading=axis, shading angle=45},%
+	line/.style = {draw, line width=1pt, -latex'},%
+	]
+	% Place nodes
+	\node [action, below left=1cm and -0.9cm of attack] (specialsave) {\figATPSpecialsave};
+    \node [left=0.5cm of specialsave] (continueB) {};
+	\node [keyword, right=0.7cm of specialsave] (unsavedwound) {\figATPUnsavedwound};
+	\node [action, right=0.7cm of unsavedwound] (applymultiplewounds) {\figATPApplymultiplewounds};
+	\node [keyword, right=0.7cm of applymultiplewounds] (healthpointloss) {\figATPHealthpointloss};
+	\node [keyword, right=0.7cm of healthpointloss] (casualty) {\figATPCasualty};
+	% Draw edges
+	\path [draw, dashed, line width=1pt, -latex'] (continueB) --  (specialsave);
+	\path [line] (specialsave) -- (unsavedwound);
+	\path [line] (unsavedwound) -- (applymultiplewounds);
+	\path [line] (applymultiplewounds) -- (healthpointloss);
+	\path [line] (healthpointloss) -- (casualty);
+\end{tikzpicture}
+	

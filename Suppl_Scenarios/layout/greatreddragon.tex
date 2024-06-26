@@ -1,0 +1,32 @@
+
+\unitentry{%
+	name=\greatreddragon{},
+	logo=monster,
+	cost=,
+	unitsize=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=50\timess{}100,
+	global@Ad=0,
+	global@Ma=0,
+	global@Di=9,
+	globalrules={\textbf{\proud{}},\textbf{\territorial{}},\unbreakable{},\fly{0}{0},\lighttroops{}},
+	defense@HP=6,
+	defense@Df=6,
+	defense@Re=6,
+	defense@Arm=4,
+	defenserules={\dragonaegis{}, \hardtarget{} (1), \textbf{\toughskin{}}},
+	offensename=\greatreddragon{},
+	offense@At=5,
+	offense@Of=6,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=3,
+	offenserules={\breathattack{\St{} 4, \AP{} 1, \flamingattacks{}}, \textbf{\savage{}}},
+	modelrulesdef={%
+		\modelruledef{\proud}{\ruletype{\universalrule}\prouddef}
+		\modelruledef{\territorial}{\ruletype{\universalrule}\territorialdef}
+		\modelruledef{\toughskin}{\ruletype{\personalprotection}\toughskindef}
+		\modelruledef{\savage}{\ruletype{\attackattribute}\savagedef}
+	},
+} % END UNIT ENTRY 

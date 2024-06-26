@@ -1,0 +1,38 @@
+
+\unitentry{%
+	name=\theladycourtier{},
+	logo=fey,
+	cost=\newrule{440},
+	unitsize=1,
+	addrestriction=\oneofakind{},
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={,\supernal{},\fear{}, \fearless{}},
+	defense@HP=5,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=3,
+	defense@Aeg=5+,
+	defenserules={{\aegis{} (+1, \against{} Melee Attacks)}},
+	offensename=\ladycourtier{},
+	offense@At=5,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=4,
+	offense@Ag=7,
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+				\textbf{\courtierofthedawn}{}=\free{},
+				\textbf{\courtierofthedusk}{}=25,
+		}},
+	},
+	paths={\witchcraft{}=witchcraft,\druidism{}=druidism},
+	optionalmodelrulesdef={%
+		\modelruledef{\courtierofthedawn}{\ruletype{\universalrule}\courtierofthedawndef}
+		\modelruledef{\courtierofthedusk}{\ruletype{\universalrule}\courtieroftheduskdef}
+	},
+}

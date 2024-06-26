@@ -1,0 +1,53 @@
+
+{\renewcommand{\labels@optionalmodelrulesdef}{\textnormal{\textcolor{black}{\optionalmanifestation}}}
+\unitentry{%
+	name=\veilserpents{},
+	logo=bird,
+	cost=240,
+	unitsize=3,
+	maxunitsize=6,
+	costpermodel=34,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=9,
+	global@Mafly=12,
+	global@Di=7,
+	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{9}{12},\wizardconclave{},\hidebf{\morphlings}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\veilserpent{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=0,
+	offense@Ag=4,
+	commandgroup={%
+		\champion{}=135,
+	},
+	modelrulesdef={%
+		\modelruledef{\morphlings}{\ruletype{\universalrule}\morphlingsdef%
+			\startmorphlingslist%
+				\newmorphlingentry{lust}{mesmerisingplumage}{\mesmerisingplumage{}}
+				\newmorphlingentry{sloth}{chillingyawn}{\chillingyawn{}}
+				\newmorphlingentry{envy}{venomsacs}{\venomsacs{}}
+			\closemorphlingslist%
+		}%
+	},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\thaumaturgyspelltwo}{\thaumaturgy},
+			\spellformat{\witchcraftspelltwo}{\witchcraft},
+			\spellformat{\witchcraftspellthree}{\witchcraft},
+			\spellformat{\spearofinfinity}{\hereditaryspell},
+		}
+	},
+}
+}

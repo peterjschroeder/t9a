@@ -1,0 +1,57 @@
+
+%%% Cults
+%
+%\newcommand{\newcult}[3]{%
+%	\begin{center}%
+%		\includegraphics[width=0.22\columnwidth]{pics/cultof#1.png}\par%
+%		{\largerfontsize\textbf{#2}}\vspace*{3pt}\par%
+%	\end{center}%
+%	\begin{itemize}%
+%		#3%
+%	\end{itemize}%
+%}
+
+%%% Assassin Master Poisoner
+
+\newcommand{\masterpoisonerstarttable}{%
+	\vspace*{5pt}%
+	\renewcommand{\arraystretch}{1.4}%
+	\DTLifdbexists{poisonlist}{\DTLcleardb{poisonlist}}{\DTLnewdb{poisonlist}}% Create new/discard old list
+	\begin{center}\begin{tabular}{>{\raggedleft}m{3.5cm}M{1.8cm}m{8cm}}%
+	\hline%
+	\greytextcolor{\MPpoison{}} & \greytextcolor{\MPcost{}} & \greytextcolor{\MPeffect{}} \tabularnewline%
+}
+
+\newcommand{\masterpoisonerclosetable}{%
+	\DTLsort*{costsortlabel=ascending,sortlabel}{poisonlist}% Sort list
+	\DTLforeach*{poisonlist}{\name=name,\ruletext=ruletext,\cost=cost}{%
+		\textbf{\name}&\pointsblock{\pts{\cost}}&\ruletext{}\DTLiflastrow{}{\tabularnewline}%
+	}
+	\tabularnewline\hline
+	\end{tabular}\end{center}%
+	\vspace*{3pt}%
+	\DTLcleardb{poisonlist}%
+}
+
+\newcommand{\newpoison}[3]{%
+	\DTLnewrow{poisonlist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{poisonlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\pdfstringdef\costwithoutformatting{#2}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\permodel}{}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{poisonlist}{costsortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+	\DTLnewdbentry{poisonlist}{name}{#1}%
+	\DTLnewdbentry{poisonlist}{cost}{#2}%
+	\DTLnewdbentry{poisonlist}{ruletext}{#3}%
+}

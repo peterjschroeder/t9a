@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\druid{},
+	logo=character,
+	cost=115,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\forestwalker{},\treesinging{},\wizardapprentice{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\druid{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{}},
+	magic={\wizardadept{}=95,\wizardmaster{}=265,},
+	paths={\druidism{}=druidism,\shamanism{}=shamanism,\cosmology{}=cosmology},
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,
+		**\optionline,
+		\sylvanlongbow{} (3+)=5,
+		\sylvanblades{}=5,
+	},
+	mounts={%
+		\elvenhorse{}=30,
+		\eagleking{}=50,
+		\unicorn{}=50,
+		\dragon{} \only{\wizardmaster{}}=380,
+	},	
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\treesinging{}}{\ruletype{\universalrule}\treesingingdef}
+	},
+} % END UNIT ENTRY

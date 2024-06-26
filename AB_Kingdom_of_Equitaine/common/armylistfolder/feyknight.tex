@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\feyknight{},
+	logo=fey,
+	cost=\newrule{330},
+	unitsize=1,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=50\timess{}75,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=8,
+	globalrules={,\supernal{},\fear{},\ghoststep{},, \fearless{}, \specialambush{} (\feyknightambush{})},
+	defense@HP=4,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=1,
+	defense@Aeg=5+,
+	defenserules={\newrule{\aegis{} {(4+, \againstmeleeattacks{})}}},
+	defensearmour={\ha{},\shield{}},
+	offensename=\feyrider{},
+	offense@At=4,
+	offense@Of=6,
+	offense@St=5,
+	offense@AP=3,
+	offense@Ag=6,
+	offensenameB=\feysteed{},
+	offenseB@At=\newrule{3},
+	offenseB@Of=4,
+	offenseB@St=4,
+	offenseB@AP=1,
+	offenseB@Ag=4,
+	offenserulesB={\harnessed{}, \removedrule{\breathattack{\St{} 4, \AP{} 0, \magicalattacks{}}}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+				\textbf{\championofthegreenknight{}} (\oneofakind{})=\free{},
+				\textbf{\chosenofthesnowchilde{}} (\oneofakind{})=5,
+				\textbf{\wardenofthehoodedman{}} (\oneofakind{})=\newrule{5},
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\championofthegreenknight{}}{\ruletype{\universalrule}\championofthegreenknightdef}
+		\modelruledef{\chosenofthesnowchilde{}}{\ruletype{\universalrule}\chosenofthesnowchildedef}		
+		\modelruledef{\wardenofthehoodedman{}}{\ruletype{\universalrule}\wardenofthehoodedmandef}
+	},
+}

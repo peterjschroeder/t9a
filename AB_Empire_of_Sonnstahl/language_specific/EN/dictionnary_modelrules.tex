@@ -1,0 +1,67 @@
+
+% ARMY MODEL RULES
+
+\newcommand{\blessings}{Blessings}
+\newcommand{\blessingsdef}{%
+	The model's unit gains \textbf{Hatred}. Model parts with Harnessed are not affected. The model can cast the following three Bound Spells with Power Level (4/8), Type: Caster's Unit and Augment, and Duration: One Turn.%
+	\startblessingstable
+		\newblessing{ullor}{Ullor's Blessing}{%
+			The target gains \textbf{Aegis (5+, against Melee Attacks)}.%
+		}%
+		\newblessing{sunna}{Sunna's Blessing}{%
+				The target gains \textbf{Flaming Attacks}. All enemy units in base contact with one or more targets of this spell when the spell is cast suffer D6 hits with Strength 4, Armour Penetration 1, \textbf{Flaming Attacks}, and \textbf{Magical Attacks}.%
+		}%
+		\newblessing{volund}{Volund's Blessing}{%
+				The target's failed to-wound rolls with Melee Attacks \textbf{must} be rerolled.%
+		}%
+	\closeblessingtable%
+}
+
+\newcommand{\orders}{Orders}
+\newcommand{\ordersdef}{%
+	A Character with Orders may give a single Order to a Parent or Support Unit within \distance{8}. A General with Orders may instead give a single Order to a friendly Parent or Support Unit within the range of its Commanding Presence. Orders are given at the start of each friendly Player Turn, and their effects last until the end of the next Player Turn. A unit cannot receive the same Order more than once during the same Player Turn. Only models of Standard Height are affected. The available Orders are listed below:%
+		\startorderstable%
+			\addorder{On The Double!}{The target gains \distance{+1} Advance Rate and \distance{+4} March Rate.}
+			\addorder{Steady, Men!}{%
+				 The target gains \textbf{\minimised{Discipline Tests}}. A unit that receives this Order and passes a Rally Test doesn't become Shaken, and the Reform that is made after Rallying doesn't prevent the unit from moving and/or shooting (but it still counts as having moved for shooting purposes).%
+			}%
+			\addorder{Ready! Aim! Fire!}{The target gains \textbf{Accurate}.}%
+			\addorder{Brace For Impact!}{The target gains \textbf{Fight in Extra Rank}.}%
+		\closeorderstable%
+}
+
+\newcommand{\pick}{Cavalry Pick}
+\newcommand{\pickdef}{%
+	Attacks made with this weapon gain +2 Armour Penetration.%
+}
+
+\newcommand{\longrifle}{Long Rifle}
+
+\newcommand{\repgun}{Repeater Gun}
+
+\newcommand{\reppst}{Repeater Pistol}
+\newcommand{\reppstdef}{%
+	If the model is also equipped with a Pistol , this weapon gains \shots{4}.%
+}
+
+\newcommand{\bop}{Brace of Pistols}
+\newcommand{\bopdef}{%
+	Counts as \pw{} in close combat.%
+}
+
+\newcommand{\parent}{Parent Unit}
+\newcommand{\parentdef}{%
+	A unit is considered a Parent Unit if at least half of its models have this Universal Rule. Parent Units treat all Support Units as \textbf{Insignificant}.\DTLpar%
+	Immediately after a Parent Unit passes a Charge Range roll against a non-Fleeing enemy unit in the Charge Phase, before performing the Charge Move, any Support Units within \distance{8} of the Parent Unit may perform a Support Charge. To do so, the whole Support Unit declares a Charge against the same enemy unit. Apply all of the usual rules for Charging for this out-of-sequence Charge (such as Line of Sight, Front Arc, must roll for Charge Range, max. one Wheel, etc.), with the exception that the enemy cannot choose a Charge Reaction other than Hold. For the purpose of Charge Moves, treat this as any other case of Combined Charges. When calculating Combat Scores in the following Melee Phase, combine the Rank Bonus of both the Parent Unit and up to one Support Unit that performed a successful Support Charge (following all normal restrictions), up to a maximum of +6.%
+}
+
+\newcommand{\support}{Support Unit}
+\newcommand{\supportdef}{%
+	A unit is considered a Support Unit if at least half of its models have this Universal Rule. Support Units are treated as \textbf{Insignificant} by Parent Units.\DTLpar%
+	Support Units within \distance{8} of at least one Parent Unit gain \textbf{Fight in Extra Rank} and \textbf{\shootinextrarank{}}. If the Support Unit has at least one Full Rank, it counts as having the same number of Full Ranks as a Parent Unit within \distance{8} for the purpose of being Steadfast if it has fewer Full Ranks than the Parent Unit.\DTLpar%
+	During the opponent's Charge Phase, Support Units may perform one of the following actions:%
+		\begin{enumerate}%
+			\item Immediately after an unengaged Parent Unit within \distance{8} declares a Charge Reaction other than a mandatory Flee Charge Reaction, the Support Unit may Stand and Shoot as if the enemy had declared a Charge against them in their current position (apply the normal rules for the Stand and Shoot Charge Reaction).%
+			\item Immediately after all enemy units have completed their Charge Moves, Support Units within \distance{8} of any Parent Unit that was successfully Charged in this phase may Counter Charge. To do so, choose one enemy unit that successfully Charged the Parent Unit and declare a Charge with the whole Support Unit. Apply all the usual rules for Charging for this out-of-sequence Charge (such as Line of Sight, Front Arc, must roll for Charge Range, max. one Wheel, etc.). When calculating Combat Scores in the following Melee Phase, combine the Rank Bonus of both the Parent Unit and up to one Support Unit that performed a successful Counter Charge (following all normal restrictions), up to a maximum of +6.%
+		\end{enumerate}%
+}

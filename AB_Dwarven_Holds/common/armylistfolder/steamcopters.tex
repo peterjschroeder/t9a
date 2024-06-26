@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\steamcopters{},
+	logo=pistols,
+	cost=180,
+	unitsize=1,
+	maxunitsize=2,
+	costpermodel=135,
+	maxunitsperarmy=3,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	global@Ad=1,
+	global@Ma=2,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=9,
+	globalrules={{\fly{8}{16}},\swiftstride{},\tall{},\lighttroops{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=3,
+	defenserules={\cannotbestomped{}},
+	offensename=\steamcopter{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenseweapons={\forgerepeater{} (4+)},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+				\textbf{\shrapnelgrenades{}} (\NOTESTzerotoXunitsperarmy{2}) =\free{},
+				{\textbf{\shrapnelbombs{}} (\zerotoonemodelsperunit{},\newline\optionnewlineindent\NOTESTzerotoXunitsperarmy{2})}=35,
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\shrapnelgrenades}{\ruletype{\specialattack}{\shrapnelgrenadesdef}}%
+		\modelruledef{\shrapnelbombs}{\ruletype{\specialattack}{\shrapnelbombsdef}}%
+	},
+}% END UNIT ENTRY

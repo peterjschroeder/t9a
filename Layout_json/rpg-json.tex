@@ -1,0 +1,233 @@
+\usepackage{etoolbox}
+\usepackage{xstring}
+\usepackage{xparse}
+%\ProvidesPackage{../Layout_json/rpg-json}
+\newcommand\removebs[1]{\if#1\char92\else#1\fi}
+\newcommand\macroname[1]{%
+  \expandafter\removebs\detokenize{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\RF}{R\&F}
+%\renewcommand{\inch}{\backslash\backslash\backslash\backslash\backslash\backslash"}
+\renewcommand{\distance}[1]{#1\&quot;}
+\renewcommand{\textbf}[1]{[b]#1[/b]}
+\renewcommand{\newrule}[1]{#1}
+\renewcommand{\removedrule}[1]{}
+\renewcommand{\hyperlink}[2]{#2}
+\renewcommand{\enquote}[1]{#1&quot;}
+\renewcommand{\quote}[1]{"\textit{#1}"}
+
+\renewcommand{\itementry}[1]{
+  \setkeys{item}{#1}%
+  \{
+    \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\item@name",
+    \quote{type}: "\expandafter\string\item@type",
+    \quote{name}: "\item@name",
+    \expandafter\ifstrequal\expandafter{\item@restriction}{}{%
+    \quote{restriction}: \quote{},
+    }{%
+    \quote{restriction}: \quote{\item@restriction},
+    }%
+    \expandafter\ifstrequal\expandafter{\item@enchantment}{}{%
+    \quote{enchantment}: \quote{},
+    }{%
+    \quote{enchantment}: \quote{\expandafter\strip@prefix\meaning\item@enchantment},
+    }%
+    \quote{max}: \quote{\item@maxnumber},
+    \quote{dominant}: \quote{\item@dominant},
+    \quote{cost}: \quote{\item@cost},
+    \quote{rules}: \quote{\item@rules{}}
+  \},
+}
+
+\define@key{rule}{key}{\def\rule@key{#1}}
+\define@key{rule}{name}{\def\rule@name{#1}}
+\define@key{rule}{army}{\def\rule@army{#1}}
+\define@key{rule}{description}{\def\rule@description{#1}}
+\newcommand{\defrule}{
+	\setkeys{rule}{%
+		key=, name=, army=, description=,
+	}%
+	\setkeys{rule}%
+}
+\newcommand{\ruleentry}[1]{
+  \defrule{#1}%
+  \{
+    \quote{key}: \quote{\rule@key{}},
+    \quote{army}: \quote{\rule@army{}},
+    \quote{name}: \quote{\rule@name{}},
+    \quote{description}: \quote{\rule@description{}}
+  \}
+}
+
+\define@key{equipment}{key}{\def\equipment@key{#1}}
+\define@key{equipment}{name}{\def\equipment@name{#1}}
+\define@key{equipment}{army}{\def\equipment@army{#1}}
+\define@key{equipment}{description}{\def\equipment@description{#1}}
+\newcommand{\defequipment}{
+	\setkeys{equipment}{%
+		key=, name=, army=, description=,
+	}%
+	\setkeys{equipment}%
+}
+\newcommand{\equipmententry}[1]{
+  \defequipment{#1}%
+  \{
+    \quote{key}: \quote{\equipment@key{}},
+    \quote{army}: \quote{\equipment@army{}},
+    \quote{name}: \quote{\equipment@name{}},
+    \quote{description}: \quote{\equipment@description{}}
+  \}
+}
+
+\renewcommand{\option}[2]{\{ \quote{name}: \quote{#1}, \quote{cost}: \quote{#2} \},}
+\renewcommand{\onechoiceonlyACO}[1]{\optionschoice{One choice only:}{\AlCoOrder{#1}}}
+\renewcommand{\onechoiceonly}{\optionschoice{One choice only:}}
+\renewcommand{\onechoiceonlyTWOCOL}{\optionschoiceTWOCOL{One choice only:}}
+\renewcommand{\onechoiceonlyTWOCOLACO}[1]{\optionschoiceTWOCOL{One choice only:}{\AlCoOrder{#1}}}
+\renewcommand{\explonechoiceonly}{\exploptionschoice{One choice only:}}
+\renewcommand{\explonechoiceonlyACO}[1]{\exploptionschoice{One choice only:}{\explAlCoOrder{#1}}}
+\renewcommand{\optionschoice}[2]{%
+  \{ \quote{name}: \quote{#1},%
+    \quote{command}:[
+      \forcsvlist{\item\setoption}{#2}%
+    ]
+  \},
+}
+\renewcommand{\optionslist}[1]{%
+	\begin{description}%
+		\forcsvlist{\item\setoption}{#1}%
+	\end{description}%
+}
+\renewcommand{\options}[1]{%
+		\expandafter\optionslist\expandafter{#1}%
+}
+\renewcommand{\setoption}[1]{%
+%  \option{\optiontext}{\optionvalue}%
+	\noexpandarg\StrCut{#1}{=}\optiontext\optionvalue%
+	\expandafter\ifstrequal\expandafter{\optionvalue}{}{%
+    \optiontext%
+	}{%
+    \option{\optiontext}{\optionvalue}%
+	}%
+}
+
+\renewcommand{\AlCoOrder}[1]{%
+	\setcounter{AlCoOrdercounter}{0}% initialization
+	\DTLifdbexists{alphaandcostorderlist}{\DTLcleardb{alphaandcostorderlist}}{\DTLnewdb{alphaandcostorderlist}}% Create new/discard old list
+	\forcsvlist{\addtosortedlistwithcost}{#1}%
+	\DTLsort*{cost,sortlabel}{alphaandcostorderlist}% Sort list
+	\DTLforeach*{alphaandcostorderlist}{\theDesc=description}{% Print back the ordered list
+		\ifnumcomp{\value{AlCoOrdercounter}}{=}{0}{\stepcounter{AlCoOrdercounter}}{\item}%
+		\expandafter\setoption\expandafter{\theDesc}%
+	}%
+	\DTLcleardb{alphaandcostorderlist}%	
+}
+
+\renewcommand{\commandgroup}[1]{%
+  \quote{command}: "\expandafter\strip@prefix\meaning{#1}"%
+}%
+
+\renewcommand{\unitentry}[1]{%
+  \defunit{#1}%
+  \{
+    \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name{}",
+    \quote{name}: "\textit{\unit@name}",
+    \quote{logo}: "\textit{\StrSubstitute{\unit@logo}{_}{,}}",
+    \quote{optionallogo}: "\textit{\StrSubstitute{\unit@optionallogo{}}{_}{,}}",
+    \quote{categorynote}: "\expandafter\strip@prefix\meaning\unit@categorynote{}",
+    \quote{cost}: "\unit@cost",
+    \quote{maxunitsperarmy}: "\unit@maxunitsperarmy{}\unit@maxmountsperarmy{}",
+    \quote{maxmodelsperarmy}: "\unit@maxmodelsperarmy{}",
+    \quote{unitsize}: \{
+      \quote{min}: "\unit@unitsize{}",
+      \quote{max}: "\unit@maxunitsize{}",
+      \quote{cost}: "\unit@costpermodel{}"
+    \},
+    \quote{type}: "\unit@type{}",
+    \quote{size}: "\unit@size{}",
+    \quote{basesize}: "\textit{\unit@basesize{}}",
+    "global" : \{
+      \quote{Ad}: "\unit@global@Ad{}",
+      \quote{Ma}: "\unit@global@Ma{}",
+      \quote{Di}: "\unit@global@Di{}",
+      \quote{Adfly}: "\unit@global@Adfly{}",
+      \quote{Mafly}: "\unit@global@Mafly{}",
+      \quote{rules}: "\expandafter\strip@prefix\meaning\unit@globalrules{}"
+    \},
+    "defense" : \{
+      \quote{HP}: "\unit@defense@HP{}",
+      \quote{Df}: "\unit@defense@Df{}",
+      \quote{Re}: "\unit@defense@Re{}",
+      \quote{Arm}: "\unit@defense@Arm{}",
+      \quote{Aeg}: "\unit@defense@Aeg{}",
+      \quote{armour}: "\expandafter\strip@prefix\meaning\unit@defensearmour{}",
+      \quote{rules}: "\expandafter\strip@prefix\meaning\unit@defenserules{}"
+    \},
+    "troops" : [
+      \{
+        \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@offensename{}",
+        \quote{name}: "\unit@offensename{}",
+        \quote{At}: "\unit@offense@At{}",
+        \quote{Of}: "\unit@offense@Of{}",
+        \quote{St}: "\unit@offense@St{}",
+        \quote{AP}: "\unit@offense@AP{}",
+        \quote{Ag}: "\unit@offense@Ag{}",
+        \quote{rules}: "\expandafter\strip@prefix\meaning\unit@offenserules{}",
+        \quote{weapons}: "\expandafter\strip@prefix\meaning\unit@offenseweapons{}",
+        \quote{position}: "1"
+      \},
+      \expandafter\ifblank\expandafter{\unit@offensenameB}{}{%
+      \{
+        \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@offensenameB{}",
+        \quote{name}: "\unit@offensenameB{}",
+        \quote{At}: "\unit@offenseB@At{}",
+        \quote{Of}: "\unit@offenseB@Of{}",
+        \quote{St}: "\unit@offenseB@St{}",
+        \quote{AP}: "\unit@offenseB@AP{}",
+        \quote{Ag}: "\unit@offenseB@Ag{}",
+        \quote{rules}: "\expandafter\strip@prefix\meaning\unit@offenserulesB{}",
+        \quote{weapons}: "\expandafter\strip@prefix\meaning\unit@offenseweaponsB{}",
+        \quote{position}: "2"
+      \},
+      }
+      \expandafter\ifblank\expandafter{\unit@offensenameC}{}{%
+      \{
+        \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@offensenameC{}",
+        \quote{name}: "\unit@offensenameC{}",
+        \quote{At}: "\unit@offenseC@At{}",
+        \quote{Of}: "\unit@offenseC@Of{}",
+        \quote{St}: "\unit@offenseC@St{}",
+        \quote{AP}: "\unit@offenseC@AP{}",
+        \quote{Ag}: "\unit@offenseC@Ag{}",
+        \quote{rules}: "\expandafter\strip@prefix\meaning\unit@offenserulesC{}",
+        \quote{weapons}: "\expandafter\strip@prefix\meaning\unit@offenseweaponsC{}",
+        \quote{position}: "3"
+      \},
+      }%
+      \expandafter\ifblank\expandafter{\unit@offensenameI}{}{%
+      \{
+        \quote{key}: "\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@offensenameI{}",
+        \quote{name}: "\unit@offensenameI{}",
+        \quote{At}: "\unit@offenseI@At{}",
+        \quote{Of}: "\unit@offenseI@Of{}",
+        \quote{St}: "\unit@offenseI@St{}",
+        \quote{AP}: "\unit@offenseI@AP{}",
+        \quote{Ag}: "\unit@offenseI@Ag{}",
+        \quote{rules}: "\expandafter\strip@prefix\meaning\unit@offenserulesI{}",
+        \quote{weapons}: "\expandafter\strip@prefix\meaning\unit@offenseweaponsI{}",
+        \quote{position}: "4"
+      \},
+      }%
+    ],
+    \quote{options}: \{
+      \quote{options}: "\expandafter\strip@prefix\meaning\unit@options{}",
+      \quote{magic}: "\expandafter\strip@prefix\meaning\unit@magic{}",
+      \quote{paths}: "\expandafter\strip@prefix\meaning\unit@paths{}",
+      \quote{command}: "\expandafter\strip@prefix\meaning\unit@commandgroup{}",
+      \quote{mount}: "\expandafter\strip@prefix\meaning\unit@mounts{}"     
+    \}
+  \},
+}

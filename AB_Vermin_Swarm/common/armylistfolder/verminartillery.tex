@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\verminartillery{},
+	logo=pistols,
+	cost=190,
+	unitsize=1,
+	maxunitsperarmy=4,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=75,
+	global@Ad=5,
+	global@Ma=5,
+	global@Di=5,
+	globalrules={\callous{},\warmachine{}},
+	defense@HP=4,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename={\crew{}},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\moveorfire{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\rakachitmaussrifle{}} (4+)\newline(\NOTESTzerotoXmodelsperarmy{3})=\free{},
+			\textbf{\skorchitordnance{}} (4+)(\NOTESTzerotoXmodelsperarmy{2})=15,
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\skorchitordnance}{\ruletype{\artilleryweapon}%
+			\textbf{\catapult{} (4\timess{}4)}. \range{12--48}, \shots{1}, \St{} 4, \AP{} 0, \alphaorderlistbf{\flamingattacks{},\trialandterror{},\mishap{} (\misfire{})}.\newline\skorchitordnancedef%
+		}
+		\modelruledef{\rakachitmaussrifle}{\ruletype{\artilleryweapon}%
+			\cannon{}. \range{48}, \shots{1}, \St{} 5 [7], \AP{} 2 [4], \alphaorderlistbf{\areaattack{} (1\timess{}5),[\multiplewounds{\Dthree{}+1}{}],\trialandterror{},\mishap{} (\misfire{})}.%
+		}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}%

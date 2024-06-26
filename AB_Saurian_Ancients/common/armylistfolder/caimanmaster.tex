@@ -1,0 +1,34 @@
+
+\unitentry{%
+	name=\caimanmaster{},
+	logo=character,
+	cost=310,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	globalrules={\swiftreform{}, \communalbond{},\exclusive{} (\caimanelders{}),\hidebf{\artofwar{}},\strider{\waterterrain},\minimised{} (\disciplinetest{})},
+	defense@HP=4,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=3,
+	defensearmour=\la{},
+	offensename=\caimanmaster{},
+	offense@At=5,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=2,
+	offenserules=\weaponmaster{},
+	offenseweapons={\gw{},\halberd{},\toothandclaw{}},
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+	},
+	modelrulesdef={%
+		\modelruledef{\artofwar}{\ruletype{\universalrule}\artofwardef}
+	},
+}% END UNIT ENTRY

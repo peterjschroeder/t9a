@@ -1,0 +1,67 @@
+
+\unitentry{%
+	name=\folkhero{},
+	logo=character,
+	cost=\newrule{100},
+	unitsize=1,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\hidebf{\traitsofahero{}}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	defensearmour={\la{},},
+	defenserules={\ordeal{}},
+	offensename=\folkhero{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={},
+	options={%
+		\sainted{\refsymbol{} }=\newrule{50},
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent{\ifsainted{}}=\upto{}150,
+		\ha{}=10,
+		\shield{}=10,
+		\onechoiceonlyACO{%
+			\spear{}=5,
+			\pw{}=5,
+			\gw{}=10,
+			\halberd{}=5,
+			\lightlance{}=5,
+			\longbow{} (3+) \wordand{} \shots{3} (\NOTESTzerotoXunitsperarmy{1})=5,
+			\bastardsword{} (\castellanrestriction{})=\newrule{5},
+			\lance{} (\castellanrestriction{})=\newrule{5},
+		},
+		\refsymbolbis{}\cannotbetakenbybsb{}=,
+	},
+	mounts={%
+		\destrier{}=70,
+		\heraldicsteed{} (\heraldicsteedrestriction{})=45,
+		\reveredunicorn{} \only{\sainted}=65,
+		\pegasuscharger{} \only{\sainted}=\newrule{40},
+		\feysteed{} \only{\sainted}=\newrule{70},	
+	},
+			endtext={%
+%		\knightlyprincipleslist{\textbf{\traitsofahero{}}: \universalrule{}\newline{}\traitsofaherodef{}}{%
+		\knightlyprincipleslist{\textbf{\heroictraits{}}}{%		
+			\subimport{../heroictraitsfolder/}{bannerman.tex}
+			\subimport{../heroictraitsfolder/}{castellan.tex}
+			\subimport{../heroictraitsfolder/}{cleric.tex}
+			\subimport{../heroictraitsfolder/}{quin.tex}
+			\subimport{../heroictraitsfolder/}{minstrel.tex}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\traitsofahero}{\ruletype{\universalrule}\traitsofaherodef}%
+	},
+} % END UNIT ENTRY

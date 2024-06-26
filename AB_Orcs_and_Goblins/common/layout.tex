@@ -1,0 +1,83 @@
+%% Greenhide Races
+
+\newcommand{\startgreenhideracestable}{\par\begin{minipage}{\textwidth}\raggedcolumns\begingroup\setlength{\columnsep}{10pt}\begin{multicols}{3}}
+
+\newcommand{\newgreenhiderace}[3]{%
+	\begin{center}%
+		\includegraphics[width=0.72\columnwidth]{pics/#1.png}\vspace*{1pt}\par%
+		\textbf{#2}%
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#2}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+		}{%
+			\newline\textit{(\csname \tempENname EN\endcsname)}%
+		}
+		\vspace*{3pt}\par%
+		#3%
+	\end{center}\columnbreak%
+}
+
+\newcommand{\closegreenhideracestable}{\end{multicols}\endgroup\end{minipage}\vspace*{10pt}}
+
+
+%% Ricochet figure
+
+\newcommand{\ricochetfigure}[2]{%
+	\begin{minipage}{0.57\textwidth}%
+		\renewcommand{\figbiglettersize}{17}%
+		\centering%
+		\def\svgwidth{\textwidth}%
+		\subimport{../pics/}{madgits.pdf_tex}%
+	\end{minipage}\hspace*{0.03\textwidth}\begin{minipage}{0.4\textwidth}%
+		\greytextcolor{\figMGa{} #1}\vspace*{10pt}\DTLpar%
+		\greytextcolor{\figMGb{} #2}%
+	\end{minipage}%
+}
+
+% Greenhide Race entry
+
+\renewcommand{\additionalframename}{\greenhiderace}
+
+\newcommand{\ghchoice}{\optionschoice{\themodelpartmustchoose{} \onechoiceonlyNOC{}\Scolon}}
+
+\newcommand{\ghentry}[3]{%
+	\textbf{#1}\\%
+	\hspace*{0.4cm}\begin{minipage}{\textwidth-0.4cm}%
+		\ifblank{#2}{}{%
+			\def\tempaddoptions{#2}%
+			\addoptions{\tempaddoptions}%
+		}%
+		\ifblank{#3}{}{%
+			\def\tempmounts{#3}%
+			\mounts{\tempmounts}%
+		}%
+	\end{minipage}\vspace*{5pt}\par%
+}
+
+% Orc Overseer
+
+\newcommand{\orcoverseerprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\orcoverseer{}%
+	&%
+	{\ChVal{1}}&%
+	{\ChVal{3}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{2}}&%
+	\strut{\alphaorderlist{\commonorc{}}}%
+	\tabularnewline%
+	\end{tabular}\vspace*{3pt}%
+}

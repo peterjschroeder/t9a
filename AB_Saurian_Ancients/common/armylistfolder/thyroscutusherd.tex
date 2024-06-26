@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\thyroscutusherd{},
+	logo=special,
+	cost=180,
+	costpermodel=130,
+	unitsize=1,
+	maxunitsize=3,
+	maxmodelsperarmy=4,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\swiftreform{},\fearless{},\communalbond{}, ,\minimised{} (\disciplinetest{})},
+	defense@HP=4,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=5,
+	defenserules=,
+	offensename=\skinkrider{} (4),
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offensenameB=\thyroscutus{},
+	offenseB@At=3,
+	offenseB@Of=2,
+	offenseB@St=4,
+	offenseB@AP=1,
+	offenseB@Ag=0,
+	offenserulesB={\harnessed{},\crushattack{}},
+	options={%
+		{\textbf{\greatprotector{}} (\zerotoXmodelsperunit{1})}=35\permodel{},
+		\thyroscutushowdah{}=\nolimit{},
+    },
+	optionalmodelrulesdef={%
+		\modelruledef{\textbf{\greatprotector}}{\ruletype{\universalrule}\greatprotectordef}
+	},
+%	toggles={%
+%		\toggletrue{onecolprintoptionalmodelrulesdef}
+%		\togglefalse{twocolprintoptionalmodelrulesdef}
+%},	
+}% END UNIT ENTRY

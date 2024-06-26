@@ -1,0 +1,56 @@
+
+\unitentry{%
+	name=\marshal{},
+	logo=character,
+	optionallogo=character_EoS,
+	categorynote=\charactermountnote{\sunfInitial}{\sunf},
+	cost=140,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules=\orders{},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour=\pa{},
+	offensename=\marshal{},
+	offense@Ag=5,
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	options={%
+			\bsb{}=\free{},
+			\onechoiceonlyACO{%
+				\textbf{\greattac{}} (\zerotooneunitsperarmy{})=75,
+				\textbf{\impprince{}} \only{\general{}}=125,
+			},
+			\specialitemsallowance{}=\upto{}200,
+			\suboptionindent \ifbsb{}=\upto{}100,
+			\shield{}=10,
+			\pistol{} (2+)=5,
+			\reppst{} (3+)=10,
+			\onechoiceonlyACO{%
+				\pw{}=5,
+				\gw{}=5,
+				\halberd{}=5,
+				\lance{}=5,
+			},
+		},
+	mounts={%
+			\horse{}=55,
+			\pegasus{}=60,
+			\greatgriff{}\refsymbol{} ({\sunfInitial})=145,
+			\dragon{} \only{\impprince{}} ({\sunfInitial})=410,
+			\refsymbolbis{}\greatgriffonrestriction{}=\void{9999},
+		},
+	optionalmodelrulesdef={%
+			\modelruledef{\greattac}{\ruletype{\universalrule}{\greattacdef}}%
+			\modelruledef{\impprince}{\ruletype{\universalrule}{\impprincedef}}%
+		},
+} % END UNIT ENTRY

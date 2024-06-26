@@ -1,0 +1,56 @@
+
+\unitentry{%
+	name=\houseprefect{},
+	logo=character,
+	categorynote=\upgradecategorynote{\tunnelgunnersinitials}{\tunnelgunners},
+	optionallogo=pistols,
+	cost=80,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\callous{}},
+	defense@HP=2,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={,\ha{}, \shield{}},
+	offensename=\houseprefect{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules=,
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\fetthisfleshmaster{}}\refsymbol{}=\free{},
+			\textbf{\stygianoverseer{}}\refsymbol{}=15,
+			\textbf{\rakachittechnocrat{}}\refsymbol{} [\tunnelgunnersinitials{}]=35,
+			\textbf{\skorchitalchemist{}}\refsymbol{}=50,
+		}},
+		\suboptionindent\refsymbolbis{}\houseprefectoptionsnote{}=,
+		\specialitemsallowance{}=\upto{}75,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\pistol{} (3+)=\free{},
+			\jezail{} (3+)\refsymbolB{}=5,
+			\rotarygun{} (3+)\refsymbolB{}=20,
+			\deepfirethrower{}\refsymbolC{}=45,
+			\canisterlauncher{} (3+)\refsymbolC{}=25,
+		}},
+		\refsymbolBbis{}\rakachittechnocratonly{}=,
+		\refsymbolCbis{}\skorchitalchemistonly{}=,
+	},
+	mounts={%
+		\praetorianbrute{} \only{\fetthisfleshmaster{}}=55,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\fetthisfleshmaster}{\ruletype{\universalrule}\fetthisfleshmasterdef}
+		\modelruledef{\stygianoverseer}{\ruletype{\universalrule}\stygianoverseerdef}
+		\modelruledef{\rakachittechnocrat}{\ruletype{\universalrule}\rakachittechnocratdef}
+		\modelruledef{\skorchitalchemist}{\ruletype{\universalrule}\skorchitalchemistdef}
+	},
+}% END UNIT ENTRY

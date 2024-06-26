@@ -1,0 +1,38 @@
+
+\maintitle{BHQRS}{\quickrefsheet}
+
+\subimport{../../Layout/}{AB_qrs.tex}
+
+\vspace*{20pt}
+
+\centeredsubtitle{\shootingweapons{}}
+
+\startartillerytable{}
+\hawthorncurse{} & - & \distance{18} & 3 [6] & 10 & 1 & \alphaorderlistpar{\areaattack{1\timess{}5},\reload{},[\multiplewounds{}{} (\Dthree{})]}\par\nonegativetohitmodifiers{} \tabularnewline
+\beerbarrel{} (\beastgiant{}) & - & \distance{8} & 4 & 0 & 1 & \alphaorderlistpar{\areaattack{3\timess{}3},\reload{}}\par\hitsautomatically \tabularnewline
+\hurlattack{} (\cyclops{}) & \catapult{4\timess{}4} & \distance{24} & 3 [7] & 0 [4] & 1 & \alphaorderlistpar{\divineattacks{},\magicalattacks{},{[\multiplewounds{\Dthree{}, \clippedwings{}}{}]},\quicktofire{}} \tabularnewline
+\closeartillerytable{}
+
+\centeredsubtitle{\aimtable{}}
+
+\startaimtable
+\hawthorncurse{} & 3+ & \characters{} \tabularnewline
+\hurlattack{} & 4+ & \cyclops{} \tabularnewline
+\bow{} & 4+ & \mongrelraider{} \tabularnewline
+\throwingweapons{} & 4+ & \beastlord{}, \beastchieftain{}, \centaurchieftain{} \tabularnewline
+& 5+ & \centaur{}, \wildhorn{} \tabularnewline
+\closeaimtable
+
+\vspace*{10pt}
+
+\centeredsubtitle{\listoftotems}
+
+\renewcommand{\totemtablearraystretch}{1.5}
+{\normalfontsize
+\starttotemstable
+\addtotem{\gnarledhidetotem}{\gnarledhidetotemdef}
+\addtotem{\bloodedhorntotem}{\bloodedhorntotemdef}
+\addtotem{\cloudedeyetotem}{\cloudedeyetotemdef}
+\addtotem{\blackwingtotem}{\blackwingtotemdef}
+\closetotemstable
+}

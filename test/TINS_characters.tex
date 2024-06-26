@@ -1,0 +1,73 @@
+\def\languageisenglish{}
+\subimport{../Layout/}{AB_layout.tex}
+
+\begin{document}
+
+\def\bookprefix{}
+\def\booktitle{TINS Funny Battles}
+\def\version{1.0}
+\def\tocfirstcolumn{}
+\def\tocsecondcolumn{}
+\def\footerleft{\textcolor{black!30}{No elf was harmed during testing}}
+\def\footerright{\textcolor{green!50!black}{Can't say 'bout goblins, though}}
+
+%\subimport{../Layout/}{AB_titlepage.tex}
+
+\unitentry{%
+	name=Vomit Barbarian Chief,
+	logo=character,
+	cost=253,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25x25,
+	scoring=no,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={Inspire Barbarians},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@AS=5+,
+	defenserules={Mark of Pestilence},
+	defensearmour={Bronze Breastplate,Lucky Stone},
+	offensename=Barbarian Chief,
+	offense@Ag=5,
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={Necrotic Miasma},
+	offenseweapons={\gw},
+} % END UNIT ENTRY
+
+\unitentry{%
+	name=Ginsu Seppuku Elf,
+	logo=character,
+	cost=256,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20x20,
+	scoring=no,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={Martial Discipline},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=3,
+	defense@AS=2+,
+	defensearmour={Mithril Mail},
+	offensename=Commander,
+	offense@Ag=7,
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={Lightning Reflexes},
+	offenseweapons={Halberd,Shard of Cenyrn},
+} % END UNIT ENTRY
+
+\end{document}

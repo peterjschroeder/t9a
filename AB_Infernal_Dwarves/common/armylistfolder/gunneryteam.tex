@@ -1,0 +1,32 @@
+
+\unitentry{%
+	name=\gunneryteam{},
+	logo=special,
+	cost=150,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\infernalbrand{},\warplatform{},\notaleader{}, \attached{}, \exclusive{} (\rnf{} \model{} \wordwith{} \infernalbrand{})},
+	defense@HP=4,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{},\shield{}},
+	offensename=\gunneryteam{},	
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\grindattacks{3}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\naphthathrower{} \wordand{} \firesofindustry{} (1)=10,
+			\rocketbattery{} (4+) \wordand{} \firesofindustry{} (2)=\free{},
+			\titanmortar{} (4+) \wordand{} \firesofindustry{} (2)=\free{},
+		}},
+	},
+}% END UNIT ENTRY

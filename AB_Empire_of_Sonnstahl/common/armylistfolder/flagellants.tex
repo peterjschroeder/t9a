@@ -1,0 +1,36 @@
+
+\unitentry{%
+	name=\flagellants{},
+	logo=EoS,
+	cost=185,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=15,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	globalrules={\unbreakable{},\fearless{},\frenzy{},\hidebf{\fanatical{}},\hidebf{\zealots{}}},
+	defense@HP=1,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename=\flagellant{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons=\gw{},
+	offenserules=\battlefocus{},
+	commandgroup={%
+		\champion{}=10,
+	},
+	modelrulesdef={%
+		\modelruledef{\fanatical{}}{\ruletype{\universalrule{}}\fanaticaldef{}}
+		\modelruledef{\zealots{}}{\ruletype{\universalrule{}}\zealotsdef{}}
+		},
+}% END UNIT ENTRY

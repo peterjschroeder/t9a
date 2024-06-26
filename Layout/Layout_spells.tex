@@ -1,0 +1,435 @@
+
+%%% Icons %%%
+
+\newcommand{\alchemyicon}{pics/Icon_alchemy.pdf}
+\newcommand{\shamanismicon}{pics/Icon_shamanism.pdf}
+\newcommand{\cosmologyicon}{pics/Icon_cosmology.pdf}
+\newcommand{\divinationicon}{pics/Icon_divination.pdf}
+\newcommand{\druidismicon}{pics/Icon_druidism.pdf}
+\newcommand{\evocationicon}{pics/Icon_evocation.pdf}
+\newcommand{\occultismicon}{pics/Icon_occultism.pdf}
+\newcommand{\pyromancyicon}{pics/Icon_pyromancy.pdf}
+\newcommand{\witchcrafticon}{pics/Icon_witchcraft.pdf}
+\newcommand{\thaumaturgyicon}{pics/Icon_thaumaturgy.pdf}
+
+\newcommand{\cosmologychaosicon}{pics/Icon_cosmology_chaos.pdf}
+\newcommand{\cosmologycosmosicon}{pics/Icon_cosmology_cosmos.pdf}
+
+
+%%% Paths tables %%%
+
+\newcommand{\spellrule}{\newline\greytextcolor{\rule{\textwidth}{0.5pt}}\newline}%
+
+\newcommand{\newpathlogo}[2]{%
+	\clearpage%
+	\begin{center}%
+	\toctarget{#2}{\includegraphics[height=1.8cm]{#1}}%
+	\end{center}%
+}
+
+\newcommand{\starttable}[2]{%
+	\begin{center}
+	%\begin{tabular}{m{0.53\linewidth}m{0.47\linewidth}}
+	\begin{tabular}{p{\linewidth}}
+	\rowcolor[RGB]{#1}\multicolumn{1}{M{\linewidth}}{%
+	\rule{0pt}{0.7cm}% setting a minimum height
+	{\hugefontsize\textbf{#2}}}\tabularnewline%
+}
+
+\newcommand{\tablepassive}[2]{%
+	\ifblank{#1}{}{\textbf{#1}\spacebeforecolon{}: }%
+	#2\tabularnewline%
+	\hline%
+}
+
+\newcommand{\tablelabels}{%
+	\end{tabular}\vspace*{-3pt}\newline%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\textit{\spellsType}&
+	\textit{\spellsDuration}\tabularnewline
+	\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{m{\textwidth}}\textit{\spellsEffect}\end{tabular}\end{minipage}%
+	\vspace*{-3pt}\spellrule%
+}
+
+\newcommand{\spelllabelandtitle}[2]{%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
+	{\Largefontsize\textbf{#1}}&%
+	{\Largefontsize\textbf{#2}}\tabularnewline%
+	\end{tabular}\par%
+}
+
+\newcommand{\tablespellcastingvalue}[1]{%
+	\vspace*{-7pt}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}%
+	\textbf{#1}&%
+}
+
+\newcommand{\tablespellrange}[1]{%
+	\textbf{#1}&%
+}
+
+\newcommand{\tablespelltype}[1]{%
+	#1 &%
+}
+
+\newcommand{\tablespellrangeandtype}[1]{%
+	\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
+}
+
+\newcommand{\tablespellduration}[1]{%
+	#1\tabularnewline%
+	\end{tabular}%
+	\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
+}
+
+\newcommand{\tablespelleffect}[1]{%
+	#1\vspace*{2pt}\end{minipage}%
+}
+
+\newcommand{\closetable}{%
+	\end{center}%
+}
+
+\define@key{spell}{label}{\def\spell@label{#1}}
+\define@key{spell}{rep}{\def\spell@rep{#1}}
+\define@key{spell}{path}{\def\spell@path{#1}}
+\define@key{spell}{name}{\def\spell@name{#1}}
+\define@key{spell}{CV}{\def\spell@CV{#1}}
+\define@key{spell}{CVbase}{\def\spell@CVbase{#1}}
+\define@key{spell}{CVboost}{\def\spell@CVboost{#1}}
+\define@key{spell}{CVspeboost}{\def\spell@CVspeboost{#1}}
+\define@key{spell}{range}{\def\spell@range{#1}}
+\define@key{spell}{rangebase}{\def\spell@rangebase{#1}}
+\define@key{spell}{rangeboost}{\def\spell@rangeboost{#1}}
+\define@key{spell}{rangespeboost}{\def\spell@rangespeboost{#1}}
+\define@key{spell}{rangeaura}{\def\spell@rangeaura{#1}}
+\define@key{spell}{rangebaseaura}{\def\spell@rangebaseaura{#1}}
+\define@key{spell}{rangeboostaura}{\def\spell@rangeboostaura{#1}}
+\define@key{spell}{rangespeboostaura}{\def\spell@rangespeboostaura{#1}}
+\define@key{spell}{type}{\def\spell@type{#1}}
+\define@key{spell}{typebase}{\def\spell@typebase{#1}}
+\define@key{spell}{typeboost}{\def\spell@typeboost{#1}}
+\define@key{spell}{typespeboost}{\def\spell@typespeboost{#1}}
+\define@key{spell}{rangetype}{\def\spell@rangetype{#1}}
+\define@key{spell}{duration}{\def\spell@duration{#1}}
+\define@key{spell}{durationbase}{\def\spell@durationbase{#1}}
+\define@key{spell}{durationboost}{\def\spell@durationboost{#1}}
+\define@key{spell}{durationspeboost}{\def\spell@durationspeboost{#1}}
+\define@key{spell}{effect}{\def\spell@effect{#1}}
+
+\newcommand{\defspell}{%
+	\setkeys{spell}{%
+		label=, rep=, path=, name=, CV=, CVbase=, CVboost=, CVspeboost=, range=, rangebase=, rangeboost=, rangespeboost=, rangeaura=, rangebaseaura=, rangeboostaura=, rangespeboostaura=, type=, typebase=, typeboost=, typespeboost=, rangetype=, duration=, durationbase=, durationboost=, durationspeboost=, effect=,
+	}%
+	\setkeys{spell}%
+}
+\newtoggle{printtype}
+\newtoggle{printtypebase}
+\newtoggle{printtypeboost}
+\newtoggle{printtypespeboost}
+\newtoggle{printduration}
+\newtoggle{printdurationbase}
+\newtoggle{printdurationboost}
+\newtoggle{printdurationspeboost}
+
+\newcommand{\spellentry}[1]{%
+	\defspell{#1}%
+	% TOGGLES
+	\expandafter\ifblank\expandafter{\spell@type}{\togglefalse{printtype}}{\toggletrue{printtype}}%
+	\expandafter\ifblank\expandafter{\spell@typebase}{\togglefalse{printtypebase}}{\toggletrue{printtypebase}}%
+	\expandafter\ifblank\expandafter{\spell@typeboost}{\togglefalse{printtypeboost}}{\toggletrue{printtypeboost}}%
+	\expandafter\ifblank\expandafter{\spell@typespeboost}{\togglefalse{printtypespeboost}}{\toggletrue{printtypespeboost}}%
+	\expandafter\ifblank\expandafter{\spell@duration}{\togglefalse{printduration}}{\toggletrue{printduration}}%
+	\expandafter\ifblank\expandafter{\spell@durationbase}{\togglefalse{printdurationbase}}{\toggletrue{printdurationbase}}%
+	\expandafter\ifblank\expandafter{\spell@durationboost}{\togglefalse{printdurationboost}}{\toggletrue{printdurationboost}}%
+	\expandafter\ifblank\expandafter{\spell@durationspeboost}{\togglefalse{printdurationspeboost}}{\toggletrue{printdurationspeboost}}%
+	% SPELL
+	\begin{minipage}[c]{0.5\linewidth}%
+		\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
+			{\Largefontsize\textbf{\spell@label%
+				\expandafter\ifblank\expandafter{\spell@rep}{}{\replabel}%
+			}}&%
+			{\Largefontsize\textbf{\spell@name}}\tabularnewline%
+		\end{tabular}\par%
+		\vspace*{-7pt}%
+		\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}%
+			\textbf{%
+				\expandafter\ifblank\expandafter{\spell@CV}{%
+					\expandafter\ifblank\expandafter{\spell@CVbase}{}{\base{\spell@CVbase{}+}\newline}%
+					\expandafter\ifblank\expandafter{\spell@CVboost}{}{%
+						\boosted{\spell@CVboost{}+}%
+						\expandafter\ifblank\expandafter{\spell@CVspeboost}{}{\newline}%
+					}%
+					\expandafter\ifblank\expandafter{\spell@CVspeboost}{}{%
+						\specialboosted{\spell@CVspeboost{}+}%
+					}%
+				}{\spell@CV{}+%
+					\expandafter\ifblank\expandafter{\spell@CVspeboost}{}{%
+						\newline\specialboosted{\spell@CVspeboost{}+}%
+					}%				
+				}%
+			}&%
+			\expandafter\ifblank\expandafter{\spell@rangetype}{%
+				\textbf{%
+					\expandafter\ifblank\expandafter{\spell@range}{%
+						\expandafter\ifblank\expandafter{\spell@rangebase}{}{%
+							\base{%
+								\ifsubstring{\spell@rangebase}{\caster}{\spell@rangebase}{\distance{\spell@rangebase}}%
+								\expandafter\ifblank\expandafter{\spell@rangebaseaura}{}{ \aura{}}%
+							}\newline%
+						}%
+						\expandafter\ifblank\expandafter{\spell@rangeboost}{}{%
+							\boosted{%
+								\ifsubstring{\spell@rangeboost}{\caster}{\spell@rangeboost}{\distance{\spell@rangeboost}}%
+								\expandafter\ifblank\expandafter{\spell@rangeboostaura}{}{ \aura{}}%							
+							}%
+							\expandafter\ifblank\expandafter{\spell@rangespeboost}{}{\newline}%
+						}%
+						\expandafter\ifblank\expandafter{\spell@rangespeboost}{}{%
+							\specialboosted{%
+								\ifsubstring{\spell@rangespeboost}{\caster}{\spell@rangespeboost}{\distance{\spell@rangespeboost}}%
+								\expandafter\ifblank\expandafter{\spell@rangespeboostaura}{}{ \aura{}}%							
+							}%
+						}%
+					}{%
+						\ifsubstring{\spell@range}{\caster}{\spell@range}{\distance{\spell@range}}%
+						\expandafter\ifblank\expandafter{\spell@rangeaura}{}{ \aura{}}
+					}%
+				}&%	
+				\iftoggle{printtype}{\expandafter\alphaorderlistpar\expandafter{\spell@type}%
+					\ifboolexpr{togl {printtypebase} or togl {printtypeboost} or togl {printtypespeboost}}{\par}{}%
+				}{}%
+				\iftoggle{printtypebase}{\base{\expandafter\alphaorderlistpar\expandafter{\spell@typebase}}%
+					\ifboolexpr{togl {printtypeboost} or togl {printtypespeboost}}{\par}{}%
+				}{}%
+				\iftoggle{printtypeboost}{\boosted{\expandafter\alphaorderlistpar\expandafter{\spell@typeboost}}%
+					\iftoggle{printtypespeboost}{\par}{}%
+				}{}%
+				\iftoggle{printtypespeboost}{\specialboosted{\expandafter\alphaorderlistpar\expandafter{\spell@typespeboost}}}{}%
+				&%
+			}{%
+				\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{\spell@rangetype}}&%
+			}%
+			\iftoggle{printduration}{\spell@duration{}%
+				\ifboolexpr{togl {printdurationbase} or togl {printdurationboost} or togl {printdurationspeboost}}{\par}{}%
+			}{}%
+			\iftoggle{printdurationbase}{\base{\spell@durationbase}%
+				\ifboolexpr{togl {printdurationboost} or togl {printdurationspeboost}}{\par}{}%
+			}{}%
+			\iftoggle{printdurationboost}{\boosted{\spell@durationboost}%
+				\iftoggle{printdurationspeboost}{\par}{}%
+			}{}%
+			\iftoggle{printdurationspeboost}{\specialboosted{\spell@durationspeboost}}{}%		
+			\tabularnewline%
+		\end{tabular}%
+	\end{minipage}%
+	\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
+		\spell@effect{}%
+		\vspace*{2pt}%
+	\end{minipage}%
+}
+
+\newcommand{\newcosmologylogo}{%
+	\clearpage%
+	\begin{center}%
+	\toctarget{cosmology}{\hspace*{0.3cm}\includegraphics[width=0.5cm]{\cosmologycosmosicon}%
+	\hspace*{4.35cm}%
+	\includegraphics[height=1.8cm]{\cosmologyicon}%
+	\hspace*{3.95cm}%
+	\includegraphics[width=0.8cm]{\cosmologychaosicon}}%
+	\end{center}%
+}
+
+\newcommand{\starttablecosmology}{%
+	\begin{center}%
+	\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}m{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}%
+	\rowcolor[RGB]{\colors@cosmology}\multicolumn{7}{p{\linewidth}}{%
+	\rule{0pt}{0.7cm}% setting a minimum height
+	\centering{%
+	\begin{minipage}{\widthof{\textbf{\cosmos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\cosmos}}\end{minipage}%
+	\hspace*{3.5cm}%
+	\begin{minipage}{\widthof{\hugefontsize\textbf{\cosmology}}}{\vspace*{-0.2cm}\hugefontsize\textbf{\textcolor{white}{\cosmology}}}\end{minipage}%
+	\hspace*{3.5cm}%
+	\begin{minipage}{\widthof{\textbf{\chaos}}}\vspace*{-0.35cm}\textbf{\textcolor{white}{\chaos}}\end{minipage}%
+	}}\tabularnewline%
+}
+
+\newcommand{\tablepassivecosmology}[2]{%
+	\multicolumn{7}{p{\linewidth}}{%
+	\textbf{#1}\spacebeforecolon{}: #2}\tabularnewline
+}
+
+\newcommand{\tablelabelscosmology}{%
+	\hline
+	&\textit{\spellsType}&
+	\textit{\spellsDuration}&&
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\tabularnewline
+	\hline
+	\end{tabular}\newline%
+}
+
+\newcommand{\spelllabelandtitlecosmology}[2]{%
+	\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}m{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}
+	\Largefontsize\textbf{#1}&
+	\multicolumn{3}{m{0.45\linewidth}}{\Largefontsize\textbf{#2}}&
+}
+
+\newcommand{\tablespellcastingvaluecosmology}[1]{%
+	\textbf{#1}&
+}
+
+\newcommand{\tablespellrangecosmology}[1]{%
+	\textbf{#1}&\tabularnewline
+}
+
+\newcommand{\tablecosmosicon}{\raisebox{-.2\height}{\includegraphics[width=0.4cm]{\cosmologycosmosicon}}&}
+\newcommand{\tablechaosicon}{\raisebox{0.2\height}{\includegraphics[width=0.5cm]{\cosmologychaosicon}}&}
+
+\newcommand{\tablespelltextcosmology}[1]{\multicolumn{4}{m{0.65\linewidth}}{#1}\tabularnewline\end{tabular}}
+
+\newcommand{\closetablecosmology}{%
+\end{center}%
+}
+
+\define@key{spellcosmo}{label}{\def\spellcosmo@label{#1}}
+\define@key{spellcosmo}{path}{\def\spellcosmo@path{#1}}
+\define@key{spellcosmo}{name}{\def\spellcosmo@name{#1}}
+\define@key{spellcosmo}{CV}{\def\spellcosmo@CV{#1}}
+\define@key{spellcosmo}{range}{\def\spellcosmo@range{#1}}
+\define@key{spellcosmo}{typeCOMMON}{\def\spellcosmo@typeCOMMON{#1}}
+\define@key{spellcosmo}{typeCOMMONvshift}{\def\spellcosmo@typeCOMMONvshift{#1}}
+\define@key{spellcosmo}{typeCOSMOS}{\def\spellcosmo@typeCOSMOS{#1}}
+\define@key{spellcosmo}{typeCHAOS}{\def\spellcosmo@typeCHAOS{#1}}
+\define@key{spellcosmo}{durationCOMMON}{\def\spellcosmo@durationCOMMON{#1}}
+\define@key{spellcosmo}{durationCOMMONvshift}{\def\spellcosmo@durationCOMMONvshift{#1}}
+\define@key{spellcosmo}{durationCOSMOS}{\def\spellcosmo@durationCOSMOS{#1}}
+\define@key{spellcosmo}{durationCHAOS}{\def\spellcosmo@durationCHAOS{#1}}
+\define@key{spellcosmo}{effectCOSMOS}{\def\spellcosmo@effectCOSMOS{#1}}
+\define@key{spellcosmo}{effectCHAOS}{\def\spellcosmo@effectCHAOS{#1}}
+
+\newcommand{\defspellcosmo}{%
+	\setkeys{spellcosmo}{%
+		label=, path=, name=, CV=, range=, typeCOMMON=, typeCOMMONvshift=, typeCOSMOS=, typeCHAOS=, durationCOMMON=, durationCOMMONvshift=, durationCOSMOS=, durationCHAOS=, effectCOSMOS=, effectCHAOS=,
+	}%
+	\setkeys{spellcosmo}%
+}
+
+\newcommand{\spellcosmosentry}[1]{%
+	\defspellcosmo{#1}%
+	\begin{tabular}{M{0.05\linewidth}m{0.15\linewidth}m{0.15\linewidth}m{0.15\linewidth}M{0.15\linewidth}M{0.1\linewidth}m{0.25\linewidth}}%
+	\Largefontsize\textbf{\spellcosmo@label}&%
+	\multicolumn{3}{m{0.45\linewidth}}{\Largefontsize\textbf{\spellcosmo@name}}&%
+	\textbf{\spellcosmo@CV{}+}&%
+	\textbf{\distance{\spellcosmo@range}}& \tabularnewline%
+	\raisebox{-.2\height}{\includegraphics[width=0.4cm]{\cosmologycosmosicon}}&%
+	\expandafter\ifblank\expandafter{\spellcosmo@typeCOMMON}{%
+		\expandafter\alphaorderlistpar\expandafter{\spellcosmo@typeCOSMOS}&%
+	}{%
+		\expandafter\ifblank\expandafter{\spellcosmo@typeCOMMONvshift}{%
+			\multirow{2}{=}{\expandafter\alphaorderlistpar\expandafter{\spellcosmo@typeCOMMON}}&%
+		}{%
+			\multirow{2}{=}[\spellcosmo@typeCOMMONvshift]{\expandafter\alphaorderlistpar\expandafter{\spellcosmo@typeCOMMON}}&%
+		}%
+	}%
+	\expandafter\ifblank\expandafter{\spellcosmo@durationCOMMON}{%
+		\expandafter\alphaorderlistpar\expandafter{\spellcosmo@durationCOSMOS}&%
+	}{%
+		\expandafter\ifblank\expandafter{\spellcosmo@durationCOMMONvshift}{%
+			\multirow{2}{=}{\expandafter\alphaorderlistpar\expandafter{\spellcosmo@durationCOMMON}}&%
+		}{%
+			\multirow{2}{=}[\spellcosmo@durationCOMMONvshift]{\expandafter\alphaorderlistpar\expandafter{\spellcosmo@durationCOMMON}}&%
+		}%
+	}%
+	\multicolumn{4}{m{0.65\linewidth}}{\spellcosmo@effectCOSMOS}\tabularnewline
+	\raisebox{0.2\height}{\includegraphics[width=0.5cm]{\cosmologychaosicon}}&%
+	\expandafter\ifblank\expandafter{\spellcosmo@typeCOMMON}{%
+		\expandafter\alphaorderlistpar\expandafter{\spellcosmo@typeCHAOS}&%
+	}{%
+		&%
+	}%
+	\expandafter\ifblank\expandafter{\spellcosmo@durationCOMMON}{%
+		\expandafter\alphaorderlistpar\expandafter{\spellcosmo@durationCHAOS}&%
+	}{%
+		&%
+	}%
+	\multicolumn{4}{m{0.65\linewidth}}{\spellcosmo@effectCHAOS}\tabularnewline
+	\end{tabular}%
+}
+
+%%% Paths colours %%%
+
+\def\colors@alchemy{255,215,0}
+\def\colors@shamanism{114,56,16}
+\def\colors@cosmology{0,57,116}
+\def\colors@divination{47,191,226}
+\def\colors@druidism{127,223,90}
+\def\colors@evocation{94,29,101}
+\def\colors@occultism{222,0,100}
+\def\colors@pyromancy{204,0,0}
+\def\colors@witchcraft{135,139,166}
+\def\colors@thaumaturgy{0,84,34}
+
+
+%%% Hereditary Spells %%%
+
+\newcommand{\starthereditaryspell}[2][\hereditaryspellnumber{}]{%
+	\begin{center}%
+	\setlength{\tabcolsep}{0pt}%
+	\renewcommand{\arraystretch}{1.7}%
+	\arrayrulecolor{\greycolor}%
+	\setlength{\arrayrulewidth}{0.5pt}%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textit{\spellsCastingValue}&
+	\textit{\spellsRange}&
+	\textit{\spellsType}&
+	\textit{\spellsDuration}\tabularnewline
+	\end{tabular}\end{minipage}\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{m{\textwidth}}%
+	\textit{\spellsEffect}\tabularnewline
+	\end{tabular}\end{minipage}%
+	\vspace*{-3pt}\spellrule%
+	\begin{minipage}[c]{0.5\linewidth}%
+	\begin{tabular}{@{}M{0.08\linewidth}@{}m{0.92\linewidth}@{}}%
+	{\Largefontsize\textbf{#1}}&%
+	{\Largefontsize\textbf{#2}}\tabularnewline%
+	\end{tabular}\par%
+}
+
+\newcommand{\HScastingvalue}[1]{%
+	\vspace*{-10pt}%
+	\begin{tabular}{M{0.235\linewidth}M{0.25\linewidth}m{0.265\linewidth}m{0.25\linewidth}}
+	\textbf{#1}&
+}
+
+\newcommand{\HSrange}[1]{%
+	\textbf{#1}&
+}
+
+\newcommand{\HStype}[1]{%
+	#1 &
+}
+
+\newcommand{\HSrangeandtype}[1]{%
+	\multicolumn{2}{m{0.515\linewidth}}{\hspace*{1.3cm}\textbf{#1}}&%
+}
+
+\newcommand{\HSduration}[1]{%
+	#1\end{tabular}%
+	\end{minipage}\begin{minipage}[c]{0.5\linewidth}\vspace*{5pt}%
+}
+
+\newcommand{\HSeffect}[1]{%
+	#1\vspace*{2pt}\end{minipage}%
+}
+
+\newcommand{\closehereditaryspell}{%
+	\end{center}%
+}

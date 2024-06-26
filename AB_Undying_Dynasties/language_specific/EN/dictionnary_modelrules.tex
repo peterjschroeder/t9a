@@ -1,0 +1,72 @@
+% Army Model Rules Names
+
+\newcommand{\resurrected}{Resurrected}
+
+\newcommand{\hierophant}{Hierophant}
+\newcommand{\dusttodust}{Dust to Dust}
+\newcommand{\ensouledstatue}{Ensouled Statue}
+\newcommand{\undyingwill}{Undying Will}
+\newcommand{\autonomous}{Autonomous}
+\newcommand{\undergroundambush}{Un\-der\-ground Ambush}
+
+\newcommand{\aspenbow}{Aspen Bow}
+\newcommand{\greataspenbow}{Great Aspen Bow}
+
+\newcommand{\mummyscurse}{}
+
+% Hereditary Spell
+
+\newcommand{\deathisonlythebeginningintro}{%
+	Undying Dynasties do not have a Hereditary Spell. Instead, all Death Cult Hierarchs know the  Attribute Spell \spellformat{\deathisonlythebeginning}{}, in addition to any Path Attribute Spell.
+	At step 1 of each Casting Attempt of a Learned Spell of type Augment with a Death Cult Hierarch, the owner may increase the Casting Value by 2.
+	If the spell is successfully cast, the Death Cult Hierarch may cast \spellformat{\deathisonlythebeginning}{} as an Attribute Spell in addition to any other Attribute Spell (regardless of whether the initial spell's Casting Value was increased).
+	\spellformat{\deathisonlythebeginning}{} may target a unit containing one or more models with Ensouled Statue only if the initial spell's Casting Value was increased.\newline
+}
+\newcommand{\deathisonlythebeginning}{Death is Only the Beginning}
+\newcommand{\DOBseebelow}{See below}
+\newcommand{\deathisonlythebeginningrange}{%
+	The spell targets a single unit that was the target of the spell that triggered \spellformat{\deathisonlythebeginning{}}{}.}
+\newcommand{\deathisonlythebeginningdef}{%
+	When resolving the spell, choose one of the following effects:
+	\begin{itemize}
+		\item The \rnf{} part of the target Raises a number of Health Points equal to its \resurrected{} value.
+		\item Up to one Character within the target Recovers a number of Health Points equal to its \resurrected{} value.
+	\end{itemize}
+	Characters and models with \toweringpresence{} cannot Recover more than 2 Health Points from this spell in a single Magic Phase.
+}
+
+% Army Model Rules Texts
+
+\newcommand{\resurrecteddef}{%
+Some unit profiles contain the additional Characteristic Resurrected, shortened \resurrectedInitials{}, which determines the number of Health Points Raised with \spellformat{\deathisonlythebeginning}{}.%
+}
+
+\newcommand{\hierophantdef}{%
+One of a Kind. An Undying Dynasties Army List \textbf{must} include a single model with this Universal Rule. When the \hierophant{} casts \spellformat{\deathisonlythebeginning}{} as a non-Bound Spell, you may choose to \textbf{set} the spell range to \distance{18}~(instead of the spell's normal target restrictions).%
+}
+
+\newcommand{\dusttodustdef}{%
+At the start of each friendly Player Turn after the army's \hierophant{} has been removed as a casualty, every unit with one or more models with \dusttodust{} loses 1 Health Point with no saves of any kind allowed. These Health Point losses are allocated following the rules for Unstable.%
+}
+
+\newcommand{\ensouledstatuedef}{%
+If more than half of the models in a unit have \ensouledstatue{}, reduce the number of Health Points lost by this unit due to \dusttodust{} and \unstable{} by 1.%
+}
+
+\newcommand{\undyingwilldef}{%
+Units with one or more models with \undyingwill{} gain +2 Offensive Skill, +2 Defensive Skill, \textbf{\lethalstrike}, and replace their Shooting Weapons' Aim with (4+). Characters, Beasts, models with \ensouledstatue{}, and model parts with \harnessed{} are not affected by \undyingwill{}.%
+}
+
+\newcommand{\autonomousdef}{%
+\undead{} units consisting entirely of models with \autonomous{} may perform March Moves as normal even when outside the range of friendly models' \commandingpresence{}. The unit \textbf{must} still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
+}
+
+\newcommand{\aspenbowdef}{%
+\range{24}, \shots{1}, \St{} 3, \AP{} 0, \textbf{\volleyfire{}}.\newline
+This weapon \textbf{always} hits on a roll equal to or greater than its Aim.%
+}
+
+\newcommand{\greataspenbowdef}{%
+\range{36}, \shots{1}, \St{} 5, \AP{} 2, \textbf{\volleyfire{}}.\newline
+This weapon \textbf{always} hits on a roll equal to or greater than its Aim.%
+}

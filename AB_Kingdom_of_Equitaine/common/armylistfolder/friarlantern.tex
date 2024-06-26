@@ -1,0 +1,34 @@
+
+\unitentry{%
+	name=\friarlantern{},
+	logo=fey,
+	cost=\newrule{120},
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=50\timess{}50,
+	global@Ad=4,
+	global@Ma=8,
+	global@Adfly=8,
+	global@Mafly=\newrule{18},
+	global@Di=7,
+	globalrules={,\hidebf{\illusions{}},\scout{},\unstable{},\insignificant{},\fly{8}{\newrule{18}},\hidebf{\lightsinthemist{}}, \fearless{}, \feignedflight{}, \skirmisher{}, \ghoststep{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=1,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	defenserules={\hardtarget{} (2)},
+	offensename=\friarlantern{},
+	offense@At=,
+	offense@Of=,
+	offense@St=1,
+	offense@AP=0,
+	offense@Ag=10,
+	offenserules={\grindattacks{} (1)},
+	modelrulesdef={%
+		\modelruledef{\illusions}{\ruletype{\universalrule}\illusionsdef}
+		\modelruledef{\lightsinthemist}{\ruletype{\universalrule}\lightsinthemistdef}
+	},
+}

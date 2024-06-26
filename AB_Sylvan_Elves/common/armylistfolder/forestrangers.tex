@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\forestrangers{},
+	logo=special,
+	cost=195,
+	unitsize=10,
+	maxunitsize=30,
+	costpermodel=18,
+	scoring=yes,
+	maxunitsperarmy=5,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\fearless{},\forestwalker{},\scoring{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\la{},\elvencloak{}},
+	offensename=\forestranger{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{}},
+	offenseweapons={\gw{}},
+	options={%
+		\vanguard{}* =2\permodel{},
+		\forestrangervanguardrestrictiondef{}
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+		\alphaorderstickto{\standardbearer{}=11}**\suboptionindent{}\optionline%
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\elvencloak{}}{\ruletype{\universalrule}\elvencloakdef}
+	},
+} % END UNIT ENTRY

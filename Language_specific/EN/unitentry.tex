@@ -1,0 +1,133 @@
+
+\newcommand{\GlobalCharacteristics}{Global}
+\newcommand{\ModelRules}{Model Rules}
+\newcommand{\DefensiveCharacteristics}{Defensive}
+\newcommand{\OffensiveCharacteristics}{Offensive}
+
+\newcommand{\roundbase}{round}% printed after XX mm for round bases
+
+\newcommand{\groundmovementlabel}{Ground}
+\newcommand{\flymovementlabel}{Fly}
+
+\newcommand{\magicoptions}{Magic Options}
+\newcommand{\model}{model}
+\newcommand{\Models}{models}
+\newcommand{\singlemodel}{single model}
+
+\newcommand{\basesize}{Base}
+\newcommand{\type}{Type}
+\newcommand{\Height}{Height}
+\newcommand{\labels@options}{Options}
+\newcommand{\labels@addoptions}{Additional Options}
+\newcommand{\labels@commandgroupoptions}{Command Group Options}
+\newcommand{\labels@mountsoptions}{Mount Options}
+\newcommand{\labels@modelrulesdef}{Model Rules}
+\newcommand{\labels@optionalmodelrulesdef}{Optional Model Rules}
+
+% Command groups
+
+\newcommand{\champion}{Champion}
+\newcommand{\standardbearer}{Standard Bearer}
+\newcommand{\musician}{Musician}
+\newcommand{\bannerallowance}{Banner Enchantment}
+\newcommand{\championallowance}{Weapon Enchantment}
+
+% Technicals
+
+\newcommand{\only}[1]{(#1 only)}
+\newcommand{\against}{against}
+\newcommand{\free}{free}
+\newcommand{\upto}{up to~}
+\newcommand{\Upto}{Up to~}
+\newcommand{\nolimit}{no~limit}
+\newcommand{\permodel}{\nobreak{}/model}
+\newcommand{\pereach}{\nobreak{}/each}
+\newcommand{\perextramodel}{\nobreak{}/extra model}
+\newcommand{\perextramodelshortened}{\nobreak{}/extra model}% if \perextramodel gets too long when there are 2 logos; it is not the case in English
+\newcommand{\notif}[1]{(not if #1)}
+\newcommand{\wordand}{and}
+\newcommand{\wordor}{or}
+\newcommand{\wordwith}{with}
+\newcommand{\ifNmodelsorless}[1]{(if #1 models or less)}
+
+
+%%% Profile wording
+
+%% zero to X things
+\newcommand{\zerotoXunitsperarmy}[1]{0--#1 \isitoneornot{#1}{Units}{Units}/Army}
+\newcommand{\zerotoXmodelsperarmy}[1]{0--#1 \isitoneornot{#1}{Models}{Models}/Army}
+\newcommand{\zerotoXmountsperarmy}[1]{0--#1 \isitoneornot{#1}{Mounts}{Mounts}/Army}
+\newcommand{\zerotoXmodelsperunit}[1]{0--#1 \isitoneornot{#1}{Models}{Models}/Unit}
+
+% No automatic test for plural or singular -- plural
+\newcommand{\NOTESTzerotoXunitsperarmy}[1]{0--#1 Units/Army}
+\newcommand{\NOTESTzerotoXmodelsperarmy}[1]{0--#1 Models/Army}
+\newcommand{\NOTESTzerotoXmountsperarmy}[1]{0--#1 Mounts/Army}
+\newcommand{\NOTESTzerotoXmodelsperunit}[1]{0--#1 Models/Unit}
+
+% No automatic test for plural or singular -- singular
+\newcommand{\zerotooneunitsperarmy}{0--1 Units/Army}
+\newcommand{\zerotoonemodelsperarmy}{0--1 Models/Army}
+\newcommand{\zerotoonemountsperarmy}{0--1 Mounts/Army}
+\newcommand{\zerotoonemodelsperunit}{0--1 Models/Unit}
+
+\newcommand{\zerotoXchoice}[1]{0--#1}
+\newcommand{\zerotoXperarmy}[1]{0--#1 per Army}
+
+\newcommand{\onechoiceonlyNOC}{(one choice only)}
+\newcommand{\OnechoiceonlyNOC}{One choice only:}
+\newcommand{\Onfootonly}{On foot only}
+\newcommand{\onfootonly}{on foot only}
+\newcommand{\onfoot}{on foot}
+\newcommand{\closecombatonly}{Close Combat only}
+\newcommand{\Xmodelsorless}[1]{(#1 models or less)}
+
+\newcommand{\ifwizardmaster}{If \wizardmaster}
+\newcommand{\ifgeneral}{If General}
+\newcommand{\Ifonfoot}{If on foot}
+\newcommand{\specialitemsallowance}{Special Items}
+
+\newcommand{\onechoiceonly}{\optionschoice{One choice only:}}
+\newcommand{\onechoiceonlyACO}[1]{\optionschoice{One choice only:}{\AlCoOrder{#1}}}
+\newcommand{\onechoiceonlyTWOCOL}{\optionschoiceTWOCOL{One choice only:}}
+\newcommand{\onechoiceonlyTWOCOLACO}[1]{\optionschoiceTWOCOL{One choice only:}{\AlCoOrder{#1}}}
+\newcommand{\explonechoiceonly}{\exploptionschoice{One choice only:}}
+\newcommand{\explonechoiceonlyACO}[1]{\exploptionschoice{One choice only:}{\explAlCoOrder{#1}}}
+
+\newcommand{\mustchooseonechoiceonly}{\optionschoice{\textbf{Must} choose (one choice only):}}
+\newcommand{\mustchooseonechoiceonlyTWOCOL}{\optionschoiceTWOCOL{\textbf{Must} choose (one choice only):}}
+\newcommand{\mustchooseonechoiceonlyNOC}{\textbf{Must} choose (one choice only):}
+\newcommand{\mustchooseatleastone}{\optionschoice{\textbf{Must} choose (at least one choice):}}
+
+\newcommand{\charactermountnote}[2]{%
+	A mount marked with (#1) counts towards #2. The mount and its rider also count towards Characters.%
+}
+\newcommand{\charactermountnotefull}[2]{%
+	A mount marked with [#1] and its rider count towards Characters and #2.%
+}
+\newcommand{\twocategoriesnote}[2]{%
+	The unit counts both towards #1 and #2.%
+}
+\newcommand{\mountcategorynote}[1]{%
+	The mount and its rider count towards Characters. The mount also counts towards #1.%
+}
+\newcommand{\mountcategorynotefull}[1]{%
+	The mount and its rider count towards Characters and #1.%
+}
+\newcommand{\unitsofXormoremodelscounttowardscore}[1]{%
+	Units of #1 or more models count towards Core instead of Special.%
+}
+\newcommand{\unitsofXmodelscounttowardscore}[1]{%
+	Units of #1 models count towards Core instead of Special.%
+}
+\newcommand{\maxXunitsofYormoremodelscounttowardscore}[2]{%
+	A maximum of #1 \isitoneornot{#1}{unit}{units} of #2 or more models count towards Core instead of Special.%
+}
+\newcommand{\upgradecategorynote}[2]{%
+	Units with an upgrade marked with [#1] also count towards #2.%
+}
+\newcommand{\upgradecategoryreplacementnote}[3]{%
+	Units with an upgrade marked with [#1] count towards #2 instead of #3.%
+}
+
+\newcommand{\wizardconclavespellsintro}{\wizardconclavespellslist{\textbf{Must} select 2 spells from:}}

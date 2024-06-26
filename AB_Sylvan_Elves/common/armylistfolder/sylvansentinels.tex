@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\sylvansentinels{},
+	logo=arrows,
+	cost=150,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=37,
+	addrestriction=\zerotoXunitsperarmy{2}\refsymbol{},
+	categorynote=\refsymbolbis{}\sylvansentinelscategorynote{},
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\forestwalker{},\skirmisher{},\lighttroops{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\hardtarget{} (1)},
+	offensename=\sylvansentinel{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\poisonattacks{},\lightningreflexes{}},
+	offenseweapons={\sylvanlongbow{} (3+)},
+	options={%
+		\scout{} (\zerotoXunitsperarmy{1})=3\permodel{},
+		\sylvanblades{}=1\permodel{},
+	},
+	commandgroup={%
+		\champion{}=10,
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\sylvanlongbow{}}{\ruletype{\shootingweapon}\sylvanlongbowdef}
+	},
+	scrolloptionalmodelrulesdef={%
+		\modelruledef{\sylvanblades{}}{\ruletype{\closecombatweapon}\sylvanbladesdef}
+	},
+} % END UNIT ENTRY

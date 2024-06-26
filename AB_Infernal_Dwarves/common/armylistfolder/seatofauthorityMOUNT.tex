@@ -1,0 +1,28 @@
+
+\unitentry{%
+	name=\seatofauthority{},
+	logo=character,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=40\timess{}40,
+	maxmountsperarmy=2,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=\ascharacter{},
+	globalrules={\tall{},\hidebf{\vassalgovernor{}}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{}+1,
+	defenserules={\cannotbestomped{}},
+	offensename=\seatofauthority{},
+	offense@At=4,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\harnessed{}},
+	modelrulesdef={%
+		\modelruledef{\vassalgovernor}{\ruletype{\universalrule}\vassalgovernordef}
+	},
+}% END UNIT ENTRY

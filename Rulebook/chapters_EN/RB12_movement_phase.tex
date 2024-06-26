@@ -1,0 +1,157 @@
+
+\part{Movement Phase}
+\idx[main=y]{Movement Phase}\label{movement_phase}
+
+In the Movement Phase you have the chance to move your units on the Battlefield.
+
+\RBbmc
+
+\section{Movement Phase Sequence}
+\label{the_movement_phase_sequence}
+
+The Movement Phase is divided into the following steps:
+
+\startseqtablemc
+1 & Start of the Movement Phase \tabularnewline
+2 & Rally Fleeing units and perform any Flee Moves \tabularnewline
+3 & Moving Units: Select one of your units, take a March Test if necessary, select a type of move (Advance, March, Reform), then move the unit \tabularnewline
+4 & Repeat step 3, each time choosing a new unit that has not yet moved in the Movement Phase \tabularnewline
+5 & End of the Movement Phase \tabularnewline
+\closeseqtablemc
+
+\section{Rallying Fleeing Units}
+\idx[main=y]{Rallying Fleeing Units}\idx[main=y]{Rally Test}\idx{Fleeing Units}\label{rally_fleeing_units}
+
+In an order chosen by the Active Player, each friendly unit that was Fleeing at the start of the Player Turn must take a Discipline Test, called a Rally Test:
+\begin{itemize}
+\item If the test is passed, the unit is no longer considered Fleeing and must immediately perform a \hyperref[reform]{Reform}; models in the unit are \hyperref[shaken]{Shaken} until the end of the Player Turn.
+\item If the test is failed, the unit immediately performs a Flee Move (straight forward).
+\end{itemize}
+
+Note that if the unit is Decimated (see \totalref{decimated}), the Rally Test will be taken at half Discipline, rounding fractions up.
+
+\columnbreak
+
+\section{Flee Moves}
+\idx[main=y]{Moving Fleeing Units}\idx[main=y]{Flee Moves}\label{flee_moves}
+
+A Flee Move is performed as follows:
+
+\startseqtablemc
+1 & Roll the Flee Distance, which is normally \distance{2D6}.\\
+2 & Move the Fleeing unit this distance straight forward.\\
+\closeseqtablemc
+
+\begin{itemize}
+\item If the Flee Move takes the Fleeing unit into contact with the Board Edge, remove the unit as a casualty as soon as it touches the Board Edge (possibly causing \hyperref[panic_test]{Panic Tests} to nearby units).
+\item If this move would make the Fleeing unit end its move within \distance{1} of another unit's Unit Boundary or Impassable Terrain, extend the Flee Distance by the minimum distance required for the unit to get clear of all such obstructions.
+\item If this move would make the Fleeing unit end its move inside another unit's Unit Boundary or inside Impassable Terrain, extend the Flee Distance by the minimum distance required for the unit to get clear of all such obstructions.
+\item If Fleeing models move through the Unit Boundary of an enemy unit or Impassable Terrain, they must take a Dangerous Terrain (3) Test (see \totalref{dangerous_terrain}).
+\item If Fleeing models move through a friendly unit's Unit Boundary, that unit must take a \hyperref[panic_test]{Panic Test} after the Fleeing unit has completed its Flee Move.
+\end{itemize}
+
+Note that Flee Moves are often preceded by a Pivot. This Pivot follows the same rules as the Flee Move.
+
+\section{Moving Units}
+\idx[main=y]{Moving Units}\label{moving_units}
+
+\idx{Engaged in Combat}Choose one of your units to move that is not Charging, Engaged in Combat, Fleeing, or contains any \hyperref[shaken]{Shaken} models.
+
+Then perform a March Test if necessary and choose what type of move this unit will perform, and move the unit. The different types of move are Advance Move, March Move, and Reform. In order to affect a unit's movement, effects (like Universal Rules or movement modifiers) need to be present at the start of the unit's movement.
+
+Repeat this process, each time choosing a new unit that has not yet moved in the Movement Phase. Once all units that can move (and want to) have done so, the Movement Phase ends.
+
+\columnbreak
+
+\subsection{March Test}
+\idx[main=y]{March Test}\label{march_test}
+
+Immediately before moving a unit, if it is within \distance{8} of any non-Fleeing enemy units, the unit must take a Discipline Test, called a March Test:
+\begin{itemize}
+\item If the test is passed, the unit may proceed as normal.
+\item If the test is failed, the unit cannot perform a March Move during this Movement Phase (it can perform any other type of move as normal, or choose not to move at all).
+\end{itemize}
+
+\subsection{Advance Move}
+\idx[main=y]{Advance Move}\label{advance_move}
+
+When performing an Advance Move, a unit can move forwards, backwards, or sideways, but it cannot move in more than one of these directions during an Advance Move:
+
+\begin{itemize}
+\item\textbf{Forwards:} The unit moves forwards a distance up to its Advance Rate. During a forward Advance Move, a unit may perform any number of Wheels.
+\item\textbf{Backwards:} The unit moves backwards a distance up to half its Advance Rate (this is not considered a Characteristic modifier). For example, a unit with Advance Rate \distance{5} could move backwards \distance{2.5}.
+\item\textbf{Sideways:} The unit moves to either side a distance up to half its Advance Rate (this is not considered a Characteristic modifier).
+\end{itemize}
+
+When performing an Advance Move, no model can end its movement with its centre farther away than its Advance Rate from its starting position. If a model in the unit performed any action during the movement (such as a \hyperref[sweeping_attack]{Sweeping Attack}), the distance moved is measured from the model's starting position to the point on the Battlefield where it performed that action and then to its final position.
+
+\subsection{March Move}
+\idx[main=y]{March Move}\label{march_move}
+
+When performing a March Move:
+
+\begin{itemize}
+\item A unit can only move forwards, up to its March Rate.
+\item A unit may perform any number of Wheels.
+\item No model can end its movement with its centre farther away than its March Rate from its starting position. If a model in the unit performed any action during the movement (such as a Sweeping Attack), the distance moved is measured from the model's starting position to the point on the Battlefield where it performed that action and then to its final position.
+\end{itemize}
+
+A unit that has Marched cannot shoot in the following Shooting Phase.
+
+\columnbreak
+
+\subsection{Reform}
+\idx[main=y]{Reform}\label{reform}
+
+When performing a Reform:
+
+\startseqtablemc
+1 & Mark the Centre of the unit.\\
+2 & Remove the unit from the Battlefield, and then place it back on the Battlefield in any legal formation and facing any direction (following the Unit Spacing rule), with its Centre in the same place as before.\\
+\closeseqtablemc
+
+After the Reform, no model can end up with its centre farther away than its March Rate from its starting position. A unit that has Reformed cannot shoot in the Shooting Phase during this Player Turn.
+
+\subsection{Moving Single Model Units}
+\idx{Single Model Units}\idx[main=y]{Moving Single Model Units}\idx{Lone Characters}\label{moving_single_model_units}
+
+Units consisting of a single model follow the rules for Moving Units stated above. In addition, they can perform any number of Pivots during Advance Moves and March Moves.
+
+\newcommand{\wheelsA}{a)}
+\newcommand{\wheelsB}{b)}
+\newcommand{\wheelsC}{c)}
+
+\begin{figure*}[!b]
+	\centering
+	\renewcommand{\figbiglettersize}{15}
+	\hypertarget{wheels_figure}{%
+		\def\svgwidth{\textwidth}
+		\subimport{../pics/}{wheels.pdf_tex}%
+	}
+	\caption{Examples of Wheels.\captionposttitlepremc
+		\raggedcolumns\begin{multicols}{2}%
+			a) The unit has March Rate \distance{12}. It March Moves forwards \distance{3}, Wheels \distance{6} (measured from the outer corner from its starting to its ending position), and then March Moves forwards another \distance{2}. The unit has moved 3 + 6 + 2 = \distance{11}.\captionpar
+			b) The unit has March Rate \distance{10}. It March Moves forwards \distance{3} and then performs a \distance{5} Wheel. Even though the outer corner has only moved \distance{8}, there are models in the unit that end their movement farther away than their March Rate from their starting position, making this move illegal (see \totalref{march_move}).\columnbreak\newline
+			c) The unit has March Rate \distance{16}. It March Moves forwards \distance{2}, then performs 2 Wheels (\distance{4} each), making it almost face the opposite direction. The unit then moves forwards \distance{4} and finishes the move with a small \distance{1.5} Wheel. The total distance covered by the unit is 2 + 4 + 4 + 4 + 1.5 = \distance{15.5}.\newline
+			Even though some models in the unit are temporarily farther from their starting position than their March Rate, this is a legal move, since at the end of the move, all models are within their March Rate of their starting position.%
+		\end{multicols}
+	}%
+	\label{figure/wheels}%
+	\vspace{2cm}
+\end{figure*}
+
+\columnbreak
+
+\section{Pivots and Wheels}
+\idx[main=y]{Pivots}\idx[main=y]{Wheels}\label{pivots_and_wheels}
+
+When performing a Pivot:
+
+\startseqtablemc
+1 & Mark the Centre of the unit.\\
+2 & Remove the unit from the Battlefield, and then place it back on the Battlefield facing any direction with its Centre in the same place as before (following the Unit Spacing rule).\\
+\closeseqtablemc
+
+When performing a Wheel, rotate the unit forwards up to \SI{90}{\degree}, around either of its front corners. The distance moved by the unit is equal to the distance the outer front corner of the outermost model in the first rank has moved from its starting to its ending position (not the actual distance it moved along the arc of a circle), see figure \ref{figure/wheels}. All models in the unit are considered to have moved this distance.
+
+\RBemc

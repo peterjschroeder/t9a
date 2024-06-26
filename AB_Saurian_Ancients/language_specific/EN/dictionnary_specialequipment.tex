@@ -1,0 +1,94 @@
+% SPECIAL ITEMS
+\newcommand{\gloryofthedawnage}{Glory of the Dawn Age}
+\newcommand{\serpentnestcharm}{Serpent's Nest Charm}
+\newcommand{\alchemicalarrows}{Alchemical Arrows}
+
+\newcommand{\vitalessence}{Vital Essence}
+\newcommand{\starfallscales}{Starfall Scales}
+
+\newcommand{\korustone}{Koru Stone}
+\newcommand{\obeliskofcollaboration}{Obelisk of Collaboration}
+
+\newcommand{\infiltratordart}{Infiltrator's Dart}
+\newcommand{\teaupourismokestone}{Te Aupouri Smokestone}
+\newcommand{\ancientplaque}{Ancient Plaque}
+\newcommand{\stampederesonatorcrystal}{Stampede Resonator Crystal}
+\newcommand{\carvedtablet}{Carved Tablet}
+\newcommand{\celestialastrolabe}{Celestial Astrolabe}
+
+\newcommand{\nocore}{Cannot be taken by units that count towards Core}
+
+
+\newcommand{\gloryofthedawnagedef}{
+	Attacks made with this weapon gain +1 Strength and +1 Armour Penetration . In addition, attacks made with this weapon for which a successful natural to-wound roll of 5+ was rolled are subject to the following rules: 
+	\begin{itemize}
+		\item They gain \textbf{\multiplewounds{2}{}}
+		\item Unless the target has \immune{} (\lethalstrike{}), their Armour Penetration is \textbf{always} set to 10 and they ignore Fortitude Saves.
+	\end{itemize}
+}
+
+
+\newcommand{\serpentnestcharmrestriction}{Cannot be taken by Wizards}
+\newcommand{\serpentnestcharmdef}{
+	While using this weapon, the wielder’s Attack Value is \textbf{set} to 6 and attacks made with this weapon become \textbf{\poisonattacks{}} .
+}
+
+
+\newcommand{\alchemicalarrowsdef}{
+	This weapon has Shots 4, Str 4, AP 1.  If the weapon inflicts one or more hits, the Strength of all simultaneously made Shooting Attacks by the bearer’s unit with Magnetic Short Bows is \textbf{set} to 4. 
+}
+
+
+\newcommand{\vitalessencedef}{
+	The bearer gains \fortitude{4+} and +1 Health Point.
+}
+
+
+\newcommand{\starfallscalesdef}{
+	The wearer’s model gains \textbf{\hardtarget{} (1)} and \textbf{\immune{} (Flaming Attacks)}.
+}
+
+
+\newcommand{\korustonedef}{
+	The bearer's unit gains \textbf{\rallyaroundtheflag{}}  (\distance{12}). If the model is removed as a casualty, the oppponent gains an additional 200 VP. 
+}
+
+
+\newcommand{\obeliskofcollaborationdef}{
+	The bearer’s unit gains \textbf{\packhunter{}}.
+}
+
+
+\newcommand{\infiltratordartrestriction}{Skink Veterans only}
+\newcommand{\infiltratordartdef}{
+	Right before the battle (during step 7 of the Deployment Phase Sequence), you \textbf{must} mark a single unit from your opponent's Army List with Prey Scent, even if the bearer is Ambushing.
+}
+
+
+\newcommand{\teaupourismokestonedef}{
+	One use only. May be activated when a friendly unit fails a Break Test (after any rerolls). Until the start of the next friendly Movement Phase,  enemy units within \distance{18} of the bearer’s model gain Minimised (Charge Range, Pursuit Distance, Overrun Distance).
+}
+
+
+\newcommand{\ancientplaquedef}{
+Once per Magic Phase, the bearer may reroll a single Magic Dice when making a casting roll. This ability cannot be used if the spell was Miscast nor for Casting Attempts with only one Magic Dice.
+}
+
+
+\newcommand{\stampederesonatorcrystaldef}{
+	One use only. May be activated at the start of any Charge Phase. Choose one friendly Large Cavalry unit or Gigantic model within \distance{18} of the bearer’s model and apply the following effects (all of them or none) until the end of the Melee Phase:
+	\begin{itemize}
+		\item Each model gains Impact Hits (X), where X is equal to its amount of Stomp Attacks. If a model already had Impact Hits, increase its number of Impact Hits by its amount of Stomp Attacks instead.
+		\item The models cannot perform any Stomp Attacks.
+	\end{itemize}
+}
+
+\newcommand{\carvedtabletdef}{
+	During Spell Selection, the model \textbf{must} choose one of the spells from \carvedwisdom{} (see Howdah Devices) that no model with \carvedwisdom{} chooses. The model can cast the chosen spell as a Bound Spell with Power Level (4/8).
+}
+
+\newcommand{\celestialastrolabedef}{
+	The Casting Values of all spells cast by friendly models is reduced by 1.
+}
+		
+\newcommand{\celestialastrolaberestriction}{Cannot be taken if the Army List contains one or more Anurarch Archmages}

@@ -1,0 +1,308 @@
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\overlord}{Overlord}
+\newcommand{\prophet}{Prophet}
+\newcommand{\vizier}{Vizier}
+\newcommand{\taurukhcommissioner}{Taurukh Commissioner}
+\newcommand{\taurukhcommissionerSHORT}{Taurukh Commis.}
+\newcommand{\taurukhcommissionerQRS}{Taurukh Commis.}
+\newcommand{\vassalconjurer}{Vassal Conjurer}
+\newcommand{\lamassuscholar}{Lamassu Scholar}
+\newcommand{\lamassu}{Lamassu}
+\newcommand{\student}{Student}
+
+% MOUNTS
+
+\newcommand{\bullofshamut}{Bull of Shamut}
+\newcommand{\greatbullofshamut}{Great Bull of Shamut}
+\newcommand{\vassalsteed}{Vassal Steed}
+\newcommand{\seatofauthority}{Seat of Authority}
+\newcommand{\kadimchariot}{Kadim Chariot}
+\newcommand{\kadimbeast}{Kadim Beast}
+\newcommand{\chassis}{Chassis}
+\newcommand{\infernalbastion}{Infernal Bastion}
+\newcommand{\crew}{Crew}
+\newcommand{\batteringram}{Battering Ram}
+
+% CORE
+
+\newcommand{\infernalwarriors}{Infernal Warriors}
+\newcommand{\infernalwarrior}{Infernal Warrior}
+
+\newcommand{\citadelguard}{Citadel Guard}
+\newcommand{\citadelguardSINGULAR}{Citadel Guard}
+
+\newcommand{\vassallevies}{Vassal Levies}
+\newcommand{\vassallevy}{Vassal Levy}
+
+\newcommand{\vassalchieftain}{Vassal Chieftain}
+
+\newcommand{\shackledslaves}{Shackled Slaves}
+\newcommand{\shackledslave}{Shackled Slave}
+
+% SPECIAL
+
+\newcommand{\immortals}{Immortals}
+\newcommand{\immortal}{Immortal}
+
+\newcommand{\taurukhenforcers}{Taurukh Enforcers}
+\newcommand{\taurukhenforcer}{Taurukh Enforcer}
+
+\newcommand{\taurukhanointed}{Taurukh Anointed}
+\newcommand{\taurukhanointedSINGULAR}{Taurukh Anointed}
+
+\newcommand{\disciplesoflugar}{Disciples of Lugar}
+\newcommand{\discipleoflugar}{Disciple of Lugar}
+
+\newcommand{\kadimincarnates}{Kadim Incarnates}
+\newcommand{\kadimincarnate}{Kadim Incarnate}
+
+\newcommand{\acolyteoflugar}{Champion of Lugar}
+
+\newcommand{\vassalcavalry}{Vassal Cavalry}
+\newcommand{\vassalrider}{Vassal Rider}
+
+\newcommand{\vassalslingshot}{Vassal Slingshot}
+
+\newcommand{\gunneryteam}{Gunnery Team}
+
+\newcommand{\infernalartillery}{Infernal Artillery}
+
+
+% INSTRUMENTS OF DESTRUCTION
+
+\newcommand{\infernalengine}{Infernal Engine}
+
+\newcommand{\kadimtitan}{Kadim Titan}
+
+\newcommand{\citizengiant}{Citizen Giant}
+
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Overlord
+
+\newcommand{\keystothecitadel}{Keys to the Citadel}
+\newcommand{\keystothecitadeldef}{%
+	The model \textbf{must} buy Weapon Enchantments for two of its mundane weapons. The Point Cost of one of the Weapon Enchantments, the cheapest if applicable, is halved, rounding fractions up.%
+}
+
+\newcommand{\arrogance}{Arrogance}
+\newcommand{\arrogancedef}{%
+	The model's unit automatically passes Fear Tests.%
+}
+
+% Prophet
+
+\newcommand{\prophetofashuruk}{Prophet of Ashuruk}
+\newcommand{\prophetoflugar}{Prophet of Lugar}
+\newcommand{\prophetofshamut}{Prophet of Shamut}
+\newcommand{\prophetofnezibkesh}{Prophet of Nezibkesh}
+\newcommand{\eachoptionis}{Each option is}
+
+\newcommand{\prophetofashurukdef}{%
+	Regardless of its chosen Path, the model knows \spellformat{\alchemyattribute}{\alchemy} and \spellformat{\pyromancyattribute}{\pyromancy}. \newline%
+	When successfully casting a spell from:%
+	\begin{itemize}%
+		\item Alchemy, the model may cast \spellformat{\pyromancyattribute}{\pyromancy} instead of \spellformat{\alchemyattribute}{} as Attribute Spell.%
+		\item Pyromancy, the model may cast \spellformat{\alchemyattribute}{\alchemy} instead of \spellformat{\pyromancyattribute}{} as Attribute Spell.%
+		\item Occultism without performing \spellformat{\occultismpassive}{}, the model may cast \spellformat{\alchemyattribute}{} or \spellformat{\pyromancyattribute}{} as Attribute Spell.%
+	\end{itemize}%
+	 The model gains access to the options below.%
+}
+\newcommand{\prophetoflugardef}{%
+	The model gains \textbf{\aegis{} (4+)} and loses Infernal Armour. The model part gains \textbf{\flamingattacks{}} and \textbf{\magicalattacks{}}. If on foot, the model gains \textbf{\ghoststep{}}, its Advance Rate is \textbf{set} to \distance{4} and its March Rate is \textbf{set} to \distance{12}. The model gains access to the options below.%
+}
+\newcommand{\prophetofnezibkeshdef}{%
+	The model gains \textbf{\firesofindustry{} (1)} and \textbf{\engineer{} (3+)} that it can use on a single friendly \gunneryteam{}, \infernalartillery{}, or \infernalengine{} within \distance{6}. The model gains access to the options below.%
+}
+\newcommand{\prophetofshamutdef}{The model gains access to the options below.}
+
+% Vizier
+
+\newcommand{\cannotbetakenbybsb}{Cannot be taken by the Battle Standard Bearer}
+
+% Vassal Conjuror
+
+\newcommand{\unbranded}{Unbranded}
+\newcommand{\unbrandeddef}{%
+	The model cannot take any Special Items from this Army Book and cannot cast \spellformat{Curse of Nezibkesh}{Hereditary Spell}. It cannot join units with more than half of their models with Infernal Brand or units of Shackled Slaves.%
+}
+
+% Lamassu Scholar
+
+\newcommand{\riddleofthelamassu}{Riddle of the Lamassu}
+\newcommand{\riddleofthelamassudef}{%
+	The model is a Wizard Adept that selects 2 spells from \spellformat{\alchemyspelltwo}{\alchemy}, \spellformat{\occultismspellone}{\occultism}, \spellformat{\pyromancyspellthree}{\pyromancy}, \spellformat{\witchcraftspelltwo}{\witchcraft}, and \spellformat{\curseofnezibkesh}{\hereditaryspell}. This rule overrides the normal Spell Selection rules connected to being a Wizard Adept.\newline%
+	Before Spell Selection (at the start of step 7 of the Pre-Game Sequence), the opponent \textbf{must} choose Power or Wisdom.%
+	\begin{itemize}%
+		\item If they choose Power, the Lamassu gains \textbf{Channel (1)} for the duration of the game.%
+		\item If they choose Wisdom, the model knows an additional spell that it selects immediately from the list of spells above.%
+	\end{itemize}%
+}
+\newcommand{\asingleartefact}{A single Artefact}
+
+%% MOUNTS
+
+% Bull of Shamut
+
+\newcommand{\flymodelsrestriction}{All models with Fly share a common \zerotoXmodelsperarmy{2} restriction.}
+
+% Kadim Chariot
+
+\newcommand{\againstflamingattacks}{against \flamingattacks{}}
+\newcommand{\kadimchariotmountrestriction}{The model also counts towards the maximum number of Kadim Chariots allowed from Special.}
+
+% Seat of Authority
+
+\newcommand{\vassalgovernor}{Vassal Governor}
+\newcommand{\vassalgovernordef}{%
+	Friendly units with more than half of their models with \oilflasks{} within \distance{12} of one or more models with \vassalgovernor{} at the start of their March Move gain +\distance{2} March Rate. In addition, the model may join Vassal Levies units. This overrides the corresponding restriction from \insignificant{}.%
+}
+
+% Infernal Bastion
+
+\newcommand{\infernalbastionrestriction}{%
+	The mount and its rider count towards Characters. The mount also counts towards the maximum number of Infernal Bastions allowed from Special.%
+}
+\newcommand{\firingplatform}{Firing Platform}
+\newcommand{\firingplatformdef}{%
+	The model can use Crush Attacks only against enemy units Engaged in the model's Front Facing. All models in the same unit as the model are considered to be in Soft Cover. In addition, they may choose to draw Line of Sight as if they were Gigantic and from any point of the \infernalbastion{}'s Front Facing when shooting or casting spells. If so, as long as the unit has at least one Full Rank:%
+	\begin{itemize}%
+		\item A maximum of 20 models can shoot. These models can shoot regardless of the rank they are positioned in.%
+		\item Measure their range from the \infernalbastion{}.%
+	\end{itemize}%
+}
+
+\newcommand{\wallbreaker}{Wallbreaker}
+
+%% CORE
+
+% Infernal Warriors
+
+\newcommand{\zigguratregulars}{Ziggurat Regulars}
+\newcommand{\zigguratregularsdef}{%
+	The model gains \textbf{Fight in Extra Rank} and \gw{}.%
+}%
+
+% Citadel Guard
+
+\newcommand{\letthemcome}{Let Them Come!}
+
+% Vassal Levies
+
+\newcommand{\profilebelow}{profile below}
+
+% Vassal Chieftain
+
+\newcommand{\vassalchieftainnote}{The \vassalchieftain{} is an option for \vassallevies{} units.}
+\newcommand{\firstamongstinferiors}{First Amongst Inferiors}
+\newcommand{\firstamongstinferiorsdef}{%
+	The model is a Champion that loses First Amongst Equals and that has the same Model Rules as the other \rnf{} models in its unit. For the purpose of receiving Commanding Presence and Rally Around the Flag from friendly models, as well as for benefiting from Vassal Governor from friendly models, the model counts as \distance{6} closer to those models.%
+}
+
+% Shackled Slaves
+
+\newcommand{\chainedtogether}{Chained Together}
+\newcommand{\chainedtogetherdef}{%
+The model's unit may \textbf{never} voluntarily change its number of files. After performing a March Move, the unit suffers D6 hits that wound automatically, with no saves of any kind allowed.%
+}
+
+%% SPECIAL
+
+% Immortals
+
+\newcommand{\againstspecialattacks}{against Special Attacks}
+\newcommand{\whispersofthemask}{Whispers of the Mask}% deprecated
+
+% Disciples of Lugar
+
+\newcommand{\theocraticlitigators}{Theocratic Litigators}
+\newcommand{\theocraticlitigatorsdef}{%
+	The model's unit and enemy units in base contact with the model's unit gain \textbf{\magicresistance{} (2)} that is also applied to friendly spells. This Magic Resistance value cannot be increased.%
+}
+
+% Kadim Chariot
+
+\newcommand{\theacolytesoflugarmustchoose}{Champions of Lugar \textbf{must} choose}
+
+% Vassal Cavalry
+
+\newcommand{\onvassalsteed}{on \vassalsteed{}}
+
+% Vassal Slingshot
+
+\newcommand{\vassalslingshotdef}{}
+\newcommand{\oilflaskthrower}{Oil Flask Thrower}
+\newcommand{\boltthrower}{Bolt Thrower}
+\newcommand{\oilflaskthrowereffect}{The target unit gains one \textbf{\incendiary{}} marker for every successful hit}
+
+% Gunnery Team
+
+\newcommand{\firesofindustrySHORT}{Fires of Industry}
+\newcommand{\cumbersome}{Cumbersome}
+
+% Infernal Artillery
+
+\newcommand{\shootingattacksmustgain}{The model's Shooting Attacks \textbf{must} gain}
+\newcommand{\highercalibre}{Higher Calibre}
+\newcommand{\highercalibredef}{%
+	 The minimum range and the maximum range of the model's Artillery Weapon are doubled. Enemy units hit by the weapon suffer \distance{\minuss{}1} Advance Rate to a minimum of \distance{3} and \distance{\minuss{}2} March Rate to a minimum of \distance{6} until the start of the next friendly Player Turn.%
+}
+
+
+%% INSTRUMENTS OF DESTRUCTION
+
+% Infernal Engine
+
+\newcommand{\thechassismustchoose}{The Chassis \textbf{must} choose}
+\newcommand{\fullsteamahead}{Full Steam Ahead!}
+\newcommand{\fullsteamaheaddef}{%
+	The model may only perform a single Pivot or Wheel during a March Move. If the model is Charging, it \textbf{must} Pursue or Overrun if possible. If the model is not Charging, it \textbf{always} passes Restrain Pursuit Tests and its Pursuit and Overrun Distance in the Melee Phase are  \textbf{always} \distance{0}.%
+}
+\newcommand{\rockcrusher}{Rock Crusher}
+\newcommand{\rockcrusherdef}{%
+	The number of the Chassis' Grind Attacks is increased by 2D3.%
+}
+
+% Kadim Titan
+
+\newcommand{\walkingearthquake}{Walking Earthquake}
+\newcommand{\walkingearthquakedef}{%
+	The model gains \textbf{\swiftstride{}}, \textbf{\volcanicembrace{} (\Dthree{}+1)},  and its March Rate is \textbf{set} to \distance{14}. %
+}
+
+\newcommand{\walkingvolcano}{Walking Volcano}
+\newcommand{\walkingvolcanodef}{%
+	The model gains \textbf{\furnacebreach{}}, \textbf{\volcanicembrace{} (1)}, and access to the options below.%
+}
+
+% Citizen Giant
+
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\towershield}{Tower Shield}
+\newcommand{\infernallash}{Infernal Lash}
+\newcommand{\bigbrother}{Big Brother}
+
+\newcommand{\giantseegiantdodef}{%
+	The model gains \infernalarmour{} and \textbf{\infernalbrand{}}.%
+}
+\newcommand{\bigbrotherdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The model gains \textbf{\maximised{\stompattacks{}}}.%
+}
+\newcommand{\giantclubdef}{%
+	Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.%
+}
+\newcommand{\towershielddef}{%
+	The model gains Soft Cover against attacks from models Located in its Front Arc, and \textbf{\parry{}}.%
+}
+\newcommand{\infernallashdef}{%
+	The model gains +2 Agility. At the start of each Melee Phase, you may choose a single friendly unit within \distance{6} of the wielder (including the wielder itself). The chosen unit's Close Combat Attacks become \textbf{Flaming Attacks} and \textbf{Magical Attacks} until the end of the Melee Phase.%
+}

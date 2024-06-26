@@ -1,0 +1,325 @@
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\cultleader}{Cult Leader}
+
+\newcommand{\daemonsymbiote}{Daemon Symbiote}
+
+
+% CORE
+
+\newcommand{\cultist}{Cultist}
+\newcommand{\cultists}{Cultists}
+
+\newcommand{\imp}{Imp}
+\newcommand{\imps}{Imps}
+
+\newcommand{\succubus}{Succubus}
+\newcommand{\succubi}{Succubi}
+
+\newcommand{\lemures}{Lemures}
+\newcommand{\lemure}{Lemure}
+
+\newcommand{\myrmidons}{Myrmidons}
+\newcommand{\myrmidon}{Myrmidon}
+
+
+% SPECIAL
+
+\newcommand{\possessed}{Possessed}
+\newcommand{\possessedSINGULAR}{Possessed}
+
+\newcommand{\ritualaltar}{Ritual Altar}
+
+\newcommand{\profaneidol}{Profane Idol}
+
+
+% DAEMONIC SUMMONS
+
+\newcommand{\eidolons}{Eidolons}
+\newcommand{\eidolon}{Eidolon}
+
+\newcommand{\hellhounds}{Hellhounds}
+\newcommand{\hellhound}{Hellhound}
+
+\newcommand{\threshingengine}{Threshing Engine}
+\newcommand{\tiller}{Tiller}
+\newcommand{\draftbeast}{Draft Beast}
+
+\newcommand{\hordethresher}{Horde Thresher}
+\newcommand{\legionthresher}{Legion Thresher}
+
+\newcommand{\titanslayerchariot}{Titanslayer Chariot}
+\newcommand{\chtonicmachinator}{Chthonic Machinator}
+
+\newcommand{\clawedfiends}{Clawed Fiends}
+\newcommand{\clawedfiend}{Clawed Fiend}
+
+\newcommand{\mageblightgremlins}{Mageblight Gremlins}
+\newcommand{\mageblightgremlin}{Mageblight Gremlin}
+
+\newcommand{\hoarders}{Hoarders}
+\newcommand{\hoarder}{Hoarder}
+
+\newcommand{\sirens}{Sirens}
+\newcommand{\siren}{Siren}
+\newcommand{\palesteed}{Pale Steed}
+
+\newcommand{\blazingglory}{Blazing Glory}
+
+\newcommand{\hopeharvester}{Hope Harvester}
+
+\newcommand{\brazenbeasts}{Brazen Beasts}
+\newcommand{\daredevil}{Daredevil}
+\newcommand{\BBbeast}{\beast}% in case you want a different translation than the generic beast
+
+\newcommand{\furies}{Furies}
+\newcommand{\fury}{Fury}
+
+\newcommand{\veilserpents}{Veil Serpents}
+\newcommand{\veilserpent}{Veil Serpent}
+
+\newcommand{\bloatflies}{Bloat Flies}
+\newcommand{\bloatfly}{Bloat Fly}
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Cult Leader
+
+\newcommand{\masterofritual}{Master of Ritual}
+\newcommand{\masterofritualdef}{%
+	The model gains +1 Discipline, \textbf{Daemonic Summon}, \textbf{\scout{}}, and its Commanding Presence range is \textbf{set} to \distance{18}.%
+}
+
+% Daemon Symbiote
+\newcommand{\singlemanifestation}{A single Manifestation}
+
+% General
+
+\newcommand{\manifestationonechoice}[1]{%
+	\exploptionschoice{Manifestation (one choice only):}{\explAlCoOrder{#1}}%
+}
+
+\newcommand{\summonedcategorynote}{%
+	The unit cannot be deployed normally, but only through Daemonic Summon.%
+}
+
+%% CORE
+
+% Cultists
+
+\newcommand{\eldritchtome}{Eldritch Tome}
+\newcommand{\eldritchtomedef}{%
+	\itemrestriction{Units with Champion only.}%
+	The unit gains \textbf{Wizard Conclave} that knows only \spellformat{\spearofinfinity}{\hereditaryspell}.%
+}
+
+\newcommand{\abyssalconduit}{Abyssal Conduit}
+\newcommand{\abyssalconduitdef}{%
+	One model in the unit that is not a Champion or Musician becomes a \textbf{Standard Bearer} with \textbf{\channel{} (1)} and \textbf{\daemonicsummon{}}.%
+}
+
+\newcommand{\infiltrators}{Infiltrators}
+\newcommand{\infiltratorsdef}{%
+	The model gains \textbf{\scout{}} and loses \scoring{}.%
+}
+
+
+% Imps
+
+\newcommand{\impsaegis}{\aegis{} (3+, against Shooting Attacks)}
+
+\newcommand{\energybolts}{Energy Bolts}
+
+\newcommand{\firestarter}{Firestarter}
+\newcommand{\firestarterdef}{%
+	The Standard Bearer can cast the spell stated in brackets as a Bound Spell with Power Level (5/8).%
+}
+
+
+% Succubi
+
+\newcommand{\talonscythes}{Talon Scythes}
+\newcommand{\talonscythesdef}{%
+	Attacks made with Talon Scythes ignore \parry{} and, if allocated towards Standard or Large Infantry, gain a +1 to-hit modifier.%
+}
+
+
+%% SPECIAL
+
+% Ritual Altar
+
+\newcommand{\darkconclave}{Dark Conclave}
+\newcommand{\darkconclavedef}{%
+	Spells cast by the model gain +\distance{3} range for each additional friendly Wizard within \distance{12} of the Caster. This bonus can never increase the combined modifier beyond +\distance{9}, however other sources may.\newline
+	The model \textbf{must} select 2 spells from: \spellformat{\spearofinfinity}{\hereditaryspell}, \spellformat{\thaumaturgyspellone}{\thaumaturgy}, and \spellformat{\occultismspellsix}{\occultism} during Spell Selection. This overrides the normal Spell Selection rules connected to being a Wizard Adept.\newline
+	When performing a Daemonic Summon with the model, divide the chosen unit's Point Cost by 300 (instead of 200), rounding fractions up, for determining the number of discarded Veil Tokens.%
+}
+
+\newcommand{\grandcouncil}{Grand Council}
+\newcommand{\councilmembers}{Council Members}
+\newcommand{\grandcouncildef}{%
+	The model's Health Points and Attack Value are \textbf{set} to 8, and its base size is changed to 120 mm round.
+	The model can also select \spellformat{\thaumaturgyspellfive}{\thaumaturgy} as one of its 2 spells.%
+}
+
+% Profane Idol
+
+\newcommand{\doomsdaycolossus}{Doomsday Colossus}
+\newcommand{\doomsdaycolossusdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 mm. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.%
+}
+
+\newcommand{\apostateautomaton}{Apostate Automaton}
+\newcommand{\apostateautomatondef}{%
+	The model gains +1 Resilience, \textbf{Crush Attack}, and its Armour is \textbf{set} to 3.%
+}
+
+\newcommand{\hereticgolem}{Heretic Golem}
+\newcommand{\hereticgolemdef}{%
+	The model gains +1 Strength and +1 Armour Penetration.%
+}
+
+\newcommand{\wickerman}{Wicker Man}
+\newcommand{\wickermandef}{%
+	The model gains \textbf{Flammable}, \textbf{Flaming Attacks}, and \textbf{\grindattacks{3D3}}. These Grind Attacks are resolved with Strength 4, Armour Penetration 0, and Flaming Attacks.
+}
+
+%% DAEMONIC SUMMONS
+
+% Eidolons
+
+\newcommand{\darkfire}{Dark Fire}
+\newcommand{\darkfiredef}{%
+Armour Save rolls of \result{1}, \result{2}, \result{3}, and \result{4} are \textbf{always} considered failed when saving wounds caused by \darkfire{}.%
+}
+
+% Hellhounds
+
+\newcommand{\hellishgrowl}{Hellish Growl}
+\newcommand{\hellishgrowldef}{%
+	At the start of each Round of Combat, enemy units in base contact with one or more models with Hellish Growl \textbf{must} take a Discipline Test with a \minuss{}1 modifier.\par%
+	Failed to-wound rolls from attacks made by the model against units that fail this test \textbf{must} be rerolled. The effect lasts until the end of the Round of Combat.%
+}
+
+% Threshing Engine
+
+\newcommand{\flycategorynote}{The unit also counts towards Aves if taking Fly.}
+\newcommand{\chassis}{Chassis}
+\newcommand{\colossalstature}{Colossal Stature}
+\newcommand{\colossalstaturedef}{The model counts as Gigantic for the purpose of determining the number of Full Ranks.}
+
+\newcommand{\hordethresherdef}{%
+	Changes to the model's profile:
+	\begin{itemize}
+		\item Its base size is changed to \textbf{100\timess{}\SI{100}{\milli\meter}}.
+		\item Its Health Points are \textbf{set} to \textbf{6}.
+		\item It gains \textbf{1} additional Tiller.
+		\item It gains \textbf{1} additional Draft Beast.
+		\item It gains \textbf{\colossalstature{}}.
+		\item The Chassis gains \textbf{\impacthits{3D3}}.
+	\end{itemize}%
+}
+\newcommand{\legionthresherdef}{%
+	Changes to the model's profile:
+	\begin{itemize}
+		\item Its base size is changed to \textbf{100\timess{}\SI{150}{\milli\meter}}.
+		\item Its Health Points are \textbf{set} to \textbf{8}.
+		\item It gains \textbf{2} additional Tillers.
+		\item It gains \textbf{2} additional Draft Beasts.
+		\item It gains \textbf{\colossalstature{}}.
+		\item The Chassis gains \textbf{\impacthits{4D3}}.
+	\end{itemize}%
+}
+
+% Titanslayer Chariot
+
+\newcommand{\mountainbreaker}{Mountain Breaker}
+\newcommand{\mountainbreakerdef}{%
+	The model gains +\distance{2} Advance Rate when rolling for Charge Range against units that consist entirely of models with Towering Presence in the Charge Phase. In addition, the model's Impact Hits gain \textbf{\multiplewounds{}{} (D3, against \toweringpresence{})}.%
+}
+
+% Clawed Fiends
+
+\newcommand{\smother}{Smother}
+\newcommand{\smotherdef}{%
+	If the attack is allocated towards a Large model, it gains +1 to hit and +1 to wound.%
+}
+
+% Mageblight Gremlins
+
+\newcommand{\spellcraving}{Spell Craving}
+\newcommand{\spellcravingdef}{%
+	The model can perform up to 3 Supporting Attacks. When determining Combat Score, a side with at least one model with Spell Craving Engaged in Combat adds +X to its side's Combat Score, where X is the number of non-Bound non-Attribute Spells known by enemy Wizards in units in base contact with it (note that multiple instances of the same spell count as 1 each).%
+}
+
+\newcommand{\veilstalker}{Veil Stalker}
+\newcommand{\veilstalkerdef}{%
+	The model follows the rules for Ambush with the following exceptions:\newline
+	When the unit arrives, the owner may choose to place it within \distance{6} of an enemy model with \channel{} (instead of entering the Battlefield from the Board Edge). If so, it cannot perform any Advance Moves this Movement Phase (note that this does not prevent the unit from performing a Reform).%
+}
+
+% Hoarders
+
+\newcommand{\tighteninggrasp}{Tightening Grasp}
+\newcommand{\tighteninggraspdef}{%
+	The model gains \textbf{\grindattacks{X}}, and can make \grindattacks{} as Supporting Attacks, ignoring the maximum number of Supporting Attacks. When the model is not Engaged in Combat, X is \textbf{set} to 1.\par%
+	At the start of each Round of Combat other than the First Round of Combat, if the model is Engaged, X is increased by +1 (e.g. \grindattacks{1} becomes \grindattacks{2}).%
+}
+
+\newcommand{\uptotwomanifestations}[1]{%
+	\exploptionschoice{Up to two Manifestations:}{\explAlCoOrder{#1}}%
+}
+
+% Sirens
+
+\newcommand{\symbioticsteed}{Symbiotic Steed}
+\newcommand{\elusive}{Elusive}
+\newcommand{\elusivedef}{%
+	Units composed entirely of models with Elusive may declare a Flee Charge Reaction despite being Fearless.%
+}
+
+% Blazing Glory
+
+\newcommand{\fallingstar}{Falling Star}
+\newcommand{\fallingstardef}{%
+	The model's Offensive Skill and Defensive Skill are \textbf{set} to twice the model's current number of Health Points.\newline
+	The model counts as a Character for the purpose of issuing, accepting, and refusing Duels. When the model fights a Duel during a Round of Combat, it gains \textbf{Stubborn} until the end of the Round of Combat.%
+}
+
+% Hope Harvester
+
+\newcommand{\aetherbattery}{Aether Battery}
+\newcommand{\aetherbatterydef}{%
+	Before rolling for the number of shots, the owner may choose to discard 1--3 Veil Tokens from their Veil Token pool. If so, the number of shots is increased by +3 per discarded Veil Token.%
+}
+
+
+%% AVES
+
+% Veil Serpents
+
+\newcommand{\manifestation}{Manifestation}
+\newcommand{\optionalmanifestation}{Optional Manifestation}
+\newcommand{\writhingnightmares}{Writhing Nightmares}
+\newcommand{\writhingnightmaresdef}{%
+	Enemy units in base contact with one or more models with Writhing Nightmares suffer \minuss{}1 Discipline.%
+}
+\newcommand{\morphlings}{Morphlings}
+\newcommand{\morphlingsdef}{%
+	During Spell Selection, each unit of Veil Serpents \textbf{must} choose a Manifestation from the list below and apply the effects during the game.%
+}
+
+% Bloat Flies
+
+\newcommand{\boatfliesaegis}{\aegis{} (5+, against \magicalattacks{})}
+
+\newcommand{\acidblood}{Acid Blood}
+\newcommand{\acidblooddef}{%
+	For each Fortitude Save the model fails against Melee Attacks, the model immediately inflicts 1 hit with \toxicattacks{} against the model that caused the wound, before any casualties are removed, distributed onto the model's Health Pool.%
+}

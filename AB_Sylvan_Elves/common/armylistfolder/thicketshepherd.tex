@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\thicketshepherd{},
+	logo=character,
+	cost=250,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{},\emboldeningboughs{},\sylvanspirit{},\hidebf{\ashepherdanditsflock}},
+	defense@HP=4,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=3,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\thicketshepherd{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=3,
+	offense@Ag=4,
+	options={%
+		\bsb{}=50,
+		\asingleaspectofnature{}=\nolimit{},
+		**\optionline,
+	},
+	modelrulesdef={%
+		\modelruledef{\ashepherdanditsflock}{\ruletype{\universalrule}\ashepherdanditsflockdef}
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\ashepherdanditsflock}{\ruletype{\universalrule}\ashepherdanditsflockdef}
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\emboldeningboughs{}}{\ruletype{\universalrule}\emboldeningboughsdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+	},
+	toggles={%
+		\toggletrue{onecolprintmodelrulesdef}%
+		\togglefalse{twocolprintmodelrulesdef}%
+	},
+} % END UNIT ENTRY

@@ -1,0 +1,197 @@
+
+% Unit Entry Names
+
+% Characters
+
+\newcommand{\greatkhan}{Great Khan}
+
+\newcommand{\khan}{Khan}
+
+\newcommand{\shaman}{Shaman}
+
+\newcommand{\mammothhunter}{Mammoth Hunter}
+
+% Mounts
+
+\newcommand{\tusker}{Tusker}
+
+\newcommand{\rockaurochs}{Rock Aurochs}
+
+% Core
+
+\newcommand{\tribesmen}{Tribesmen}
+\newcommand{\tribesman}{Tribesman}
+
+\newcommand{\bruisers}{Bruisers}
+\newcommand{\bruiser}{Bruiser}
+
+\newcommand{\scraplings}{Scraplings}
+\newcommand{\scrapling}{Scrapling}
+
+% Special
+
+\newcommand{\mercenaryveterans}{Mercenary Veterans}
+\newcommand{\mercenaryveteran}{Mercenary Veteran}
+
+\newcommand{\tuskercavalry}{Tusker Cavalry}
+\newcommand{\rider}{Rider}
+
+\newcommand{\yetis}{Yetis}
+\newcommand{\yeti}{Yeti}
+
+\newcommand{\scraplingtrappers}{Scrapling Trappers}
+\newcommand{\scraplingtrapper}{Scrapling Trapper}
+
+\newcommand{\sabretoothtigers}{Sabretooth Tigers}
+\newcommand{\sabretoothtiger}{Sabretooth Tiger}
+
+\newcommand{\kineater}{Kin-Eater}
+
+% Powder Keg
+
+\newcommand{\thundercannon}{Thunder Cannon}
+\newcommand{\bombardiercrew}{Bombardier Crew}
+\newcommand{\woollyrhino}{Woolly Rhino}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\scratapult}{Scratapult}
+\newcommand{\scraplingcrew}{Scrapling Crew}
+
+\newcommand{\bombardiers}{Bombardiers}
+\newcommand{\bombardier}{Bombardier}
+
+%Chained Beasts
+
+% Rock Aurochs defined in Mounts
+
+\newcommand{\frostmammoth}{Frost Mammoth}
+
+\newcommand{\slavegiant}{Slave Giant}
+
+% Unit Specific Model Rules
+
+% Great Khan and Khan
+
+\newcommand{\asinglebigname}{A single Big Name}
+
+% Hunter
+
+\newcommand{\loner}{Loner}
+\newcommand{\lonerdef}{%
+	If on foot, the model gains \textbf{\exclusive{Yetis, Sabretooth Tigers}}; ignore the Insignificant rule for joining units. If mounted, it gains \textbf{\exclusive{}}. A model with Loner cannot join a unit containing any other Characters, and Characters cannot join a unit containing a model with Loner.%
+}
+
+\newcommand{\animalmaster}{Animal Master}
+\newcommand{\animalmasterdef}{%
+	The model gains \textbf{\commandingpresence\ (\sabretoothtigers)}.%
+}
+
+\newcommand{\leaderofthepack}{Leader of the Pack}
+\newcommand{\leaderofthepackdef}{%
+	The Mammoth Hunter's base size is changed to 50\timess{}50 \si{\milli\meter}. As long the model is joined to a unit of Sabretooth Tigers, the unit (including the Mammoth Hunter) gains \textbf{\swiftreform{}} and \textbf{\vanguard{}}, and the Mammoth Hunter counts as being a Standard Beast for the purposes of distributing hits, except for Stomp Attacks.%
+}
+
+\newcommand{\themodelloseslighttroops}{The model loses \lighttroops{}.}
+
+% Rock Aurochs
+
+\newcommand{\livingavalanche}{Living Avalanche}
+\newcommand{\livingavalanchedef}{%
+	The model's Impact Hits gain +1 Strength and +1 Armour Penetration.%
+}
+
+% Scraplings
+
+\newcommand{\profilebelow}{profile below}
+
+\newcommand{\foremannote}{The Scrapling Foreman is an option for Scrapling units.}
+\newcommand{\backtowork}{Back to Work!}
+\newcommand{\backtoworkdef}{%
+	The model's unit may reroll failed Discipline Tests unless Fleeing.%
+}
+
+% Mercenary Veterans
+
+\newcommand{\mercenaryveteranscategorynote}{%
+	Units with an upgrade marked with [\powderkegInitial{}] also count towards \powderkeg{}.%
+}
+\newcommand{\comma}{,}
+\newcommand{\battlescarredoptionsdef}[1]{\optionschoice{\textbf{Must} choose (up to two choices)\refsymbol{}:}{\AlOrder{#1}}}
+\newcommand{\battlescarredoptionslimitdef}{\refsymbol{}each choice is One of a Kind}
+
+
+% Yetis
+
+\newcommand{\touchoffrost}{Touch of Frost}
+\newcommand{\touchoffrostdef}{%
+	Enemy units suffer \minuss{}1 Agility for each unit of Yetis in base contact with them.%
+}
+
+% Scrapling Trappers
+
+\newcommand{\itsatrap}{It's a Trap!}
+\newcommand{\itsatrapdef}{%
+	Each unit of Scrapling Trappers may place a Trap Counter:%
+	\begin{itemize}%
+		\item Right before the battle (during step 7 of the Deployment Phase Sequence), on a single Terrain Feature other than Open Terrain that the unit was deployed in or was in contact with at any point during its Vanguard move%
+		\item Once during each friendly Movement Phase, on a single Terrain Feature other than Open Terrain that the unit was in contact with during an Advance Move, March Move, or a Reform in this phase%
+	\end{itemize}%
+	If an enemy unit performs an Advance Move, March Move, Reform, Pivot, Charge Move, Failed Charge Move, Pursuit Move, Overrun Move, or Flee Move inside or into contact with a Terrain Feature with one or more Trap Counters, remove all Trap Counters in that particular Terrain Feature. Each model in the unit \textbf{must} take a Dangerous Terrain (1) Test. These tests are not considered to be caused by the Terrain Feature; any Dangerous Terrain Tests that would normally be caused by the Terrain Feature still need to be taken.%
+}
+
+% Thunder Cannon
+
+\newcommand{\thundercannondef}{%
+	This Artillery Weapon can be fired in two ways:%
+	\begin{smallitemize}%
+		\item \textbf{\cannon{}}, \range{48}, \shots{1}, \St{} 5 [10], \AP{} 2 [10], \textbf{\areaattack{1\timess{}5}}, [\textbf{\multiplewounds{D3+1}{}}]
+		\item \textbf{\volleygun{}}, \range{12}, \shots{2D6}, \St{} 5, \AP{} 4
+	\end{smallitemize}%
+	A Thunder Cannon that only Pivots (and moves no further) during its owner's Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.%
+}
+
+% Scratapult
+
+\newcommand{\scratapultdef}{%
+	\textbf{\catapult{5\timess{}5}}, \range{12--48}, \shots{1}, \St{} 3, \AP{} 1, \textbf{\lethalstrike{}}.\newline
+	A Scratapult that only Pivots (and moves no further) during its owner's Movement Phase ignores the to-hit modifier from Moving and Shooting in the next Shooting Phase.%
+}
+
+% Bombardiers
+
+\newcommand{\handcannon}{Hand Cannon}
+\newcommand{\handcannondef}{%
+	\range{24}, \shots{D6}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}.%
+}
+
+% Rock Aurochs
+
+\newcommand{\rockaurochsrestriction}{\zerotoXunitsperarmy{1} if the army includes any Characters mounted on a Rock Aurochs.}
+
+% Frost Mammoth
+
+\newcommand{\eachridermusttake}{Each Rider \textbf{must} choose}
+
+\newcommand{\freezingaura}{Freezing Aura}
+\newcommand{\freezingauradef}{%
+	The model can cast \spellformat{\shamanismspellfour{}}{\shamanism{}} as a Bound Spell with Power Level (4/8). Enemy units within \distance{9} of one or more Frost Mammoths suffer \minuss{}3 Agility. While in base contact with one or more Frost Mammoths, enemy units that Break from Combat gain \textbf{\minimised{Flee Distance}}.%
+}
+
+% Slave Giant
+
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+\newcommand{\giantseegiantdodef}{%
+	The model gains Deafening Clamour and Impact Hits (D3).
+	%
+}
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}.%
+	\ The model gains \textbf{\maximised{\stompattacks{}}}.%
+}
+
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\giantclubdef}{%
+	Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.%
+}

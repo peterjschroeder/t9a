@@ -1,0 +1,281 @@
+
+% Unit Entry Names
+
+% Characters
+
+\newcommand{\equitanlord}{Equitan Lord}%
+\newcommand{\damsel}{Damsel}%
+\newcommand{\folkhero}{Folk Hero}%
+\newcommand{\paladin}{Paladin}
+
+% Mounts
+
+\newcommand{\destrier}{Destrier}%
+\newcommand{\horse}{Horse}%
+\newcommand{\heraldicsteed}{Heraldic Steed}%
+\newcommand{\warhorse}{Warhorse}%
+\newcommand{\reveredunicorn}{Revered Unicorn}%
+\newcommand{\pegasuscharger}{Pegasus Charger}%
+\newcommand{\hippogriff}{Hippogriff}%
+\newcommand{\feysteed}{Fey Steed}%
+
+
+% Core
+
+\newcommand{\feudalknights}{Feudal Knights}%
+\newcommand{\feudalrider}{Feudal Rider}%
+
+\newcommand{\ordosergeants}{Ordo Sergeants}%
+\newcommand{\ordosergeant}{Ordo Sergeant}%
+\newcommand{\rouncey}{Rouncey}%
+
+\newcommand{\lowbornlevies}{Lowborn Levies}%
+\newcommand{\lowbornlevy}{Lowborn Levy}%
+
+\newcommand{\lowbornarchers}{Lowborn Archers}%
+\newcommand{\lowbornarcher}{Lowborn Archer}%
+
+
+% Special
+
+\newcommand{\menatarms}{Men-at-Arms}%
+\newcommand{\manatarms}{Man-at-Arms}%
+
+\newcommand{\sacredreliquary}{Sacred Reliquary}%
+
+\newcommand{\knightsresplendent}{Knights Resplendent}%
+\newcommand{\respelendentknight}{Resplendent Knight}%
+
+\newcommand{\knightspenitent}{Knights Penitent}%
+\newcommand{\penitentknight}{Penitent Knight}%
+\newcommand{\draughthorse}{Draughthorse}%
+
+\newcommand{\knightsofthequest}{Knights of the Quest}%
+\newcommand{\questingknight}{Questing Knight}%
+
+\newcommand{\hedgeknights}{Hedge Knights}%
+\newcommand{\hedgeknight}{Hedge Knight}%
+\newcommand{\cob}{Cob}%
+
+\newcommand{\yeomanoutriders}{Yeoman Outriders}%
+\newcommand{\yeomanoutrider}{Yeoman Outrider}%
+\newcommand{\courser}{Courser}%
+
+\newcommand{\hoodedmen}{Hooded Men}%
+\newcommand{\hoodedman}{Hooded Man}%
+
+\newcommand{\siegeweapon}{Siege Weapon}%
+\newcommand{\scorpion}{Scorpion}%
+\newcommand{\trebuchet}{Trebuchet}%
+\newcommand{\crew}{Crew}%
+
+\newcommand{\pegasusknights}{Pegasus Knights}%
+\newcommand{\pegasusknight}{Pegasus Knight}%
+
+\newcommand{\skyheralds}{Sky Heralds}%
+\newcommand{\herald}{Herald}%
+
+% FEY
+
+\newcommand{\naiads}{Naiads}%
+\newcommand{\naiad}{Naiad}%
+
+\newcommand{\friarlantern}{Friar's Lanterns}%
+
+\newcommand{\theladycourtier}{The Lady's Courtier}%
+\newcommand{\ladycourtier}{Lady's Courtier}%
+
+\newcommand{\feyknight}{Fey Knight}%
+\newcommand{\feyrider}{Fey Rider}%
+
+
+% Unit Entry Rules
+
+%%% CHARACTERS
+
+% Damsel
+
+\newcommand{\beloved}{Beloved}%
+\newcommand{\beloveddef}{%
+	While the model is joined to a unit with at least one Full Rank, it gains \textbf{\standbehind}.%
+}%
+
+\newcommand{\onlywizardadeptandmaster}{Only \wizardadept{} \wordand{} \wizardmaster{}}
+
+% Lord
+\newcommand{\ifbsb}{If \bsb{}}%
+\newcommand{\asingleknightlyprinciple}{A single Knightly Principle}%
+
+\newcommand{\paladindef}{%
+	The \equitanlord{} model part gains \textbf{\divineattacks{}}. The model gains \notaleader{}, \textbf{\honesty{}},  \textbf{\orison{} (1)}, and loses \courage{}.%
+}%
+\newcommand{\knightlyprinciplesnote}{Each \knightlyprinciple{} is One of a Kind.}
+%%Paladin
+\newcommand{\againstmagicalattacksmax}{against Magical Attacks, \maxi{} 4+}
+\newcommand{\righteoussmite}{Righteous Smite}
+
+%% Folk Hero
+
+\newcommand{\heraldicsteedrestriction}{models with \la{} only}
+\newcommand{\traitsofahero}{Traits of a Hero}%
+\newcommand{\traitsofaherodef}{%
+	The \folkhero{} model part \textbf{must} choose at least 1 and up to 2 different \heroictraits{}.%
+}
+\newcommand{\castellanrestriction}{Castellan only}
+\newcommand{\ifsainted}{If Sainted}
+%
+%%%% MOUNTS
+%
+%% Equitan Unicorn
+
+\newcommand{\forestguide}{Forest Guide}%
+\newcommand{\forestguidedef}{The model's unit gains \textbf{\magicalattacks} and \textbf{\strider{\forest}}.}%
+
+%% Hippogriff
+\newcommand{\relentless}{Relentless}%
+\newcommand{\relentlessdef}{%
+	While Engaged in Combat, the model \newrule{gains \textbf{\minimised{Discipline Tests}}}\removedrule{’s Discipline Tests are subject to Minimised Roll}.%
+}%
+
+%% Fey Steed
+\newcommand{\againstmeleeattacks}{against Melee Attacks}
+\newcommand{\feysteedcategorynote}{
+	For each \feyknight{} in the army, the maximum number is reduced by 1.
+}
+
+%%%% CORE
+
+%% Peasant Bowmen
+
+\newcommand{\bowmenrestriction}{For each \siegeweapon{} in the army, the maximum number of \lowbornarchers{} units is reduced by 1}%
+\newcommand{\expertbowmen}{Expert Bowmen}%
+\newcommand{\expertbowmendef}{%
+	Unless making a Stand and Shoot Charge Reaction, the model gains \textbf{\accurate{}} if it did not move during this Player Turn.%
+}%
+\newcommand{\archerydrills}{Archery Drills}
+\newcommand{\archerydrillsdef}{
+During a Player Turn in which the model has not moved, if the model's unit has at least one Full Rank, the model gains two instances of Shoot in Extra Rank.
+}
+
+%%%% SPECIAL
+
+%% Men-at-Arms
+
+\newcommand{\knightsforlorn}{Knights Forlorn}%
+\newcommand{\knightsforlorndef}{%
+	The model gains \textbf{\courage{}} and \textbf{\bastardsword{}}.%
+}
+\newcommand{\ordowardens}{Ordo Wardens}%
+\newcommand{\ordowardensdef}{%
+	The model gains \textbf{\honesty{}} and \textbf{\gw{}}.%
+}
+\newcommand{\avowedarmsmen}{Avowed Armsmen}
+\newcommand{\avowedarmsmendef}{
+	The model gains \textbf{\ordeal{}} and \spear{}.
+}
+
+\newcommand{\stalwartdefense}{Stalwart Defense}%
+\newcommand{\stalwartdefensedef}{%
+	Enemy units in base contact with one or more models with \stalwartdefense{} do not count as Charging for the purpose of \devastatingcharge{}.%
+}
+
+%% Sacred Reliquiary
+\newcommand{\sacredrelic}{Sacred Relic}%
+\newcommand{\sacredrelicdef}{%
+	 The model’s unit gains the following rules:%
+	\begin{itemize}
+		\item \textbf{\fightinextrarank{}}%
+		\item The unit \newrule{gains \textbf{\minimised{Discipline Tests}}}\removedrule{’s Discipline Tests are subject to Minimised Roll}.%
+		\item If the model’s unit is the target of an \orison{} while Engaged in Combat, add one \blessing{} Token to the owner’s \blessing{} Token pool. Ignore this effect if a Character with Faith is part of the model’s unit.%
+	\end{itemize}
+}%
+
+%% Knights Resplendent
+
+\newcommand{\knightsofthecourt}{Knights of the Court}%
+\newcommand{\with}{with}%
+\newcommand{\knightsofthecourtdef}{
+	The model gains \textbf{\bodyguard{\sainted{} \wordor{} \general{} \with{} \courage{}}}.\newline{}%
+	In addition, unless Charging out of the unit, Characters joined to units with one or more models with \knightsofthecourt{} gain \textbf{\devastatingcharge{+\distance{1} \AdvanceRateInitials{}}}.
+}
+
+%% Questing Knights
+
+\newcommand{\thequest}{The Quest}%
+\newcommand{\thequestdef}{%
+	Immediately after deploying the first friendly unit of \knightsofthequest{} during the Deployment Phase, the owner \textbf{must} choose 1 unit entry from the opponent’s Army Book (this may also be a Character, but not a Character Mount). Models of all units from this unit entry in the enemy army (even if there is more than one such unit) are considered “marked”. For attacks allocated either towards marked models, or towards models joined to units with more than half of their models marked, \questingknight{}s gain \textbf{\lethalstrike{}} and \textbf{must} reroll failed to-wound rolls.%
+}%
+
+%% Knights Penitents
+\newcommand{\vowofredemption}{Vow of Redemption}
+\newcommand{\vowofredemptiondef}{
+	\newrule{Units with at least one model with Vow of Redemption:}
+	\begin{itemize}
+		\item \newrule{Gain \textbf{Stubborn} while having at least as many files as they have ranks.}
+		\item \newrule{Cannot be joined by Characters other than Folk Heroes with Cleric.}
+	\end{itemize}
+}
+
+%% Enlisted Outlaws
+\newcommand{\enlistedoutlaws}{Enlisted Outlaws}%
+\newcommand{\enlistedoutlawsdef}{%
+	The model gains \hardtarget{} (1) and \skirmisher{} and loses \daring{} and \unstable{}. %
+}%
+
+%% Siege war machine
+
+\newcommand{\trebuchetlarge}{The model's Height is changed to Large}%
+
+%% Niaids
+
+\newcommand{\waterspirits}{}%
+\newcommand{\waterspiritsdef}{%
+	%
+}%
+
+%% Swarm of Lights
+
+\newcommand{\illusions}{Illusions}%
+\newcommand{\illusionsdef}{%
+	The model must \textbf{always} choose Flee as a Charge Reaction if possible despite having \fearless{}.%
+}%
+
+\newcommand{\lightsinthemist}{Lights in the Mist}%
+\newcommand{\lightsinthemistdef}{%
+	The model may perform a \sweepingattack{}. The enemy unit suffers 1 hit with Strength 1, Armour Penetration 0, and \textbf{\magicalattacks{}}. Enemy units suffering one or more hits with \grindattacks{} or \sweepingattack{}s from \friarlantern{} suffer the following effects until the end of the next Player Turn:%
+	\begin{itemize}
+		\item \minuss\distance{2} Advance Rate, to a minimum of \distance{3}%
+		\item \minuss\distance{2} March Rate, to a minimum of \distance{3}%
+	\end{itemize}
+}%
+
+%% The Lady's Courtier
+
+\newcommand{\meleeattacks}{Melee Attacks}
+\newcommand{\courtierofthedawn}{Courtier of the Dawn}%
+\newcommand{\courtierofthedawndef}{%
+	The model gains \textbf{\fly{8}{16}} and \textbf{\gallantry{} (2)}, and it is a \wizardapprentice{} that must \textbf{always} select \spellformat{\shamanismspellone}{\shamanism}. %
+}%
+\newcommand{\courtierofthedusk}{Courtier of the Dusk}%
+\newcommand{\courtieroftheduskdef}{%
+	The model is a \wizardadept{} that must choose \druidism{} or \witchcraft{} as its Path of Magic and that cannot select the Hereditary Spell. %
+}%
+
+%% Fey Knight
+\newcommand{\feyknightambush}{Water Terrain or Forest}
+\newcommand{\boundtotheland}{}%
+\newcommand{\boundtothelanddef}{%
+
+}%
+\newcommand{\championofthegreenknight}{Champion of the Green Knight}
+\newcommand{\championofthegreenknightdef}{
+	The \feyrider{} gains Bastard Sword. The model gains \textbf{Stubborn}\removedrule{,\aegis{} (4+, against Melee Attacks),} and counts as a Champion for the purpose of Issuing and Accepting Duels.
+}
+\newcommand{\chosenofthesnowchilde}{Chosen of the Snow Childe}
+\newcommand{\chosenofthesnowchildedef}{
+	The \feyrider{} gains +1 Attack Value for each enemy model in base contact with it and its attacks ignore \parry{}.
+}
+\newcommand{\wardenofthehoodedman}{Warden of the Hooded Man}
+\newcommand{\wardenofthehoodedmandef}{
+		The model gains \textbf{\terror{}}. The \feyrider{} gains Lance and its attacks gain \textbf{\multiplewounds{}{} (2, against \toweringpresence{})}.
+}

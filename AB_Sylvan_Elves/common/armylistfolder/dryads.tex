@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\dryads{},
+	logo=core,
+	cost=150,
+	unitsize=8,
+	maxunitsize=26,
+	costpermodel=16,
+	scoring=yes,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=8,
+	globalrules={\forestwalker{},\sylvanspirit{},\scoring{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+)},
+	offensename=\dryad{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	options={%
+			\textbf{\clearingspirits{}} (\NOTESTzerotoXmodelsperunit{15})=1\permodel{},
+	},
+	commandgroup={%
+		\champion{}=10,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\clearingspirits}{\ruletype{\universalrule}{\clearingspiritsdef}}%	
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+	},
+	scrolloptionalmodelrulesdef={%
+		\modelruledef{\clearingspirits}{\ruletype{\universalrule}{\clearingspiritsdef}}%	
+	},
+}% END UNIT ENTRY

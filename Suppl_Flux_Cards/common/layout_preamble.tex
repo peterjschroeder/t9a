@@ -1,0 +1,107 @@
+\RequirePackage{amsmath}																									% debugging a warning
+\documentclass[a4paper]{article}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}			% marge reduction
+
+%\usepackage{pdflscape}% if we decide to go landscape for the cards
+\usepackage{setspace}
+%\usepackage{rotating}
+
+%%% Fonts
+
+\usepackage{fontspec}
+\usepackage{pifont}
+\setmainfont[
+	Ligatures=TeX,
+	SmallCapsFont={Caladea}
+	]{Caladea} % default is Latin Modern
+\newfontfamily\titlefont[Ligatures=TeX]{Georgia} % font for front page title
+\newfontfamily\fulltitlefont[Ligatures=TeX]{CaslonOS} % font for front page title
+\newfontfamily\cardnumberfont[Ligatures=TeX,BoldFont=ACaslonPro-Bold,ItalicFont=ACaslonPro-Italic]{CaslonOS-Regular}
+\newfontfamily\cardtitlefont[Ligatures=TeX]{ACaslonPro-Bold}
+\newfontfamily\magicdicenotefont[Ligatures=TeX]{ACaslonPro-Italic}
+\newfontfamily\cardnotenotefont[Ligatures=TeX,BoldFont=ACaslonPro-Bold,ItalicFont=ACaslonPro-Italic]{ACaslonPro-Regular}
+\newfontfamily\magicdicefont[Ligatures=TeX]{ACaslonPro-Semibold}
+\newfontfamily\cardsubtitlefont[Ligatures=TeX]{ACaslonPro-SemiboldItalic}
+
+%% Typing and text
+
+\usepackage{microtype}																											% greatly improves general appearance of the text
+\usepackage{siunitx}																												% streamlining numbers and units, use \SI{number}{unit}
+\sisetup{detect-all}																													% avoid using the math font for numbers in a non-math text
+\usepackage{ulem}																													% to cross words out, use \sout{}
+\usepackage{anyfontsize}  																										% disable the warnings when a font size isn't available
+\usepackage{unicode-math} 																									% so math characters are copy pasted correctly
+\usepackage{csquotes}																											% automatic quotation marks adapted of the current language, can be summoned with \enquote{X}
+\usepackage{parskip}%[=v1] 																									% no paragraph indentation and spaces between paragraphs
+\usepackage{accsupp}																												% allows to automatically replace some characters when copy-pasted
+\usepackage{pdfrender}
+\usepackage{ragged2e}
+
+%% Language specific packages
+
+\ifdefined\languageisfrench
+	\usepackage[french]{babel}
+	\frenchbsetup{StandardLists=true} 																					% necessary to use enumitem with babel/french
+\fi
+\ifdefined\languageisenglish
+	\usepackage[super]{nth}																										% to write 9^th correctly
+\fi
+\ifdefined\languageisitalian
+	\usepackage[italian]{babel}
+\fi
+\ifdefined\languageisspanish
+	\usepackage[spanish,es-noquoting]{babel}
+\fi
+\ifdefined\languageispolish
+	\usepackage[polish]{babel}
+\fi
+\ifdefined\languageisrussian
+	\usepackage[russian]{babel}
+\fi
+\ifdefined\languageisgerman
+	\usepackage[german]{babel}
+	\usepackage[super]{nth}																										% to write 9^th correctly
+\fi
+
+%% Array utilities
+
+\usepackage{booktabs} 																											% for rules (lines) in arrays
+\usepackage{pbox} 																													% for linebreaks in arrays
+\usepackage{array}																													% additionnal options for arrays
+\usepackage{colortbl}																												% additionnal options for coloring arrays
+\usepackage[table]{xcolor}																										% auto alternate grey-white rows, xcolor must be loaded before mdframed
+\usepackage[export]{adjustbox}																							% centered pics in tables
+\usepackage{diagbox}																												% diagonal slash in a cell
+\usepackage{multirow}																											% make a row from multiple rows
+
+%% List utilities and code
+
+\usepackage[inline]{enumitem}   																							% display inline lists
+\usepackage{etoolbox}           																									% general utility, good for lists for instance
+\usepackage{xparse}             																									% list utilities
+\usepackage{calc}																														% allow for calculation, in length for example
+\usepackage{xstring}            																									% string parsing, cutting, etc.
+\usepackage{keyval}																													% macro arguments as keywords
+\usepackage{datatool}																												% database management
+
+%% Graphics and frames
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{{./pics/}{./../Layout/pics/}{./../Arcane_Compendium/pics/}}
+\usepackage{epstopdf}
+
+%% Page utilities
+
+\usepackage{multicol}																												% allows to divide a part of the page in multiple columns
+\usepackage{titlesec} 																												% titles customization
+\usepackage{fancyhdr}																											% for custom headers and foot texts
+\pagestyle{fancy}
+
+%% Links and references
+
+\definecolor{linkcolour}{RGB}{131,25,139}
+\usepackage[unicode, colorlinks=true, linkcolor=linkcolour, urlcolor=linkcolour, bookmarks=false, pdfdisplaydoctitle=true, pdfstartview=FitH, pdfpagelabels=true]{hyperref} % Links in PDF.
+\usepackage[ocgcolorlinks]{ocgx2}																						% colours and/or links disappear when printed
+
+\makeatletter																															% @ is used as a letter in this code

@@ -1,0 +1,33 @@
+
+\unitentry{%
+	name=\wyvern{},
+	logo=character_monster,
+	categorynote=\mountcategorynote{\bignnasty{}},
+	maxmountsperarmy=2,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=4,
+	global@Ma=8,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=\ascharacter{},
+	globalrules={\fly{8}{16},\lighttroops{},\fear{},\toweringpresence{}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{},
+	offensename=\wyvern{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=3,
+	offenserules={\harnessed{},\poisonattacks{},\venomousfangs{}},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigwing}{\ruletype{\universalrule}\bigwingdef}
+	},
+	options={%
+		\textbf{\bigwing{}}=5,
+	},
+}% END UNIT ENTRY

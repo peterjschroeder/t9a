@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\tombharbinger{},
+	logo=character,
+	cost=100,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	global@Rsr=1,
+	globalrules={\undead{},\dusttodust{},\fearless{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	defenserules={\flammable{}},
+	offensename=\tombharbinger{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	offenserules={\lethalstrike{},\poisonattacks{},\textbf{\guardianswrath}},
+	options={%
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\AlCoOrder{\shield{}=5,\ha{}=5},
+		\aspenbow{} (4+)=5,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\halberd{}=5,
+			\gw{}=5,
+			\lance{}=5,
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\guardianswrath}{\ruletype{\attackattributeclosecombat}\guardianswrathdef}%
+	},
+	mounts={%
+		\skeletalhorse{}=20,
+		\skeletonchariot{}=60,
+		\amuut{} (\NOTESTzerotoXmountsperarmy{2})=50,
+	},
+} % END UNIT ENTRY

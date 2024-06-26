@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\verminslaves{},
+	logo=core,
+	categorynote=,
+	cost=120,
+	unitsize=30,
+	maxunitsize=80,
+	costpermodel=3,
+	scoring=,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=3,
+	globalrules={\callous{},\insignificant{},\lifeischeap{},\hidebf{\cannonfodder{}}},
+	defense@HP=1,
+	defense@Df=1,
+	defense@Re=2,
+	defense@Arm=0,
+	defensearmour=, 
+	offensename=\verminslave{},
+	offense@At=1,
+	offense@Of=1,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules=,
+	offenseweapons=,
+	commandgroup={%
+		\musician{}=10,
+	},
+	options={%
+		\textbf{\tunnellingtools{}}=15,
+		=,
+		=,
+	},
+	modelrulesdef={%
+		\modelruledef{\cannonfodder}{\ruletype{\universalrule}\cannonfodderdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\tunnellingtools}{\ruletype{\universalrule}\tunnellingtoolsdef}
+	},
+}% END UNIT ENTRY

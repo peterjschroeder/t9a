@@ -1,0 +1,36 @@
+
+\unitentry{%
+	name=\stank{},
+	logo=EoS,
+	secondlogo=cannonballs,
+	categorynote=\twocategoriesnote{\sunf}{\iar},
+	cost=450,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=\XDsix{2},
+	global@Ma=,
+	global@Di=7,
+	globalrules={\unbreakable{},\toweringpresence{},\fearless{},,\randommovement{\XDsix{2}},\hidebf{\steampowered{}}},
+	defense@HP=6,
+	defense@Df=1,
+	defense@Re=6,
+	defense@Arm=6,
+	offensename=\chassis{},
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=2,
+	offenserules={\breathattack{\St{} 2, \AP{} 3},\hidebf{\stankcannon{} (3+)},\grindattacks{\XDthree{3}}},
+	offensenameI=,
+	offenseI@St=,
+	offenseI@AP=,
+	offenserulesI={,},
+	modelrulesdef={%
+		\modelruledef{\steampowered}{\ruletype{\universalrule}{\steampowereddef}}%
+		\modelruledef{\stankcannon}{\ruletype{\artilleryweapon}{%
+			\textbf{\cannon{}}, \range{36}, \shots{1}, \St{}  4 [10], \AP{} 0 [10], \alphaorderlistbf{, \areaattack{1\timess{}5},{[\multiplewounds{\Dthree{}+1}{}]}}.%
+		}}%
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,81 @@
+
+%%% ToC %%%
+
+\newcommand{\toctarget}[1]{%
+\phantomsection\label{#1}%
+\hypertarget{#1}%
+}
+
+\newcommand{\tocentry}[2]{%
+\noindent\hyperlink{#1}{#2}\hfill\pageref{#1}%
+}
+
+
+\ifdefined\thisistherulebook
+
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\bfseries\centering}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}\vspace*{20pt}}
+\setlength{\cftsecnumwidth}{2em} % Set length of number width in ToC for sections
+\setlength{\cftbeforepartskip}{2em} % small blank before parts in ToC
+\renewcommand{\cftpartafterpnum}{\vspace*{-7pt}\par\protect\mbox{}\protect\greytextcolor{\hrulefill}\vspace*{4pt}\par}
+\setlength{\cftbeforesecskip}{0.25em} % no blank before sections in ToC
+\renewcommand{\cftpartfont}{\Largefontsize\bfseries} % parts text: right aligned and bold
+\renewcommand{\cftpartpagefont}{\Largefontsize\bfseries} % parts page number: bold
+%\renewcommand{\cftpartleader}{} % no dots between text and page numbers
+\renewcommand{\cftsecfont}{\largefontsize} % sections text: right aligned and smaller
+\renewcommand{\cftsecpagefont}{\largefontsize} % sections page numbers: smaller
+%\renewcommand{\cftsecleader}{} % no dots between text and page numbers
+\renewcommand\numberline[1]{} % remove section numbers: just leave text + page number
+\cftsetindents{section}{1em}{0em} % reduce margins
+\cftsetindents{part}{0em}{0em} % reduce margins
+\makeatletter\cftsetrmarg{\@pnumwidth} % align the titles that are on 2 lines on the page numbers
+\setcounter{tocdepth}{1} % only display parts and sections, not below
+
+\renewcommand*{\multicolumntoc}{2} % table of contents on 2 columns
+% Alternative to multitoc without warnings % doesn't work
+%\AtBeginDocument{\addtocontents{toc}{\protect\begin{multicols*}{2}}}
+%\AtEndDocument{\addtocontents{toc}{\protect\end{multicols*}}}
+
+%%% TOC with 3 columns
+
+%\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\bfseries\centering}
+%\renewcommand{\cftaftertoctitle}{\hspace*{\fill}\vspace*{10pt}}
+%\setlength{\cftsecnumwidth}{2em} % Set length of number width in ToC for sections
+%\setlength{\cftbeforepartskip}{1.5em} % small blank before parts in ToC
+%\renewcommand{\cftpartafterpnum}{\vspace*{-7pt}\par\protect\mbox{}\protect\greytextcolor{\hrulefill}\vspace*{3pt}\par}
+%\setlength{\cftbeforesecskip}{0em} % no blank before sections in ToC
+%\renewcommand{\cftpartfont}{\largefontsize\bfseries} % parts text: right aligned and bold
+%\renewcommand{\cftpartpagefont}{\largefontsize\bfseries} % parts page number: bold
+%%\renewcommand{\cftpartleader}{} % no dots between text and page numbers
+%\renewcommand{\cftsecfont}{\normalfontsize} % sections text: right aligned and smaller
+%\renewcommand{\cftsecpagefont}{\normalfontsize} % sections page numbers: smaller
+%%\renewcommand{\cftsecleader}{} % no dots between text and page numbers
+%\renewcommand\numberline[1]{} % remove section numbers: just leave text + page number
+%\cftsetindents{section}{1em}{0em} % reduce margins
+%\cftsetindents{part}{0em}{0em} % reduce margins
+%\makeatletter\cftsetrmarg{\@pnumwidth} % align the titles that are on 2 lines on the page numbers
+%\setcounter{tocdepth}{1} % only display parts and sections, not below
+%
+%\renewcommand*{\multicolumntoc}{3} % table of contents on 3 columns
+
+%%% TOC with everything, mostly for debug
+
+%\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Hugefontsize\bfseries\centering}
+%\renewcommand{\cftaftertoctitle}{\hspace*{\fill}\vspace*{10pt}}
+%\setlength{\cftbeforepartskip}{0em} % small blank before parts in ToC
+%\setlength{\cftbeforesecskip}{0em} % no blank before sections in ToC
+%\setlength{\cftbeforesubsecskip}{0em} % no blank before sections in ToC
+%\setlength{\cftbeforeparaskip}{0em} % no blank before sections in ToC
+%\renewcommand{\cftdotsep}{\cftnodots} % no dots between text and page numbers
+%\cftsetindents{section}{0.5em}{2.5em} % reduce margins
+%\cftsetindents{subsection}{1em}{3em} % reduce margins
+%\cftsetindents{paragraph}{1.5em}{3em} % reduce margins
+%\cftsetindents{part}{0em}{0em} % reduce margins
+%\renewcommand{\cftsubsecfont}{\normalfontsize}
+%\renewcommand{\cftparafont}{\normalfontsize}
+%\makeatletter\cftsetrmarg{\@pnumwidth} % align the titles that are on 2 lines on the page numbers
+%\setcounter{tocdepth}{4} % only display parts and sections, not below
+%
+%\renewcommand*{\multicolumntoc}{2} % table of contents on 3 columns
+
+\fi

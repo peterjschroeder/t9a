@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\feldraks{},
+	logo=special,
+	cost=340,
+	unitsize=3,
+	maxunitsize=6,
+	costpermodel=115,
+	scoring=yes,
+	maxmodelsperarmy=12,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}75,
+	global@Ad=8,
+	global@Ma=16,
+	global@Di=9,
+	globalrules={\fear{},\scoring{},\tall{}},
+	defense@HP=4,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=2,
+	defensearmour={\la{}},
+	defenserules={\unburnt{}},
+	offensename=\feldrak{},
+	offense@Ag=3,
+	offense@At=3,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hatred{} (\againstfly{})},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\onechoiceonlyACO{%
+			\pw{}=15\permodel{},
+			\halberd{}=10\permodel{},
+			\gw{}=8\permodel{},
+		},%
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,47 @@
+
+\unitentry{%
+	name=\plaguedisciples{},
+	logo=special,
+	cost=200,
+	unitsize=20,
+	maxunitsize=40,
+	costpermodel=10,
+	scoring=yes,
+	maxunitsperarmy=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	categorynote=,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=5,
+	globalrules={\callous{},\bodyguard{} (\sacredplatform{}),\hidebf{\fearnoevil{}},\lifeischeap{},\scoring{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules=,
+	offensename=\plaguedisciple{},
+	offense@At=2,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\cultoferrahman{}},
+	offenseweapons=,
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\bloodpoxblades{}=\free{},
+			\gw{}=1\permodel{},
+		}},
+	},
+	modelrulesdef={%
+		\modelruledef{\fearnoevil}{\ruletype{\universalrule}\fearnoevildef}
+	},
+}% END UNIT ENTRY

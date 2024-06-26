@@ -1,0 +1,146 @@
+\RequirePackage{amsmath}																									% debugging a warning
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}			% marge reduction
+
+
+%% Fonts
+
+\usepackage{fontspec}
+\setmainfont[
+	Ligatures=TeX,
+	SmallCapsFont={Caladea}
+	]{Caladea} % default is Latin Modern
+%\setmainfont[Ligatures=TeX,SmallCapsFont={OpenDyslexic}]{OpenDyslexic}		% default is Latin Modern
+\newfontfamily\titlefont[Ligatures=TeX]{Georgia} % font for front page title
+
+
+%% Typing and text
+
+\usepackage{microtype}																											% greatly improves general appearance of the text
+\usepackage{siunitx}																												% streamlining numbers and units, use \SI{number}{unit}
+\sisetup{detect-all}																													% avoid using the math font for numbers in a non-math text
+\usepackage{ulem}																													% to cross words out, use \sout{}
+\usepackage{anyfontsize}  																										% disable the warnings when a font size isn't available
+\usepackage{unicode-math} 																									% so math characters are copy pasted correctly
+\usepackage{csquotes}																											% automatic quotation marks adapted of the current language, can be summoned with \enquote{X}
+\usepackage{parskip} 																												% no paragraph indentation and spaces between paragraphs
+\usepackage{accsupp}																												% allows to automatically replace some characters when copy-pasted
+
+
+%% Language specific packages
+
+\ifdefined\languageisfrench
+	\usepackage[french]{babel}
+	\frenchbsetup{StandardLists=true} 																					% necessary to use enumitem with babel/french
+\fi
+
+	\usepackage[super]{nth}																										% to write 9^th correctly
+
+\ifdefined\languageisitalian
+	\usepackage[italian]{babel}
+\fi
+\ifdefined\languageisspanish
+	\usepackage[spanish]{babel}
+\fi
+\ifdefined\languageispolish
+	\usepackage[polish]{babel}
+\fi
+\ifdefined\languageisrussian
+	\usepackage[russian]{babel}
+\fi
+\ifdefined\languageisgerman
+	\usepackage[german]{babel}
+	\usepackage[super]{nth}																										% to write 9^th correctly
+\fi
+
+
+%% Array utilities
+
+\usepackage{booktabs} 																											% for rules (lines) in arrays
+\usepackage{pbox} 																													% for linebreaks in arrays
+\usepackage{array}																													% additionnal options for arrays
+\usepackage{colortbl}																												% additionnal options for coloring arrays
+\usepackage[table]{xcolor}																										% auto alternate grey-white rows, xcolor must be loaded before mdframed
+\usepackage[export]{adjustbox}																							% centered pics in tables
+\usepackage{diagbox}																												% diagonal slash in a cell
+\usepackage{multirow}																											% make a row from multiple rows
+
+
+%% List utilities and code
+
+\usepackage[inline]{enumitem}   																							% display inline lists
+\usepackage{etoolbox}           																									% general utility, good for lists for instance
+\usepackage{xparse}             																									% list utilities
+\usepackage{calc}																														% allow for calculation, in length for example
+\usepackage{xstring}            																									% string parsing, cutting, etc.
+\usepackage{keyval}																													% macro arguments as keywords
+\usepackage{datatool}																												% database management
+
+
+%% Frames
+
+\usepackage{framed}																												% boxes
+\usepackage[framemethod=TikZ]{mdframed}																	% fancy frames
+\usepackage{tikz}																														% fancy frames and drawing
+\usetikzlibrary{shapes, positioning,tikzmark,arrows,shadows}																										% anchors to draw arrows
+\usepackage{wrapfig}																												% fancy insertion of pics in text
+
+
+%% Graphics and other floats
+
+\usepackage{graphicx}        																										% for the \includegraphics command
+\usepackage{caption}																												% caption customization
+\captionsetup{singlelinecheck=off, labelfont=bf, textfont={color=black!60}}
+\usepackage{float}																													% forces float in a specific position with [H]
+\usepackage{epstopdf}      																									    % needed to use the .eps format in LuaTeX
+\graphicspath{{./pics/}{./../Layout/pics/}{./../Paths/pics/}}
+
+
+%% Page utilities
+
+\usepackage{multicol}																												% allows to divide a part of the page in multiple columns
+\usepackage{titlesec} 																												% titles customization
+\usepackage{fancyhdr}																											% for custom headers and foot texts
+\pagestyle{fancy}
+
+
+%% TOC
+
+	\usepackage{tocloft} 																											% http://ctan.org/pkg/tocloft
+%	\usepackage[toc]{multitoc}																									% ToC on multiple columns
+
+
+%% Index
+
+	\usepackage{imakeidx}																										% index management, no need of a second run, customization
+	\makeindex[columns=1,options=-s ../Layout/indexstyle.ist]
+	\indexsetup{level=\void, noclearpage=true, othercode={\pagestyle{fancy}},firstpagestyle=fancy}
+
+
+	
+%% Links and references
+
+
+	\usepackage{refcount}																											% extract number from page 
+\definecolor{linkcolour}{RGB}{131,25,139}
+\usepackage[unicode, colorlinks=true, linkcolor=linkcolour, urlcolor=linkcolour, bookmarks=false, pdfdisplaydoctitle=true, pdfstartview=FitH, pdfpagelabels=true]{hyperref} % Links in PDF.
+\usepackage[ocgcolorlinks]{ocgx2}																						% colours and/or links disappear when printed
+
+\begin{document}
+
+This is a \hyperref[test]{test}.
+
+\section{TESSSSSSSSSSSSST}
+\label{test}
+
+This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting with or automatically at the beginning of a float and the rest in thecommand. This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting withr automatically at the beginning of a float and the rest in themmand.
+This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting with or automatically at the beginning of a float and the rest in thecommand. This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting withr automatically at the beginning of a float and the rest in themmand.
+This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting with or automatically at the beginning of a float and the rest in thecommand. This package tries a solution of the problem with hyperref, that links to floats points below the caption and not at the beginning of the float. Therefore this package divides the task into two part, the link setting withr automatically at the beginning of a float and the rest in themmand.
+
+\newpage
+
+This is a \hyperref[test]{test}.
+
+
+\end{document}

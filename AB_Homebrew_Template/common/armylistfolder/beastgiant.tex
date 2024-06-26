@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\beastgiant{},
+	logo=monster,
+	cost=300,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\textbf{\giantseegiantdo}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	offensename=\beastgiant{},
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=3,
+	offenserules={\textbf{\rage}},
+	options={%
+		\textbf{\bigbrother}=35,
+		\onechoiceonlyACO{%
+			\textbf{\beerbarrel}=20,
+			\textbf{\giantclub}=30,
+			\textbf{\uprootedtree}=10,
+		}
+	},%
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\giantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\uprootedtree{}}{\ruletype{\closecombatweapon{}}\uprootedtreedef{}}
+		\modelruledef{\beerbarrel{}}{\ruletype{\shootingweapon{}}\beerbarreldef{}}%
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+} % END UNIT ENTRY

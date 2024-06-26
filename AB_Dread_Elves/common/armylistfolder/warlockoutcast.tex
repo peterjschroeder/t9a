@@ -1,0 +1,49 @@
+
+\unitentry{%
+	name=\warlockoutcast{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\themenagerieinitials}{\themenagerie},
+	cost=240,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\hidebf{\irresistiblewill{}},\wizardadept{},,\hidebf{\mistrusted{}}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	offensename=\warlockoutcast{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\ruthlessefficiency{}},
+	magic={\wizardmaster{}=170,},
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent\ifwizardmaster{}=\upto{}200,
+		\la{}=5,
+		\AlCoOrder{%
+			\bladesofdarag{}=10,
+			\pw{}=10,
+		},
+	},
+	mounts={%
+		\elvenhorse{}=20,
+		\daebraptor{}=25,
+		\blackmanepegasus{}=35,
+		\manticore{} (\themenagerieinitials{}) \only{\wizardmaster{}}=75,
+		\imperiousdragon{} (\themenagerieinitials{}) \only{\wizardmaster{}}=400,
+	},
+	modelrulesdef={%
+		\modelruledef{\irresistiblewill{}}{\ruletype{\universalrule}\irresistiblewilldef}
+		\modelruledef{\mistrusted{}}{\ruletype{\universalrule}\mistrusteddef}
+	},
+	paths={\cosmology{}=cosmology,\evocation{}=evocation,\witchcraft{}=witchcraft},
+}% END UNIT ENTRY

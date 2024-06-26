@@ -1,0 +1,255 @@
+
+%%% restrictions commands %%%
+
+\newcommand{\itemrestriction}[1]{\greytextcolor{#1}\newline}%
+\newcommand{\itemrestrictionnonewline}[1]{\greytextcolor{#1}}%
+\newcommand{\itemrestrictionnopar}[1]{\greytextcolor{#1}\newline}% deprecated
+\newcommand{\itemrestrictionblack}[1]{#1\newline}%
+\newcommand{\enchantmentrestriction}[1]{\Enchantment{}\spacebeforecolon{}: #1.\newline}
+
+
+%%% Input parameters %%%
+
+\define@key{item}{type}{\def\item@type{#1}}
+\define@key{item}{name}{\def\item@name{#1}}
+\define@key{item}{cost}{\def\item@cost{#1}}
+\define@key{item}{enchantment}{\def\item@enchantment{#1}}
+\define@key{item}{maxnumber}{\def\item@maxnumber{#1}}
+\define@key{item}{dominant}{\def\item@dominant{#1}}
+\define@key{item}{restriction}{\def\item@restriction{#1}}
+\define@key{item}{onfootonly}{\def\item@onfootonly{#1}}
+\define@key{item}{wizardsonly}{\def\item@wizardsonly{#1}}
+\define@key{item}{rules}{\def\item@rules{#1}}
+
+\define@key{item}{guidingdominant}{\def\item@guidingdominant{#1}}
+
+
+%%% Command to add a new item definition %%%
+
+\newcommand{\defitem}{
+	\setkeys{item}{%
+		type=, name=, cost=, enchantment=, maxnumber=, dominant=, restriction=, onfootonly=, wizardsonly=, rules=, guidingdominant=,
+	}%
+	\setkeys{item}%
+}
+
+
+%%% The Command %%%
+
+\newcommand{\itementry}[1]{%
+	\defitem{#1}%	
+	% Mimicing \sortedpricelistitem, can't use it directly because of expansion problems, and need to add a few other entries
+	\DTLnewrow{sortedpricelist}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{name}}%
+	\expandafter\DTLentrycommand\expandafter{\item@name}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{cost}}%
+	\expandafter\DTLentrycommand\expandafter{\item@cost}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{ruletext}}%
+	\expandafter\DTLentrycommand\expandafter{\item@rules}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{enchantment}}%
+	\expandafter\DTLentrycommand\expandafter{\item@enchantment}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{maxnumber}}%
+	\expandafter\DTLentrycommand\expandafter{\item@maxnumber}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{dominant}}%
+	\expandafter\DTLentrycommand\expandafter{\item@dominant}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{restriction}}%
+	\expandafter\DTLentrycommand\expandafter{\item@restriction}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{onfootonly}}%
+	\expandafter\DTLentrycommand\expandafter{\item@onfootonly}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{wizardsonly}}%
+	\expandafter\DTLentrycommand\expandafter{\item@wizardsonly}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{guidingdominant}}%
+	\expandafter\DTLentrycommand\expandafter{\item@guidingdominant}%
+	\pdfstringdef\textwithoutformatting{\item@name}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\pdfstringdef\costwithoutformatting{\item@cost}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{costsortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+	\def\temphypertag{}%
+	\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\item@name}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+	\xdef\SPLitemhypertag{\temphypertag}% using the unit name macro to define an hypertag
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{itemhypertag}}%
+	\expandafter\DTLentrycommand\expandafter{\SPLitemhypertag}%
+}
+
+%%% Lists
+
+\newtoggle{isdominant}
+\newtoggle{guidingdominant}
+\newtoggle{hasmaxnumber}
+\newtoggle{hasrestriction}
+\newtoggle{isonfootonly}
+\newtoggle{iswizardsonly}
+
+\newcommand{\startsortedpricelist}{% designed to be used with \itementry
+	\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelist{%
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+	\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\isenchantment=enchantment}{% Print back the ordered table
+	\begin{samepage}\pricelistitem{\nameoftheitem}{\cost}{% Check if we need \itemrestriction
+		\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+		\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+		\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+		\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+		\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+		\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
+			\itemrestriction{%
+				\iftoggle{isdominant}{\dominant{}. }{}%
+				\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+				\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+				\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
+				\iftoggle{hasrestriction}{\restriction{}.}{}%			
+			}%
+		}{}%
+		\expandafter\ifblank\expandafter{\isenchantment}{}{%
+			\enchantmentrestriction{\isenchantment{}}%
+		}%
+		\ruletext{}%
+		}%
+	\end{samepage}%
+	}%
+	\end{description}\end{samepage}%
+}
+
+\newcommand{\sortedpricelistitem}[3]{% deprecated
+	\DTLnewrow{sortedpricelist}%
+	\DTLnewdbentry{sortedpricelist}{name}{#1}%
+	\DTLnewdbentry{sortedpricelist}{cost}{#2}%
+	\DTLnewdbentry{sortedpricelist}{ruletext}{#3}%
+	\DTLnewdbentry{sortedpricelist}{enchantment}{}%
+	\DTLnewdbentry{sortedpricelist}{maxnumber}{}%
+	\DTLnewdbentry{sortedpricelist}{dominant}{}%
+	\DTLnewdbentry{sortedpricelist}{restriction}{}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\pdfstringdef\costwithoutformatting{#2}%
+	\pdfsubstitute\costwithoutformatting{ }{}%
+	\pdfsubstitute\costwithoutformatting{\free}{0}%
+	\pdfsubstitute\costwithoutformatting{\nolimit}{999999}%
+	\substitute\costwithoutformatting{\string\376}{}%
+	\substitute\costwithoutformatting{\string\377}{}%
+	\substitute\costwithoutformatting{\string\000}{}%
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{costsortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\costwithoutformatting}%
+}
+
+\newcommand{\sortedpricelistitemhtgt}[3]{% deprecated
+	\sortedpricelistitem{#1}{#2}{#3}%
+	\def\temphypertag{}%
+	\StrGobbleRight{\expandafter\@gobble\string#1}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+	\xdef\SPLitemhypertag{\temphypertag}% using the unit name macro to define an hypertag
+	\def\DTLentrycommand{\DTLnewdbentry{sortedpricelist}{itemhypertag}}%
+	\expandafter\DTLentrycommand\expandafter{\SPLitemhypertag}%
+}
+
+\newcommand{\startsortedpricelistNSP}{%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelistNSP{%
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+	\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\isdominant=dominant,\isenchantment=enchantment}{% Print back the ordered table
+	\pricelistitem{\nameoftheitem}{\cost}{% Check if we need \itemrestriction
+	\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+	\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+	\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+	\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+	\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+	\ifboolexpr{togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
+		\itemrestriction{%
+			\iftoggle{isdominant}{\dominant{}. }{}%
+			\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+			\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+			\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
+			\iftoggle{hasrestriction}{\restriction{}.}{}%			
+		}%
+	}{}%
+	\expandafter\ifblank\expandafter{\isenchantment}{}{%
+		\enchantmentrestriction{\isenchantment{}}%
+	}%
+	\ruletext{}%
+	}}%
+	\end{description}%
+}
+
+\newcommand{\startsortedpricelisthtgt}{%
+	\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelisthtgt{%
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+	\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isenchantment=enchantment,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\itemhypertag=itemhypertag,\guidingdominant=guidingdominant}{% Print back the ordered table
+	\begin{samepage}\expandafter\hypertarget\expandafter{\itemhypertag}{\pricelistitem{\nameoftheitem}{\cost}{%
+	\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+	\expandafter\ifblank\expandafter{\guidingdominant}{\togglefalse{guidingdominant}}{\toggletrue{guidingdominant}}%
+	\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+	\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+	\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+	\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+	\ifboolexpr{togl {guidingdominant} or togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
+		\itemrestriction{%
+			\iftoggle{guidingdominant}{\guidingversion{\dominant{}}. }{}%
+			\iftoggle{isdominant}{\dominant{}. }{}%
+			\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+			\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+			\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
+			\iftoggle{hasrestriction}{\restriction{}.}{}%			
+		}%
+	}{}%
+	\expandafter\ifblank\expandafter{\isenchantment}{}{%
+		\enchantmentrestriction{\isenchantment{}}%
+	}%
+	\ruletext{}%
+	}}\end{samepage}%
+	}%
+	\end{description}\end{samepage}%
+}
+
+\newcommand{\startsortedpricelisthtgtNSP}{%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=8pt]%
+	\DTLifdbexists{sortedpricelist}{\DTLcleardb{sortedpricelist}}{\DTLnewdb{sortedpricelist}}% Create new/discard old list
+}
+\def\endsortedpricelisthtgtNSP{%
+	\DTLsort*{costsortlabel=descending,sortlabel}{sortedpricelist}% Sort list
+	\DTLforeach*{sortedpricelist}{\ruletext=ruletext,\nameoftheitem=name,\cost=cost,\restriction=restriction,\maxnumber=maxnumber,\isdominant=dominant,\isonfootonly=onfootonly,\iswizardsonly=wizardsonly,\isenchantment=enchantment,\itemhypertag=itemhypertag,\guidingdominant=guidingdominant}{% Print back the ordered table
+	\expandafter\hypertarget\expandafter{\itemhypertag}{\pricelistitem{\nameoftheitem}{\cost}{%
+	\expandafter\ifblank\expandafter{\isdominant}{\togglefalse{isdominant}}{\toggletrue{isdominant}}%
+	\expandafter\ifblank\expandafter{\guidingdominant}{\togglefalse{guidingdominant}}{\toggletrue{guidingdominant}}%
+	\expandafter\ifblank\expandafter{\maxnumber}{\togglefalse{hasmaxnumber}}{\toggletrue{hasmaxnumber}}%
+	\expandafter\ifblank\expandafter{\restriction}{\togglefalse{hasrestriction}}{\toggletrue{hasrestriction}}%
+	\expandafter\ifblank\expandafter{\isonfootonly}{\togglefalse{isonfootonly}}{\toggletrue{isonfootonly}}%
+	\expandafter\ifblank\expandafter{\iswizardsonly}{\togglefalse{iswizardsonly}}{\toggletrue{iswizardsonly}}%
+	\ifboolexpr{togl {guidingdominant} or togl {isdominant} or togl {hasmaxnumber} or togl {hasrestriction} or togl {iswizardsonly} or togl {isonfootonly}}{%
+		\itemrestriction{%
+			\iftoggle{guidingdominant}{\guidingversion{\dominant{}}. }{}%
+			\iftoggle{isdominant}{\dominant{}. }{}%
+			\iftoggle{hasmaxnumber}{\zerotoXperarmy{\maxnumber}. }{}%
+			\iftoggle{isonfootonly}{\modelsonfootonly{}. }{}%
+			\iftoggle{iswizardsonly}{\wizardsonly{}. }{}%
+			\iftoggle{hasrestriction}{\restriction{}.}{}%			
+		}%
+	}{}%
+	\expandafter\ifblank\expandafter{\isenchantment}{}{%
+		\enchantmentrestriction{\isenchantment{}}%
+	}%
+	\ruletext{}%
+	}}%
+	}%
+	\end{description}%
+}

@@ -1,0 +1,53 @@
+
+\unitentry{%
+	name=\inquisitor{},
+	logo=character,
+	optionallogo=pistols,
+	categorynote=\silvershotscountsas{},
+	cost=95,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\fearless{},\notaleader{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour=\pa{},
+	offensename=\inquisitor{},
+	offense@Ag=4,
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={\lethalstrike{},\multiplewounds{}{} (\Dthree{})},
+	options={%
+		\onechoiceonlyACO{%
+			\textbf{\blessedsteel{}}=70,
+			\textbf{\silvershots{}} (\zerotooneunitsperarmy{})=65,
+		},
+		\specialitemsallowance{}=\upto{}100,
+		\shield{}=5,
+		\onechoiceonlyACO{%
+			\crossbow{} (2+)=5,
+			\bop{} (3+)=15,
+			\reppst{} (3+)=25,
+		},
+		\onechoiceonlyACO{%
+            \pw{}=5,
+            \gw{}=10,
+            \halberd{}=10,
+		},
+    },
+	mounts={%
+          \horse{} \wordand{} \lighttroops{}=105,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\blessedsteel}{\ruletype{\attackattributeclosecombat}{\blessedsteeldef}}%
+		\modelruledef{\silvershots}{\ruletype{\attackattributeshooting}{\silvershotsdef}}%
+	},
+}% END UNIT ENTRY

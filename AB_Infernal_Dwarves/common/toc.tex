@@ -1,0 +1,19 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{IDModelRules}{\armymodelrules}\par
+	\tocentry{IDHereditarySpell}{\hereditaryspell}\par
+	\tocentry{IDSpecialEquip}{\specialequipment}\par
+	\tocentry{IDArmyOrganisation}{\armyorganisation}\par
+	\tocentry{IDQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{IDchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{IDCharacters}{\characters}\par
+	\tocentry{IDMounts}{\charactermounts}\par
+	\tocentry{IDCore}{\core}\par
+	\tocentry{IDSpecial}{\specialcategory}\par
+	\tocentry{IDDestruction}{\instrumentsofdestruction}\par
+}

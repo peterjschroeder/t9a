@@ -1,0 +1,84 @@
+
+%%%% Reanimated initials in profiles
+
+\newcommand{\resurrectedInitials}{\reanimatedInitials}
+
+%%%% Hereditary Spell
+
+\newcommand{\secboosted}[1]{\textbf{\textcolor{green!60!black}{$\{\!\!\{$#1$\}\!\!\}$}}}
+
+%%%% Vampiric Bloodlines
+
+\newcommand{\bloodlinesidepic}[1]{%
+	\begin{minipage}[c]{0.20\textwidth}%
+	\includegraphics[width=\textwidth]{pics/logo_#1.png}%
+	\end{minipage}%
+}
+\newcommand{\bloodlinedef}[3]{%
+	\begin{minipage}[c]{0.77\textwidth}%
+	{\largerfontsize\option{\textbf{#1}%
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#1}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+		}{%
+			 {\largefontsize\textit{(\csname \tempENname EN\endcsname)}}%
+		}%
+	}{\textbf{%
+		\expandafter\ifsubstring\expandafter{#2}{\free}{\free}{\pts{#2}}%
+	}}}\vspace*{3pt}\newline%
+	#3%
+	\end{minipage}%
+}
+
+\newcommand{\bloodlinebloodties}[1]{%
+	\bloodties{}\spacebeforecolon{}: \textbf{#1}%
+	\def\tempENname{}%
+	\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#1}{1}[\tempENname]%
+	\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+	}{%
+		 {\textit{(\csname \tempENname EN\endcsname)}}%
+	}%
+}
+
+\newcommand{\bloodlinepathaccess}[2][]{%
+	\vspace*{-3pt}%
+	{\pathaccess{}\spacebeforecolon{}:#1 \pathslistinline{#2}}% this has to be in a group or it messes with any further sorting (like special items, or blood powers)
+	\vspace*{-10pt}%
+}
+
+\newcommand{\bloodlineancientbloodpower}[3]{%
+	\ancientbloodpower{}\spacebeforecolon{}: \option{\textbf{#1}%
+		\def\tempENname{}%
+		\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string#1}{1}[\tempENname]%
+		\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% then there is nothing to add
+		}{%
+			 {\textit{(\csname \tempENname EN\endcsname)}}%
+		}%
+	}{\textbf{\pts{#2}}}\newline%
+	#3%
+}
+
+%%%% Blood Powers
+
+\newcommand{\bloodpowertitle}[2]{%
+	\vspace*{10pt}%
+	\begin{center}\includegraphics[width=2cm]{pics/logo_#1.png}\end{center}%
+	\vspace*{-5pt}%
+	\begin{center}{\largerfontsize\bfseries #2}\end{center}%
+	\vspace*{3pt}%
+}
+
+\newcommand{\bloodpowercategoury}[1]{%
+\vspace*{10pt}
+\begin{center}{\Largerfontsize\bfseries#1}\end{center}
+\vspace*{4pt}%
+}
+
+%%% Blood Ties title in unit entry: formatting
+
+\newcommand{\bloodtiestitle}[1]{\textnormal{\textcolor{black}{\bloodties{} (#1)}}}
+
+%%%% QRS
+
+\newcommand{\bloodlinelogoqrs}[1]{\includegraphics[width=2.3cm]{pics/logo_#1.png}}
+\newcommand{\spacebetweenlogos}{\hspace*{1cm}}

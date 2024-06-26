@@ -1,0 +1,49 @@
+
+\unitentry{%
+	name=\nomadicgiant{},
+	fluff=\nomadicgiantfluff{},
+	logo=special,
+	optionallogo=arrows,
+	categorynote={\upgradecategorynote{\rainingdeathinitials}{\rainingdeath}},
+	cost=\newrule{290},
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\textbf{\giantseegiantdo{}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	offensename=\nomadicgiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\textbf{\rage}},
+	options={%
+		\textbf{\bigbrother}=\newrule{25},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+				\textbf{\giantrecurvebow{}} (4+) [\rainingdeathinitials{}]\newline (\NOTESTzerotoXmodelsperarmy{2})=\newrule{5},
+				\textbf{\giantclub{}}=\newrule{\free{}},
+				\textbf{\tribalwarspear{}}=\newrule{10},
+		}},
+	},%
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\giantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\tribalwarspear{}}{\ruletype{\closecombatweapon{}}\tribalwarspeardef{}}
+		\modelruledef{\giantrecurvebow{}}{\ruletype{\artilleryweapon{}}%
+		\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{\areaattack{} (1\timess{}5),[\multiplewounds{}{} (\Dthree{})],\quicktofire{}}.}
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT

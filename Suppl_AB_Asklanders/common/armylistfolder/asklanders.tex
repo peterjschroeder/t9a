@@ -1,0 +1,47 @@
+
+ \unitentry{%
+	name=\asklanders{},
+	fluff=\asklandersfluff{},
+	logo=core,
+	cost=130,
+	unitsize=15,
+	maxunitsize=50,
+	costpermodel=6,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\asklanderbattlefever{},\scoring{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	offensename=\asklander{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=0,
+	offense@Ag=3,
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\shield{}=1\permodel{},
+		\throwingweapons{} (5+)\newline (\NOTESTzerotoXmodelsperarmy{\newrule{60}})=2\permodel{},
+		\onechoiceonly{%
+        	\AlCoOrder{\pw{}=1\permodel{},
+				\spear{} \wordand{} \shield{}=4\permodel{},
+				\bow{} (4+) (\NOTESTzerotoXmodelsperarmy{60})=2\permodel{},
+				\gw{}=3\permodel{},
+			},
+		},
+	},
+} % END UNIT ENTRY
+

@@ -1,0 +1,73 @@
+
+\def\flamethrowermultiplewounds{\{\multiplewounds{}{} (\Dthree{})\}}
+
+\unitentry{%
+	name=\fieldartillery{},
+	logo=cannonballs,
+	unitsize=1,
+	cost=90,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=3,
+	global@Ma=3,
+	global@Di=9,
+	globalrules={\warmachine{},\stubborn{},\hidebf{\engineeringrune{}}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules=\moveorfire{},
+	optionalmodelrulesdef={%
+		\modelruledef{\flamingshot}{\ruletype{\attackattributeshooting}\flamingshotdef}%
+	},
+	modelrulesdef={
+		\modelruledef{\engineeringrune}{\ruletype{\universalrule}\engineeringrunedef}%
+	},
+	options={%
+		\textbf{\flamingshot{}}=\free,
+		\textbf{\runecrafted{}}=X\refsymbol{},
+		\refsymbolbis{}\runecraftednote{}=\columnbreak{},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\dwarfballista{} (4+)} \ESnewline\DEnewline(\NOTESTzerotoXunitsperarmy{4})=\free{},
+			\textbf{\flamecannon} (\NOTESTzerotoXunitsperarmy{2})=35,
+			\textbf{\dwarfcatapult{} (4+)} \ESnewline\DEnewline(\NOTESTzerotoXunitsperarmy{2})=100,
+			\textbf{\dwarfcannon{} (4+)} (\NOTESTzerotoXunitsperarmy{2})=140,
+			\textbf{\organgun{} (4+)} (\NOTESTzerotoXunitsperarmy{2})=145,
+		}},
+	},
+	endtext={%
+		\vspace*{3pt}\startfieldartillerytable{}%
+		\fieldartilleryentry{\dwarfballista{}}{\free{}}{\artilleryweapon{}}{%
+			\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{[\multiplewounds{\Dthree{}}{}], \areaattack{1\timess{}5}}.%
+			}{\universalrule}{35}{\dwarfballistarunecrafteddef{}}%
+		\fieldartilleryentry{\flamecannon{}}{35}{\artilleryweapon{}}{%
+			\textbf{\flamethrower}, \range{24}, \shots{1}, \St{} 4 \{5\}, \AP{} 1 \{2\}, \alphaorderlistbf{\flamethrowermultiplewounds{},\flamingattacks{}}.%
+			}{\universalrule}{10}{\flamecannonrunecrafteddef{}}%
+		\fieldartilleryentry{\dwarfcatapult{}}{100}{\universalrule{}}{%
+			\textbf{\catapult{4\timess{}4}}, \range{12--60}, \shots{1}, \St{} 3 [7], \AP{} 0 [4], \textbf{[\multiplewounds{}{} (\Dthree{}, \clippedwings)]}. \dwarfcatapultdef{}%
+			}{\attackattribute}{100}{\dwarfcatapultrunecrafteddef{}}%
+		\fieldartilleryentry{\dwarfcannon{}}{140}{\artilleryweapon{}}{%
+			\dwarfcannondef{}\spacebeforecolon{}:%
+			\begin{smallitemize}%
+				\item \textbf{\cannon{}}, \range{60}, \shots{1}, \St{} 4 [10], \AP{} 0 [10], \alphaorderlistbf{\areaattack{} (1\timess{}5),[\multiplewounds{\Dthree{}+1}{}]}%
+				\item \textbf{\volleygun{}}, \range{12}, \shots{\XDsix{2}}, \St{} 4, \AP{} 4%
+			\end{smallitemize}%
+			}{\attackattribute}{5}{\dwarfcannonrunecrafteddef{}}%
+		\fieldartilleryentry{\organgun{}}{145}{\artilleryweapon{}}{%
+			\textbf{\volleygun{}}, \range{30}, \shots{\XDsix{2}\timess{}2}, \St{} 5, \AP{} 3.%
+			}{\attackattribute}{80}{\organgunrunecrafteddef{}}%
+		\closefieldartillerytable{}%
+	},
+	toggles={%
+		\togglefalse{onecolprintoptionalmodelrulesdef}\toggletrue{twocolprintoptionalmodelrulesdef}
+		\togglefalse{onecolprintmodelrulesdef}\toggletrue{twocolprintmodelrulesdef}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,163 @@
+
+% Unit Entry Names
+
+% Characters
+
+\newcommand{\forestprince}{Forest Prince}
+\newcommand{\chieftain}{Chieftain}
+\newcommand{\druid}{Druid}
+\newcommand{\treefatherancient}{Treefather Ancient}
+\newcommand{\avatarofnature}{Avatar of Nature}
+\newcommand{\dryadancient}{Dryad Ancient}
+\newcommand{\thicketshepherd}{Thicket Shepherd}
+
+
+% Mounts
+
+\newcommand{\elvenhorse}{Elven Horse}
+\newcommand{\greatelk}{Great Elk}
+\newcommand{\unicorn}{Sylvan Unicorn}
+\newcommand{\eagleking}{Eagle King}
+\newcommand{\dragon}{Dragon}
+
+
+% Core
+
+\newcommand{\forestguard}{Forest Guard}
+\newcommand{\forestguardSINGULAR}{Forest Guard}
+\newcommand{\sylvanarchers}{Sylvan Archers}
+\newcommand{\sylvanarcher}{Sylvan Archer}
+\newcommand{\heathriders}{Heath Riders}
+\newcommand{\heathrider}{Heath Rider}
+\newcommand{\dryads}{Dryads}
+\newcommand{\dryad}{Dryad}
+
+
+% Special
+
+\newcommand{\forestrangers}{Forest Rangers}
+\newcommand{\forestranger}{Forest Ranger}
+\newcommand{\thicketbeasts}{Thicket Beasts}
+\newcommand{\thicketbeast}{Thicket Beast}
+\newcommand{\foresteagles}{Forest Eagles}
+\newcommand{\foresteagle}{Forest Eagle}
+\newcommand{\bladedancers}{Blade Dancers} % singular already defined in Kindreds
+\newcommand{\treefather}{Treefather}
+\newcommand{\wildhuntsmen}{Wild Huntsmen}
+\newcommand{\wildhuntsman}{Wild Huntsman}
+\newcommand{\elvendeer}{Elven Deer}
+\newcommand{\kestrelknights}{Kestrel Knights}
+\newcommand{\kestrelknight}{Kestrel Knight}
+\newcommand{\kestrel}{Kestrel}
+
+
+% Unseen Arrows
+
+\newcommand{\briarmaidens}{Briar Maidens}
+\newcommand{\briarmaiden}{Briar Maiden}
+\newcommand{\sylvansentinels}{Sylvan Sentinels}
+\newcommand{\sylvansentinel}{Sylvan Sentinel}
+\newcommand{\pathfinders}{Pathfinders} % singular already defined in Kindreds
+
+
+% Unit Entry Rules
+
+%%% CHARACTERS
+
+% Forest Prince
+
+\newcommand{\joinakindred}{A single Kindred}
+\newcommand{\withlighttroops}{with \lighttroops{}}
+
+% Treefather Ancient
+
+\newcommand{\asingleaspectofnature}{A single Aspect of Nature}
+\newcommand{\asingleartefact}{A single Artefact}
+\newcommand{\cannottakedragonfiregem}{Cannot take Dragonfire Gem}
+
+% Thicket Shepherd
+
+\newcommand{\ashepherdanditsflock}{A Shepherd and its Flock}
+\newcommand{\ashepherdanditsflockdef}{%
+	The model cannot join a unit that contains another model with this rule.%
+}
+
+%%% MOUNTS
+
+%unicorn
+
+\newcommand{\heraldofsura}{Herald of Sura}
+
+\newcommand{\heraldofsuradef}{%
+While the model's unit consists entirely of Cavalry models, place a Forest Terrain Feature underneath the unit (this can be substituted by placing a marker next to the unit). This Forest \textbf{always} extends to the edges of unit's Unit Boundary (even if the unit moves or changes formation).
+}
+% dragon mount
+
+\newcommand{\semeetingofmindsdef}{%
+	The model gains \textbf{\treesinging{}}. In addition, if the model starts a Round of Combat with the centre of its base inside a Forest, then the mount \textbf{must} reroll to-wound rolls of '1' with its Close Combat Attacks for the duration of that Round of Combat.
+}
+%%% CORE
+
+% Heath Riders
+
+\newcommand{\mustchooseone}{\textbf{Must} choose one:}
+\newcommand{\heathhunters}{Heath Hunters}
+\newcommand{\heathhuntersdef}{%
+	The model loses \devastatingcharge{+1 \St{}, +1 \AP{}} and \scoring{}, and gains \sylvanlongbow{} (3+), \textbf{\feignedflight}, \textbf{\lighttroops}, and \textbf{\vanguard}.%
+}
+
+% Dryads
+
+\newcommand{\clearingspirits}{Clearing Spirits}
+\newcommand{\clearingspiritsdef}{%
+	The model gains \textbf{\hardtarget{} (1)}, \textbf{\lighttroops{}}, and \textbf{\skirmisher{}}, and loses \scoring{}.%
+}
+
+%%% SPECIAL
+
+%Forest Ranger
+\newcommand{\forestrangervanguardrestrictiondef}{%
+	*Characters with Forest Guardian joined to this unit gain Vanguard.
+}
+
+
+% Blade Dancers
+\newcommand{\dancesofcenyrn}{Dances of Cenyrn}
+\newcommand{\dancesofcenyrndef}{%
+	At the start of each Round of Combat, units consisting entirely of models with this rule \textbf{must} choose one of the dances listed below and apply its effects until the end of the Round of Combat. The unit cannot choose this dance again until after one of the following has happened:%
+	\begin{itemize}%
+		\item The unit is no longer Engaged in Combat.%
+		\item The unit has chosen a different dance.%
+	\end{itemize}%
+}
+
+\newcommand{\dancesofcenyrntable}{%
+	\startdancestable{}%
+		\adddance{Dance of Whirling Blades}{+1 Attack Value.}%
+		\adddance{Dance of the Parting Mists}{%
+			\textbf{\aegis{} (3+)}, \minuss{}1 Strength, and \minuss{}1 Armour Penetration.%
+		}%
+		\adddance{Dance of Biting Wind}{+1 Armour Penetration and \textbf{\lethalstrike}.}%
+		\adddance{Dance of Bedevilments}{%
+			\textbf{\fear}, and enemy units in base contact with the model always have a Rank Bonus of 0.%
+		}%
+	\closedancestable{}%
+}
+
+% Treefather
+
+\newcommand{\treefathercategorynote}{%
+	\zerotoXunitsperarmy{1} if the army  includes two or more \avatarofnature{}, \dragon{}, or \treefatherancient{}.%
+}
+
+%%% UNSEEN ARROWS
+
+% Briar Maidens
+
+\newcommand{\poisonedthorn}{Poisoned Thorn}
+
+% Sylvan Sentinels
+
+\newcommand{\sylvansentinelscategorynote}{%
+	\zerotoXunitsperarmy{1} if the army  includes two or more units of \pathfinders{}.%
+}

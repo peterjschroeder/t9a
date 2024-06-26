@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\bloodfurlegate{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\breadandgamesinitials}{\breadandgames},
+	cost=115,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={\callous{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	offensename=\bloodfurlegate{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=6,
+	offenserules=,
+	options={%
+		\textbf{\greatereaglestandard{}}=50,
+		\specialitemsallowance{}=\upto{}200,
+		\shield{}=5,
+		\pistol{} (3+)=5,
+		\onechoiceonlyACO{%
+			\pw{}=10,
+			\spear{}=5,
+			\halberd{}=10,
+		},
+	},
+	mounts={%
+		\triumphalplatform{} (\breadandgamesinitials{})=300,
+		\praetorianbrute{}=70,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\greatereaglestandard}{\ruletype{\universalrule}\greatereaglestandarddef}
+	},
+}% END UNIT ENTRY

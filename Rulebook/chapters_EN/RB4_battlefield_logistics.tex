@@ -1,0 +1,90 @@
+
+\part{Battlefield Logistics}
+
+\RBbmc
+
+\section{Measuring Distances}
+\idx[main=y]{Measuring Distances}\label{measuring_distances}
+
+The unit of measurement for all distances and ranges in \nameofthegame{}, is the inch (\si{\inch}). An inch corresponds to \SI{2.54}{\centi\meter}.
+
+When using \SI{28}{mm} scale miniatures, \distance{1} in the game would be roughly equal to \num{1.5} meters in real life. An average human-like creature in the game has an Advance Rate of \distance{4} and a March Rate of \distance{8}, which means that in a single Movement Phase it would move only \num{6} metres (\num{12} if marching). Likewise, a ranged weapon like a Longbow has an effective range of \distance{30} in the game, which would equal roughly \num{45} metres, which is 5 times shorter than the average historic effective range of the weapon of around \num{250} metres.
+
+For example, players could use the historic range of the Longbow to determine what kind of distance \distance{1} represents in a game. In that case \distance{1} would be slightly more than 8 metres and much closer to representing the distances assumed when writing the rules for this game.
+
+We do not wish to tell players how to imagine their fights or how many individuals each miniature should represent, but we believe that an easy equation of \distance{1} being roughly equal to \num{10} metres is a good representation of the size of the game. An average game will be played on a \num{72}\timess{}\num{48}\si{\inch} table and thus represents a real-life area of \num{720}\timess{}\num{480} \si{\meter} or roughly 50 football pitches. In medieval times (the closest thing we have to our fantasy world) this would represent an average sized battlefield where two forces with soldiers numbering from a few hundred to several thousand would meet.
+
+To determine the distance between two points on the Battlefield (or two units, or any other elements), you always measure from the closest points, even if the line of measuring goes through any kind of intervening or obstructing element.
+
+The rules often refer to things being within a certain distance. Measure the distance between the closest points. If this distance is less than or equal to the given range, they are considered to be within range. This means that a model is always within range of itself, and that the entire model or unit does not need to be within range, only a fraction of it.
+
+When measuring distances to and from a unit, measure to and from its Unit Boundary.
+
+Players are allowed to measure any distance at any time.
+
+\section{Line of Sight}
+\idx[main=y]{Line of Sight}\label{line_of_sight}
+
+A model can draw Line of Sight to its target (a point, a model, or a Unit Boundary) if you can extend a straight line from its Front Facing directly to its target, without the line:
+\begin{itemize}
+	\item Leaving the model's Front Arc
+	\item Being interrupted by Opaque Terrain
+	\item Being interrupted by the the edge of a base of a model that has an \textbf{equal or bigger Height} than \textbf{both} the model and its target (see \totalref{model_classification}, for more details; Model Rules such as \hyperref[tall]{\tall} or \hyperref[skirmisher]{\skirmisher} can affect this)
+\end{itemize}
+
+
+For the purpose of drawing Line of Sight to or from a point on the Battlefield, that point is considered to be of Standard Height.
+
+When drawing Line of Sight from several models inside a unit, this is done independently for each model. Line of Sight cannot be drawn to targets if the endpoint would be outside the unit's Front Arc, and models never block Line of Sight to or from other models within the same unit. A unit is considered to have Line of Sight to a target if one or more models in the unit have Line of Sight. A model is considered to have Line of Sight to a unit if it can draw Line of Sight to any model inside that unit or to any part of the unit's Unit Boundary.
+
+See figure \ref{figure/line_of_sight} for an illustration of how to draw Line of Sight from a model.
+
+\RBemc
+
+\begin{figure}[H]
+	\begin{minipage}{0.62\textwidth}
+	\renewcommand{\figbiglettersize}{17}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{line_of_sight.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.35\textwidth}
+	\caption{Drawing Line of Sight.\captionposttitle
+		The area within which the single model unit D can draw Line of Sight is marked in yellow.
+		\captionlist
+			\captionitem \textbullet{} Unit B is within Line of Sight.\newline
+			\captionitem \textbullet{} Unit A is within Line of Sight as unit D can draw Line of Sight to the Unit Boundary of unit A, even though that part of A's Unit Boundary is not occupied by any models.\newline
+			\captionitem \textbullet{} Unit C is not within Line of Sight as the Impassable Terrain Feature counts as Opaque Terrain and therefore blocks Line of Sight from unit D to unit C.%
+	}
+	\label{figure/line_of_sight}
+	\end{minipage}
+\end{figure}
+
+\vspace{10pt}
+
+\RBbmc
+
+\section{Unit Spacing}
+\idx[main=y]{Spacing}\idx[main=y]{Unit Spacing}\idx{Impassable Terrain}\idx{Failed Charge}\idx{Advance Move}\idx{March Move}\idx{Charge Move}\label{unit_spacing}
+
+Under normal circumstances, all units must be separated from Impassable Terrain and from both friendly and enemy units by more than \distance{1} (remember that distances between units are measured to and from their Unit Boundaries).
+
+Certain types of movement allow a unit to come within \distance{1} of other units or Impassable Terrain. The most common types of movement are:
+
+\begin{itemize}
+	\item During an Advance Move or a March Move, units may come up to \distance{0.5} of these elements but must be more than \distance{1} away at the end of the move (see figure \ref{figure/unit_spacing}).
+	\item During a Failed Charge Move or a Charge Move, units are allowed to come within \distance{0.5} of these elements, including base contact (they may however only move into base contact with an enemy unit that was the target of the Charge).\newline
+	Once  units  end up within \distance{1} of other units or Impassable Terrain after a Failed Charge Move or a Charge Move, they are allowed to remain  within \distance{1}. As soon as they move farther away, the usual restrictions regarding Unit Spacing apply again. Removing a unit from the Battlefield (e.g. during a \hyperref[reform]{Reform}) does not count as moving the unit farther away for this purpose (unless the unit is actually placed back farther away than \distance{1}).
+\end{itemize}
+
+See figure \ref{figure/unit_spacing} for an example.
+
+\begin{Figure}
+	\centering
+	\Fanchor
+	\def\svgwidth{0.91\textwidth}
+	\subimport{../pics/}{unit_spacing.pdf_tex}
+	\caption{Unit Spacing.\captionposttitle
+		During an Advance or March Move, unit A may be moved closer than \distance{1} to the Unit Boundary of unit B. Unit A may however not come within \distance{0.5} of unit B. Since unit A started the move more than \distance{1} away from unit B, it must be more than \distance{1} away from B's Unit Boundary at the end of its Advance or March Move.}
+	\label{figure/unit_spacing}
+\end{Figure}
+
+\RBemc

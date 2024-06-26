@@ -1,0 +1,49 @@
+
+%%% Special Equipment
+
+\newcommand{\wildformeffectslayout}[3]{%
+\begin{smallitemizeitem}%
+\item #1%
+\item #3%
+\end{smallitemizeitem}%
+}
+
+
+%%% Totems
+
+\newcommand{\totemtablearraystretch}{2}
+
+\newcommand{\starttotemstable}{%
+	\DTLifdbexists{totemslist}{\DTLcleardb{totemslist}}{\DTLnewdb{totemslist}}% Create new/discard old list
+	\vspace*{\parskip}%
+	\renewcommand{\arraystretch}{\totemtablearraystretch}%
+	\ifdef{\languageisspanish}{%
+		\begin{center}\begin{tabular}{>{\bfseries\flushright}m{4.5cm}m{10cm}}%	
+	}{%
+		\begin{center}\begin{tabular}{>{\bfseries}rm{10cm}}%	
+	}%
+	\toprule%
+}
+
+\newcommand{\closetotemstable}{%
+	\DTLsort*{sortlabel}{totemslist}% Sort list
+	\DTLforeach*{totemslist}{\name=name,\ruletext=ruletext}{%
+		\textbf{\name}&\ruletext{}\DTLiflastrow{}{\tabularnewline}%
+	}
+	\tabularnewline\bottomrule%
+	\end{tabular}\end{center}%
+	\vspace*{\parskip}%
+	\DTLcleardb{totemslist}%
+}
+
+\newcommand{\addtotem}[2]{%
+	\DTLnewrow{totemslist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{totemslist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{totemslist}{name}{#1}%
+	\DTLnewdbentry{totemslist}{ruletext}{#2}%
+}

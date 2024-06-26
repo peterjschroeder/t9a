@@ -1,0 +1,63 @@
+
+\maintitle{IDModelRules}{\armymodelrules}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\infernalbrand{}}{\infernalbranddef}
+\AMRsortedlistentry{\taurukhritual{}}{\itemrestriction{\zerotoXmodelsperarmy{2}.}\taurukhritualdef}
+\AMRsortedlistentry{\incendiary{}}{\incendiarydef}
+\AMRsortedlistentry{\firesofindustry{} (X)}{\firesofindustrydef}
+
+\AMRsortedlistentry{\furnacebreach{}}{\furnacebreachdef}
+\closeAMRsortedlist
+
+\subtitle{\attackattributes}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\closecombatandshooting]{\oilflasks{}}{\oilflasksdef}
+\closeAMRsortedlist
+
+\subtitle{\specialattacks}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\volcanicembrace{} (X)}{\volcanicembracedef}
+\closeAMRsortedlist
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\armour]{\infernalarmour{}}{\infernalarmourdef}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry[\shootingweapon]{\flintlockaxe{}}{%
+	\itemrestriction{\flintlockandblunderbussrestriction{}.}%
+	 \range{18}, \shots{1}, \St{} 4, \AP{} 2, \alphaorderlistbf{\shootinextrarank{}}. \flintlockaxedef{}%
+}
+\AMRsortedlistentry[\shootingweapon]{\blunderbuss{}}{%
+	\itemrestriction{\flintlockandblunderbussrestriction{}.}%
+	\range{12}, \shots{1}, \St{} 5, \AP{} 3, \alphaorderlistbf{\accurate{},\quicktofire{},\steadyaim{},\marchandshoot{}}. \blunderbussdef{}%
+}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry[\artilleryweapon]{\naphthathrower{}}{%
+	\itemrestriction{\zerotoXmodelsperarmy{2}.}%
+	\textbf{\flamethrower{}}.  \range{12}, \shots{1}, \St{} 4 \{5\}, \AP{} 1 \{2\}, \alphaorderlistbf{\{\multiplewounds{}{} (\Dthree{})\},\flamingattacks{},\marchandshoot{}}.
+	\naphthathrowerdef{}%
+}
+\AMRsortedlistentry[\artilleryweapon]{\rocketbattery{}}{%
+	\itemrestriction{\zerotoXmodelsperarmy{2}.}%
+	 \range{18}, \shots{4},  \St{} 6, \AP{} 3, \alphaorderlistbf{\quicktofire{},\multiplewounds{}{} (\Dthree{})}.\newline%
+	\rocketbatterydef%
+}
+\AMRsortedlistentry[\artilleryweapon]{\titanmortar{}}{%
+	\itemrestriction{\zerotoXmodelsperarmy{2}.}%
+	\textbf{\catapult{} (4\timess{}4)}. \range{6--18}, \shots{1}, \St{} 4 [8], \AP{} 1 [5], \alphaorderlistbf{\quicktofire{},{[\multiplewounds{}{} (\Dthree{}, \clippedwings{})]}}.%
+}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry[\closecombatweapon]{\infernalweapon{}}{\infernalweapondef}
+\closeAMRsortedlist

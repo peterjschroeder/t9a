@@ -1,0 +1,72 @@
+
+\newcommand{\startsumhereditaries}{%
+	\DTLifdbexists{hereditarytable}{\DTLcleardb{hereditarytable}}{\DTLnewdb{hereditarytable}}
+}
+
+\newcommand{\addsumhereditary}[7]{%
+	\DTLnewrow{hereditarytable}
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{hereditarytable}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel
+	\DTLnewdbentry{hereditarytable}{label}{#1}%
+	\DTLnewdbentry{hereditarytable}{title}{#2}%
+	\DTLnewdbentry{hereditarytable}{CV}{#3}%
+	\DTLnewdbentry{hereditarytable}{range}{#4}%
+	\DTLnewdbentry{hereditarytable}{type}{#5}%
+	\DTLnewdbentry{hereditarytable}{duration}{#6}%
+	\DTLnewdbentry{hereditarytable}{effect}{#7}%
+}
+
+\newcommand{\closesumhereditaries}{%
+	\DTLsort*{sortlabel}{hereditarytable}% Sort list
+	\starthereditarysummariestable
+	\DTLforeach*{hereditarytable}{\sumlabel=label,\sumtitle=title,\sumCV=CV,\sumrange=range,\sumtype=type,\sumduration=duration,\sumeffect=effect}{%
+		\expandafter\ifblank\expandafter{\sumtype}{% This is EoS style
+			\sumlabel & \sumtitle & \multicolumn{5}{m{\passivelength}}{\sumeffect}%
+		}{% This is the normal style
+			\sumlabel & \sumtitle & \sumCV & \sumrange & \sumtype & \sumduration & \sumeffect%
+		}%
+		\DTLiflastrow{}{\tabularnewline}%
+	}%
+	\closehereditarysummariestable
+}
+
+\newcommand{\startbattlerunes}{%
+	\DTLifdbexists{battlerunestable}{\DTLcleardb{battlerunestable}}{\DTLnewdb{battlerunestable}}
+}
+
+\newcommand{\addbattlerune}[6]{%
+	\DTLnewrow{battlerunestable}
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{battlerunestable}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel
+	\DTLnewdbentry{battlerunestable}{title}{#1}	
+	\DTLnewdbentry{battlerunestable}{CV}{#2}%
+	\DTLnewdbentry{battlerunestable}{range}{#3}%
+	\DTLnewdbentry{battlerunestable}{type}{#4}%
+	\DTLnewdbentry{battlerunestable}{duration}{#5}%
+	\DTLnewdbentry{battlerunestable}{effect}{#6}%
+}
+
+\newcommand{\closebattlerunes}{%
+	\DTLsort*{sortlabel}{battlerunestable}% Sort list
+	\starthereditarysummariestable
+	\DTLforeach*{battlerunestable}{\BRtitle=title,\BRCV=CV,\BRrange=range,\BRtype=type,\BRduration=duration,\BReffect=effect}{%
+		\DTLiflastrow{%
+			\ifdef{\languageisfrench}{%
+				\summarypathrotated{8}{\battlerunes{}}{white}%	
+			}{%
+				\summarypathrotated{6}{\battlerunes{}}{white}%
+			}%
+		}{\cellcolor{white}}&%
+		\BRtitle & \BRCV & \BRrange & \BRtype & \BRduration & \BReffect%
+		\DTLiflastrow{}{\tabularnewline}%
+	}%
+	\closehereditarysummariestable
+}

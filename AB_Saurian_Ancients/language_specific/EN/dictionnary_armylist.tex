@@ -1,0 +1,248 @@
+%%%% UNIT ENTRY NAMES
+% CHARACTERS
+\newcommand{\anurarcharchmage}{Anurarch Archmage}
+\newcommand{\anurarch}{Anurarch}
+\newcommand{\caimanmaster}{Caiman Master}
+\newcommand{\teguveteran}{Tegu Veteran}
+\newcommand{\skinkveteran}{Skink Veteran}
+\newcommand{\saurianspellcaster}{Saurian Spellcaster}
+
+% MOUNTS
+\newcommand{\anurarchwardens}{Anurarch Wardens}
+\newcommand{\levitationpalanquin}{Levitation Palanquin}
+\newcommand{\wardens}{Wardens}
+\newcommand{\palanquin}{Palanquin}
+\newcommand{\saurianraptor}{Saurian Raptor}
+\newcommand{\mountainpteradon}{Mountain Pteradon}
+\newcommand{\pouakaiskytyrant}{Pouakai Sky Tyrant}
+\newcommand{\taurosaur}{Taurosaur}
+\newcommand{\alphacarnosaur}{Alpha Carnosaur}
+
+% CORE
+\newcommand{\teguwarriors}{Tegu Warriors}
+\newcommand{\teguwarrior}{Tegu Warrior}
+
+\newcommand{\skinkwarriors}{Skink Warriors}
+\newcommand{\skinkwarrior}{Skink Warrior}
+
+\newcommand{\skinkhunters}{Skink Hunters}
+\newcommand{\skinkhunter}{Skink Hunter}
+
+\newcommand{\caimanwarriors}{Caiman Warriors}
+\newcommand{\caimanwarrior}{Caiman Warrior}
+
+% SPECIAL
+
+\newcommand{\teguguards}{Tegu Guards}
+\newcommand{\teguguard}{Tegu Guard}
+
+\newcommand{\tegumystics}{Tegu Mystics}
+\newcommand{\tegumystic}{Tegu Mystic}
+
+\newcommand{\raptorpack}{Raptor Pack}
+\newcommand{\raptor}{Raptor}
+
+\newcommand{\raptorriders}{Raptor Riders}
+\newcommand{\tegurider}{Tegu Rider}
+
+\newcommand{\caimanelders}{Caiman Elders}
+\newcommand{\caimanelder}{Caiman Elder}
+
+\newcommand{\thyroscutusherd}{Thyroscutus Herd}
+\newcommand{\skinkrider}{Skink Rider}
+\newcommand{\thyroscutus}{Thyroscutus}
+
+\newcommand{\rhamphodonriders}{Rhamphodon Riders}
+\newcommand{\rhamphodon}{Rhamphodon}
+
+\newcommand{\saurianswarms}{Saurian Swarms}
+\newcommand{\saurianswarm}{Saurian Swarm}
+
+% GUERRILLA WARRIORS
+\newcommand{\skinkguerrillas}{Skink Guerrillas}
+\newcommand{\skinkguerrilla}{Skink Guerrilla}
+
+\newcommand{\weaponbeasts}{Weapon Beasts}
+\newcommand{\weaponbeast}{Weapon Beast}
+
+\newcommand{\pteradonriders}{Pteradon Riders}
+\newcommand{\pteradon}{Pteradon}
+
+% MAGNA SAURIA
+\newcommand{\stygiosaurpack}{Stygiosaur Pack}
+\newcommand{\stygiosaur}{Stygiosaur}
+
+\newcommand{\carnosaur}{Carnosaur}
+
+\newcommand{\titanopod}{Titanopod}
+\newcommand{\rockreleaser}{Rock Releaser}
+
+% CHARACTERS RULES
+
+% Anurarch Archmage
+
+\newcommand{\graspoftheimmortal}{}
+\newcommand{\graspoftheimmortaldef}{
+	
+}
+
+\newcommand{\closelyguarded}{Closely Guarded}
+\newcommand{\closelyguardeddef}{
+	The model can \textbf{never} issue or accept Duels or be chosen as the model that suffers the penalties for refusing a Duel.
+	Unless mounted, the model gains \attached{}, \exclusive{\caimanelders{}, \teguguards{}, \teguwarriors{}}, \standbehind{}, and \strider{}.
+}
+
+% Caiman Master
+
+\newcommand{\artofwar}{Art of War}
+\newcommand{\artofwardef}{
+	While using a mundane weapon, the model is subject to the following rules corresponding to its weapon:
+	\begin{itemize}
+		\item \textbf{\gw{}}: Attacks made with a \gw{} gain +1 to wound.
+		\item \textbf{\halberd{}}: The model gains {\distracting}.
+		\item \textbf{\toothandclaw{}}:  The model gains +1 Attack Value for each enemy model in base contact with it (including the model it is fighting a Duel with if applicable), up to a maximum of +3.
+	\end{itemize}
+}
+
+% Skink Veteran
+
+\newcommand{\masterstrategist}{Master Strategist}
+\newcommand{\masterstrategistdef}{
+	While joined to a unit consisting entirely of Skink Warriors, Skink Hunters,  Skink Guerillas, and/or Skink Veterans, the unit gains \textbf{\vanguard{}} and \textbf{\feignedflight{}}.
+}
+
+% Taurosaur
+
+\newcommand{\taurosaurhowdah}{
+	The Taurosaur model part may take a single\newline Howdah Device
+}
+
+% Mountain Pteradon
+
+\newcommand{\mountainpteradonnote}{
+	\zerotoonemountsperarmy{} if the army includes one or more \pouakaiskytyrant{}s.
+}
+
+% Alpha Carnosaur
+\newcommand{\apexpredator}{Apex Predator}
+\newcommand{\apexpredatordef}{
+	The model gains \devastatingcharge{+\distance{2} Adv} for Charges against units consisting entirely of models with Towering Presence.
+}
+%Tegu Warriors
+\newcommand{\caimanelderrestriction}{%
+\refsymbol{}Units containing one or more Caiman Mentors (\caimanelders{}) count towards the maximum number of \caimanelders{} units allowed from Special. \caimanelders{} count towards Special instead of Core.
+}
+\newcommand{\caimanmentorweapons}{\refsymbolB{}All \caimanmentors{} in the unit must be upgraded with the same weapon.}
+%Skink Warriors
+\newcommand{\caimanrestriction}{%
+	\refsymbol{}The models count towards the maximum number of Caiman Warriors allowed from Core.
+}
+
+%Tegu Guards
+
+\newcommand{\containmentfield}{}
+\newcommand{\containmentfielddef}{
+	
+}
+\newcommand{\guardianpatu}{Guardian Patu}
+\newcommand{\guardianpatudef}{
+Attacks made with this weapon gain +1 Strength, +1 Armour Penetration, and \textbf{always} strike at Initiative Step 0.
+}
+%Tegu Mystic
+
+\newcommand{\vitalistcombat}{}
+\newcommand{\vitalistcombatdef}{
+	
+}
+\newcommand{\cantrips}{Cantrips}
+\newcommand{\cantripsdef}{
+	Once per Player Turn, at the start of 1) the Shooting Phase or 2) the Melee Phase, you may discard a Veil Token from your Veil Token pool. If so, models with Cantrips in the unit gain the corresponding effect:
+		\begin{enumerate}
+			\item Shooting Phase: Throwing Weapons (5+).
+			\item Melee Phase: Paired Weapons.
+		\end{enumerate}
+		The effects last until the end of the next Charge Phase.
+	}
+
+
+%Raptor Pack
+\newcommand{\corrosivespitter}{Corrosive Spitter}
+\newcommand{\corrosivespitterdef}{
+	The model gains \textbf{\poisonattacks{}}.
+	In addition, the model gains \textbf{Breath Attack} (Str 2, AP 3) with the following exceptions: Instead of 2\Dsix{} hits, the target suffers a number of hits equal to the number of models with Corrosive Spitter in the unit. Only a single model in each unit may use this Breath Attack once per game.
+}
+\newcommand{\raptorrestriction}[1]{%
+	Units of #1 or more models without \ambush{} and \corrosivespitter{} count towards Core instead of Special.%
+}
+
+% Thyroscutus Herd
+\newcommand{\greatprotector}{Great Protector}
+\newcommand{\greatprotectordef}{
+	The model gains \textbf{\warplatform{}} and \textbf{\exclusive{\teguwarriors{}, \teguguard{}}}, and the model and \rnf{} models in the model's unit gain\textbf{ \parry{}}.
+}
+\newcommand{\thyroscutushowdah}{Thyroscutus model parts may take a \\Howdah Device}
+
+% Ramphodon Riders
+\newcommand{\rhamphodonriderscategorynote}{
+	\zerotoXunitsperarmy{1} if the army includes two or more units of \pteradonriders{}.
+}
+\newcommand{\feedingfrenzy}{Feeding Frenzy}
+\newcommand{\feedingfrenzydef}{
+	While Engaged with one or more enemy units marked with \preyscent{}, the model part gains +2 Attack Value and \stubborn{}. In addition, the model's Discipline Tests are \textbf{never} subject to Minimised Roll.
+}
+
+% Pteradon Riders
+
+\newcommand{\aerialassault}{Aerial Assault}
+\newcommand{\markingbolas}{Marking Bolas}
+\newcommand{\aerialassaultdef}{
+	Units consisting entirely of models with \aerialassault{} may perform a Sweeping Attack. The enemy unit suffers  2 hits with Strength 4 and Armour Penetration 0 for each model with \aerialassault{} in the unit.
+}
+\newcommand{\pteradonambushdef}{%
+Within \distance{2} of a friendly \titanopod{}%
+}
+\newcommand{\markingbolasdef}{
+	Range \distance{12}, Shots 1, Str 4, AP 1, \quicktofire{}, \markinglure{}.
+}
+
+% Weapon Beasts
+\newcommand{\salamander}{Salamander}
+\newcommand{\spearback}{Spearback}
+\newcommand{\spearbackdef}{The model gains \textbf{\predatorsenses{}} and \textbf{\shootspikes{}}.}
+\newcommand{\spoutflames}{Spout Flames}
+\newcommand{\shootspikes}{Shoot Spikes}
+\newcommand{\spoutflamesdef}{
+	The model gains Breath Attack (Str 4, AP 0, Flaming Attacks). This Breath Attack is not limited to being used only once per game and can only be used once per Player Turn.
+}
+\newcommand{\shootspikesdef}{
+	Range \distance{12}, Shots 3 , Str 5, AP 2, Quick to Fire.
+}
+
+\newcommand{\andaegis}{and \aegis{} (5+, against \newline\suboptionindent{}\flamingattacks{})}
+% Stygiosaur Pack
+
+
+% Carnosaur
+\newcommand{\huntleader}{Hunt Leader}
+\newcommand{\huntleaderdef}{
+	The model gains \textbf{\warplatform{}} and \textbf{\exclusive{\raptorpack{}, \raptorriders{}}}. \rnf{} models in the model's unit gain \textbf{\frenzy{}} and \textbf{\fearless{}}. Standard Beasts and model parts with \harnessed{} in the model's unit gain \textbf{\battlefocus{}}.
+}
+
+%Taurosaur
+
+% Titanopod
+\newcommand{\titanopodhowdah}{
+The Titanopod model part may take a single \newline
+Howdah Device
+}
+\newcommand{\walkingmountain}{\textbf{Walking Mountain}}
+\newcommand{\theveryearthtrembles}{}
+\newcommand{\pathofdestruction}{\textbf{Path of Destruction}}
+
+\newcommand{\walkingmountaindef}{
+	Enemy units do not gain any Flank or Rear Bonuses for being Engaged in the model's Flank or Rear Facing. The model \textbf{never} benefits from Cover.
+}
+
+\newcommand{\pathofdestructiondef}{
+	 For the purpose of Stomp Attacks, the model ignores Cannot be Stomped and considers all enemy models without \toweringpresence{} to be of \heightstandard{} Height. If the model's Stomp Attacks are distributed onto a \heightlarge{} unit, the number of hits is halved, rounding fractions up.
+}

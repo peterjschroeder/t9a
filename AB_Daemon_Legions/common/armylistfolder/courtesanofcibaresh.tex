@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\courtesanofcibaresh{},
+	logo=character,
+	cost=515,
+	unitsize=1,
+	type=\beast{},
+	size=\heightgigantic{},
+	maxunitsperarmy=1,
+	basesize=50\timess{}100,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=9,
+	globalrules={\supernal{},\fearless{},\wizardapprentice{},\hidebf{\avertyourgaze{}}, \strider{}},
+	defense@HP=6,
+	defense@Df=7,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\hardtarget{} (1),\distracting{}},
+	offensename=\courtesanofcibaresh{},
+	offense@At=6,
+	offense@Of=7,
+	offense@St=5,
+	offense@AP=4,
+	offense@Ag=7,
+	offenserules={\hidebf{\razortentacles{}}},
+	magic={\wizardadept{}=95,\wizardmaster{}=265,},
+	paths={\divination{}=divination,\witchcraft{}=witchcraft},
+	options={%
+		\musttakegreaterdominion{} \only{\general{}}=10,
+		\manifestationsoffatherchaosandlust{}=\upto{}150,
+		\suboptionindent\ifgeneral{}=\upto{}175,
+	},
+	modelrulesdef={%
+		\modelruledef{\avertyourgaze}{\ruletype{\universalrule}\avertyourgazedef}
+		\modelruledef{\razortentacles}{\ruletype{\attackattributeclosecombat}\razortentaclesdef}
+	},
+} % END UNIT ENTRY

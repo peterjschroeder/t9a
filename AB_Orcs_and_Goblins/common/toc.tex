@@ -1,0 +1,25 @@
+% TOC
+%%%
+
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{OngArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{OnGModelRules}{\armymodelrules}\par
+	\tocentry{OnGHereditarySpell}{\hereditaryspell}\par
+	\tocentry{OnGSpecialEquipment}{\specialequipment}\par
+	\tocentry{OnGArmyOrganisation}{\armyorganisation}\par
+	\tocentry{OnGQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{OnGchangelog}{\changelog}\par
+	}{}%
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{OrcCharacters}{\orccharacters}\par
+	\tocentry{GoblinCharacters}{\goblincharacters}\par
+	\tocentry{OrcMounts}{\orcmounts}\par
+	\tocentry{GoblinMounts}{\goblinmounts}\par
+	\tocentry{OnGCore}{\core}\par
+	\tocentry{OnGSpecial}{\specialcategory}\par
+	\tocentry{OnGDeathfromAbove}{\deathfromabove}\par
+	\tocentry{OnGBignNasty}{\bignnasty}\par
+}

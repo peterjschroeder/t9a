@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\turul{},
+	fluff=\turulfluff{},
+	logo=special,
+	cost=\newrule{220},
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=8,
+	global@Ma=16,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=8,
+	globalrules={\fear{},\toweringpresence{},\fly{8}{16},\lighttroops{}},
+	defense@HP=4,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=3,
+	offensename=\turul{},
+	offense@At=5,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={},
+	options={%
+		\textbf{\territorialhunter}=\newrule{20},
+	},
+	optionalmodelrulesdef={%	
+		\modelruledef{\territorialhunter}{\ruletype{\universalrule}{\territorialhunterdef}}%
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY
+

@@ -1,0 +1,619 @@
+
+\part{Melee Phase}
+\idx[main=y]{Melee Phase}\label{melee_phase}
+
+In the Melee Phase, both players' units Engaged in Combat must attack.
+
+\RBbmc
+
+\section{Melee Phase Sequence}
+\label{melee_phase_sequence}
+
+Each Melee Phase is divided into the following steps:\par
+
+\startseqtablemc
+	1 & Start of the Melee Phase \tabularnewline
+	2 & Apply any instances of \hyperref[no_longer_engaged]{No Longer Engaged} \tabularnewline
+	3 & The Active Player chooses a combat that has not already been fought during this Melee Phase \tabularnewline
+	4 & Fight a Round of Combat (see \totalref{round_of_combat_sequence}) \tabularnewline
+	5 & Repeat steps 2--4 \tabularnewline
+	6 & Once all units that were Engaged in Combat at the start of the phase have fought, the Melee Phase ends \tabularnewline
+\closeseqtablemc
+
+Complete all actions in the Round of Combat Sequence for each unit Engaged in the chosen Combat before resolving the next combat.
+
+\section{Combat}
+\idx[main=y]{Round of Combat}\idx[main=y]{Combat}
+
+A combat is defined as a group of opposing units that are all connected through base contact. Normally, this would be two units pitted against one another, but it could also be several units against a single enemy unit or a long chain of units from both sides.
+
+\subsection{First Round of Combat}
+\idx[main=y]{First Round of Combat}
+
+Certain rules only apply to the First Round of Combat. A unit's First Round of Combat is:
+
+\begin{itemize}
+	\item The Round of Combat after it successfully Charged an enemy unit
+	\item The Round of Combat after it was successfully Charged by an enemy unit if previously unengaged
+\end{itemize}
+
+\section{No Longer Engaged}
+\idx[main=y]{No Longer Engaged}\label{no_longer_engaged}
+
+Sometimes a unit that was previously Engaged in Combat had all of its opponents removed since the end of the previous Melee Phase. Such units follow the rules described in \totalref{no_more_foes}. If the unit has not moved since the enemy units were removed (e.g. with a Magical Move), it may perform a Post-Combat Pivot or a Post-Combat Reform, or an Overrun if it just Charged.
+
+\section{Round of Combat Sequence}
+\idx[main=y]{Round of Combat Sequence}\label{round_of_combat_sequence}
+
+Each Round of Combat is divided into the following steps:
+
+\startseqtablemc
+	1 & Start of the Round of Combat\\
+	2 & Choose a weapon\newline (see \totalref{close_combat_weapons})\\
+	3 & \hyperref[make_way]{Make Way} (see \totalref{characters})\\
+	4 & \hyperref[issuing_a_duel]{Issue and accept Duels}\idx{Issuing a Duel}\idx{Duels} (see \totalref{duels})\\
+	5 & Determine the Initiative Order \\
+	6 & Roll Melee Attacks, starting with the first Initiative Step:
+		\begin{enumerate}[parsep=0cm,itemsep=0.05cm, topsep=3pt]
+			\item Allocate attacks
+			\item Roll to hit, to wound, saves, and remove casualties
+			\item Repeat 1. and 2. for the next Initiative Step
+	 	\end{enumerate}
+	\tabularnewline[-12pt]
+	7 & Calculate which side wins the Round of Combat. Losers roll Break Tests\\
+	8 & Roll \hyperref[panic_test]{Panic Tests} for units within \distance{6} of friendly Broken units \\
+	9 & Decide to Restrain or to Pursue \\
+	10 & Roll Flee Distances \\
+	11 & Roll Pursuit Distances \\
+	12 & Move Fleeing units \\
+	13 & Move Pursuing units \\
+	14 & \hyperref[post_combat_pivot]{Post-Combat Pivots} and \hyperref[post_combat_reform]{Post-Combat Reforms} \\
+	15 & \hyperref[combat_reform]{Combat Reforms} \\
+	16 & End of the Round of Combat. Proceed to the next combat\\
+\closeseqtablemc
+
+\columnbreak
+
+\subsection{Initiative Order}
+\idx{Melee Attacks}\idx[main=y]{Initiative Order}\idx[main=y]{Initiative Step}\label{initiative_order}
+
+Melee Attacks are performed in Rounds of Combat during the Melee Phase. All Melee Attacks have a specific Agility value that corresponds to the Agility of their model part, unless specifically stated otherwise (such as \hyperref[impact_hits]{Impact Hits} or \hyperref[crush_attack]{Crush Attacks}).
+\par
+Each Round of Combat is fought in a strict striking order, referred to as Initiative Order. The Initiative Order in a combat is determined immediately before any attacks are made. Take into account all modifiers that affect the Agility of attacks that may be performed in this Round of Combat. Once the Initiative Order has been determined for a Round of Combat, it cannot be changed by effects that alter the Agility of attacks during that Round of Combat. The order starts at Initiative Step 10 with all attacks with Agility 10, and is resolved downwards to Initiative Step 0 with all attacks with Agility 0 or less.
+\par
+At each Initiative Step, all attacks from this step that meet the necessary requirements (see \nameref{which_models_can_attack}, below) strike simultaneously.
+
+\subsection{Charging Momentum}
+\idx[main=y]{Charging Momentum}\label{charging_momentum}
+
+Charging models gain +1 Agility.
+
+\subsection{Which Models can Attack}
+\label{which_models_can_attack}
+
+Models in base contact with an enemy attack during their Initiative Step (remember that models are considered to be in base contact across gaps: see \totalref{base_contact_between_models_across_gaps}). Models from both sides attack in each player's Melee Phase.
+
+\subsubsection{Supporting Attacks}
+\idx[main=y]{Supporting Attacks}\label{supporting_attacks}
+
+Models in the second rank and not in base contact with any enemy models can perform Close Combat Attacks across models in the first rank directly in front of them. These Close Combat Attacks are called Supporting Attacks. A model part that performs Supporting Attacks \textbf{always} has a maximum Attack Value of X, where X is defined by the Height of the model (see \totalref{model_classification}).
+
+\begin{Figure}
+	\Fanchor
+	\centering
+	\renewcommand{\figbiglettersize}{22}
+	\def\svgwidth{0.76\textwidth}
+	\subimport{../pics/}{empty_gaps.pdf_tex}
+	\caption{\idx{Gaps in Units}Which models can attack?\captionposttitle
+		Models colour-coded with a darker shade can all strike. Models with a bold frame count as being in base contact with an enemy; note that models are considered to be in base contact across gaps. Models colour-coded with a lighter shade cannot make Supporting Attacks.\captionpar
+		Unit C is in Line Formation and thus both the second and third rank can make Supporting Attacks. Unit B is not Engaged in its Front Facing; its models cannot make Supporting Attacks to their Flank or Rear; they could only strike across the first rank.%
+	}
+	\label{figure/empty_gaps}
+\end{Figure}
+
+\subsection{Allocating Attacks}
+\idx{Champions}\idx{Attack Value (\AttackValueInitials)}\idx[main=y]{Allocating Attacks}\label{allocation_attacks}\label{allocating_attacks}
+
+At each Initiative Step, before any attacks are rolled, Close Combat Attacks must first be allocated towards enemy models. If a model is in base contact with more than one enemy model, it can choose which model to attack. Attacks can be allocated towards models with different Health Pools, i.e. \rnf{} models, Champions, and Characters (see \totalref{attacks}). The number of Close Combat Attacks a model can make is equal to its Attack Value, which can be modified by equipment, Attack Attributes, spells, etc. If a model has an Attack Value above 1, it can allocate its Close Combat Attacks towards different enemy models in base contact. If a model is making Supporting Attacks, it can allocate its attacks as if it was in the first rank of the unit (in the same file). Allocate all attacks at each Initiative Step before making any to-hit rolls.
+
+\subsubsection{Swirling Melee}
+\idx[main=y]{Swirling Melee}\label{swirling_melee}
+
+\rnf{} models Engaged in Combat may be in positions in the unit where, based on the general rules for allocating attacks, they can either:
+\begin{itemize}
+\item Allocate attacks (including Supporting Attacks) only towards enemy Characters or Champions
+\item Not allocate any attacks at all due to enemy models fighting a Duel
+\end{itemize}
+Such models may elect to allocate their Close Combat Attacks towards non-Champion \rnf{} models of the same unit instead, exactly as if these \rnf{} models were in the position of the enemy Character or Champion. Note that Swirling Melee cannot be used by Characters.
+
+Figure \ref{figure/allocate_attacks} illustrates how attacks can be allocated in a complex case.
+
+\newcommand{\figAHCharOne}{$C_{1} $}
+\newcommand{\figAHCharTwo}{$C_{2} $}
+\newcommand{\figAHCharThree}{$C_{3} $}
+\newcommand{\figAHChamp}{Ch}
+
+\begin{Figure}
+	\Fanchor
+	\centering
+	\def\svgwidth{0.95\columnwidth}
+	\subimport{../pics/}{allocate_attacks.pdf_tex}
+	\caption{Example for allocating attacks.\captionposttitle
+		The Champion of unit B (Ch) and Character $C_{2} $ are locked in a Duel (indicated by the chess pattern). This means that they can only allocate attacks towards each other. The magenta and green models can allocate attacks towards the \rnf{} models of the other unit. The models with a bold frame can allocate attacks towards Characters/Champions. The models in fainter colours with dashed frames cannot attack at all. Character $C_{1} $ cannot attack because the only model it is in base contact with is a Champion that is locked in a Duel. If $C_{1} $ was a \rnf{} model, it could allocate attacks towards the magenta \rnf{} models.%
+	}
+	\label{figure/allocate_attacks}
+\end{Figure}
+
+\subsection{Rolling to Hit}
+\idx{Defensive Skill (\DefensiveSkillInitials)}\idx{Offensive Skill (\OffensiveSkillInitials)}\idx[main=y]{To-Hit Rolls}\label{rolling_to_hit}
+\cftaddtitleline{toc}{section}{\hyperref[rolling_to_hit]{Rolling to Hit}}{\arabic{page}}
+
+Roll a D6 for each Close Combat Attack, referred to as to-hit rolls. The needed roll to hit the target is determined by the difference between the Offensive Skill of the attacking model part and the Defensive Skill of the model the attack was allocated towards. See table \ref{table/close_combat_to_hit_table} below.
+\par
+\idx[main=y]{To-Hit Modifiers}To-hit modifiers can alter this to-hit roll. Close Combat to-hit rolls that are modified to hit on better than 2+ always fail on a natural roll of \result{1}, while they are always successful on a natural roll of \result{6} even if they are modified beyond 6+.
+\par
+Example: a model has Offensive Skill 3, Attack Value 2, and is equipped with Paired Weapons, which gives it a total of 3 attacks. The model may allocate two attacks towards a model with Defensive Skill 2, which hit on 3+, and one towards a model with Defensive Skill 8, which hits on 5+.
+
+Once you have determined the number of hits, follow the Attack Sequence rules (page \pageref{attack_sequence}).
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\idx[main=y]{To-Hit Table}\begin{tabular}{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{0.4\columnwidth} m{0.4\columnwidth}}
+ 	 \hline
+ 	 \textbf{Offensive Skill\newline minus\newline Defensive Skill} & \textbf{Needed roll\newline to hit}\tabularnewline
+ 	 4 or more & 2+ \tabularnewline
+	  1 to 3 & 3+ \tabularnewline
+	  0 to −3 & 4+\tabularnewline
+ 	 −4 to −7 & 5+\tabularnewline
+ 	 −8 or less & 6+\tabularnewline
+ 	 \hline
+	\end{tabular}
+	\caption{Close combat to-hit table.}
+	\label{table/close_combat_to_hit_table}
+\end{Figure}
+
+\subsection{Losing Base Contact}
+\idx[main=y]{Losing Base Contact}\label{losing_base_contact}
+
+Removing casualties may cause units to lose base contact with their foe. When this happens, units are nudged back into combat after removing all casualties caused by simultaneous attacks using the following procedure:
+\begin{enumerate}
+	\item The unit that is going to lose base contact while not suffering casualties is moved the minimum amount needed to keep it in base contact. If there is no such unit, the Active Player's unit counts as such for this purpose.
+	\item If this will not bring the units back into contact, move the unit suffering casualties the minimum amount needed to keep it in base contact instead.
+\end{enumerate}
+A nudged unit can only be moved in a straight line forwards, backwards, to either side, or a combination of two of these directions (first one, then the other). Units that are in base contact with other enemy units can never be nudged in this way. Nudged units cannot move through the Unit Boundary of other units or Impassable Terrain. They also cannot move into base contact with enemy units that they were not in base contact with before the nudge move, but they are allowed to move within \distance{1} of the Unit Boundary of other units Engaged in the same Combat. Nudge moves cannot be used to change the Facing in which any unit is fighting (which means that if the unit was Engaged in the Flank before the nudge move, this must still be true after the nudge move). If several friendly units lose base contact at the same time, move them in the order that allows the maximum number of units to stay in combat. If this number is equal, the Active Player decides the order. Note that either unit still can only be moved the minimum amount needed to keep it in contact, even if this prevents another unit from being nudged back into combat.\par
+
+If nudging either unit does not manage to bring the units back into contact with each other, the unit Drops out of Combat. Any units that are no longer Engaged in Combat follow the rules given under \totalref{no_more_foes}.
+\par
+
+\section{Duels}
+\idx[main=y]{Duels}\label{duels}
+
+\subsection{Issuing a Duel}
+\idx{Champions}\idx{Characters}\idx[main=y]{Issuing a Duel}\label{issuing_a_duel}
+
+Characters and Champions Engaged in Combat may issue a Duel at step 4 of the Round of Combat Sequence (see \totalref{round_of_combat_sequence}). The Active Player may nominate one of their Characters or Champions and issue a Duel, provided that there is at least one enemy Champion or Character able to accept it (this enemy model's unit must be in base contact with the unit of the model that issued the Duel, and there must not be any ongoing Duel in this combat; see below).
+
+If the Duel was refused, or if no Duel was issued, the Reactive Player may nominate one of their Characters or Champions that did not refuse the Active Player's Duel and issue a Duel.
+
+\subsection{Accepting or Refusing a Duel}
+\idx[main=y]{Refusing a Duel}\idx[main=y]{Accepting a Duel}\label{accepting_and_refusing_a_duel}
+
+If a Duel was issued, the opponent may now choose one of their own Characters or Champions Engaged in the same Combat to accept the Duel and fight the Character or Champion that issued the Duel. The model that accepts the Duel must be in a unit that is in base contact with the unit of the model that issued the Duel.
+
+If a Duel isn't accepted it is said to be refused. The player issuing the Duel now nominates one of their opponent's Characters that could have accepted the Duel, if there is any (note that Champions cannot be nominated).
+
+The chosen model:
+\begin{itemize}
+	\item Has its Discipline \textbf{set} to 0, and it loses \hyperref[stubborn]{Stubborn} (if it has it)
+	\item Cannot perform any Melee Attacks
+	\item Loses \hyperref[rally_around_the_flag]{Rally Around the Flag} (if it has it)
+	\item In case of a \hyperref[bsb]{Battle Standard Bearer}, doesn't add +1 to its side's Combat Score
+\end{itemize}
+
+The effects end:
+\begin{itemize}
+	\item At the end of the Player Turn in which the combat ends
+	\item When the chosen Character accepts or issues a Duel
+	\item At the end of the Player Turn if there no longer is an enemy model Engaged in the same Combat that could accept a Duel
+\end{itemize}
+
+\columnbreak
+
+\subsection{Fighting a Duel}
+\idx[main=y]{Fighting a Duel}\label{fighting_a_duel}
+
+If the Duel was accepted, the model that issued the Duel and the model that accepted the Duel will fight the Duel based on the following rules:
+\begin{itemize}
+	\item The two models count as being in base contact with each other (even if their bases are not physically touching each other), in the Facings that their units are Engaged in with each other.
+	\item The two models must allocate all their Close Combat Attacks towards each other.
+	\item Melee Attacks made towards a unit as a whole (such as \hyperref[breath_attack]{Breath Attacks}, \hyperref[impact_hits]{Impact Hits}, \hyperref[grind_attacks]{Grind Attacks}, \hyperref[stomp_attacks]{Stomp Attacks}) can only be made against the opposing duellist's unit and can only be distributed onto the opposing duellist. Melee Attacks made at specific models (such as all models in base contact) are unaffected and work as normal.
+	\item No other model can allocate attacks towards either of these models, and attacks/hits from Melee Attacks can never be distributed onto a model that is fighting a Duel.
+	\item If one of the models is removed as a casualty in the Melee Phase before the other model had a chance to make all its Melee Attacks (this is a common situation with Characters that have attacks with more than one Agility value, such as a rider and its mount, or a model with Stomp Attacks), any of the attacks not yet carried out can and must be directed at the removed model, as if it was still Engaged and in base contact, in order to get an Overkill bonus. Note that the gap from the removed model is filled immediately during the Initiative Step in which the model is removed, according to the rules for \totalref{removing_non_RnF_models}.
+	\item If one of the models is removed as a casualty, Breaks, or if the combat ends for any reason (including being divided through Splitting Combat), the Duel ends at the end of the phase. If neither model is removed as a casualty and both their units are still Engaged with one another at the start of the next Round of Combat, the Duel continues. No other Duel can be issued in the same combat before the Duel ends.
+\end{itemize}
+
+\subsection{Overkill}
+\label{overkill}
+
+During a Duel, any excess Health Point losses caused count towards the \hyperref[combat_score]{Combat Score}, up to a maximum of +3.
+
+\columnbreak
+
+\section{Winning a Round of Combat}
+\idx[main=y]{Winning a Round of Combat}\label{winning_a_round_of_combat}
+
+\subsection{Combat Score}
+\idx[main=y]{Combat Bonus}\idx[main=y]{Combat Score}\label{combat_score}
+
+Once all Initiative Steps have passed (i.e. all models have had a chance to attack), the winner of this Round of Combat is determined by calculating each side's Combat Score. Simply add up all Combat Score bonuses. The side with the higher Combat Score wins the Round of Combat and the side with the lower Combat Score loses the Round of Combat. If there is a tie, both sides are treated as winners. The different Combat Score bonuses are described below and summarised in table \ref{table/combat_score}.
+
+\paragraph{Lost Health Points on enemy units: +1 for each Health Point}
+
+Each player adds up the number of Health Points lost from their opponent's units (Engaged in the same Combat) during this Round of Combat. This includes enemies that were Engaged in the Combat but Dropped out of Combat or were completely wiped out during this Round of Combat.
+
+\paragraph{Overkill: +1 for each Health Point (maximum +3)}
+\idx[main=y]{Overkill}
+
+In a Duel, excess Health Points lost by the enemy model after it was removed as a casualty are counted towards the Combat Score. A maximum of +3 can be added to your Combat Score due to Overkill. Note that excess Health Point losses are only counted when fighting a Duel. In all other situations, excess Health Point losses count for nothing.
+
+\paragraph{Charge: +1}
+
+Each side with one or more Charging models receives +1 to their Combat Score.
+
+\paragraph{Rank Bonus: +1 for each Full Rank after the first (maximum +3)}
+\idx{Full Ranks}\idx[main=y]{Rank Bonus}
+
+Each side adds the Rank Bonus of a single unit to their Combat Score. Only count this for a single unit per side (use the unit that gives the highest Rank Bonus).
+
+\paragraph{Standards: +1 for each Standard and Battle Standard Bearer}
+\idx{Standard Bearers}\idx{Battle Standard Bearer}
+
+Each side adds +1 to their Combat Score for each Standard Bearer and Battle Standard Bearer Engaged in Combat when Combat Scores are calculated.
+
+\paragraph{Flank Bonus: +1 or +2}
+\idx[main=y]{Flank Bonus}
+
+Each side adds +1 to their Combat Score if they have one or more units fighting an enemy in the enemy's Flank. If at least one of these units (that are fighting an enemy in its Flank) has one or more Full Ranks, add +2 instead.
+
+\paragraph{Rear Bonus: +2 or +3}
+\idx[main=y]{Rear Bonus}
+
+Each side adds +2 to their Combat Score if they have one or more units fighting an enemy in the enemy's Rear. If at least one of these units (that are fighting an enemy in its Rear) has one or more Full Ranks, add +3 instead.
+
+\paragraph{Combat Score Summary}
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\begin{tabular}{>{\raggedleft}m{0.45\columnwidth -12.5pt} m{0.55\columnwidth -12.5pt} }
+		\toprule
+		Health Points Lost by Enemy Units & +1 for each Health Point\\
+		Overkill & +1 for each Health Point (maximum +3)\\
+		Charge & +1 \\
+		Rank Bonus & +1 for each Full Rank after the first (maximum +3)\\
+		Standard & +1 for each Standard and Battle Standard Bearer \\
+		Flank Bonus & +1 or +2 \\
+		Rear Bonus & +2 or +3\\
+		\bottomrule
+	\end{tabular}
+	\caption{Combat Score summary.}
+	\label{table/combat_score}
+\end{Figure}
+
+\section{Break Test}
+\idx[main=y]{Break Test}\label{break_test}
+
+Each unit on the side that lost the Round of Combat must take a Break Test. The order is chosen by the losing player. A Break Test is a Discipline Test with a negative modifier equal to the Combat Score difference (i.e. if the Combat Score was 6 to 3, the units on the losing side take Break Tests with a \minuss{}3 modifier).
+
+If the test is passed, the unit remains Engaged in the Combat. If the test is failed, the unit Breaks and Flees. Remember that units within \distance{6} of a friendly unit that Breaks must take a Panic Test (see \hyperref[panic_test]{Panic Test}).
+
+\subsection{Steadfast}
+\idx[main=y]{Steadfast}\idx{Full Ranks}\idx{Combat Reforms}\label{steadfast}
+
+Any units that have more Full Ranks than each of the enemy units Engaged in the same Combat are considered Steadfast. Steadfast units ignore Discipline modifiers from the Combat Score difference when rolling Break Tests (and tests to \hyperref[combat_reform]{Combat Reform}).
+
+\subsection{Disrupted Ranks}
+\idx[main=y]{Disrupted Ranks}\label{disrupted_ranks}
+
+A unit cannot use the Steadfast rule if it is Engaged in Combat in its Flank or Rear with an enemy unit with at least 2 Full Ranks.
+
+\newcommand{\figSplitA}{a)}
+\newcommand{\figSplitB}{b)}
+
+\begin{figure*}[!bh]
+	\renewcommand{\figbiglettersize}{17}
+	\centering
+	\def\svgwidth{0.75\textwidth}
+	\subimport{../pics/}{splitting_combat.pdf_tex}
+	\caption{Splitting combat.\captionposttitlepremc%
+		\raggedcolumns\begin{multicols}{2}%
+			a) Unit A suffers casualties, which results in unit D no longer being in base contact. Neither unit A nor unit D can be nudged back into base contact since they are in base contact with other enemies (see \totalref{losing_base_contact}). Calculate Combat Score in this case as one single combat (only unit C grants a Flank Bonus).\columnbreak\newline
+			b) In the next Player Turn, this situation will count as two separate combats.
+		\end{multicols}%
+	}
+	\label{figure/splitting_combat}
+	\vspace*{-15pt}
+\end{figure*}
+
+\subsection{No More Foes}
+\idx[main=y]{No More Foes}\label{no_more_foes}
+
+Sometimes a unit destroys all enemy units in base contact and finds itself no longer Engaged in Combat (so it cannot provide Combat Score bonuses such as Standards or Flank). These units always count as winning the combat, and can either make an \hyperref[overrun]{Overrun} (if they were Charging), a \hyperref[post_combat_pivot]{Post-Combat Pivot}, or a \hyperref[post_combat_reform]{Post-Combat Reform}.
+
+When this happens in multiple combats, the Combat Score resulting from lost Health Points by the unit and its enemies counts, but all other Combat Score bonuses are ignored. Note that the unit itself doesn't take a Break Test since it always counts as if on the winning side.
+
+\subsection{Splitting Combat}
+\idx[main=y]{Splitting Combat}\label{splitting_combat}
+
+If due to removing casualties, two or more disconnected subgroups of opposing units are created (see figure \ref{figure/splitting_combat}), resolve the Combat normally (accounting for every unit that took part in this Round of Combat), checking any remaining base contact for the purpose of Rear and Flank Bonuses. In the next Melee Phase, each subgroup will be treated as a separate combat.
+
+\columnbreak
+
+\section{Pursuits and Overruns}
+\idx[main=y]{Pursuits}\label{pursuits_and_overruns}
+
+Immediately before rolling Flee Distances , each unit that is in base contact with the Broken unit(s) may declare a Pursuit of a single Broken unit (each Pursuing unit may choose any eligible enemy unit to Pursue). Determine the direction of the Flee Move as follows:
+\begin{itemize}
+	\item If the Broken unit is in contact with a single enemy unit, its Flee Move will be directed away from that unit.
+	\item If the Broken unit is in contact with more than one enemy unit, the owner of the enemy units must declare which of those units the Flee Move will be directed away from.
+\end{itemize}
+
+To be able to Pursue a Broken enemy, the unit cannot be Engaged with any non-Broken enemy units and must be in base contact with the Broken unit. \idx[main=y]{Restrain Pursuit Test}Units can elect not to Pursue, but must then pass a Discipline Test to succeed in restraining themselves, referred to as Restrain Pursuit Test; if the test is failed, the unit must Pursue anyway. If the test is passed, the unit may do either a \hyperref[post_combat_pivot]{Post-Combat Pivot} or a \hyperref[post_combat_reform]{Post-Combat Reform}.
+
+\subsubsection{Overrun}
+\idx[main=y]{Overruns}\label{overrun}
+
+A unit that fought its First Round of Combat after Charging can choose to make a special Pursuit Move called Overrun if all enemy units in base contact were wiped out (including units removed from play as a result of \hyperref[unstable]{Unstable} or something similar). Overruns follow the rules for Pursuits, except that step 1. Pivot is ignored (i.e. Overruns are straight forward) and that no Restrain Pursuit Test is required. Check which Arc the Overrunning unit is Located in for each enemy unit that may be Charged later in this process. If the Overrun Move will lead to a Charge, it will be in the Facing determined at this point.
+
+\subsection[Roll for Flee and Pursuit Distances]{Roll for Flee and Pursuit\\ Distances}
+\idx{Fleeing Units}
+
+Each Broken unit now rolls 2D6 to determine its Flee Distance, and each unit that has declared a Pursuit now rolls 2D6 to determine its Pursuit Distance. If any Pursuing unit rolls a Pursuit Distance \textbf{equal to or higher} than the Flee Distance of the unit it is Pursuing, the Fleeing unit is immediately destroyed. Remove that unit as a casualty (with no saves of any kind allowed). If several units are Fleeing from the same combat, the units move in the same order as their Flee Distance was rolled (the owner chooses in which order they roll the Flee Distance). The Active Player chooses which player will roll for their Pursuing units first. Each player chooses the order in which they roll the Pursuit Distances of their own Pursuing units.
+
+\subsection{Flee Distance and Fleeing Units}
+\idx{Moving Fleeing Units}
+
+Each Broken unit that was not captured and destroyed will now Flee directly away from the previously determined enemy unit. Pivot the Fleeing unit so that its Rear Facing is parallel with the Facing it was Engaged in (of the enemy unit the Flee Move is directed away from), and then move the Fleeing unit straight forward a number of inches equal to the Flee Distance rolled earlier. Use the rules for \hyperref[flee_moves]{Flee Moves} with the exception that units that were Engaged in the same Combat that was fought in this Round of Combat do not cause Dangerous Terrain Tests.
+If the direction of the Flee Move cannot be determined, e.g. because the enemy units that won the Round of Combat were removed as casualties, the Broken unit Flees directly away from the closest enemy unit instead (Centre of Unit to Centre of Unit).
+
+\subsection[Pursuit Distance and Pursuing Units]{Pursuit Distance and Pursuing\\ Units}
+\idx[main=y]{Pursuit Moves}\idx[main=y]{Moving Pursuing Units}\label{pursuit_distance_and_pursuing_units}
+
+Each Pursuing unit now performs a Pursuit Move, which is divided into three consecutive steps.
+
+Impassable Terrain, enemy units that Fled from the combat involving the Pursuing unit, and friendly units that were not part of that combat are considered to be obstructions for the Pursuit Move. Models cannot move into or through obstructions during Pursuit Moves. All friendly units that were part of the same combat are treated as Open Terrain for steps 1 and 2 of the Pursuit Move.
+
+Before moving any unit, check:
+\begin{itemize}
+	\item Which Pursuing unit would Charge an enemy unit (see 2.2 Enemy Unit below). Ignore other Pursuing units.
+	\item Which Arc the Pursuing unit is Located in for each enemy unit that may be Charged later in this process. If the Pursuit Move will lead to a Charge, it will be in the Facing determined at this point.
+\end{itemize}
+
+\columnbreak
+
+The Charging units will be moved first, in the order that best satisfies the priority order of \totalref{maximising_contact} (see figure \ref{figure/two_units_pursuit}). Afterwards the remaining Pursuing units will be moved, in an order chosen by the owner.
+
+\paragraph{1. Pivot}
+
+The Pursuing unit Pivots so that it is facing the same direction as the Pursued unit, or if destroyed, the direction the Pursued unit would have had, had it not been destroyed. Ignore the \hyperref[unit_spacing]{Unit Spacing} rule during this Pivot.
+
+After the Pivot, one of the four situations below will arise. If more than one is applicable, apply the uppermost one.
+
+\begin{enumerate}
+	\item If the Front Facing of the Pursuing unit would overlap the Board Edge, the unit Pursues off the Board (see \totalref{pursuing_off_the_board}).
+	\item If the Front Facing of the Pursuing unit would overlap the Unit Boundary of an enemy unit that did not Flee from the same combat, it declares a Charge against that unit. If there is more than one possible target, the Pivoting unit chooses which to Charge. The Charged unit may not perform any Charge Reactions (not even if already Fleeing). Remove the Pursuing unit from the Battlefield and then place it back on the Battlefield with its Front Facing in base contact and aligned with its target, in the Facing determined before the Pivot, maximising the number of Engaged models as normal but keeping the Centre of the unit as close as possible to its starting position while doing so. Ignore the Unit Spacing rule when placing the unit. The unit is considered to have performed a Charge Move. If there is not enough room to place the Pursuing unit, or if the Pursuing unit performed a Post-Combat Reform in the previous Player Turn, treat the enemy unit as obstruction instead.
+	\item If the Front Facing of the Pursuing unit would overlap an obstruction, the unit instead Pivots so that it faces as close as possible towards the direction of the the Pursued unit, while following the Unit Spacing rule (normally this means stopping \distance{1} away from the obstacle), and then moves no farther (i.e. ignore steps 2 and 3).
+	\item If the Front Facing of the Pursuing unit touches neither of the above, proceed to step 2. Note that only the Front Facing needs to be clear: Unit Boundaries, Impassable Terrain, or the Board Edge overlapping other parts of the unit are ignored during steps 1--3.
+\end{enumerate}
+
+\paragraph{2. Forward Ahead}
+
+Without moving the Pursuing unit, check what the first obstacle (Board Edge, enemy Unit Boundary, or obstruction) within the rectangle directly ahead of the unit formed by its Front Facing and the rolled Pursuit Distance would be. The Unit Spacing rule is ignored when doing this check and for all movement during Forward Ahead. If more than one is applicable, apply the uppermost one.
+
+\paragraph{2.1. Board Edge}
+
+If the first obstacle would be the Board Edge, move the unit straight forward until it touches the Board Edge and then follow the rules for \hyperref[pursuing_off_the_board]{Pursuing off the Board}.
+
+\paragraph{2.2. Enemy Unit}
+
+If the first obstacle would be the Unit Boundary of an enemy unit that did not Flee from the same combat, the Pursuing unit declares a Charge against that unit, using its Pursuit Distance roll as its Charge Range. If the Pursuing Unit performed a Post-Combat Reform in the previous Player Turn, it treats the enemy unit as obstruction instead. If there is more than one possible target, the Pursuing unit chooses which to Charge. The Charged unit may not perform any Charge Reactions (not even if already Fleeing). The Pursuing unit immediately performs a Charge Move (following all the normal \hyperref[move_chargers]{Move Chargers} rules) towards the previously determined Facing.
+\par
+If the Pursuing unit joins a combat that has already been fought or was created during this Melee Phase, it will be resolved in the next Melee Phase (with the Charging unit still counting as Charging). If the Pursuing unit joins a combat that wasn't created during this Melee Phase and that hasn't been fought yet, the unit will have a chance to fight and Pursue again this phase.
+\par
+If the Charge is not possible to complete, the unit does not perform a Failed Charge Move but treats the enemy unit as obstruction and proceeds to 2.3 instead.
+
+\paragraph{2.3. Obstruction or No Obstacle}
+
+If the first obstacle, if any, would not be an enemy Unit Boundary or the Board Edge, the Pursuing unit now moves its Pursuit Distance straight forward. If this brings the Front Facing of the unit into base contact with an obstruction, the unit stops.
+
+\paragraph{3. Legal Position?}
+
+At the end of the Pursuit Move, check if the unit is in a legal position. It cannot be in base contact with a unit it didn't declare a Charge against, and it must follow the \hyperref[unit_spacing]{Unit Spacing} rule, which includes friendly units that were part of the same combat. If the unit is not in a legal position, backtrack the move to the unit's last legal position where it follows the Unit Spacing rule.
+
+Figure \ref{figure/simple_pursuit} shows a simple example of a Pursuit Move, figure \ref{figure/two_units_pursuit} illustrates a case where two units are Pursuing into an enemy unit, and figure \ref{figure/pursuit} introduces more complex cases.
+
+\newcommand{\figSimplePursA}{a)}
+\newcommand{\figSimplePursB}{b)}
+
+\begin{Figure}
+	\Fanchor
+	\renewcommand{\figbiglettersize}{17}
+	\def\svgwidth{\columnwidth}
+	\subimport{../pics/}{simple_pursuit.pdf_tex}
+	\caption{Simple example of a Pursuit.\captionposttitle
+		a) Unit A Breaks from Combat. It Pivots to face away from unit B, and then moves the Flee Distance forwards.\captionpar
+		b) Unit B Pursues. It does not need to Pivot as it is already facing the same direction as unit A, and moves the Pursuit Distance forwards.%
+	}
+	\label{figure/simple_pursuit}
+\end{Figure}
+
+\newcommand{\figTwoPursA}{a)}
+\newcommand{\figTwoPursB}{b)}
+\newcommand{\figTwoPursC}{c)}
+\newcommand{\figTwoPursOne}{\Largefontsize{}\textbf{1}}
+\newcommand{\figTwoPursTwo}{\Largefontsize{}\textbf{2}}
+\newcommand{\figTwoPursunitA}{%
+	\begin{minipage}{0.30\unitlength}\begin{center}%
+		\normalfontsize{}Pursuit Distance\par Unit A%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figTwoPursunitB}{%
+	\begin{minipage}{0.30\unitlength}\begin{center}%
+		\normalfontsize{}Pursuit Distance\par Unit B%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figTwoPursunitC}{%
+	\begin{minipage}{0.30\unitlength}\begin{center}%
+		\normalfontsize{}Pursuit Distance\par Unit C%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figTwoPursunitD}{%
+	\begin{minipage}{0.30\unitlength}\begin{center}%
+		\normalfontsize{}Flee Distance\par Unit D%
+	\end{center}\end{minipage}%
+}
+
+\begin{figure*}[p]
+	\renewcommand{\figbiglettersize}{20}
+	\begin{minipage}{0.55\textwidth}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{two_units_pursuit.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.43\textwidth}
+	\caption{Example of two units Pursuing into the same enemy unit.\captionposttitle
+		a) Unit D loses the combat, Breaks, and Flees \distance{7}. The owner of the winning units chooses to roll for unit A's Pursuit Distance first. \distance{6} is not enough to catch the Fleeing unit. Unit B's Pursuit Distance is \distance{7}, so it is equal to or higher than unit D's Flee Distance: the Fleeing unit is immediately destroyed. Unit C's Pursuit Distance is \distance{5}.\vspace*{4.5cm}\captionpar
+		b) When checking which units will Charge an enemy unit during their Pursuit, before moving any Pursuing unit, it turns out that both unit A and unit B will Charge unit E, so both units declare a Charge against unit E. Unit C will not Charge any enemy units.\vspace*{3.3cm}\captionpar
+		c) Now units A and B perform their Pursuit Moves first. During this move, they can move through one another as they treat each other as Open Terrain. Otherwise, they move using the normal rules for Moving Chargers (one Wheel allowed, Maximising Contact). In order to maximise the number of models and units in base contact, unit A aligns its Front Facing with unit E's, while unit B moves into corner to corner contact with unit E. Afterwards, unit C Pivots and moves its Pursuit Distance straight forward.%
+	}
+	\label{figure/two_units_pursuit}
+	\end{minipage}
+\end{figure*}
+
+\newcommand{\figPursA}{a)}
+\newcommand{\figPursB}{b)}
+\newcommand{\figPursC}{c)}
+\newcommand{\figPursD}{d)}
+\newcommand{\figPursTextA}{%
+	\begin{minipage}{0.45\unitlength}\begin{center}%
+		\normalfontsize{The Front Facing of the Pursuing unit touches a friendly Unit Boundary.}%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figPursTextB}{%
+	\begin{minipage}{0.45\unitlength}\begin{center}%
+		\normalfontsize{The Front Facing of the Pursuing unit touches an enemy Unit Boundary.}%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figPursTextC}{%
+	\begin{minipage}[b]{0.4\unitlength}%
+		\normalfontsize{The first obstacle would be an enemy unit.}%
+	\end{minipage}%
+}
+\newcommand{\figPursTextD}{%
+	\begin{minipage}[b]{0.4\unitlength}%
+		\normalfontsize{The first obstacle would be an obstruction.}%
+	\end{minipage}%
+}
+
+\begin{figure*}[p]
+	\renewcommand{\figbiglettersize}{17}
+	\begin{minipage}{0.53\textwidth}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{pursuit.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.44\textwidth}
+	\caption{Examples of Pursuits.\captionposttitle
+		a) Unit C is in unit A's Flank. Unit A wins combat, unit C Breaks and Flees, unit A Pursues. Pivoting unit A would make its Front Facing overlap a friendly unit, unit B. The Pivot is instead made as close as possible to the intended direction and the Pursuit Move ends.\vspace*{1.5cm}\captionpar
+		b) Unit C is in unit A's Flank. Unit A wins combat, unit C Breaks and Flees, unit A Pursues. Pivoting unit A would make its Front Facing overlap an enemy unit, unit D. Unit A is removed from the Battlefield and then placed back on the Battlefield with its Front Facing in base contact with the Charged unit D's Front Facing, maximising contact while keeping the Centre of the unit as close as possible to its starting position.\vspace*{3.5cm}\captionpar
+		c) Unit G Breaks and Flees from unit E. No obstacles are encountered during the Pivot. The first obstacle unit E would encounter during its move ahead is unit F. Unit E must now perform a Charge Move against unit F, Maximising Contact as usual.\vspace*{4cm}\captionpar
+		d) Unit G Breaks and Flees from unit E. No obstacles are encountered during the Pivot. The first obstacle unit E would encounter during its move ahead is Impassable Terrain. Unit E is moved into contact with the Impassable Terrain. However, this position breaks the Unit Spacing rule. Unit E's Pursuit Move is backtracked to its last legal position.\vspace*{1cm}%
+	}
+	\label{figure/pursuit}
+	\end{minipage}
+\end{figure*}
+
+\subsection{Pursuing off the Board}
+\idx[main=y]{Pursuing off the Board}\label{pursuing_off_the_board}
+
+When a unit Pursues off the Board, it will leave the Battlefield and will return during the owner's next Movement Phase, using the rules for arriving \hyperref[ambush]{Ambushers} (see \totalref{ambush}), with the following exceptions:
+\begin{itemize}
+	\item It automatically arrives.
+	\item It must be placed with its Rear Facing centred on a point at which it contacted the Board Edge, or as close as possible.
+	\item It must arrive in the same formation as it left.
+	\item It does not count as destroyed at the end of the game, nor does it lose \hyperref[scoring]{Scoring}.
+\end{itemize}
+
+\subsection[LPost-Combat Pivot and Post-Combat Reform]{Post-Combat Pivot and\\ Post-Combat Reform}
+\label{post_combat_pivot_and_post_combat_reform}
+
+After Pursuing and Fleeing units have been moved, the other units that were Engaged in the same Combat but are now unengaged may now perform one of the manoeuvres below (in an order determined by the rules for \totalref{simultaneous_effects}).
+
+\idx{Front Rank}\idx[main=y]{Post-Combat Pivot}\subsubsection{Post-Combat Pivot}
+\label{post_combat_pivot}
+
+The unit Pivots around its Centre and/or may reorganise models with the \hyperref[front_rank]{Front Rank} rule (they must still be in legal positions).
+
+\subsubsection{Post-Combat Reform}
+\idx[main=y]{Post-Combat Reform}\label{post_combat_reform}
+
+The unit performs a Reform manoeuvre. If it does, the unit loses \hyperref[scoring]{Scoring} until the start of the following Player Turn and may not declare any Charges in the following Player Turn.
+
+\newcommand{\figCombRefA}{a)}
+\newcommand{\figCombRefB}{b)}
+\newcommand{\figCombRefC}{c)}
+\newcommand{\figCombRefCharOne}{{\fontsize{7}{8}\selectfont$C_{1}$}}
+\newcommand{\figCombRefCharTwo}{{\fontsize{7}{8}\normalfontsize$C_{2}$}}
+
+\begin{figure*}[!b]
+	\vspace{-10pt}
+	\centering
+	\renewcommand{\figbiglettersize}{15}
+	\def\svgwidth{0.9\textwidth}
+	\subimport{../pics/}{combat_reforms.pdf_tex}
+	\caption{Combat Reforms.\captionposttitlepremc%
+	\raggedcolumns\begin{multicols}{2}%
+		a) At the end of a Round of Combat, the Combined Unit A is Engaged with unit B and the Combined Unit C. All units perform Combat Reforms, starting with unit A.\captionpar
+		b) After Unit A's Combat Reform, the unit has added a file to the left, and the Character joined to the unit has moved to the left.\columnbreak\newline
+		c) During Unit B's Combat Reform, the unit shifts as far as possible to the right and the two models that are not in base contact with enemy models are moved to the second rank. Unit C does not change its position, however the Character joined to the unit moves into a position where it is in base contact only with a single enemy model.%
+	\end{multicols}%
+	}
+	\label{figure/combat_reforms}
+	\vspace*{-10pt}
+\end{figure*}
+
+\newpage
+\section{Combat Reforms}
+\idx[main=y]{Combat Reforms}\label{combat_reform}
+
+After all Fleeing and Pursuing units have moved, and after Post-Combat Pivots and Post-Combat Reforms have been performed, each unit remaining Engaged in this Combat now performs a Combat Reform.
+
+\begin{itemize}
+	\item Units on the losing side of the combat must pass a Discipline Test in order to do so. Apply the same modifiers as for the previous \hyperref[break_test]{Break Test} (i.e. apply the Combat Score difference, unless the unit is \hyperref[steadfast]{Steadfast} or \hyperref[stubborn]{Stubborn}).
+	\item Units Engaged in more than one Facing can never perform any Combat Reforms.
+	\item After all Discipline Tests have been taken, the Active Player decides which player performs their Combat Reforms first. After this player has completed all Combat Reforms with their units (one at a time, in any order), the opponent Combat Reforms their units.
+	\item Each player may choose not to Combat Reform one or more of their units.
+\end{itemize}
+
+\columnbreak
+
+When performing a Combat Reform, remove a unit from the Battlefield and place it back, following these restrictions:
+
+\begin{itemize}
+	\item The unit must be placed in a legal formation (following the \hyperref[unit_spacing]{Unit Spacing} rule, etc.).
+	\item The unit is allowed to come within \distance{0.5} of units Engaged in the same Combat, but it cannot move into base contact with enemy units that it was not in base contact with before the Combat Reform.
+	\item The unit must be placed in base contact with all the enemy units it was in base contact with before the Combat Reform, and in the same Facing of the enemy unit(s).
+	\item All models in the unit must be placed with their centre within their March Rate from their position before the Combat Reform.
+	\item Characters that were in base contact with an enemy must still be after the Combat Reform.
+	\begin{itemize}
+		\item This applies to both enemy and friendly Characters.
+		\item A Character may end up in base contact with different enemy models than it was before the Combat Reform.
+	\end{itemize}
+	\item After each Combat Reform, at least as many models of the Combat Reforming unit must be in base contact with enemy models as there were before.
+	\begin{itemize}
+		\item These don't have to be the same models.
+	\end{itemize}
+\end{itemize}
+
+Furthermore, after a player has completed all their Combat Reforms, all enemy models that were in base contact with opposing models before the Combat Reform must still be in base contact after the Combat Reform, but they may be Engaged with different models or units.
+
+See figure \ref{figure/combat_reforms} for an example of Combat Reforms.
+
+\RBemc

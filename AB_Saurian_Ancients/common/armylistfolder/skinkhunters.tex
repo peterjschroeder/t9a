@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\skinkhunters{},
+	logo=core,
+	secondlogo=arrows,
+	cost=170,
+	unitsize=12,
+	maxunitsize=20,
+	costpermodel=7,
+	scoring=,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	categorynote=\twocategoriesnote{\core}{\guerrillawarriors},
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=5,
+	globalrules={\communalbond{}, \lighttroops{}, \strider{\waterterrain{}},\minimised{} (\disciplinetest{})},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=2,
+	defense@Arm=0,
+	defenserules={\fortitude{} (6+)},
+	offensename=\skinkhunter{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\poisonedjavelin{} (4+)},
+	commandgroup={%
+		\champion{} \withenclavewizard{}=30,
+	},
+	wizardconclave={%
+		\enclavewizardspellsintro{%
+			\spellformat{\druidismspelltwo}{\druidism},
+		}
+	},
+}% END UNIT ENTRY

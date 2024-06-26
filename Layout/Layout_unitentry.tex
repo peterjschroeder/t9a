@@ -1,0 +1,1133 @@
+
+%%% Input parameters %%%
+
+\define@key{unit}{subentrynumber}{\def\unit@subentrynumber{#1}}
+\define@key{unit}{name}{\def\unit@name{#1}}
+\define@key{unit}{QRSname}{\def\unit@QRSname{#1}}
+\define@key{unit}{logo}{\def\unit@logo{#1}}
+\define@key{unit}{speciallogo}{\def\unit@speciallogo{#1}}
+\define@key{unit}{secondlogo}{\def\unit@secondlogo{#1}}
+\define@key{unit}{optionallogo}{\def\unit@optionallogo{#1}}
+\define@key{unit}{secondoptionallogo}{\def\unit@secondoptionallogo{#1}}
+\define@key{unit}{thirdoptionallogo}{\def\unit@thirdoptionallogo{#1}}
+
+\define@key{unit}{cost}{\def\unit@cost{#1}}
+\define@key{unit}{unitsize}{\def\unit@unitsize{#1}}
+\define@key{unit}{costpermodel}{\def\unit@costpermodel{#1}}
+\define@key{unit}{maxunitsize}{\def\unit@maxunitsize{#1}}
+\define@key{unit}{maxunitsperarmy}{\def\unit@maxunitsperarmy{#1}}
+\define@key{unit}{maxmodelsperarmy}{\def\unit@maxmodelsperarmy{#1}}
+\define@key{unit}{maxmountsperarmy}{\def\unit@maxmountsperarmy{#1}}
+\define@key{unit}{addrestriction}{\def\unit@addrestriction{#1}}
+\define@key{unit}{type}{\def\unit@type{#1}}
+\define@key{unit}{size}{\def\unit@size{#1}}
+\define@key{unit}{basesize}{\def\unit@basesize{#1}}
+\define@key{unit}{basesizenotag}{\def\unit@basesizenotag{#1}}
+\define@key{unit}{scoring}{\def\unit@scoring{#1}}
+\define@key{unit}{categorynote}{\def\unit@categorynote{#1}}
+\define@key{unit}{costnote}{\def\unit@costnote{#1}}
+\define@key{unit}{fluff}{\def\unit@fluff{#1}}
+
+\define@key{unit}{globalname}{\def\unit@globalname{#1}}
+\define@key{unit}{global@Ad}{\def\unit@global@Ad{#1}}
+\define@key{unit}{global@Adfly}{\def\unit@global@Adfly{#1}}
+\define@key{unit}{global@Ma}{\def\unit@global@Ma{#1}}
+\define@key{unit}{global@Mafly}{\def\unit@global@Mafly{#1}}
+\define@key{unit}{global@Di}{\def\unit@global@Di{#1}}
+\define@key{unit}{global@Rsr}{\def\unit@global@Rsr{#1}}
+\define@key{unit}{globalrules}{\def\unit@globalrules{#1}}
+
+\define@key{unit}{globalnameB}{\def\unit@globalnameB{#1}}
+\define@key{unit}{globalB@Ad}{\def\unit@globalB@Ad{#1}}
+\define@key{unit}{globalB@Adfly}{\def\unit@globalB@Adfly{#1}}
+\define@key{unit}{globalB@Ma}{\def\unit@globalB@Ma{#1}}
+\define@key{unit}{globalB@Mafly}{\def\unit@globalB@Mafly{#1}}
+\define@key{unit}{globalB@Di}{\def\unit@globalB@Di{#1}}
+\define@key{unit}{globalB@Rsr}{\def\unit@globalB@Rsr{#1}}
+\define@key{unit}{globalrulesB}{\def\unit@globalrulesB{#1}}
+
+\define@key{unit}{globalnameC}{\def\unit@globalnameC{#1}}
+\define@key{unit}{globalC@Ad}{\def\unit@globalC@Ad{#1}}
+\define@key{unit}{globalC@Adfly}{\def\unit@globalC@Adfly{#1}}
+\define@key{unit}{globalC@Ma}{\def\unit@globalC@Ma{#1}}
+\define@key{unit}{globalC@Mafly}{\def\unit@globalC@Mafly{#1}}
+\define@key{unit}{globalC@Di}{\def\unit@globalC@Di{#1}}
+\define@key{unit}{globalC@Rsr}{\def\unit@globalC@Rsr{#1}}
+\define@key{unit}{globalrulesC}{\def\unit@globalrulesC{#1}}
+
+\define@key{unit}{defensename}{\def\unit@defensename{#1}}
+\define@key{unit}{defense@HP}{\def\unit@defense@HP{#1}}
+\define@key{unit}{defense@Df}{\def\unit@defense@Df{#1}}
+\define@key{unit}{defense@Re}{\def\unit@defense@Re{#1}}
+\define@key{unit}{defense@Arm}{\def\unit@defense@Arm{#1}}
+\define@key{unit}{defense@Aeg}{\def\unit@defense@Aeg{#1}}
+\define@key{unit}{printAeg}{\def\unit@printAeg{#1}}
+\define@key{unit}{defenserules}{\def\unit@defenserules{#1}}
+\define@key{unit}{defensearmour}{\def\unit@defensearmour{#1}}
+
+\define@key{unit}{defensenameB}{\def\unit@defensenameB{#1}}
+\define@key{unit}{defenseB@HP}{\def\unit@defenseB@HP{#1}}
+\define@key{unit}{defenseB@Df}{\def\unit@defenseB@Df{#1}}
+\define@key{unit}{defenseB@Re}{\def\unit@defenseB@Re{#1}}
+\define@key{unit}{defenseB@Arm}{\def\unit@defenseB@Arm{#1}}
+\define@key{unit}{defenseB@Aeg}{\def\unit@defenseB@Aeg{#1}}
+\define@key{unit}{printAegB}{\def\unit@printAegB{#1}}
+\define@key{unit}{defenserulesB}{\def\unit@defenserulesB{#1}}
+\define@key{unit}{defensearmourB}{\def\unit@defensearmourB{#1}}
+
+\define@key{unit}{defensenameC}{\def\unit@defensenameC{#1}}
+\define@key{unit}{defenseC@HP}{\def\unit@defenseC@HP{#1}}
+\define@key{unit}{defenseC@Df}{\def\unit@defenseC@Df{#1}}
+\define@key{unit}{defenseC@Re}{\def\unit@defenseC@Re{#1}}
+\define@key{unit}{defenseC@Arm}{\def\unit@defenseC@Arm{#1}}
+\define@key{unit}{defenseC@Aeg}{\def\unit@defenseC@Aeg{#1}}
+\define@key{unit}{printAegC}{\def\unit@printAegC{#1}}
+\define@key{unit}{defenserulesC}{\def\unit@defenserulesC{#1}}
+\define@key{unit}{defensearmourC}{\def\unit@defensearmourC{#1}}
+
+\define@key{unit}{offensename}{\def\unit@offensename{#1}}
+\define@key{unit}{forceoffensenameprint}{\def\unit@forceoffensenameprint{#1}}
+\define@key{unit}{offense@Ag}{\def\unit@offense@Ag{#1}}
+\define@key{unit}{offense@At}{\def\unit@offense@At{#1}}
+\define@key{unit}{offense@Of}{\def\unit@offense@Of{#1}}
+\define@key{unit}{offense@St}{\def\unit@offense@St{#1}}
+\define@key{unit}{offense@AP}{\def\unit@offense@AP{#1}}
+\define@key{unit}{offenserules}{\def\unit@offenserules{#1}}
+\define@key{unit}{offenseweapons}{\def\unit@offenseweapons{#1}}
+\define@key{unit}{offensecomment}{\def\unit@offensecomment{#1}}
+
+\define@key{unit}{offensenameB}{\def\unit@offensenameB{#1}}
+\define@key{unit}{offenseB@Ag}{\def\unit@offenseB@Ag{#1}}
+\define@key{unit}{offenseB@At}{\def\unit@offenseB@At{#1}}
+\define@key{unit}{offenseB@Of}{\def\unit@offenseB@Of{#1}}
+\define@key{unit}{offenseB@St}{\def\unit@offenseB@St{#1}}
+\define@key{unit}{offenseB@AP}{\def\unit@offenseB@AP{#1}}
+\define@key{unit}{offenserulesB}{\def\unit@offenserulesB{#1}}
+\define@key{unit}{offenseweaponsB}{\def\unit@offenseweaponsB{#1}}
+
+\define@key{unit}{offensenameC}{\def\unit@offensenameC{#1}}
+\define@key{unit}{offenseC@Ag}{\def\unit@offenseC@Ag{#1}}
+\define@key{unit}{offenseC@At}{\def\unit@offenseC@At{#1}}
+\define@key{unit}{offenseC@Of}{\def\unit@offenseC@Of{#1}}
+\define@key{unit}{offenseC@St}{\def\unit@offenseC@St{#1}}
+\define@key{unit}{offenseC@AP}{\def\unit@offenseC@AP{#1}}
+\define@key{unit}{offenserulesC}{\def\unit@offenserulesC{#1}}
+\define@key{unit}{offenseweaponsC}{\def\unit@offenseweaponsC{#1}}
+\define@key{unit}{offenseCcomment}{\def\unit@offenseCcomment{#1}}
+
+\define@key{unit}{offensenameI}{\def\unit@offensenameI{#1}}
+\define@key{unit}{offenseI@Ag}{\def\unit@offenseI@Ag{#1}}
+\define@key{unit}{offenseI@St}{\def\unit@offenseI@St{#1}}
+\define@key{unit}{offenseI@AP}{\def\unit@offenseI@AP{#1}}
+\define@key{unit}{offenserulesI}{\def\unit@offenserulesI{#1}}
+\define@key{unit}{offenseweaponsI}{\def\unit@offenseweaponsI{#1}}
+
+\define@key{unit}{magic}{\def\unit@magic{#1}}
+\define@key{unit}{magicnoptstag}{\def\unit@magicnoptstag{#1}}
+\define@key{unit}{paths}{\def\unit@paths{#1}}
+\define@key{unit}{pathsnote}{\def\unit@pathsnote{#1}}
+\define@key{unit}{wizardconclave}{\def\unit@wizardconclave{#1}}
+\define@key{unit}{options}{\def\unit@options{#1}}
+\define@key{unit}{explicitoptions}{\def\unit@explicitoptions{#1}}
+\define@key{unit}{mounts}{\def\unit@mounts{#1}}
+\define@key{unit}{commandgroup}{\def\unit@commandgroup{#1}}
+\define@key{unit}{additionalframe}{\def\unit@additionalframe{#1}}
+\define@key{unit}{toggles}{\def\unit@toggles{#1}}
+
+
+\define@key{unit}{modelrulesdef}{\ifdefined\thisisascrollcompendium\else\def\unit@modelrulesdef{#1}\fi}
+\define@key{unit}{optionalmodelrulesdef}{\ifdefined\thisisascrollcompendium\else\def\unit@optionalmodelrulesdef{#1}\fi}
+\define@key{unit}{endtext}{\ifdefined\thisisascrollcompendium\else\def\unit@endtext{#1}\fi}
+\define@key{unit}{scrollmodelrulesdef}{\ifdefined\thisisascrollcompendium\def\unit@modelrulesdef{#1}\fi}
+\define@key{unit}{scrolloptionalmodelrulesdef}{\ifdefined\thisisascrollcompendium\def\unit@optionalmodelrulesdef{#1}\fi}
+\define@key{unit}{scrollendtext}{\ifdefined\thisisascrollcompendium\def\unit@endtext{#1}\fi}
+
+
+\define@key{unit}{flavour}{\ifdefined\thisisascrollcompendium\def\unit@flavour{#1}\else\def\unit@flavour{}\fi}
+
+%\define@key{unit}{scrollmodelrulesdef}{\def\unit@scrollmodelrulesdef{#1}}
+%\define@key{unit}{scrolloptionalmodelrulesdef}{\def\unit@scrolloptionalmodelrulesdef{#1}}
+
+
+%%% Characteristics table definition %%%
+
+\newcommand{\startcharacteristicstable}{%
+\begin{tabular}{@{}p{0.21\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}P{0.06\textwidth}@{}p{0.49\textwidth}@{}}%
+\rowcolor{\lightgreycolor}[][]%
+}
+
+
+%%% Length definition for the category note
+
+\newlength{\categorynoteheight}%
+
+
+%%% Length definition for the name block when there is the English name to add
+
+\newlength{\maxnamelength}%
+\newlength{\currentnamelength}%
+
+
+%%% Toggle for two cells for Rsr
+
+\newtoggle{twocellsRsr}
+\togglefalse{twocellsRsr}
+
+
+%%% Fluff box definition %%%
+
+\newtoggle{insideunitentry}
+\togglefalse{insideunitentry}
+
+\newcommand{\fluffbox}[1]{%
+	\iftoggle{insideunitentry}{%
+		\vspace*{-2pt}\hspace*{3pt}%
+		\begin{minipage}{\textwidth-6pt}%
+			\itshape%
+			#1%
+		\end{minipage}%
+		\vspace*{6pt}\par%
+	}{%
+		\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+		\vspace*{5pt}\hspace*{5pt}%
+		\fboxsep5pt
+		\colorbox{\lightgreycolor}{%
+			\begin{minipage}{\textwidth-20pt}%
+				\itshape%
+				#1%
+			\end{minipage}%
+		}%
+		\vspace*{5pt}\par%
+		\ifdefined\thisisanarmybook%
+			%
+		\else%
+			\def\@minipagerestore{}%
+		\fi%
+	}%
+}
+
+\newcommand{\fluffref}[1]{\vspace*{3pt}\newline\hspace*{0.5\textwidth}\begin{minipage}{0.5\textwidth}\begin{flushright}\textnormal{---#1}\end{flushright}\end{minipage}}
+\newcommand{\fluffrefnonewline}[1]{\vspace*{3pt}\hspace*{0.5\textwidth}\begin{minipage}{0.5\textwidth}\begin{flushright}\textnormal{---#1}\end{flushright}\end{minipage}}
+
+%%% Command to add a new unit definition %%%
+
+\newcommand{\defunit}{
+	\setkeys{unit}{%
+		subentrynumber=, name=, QRSname=, logo=, speciallogo=, secondlogo=, optionallogo=, secondoptionallogo=, thirdoptionallogo=, cost=, unitsize=, costpermodel=, maxunitsize=, maxunitsperarmy=, maxmodelsperarmy=, maxmountsperarmy=, addrestriction=, type=, size=, basesize=, basesizenotag=, scoring=, categorynote=, costnote=, fluff=, globalname=, global@Ad=, global@Adfly=, global@Ma=, global@Mafly=, global@Di=, global@Rsr=, globalrules=, globalnameB=, globalB@Ad=, globalB@Adfly=, globalB@Ma=, globalB@Mafly=, globalB@Di=, globalB@Rsr=, globalrulesB=, globalnameC=, globalC@Ad=, globalC@Adfly=, globalC@Ma=, globalC@Mafly=, globalC@Di=, globalC@Rsr=, globalrulesC=, defensename=, defense@HP=, defense@Df=, defense@Re=, defense@Arm=, defense@Aeg=, printAeg=, defenserules=, defensearmour=, defensenameB=, defenseB@HP=, defenseB@Df=, defenseB@Re=, defenseB@Arm=, defenseB@Aeg=, printAegB=, defenserulesB=, defensearmourB=, defensenameC=, defenseC@HP=, defenseC@Df=, defenseC@Re=, defenseC@Arm=, defenseC@Aeg=, printAegC=, defenserulesC=, defensearmourC=, offensename=, forceoffensenameprint=, offense@Ag=, offense@At=, offense@Of=,  offense@St=, offense@AP=, offenserules=, offenseweapons=, offensecomment=, offensenameB=, offenseB@Ag=, offenseB@At=, offenseB@Of=,  offenseB@St=, offenseB@AP=, offenserulesB=, offenseweaponsB=, offensenameC=, offenseC@Ag=, offenseC@At=, offenseC@Of=,  offenseC@St=, offenseC@AP=, offenserulesC=, offenseweaponsC=, offenseCcomment=, offensenameI=, offenseI@Ag=, offenseI@St=, offenseI@AP=, offenserulesI=, offenseweaponsI=, magic=, magicnoptstag=, paths=, pathsnote=, wizardconclave=, options=, explicitoptions=, mounts=, commandgroup=, modelrulesdef=, optionalmodelrulesdef=, additionalframe=, endtext=, toggles=, scrollmodelrulesdef=, scrolloptionalmodelrulesdef=, scrollendtext=, flavour=,
+	}%
+	\setkeys{unit}%
+}
+
+\newcommand{\additionalframename}{NO NAME DEFINED}
+
+%%% Counters and boolean for two columns balance %%%
+
+\newtoggle{printoffensename}
+
+\newcounter{numberofnonrulesdefframes}
+\newcounter{numberofrestrictions}
+\newcounter{numberoftwocolframes}
+
+\newtoggle{thereismagic}
+\newtoggle{thereiswizardconclave}
+\newtoggle{thereisoptions}
+\newtoggle{thereismounts}
+\newtoggle{thereiscommandgroup}
+\newtoggle{thereismodelrulesdef}
+\newtoggle{thereisoptionalmodelrulesdef}
+\newtoggle{thereisadditionalframe}
+
+\newtoggle{twocolprintmagic}
+\newtoggle{twocolprintwizardconclave}
+\newtoggle{twocolprintoptions}
+\newtoggle{twocolprintmounts}
+\newtoggle{twocolprintcommandgroup}
+\newtoggle{twocolprintmodelrulesdef}
+\newtoggle{twocolprintoptionalmodelrulesdef}
+\newtoggle{twocolprintadditionalframe}
+
+\newtoggle{onecolprintmagic}
+\newtoggle{onecolprintwizardconclave}
+\newtoggle{onecolprintoptions}
+\newtoggle{onecolprintmounts}
+\newtoggle{onecolprintcommandgroup}
+\newtoggle{onecolprintmodelrulesdef}
+\newtoggle{onecolprintoptionalmodelrulesdef}
+\newtoggle{onecolprintadditionalframe}
+
+\newtoggle{thereismorethanXitemsinoptions}
+\newtoggle{optionsistheonlynonrulesdefframe}
+
+\newtoggle{thereisatleastoneframe}
+
+
+%%% The Command %%%
+
+\newlength{\startatthetopoftheline}
+\setlength{\startatthetopoftheline}{0.5pt-\baselineskip}
+
+\newcommand{\unitentryheader}{%
+\vspace*{\startatthetopoftheline}\rule{\textwidth}{0.5pt}\par\vspace{-5pt}%
+{%
+% Logos
+\expandafter\ifblank\expandafter{\unit@logo}{% is there a logo?
+	\begin{minipage}[b]{1pt}%
+		\rule{0pt}{1.2cm}% ensuring the banner is as high as when we have a picture, and that the second minipage is centered approprietly
+}{
+	\hspace*{-3pt}\expandafter\ifblank\expandafter{\unit@secondlogo}{%
+		\begin{minipage}[b]{0.08\textwidth}%
+			\expandafter\ifblank\expandafter{\unit@speciallogo}{%
+				\includegraphics[width=\textwidth]{{logo_\unit@logo}.png}%
+			}{\begin{center}\includegraphics[width=0.7\textwidth]{\unit@speciallogo}\end{center}}%
+			\vspace*{-4pt}%
+	}{%
+		\begin{minipage}[b]{0.16\textwidth}%
+			\includegraphics[width=0.5\textwidth]{{logo_\unit@logo}.png}%
+			\includegraphics[width=0.5\textwidth]{{logo_\unit@secondlogo}.png}%
+			\vspace*{-4pt}%
+	}%
+}% END is there a logo?
+\end{minipage}%
+%
+% Title, unit cost and size
+\setlength{\lengthbeforemodelsizetwologos}{\lengthbeforemodelsize - 0.08\textwidth}
+\expandafter\ifblank\expandafter{\unit@logo}{% is there a logo?
+	\setlength{\maxnamelength}{0.59\textwidth-3pt}%
+	\hspace*{2pt}\begin{minipage}[b]{0.59\textwidth-3pt}%
+}{%
+	\expandafter\ifblank\expandafter{\unit@secondlogo}{%
+		\setlength{\maxnamelength}{0.5\textwidth+3pt}%
+		\hspace{0.01\textwidth}\begin{minipage}[b]{0.5\textwidth+3pt}%
+	}{%
+		\setlength{\maxnamelength}{0.42\textwidth+3pt}%
+		\hspace{0.01\textwidth}\begin{minipage}[b]{0.42\textwidth+3pt}%
+		\renewcommand{\perextramodel}{\perextramodelshortened}%
+		\setlength{\lengthbeforemodelsize}{\lengthbeforemodelsizetwologos}%
+	}%
+}% END is there a logo?
+% Title with hyperlink, scoring logo
+{\Largerfontsize\textbf{%
+	\expandafter\ifblank\expandafter{\unit@subentrynumber}{}{(\unit@subentrynumber{}) }%
+	% Should we add an English name after the standard name of the unit?
+	\def\tempENname{}%
+	\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\tempENname]%
+	\expandafter\ifundef\expandafter{\csname \tempENname EN\endcsname}{% Then there is no English name to add
+		\unit@name%
+	}{% There is an English name to add
+		% Now see if the fontsize need to be decreased for everything to fit on a line
+		\settowidth{\currentnamelength}{\Largefontsize\unit@name{} \textnormal{\largerfontsize\textit{(\csname \tempENname EN\endcsname)}}}%
+		\ifdim\currentnamelength>\maxnamelength\relax% Name's too big we need to reduce the fontsize
+			{\largerfontsize\unit@name{} \textnormal{\largefontsize\textit{(\csname \tempENname EN\endcsname)}}}%
+		\else% Everything is good
+			{\Largefontsize\unit@name{} \textnormal{\largerfontsize\textit{(\csname \tempENname EN\endcsname)}}}%
+		\fi%
+	}%
+}}%
+\vspace*{3pt}\newline%
+% Is everything replace by a note?
+\expandafter\ifblank\expandafter{\unit@costnote}{% NO
+	% Unit cost and size
+	\expandafter\ifblank\expandafter{\unit@cost}{}{{\pointsblock{\largerfontsize\pts{\textbf{\unit@cost}}}} }%
+	% Is it a single model or a unit with multiple models?
+	\expandafter\ifblank\expandafter{\unit@unitsize}{}{% if there is no unitsize, we don't print anything at all
+		% Now we want to see if there is 1 or more models
+		\isitoneornot{\unit@unitsize}{% 1 model
+			% Can you add models?
+			\expandafter\ifblank\expandafter{\unit@costpermodel}{% no other models
+				\hspace*{\lengthbeforemodelsize}%
+				\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} }}%
+				\hspace*{-\lengthoftheptsblock}%
+				\ifdef{\languageisrussian}{\hspace*{-0.5cm}}{}%
+				\singlemodel{}%
+			}{% possibility of more models
+				\pointsblock{+ \pts{\textbf{\unit@costpermodel}}\perextramodel{}}%
+				%
+				\hspace*{\lengthbeforemodelsize}%
+				\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} + \pts{\textbf{\unit@costpermodel}}\perextramodel{}}}%
+				\hspace*{-\lengthoftheptsblock}%
+				\textbf{1--\unit@maxunitsize} \Models{}%
+			}%
+		}{% more than 1 model
+			\pointsblock{+ \pts{\textbf{\unit@costpermodel}}\perextramodel{}}%
+			%
+			\hspace*{\lengthbeforemodelsize}%
+			\setlength{\lengthoftheptsblock}{\widthof{{\largerfontsize\pts{\textbf{\unit@cost}}} + \pts{\textbf{\unit@costpermodel}}\perextramodel{}}}%
+			\hspace*{-\lengthoftheptsblock}%
+			\textbf{\unit@unitsize{}--\unit@maxunitsize} \Models{}%
+		}%
+	}%
+}{% everything replaced with a cost note
+	\unit@costnote{}%
+}%
+\vspace{0pt}%
+\end{minipage}%
+%
+% Restrictions
+\hfill\begin{minipage}[b]{0.2\textwidth}%
+\setlength{\parskip}{0pt}%
+\begin{center}%
+% Count the number of restrictions
+\setcounter{numberofrestrictions}{0}% reset
+\expandafter\ifblank\expandafter{\unit@maxunitsperarmy}{}{\stepcounter{numberofrestrictions}}%
+\expandafter\ifblank\expandafter{\unit@maxmountsperarmy}{}{\stepcounter{numberofrestrictions}}%
+\expandafter\ifblank\expandafter{\unit@maxmodelsperarmy}{}{\stepcounter{numberofrestrictions}}%
+\expandafter\ifblank\expandafter{\unit@addrestriction}{}{\stepcounter{numberofrestrictions}}%
+\expandafter\ifstrequal\expandafter{\unit@scoring}{yes}{%
+	\ifnumcomp{\value{numberofrestrictions}}{>}{1}{%
+		\strut\includegraphics[height=8pt]{logo_scoring.png}\par%
+	}{%
+		\ifnumcomp{\value{numberofrestrictions}}{=}{0}{%
+			\strut\vspace*{6pt}\includegraphics[height=12pt]{logo_scoring.png}\par%
+		}{%
+			\strut\includegraphics[height=12pt]{logo_scoring.png}\par%
+		}%
+	}%
+}{}%
+\expandafter\ifblank\expandafter{\unit@maxunitsperarmy}{}{%
+\zerotoXunitsperarmy{\unit@maxunitsperarmy}\par%
+}%
+\expandafter\ifblank\expandafter{\unit@maxmountsperarmy}{}{%
+\zerotoXmountsperarmy{\unit@maxmountsperarmy}\par%
+}%
+\expandafter\ifblank\expandafter{\unit@maxmodelsperarmy}{}{%
+\zerotoXmodelsperarmy{\unit@maxmodelsperarmy}\par%
+}%
+\expandafter\ifblank\expandafter{\unit@addrestriction}{}{%
+\unit@addrestriction%
+}%
+\end{center}%
+\vspace{0pt}%
+\end{minipage}%
+%
+% Size, Type and Base
+\begin{minipage}[b]{0.2\textwidth}%
+\renewcommand{\arraystretch}{1}%
+\begin{tabular}{@{}>{\raggedleft}p{0.25\textwidth}@{\hskip 0.03\textwidth}p{0.72\textwidth}@{}}%
+\expandafter\ifblank\expandafter{\unit@size}{}{\ChLab{\Height}}&\unit@size{}\tabularnewline%
+\expandafter\ifblank\expandafter{\unit@type}{}{\ChLab{\type}}&\unit@type{}\tabularnewline%
+\expandafter\ifblank\expandafter{\unit@basesize}{}{\ChLab{\basesize}}&\unit@basesize{}%
+\expandafter\ifblank\expandafter{\unit@basesizenotag}{%
+	~\mm%
+	\ifsubstring{\unit@basesize}{\timess}{}{~\roundbase}%
+}{}%
+\tabularnewline%
+\end{tabular}%
+\vspace*{-4pt}%
+\end{minipage}\par%
+}%
+\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
+%
+% Category note and optional logo
+\expandafter\ifblank\expandafter{\unit@optionallogo}{% no logo
+	\expandafter\ifblank\expandafter{\unit@categorynote}{}{%
+		\vspace*{-4pt}\unit@categorynote{}\par%
+		\vspace*{-10pt}\rule{\textwidth}{0.5pt}\par%
+	}%
+}{% with logo
+	\expandafter\ifblank\expandafter{\unit@secondoptionallogo}{% no second logo
+		% Check if the category note has more than 2 lines.
+		\setbox0=\vbox{\begin{minipage}{0.94\textwidth}\unit@categorynote{}\end{minipage}}%
+		\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+		\ifdim\categorynoteheight>25pt\relax
+			\vspace*{-1pt}%
+		\else
+			\vspace*{-7pt}%
+		\fi
+		\begin{minipage}{0.06\textwidth}%
+			\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+		\end{minipage}%
+		\begin{minipage}{0.94\textwidth}%
+			\unit@categorynote{}%
+		\end{minipage}\par%
+		\ifdim\categorynoteheight>25pt\relax
+			\vspace*{-2pt}%
+		\else
+			\vspace*{-6pt}%
+		\fi
+		\rule{\textwidth}{0.5pt}\par%
+	}{% there is a second logo
+		\expandafter\ifblank\expandafter{\unit@thirdoptionallogo}{% no third logo
+			% Check if the category note has more than 2 lines.
+			\setbox0=\vbox{\begin{minipage}{0.88\textwidth}\unit@categorynote{}\end{minipage}}%
+			\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-1pt}%
+			\else
+				\vspace*{-7pt}%
+			\fi
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@secondoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.88\textwidth}%
+				\unit@categorynote{}%
+			\end{minipage}\par%
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-2pt}%
+			\else
+				\vspace*{-6pt}%
+			\fi
+			\rule{\textwidth}{0.5pt}\par%
+		}{% there is a third logo
+			% Check if the category note has more than 2 lines.
+			\setbox0=\vbox{\begin{minipage}{0.82\textwidth}\unit@categorynote{}\end{minipage}}%
+			\categorynoteheight=\ht0 \advance\categorynoteheight by \dp0\relax% Two lines do approx. a bit less than 20 pt
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-1pt}%
+			\else
+				\vspace*{-7pt}%
+			\fi
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@optionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@secondoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.06\textwidth}%
+				\includegraphics[width=\textwidth]{{logo_\unit@thirdoptionallogo}.png}%
+			\end{minipage}%
+			\begin{minipage}{0.82\textwidth}%
+				\unit@categorynote{}%
+			\end{minipage}\par%
+			\ifdim\categorynoteheight>25pt\relax
+				\vspace*{-2pt}%
+			\else
+				\vspace*{-6pt}%
+			\fi
+			\rule{\textwidth}{0.5pt}\par%
+		}%
+	}%
+}%
+%
+% Fluff
+\ifdefvoid{\unit@fluff}{}{%
+	\ifundef{\nofluffinunitentry}{%
+		\fluffbox{\unit@fluff}%
+		\vspace{-10pt}\rule{\textwidth}{0.5pt}\par%
+	}{}%
+}%
+}
+
+\newcommand{\unitentry}[1]{%
+\toggletrue{insideunitentry}%
+\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+\defunit{#1}%
+%
+\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
+%
+%%%%%%%%%%%%%%%%%%%%%%
+% Unit title, logos and general info
+%
+\def\temphypertag{}%
+\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\temphypertag]% remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+\xdef\unithypertag{\bookprefix\arabic{categorynumber}\temphypertag}% using the unit name macro to define an hypertag
+\hypertarget{\unithypertag}{}%
+\unitentryheader{}%
+%%%%%%%%%%%%%%%%%%%%%%
+% Characteristics and rules
+%%%%%%%%%%%%%%%%%%%%%%
+% Global Characteristics
+\renewcommand{\arraystretch}{1.4}%
+\vspace*{-7pt}%
+\startcharacteristicstable{}%
+	\hspace*{3pt}{\ChLab{\GlobalCharacteristics}}&%
+	{\ChLab{\AdvanceRateInitials}}&%
+	{\ChLab{\MarchRateInitials}}&%
+	{\ChLab{\DisciplineInitials}}&%
+	\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChLab{\resurrectedInitials}}&%
+		}{%
+			\ChLab{\resurrectedInitials}&&%
+		}%
+	}%
+	\ChLab{\ModelRules}%
+\tabularnewline%
+	\expandafter\ifblank\expandafter{\unit@globalname}{}{\nameindent\unit@globalname{}}%
+	\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Ad}{}{%
+	\ifsubstring{\unit@global@Ad}{\ascharacter}{\ChVal{{\unit@global@Ad}}}{\ChVal{\distance{\unit@global@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@global@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Ma}{}{%
+	\ifsubstring{\unit@global@Ma}{\ascharacter}{\ChVal{{\unit@global@Ma}}}{\ChVal{\distance{\unit@global@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@global@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@global@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@global@Di}{}{\ChVal{\unit@global@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@global@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@global@Rsr}}&%
+		}{%
+			\ChVal{\unit@global@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrules}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrules}}%
+\tabularnewline%
+%
+\expandafter\ifblank\expandafter{\unit@globalnameB}{}{%
+	\nameindent\unit@globalnameB{}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Ad}{}{%
+	\ifsubstring{\unit@globalB@Ad}{\ascharacter}{\ChVal{{\unit@globalB@Ad}}}{\ChVal{\distance{\unit@globalB@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalB@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Ma}{}{%
+	\ifsubstring{\unit@globalB@Ma}{\ascharacter}{\ChVal{{\unit@globalB@Ma}}}{\ChVal{\distance{\unit@globalB@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalB@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Di}{}{\ChVal{\unit@globalB@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@globalB@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@globalB@Rsr}}&%
+		}{%
+			\ChVal{\unit@globalB@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrulesB}}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@globalnameC}{}{%
+	\nameindent\unit@globalnameC{}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Adfly}{}{%
+		\strut\hspace*{\fill}\setlength{\parskip}{0pt}%
+		\ChLab{\groundmovementlabel}\par%
+		\strut\hspace*{\fill}\ChLab{\flymovementlabel}%
+	}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Ad}{}{%
+	\ifsubstring{\unit@globalC@Ad}{\ascharacter}{\ChVal{{\unit@globalC@Ad}}}{\ChVal{\distance{\unit@globalC@Ad}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Adfly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalC@Adfly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Ma}{}{%
+	\ifsubstring{\unit@globalC@Ma}{\ascharacter}{\ChVal{{\unit@globalC@Ma}}}{\ChVal{\distance{\unit@globalC@Ma}}}%
+	}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Mafly}{}{\setlength{\parskip}{0pt}\par\ChVal{\distance{\unit@globalC@Mafly}}}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Di}{}{\ChVal{\unit@globalC@Di}}&%
+	\expandafter\ifblank\expandafter{\unit@globalC@Rsr}{%
+		&&%
+	}{%
+		\iftoggle{twocellsRsr}{%
+			\multicolumn{2}{@{}P{0.12\textwidth}@{}}{\ChVal{\unit@globalC@Rsr}}&%
+		}{%
+			\ChVal{\unit@globalC@Rsr}&&%
+		}%
+	}%
+	\strut\expandafter\ifblank\expandafter{\unit@globalrulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@globalrulesC}}%
+	\tabularnewline%
+}%
+\end{tabular}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Defensive Characteristics
+\vspace*{-7pt}%
+\startcharacteristicstable{}%
+	\hspace*{3pt}\ChLab{\DefensiveCharacteristics{}}&%
+	{\ChLab{\HealthPointsInitials}}&%
+	{\ChLab{\DefensiveSkillInitials}}&%
+	{\ChLab{\ResilienceInitials}}& %
+	{\ChLab{\ArmourInitials}}&%
+	\expandafter\ifblank\expandafter{\unit@printAeg}{%
+		\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChLab{\AegisInitials}}%
+	}{\ChLab{\AegisInitials}}&%
+	\tabularnewline%
+	\expandafter\ifblank\expandafter{\unit@defensename}{}{\nameindent\unit@defensename{}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@HP}{}{\ChVal{\unit@defense@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Df}{}{\ChVal{\unit@defense@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Re}{}{\ChVal{\unit@defense@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Arm}{\ChVal{0}}{\ChVal{\unit@defense@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defense@Aeg}{}{\ChVal{\unit@defense@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserules}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserules}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmour}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserules}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmour}}%
+	\tabularnewline%
+%
+\expandafter\ifblank\expandafter{\unit@defensenameB}{}{%
+	\nameindent\unit@defensenameB{}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@HP}{}{\ChVal{\unit@defenseB@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Df}{}{\ChVal{\unit@defenseB@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Re}{}{\ChVal{\unit@defenseB@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Arm}{\ChVal{0}}{\ChVal{\unit@defenseB@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseB@Aeg}{}{\ChVal{\unit@defenseB@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserulesB}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmourB}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserulesB}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmourB}}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@defensenameC}{}{%
+	\nameindent\unit@defensenameC{}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@HP}{}{\ChVal{\unit@defenseC@HP}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Df}{}{\ChVal{\unit@defenseC@Df}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Re}{}{\ChVal{\unit@defenseC@Re}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Arm}{\ChVal{0}}{\ChVal{\unit@defenseC@Arm}}&%
+	\expandafter\ifblank\expandafter{\unit@defenseC@Aeg}{}{\ChVal{\unit@defenseC@Aeg}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@defenserulesC}}%
+	\expandafter\ifblank\expandafter{\unit@defensearmourC}{}{%
+	\expandafter\ifblank\expandafter{\unit@defenserulesC}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@defensearmourC}}%
+	\tabularnewline%
+}%
+\end{tabular}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Offensive Characteristics
+\vspace*{-7pt}%
+\startcharacteristicstable{}%
+	\hspace*{3pt}\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	\tabularnewline%
+%\togglefalse{printoffensename}% reset
+%\expandafter\ifblank\expandafter{\unit@forceoffensenameprint}{}{\toggletrue{printoffensename}}%
+%\expandafter\ifblank\expandafter{\unit@offensenameB}{}{\toggletrue{printoffensename}}%
+%\expandafter\ifblank\expandafter{\unit@offensenameI}{}{\toggletrue{printoffensename}}%
+	\toggletrue{printoffensename}% now we walways print offense names
+	\iftoggle{printoffensename}{%
+		\nameindent\unit@offensename{}%
+	}{}%
+	&%
+	\expandafter\ifblank\expandafter{\unit@offense@At}{}{\ChVal{\unit@offense@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@Of}{}{\ChVal{\unit@offense@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@St}{}{\ChVal{\unit@offense@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offense@AP}{}{\ChVal{\unit@offense@AP}}&% TO-DO Remove 0 as default value in favour of nothing.
+	\expandafter\ifblank\expandafter{\unit@offense@Ag}{}{\ChVal{\unit@offense@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserules}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserules}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweapons}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserules}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweapons}}%
+	\expandafter\ifblank\expandafter{\unit@offensecomment}{}{%
+		\newline\unit@offensecomment{}%
+	}%
+	\tabularnewline%
+%
+\expandafter\ifblank\expandafter{\unit@offensenameB}{}{%
+	\nameindent\unit@offensenameB{}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@At}{}{\ChVal{\unit@offenseB@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@Of}{}{\ChVal{\unit@offenseB@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@St}{}{\ChVal{\unit@offenseB@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@AP}{}{\ChVal{\unit@offenseB@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseB@Ag}{}{\ChVal{\unit@offenseB@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesB}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsB}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesB}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsB}}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@offensenameC}{}{%
+	\nameindent\unit@offensenameC{}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@At}{}{\ChVal{\unit@offenseC@At}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@Of}{}{\ChVal{\unit@offenseC@Of}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@St}{}{\ChVal{\unit@offenseC@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@AP}{}{\ChVal{\unit@offenseC@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseC@Ag}{}{\ChVal{\unit@offenseC@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesC}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsC}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesC}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsC}}%
+	\expandafter\ifblank\expandafter{\unit@offenseCcomment}{}{%
+		\newline\unit@offenseCcomment{}%
+	}%
+	\tabularnewline%
+}%
+%
+\expandafter\ifblank\expandafter{\unit@offensenameI}{}{%
+	\nameindent\unit@offensenameI{}&%
+	&%
+	&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@St}{}{\ChVal{\unit@offenseI@St}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@AP}{}{\ChVal{\unit@offenseI@AP}}&%
+	\expandafter\ifblank\expandafter{\unit@offenseI@Ag}{}{\ChVal{\unit@offenseI@Ag}}&%
+	\strut\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{\expandafter\alphaorderlist\expandafter{\unit@offenserulesI}}%
+	\expandafter\ifblank\expandafter{\unit@offenseweaponsI}{}{%
+	\expandafter\ifblank\expandafter{\unit@offenserulesI}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\unit@offenseweaponsI}}%
+	\tabularnewline%
+}%
+\end{tabular}\newline%
+\vspace*{-8pt}\strut% Fixing the space after the characteristics table (else there is a bug when there is multiple offense lines)
+
+%
+%%%%%%%%%%%%%%%%%%%%%%
+% Assessing the balance of the columns to see if we should put some frames outside of the two column layout
+%%%%%%%%%%%%%%%%%%%%%%
+% Which frames are defined?
+
+
+
+\expandafter\ifblank\expandafter{\unit@options}{}{\toggletrue{thereisoptions}}%
+\expandafter\ifblank\expandafter{\unit@explicitoptions}{}{\toggletrue{thereisoptions}}%
+\expandafter\ifblank\expandafter{\unit@magic}{}{\toggletrue{thereismagic}}%
+\expandafter\ifblank\expandafter{\unit@paths}{}{\toggletrue{thereismagic}}%
+\expandafter\ifblank\expandafter{\unit@wizardconclave}{}{\toggletrue{thereiswizardconclave}}%
+\expandafter\ifblank\expandafter{\unit@mounts}{}{\toggletrue{thereismounts}}%
+\expandafter\ifblank\expandafter{\unit@commandgroup}{}{\toggletrue{thereiscommandgroup}}%
+\expandafter\ifblank\expandafter{\unit@modelrulesdef}{}{\toggletrue{thereismodelrulesdef}}%
+\expandafter\ifblank\expandafter{\unit@optionalmodelrulesdef}{}{\toggletrue{thereisoptionalmodelrulesdef}}%
+\expandafter\ifblank\expandafter{\unit@additionalframe}{}{\toggletrue{thereisadditionalframe}}%
+% Are there any non rules-def frames? If there is only one, is it options?
+\setcounter{numberofnonrulesdefframes}{0}% reset
+\iftoggle{thereismagic}{\stepcounter{numberofnonrulesdefframes}}{}%
+\iftoggle{thereiswizardconclave}{\stepcounter{numberofnonrulesdefframes}}{}%
+\iftoggle{thereismounts}{\stepcounter{numberofnonrulesdefframes}}{}%
+\iftoggle{thereiscommandgroup}{\stepcounter{numberofnonrulesdefframes}}{}%
+\iftoggle{thereisadditionalframe}{\stepcounter{numberofnonrulesdefframes}}{}%
+\iftoggle{thereisoptions}{\stepcounter{numberofnonrulesdefframes}%
+	\ifnumcomp{\value{numberofnonrulesdefframes}}{=}{1}{% then there is only options defined
+		\toggletrue{optionsistheonlynonrulesdefframe}%
+	}{}% End of \ifnumcomp
+}{}% End of \iftoggle{thereisoptions}
+% Is options long enough to put it out of the twocols layout?
+\iftoggle{thereisoptions}{%
+	\expandafter\ifblank\expandafter{\unit@options}{\toggletrue{twocolprintoptions}}{% For specific options, we don't have a way yet to count the options, so we set the two cols layout by default
+	\expandafter\countitemsinoptionslist\expandafter{\unit@options}%
+	\ifnumcomp{\value{numberofitemsinlist}}{>}{3}{\toggletrue{thereismorethanXitemsinoptions}}{}%
+	\ifboolexpr{ togl {optionsistheonlynonrulesdefframe} and togl {thereismorethanXitemsinoptions}}{%
+		\toggletrue{onecolprintoptions}
+	}{\toggletrue{twocolprintoptions}}% End ifnumcomp
+	}%
+}{}% End of \iftoggle{thereisoptions}
+% How do we handle the modelrulesdef now?
+\ifboolexpr{ test {\ifnumcomp{\value{numberofnonrulesdefframes}}{=}{0}}
+	or
+	(test {\ifnumcomp{\value{numberofnonrulesdefframes}}{=}{1}} and togl {onecolprintoptions})
+}{% Then we want rules on a one col layout
+	\iftoggle{thereismodelrulesdef}{\toggletrue{onecolprintmodelrulesdef}}{}%
+	\iftoggle{thereisoptionalmodelrulesdef}{\toggletrue{onecolprintoptionalmodelrulesdef}}{}%
+}{% Else we want them in twocols layout
+	\iftoggle{thereismodelrulesdef}{\toggletrue{twocolprintmodelrulesdef}}{}%
+	\iftoggle{thereisoptionalmodelrulesdef}{\toggletrue{twocolprintoptionalmodelrulesdef}}{}%
+}% End of \ifboolexpr
+% How do we handle the last frames?
+\setcounter{numberoftwocolframes}{0}%
+\iftoggle{thereismagic}{\stepcounter{numberoftwocolframes}\toggletrue{twocolprintmagic}}{}%
+\iftoggle{thereiswizardconclave}{\stepcounter{numberoftwocolframes}\toggletrue{twocolprintwizardconclave}}{}%
+\iftoggle{thereismounts}{\stepcounter{numberoftwocolframes}\toggletrue{twocolprintmounts}}{}%
+\iftoggle{thereisadditionalframe}{\stepcounter{numberoftwocolframes}\toggletrue{twocolprintadditionalframe}}{}%
+\iftoggle{twocolprintoptions}{\stepcounter{numberoftwocolframes}}{}%
+\iftoggle{thereiscommandgroup}{%
+	\ifnumcomp{\value{numberoftwocolframes}}{>}{0}{%
+		\toggletrue{twocolprintcommandgroup}%
+	}{%
+		\expandafter\countitemsinoptionslist\expandafter{\unit@commandgroup}%
+		\ifnumcomp{\value{numberofitemsinlist}}{>}{1}{%
+				\toggletrue{onecolprintcommandgroup}%
+		}{%
+				\toggletrue{twocolprintcommandgroup}%
+		}%
+	}%
+}{}%
+% Is there at least one thing to put in the big rules frame?
+\ifboolexpr{ test {\ifnumcomp{\value{numberofnonrulesdefframes}}{>}{0}}
+	or togl {thereismodelrulesdef}
+	or togl {thereisoptionalmodelrulesdef}
+}{\toggletrue{thereisatleastoneframe}}{}%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% If any toggles have to be manually changed
+\unit@toggles{}%
+\ifdefined\thisisascrollcompendium
+	\expandafter\ifblank\expandafter{\unit@modelrulesdef}{}{
+		\toggletrue{onecolprintmodelrulesdef}%
+		\togglefalse{twocolprintmodelrulesdef}%
+	}
+		\expandafter\ifblank\expandafter{\unit@optionalmodelrulesdef}{}{
+		\toggletrue{onecolprintoptionalmodelrulesdef}%
+		\togglefalse{twocolprintoptionalmodelrulesdef}%
+	}
+\fi
+%%%%%%%%%%%%%%%%%%%%%%
+% Rules frame
+% We print the frame if and only if there is something to put inside
+\iftoggle{thereisatleastoneframe}{%
+	%%%%%%%%%%%%%%%%%%%%%%
+	% Two columns frames, we print it if there is something to put in the frame
+	\ifboolexpr{ togl{twocolprintmodelrulesdef}
+		or togl{twocolprintoptions}
+		or togl{twocolprintmagic}
+		or togl{twocolprintwizardconclave}
+		or togl{twocolprintmounts}
+		or togl{twocolprintcommandgroup}
+		or togl{twocolprintoptionalmodelrulesdef}
+		or togl{twocolprintadditionalframe}
+	}{%
+		\setlength{\columnsep}{10pt}%
+		\setlength{\multicolsep}{0pt}%
+		\raggedcolumns%
+		\begin{multicols}{2}%
+			\iftoggle{twocolprintmodelrulesdef}{\strut\modelrulesdef{\unit@modelrulesdef}}{}%
+			\iftoggle{twocolprintmagic}{%
+				\expandafter\ifblank\expandafter{\unit@magicnoptstag}{%
+					\strut\magic{\unit@magic}{\unit@paths}{\unit@pathsnote}%
+				}{%
+					\strut\magicnoptstag{\unit@magic}{\unit@paths}{\unit@pathsnote}%	
+				}%
+			}{}%
+			\iftoggle{twocolprintoptions}{%
+				\expandafter\ifblank\expandafter{\unit@options}{%
+					\strut\explicitoptions{\unit@explicitoptions}%
+				}{%
+					\strut\options{\unit@options}%
+				}%
+			}{}%
+			\iftoggle{twocolprintwizardconclave}{\strut\printwizardconclave{\unit@wizardconclave}}{}%
+			\iftoggle{twocolprintmounts}{\strut\mounts{\unit@mounts}}{}%
+			\iftoggle{twocolprintcommandgroup}{\strut\commandgroup{\unit@commandgroup}}{}%
+			\iftoggle{twocolprintadditionalframe}{\strut\additionalframe{\unit@additionalframe}}{}%
+			\iftoggle{twocolprintoptionalmodelrulesdef}{\strut\optionalmodelrulesdef{\unit@optionalmodelrulesdef}}{}%
+		\end{multicols}%
+		% Additional space if there is a single column rule after
+		\ifboolexpr{ togl {onecolprintmodelrulesdef}
+			or togl {onecolprintoptions}
+			or togl {onecolprintmounts}
+			or togl {onecolprintcommandgroup}
+			or togl {onecolprintadditionalframe}
+			or togl {onecolprintoptionalmodelrulesdef}
+		}{\vspace*{8pt}}{}%
+	}{}%
+	%%%%%%%%%%%%%%%%%%%%%%
+	% Single column
+	\ifboolexpr{ togl {onecolprintmodelrulesdef}
+		or togl {onecolprintoptions}
+		or togl {onecolprintmounts}
+		or togl {onecolprintcommandgroup}
+		or togl {onecolprintadditionalframe}
+		or togl {onecolprintoptionalmodelrulesdef}
+	}{%
+		\vspace*{-5pt}%
+		\iftoggle{onecolprintmodelrulesdef}{\strut\modelrulesdef{\unit@modelrulesdef}}{}%
+		\iftoggle{onecolprintoptions}{%
+			\expandafter\ifblank\expandafter{\unit@options}{%
+				\strut\explicitoptionstwocols{\unit@explicitoptions}%
+			}{%
+				\strut\optionstwocols{\unit@options}%
+			}%
+		}{}%
+		\iftoggle{onecolprintmounts}{\strut\mountstwocols{\unit@mounts}}{}%
+		\iftoggle{onecolprintcommandgroup}{\strut\commandgrouptwocols{\unit@commandgroup}}{}%
+		\iftoggle{onecolprintadditionalframe}{\strut\additionalframetwocols{\unit@additionalframe}}{}%
+		\iftoggle{onecolprintoptionalmodelrulesdef}{\strut\optionalmodelrulesdef{\unit@optionalmodelrulesdef}}{}%
+	}{}%
+}{}% END of there is at least one frame
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Additional stuff
+\expandafter\ifblank\expandafter{\unit@endtext}{}{\unit@endtext}%
+
+%\expandafter\ifblank\expandafter{\unit@flavour}{}{\center{\textit{\unit@flavour}}}%
+\expandafter\ifblank\expandafter{\unit@flavour}{}{\bigskip\begin{quote}
+\small\center{\textit{\unit@flavour}}
+\end{quote}}%
+
+\vspace*{-3pt}%
+\hfill{\verysmallfontsize\textcolor{white}{d}}% Else footer goes wild for some reason with ocgcolorlinks option
+\end{minipage}%
+\vspace{12pt}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Filling the profiles database for the QRS
+\DTLnewrow{profiles}%
+\expandafter\dtbfillunitname\expandafter{\unit@name}%
+
+% QRS name defined? if yes, fill the database
+\def\tempQRSname{}
+\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\tempQRSname]%
+\expandafter\ifblank\expandafter{\unit@QRSname}{%
+	\expandafter\ifundef\expandafter{\csname \tempQRSname QRS\endcsname}{\dtbfillunitQRSname{}}{\expandafter\dtbfillunitQRSname\expandafter{\csname \tempQRSname QRS\endcsname}}%
+}{%
+	\expandafter\dtbfillunitQRSname\expandafter{\unit@QRSname}%
+}
+
+\expandafter\dtbfillhypertag\expandafter{\unithypertag}%
+\edef\categorynumberstring{\arabic{categorynumber}}%
+\expandafter\dtbfillcategorytag\expandafter{\categorynumberstring}%
+\expandafter\dtbfillsize\expandafter{\unit@size}%
+\expandafter\dtbfilltype\expandafter{\unit@type}%
+\expandafter\dtbfillscoring\expandafter{\unit@scoring}%
+%
+\expandafter\dtbfillglobalname\expandafter{\unit@globalname}%
+\expandafter\dtbfillglobal@Ad\expandafter{\unit@global@Ad}%
+\expandafter\dtbfillglobal@Ma\expandafter{\unit@global@Ma}%
+\expandafter\dtbfillglobal@Adfly\expandafter{\unit@global@Adfly}%
+\expandafter\dtbfillglobal@Mafly\expandafter{\unit@global@Mafly}%
+\expandafter\dtbfillglobal@Di\expandafter{\unit@global@Di}%
+%
+\expandafter\dtbfillglobal@Rsr\expandafter{\unit@global@Rsr}%
+\expandafter\ifblank\expandafter{\unit@global@Rsr}{}{%
+	\pdfstringdef\textwithoutformatting{\unit@global@Rsr}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\substitute\textwithoutformatting{\string\376}{}%
+	\substitute\textwithoutformatting{\string\377}{}%
+	\substitute\textwithoutformatting{\string\000}{}%
+	\expandafter\dtbfillglobal@RsrSortLabel\expandafter{\textwithoutformatting}%
+}%
+\expandafter\dtbfillglobalrules\expandafter{\unit@globalrules}%
+%
+\expandafter\dtbfillglobalnameB\expandafter{\unit@globalnameB}%
+	\expandafter\dtbfillglobalB@Ad\expandafter{\unit@globalB@Ad}%
+	\expandafter\dtbfillglobalB@Ma\expandafter{\unit@globalB@Ma}%
+	\expandafter\dtbfillglobalB@Adfly\expandafter{\unit@globalB@Adfly}%
+	\expandafter\dtbfillglobalB@Mafly\expandafter{\unit@globalB@Mafly}%
+	\expandafter\dtbfillglobalB@Di\expandafter{\unit@globalB@Di}%
+	%
+	\expandafter\dtbfillglobalB@Rsr\expandafter{\unit@globalB@Rsr}%
+	\expandafter\ifblank\expandafter{\unit@globalB@Rsr}{}{%
+		\pdfstringdef\textwithoutformatting{\unit@globalB@Rsr}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\substitute\textwithoutformatting{\string\376}{}%
+		\substitute\textwithoutformatting{\string\377}{}%
+		\substitute\textwithoutformatting{\string\000}{}%
+		\expandafter\dtbfillglobalB@RsrSortLabel\expandafter{\textwithoutformatting}%
+	}%
+	\expandafter\dtbfillglobalrulesB\expandafter{\unit@globalrulesB}%
+%
+\expandafter\dtbfillglobalnameC\expandafter{\unit@globalnameC}%
+	\expandafter\dtbfillglobalC@Ad\expandafter{\unit@globalC@Ad}%
+	\expandafter\dtbfillglobalC@Ma\expandafter{\unit@globalC@Ma}%
+	\expandafter\dtbfillglobalC@Adfly\expandafter{\unit@globalC@Adfly}%
+	\expandafter\dtbfillglobalC@Mafly\expandafter{\unit@globalC@Mafly}%
+	\expandafter\dtbfillglobalC@Di\expandafter{\unit@globalC@Di}%
+	%
+	\expandafter\dtbfillglobalC@Rsr\expandafter{\unit@globalC@Rsr}%
+	\expandafter\ifblank\expandafter{\unit@globalC@Rsr}{}{%
+		\pdfstringdef\textwithoutformatting{\unit@globalC@Rsr}%
+		\pdfsubstitute\textwithoutformatting{ }{}%
+		\dolanguagespecificsubstitute{}%
+		\substitute\textwithoutformatting{\string\376}{}%
+		\substitute\textwithoutformatting{\string\377}{}%
+		\substitute\textwithoutformatting{\string\000}{}%
+		\expandafter\dtbfillglobalC@RsrSortLabel\expandafter{\textwithoutformatting}%
+	}%
+	\expandafter\dtbfillglobalrulesC\expandafter{\unit@globalrulesC}%
+%
+\expandafter\dtbfilldefensename\expandafter{\unit@defensename}%
+\expandafter\dtbfilldefense@HP\expandafter{\unit@defense@HP}%
+\expandafter\dtbfilldefense@Df\expandafter{\unit@defense@Df}%
+\expandafter\dtbfilldefense@Re\expandafter{\unit@defense@Re}%
+\expandafter\dtbfilldefense@Arm\expandafter{\unit@defense@Arm}%
+\expandafter\dtbfilldefense@Aeg\expandafter{\unit@defense@Aeg}%
+\expandafter\dtbfillprintAeg\expandafter{\unit@printAeg}%
+\expandafter\dtbfilldefenserules\expandafter{\unit@defenserules}%
+\expandafter\dtbfilldefensearmour\expandafter{\unit@defensearmour}%
+%
+\expandafter\dtbfilldefensenameB\expandafter{\unit@defensenameB}%
+	\expandafter\dtbfilldefenseB@HP\expandafter{\unit@defenseB@HP}%
+	\expandafter\dtbfilldefenseB@Df\expandafter{\unit@defenseB@Df}%
+	\expandafter\dtbfilldefenseB@Re\expandafter{\unit@defenseB@Re}%
+	\expandafter\dtbfilldefenseB@Arm\expandafter{\unit@defenseB@Arm}%
+	\expandafter\dtbfilldefenseB@Aeg\expandafter{\unit@defenseB@Aeg}%
+	\expandafter\dtbfilldefenserulesB\expandafter{\unit@defenserulesB}%
+	\expandafter\dtbfilldefensearmourB\expandafter{\unit@defensearmourB}%
+%
+\expandafter\dtbfilldefensenameC\expandafter{\unit@defensenameC}%
+	\expandafter\dtbfilldefenseC@HP\expandafter{\unit@defenseC@HP}%
+	\expandafter\dtbfilldefenseC@Df\expandafter{\unit@defenseC@Df}%
+	\expandafter\dtbfilldefenseC@Re\expandafter{\unit@defenseC@Re}%
+	\expandafter\dtbfilldefenseC@Arm\expandafter{\unit@defenseC@Arm}%
+	\expandafter\dtbfilldefenseC@Aeg\expandafter{\unit@defenseC@Aeg}%
+	\expandafter\dtbfilldefenserulesC\expandafter{\unit@defenserulesC}%
+	\expandafter\dtbfilldefensearmourC\expandafter{\unit@defensearmourC}%
+%
+\expandafter\dtbfilloffensename\expandafter{\unit@offensename}%
+\expandafter\dtbfilloffense@Ag\expandafter{\unit@offense@Ag}%
+\expandafter\dtbfilloffense@At\expandafter{\unit@offense@At}%
+\expandafter\dtbfilloffense@Of\expandafter{\unit@offense@Of}%
+\expandafter\dtbfilloffense@St\expandafter{\unit@offense@St}%
+\expandafter\dtbfilloffense@AP\expandafter{\unit@offense@AP}%
+\expandafter\dtbfilloffenserules\expandafter{\unit@offenserules}%
+\expandafter\dtbfilloffenseweapons\expandafter{\unit@offenseweapons}%
+%
+\expandafter\dtbfilloffensenameB\expandafter{\unit@offensenameB}%
+	\expandafter\dtbfilloffenseB@Ag\expandafter{\unit@offenseB@Ag}%
+	\expandafter\dtbfilloffenseB@At\expandafter{\unit@offenseB@At}%
+	\expandafter\dtbfilloffenseB@Of\expandafter{\unit@offenseB@Of}%
+	\expandafter\dtbfilloffenseB@St\expandafter{\unit@offenseB@St}%
+	\expandafter\dtbfilloffenseB@AP\expandafter{\unit@offenseB@AP}%
+	\expandafter\dtbfilloffenserulesB\expandafter{\unit@offenserulesB}%
+	\expandafter\dtbfilloffenseweaponsB\expandafter{\unit@offenseweaponsB}%
+%
+\expandafter\dtbfilloffensenameC\expandafter{\unit@offensenameC}%
+	\expandafter\dtbfilloffenseC@Ag\expandafter{\unit@offenseC@Ag}%
+	\expandafter\dtbfilloffenseC@At\expandafter{\unit@offenseC@At}%
+	\expandafter\dtbfilloffenseC@Of\expandafter{\unit@offenseC@Of}%
+	\expandafter\dtbfilloffenseC@St\expandafter{\unit@offenseC@St}%
+	\expandafter\dtbfilloffenseC@AP\expandafter{\unit@offenseC@AP}%
+	\expandafter\dtbfilloffenserulesC\expandafter{\unit@offenserulesC}%
+	\expandafter\dtbfilloffenseweaponsC\expandafter{\unit@offenseweaponsC}%
+	\expandafter\dtbfilloffenseCcomment\expandafter{\unit@offenseCcomment}%
+%
+\expandafter\dtbfilloffensenameI\expandafter{\unit@offensenameI}%
+	\expandafter\dtbfilloffenseI@Ag\expandafter{\unit@offenseI@Ag}%
+	\expandafter\dtbfilloffenseI@St\expandafter{\unit@offenseI@St}%
+	\expandafter\dtbfilloffenseI@AP\expandafter{\unit@offenseI@AP}%
+	\expandafter\dtbfilloffenserulesI\expandafter{\unit@offenserulesI}%
+	\expandafter\dtbfilloffenseweaponsI\expandafter{\unit@offenseweaponsI}%
+% End of Unit Entry
+\ifdefined\thisisanarmybook%
+%
+\else%
+\def\@minipagerestore{}%
+\fi%
+\togglefalse{insideunitentry}
+}% END newcommand unitentry
+
+\newcommand{\unitheader}[1]{%
+	\toggletrue{insideunitentry}%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}% Else paragraph and title spaces behave differently when inside or outside a minipage - Unit entry spacing has been coded with this in mind, if you remove it, all spaces will be off
+	\defunit{#1}%
+	%
+	\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
+	%
+	%%%%%%%%%%%%%%%%%%%%%%
+	% Unit title, logos and general info
+	%
+	\def\temphypertag{}%
+	\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}[\temphypertag] % remove first the \ to the left and then the {} to the right - it counts as 1 character and then bug the hyperlink tag. It will remove the last character of the macro name if there is no {} in the end of the name key. So it should always be input as "name=\fancyunitname{},". "name=\fancyunitname," will make hyperlinks crash.
+	\xdef\unithypertag{\bookprefix\arabic{categorynumber}\temphypertag}% using the unit name macro to define an hypertag
+	\hypertarget{\unithypertag}{}%
+	\unitentryheader{}%
+	% End of Unit Entry
+	\ifdefined\thisisanarmybook%
+	%
+	\else%
+	\def\@minipagerestore{}%
+	\fi%
+	\togglefalse{insideunitentry}%
+	\vspace*{-3pt}%
+	\hfill{\verysmallfontsize\textcolor{white}{d}} % Else footer goes wild for some reason with ocgcolorlinks option
+	\end{minipage}%
+	\vspace{-17.1pt}\par%
+}

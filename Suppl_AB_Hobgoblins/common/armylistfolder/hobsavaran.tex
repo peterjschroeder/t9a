@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\hobsavaran{},
+	fluff=\hobsavaranfluff{},
+	logo=character,
+	cost=\newrule{40},
+	unitsize=\newrule{1},
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=\newrule{4},
+	global@Ma=\newrule{8},
+	global@Di=\newrule{7},
+	globalrules=\newrule{{\textbf{\loyallieutenant{}}, \hobcohesion{}}},
+	defense@HP=\newrule{2},
+	defense@Df=\newrule{4},
+	defense@Re=\newrule{4},
+	defense@Arm=\newrule{0},
+	defensearmour=\newrule{{\infernalarmour{}, \shield{}}},
+	offensename=\newrule{\hobsavaran{}},
+	offense@Ag=\newrule{3},
+	offense@At=\newrule{3},
+	offense@Of=\newrule{4},
+	offense@St=\newrule{4},
+	offense@AP=\newrule{1},
+	offenserules=\newrule{{\ironrain{}, \weaponmaster{}, \bow{} (4+)}},
+	options={%
+		\newrule{\pw{}}=\newrule{5},
+		\newrule{\lance{}}=\newrule{10},
+		\newrule{\gw{}}=\newrule{10},
+		\newrule{\flintlockaxe{} (3+)}=\newrule{15},
+		\onechoiceonlyACO{%
+		\newrule{\bow{} (2+)}=\newrule{5},
+		\newrule{\blunderbuss{} (5+)}=\newrule{5},
+		},
+	},
+	mounts={%
+		\newrule{\mountainwolf{}}=\newrule{15},
+		\newrule{\beardog{}}=\newrule{25},
+		\newrule{\plainstusker{}}=\newrule{125},
+		\newrule{\colossalcamel{}}=\newrule{40},
+	},
+	modelrulesdef={%
+		\modelruledef{\loyallieutenant{}}{\ruletype{\newrule{\universalrule{}}}\loyallieutenantdef{}}%
+	},
+}% END UNIT ENTRY

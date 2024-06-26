@@ -1,0 +1,65 @@
+
+% Overcharge description
+
+\newcommand{\overchargedescription}[1]{%
+	\textbf{\trialandterror{}}\Scolon{} #1%
+}
+
+% Ruinous Dictator
+
+\newcommand{\additionaloptionalmodelrulesdef}[1]{%
+	\DTLifdbexists{unitruleslist}{\DTLcleardb{unitruleslist}}{\DTLnewdb{unitruleslist}}%
+	#1%
+	\DTLifdbempty{unitruleslist}{}{%
+		\DTLsort*{sortlabel}{unitruleslist}% Sort list
+		\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+			\DTLforeach*{unitruleslist}{\ruletext=ruletext,\nameoftherule=name}{% Print back the ordered list
+				\item[\nameoftherule{}\spacebeforecolon{}:]\ruletext%
+			}%
+		\end{description}%
+		\DTLcleardb{unitruleslist}%
+	}	
+}
+
+% Trial and Terror QRS
+
+\newcommand{\starttrialandterrorQRStable}{%
+	\begin{center}%
+	\alternaterowcolors\normalfontsize%
+	\begin{tabular}{m{3.3cm}m{9cm}}%
+	\textbf{\shootingweapon} & \textbf{\trialandterror} \tabularnewline
+}
+
+\newcommand{\closetrialandterrorQRStable}{%
+	\end{tabular}%
+	\end{center}%
+}
+
+
+%%% Arena Beast
+
+\newcommand{\pitmasterprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\pitmaster{}%
+	&%
+	{\ChVal{2}}&%
+	{\ChVal{3}}&%
+	{\ChVal{4}}&%
+	{\ChVal{1}}&%
+	{\ChVal{4}}&%
+	\halberd{}%
+	\tabularnewline%
+	\end{tabular}%
+}

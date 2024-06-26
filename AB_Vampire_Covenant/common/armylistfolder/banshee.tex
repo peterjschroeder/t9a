@@ -1,0 +1,35 @@
+
+\unitentry{%
+	name=\banshee{},
+	logo=character,
+	secondlogo=tower,
+	categorynote={%
+		\twocategoriesnote{\characters}{\thesuffering} %
+	},
+	cost=155,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=5,
+	global@Rsr=1,
+	globalrules={\undead{},\ashestoashes{},\notaleader{},\fear{},\terror{},\lighttroops{},\ghostlyform{},\fearless{}},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+),{\aegis{} (3+, \againstnonmagicalattacks{})}},
+	offensename=\banshee{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\reaper{},\hidebf{\wailofwoe{}}},
+	modelrulesdef={%
+		\modelruledef{\wailofwoe}{\ruletype{\specialattack}\wailofwoedef}
+	},
+}% END UNIT ENTRY

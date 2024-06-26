@@ -1,0 +1,31 @@
+
+\unitentry{%
+	name=\mountainpteradon{},
+	logo=character,
+	categorynote=\mountainpteradonnote{},
+	maxmountsperarmy=2,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=\ascharacter{},
+	globalrules={\fly{8}{16},\lighttroops{},\vanguard{},\textbf{\aerialassault}},
+	defense@HP=3,
+	defense@Df=\ascharacter{},
+	defense@Re=3,
+	defense@Arm=\ascharacter{}+1,
+	defenserules=\hardtarget{} (1),
+	offensename=\mountainpteradon{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={\harnessed{}},
+	modelrulesdef={%
+		\modelruledef{\aerialassault}{\ruletype{\specialattack}\aerialassaultdef}%
+	},
+} % END UNIT ENTRY

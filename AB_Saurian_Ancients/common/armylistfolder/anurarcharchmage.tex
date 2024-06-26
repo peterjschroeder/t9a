@@ -1,0 +1,47 @@
+{\edef\tempotitle{\labels@optionalmodelrulesdef}
+	\renewcommand{\labels@optionalmodelrulesdef}{\tempotitle{}\spacebeforecolon{}: \arcanemasteries{}}
+	\unitentry{%
+		name=\anurarcharchmage{},
+		logo=character,
+		cost=\newrule{470},
+		unitsize=1,
+		maxunitsperarmy=1,
+		type=\infantry{},
+		size=\heightstandard{},
+		basesize=50\timess{}50,
+		global@Ad=6,
+		global@Ma=12,
+		global@Di=2,
+		globalrules={\swiftreform{},\communalbond{},\tall{},\textbf{\closelyguarded{}},\textbf{\graspoftheimmortal{}},\minimised{} (\disciplinetest{}),\wizardmaster{}},
+		defense@HP=4,
+		defense@Df=1,
+		defense@Re=4,
+		defense@Arm=0,
+		defenserules={\fortitude{} (5+),\cannotbestomped{}},
+		offensename=\anurarch{},
+		offense@At=1,
+		offense@Of=1,
+		offense@St=1,
+		offense@AP=0,
+		offense@Ag=1,
+		paths={\alchemy{}=alchemy,\evocation{}=evocation,\druidism{}=druidism,\divination{}=divination},
+		modelrulesdef={%
+			\modelruledef{\closelyguarded{}}{\ruletype{\universalrule{}}\closelyguardeddef{}}
+		},
+		options={%
+			\specialitemsallowance{}=\upto{}200,
+			\arcanemasteriesmustchooseonlyone{}=\nolimit{},
+		},
+		mounts={%
+			\anurarchwardens{}=65,
+		},
+		endtext={%
+			\arcanemasterieslist{
+				\subimport{../masteriesfolder/}{eideticmastery.tex}
+				\subimport{../masteriesfolder/}{forbiddenmastery.tex}
+				\subimport{../masteriesfolder/}{eternalmastery.tex}
+				\subimport{../masteriesfolder/}{veilmastery.tex}
+			}
+		},
+	} % END UNIT ENTRY
+}

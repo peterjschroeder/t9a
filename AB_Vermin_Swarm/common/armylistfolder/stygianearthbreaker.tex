@@ -1,0 +1,30 @@
+
+\unitentry{%
+	name=\stygianearthbreaker{},
+	logo=monster,
+	cost=280,
+	unitsize=1,
+	maxunitsperarmy=2,
+	categorynote=,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=6,
+	global@Ma=6,
+	global@Di=6,
+	globalrules={\callous{},\strider{},\stubborn{},\hidebf{\undergroundarrival{}}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=5,
+	defense@Arm=5,
+	offensename={\stygianearthbreaker{}},
+	offense@At=,
+	offense@Of=,
+	offense@St=6,
+	offense@AP=4,
+	offense@Ag=2,
+	offenserules={\grindattacks{} (\XDthree{3}),\impacthits{} (\XDthree{2}),\devastatingcharge{} (\fear{})},
+	modelrulesdef={%
+		\modelruledef{\undergroundarrival}{\ruletype{\universalrule}\undergroundarrivaldef}
+	},
+}%

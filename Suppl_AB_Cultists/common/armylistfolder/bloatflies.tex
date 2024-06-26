@@ -1,0 +1,52 @@
+
+\unitentry{%
+	name=\bloatflies{},
+	logo=bird,
+	secondlogo=summoned,
+	categorynote=\twocategoriesnote{\aves}{\summoneddaemons}\newline\summonedcategorynote{},
+	cost=\newrule{325},
+	unitsize=3,
+	maxunitsize=6,
+	costpermodel=100,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}75,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=6,
+	global@Mafly=14,
+	global@Di=8,
+	globalrules={\supernal{},\fearless{},\lighttroops{},\fly{6}{14},\fear{}},
+	defense@HP=4,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=,
+	printAeg=defined,
+	defenserules={\boatfliesaegis{},\fortitude{} (5+)},
+	offensename=\bloatfly{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=3,
+	offenserules={\hidebf{\acidblood}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	modelrulesdef={%
+		\modelruledef{\acidblood}{\ruletype{\specialattack}\acidblooddef}
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=gluttony,hypertag=broodmother,name=\broodmother{},cost=18\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=6\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=unhingingjaw,name=\unhingingjaw{},cost=8\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=dextroustentacles,name=\dextroustentacles{},cost=5\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=6\permodel{}}
+		}
+	},
+}

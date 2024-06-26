@@ -1,0 +1,7 @@
+Install pdfsizeopt in "C:\pdfsizeopt\" as requested by pdfsizeopt readme.
+Add the "compress.cmd" script in the same folder
+
+In TeXmaker, go to Settings>Configure TeXMaker. In the command panel, replace an unused command, metapost for example, with the following command:
+"C:/pdfsizeopt/compress.cmd" %.pdf >%.pso 2>&1
+
+You may want to define a shortcut to compress. In the Shortcuts panel of Settings>Configure TeXMaker, give Mpost (if you chose to replace metapost) your favorite shortcut. Be sure to verify this shortcut wasn't already used (or suppress the former usage).

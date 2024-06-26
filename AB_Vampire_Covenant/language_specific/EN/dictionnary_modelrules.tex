@@ -1,0 +1,82 @@
+% Army Model Rules Names
+
+\newcommand{\reanimated}{Reanimated}
+\newcommand{\reanimatedInitials}{Rea}
+\newcommand{\masterofundeath}{Master of Undeath}
+
+\newcommand{\ashestoashes}{Ashes to Ashes}
+\newcommand{\gatesofthenetherworld}{Gates of the Netherworld}
+\newcommand{\awaken}{Awaken}
+\newcommand{\necromanticaura}{Necromantic Aura}
+\newcommand{\thedeadarise}{The Dead Arise}
+\newcommand{\ghostlyform}{Ghostly Form}
+\newcommand{\autonomous}{Autonomous}
+
+\newcommand{\reaper}{Reaper}
+
+\newcommand{\vampiric}{Vampiric}
+\newcommand{\unholyappetite}{Unholy Appetite}
+
+
+% Army Model Rules Texts
+
+\newcommand{\reanimateddef}{%
+	Some unit profiles contain the additional Characteristic Reanimated, shortened \reanimatedInitials{}, which determines the number of Health Points Raised with \spellformat{\arise}{\hereditaryspell{}} and \spellformat{\thedeadarise}{\boundspell{}}.%
+}
+
+
+\newcommand{\ashestoashesdef}{%
+	At the start of each friendly Player Turn after the army’s General has been removed as a casualty, every unit with one or more models with Ashes to Ashes loses 1 Health Point, with no saves of any kind allowed. These Health Point losses are allotted following the rules for Unstable, except that they can never be allotted to models that do not have Ashes to Ashes.
+}
+
+\newcommand{\gatesofthenetherworlddef}{%
+	Whenever a model with Gates of the Netherworld successfully casts \spellformat{\arise}{}, after resolving the spell's effect, choose a friendly unit with a Reanimated value and within \distance{12} of the Caster. This unit, or a single Character inside the unit, Raises 1 Health Point. No unit can be chosen more than twice per Magic Phase by Gates of the Netherworld.%
+}
+
+\newcommand{\awakendef}{%
+	The model can Raise Health Points above a unit's starting size for the units stated within brackets. However, units cannot be increased beyond twice their starting size or beyond the maximum unit size written in their unit entry. A unit's starting size is the size of the unit as written on the Army List or the size of the unit when it is Summoned.%
+}
+
+\newcommand{\necromanticauradef}{%
+	All friendly units within \distance{6} of one or more models with Necromantic Aura reduce the number of Health Point losses caused by \ashestoashes{} and Unstable by 1.%
+}
+
+\newcommand{\thedeadarisedef}{%
+	\itemrestriction{\zerotoXperarmy{1}.}%
+The model can cast \textbf{\spellformat{\thedeadarise}{}} as a Bound Spell with Power Level (4/8).\DTLpar%
+\textbf{\thedeadarise}: \range{12}, Type \ground{}, Duration \instant{}.\newline
+Summon a \skeletons{} or \zombies{} unit (declare which before casting) with a number of Health Points corresponding to the Reanimated value of the unit. All models \textbf{must} be placed within the spell's range, with at least one model touching the target point. All upgrades except Command Group Options are allowed. The unit loses Scoring.%
+}
+
+\newcommand{\ghostlyformdef}{%
+	The model gains \textbf{\ghoststep} and \textbf{\magicalattacks}. \rnf{} models with Ghostly Form can only be joined by Characters with Ghostly Form.%
+}
+
+\newcommand{\autonomousdef}{%
+	Undead units consisting entirely of models with Autonomous may perform March Moves as normal, even when outside the range of Commanding Presence of any friendly models. The unit \textbf{must} still pass a Discipline Test in order to do so if within \distance{8} of non-Fleeing enemy units.%
+}
+
+\newcommand{\reaperdef}{%
+	A unit consisting entirely of models on foot with Reaper:%
+	\begin{itemize}%
+		\item Ignores all other units during Advance Moves and March Moves , but it \textbf{must} follow the Unit Spacing rule at the end of its move.\DTLpar%
+		\item Can make a Sweeping Attack. The enemy unit suffers 1 hit with Strength 5, Armour Penetration 10, and Magical Attacks for each model with Reaper in the unit.%
+	\end{itemize}%
+}
+
+\newcommand{\vampiricdef}{%
+	At the end of each Melee Phase, check and resolve the following effects for all models with Vampiric:%
+	\begin{itemize}%
+		\item \textbf{Character} -- If at least one attack with Vampiric made by the Character caused an unsaved wound against enemy units, the Character can make a single Vampiric roll. If successful, the Character Recovers a single Health Point.%
+		\item \textbf{\rnf{} model} -- If at least one attack with Vampiric made by a \rnf{} model in the unit caused an unsaved wound against enemy units, the unit can make a single Vampiric roll. If successful, the unit Raises a single Health Point.%
+	\end{itemize}%
+	A Vampiric roll is successful if the D6 scores X+, where X is the number stated within brackets. Use only the best value if a unit or Character has multiple model parts with this Attack Attribute that each caused unsaved wounds.%
+}
+
+\newcommand{\unholyappetitedef}{%
+	After a Round of Combat in which at least one attack with Unholy Appetite caused an unsaved wound, all attacks with Unholy Appetite from models in the same unit \textbf{must} reroll failed to-hit rolls until the end of the next Player Turn.%
+}
+
+\newcommand{\meetingofmindsvcdef}{
+	The model gains \textbf{\necromanticaura{}}.
+}

@@ -1,0 +1,60 @@
+
+\unitentry{%
+	name=\kestrelknights{},
+	logo=special,
+	cost=270,
+	unitsize=3,
+	maxunitsize=6,
+	costpermodel=63,
+	maxunitsperarmy=2,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=9,
+	global@Mafly=18,
+	global@Di=9,
+	globalrules={\fly{9}{18},\feignedflight{},\forestwalker{},\vanguard{},\lighttroops{}},
+	defense@HP=2,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=1,
+	defenserules={\hardtarget{} (1)},
+	defensearmour={\la{},},
+	offensename=\kestrelknight{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=5,
+	offenserules={\lightningreflexes{},\devastatingcharge{+1 \At{}}},
+	offenseweapons={\sylvanlance{}},
+	offensenameB=\kestrel{},
+	offenseB@At=2,
+	offenseB@Of=5,
+	offenseB@St=4,
+	offenseB@AP=2,
+	offenseB@Ag=4,
+	offenserulesB={\harnessed{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=10\permodel{},
+			\skirmisher{} \wordand{} \sylvanlongbow{} (3+)=\free{},
+		}},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+		\alphaorderstickto{\standardbearer{}=11}**\suboptionindent{}\optionline%
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+	},
+	scrolloptionalmodelrulesdef={%
+		\modelruledef{\sylvanlance{}}{\ruletype{\closecombatweapon}\sylvanlancedef}
+		\modelruledef{\sylvanlongbow{}}{\ruletype{\shootingweapon}\sylvanlongbowdef}
+	},
+}% END UNIT ENTRY

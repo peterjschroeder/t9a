@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\colossus{},
+	logo=monster,
+	cost=400,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	global@Rsr=1,
+	globalrules={\ensouledstatue{},\fearless{},\undead{}},
+	defense@HP=5,
+	defense@Df=4,
+	defense@Re=6,
+	defense@Arm=3,
+	defensearmour={\la{}},
+	offensename=\colossus{},
+	offense@At=6,
+	offense@Of=4,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=2,
+	offenserules={\grindattacks{\Dthree{}}},
+	options={%
+		\onechoiceonlyACO{%
+			\gw{}=5,
+			\pw{}=25,
+			\textbf{\giantaspenbow}  (5+) (\zerotoonemodelsperarmy{})=15,
+			\textbf{\scalesofdestiny}=\free{},
+		},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\giantaspenbow}{\ruletype{\artilleryweapon}{\giantaspenbowdef}}
+		\modelruledef{\scalesofdestiny}{\ruletype{\closecombatweapon}{\scalesofdestinydef}}%
+	},
+} % END UNIT ENTRY

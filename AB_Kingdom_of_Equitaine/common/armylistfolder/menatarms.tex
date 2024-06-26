@@ -1,0 +1,57 @@
+
+\unitentry{%
+	name=\menatarms{},
+	logo=special,
+	cost=\newrule{170},
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=\newrule{14},
+	scoring=yes,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\scoring{},\hidebf{\stalwartdefense{}}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\ha{}, \shield{}},
+	defenserules={},
+	defense@Aeg=6+,
+	offensename=\manatarms{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	options={%
+		\mustchooseonechoiceonly{
+				\textbf{\knightsforlorn{}}=\newrule{1}\permodel{},
+				\textbf{\ordowardens{}}=\newrule{1}\permodel{},
+				\textbf{\avowedarmsmen}=\free{},
+		},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\alphaorderstickto{\champion{}=10}\suboptionindent{}\knightbanneret{} \only\knightsforlorn{}=15,	
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	modelrulesdef={
+		\modelruledef{\stalwartdefense}{\ruletype{\universalrule}\stalwartdefensedef}
+	},
+	optionalmodelrulesdef={
+		\modelruledef{\knightsforlorn}{\ruletype{\universalrule}\knightsforlorndef}
+		\modelruledef{\ordowardens}{\ruletype{\universalrule}\ordowardensdef}
+		\modelruledef{\avowedarmsmen}{\ruletype{\universalrule}\avowedarmsmendef}
+	},
+	toggles={%
+		\toggletrue{twocolprintcommandgroup}%
+		\togglefalse{onecolprintcommandgroup}%
+	},
+}

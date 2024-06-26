@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\treefatherancient{},
+	logo=character,
+	cost=445,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=75\timess{}50,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{},\stubborn{},\treesinging{},\sylvanspirit{}},
+	defense@HP=6,
+	defense@Df=4,
+	defense@Re=6,
+	defense@Arm=4,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\treefatherancient{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=2,
+	offenserules={\crushattack{}},
+	offenseweapons={\impalingroots{} (4+)},
+	magic={\wizardapprentice{}=25,\wizardadept{}=120,\wizardmaster{}=305},
+	paths={\druidism{}=druidism,\divination{}=divination},
+	options={%
+		\asingleaspectofnature{}=\nolimit{},
+		**\optionline,
+		\asingleartefact{}\refsymbol{} \only{\wizard}=\nolimit{},
+		**\optionline,
+		\refsymbolbis{}\cannottakedragonfiregem{}=,
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\treesinging{}}{\ruletype{\universalrule}\treesingingdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+		\modelruledef{\impalingroots{}}{\ruletype{\shootingweapon}\impalingrootsdef}
+	},
+} % END UNIT ENTRY

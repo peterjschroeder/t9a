@@ -1,0 +1,113 @@
+% Army Model Rule Names
+
+\newcommand{\warcry}{War Cry!}
+
+\newcommand{\greenhideraces}{Greenhide Races}
+\newcommand{\greenhiderace}{Greenhide Race}
+\newcommand{\commonorc}{Common Orc}
+\newcommand{\ironorc}{Iron Orc}
+\newcommand{\feralorc}{Feral Orc}
+\newcommand{\commongoblin}{Common Goblin}
+\newcommand{\cavegoblin}{Cave Goblin}
+\newcommand{\forestgoblin}{Forest Goblin}
+
+\newcommand{\oiitbites}{Oi it bites!}
+\newcommand{\nets}{Nets}
+\newcommand{\netted}{Netted}
+\newcommand{\shambolic}{Shambolic}
+\newcommand{\runningamok}{Running Amok!!}
+\newcommand{\ricochet}{Ricochet}
+
+\newcommand{\borntofight}{Born to Fight}
+\newcommand{\venomousfangs}{Venomous Fangs}
+
+\newcommand{\mammothstabber}{Mammoth Stabber}
+
+
+% Greenhide Races
+
+\newcommand{\greenhideracesdef}{%
+	Certain units in this Army Book belong to or must choose a \greenhiderace{}. A model with a \greenhiderace{} gains the rules detailed below. In addition, units that choose a \greenhiderace{} use the Defensive and Offensive Characteristics of the corresponding \greenhiderace{} (if specified) and gain access to specific options, as detailed in each unit entry.%
+}%
+
+\newcommand{\commonorcdef}{%
+	The model part gains \textbf{\borntofight{}}.%
+}
+
+\newcommand{\feralorcdef}{%
+	The model part gains \textbf{\battlefocus{}} and \textbf{\borntofight{}}. The model gains \textbf{\aegis{6+}}, \textbf{\fearless{}}, and \textbf{\frenzy{}}.%
+}
+
+\newcommand{\ironorcdef}{%
+	The model part gains \textbf{\borntofight{}} and \textbf{\weaponmaster{}}. The model gains \textbf{\fearless{}}.%
+}
+
+\newcommand{\commongoblindef}{%
+	The model gains \textbf{\insignificant{}}.%
+}
+
+\newcommand{\cavegoblindef}{%
+	The model gains \textbf{\insignificant{}}.%
+}
+
+\newcommand{\forestgoblindef}{%
+	The model gains \textbf{\insignificant{}} and \textbf{\strider{\forest{}}}.%
+}
+
+% Army Model Rule Texts
+
+\newcommand{\warcrydef}{%
+	Once per game, at the start of a Player Turn, an Orcs and Goblins \general{} on the Battlefield may utter a \warcry{}. All friendly units gain +\distance{1} \AdvanceRate{}, +\distance{2} \MarchRate{}, and \textbf{\swiftstride{}} until the end of the Player Turn.%
+}
+
+\newcommand{\oiitbitesdef}{%
+	Units with models with \oiitbites{} cannot be joined by \characters{}.%
+}
+
+\newcommand{\netsdef}{%
+	At the start of each Round of Combat that the model's unit is fighting, each unit with one or more models with \nets{} must choose one enemy unit in base contact and roll a \Dsix{}. On 2+, the chosen unit is \netted{}. On a roll of \result{1}, the unit with \nets{} is \netted{}. Units \netted{} one or more times suffer \minuss{}1 \Strength{} and \minus{}1 \ArmourPenetration{} until the end of the Round of Combat.%
+}
+
+\newcommand{\shambolicdef}{%
+	Units with \shambolic{} models cannot be joined by \characters{}. When rolling the distance of a \randommovement{} move with a \shambolic{} unit, if all the dice show the same result, the unit loses \Dthree{} \HealthPoints{} (with no saves of any kind allowed), and then moves in a random direction instead of the chosen direction. When units with \shambolic{} touch the Board Edge, stop \distance{1} away from \impassableterrain{}, or come into contact with or move inside any Terrain Feature other than Open Terrain or Hills, all models in the unit must take a Dangerous Terrain (2) Test.%
+}
+
+\newcommand{\runningamokdef}{%
+	When a unit with \runningamok{} moves using \randommovement{}, it must move in a random direction instead of the chosen direction.%
+}
+
+\newcommand{\figMGa}{a)}
+\newcommand{\figMGb}{b)}
+\newcommand{\figMGHits}{Hits:}
+\newcommand{\figMGDistance}{Distance:}
+
+\newcommand{\ricochetdef}{%
+	Models with \ricochet{} cannot Charge enemy units and can move through all units (friend and foe) as if they were Open Terrain. If its move is ended in contact with another unit, or within \distance{1} of a unit that it has moved through, its move distance is extended; keep moving the model in the same direction (still moving through other units) until it can be placed \distance{1} away from all other units. If, after an extended move, the model would end up within \distance{1} of \impassableterrain{} or in contact with the Board Edge, immediately remove the model as a casualty. If there is no legal position where it follows the Unit Spacing rule when backtracking the model's move (based on the rules for \randommovement{}), immediately remove the model as a casualty.\DTLpar%
+	If a unit's Unit Boundary is contacted by a \ricochet{} model's initial move (i.e. excluding an extension of the move distance needed to clear units), this unit suffers X hits, where X corresponds to the value given in brackets (after completing the move). For this purpose, all units Engaged in the same Combat are treated as a single unit. The owner of the model with \ricochet{} distributes the hits between all units Engaged in this Combat as evenly as possible (after this, follow the normal rules for distributing hits to models within each unit).\DTLpar%
+	Enemy units cannot Charge models with \ricochet{}. Units (friend and foe) ignore models with \ricochet{} regarding the Unit Spacing rule for all movement (including \ambush{}). In addition, they can move onto and through models with \ricochet{}. However, if a unit moves into contact with a \ricochet{} model, it immediately (before completing the move) suffers X+\Dsix{} hits, and the model with \ricochet{} is removed as a casualty. This is not triggered by moves that can move through units normally (e.g. Flying Movement), unless the move is ended in contact (note that units can move into contact with multiple \ricochet{} models simultaneously).\DTLpar%
+	Hits are resolved with the \Strength{} and \ArmourPenetration{} of the model with \ricochet{}.%
+}
+
+\newcommand{\ricochetcaptionone}{%
+	The \ricochet{} model cannot be placed \distance{1} behind unit B because unit A is too close. The model is thus moved through both units following its original direction. Only unit B suffers the \ricochet{} hits as unit A is not within the initial move.%
+}
+
+\newcommand{\ricochetcaptiontwo}{%
+	After moving through units, the \ricochet{} model comes into contact with \impassableterrain{} and is thus removed as a casualty. The \ricochet{} model moves through at least one unit Engaged in the Combat, inflicting 5 hits in total, which are distributed evenly amongst all units in the combat.%
+}
+
+\newcommand{\borntofightdef}{%
+	The model part's Close Combat Attacks gain +1 \Strength{} and +1 \ArmourPenetration{} during a Round of Combat:%
+	\begin{itemize}
+		\item If it is the First Round of Combat. 
+		\item Or if the model part's unit is Steadfast while not suffering from Disrupted Ranks at the start of the Round of Combat.
+	\end{itemize}
+}
+
+\newcommand{\venomousfangsdef}{%
+	Before rolling to hit, nominate one Close Combat Attack from a model part with \venomousfangs{}. This attack gains \textbf{\multiplewounds{\Dthree{}+1}{}}. If the attack is turned into more than one hit (e.g. a hit with \battlefocus{}), only a single hit, chosen by the owner, gains the effect.%
+}
+
+\newcommand{\mammothstabberdef}{%
+	If the unit is Charging and has at least one Full Rank, nominate a single \rnf{} model in the unit at Initiative Step 10. This model gains \textbf{\impacthits{\Dthree{}}} until the end of the Round of Combat. These \impacthits{} are resolved with \Strength{} 5, \ArmourPenetration{} 2, and \textbf{\multiplewounds{\Dthree{}+1}{against \toweringpresence{}}}.%
+}

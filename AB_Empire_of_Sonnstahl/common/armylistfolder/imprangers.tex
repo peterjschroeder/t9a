@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\imprgrs{},
+	logo=pistols,
+	cost=90,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=11,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\hidebf{\frontiersmen{}},\lighttroops{},\scout{},\skirmisher{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules=\hardtarget{} (1),
+	offensename=\imprgr{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons=\bow{} (4+),
+	offenserules=\hidebf{\beasthunters{}},
+	commandgroup={%
+		\champion{}=10,
+	},
+	modelrulesdef={%
+	\modelruledef{\frontiersmen}{\ruletype{\universalrule}{\frontiersmendef}}
+	\modelruledef{\beasthunters}{\ruletype{\attackattributeshooting}{\beasthuntersdef}}
+	},
+} % END UNIT ENTRY

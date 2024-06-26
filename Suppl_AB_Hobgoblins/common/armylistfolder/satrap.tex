@@ -1,0 +1,59 @@
+
+\unitentry{%
+	name=\satrap{},
+	fluff=\satrapfluff{},
+	logo=character,
+	cost=\newrule{135},
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\hobcohesion},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+    defensearmour={\infernalarmour{}},
+	offensename=\satrap{},
+	offense@Ag=\newrule{5},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offenserules={\ironrain{}, \newrule{\weaponmaster{}}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\cavalrycommander{}}=\newrule{\free},
+			\textbf{\archerycommander{}}=\newrule{15},
+			\textbf{\shah{}*}=\newrule{25},
+		}\\
+	\shahrestriction{}	
+},
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\shield{}=5,
+		\pw{}=5,
+		\lance{}=10,
+		\gw{}=10,
+		\flintlockaxe{} (3+)=15,
+		\onechoiceonlyACO{%
+		\bow{} (2+)=5,
+		\blunderbuss{} (5+)=10,
+		},
+	},
+	mounts={%
+		\mountainwolf{}=\newrule{45},
+		\beardog{}=70,
+		\plainstusker{}=\newrule{210},
+		\newrule{\royalgogyag{}}=\newrule{200},
+		\newrule{\colossalcamel{}}=\newrule{65},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\cavalrycommander{}}{\ruletype{\newrule{\universalrule{}}}\cavalrycommanderdef{}}%
+		\modelruledef{\archerycommander{}}{\ruletype{\newrule{\universalrule{}}}\archerycommanderdef{}}%
+		\modelruledef{\shah{}}{\ruletype{\newrule{\universalrule{}}}\shahdef{}}%
+	},
+}% END UNIT ENTRY

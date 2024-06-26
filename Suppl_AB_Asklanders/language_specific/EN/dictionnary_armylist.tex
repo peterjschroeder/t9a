@@ -1,0 +1,214 @@
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\asklanderchief}{\AA{}sklander Chief}
+
+\newcommand{\seidhkennar}{Seidhkennar}
+
+
+% MOUNTS
+
+\newcommand{\blackstallion}{Black Stallion}
+
+\newcommand{\darkchariot}{Dark Chariot}
+\newcommand{\blacksteed}{Black Steed}
+
+\newcommand{\wardais}{War Dais}
+
+\newcommand{\shadowchaser}{Shadow Chaser}
+
+\newcommand{\chimera}{Chimera}
+
+\newcommand{\wastelandbehemoth}{Wasteland Behemoth}
+
+
+% CORE
+
+\newcommand{\asklanders}{\AA{}sklanders}
+\newcommand{\asklander}{\AA{}sklander}
+
+\newcommand{\warhounds}{Warhounds}
+\newcommand{\warhound}{Warhound}
+
+
+% SPECIAL
+
+\newcommand{\warrior}{Warrior}
+\newcommand{\warriors}{Warriors}
+
+\newcommand{\asklanderflayers}{\AA{}sklander Flayers}
+\newcommand{\asklanderflayer}{\AA{}sklander Flayer}
+
+\newcommand{\asklanderhorsemen}{\AA{}sklander Horsemen}
+\newcommand{\asklanderhorseman}{\AA{}sklander Horseman}
+
+\newcommand{\icetrolls}{Ice Trolls}
+\newcommand{\icetroll}{Ice Troll}
+
+\newcommand{\wargs}{Wargs}
+\newcommand{\warg}{Warg}
+
+\newcommand{\huskarls}{Huskarls}
+\newcommand{\huskarl}{Huskarl}
+
+\newcommand{\berserkers}{Berserkers}
+\newcommand{\berserker}{Berserker}
+
+
+% LEGENDARY BEASTS
+
+\newcommand{\kraken}{Kraken}
+\newcommand{\handler}{Handler}
+
+\newcommand{\maraudinggiant}{Marauding Giant}
+
+\newcommand{\joetunn}{J\"otunn}
+
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Asklander Chief
+
+\newcommand{\deedsnotwords}{Deeds not Words}
+\newcommand{\deedsnotwordsdef}{%
+	The model part gains \textbf{\battlefocus} and \textbf{\hatred} while joined to one or more \rnf{} models with \asklanderbattlefever{}.%
+}
+
+\newcommand{\jarl}{Jarl}
+\newcommand{\jarldef}{%
+	The \AA{}sklander Chief gains +2 Attack Value and may take Special Items for an additional 50 pts.%
+}
+
+\newcommand{\allowanceifgeneral}{If General}
+
+\newcommand{\longshipraid}{Longship Raid}
+\newcommand{\longshipraiddef}{%
+	The model gains \textbf{\ambush{}}. During step 8 of the Pre-Game Sequence, nominate a unit of \AA{}sklanders, Huskarls, or Berserkers that includes no more than 30 models if \AA{}sklanders and no more than 20 models if Huskarls or Berserkers. This unit gains \textbf{\ambush{}}, with the following exceptions:
+	\begin{itemize}%
+		\item The model with Longship Raid \textbf{must} either be deployed in this unit or Ambush in this unit.%
+		\item Units using Longship Raid do not roll for Ambush but automatically enter the Battlefield in the owner's second Player Turn.%
+		\item \removedrule{All units using Longship Raid \textbf{must} arrive from the same Board Edge.}%
+	\end{itemize}%
+}
+
+%% MOUNTS
+
+% Dark Chariot
+\newcommand{\chassis}{Chassis}
+
+% Chimera
+\newcommand{\wings}{Wings}
+\newcommand{\wingsdef}{%
+	The model's March Rate is \textbf{set} to \distance{16} and it gains \textbf{\fly{8}{16}} and \textbf{\lighttroops{}}.%
+}
+
+% Wasteland Behemoth
+\newcommand{\additionallimbs}{Additional Limbs}
+\newcommand{\additionallimbsdef}{%
+	The model's March Rate is \textbf{set} to \distance{20} and its Armour is \textbf{set} to 3.%
+}
+
+
+%% CORE
+
+% Warhounds
+\newcommand{\releasethehounds}{Release the Hounds}
+\newcommand{\releasethehoundsdef}{%
+	One use only. May be activated at the start of a friendly Player Turn (all models in a unit \textbf{must} activate this rule at the same time). The model gains \distance{+6} March Rate and \textbf{\devastatingcharge{+1 \At{}, +1 \St{}}} during this Player Turn.%
+}
+
+
+%% SPECIAL
+
+% Warriors
+\newcommand{\hellforgedarmour}{Hell-Forged Armour}
+\newcommand{\hellforgedarmourdef}{%
+	\pa{}. The wearer's model gains \textbf{\aegis{} (5+, against Toxic Attacks)}.%
+}
+\newcommand{\spikedshield}{Spiked Shield}
+\newcommand{\spikedshielddef}{%
+	\itemrestriction{Models on foot only.}
+	Shield. For each \textbf{successful} Armour Save roll of \textbf{4+} made by the bearer against a Melee Attack while using a Spiked Shield, the bearer immediately inflicts 1 hit with the bearer's \Strength{} and \ArmourPenetration{} against the model that caused the wound, before any casualties are removed, distributed onto the model's Health Pool. This is considered a Special Attack.%
+}
+\newcommand{\pathofthefavoured}{Path of the Favoured}
+\newcommand{\pathofthefavoureddef}{%
+	Units with more than half of their models with Path of the Favoured \textbf{must} reroll failed Break Tests. In addition, model parts with Path of the Favoured upgraded to a Champion additionally gain +1 Health Point to a maximum of 3, and their Discipline is \textbf{set} to 9.%
+}
+
+\newcommand{\commonwarriors}{Common Warriors}
+
+% Flayers
+\newcommand{\skinninglash}{Skinning Lash}
+\newcommand{\skinninglashdef}{%
+	A unit with at least one model with Skinning Lash can make a Sweeping Attack against a single unengaged enemy unit when passing within \distance{1} (it does not need to and cannot move through or over that unit). The enemy unit suffers 1 hit with Strength 4 and Armour Penetration 0 for each model with Skinning Lash in the unit. A unit that loses one or more Health Points due to the Skinning Lash Sweeping Attack suffers \minuss{}1 Discipline until the end of its next Player Turn.%
+}
+
+% Trolls
+\newcommand{\icetrolldefx}{%
+	\removedrule{The model's Armour is \textbf{set} to 2. Flaming Attacks \textbf{must} reroll successful to-wound rolls against the model.}%
+}
+\newcommand{\stupid}{Stupid}
+\newcommand{\stupiddef}{%
+	At the start of each friendly Player Turn, each unengaged non-Fleeing unit with one or more models with Stupid \textbf{must} take a Discipline Test. If the test is failed, all models in the unit become Shaken until the end of the Player Turn, with the following exception: in the Movement Phase, directly after Rallying Fleeing units, the unit \textbf{must} perform an\removedrule{d} Advance Move of \distance{D6} as far\removedrule{e} directly forwards as possible.%
+}
+\newcommand{\trollbelch}{Troll Belch}
+\newcommand{\trollbelchdef}{%
+	At the model part's Initiative Step, the owner may choose an enemy unit Engaged in Combat that the model part is able to attack with Close Combat Attacks. If so, this unit suffers a hit, which is resolved with Strength 5 and Armour Penetration 10, and the model part with Troll Belch may not perform any Close Combat Attacks.%
+}
+
+
+%% LEGENDARY BEASTS
+
+%Kraken
+\newcommand{\coastalpredator}{Coastal Predator}%
+\newcommand{\coastalpredatordef}{%
+	\newrule{The model gains \textbf{\strider{} (Water Terrain)}. In addition, units gain \textbf{\devastatingcharge{\distance{+2} \Ad{}}} and \textbf{\hardtarget{}~(1)} while both the following conditions are met:}%
+	\begin{itemize}
+		\item \newrule{More than half of their models have Coastal Predator.}
+		\item \newrule{More than half of their models have the centre of their base inside a Water Terrain Feature.}
+	\end{itemize}
+	\newrule{Characters without Coastal Predator that Charge out of a unit do not benefit from Coastal Predator.}
+}%
+
+
+% Marauding Giant
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+\newcommand{\giantseegiantdodef}{The model gains \textbf{\asklanderbattlefever{}} and \shield{}.}
+
+\newcommand{\monstrousfamiliar}{Monstrous Familiar}
+\newcommand{\monstrousfamiliardef}{%
+	The model gains \textbf{\wizardapprentice{}}. Instead of selecting spells as normal, it \textbf{must} select one of the following spells (during Spell Selection): \spellformat{\thaumaturgyspellfour}{\thaumaturgy}, \spellformat{\witchcraftspellone}{\witchcraft}, or \spellformat{\frostbite}{\hereditaryspell}.%
+}
+
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\giantclubdef}{Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.}
+
+\newcommand{\tribalwarspear}{Tribal Warspear}
+\newcommand{\tribalwarspeardef}{%
+	Attacks with a \tribalwarspear{} gain +1 Strength and \textbf{Multiple Wounds (D3, against Towering Presence)}. Charging enemy units in base contact with the wielder suffer \minuss{}1 Agility. \newrule{The wielder gains \textbf{Exclusive (\asklanders{},\huskarls{})}, \textbf{Not a Leader}, and \textbf{War Platform}.}.%
+}
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. \newrule{The model gains \textbf{Maximised (Stomp Attacks)}}.%
+}
+
+% Jötunn
+\newcommand{\freezingmist}{Freezing Mist}
+\newcommand{\freezingmistdef}{%
+	\removedrule{Flaming Attacks \textbf{must} reroll successful to-wound rolls against the model.}\newline
+	\removedrule{All enemy units in base contact with one or more Jötunns suffer:}%
+	\begin{itemize}%
+		\item \removedrule{\minuss{}3 Agility}%
+		\item \removedrule{\minuss{}1 Armour}%
+		\item \removedrule{\minuss{}1 Armour Penetration}%
+	\end{itemize}%
+}
+
+\newcommand{\freezingaura}{Freezing Aura}
+\newcommand{\freezingauradef}{
+	\newrule{The model can cast \spellformat{\shamanismspellfour{}}{\shamanism{}} as a Bound Spell with Power Level (4/8). Enemy units within \distance{9} of one or more Frost Mammoths suffer \minuss{}3 Agility. While in base contact with one or more \joetunn{}s, enemy units that Break from Combat gain \textbf{\minimised{Flee Distance}}.}%
+}

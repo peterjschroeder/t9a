@@ -1,0 +1,42 @@
+
+\newcommand{\armybookname}{Army Book}
+\newcommand{\corerules}{Core Rules}
+\newcommand{\supplementarmybookname}[1]{#1 Supplement Army Book}
+\newcommand{\versionname}{version}
+\newcommand{\betaname}{beta}
+\newcommand{\alphaname}{alpha}
+\newcommand{\hotfixname}{hotfix}
+\newcommand{\scrollcompendiumname}{Scroll Compendium}
+
+%%% General settings for the PDFs (information appearing in the properties of the PDFs).
+
+\hypersetup{
+	pdfauthor={The T9A team},
+	pdfsubject={Rules for the game The 9th Age: Fantasy Battles},
+}
+
+\newcommand{\fantasybattles}{Fantasy Battles}
+\newcommand{\theninthage}{The \nth{9} Age}
+\newcommand{\nameofthegame}{\theninthage{}: \fantasybattles{}}
+
+\newcommand{\frontpagecredits}{%
+	\nameofthegame{} is a community-made miniatures wargame. All rules in this book are considered part of the Core Rules of T9A and should be available for use in any game. All rules and feedback can be found and given at: \href{https://www.the-ninth-age.com/}{the-ninth-age.com}. Refer to the Rulebook for instructions on How to Read Unit Entries.\ifdef{\thereisachangelog}{ Recent changes are marked in \protectednewrule{blue}, and listed at the end of this document.}{}\ifdef{\creditsadditionnalstuff}{ \creditsadditionnalstuff}{}%
+}
+
+\newcommand{\frontpagecreditssuppl}{%
+	\nameofthegame{} is a community-made miniatures wargame. All rules in this book are supplementary to the Core Rules of \theninthage{}. They are produced by our teams and should be viable for use in any game, but you should seek permission from your opponent or tournament organiser to use, as they significantly increase the complexity of the game. All rules and feedback can be found and given at: \href{https://www.the-ninth-age.com/}{the-ninth-age.com}. Refer to the Rulebook for instructions on How to Read Unit Entries.\ifdef{\thereisachangelog}{ Recent changes are marked in \protectednewrule{blue}, and listed at the end of this document.}{}%
+}
+
+\newcommand{\frontpagecreditsnohowtoread}{%
+	\nameofthegame{} is a community-made miniatures wargame. All rules in this book are supplementary to the Core Rules of \theninthage{}. They are produced by our teams and should be viable for use in any game, but you should seek permission from your opponent or tournament organiser to use, as they significantly increase the complexity of the game. All rules and feedback can be found and given at: \href{https://www.the-ninth-age.com/}{the-ninth-age.com}.\ifdef{\thereisachangelog}{ Recent changes are marked in \protectednewrule{blue}, and listed at the end of this document.}{}%
+}
+
+\newcommand{\frontpagecreditswithoutblue}{%
+	\nameofthegame{} is a community-made miniatures wargame. All rules in this book are considered part of the Core Rules of T9A and should be available for use in any game. All rules and feedback can be found and given at: \href{https://www.the-ninth-age.com/}{the-ninth-age.com}.\ifdef{\thereisachangelog}{ Recent changes in \protectedrewordedrule{green} when possible and listed at the end of this document.}{}%
+}
+
+\newcommand{\license}{%
+	Copyright Creative Commons license: \href{https://www.the-ninth-age.com/license.html}{the-ninth-age.com/license.html}.%
+}
+
+\newcommand{\latexcredit}{Edited with \LaTeX{}.}

@@ -1,0 +1,35 @@
+
+%%%% Manifestations
+
+\newcommand{\guidingversion}[1]{\base{#1}}% same as base version of spells
+
+
+%%%% God Logos
+
+\newrobustcmd{\godlogotitle}[1]{\raisebox{-.2\height}{\makebox[35pt][c]{\includegraphics[height=20pt]{{pics/#1_5}.pdf}}}}% to be able to use it in heading commands
+
+\newcommand{\godlogoqrs}[1]{\includegraphics[height=1.5cm]{{pics/#1_5}.pdf}\hspace{15pt}}
+
+\renewcommand{\prenameformat}[1]{% command used in explicit options AlCoOrder
+	\raisebox{-.2\height}{\makebox[18pt][c]{%
+	\ifblank{#1}{% nothing
+	}{%
+		\includegraphics[height=10pt]{{pics/#1_5}.pdf}%
+	}%
+	}}%
+	{\fontsize{1}{1.2}\selectfont \textcolor{white}{-}}%This part avoid a huge bug in the layout
+}
+
+%%% Morphlings (Veil Serpents)
+
+\newcommand{\startmorphlingslist}{\begin{itemize}[noitemsep]}
+
+\newcommand{\closemorphlingslist}{\end{itemize}}
+
+\newcommand{\newmorphlingentry}[3]{%
+	\ifblank{#2}{%
+	\item \prenameformat{#1}#3%
+	}{%
+	\item \prenameformat{#1}\hyperlink{#2}{#3}%
+	}%
+}

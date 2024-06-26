@@ -1,0 +1,50 @@
+
+\newnarrativescenario{10}{Weather the Storm}
+\label{WeathertheStorm}
+
+\flufffont{To fight a battle in the midst of a blizzard is to lose all sense of what you're actually fighting for. Instead you struggle to simply stay alive.}
+
+\subsection*{Deployment}
+
+Standard Deployment Type: Frontline Clash.
+
+\printmap{pics/deployment_10_weather_the_storm.pdf_tex}
+
+\subsection*{Pre-Game Set-up}
+
+Set up the Battlefield with the following Terrain Features: 1--2 Forests and 1--3 small Impassable Terrains (approximately \distance{3\timess{}3}). You may use the rules of Building the Battlefield in the Rulebook to randomly place those Terrain Features.
+
+\subsection*{Scenario Special Rules}
+
+At the beginning of each Player Turn, roll a D6 and multiply the result by 6: the result corresponds to the Distance of Sight, indicating how many inches the models can see into the blizzard. A roll of \result{1} means there is no visibility penalty that Player Turn.
+
+A model or a unit cannot shoot, Charge, or otherwise specifically target a unit (including spells) farther away from this model or unit than the Distance of Sight.
+
+In addition, during step 7 of the Deployment Phase Sequence (after moving Vanguarding units but before rolling for first turn), each player rolls a D6 and the corresponding effects in the table below are immediately applied to both armies. All effects remain in play until the end of the game unless specifically stated otherwise. These effects stack if both players roll the same result.
+
+\startweatherthestormtable
+\weatherthestormtableentry{1}{Bitter Cold}{%
+	All models with an Armour of 2 or higher suffer \minuss{}1 Advance Rate and \minuss{}2 March Rate. If a model's Armour is modified to lower than 2, it no longer is affected, and if it is modified to 2 or higher, it will be affected.%
+}
+\weatherthestormtableentry{2}{Hopelessly Lost}{%
+	Each player must nominate one enemy unit, starting with the player that chose their Deployment Zone. Move this unit \distance{2D6} in a random direction (even if the unit normally couldn't move), keeping its orientation, otherwise following the rules for moving a Fleeing unit (like units having to take a Panic Test for friendly units Fleeing through their Unit Boundary). There are however two exceptions: the unit does not take any Dangerous Terrain Tests, and it follows the rules for Pursuing Off the Board if it comes into contact with the Board Edge. In this case, the unit returns in Game Turn 2 instead of Game Turn 1.%
+}
+\weatherthestormtableentry{3}{Frostbite}{%
+	Roll 3D6. The result is used for both players. They must inflict this amount of Health Point losses among their own army, spreading them across their models however they want. Count the Victory Points for each player after the losses, as if the game was over. Note down the result. These Partial Victory Points will be used when determining who is the winner at the end of the game.%
+}
+\weatherthestormtableentry{4}{Broken Morale}{%
+	Every model except the General suffers \minuss{}1 Discipline.%
+}
+\weatherthestormtableentry{5}{Poor Sight}{%
+The range of Shooting Weapons, Artillery Weapons, and spells with type Missile is reduced by \distance{6}.%
+}
+\weatherthestormtableentry{6}{Hazardous Landscape}{%
+	All models performing a movement other than a Reform during step 2 of the Movement Phase Sequence (Fleeing units and units with Random Movement) must take a Dangerous Terrain (1) Test.%
+}
+\closeweatherthestormtable
+
+\subsection*{Winning the Scenario}
+
+Use the standard Victory Conditions of the Rulebook.
+
+If the Frostbite effect was rolled at the beginning of the game, count the Victory Points as normal at the end of the game, including the losses from Frostbite, as if those losses happened during the game. The player who scored less Partial Victory Points when the Frostbite effect was applied gains a bonus of Victory Points equal to the difference in Partial Victory Points of both players, to compensate the fact that he effectively played with less Army Points.

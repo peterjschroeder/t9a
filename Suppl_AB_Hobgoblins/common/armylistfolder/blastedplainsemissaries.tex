@@ -1,0 +1,43 @@
+
+\unitentry{%
+	name=\blastedplainemissaries{},
+    fluff=\blastedplainsemissariesfluff{},
+	logo=arrows,
+	cost=\newrule{220},
+	unitsize=20,
+	maxunitsize=30,
+	costpermodel=\newrule{13},
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\scoring{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{},\shield{}},
+	offensename=\emissary{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\ironrain{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\removedrule{\suboptionindent{}\bannerallowance{}=\nolimit{}}%
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\bow{} (3+){}=\free{},
+			\flintlockaxe{} (4+)=4\permodel{},
+			\blunderbuss{} (5+)=4\permodel{},
+		}},
+	},
+}% END UNIT ENTRY

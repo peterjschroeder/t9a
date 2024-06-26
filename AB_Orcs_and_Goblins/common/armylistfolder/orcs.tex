@@ -1,0 +1,63 @@
+
+\unitentry{%
+	name=\orcs{},
+	logo=core,
+	cost=155,
+	unitsize=20,
+	maxunitsize=50,
+	costpermodel=9,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\scoring{}},
+	defensename=\commonorc{},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	defensenameB=\feralorc{},
+	defenseB@HP=1,
+	defenseB@Df=2,
+	defenseB@Re=4,
+	defenseB@Arm=0,
+	defenserulesB={\aegis{} {(6+)}},
+	offensename=\orc{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\mustchooseonechoiceonly{%
+			\commonorc{}=\free{},
+			\feralorc{}=4\permodel{},
+		},
+		\shield{}=1\permodel{},
+		\bow{} (4+)=1\permodel{},
+		\AlCoOrder{%
+			\pw{}=1\permodel{},
+			\spear{}=2\permodel{},
+		},		
+	},
+	additionalframe={%
+		\ghentry{\commonorc{}}{%
+			\ha{} \wordand{} \crossbow{} (4+)\refsymbol{}=5\permodel{},
+			\refsymbol{}\commonorcsrestriction{}=,
+		}{}%
+		\ghentry{\feralorc{}}{%
+			\mammothstabber{}=20,%
+		}{}%
+	},
+}% END UNIT ENTRY

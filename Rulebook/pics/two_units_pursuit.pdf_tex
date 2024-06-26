@@ -1,0 +1,97 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'two_units_pursuit.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{935.43307087bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.56060606)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{two_units_pursuit.pdf}}%
+    \put(0.86427728,2.23200386){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{E}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{two_units_pursuit.pdf}}%
+    \put(0.86427718,1.33806471){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{E}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{two_units_pursuit.pdf}}%
+    \put(0.86373898,0.42897384){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{E}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{two_units_pursuit.pdf}}%
+    \put(0.16720431,2.12594358){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{two_units_pursuit.pdf}}%
+    \put(0.1672042,1.23200414){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{two_units_pursuit.pdf}}%
+    \put(0.62929822,1.54101751){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{two_units_pursuit.pdf}}%
+    \put(0.62875997,0.63192662){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l} \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{two_units_pursuit.pdf}}%
+    \put(0.65205286,0.42897381){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{two_units_pursuit.pdf}}%
+    \put(0.09097956,0.48053679){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursOne\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{two_units_pursuit.pdf}}%
+    \put(0.25766267,0.08659722){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursTwo\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{two_units_pursuit.pdf}}%
+    \put(0.78841641,0.08052335){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{two_units_pursuit.pdf}}%
+    \put(0.01876403,2.49928335){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figTwoPursA\end{tabular}}}}%
+    \put(0.50379569,2.23846936){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursunitD\end{tabular}}}}%
+    \put(0.11678662,1.9504907){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursunitB\end{tabular}}}}%
+    \put(0.56041902,2.5136216){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursunitA\end{tabular}}}}%
+    \put(0.6289794,1.95576316){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figTwoPursunitC\end{tabular}}}}%
+    \put(0.60630925,1.75346324){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\distance{6}\end{tabular}}}}%
+    \put(0.01736762,1.74170763){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figTwoPursB\end{tabular}}}}%
+    \put(0.34365645,2.14867079){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{D}\end{tabular}}}}%
+    \put(0.28841657,2.42897374){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.40962861,1.88355357){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.49267058,1.12916334){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\distance{7}\end{tabular}}}}%
+    \put(0.67447771,0.91779725){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\distance{5}\end{tabular}}}}%
+    \put(0.2884164,1.53503435){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.40962856,0.9896142){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{C}\end{tabular}}}}%
+    \put(0.64255783,0.00710284){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\distance{5}\end{tabular}}}}%
+    \put(0.01989069,0.81746517){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figTwoPursC\end{tabular}}}}%
+    \put(0.68235582,0.64109503){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,376 @@
+
+
+%%%% Unit entries names
+
+% CHARACTERS
+
+\newcommand{\ruinousdictator}{Ruinous Dictator}
+\newcommand{\verminsenator}{Vermin Senator}
+\newcommand{\bloodfurlegate}{Bloodfur Legate}
+\newcommand{\houseprefect}{House Prefect}
+\newcommand{\swarmpriest}{Swarm Priest}
+\newcommand{\duskbladeassassin}{Duskblade Assassin}
+
+% MOUNTS
+
+\newcommand{\sacredplatform}{Sacred Platform}
+\newcommand{\acolyte}{Acolyte}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\triumphalplatform}{Triumphal Platform}
+\newcommand{\praetorianbrute}{Praetorian Brute}
+
+\newcommand{\praetorianpalanquin}{Praetorian Palanquin}
+\newcommand{\senatoriallitter}{Senatorial Litter}
+
+% CORE
+
+\newcommand{\verminvelites}{Vermin Velites}
+\newcommand{\verminvelite}{Vermin Velite}
+
+\newcommand{\verminlegionaries}{Vermin Legionaries}
+\newcommand{\verminlegionary}{Vermin Legionary}
+
+\newcommand{\blackfurveterans}{Blackfur Veterans}
+\newcommand{\blackfurveteran}{Blackfur Veteran}
+
+\newcommand{\verminslaves}{Vermin Slaves}
+\newcommand{\verminslave}{Vermin Slave}
+
+
+% SPECIAL
+\newcommand{\plaguedisciples}{Plague Disciples}
+\newcommand{\plaguedisciple}{Plague Disciple}
+
+\newcommand{\giantrats}{Giant Rats}
+\newcommand{\giantrat}{Giant Rat}
+
+\newcommand{\fetthisbrutes}{Fetthis Brutes}
+\newcommand{\fetthisbrute}{Fetthis Brute}
+
+\newcommand{\murmillobrutes}{Murmillo Brutes}
+\newcommand{\murmillobrute}{Murmillo Brute}
+
+\newcommand{\legionarydrillteam}{Legionary Drill Team}
+
+
+% TUNNEL GUNNERS
+\newcommand{\shadowfurstalkers}{Shadowfur Stalkers}
+\newcommand{\shadowfurstalker}{Shadowfur Stalker}
+
+\newcommand{\ignifiergrenadiers}{Ignifier Grenadiers}
+\newcommand{\ignifiergrenadier}{Ignifier Grenadier}
+
+\newcommand{\experimentalweaponteams}{Experimental Weapon Teams}
+\newcommand{\experimentalweaponteamsQRS}{Exp. Weapon Teams}
+\newcommand{\experimentalweaponteamSHORT}{Exp. Weapon Team}
+
+\newcommand{\doomsparkdevice}{Doomspark Device}
+\newcommand{\rakachitengineer}{Rakachit Engineer}
+
+
+\newcommand{\verminartillery}{Vermin Artillery}
+\newcommand{\crew}{Crew}
+\newcommand{\rakachitmaussrifle}{Rakachit Mauss Rifle}
+\newcommand{\skorchitordnance}{Skorchit Ordnance}
+
+
+% BUILT AND BRED
+
+\newcommand{\stygianearthbreaker}{Stygian Earthbreaker}
+
+\newcommand{\dreadmillchariots}{Dreadmill Chariots}
+\newcommand{\dreadmilldriver}{Dreadmill Driver}
+
+\newcommand{\arenabeast}{Arena Beast}
+\newcommand{\pitmaster}{Pitmaster}
+
+%%%% Unit entries rules
+
+%% CHARACTERS
+
+% Ruinous Dictator
+
+\newcommand{\unlimitedpower}{Unlimited Power!}
+\newcommand{\unlimitedpowerdef}{%
+	The model must be the General. While within range of the model's Commanding Presence, other friendly units gain \textbf{\fearless{}}. In addition, while Steadfast and not suffering from Disrupted Ranks, the units also gain \textbf{\unstable{}}.
+	For the purpose of \holytriumvirate, the model counts as having \textbf{\caelysianpantheon}.%
+}
+
+\newcommand{\mortalorigin}{Mortal Origin}
+\newcommand{\mustchooseamortalorigin}{\textbf{Must} choose a Mortal Origin}
+\newcommand{\iamthesenate}{I am the Senate}
+\newcommand{\iamthesenatedef}{%
+	When friendly units within range of the model's Commanding Presence (including the model itself) lose Health Points due to Unstable, the number of lost Health Points is reduced by the unit's number of Full Ranks, to a maximum of 3.%
+}
+
+\newcommand{\lordofthelegions}{Lord of the Legions}
+\newcommand{\lordofthelegionsdef}{%
+	The model gains \gw{} and \pw{}.%
+}
+
+\newcommand{\pontifexmaximus}{Pontifex Maximus}
+\newcommand{\pontifexmaximusdef}{%
+	The model knows \spellformat{\theawakenedswarm{}}{\hereditaryspell{}} in addition to its other spells. In addition, the model \textbf{always} selects its spells from all Learned Spells of its chosen Path.%
+}
+
+\newcommand{\patrondeity}{Patron Deity}
+\newcommand{\mustchooseapatrondeity}{\textbf{Must} choose a Patron Deity}
+\newcommand{\avatarofacratos}{Avatar of Acratos}
+\newcommand{\avatarofacratosdef}{%
+	The model gains \textbf{\lightningreflexes{}} and adds +2 to its side's Combat Score in combats which it is Engaged in when Combat Scores are calculated.%
+}
+
+\newcommand{\avataroffavana}{Avatar of Favana}
+\newcommand{\avataroffavanadef}{%
+	The model gains \textbf{\multiplewounds{}{} (\Dthree{})} and \textbf{\swiftstride{}}.%
+}
+
+\newcommand{\avatarofudius}{Avatar of Udius}
+\newcommand{\avatarofudiusdef}{%
+	The model gains \textbf{\fortitude{} (4+, against non-Magical Melee Attacks)}.%
+}
+
+% Vermin Senator
+
+\newcommand{\voxpopuli}{Vox Populi}
+\newcommand{\voxpopulidef}{%
+	The model gains \textbf{\commandingpresence{} (+\distance{6}, models in units with one or more Eagle Standards)}.%
+}
+
+
+% Bloodfur Legate
+
+\newcommand{\greatereaglestandard}{Greater Eagle Standard}
+\newcommand{\greatereaglestandarddef}{%
+	The model gains \textbf{\standardbearer{}} and \textbf{\eaglestandard{}}, with the following exceptions:
+	\begin{itemize}
+		\item The requirement for being within range of a friendly model's Commanding Presence is ignored.%
+		\item When calculating Combat Score, only a single model with \greatereaglestandard{} per unit adds +1 to its side's Combat Score.
+	\end{itemize}
+
+}
+\newcommand{\ifbsb}{If \bsb{}}
+\newcommand{\generalonly}{General only}
+
+\newcommand{\decimation}{Decimation}% deprecated
+
+% House Prefect
+
+\newcommand{\houseprefectoptionsnote}{Each option is \zerotoXmodelsperarmy{2}.}
+
+\newcommand{\fetthisfleshmaster}{Fetthis Fleshmaster}
+\newcommand{\fetthisfleshmasterdef}{%
+	\newrule{For each model with Fetthis Fleshmaster within 12", u}nits consisting entirely of Arena Beasts, Fetthis Brutes, Giant Rats, and models on Praetorian Brute or Triumphal Platform \removedrule{within 12″} gain \newrule{one instance of} Maximised (Charge Range) in the Charge Phase.
+}
+
+\newcommand{\stygianoverseer}{Stygian Overseer}
+\newcommand{\stygianoverseerdef}{%
+	Immediately after Siphon the Veil of each friendly Magic Phase, each Stygian Overseer may move a single friendly Tunnel Marker within \distance{24} that is not in contact with any unit.  Move this marker in a straight line up to \distance{6}, stopping immediately before moving into contact with any units.  Each Tunnel Marker may only be moved once per Magic Phase.%
+}
+
+\newcommand{\rakachittechnocrat}{Rakachit Technocrat}
+\newcommand{\rakachittechnocratdef}{%
+	The model gains \textbf{\engineer{}} (3+) that can also be used on Shooting Weapons and Artillery Weapons of Experimental Weapon Teams, affecting all Experimental Weapon Team models in the chosen unit.%
+}
+\newcommand{\rakachittechnocratonly}{\rakachittechnocrat{} only}
+
+\newcommand{\skorchitalchemist}{Skorchit Alchemist}
+\newcommand{\skorchitalchemistdef}{%
+	Standard Height \rnf{} models in the model’s unit gain \textbf{\lightningreflexes{}}.%
+}
+\newcommand{\skorchitalchemistonly}{\skorchitalchemist{} only}
+
+% Swarm Priest
+
+\newcommand{\caelysianpantheon}{Caelysian Pantheon}
+\newcommand{\caelysianpantheondef}{The model's Path access is replaced with:}
+% Cult of Errahman already defined
+
+% Duskblade Assassin
+
+\newcommand{\againstcharacter}{against Character}
+
+\newcommand{\sicsempertyrannis}{Sic Semper Tyrannis}
+\newcommand{\sicsempertyrannisdef}{%
+	While the model's unit is in base contact with one or more enemy Characters, the model gains +1 Attack Value for each other Duskblade Assassin in the same unit.%
+}
+
+\newcommand{\disdainforplebs}{Disdain for Plebs}
+\newcommand{\disdainforplebsdef}{%
+	The model cannot be chosen by the opponent as the model that suffers the penalties for refusing a Duel.%
+}
+
+%% MOUNTS
+
+% Senatorial Litter
+\newcommand{\thedieiscast}{The Die is Cast}
+\newcommand{\thedieiscastdef}{%
+	The model gains +1 Discipline, up to a maximum of 8, while within \distance{12} of one or more enemy models.%
+}
+
+% Sacred Platform
+\newcommand{\theacolytesmustchoose}{The Acolytes \textbf{must} choose}
+
+\newcommand{\pestilentpulpit}{Pestilent Pulpit}
+\newcommand{\pestilentpulpitnote}{models with Cult of Errahman only}
+\newcommand{\pestilentpulpitdef}{%
+	The model knows one additional Learned Spell, it gains \textbf{\exclusive{\plaguedisciples{}}}, and the number of its Impact Hits is increased by D3.\newline%
+	The model's unit gains \textbf{\poisonattacks}. %
+	If the models already had \poisonattacks{}, they wound automatically on a successful natural to-hit roll of \result{5} or \result{6}, unless the target has \immune{} (\poisonattacks{}).%
+}
+\newcommand{\whisperingbell}{Whispering Bell}
+\newcommand{\whisperingbellnote}{models with Caelysian Pantheon only}
+\newcommand{\whisperingbelldef}{%
+	The model knows one additional Learned Spell, and the range of its non-Bound Spells is increased by \distance{3}.\newline%
+	The model gains \textbf{\deafeningclamour{}} and \textbf{\exclusive{\blackfurveterans{}, \verminlegionaries{}}}.\newline%
+	\rnf{} models in friendly units within \distance{12} of the Sacred Platform gain \textbf{\aegis{6}}; Gigantic models, Constructs, and wounds from Mishaps are not affected.
+}
+
+%% CORE
+
+% Vermin Velites
+\newcommand{\sling}{Sling}
+\newcommand{\slingdef}{%
+	The attack gains +1 Strength when shooting from Short Range.%
+}
+
+% Vermin Legionaries
+\newcommand{\verminlegionarywithoutnumberrestriction}{Armies with a \verminsenator{} only}
+\newcommand{\witheaglestandard}{with Eagle Standard}
+
+% Blackfur Veterans
+\newcommand{\bloodfurpraetorians}{Bloodfur Praetorians}
+\newcommand{\bloodfurpraetoriansdef}{%
+	The model gains \textbf{\bodyguard{} (\verminsenator{} that is the General)} and Great Weapon, and loses Halberd.
+	The model does not count towards the army's model cap of max. 120 Blackfur Veterans.%
+}
+
+\newcommand{\phalanx}{Phalanx}
+\newcommand{\phalanxdef}{
+	While the model's unit is in Line Formation, the model \textbf{must} reroll natural to-wound rolls of \result{1} with its Close Combat Attacks.
+}
+
+% Slaves
+\newcommand{\cannonfodder}{Cannon Fodder}
+\newcommand{\cannonfodderdef}{
+	Shooting Attacks against enemy units in base contact with one or more models with \cannonfodder{} gain +1 to hit.%
+}
+
+\newcommand{\tunnellingtools}{Tunnelling Tools}
+\newcommand{\tunnellingtoolsdef}{%
+	The unit adds a single \tunnelmarker{} to the army.%
+}
+
+
+
+%% SPECIAL
+
+% Giant Rats
+\newcommand{\firerats}{Fire Rats}
+
+\newcommand{\fireratsdef}{
+	The model gains \textbf{\flamingattacks{}} and \textbf{\flammable{}}, and its base size is changed to 25\timess{}50 \si{\milli\meter}. Immediately before the model is removed as a casualty as a result of any enemy Melee Attack, it inflicts 1 hit with \St{} 3, \AP{} 0, and \flamingattacks{} on the attacking unit. This is considered a Special Attack.
+}
+
+\newcommand{\brutesnote}{
+	\fetthisbrutes{} and \murmillobrutes{} share the same \zerotoXmodelsperarmy{X} limitation.
+}
+
+% Shadowfur Stalkers
+\newcommand{\shadowfurnote}{}
+\newcommand{\sicarransmugglers}{Sicarran Smugglers}
+\newcommand{\sicarransmugglersdef}{%
+	The unit may start the game in Tunnel Reserve. Ambush rolls of units consisting entirely of models with \sicarransmugglers{} may be rerolled. This overrides the restriction of rules and abilities not working while the model is off the board.%
+}
+
+% Plague Disciples
+\newcommand{\fearnoevil}{Fear no Evil}
+\newcommand{\fearnoevildef}{%
+	While the model's unit is Steadfast and does not suffer from Disrupted Ranks, it gains \textbf{\fearless{}} and \textbf{\unbreakable{}}. In addition, while joined by one or more Characters with Cult of Errahman, Charge, Pursuit, and Overrun Moves of the model’s unit gain \textbf{\swiftstride{}}.%
+}
+
+% Legionary Drill Team
+
+\newcommand{\backtotheburrows}{Back to the Burrows}
+\newcommand{\backtotheburrowsdef}{%
+	Once per game, at the end of the owner's Movement Phase, the model's unit may be removed from the Battlefield and placed in Tunnel Reserve. Before the unit is removed, it loses Scoring until it returns to the Battlefield. This can only be done if the model's unit is not Engaged or Shaken and has 50 or fewer Health Points.%
+}
+
+
+%% TUNNEL GUNNERS
+
+% Ignifire Grenadiers
+\newcommand{\deepfiregrenades}{Deepfire Grenades}
+\newcommand{\deepfiregrenadesdef}{%
+	When shooting at an enemy unit Engaged in Combat, hits are distributed onto a randomly chosen friendly unit Engaged with the original target on a roll of 5+ instead of 4+.%
+}
+
+% Doomspark Device
+
+\newcommand{\darkstonegenerator}{Dark\-stone Generator}
+\newcommand{\darkstonegeneratordef}{%
+	The attacks hit automatically.%
+
+
+	%
+}
+
+\newcommand{\chainlightning}{Chain Lightning}
+\newcommand{\chainlightningdef}{%
+	The model's Grind Attacks are resolved with Strength D6+1 and Armour Penetration 3.%
+}
+
+% Experimental Weapon Teams
+
+\newcommand{\heavyweapon}{Heavy Weapon}
+\newcommand{\heavyweapondef}{%
+	The model may not use its Shooting Weapon if the model performed a March Move in this Player Turn.%
+}
+
+% Vermin Artillery
+
+\newcommand{\verminartilleryoptionsnote}{Each option is \zerotoXmodelsperarmy{2}.}
+\newcommand{\skorchitordnancedef}{%
+	The model gains \textbf{\flammable{}}.\newline%
+	%
+}
+
+%% BUILT AND BREAD
+
+% Stygian Earthbreaker
+\newcommand{\undergroundarrival}{Under\-ground Arrival}
+\newcommand{\undergroundarrivaldef}{%
+	The model may choose to start the game in Tunnel Reserve. Once per game, at the end of the owner's Movement Phase, the model's unit may be removed from the Battlefield and placed in the Tunnel Reserve. This cannot be done if the model is Engaged or Shaken. Unless there are 4 friendly Tunnel Markers on the Battlefield, you may mark a point on the Battlefield with a Tunnel Marker that the model touched when it was removed.%
+}
+\newcommand{\earthbreakerdrill}{Earthbreaker Drill}
+\newcommand{\earthbreakerdrilldef}{%
+	The model can only perform its Grind Attacks against units Engaged with its Front Facing. The model gains +3 Armour against:%
+	\begin{itemize}%
+		\item Shooting Attacks from enemy models Located in the model's Front Arc.%
+		\item Melee Attacks from units Engaged with the model's Front Facing.%
+	\end{itemize}%
+}
+
+% Dreadmill Chariots
+\newcommand{\unstableengines}{Unstable Engines}
+\newcommand{\unstableenginesdef}{%
+	Units consisting entirely of models with Unstable Engines:%
+	\begin{itemize}%
+		\item Gain \distance{+\Dsix{}} to their Charge Range rolls in the Charge Phase. Also add this D6 to the Failed Charge distance.%
+		\item Immediately after choosing to perform a March Move, gain \distance{+\Dsix{}} March Rate.%
+	\end{itemize}%
+	The effects last until the end of the phase.\newline%
+	Immediately before a model is removed as a casualty from the unit, the model inflicts \Dsix{} hits with Strength 4, Armour Penetration 0 and Flaming Attacks on all other units within \distance{6} of the model's unit. These hits are considered Special Attacks.%
+}
+
+% Arena Beast
+
+\newcommand{\arenabeastcategorynote}{
+	\zerotoXunitsperarmy{2} if the army  includes a \ruinousdictator{}.
+}
+
+\newcommand{\underworldbeast}{Underworld Beast}
+\newcommand{\underworldbeastdef}{%
+	The model gains \textbf{\randommovement{} (\XDsix{3}\distance{})} and its Attack Value is \textbf{set} to 4D3. It loses Harnessed and the Pitmaster model part, and its base size is changed to 60\timess{}100 \si{\milli\meter}.%
+}

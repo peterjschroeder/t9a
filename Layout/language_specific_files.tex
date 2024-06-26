@@ -1,0 +1,94 @@
+
+\ifdefined\languageisenglish
+	\def\languagetag{EN}
+\fi
+\ifdefined\languageisfrench
+	\def\languagetag{FR}
+\fi
+\ifdefined\languageisitalian
+	\def\languagetag{IT}
+\fi
+\ifdefined\languageisspanish
+	\def\languagetag{ES}
+\fi
+\ifdefined\languageispolish
+	\def\languagetag{PL}
+\fi
+\ifdefined\languageisrussian
+	\def\languagetag{RU}
+\fi
+\ifdefined\languageisgerman
+	\def\languagetag{DE}
+\fi
+
+\def\pathlanguagespecific{../Language_specific/\languagetag/}
+
+% Command related to automatized alphabetical ordering, language specific
+
+\input{\pathlanguagespecific%
+alphabeticalordering.tex}
+
+% Characteristics names and abbreviations, profile associated terms
+
+\input{\pathlanguagespecific%
+characteristics.tex}
+
+% Anything related to army books, besides unit entries
+
+\input{\pathlanguagespecific%
+armybook.tex}
+
+% Magic stuff, and anything related to Paths.
+
+\input{\pathlanguagespecific%
+magic.tex}
+
+% Unit entries
+
+\input{\pathlanguagespecific%
+unitentry.tex}
+
+% Titlepages
+
+\input{\pathlanguagespecific%
+titlepage.tex}
+
+% Stuff specific to the Rulebook
+
+\input{\pathlanguagespecific%
+rulebook.tex}
+
+% Stuff specific to the FAQ
+
+\input{\pathlanguagespecific%
+faq.tex}
+
+% Model rules and associated
+
+\input{\pathlanguagespecific%
+modelrules.tex}
+
+% Quick Ref Sheet
+
+\input{\pathlanguagespecific%
+qrs.tex}
+
+% Model classification (size and type)
+
+\input{\pathlanguagespecific%
+modelclassification.tex}
+
+% Terrain
+
+\input{\pathlanguagespecific%
+terrain.tex}
+
+% Point labels, range, etc.
+
+\input{\pathlanguagespecific%
+miscellanous.tex}
+
+% Special items
+
+\input{\pathlanguagespecific%
+specialitems.tex}

@@ -1,0 +1,38 @@
+
+\unitentry{%
+	name=\avatarofnature{},
+	logo=character,
+	cost=585,
+	unitsize=1,
+	maxunitsperarmy=1,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=75\timess{}50,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{},\stubborn{},\treesinging{},\sylvanspirit{}},
+	defense@HP=6,
+	defense@Df=6,
+	defense@Re=6,
+	defense@Arm=4,
+	defenserules={\flammable{},\aegis{} (5+)},
+	offensename=\avatarofnature{},
+	offense@At=6,
+	offense@Of=6,
+	offense@St=7,
+	offense@AP=4,
+	offense@Ag=3,
+	offenserules={\crushattack{}},
+	offenseweapons={\impalingroots{} (3+)},
+	options={%
+		\asingleaspectofnature{}=\nolimit{},
+		**\optionline,
+	},
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\treesinging{}}{\ruletype{\universalrule}\treesingingdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+		\modelruledef{\impalingroots{}}{\ruletype{\shootingweapon}\impalingrootsdef}
+	},
+} % END UNIT ENTRY

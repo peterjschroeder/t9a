@@ -1,0 +1,75 @@
+
+\newmdenv[
+	linewidth=0pt,
+	nobreak,
+	innertopmargin=5pt,
+	innerbottommargin=10pt,
+	skipabove=5pt,
+	backgroundcolor=black!5,
+	roundcorner=10pt]
+	{optionalrules}
+
+%%% FRAMES DEFINITION for profiles %%%
+
+\newenvironment{innerframe}[1][]{%
+\begin{minipage}[t]{\columnwidth}%
+%Title
+\strut\textcolor{\greycolor}{\rule[2pt]{0.5cm}{0.5pt}}%
+\hspace*{1pt}\ChLab{#1}\hspace*{1pt}%
+{\leaders\hbox{\textcolor{\greycolor}{\rule[2pt]{1pt}{0.5pt}}}\hfill}%
+\pointsblock{\hspace*{1pt}\ChLab{\pts{}}\hspace*{1pt}}%
+\textcolor{\greycolor}{\rule[2pt]{0.1cm}{0.5pt}}\par%
+\vspace*{-23pt}\hspace*{0.15cm}\begin{minipage}[t]{\columnwidth - 0.3cm}%
+\strut%
+}{%
+\end{minipage}\end{minipage}\par%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Simple inner frame, no 'pts' label
+
+\newenvironment{innerframenopts}[1][]{%
+\begin{minipage}[t]{\columnwidth-3pt}% -3 pt because else there is a 1.5 pt overfull, who knows why
+%Title
+\strut\textcolor{\greycolor}{\rule[2pt]{0.5cm}{0.5pt}}%
+\hspace*{1pt}\ChLab{#1}\hspace*{1pt}%
+\textcolor{\greycolor}{\rule[2pt]{\columnwidth -\widthof{\ChLab{#1}} -2pt -0.5cm}{0.5pt}}\par%
+\vspace*{-23pt}\hspace*{0.15cm}\begin{minipage}[t]{\columnwidth - 0.3cm}%
+\strut%
+}{%
+\end{minipage}%
+\end{minipage}\par%
+}
+
+\newenvironment{innerframenoptsnonegspace}[1][]{%
+\begin{minipage}[t]{\columnwidth-3pt}% -3 pt because else there is a 1.5 pt overfull, who knows why
+%Title
+\strut\textcolor{\greycolor}{\rule[2pt]{0.5cm}{0.5pt}}%
+\hspace*{1pt}\ChLab{#1}\hspace*{1pt}%
+\textcolor{\greycolor}{\rule[2pt]{\columnwidth -\widthof{\ChLab{#1}} -2pt -0.5cm}{0.5pt}}\par%
+\vspace*{-5pt}\hspace*{0.15cm}\begin{minipage}[t]{\columnwidth - 0.3cm}%
+\strut%
+}{%
+\end{minipage}%
+\end{minipage}\par%
+}
+
+\newenvironment{innerframetwocols}[1][]{%
+\begin{minipage}[t]{\textwidth}%
+%Title
+\strut\textcolor{\greycolor}{\rule[2pt]{0.5cm}{0.5pt}}%
+\hspace*{1pt}\ChLab{#1}\hspace*{1pt}%
+{\leaders\hbox{\textcolor{\greycolor}{\rule[2pt]{1pt}{0.5pt}}}\hfill}%
+\pointsblock{\hspace*{1pt}\ChLab{\pts{}}\hspace*{1pt}}%
+\textcolor{\greycolor}{\rule[2pt]{0.1cm}{0.5pt}}%
+\hspace*{10pt}%
+\textcolor{\greycolor}{\rule[2pt]{0.5cm}{0.5pt}}%
+\hspace*{1pt}\ChLab{#1}\hspace*{1pt}%
+{\leaders\hbox{\textcolor{\greycolor}{\rule[2pt]{1pt}{0.5pt}}}\hfill}%
+\pointsblock{\hspace*{1pt}\ChLab{\pts{}}\hspace*{1pt}}%
+\textcolor{\greycolor}{\rule[2pt]{0.1cm}{0.5pt}}\par%
+\vspace*{-14pt}\hspace*{0.15cm}\begin{minipage}[t]{\textwidth - 0.3cm}%
+\strut%
+}{%
+\end{minipage}\end{minipage}\par%
+}

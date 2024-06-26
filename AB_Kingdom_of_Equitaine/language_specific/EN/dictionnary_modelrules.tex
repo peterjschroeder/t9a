@@ -1,0 +1,97 @@
+% Army Model Rule Names
+\newcommand{\theblessing}{The Blessing}
+\newcommand{\blessing}{Blessing}
+\newcommand{\orison}{Orison}
+\newcommand{\orisons}{Orisons}
+\newcommand{\sainted}{Sainted}
+\newcommand{\knightbanneret}{Knight Banneret}
+\newcommand{\ordominister}{Ordo Minister}
+\newcommand{\gallantry}{Gallantry}
+\newcommand{\daring}{Daring}
+
+\newcommand{\courage}{Courage}
+\newcommand{\honesty}{Honesty}
+\newcommand{\ordeal}{Ordeal}
+
+\newcommand{\lanceformation}{Lance Formation}
+
+\newcommand{\bastardsword}{Bastard Sword}
+
+\newcommand{\mountsupport}{Mount Support}
+\newcommand{\preparedposition}{Prepared Position}
+\newcommand{\ordained}{Ordained}
+% Army Model Rule Texts
+
+\newcommand{\theblessingef}{%
+	Unit profiles in this Army Book contain an additional Characteristic, which corresponds to the units' Aegis Saves, shortened \Aeg{}. This Characteristic is treated as if the unit has the Personal Protection Aegis (X+) written on its profile, where X is the \Aeg{} Characteristic value. Not having an \Aeg{} value does not prevent a unit from being the target of an Aegis modifier. 
+}
+
+\newcommand{\orisonsdef}{%
+Each Kingdom of Equitaine army has a pool of \blessing{} Tokens that can \textbf{never} contain more than 6 tokens. At the start of step 7 of the Pre-Game Sequence (Spell Selection), add 1 \blessing{} Token per 3000 Army Points to the pool, rounding fractions up.
+\removedrule{At the start of each Player Turn,}\newrule{In each Magic Phase, immediately after Siphon the Veil}, \blessing{} Tokens can be discarded. For every discarded \blessing{} Token, choose a single friendly unit and apply one of the following effects until the \removedrule{end of the Player Turn}\newrule{start of the next Magic Phase}:
+\begin{itemize}
+	\item Orison of Shielding: The unit gains \aegis{} (5+).
+	\item Orison of Striking: Model parts without \harnessed{} in the unit gain +1 to hit with Close Combat Attacks.
+	\item Orison of Discipline: The unit's Discipline is \textbf{set} to 9.
+\end{itemize}
+A single unit can only be the target of one Orison per Player Turn, unless specifically stated otherwise.
+}
+
+\newcommand{\sainteddef}{%
+	Model parts without \harnessed{} gain  \textbf{\fearless{}}  and +1 Attack Value.
+	In addition, the model is \textbf{always} under the effect of  Orison of Shielding, Orison of Striking, and Orison of Discipline.  This does not prevent the model’s unit from being the target of an \orison{}, but the model does not benefit from this additional Orison.%
+}
+
+\newcommand{\knightbanneretdef}{%
+	The model gains the following rules:
+	\begin{itemize}
+		\item The model gains +1 Health Point, up to a maximum of 3.
+		\item The model may take a single Banner Enchantment from this Army Book, for which it is considered to have a Special Item allowance with no limit. 
+		\item When calculating Combat Score, the model adds +1 to its side’s Combat Score.
+	\end{itemize}
+}
+
+\newcommand{\ordoministerdef}{%
+	 At the start of each friendly Magic Phase, each unit containing one or more models with \ordominister{} may remove a single token from the \blessing{} Token pool. If so, the unit, or a model inside the  unit, may Raise 1 Health Point. 
+}
+
+\newcommand{\gallantrydef}{%
+	During Army List creation, the unit gains a \gallantry{} value that corresponds to the value stated in brackets (X). Multiple instances of \gallantry{} (X) in the same unit do not stack. The sum of the \gallantry{} values of all units on the Army List is restricted to 1 per 650 Army Points, rounding fractions up. %
+}
+
+\newcommand{\daringdef}{
+	Units with more than half of their models with \daring{} cannot voluntarily declare Flee as a Charge Reaction and \textbf{must} reroll failed Panic Tests.
+}
+
+\newcommand{\couragedef}{%
+	The model gains \textbf{\aegis{} (5+)} with the following restriction: The effect can only be used against wounds against which the model cannot take or would automatically fail its  Armour Save. \newline
+	Units with more than half of their models with \courage{} ignore friendly units consisting entirely of models with \ordeal{} for the purpose of Panic Tests.%
+}
+
+\newcommand{\honestydef}{%
+	The model gains \textbf{\aegis{} (5+, against \magicalattacks{})}.%
+}
+
+\newcommand{\ordealdef}{%
+	The model gains \textbf{\aegis{} (5+)} while its unit is Engaged in the same Combat as at least one other friendly unit.
+}
+
+\newcommand{\lanceformationdef}{%
+	The model gains \textbf{\fightinextrarank{}}. In addition, if the model is Standard, it gains \extrasupport{} (2).  If more than half of a unit’s models have Lance Formation and the unit is 3 or 4 models wide, it counts as being in Line Formation and only needs to be 3 models wide in order to form Full Ranks.
+}
+
+\newcommand{\bastardsworddef}{%
+	Hand Weapon.  Attacks made with  a \bastardsword{} gain +1 Strength and \textbf{\devastatingcharge{} (+1 AP)}.
+}
+
+\newcommand{\mountsupportdef}{
+The model part ignores Harnessed for the purpose of Supporting Attacks.
+}
+
+\newcommand{\preparedpositiondef}{
+When deploying the unit, you may place a Wall Terrain Feature \newrule{fully within \distance{1} of the unit's Front Facing}\removedrule{with its centre within \distance{2} of the unit} but not in contact with any other Terrain Feature except Open Terrain. This Wall is up to \distance{1} deep \newrule{and its length cannot exceed the width of the unit, up to a maximum of \distance{12}.}\removedrule{and up to \distance{8} wide and} \newrule{It} follows the normal rules for Walls, with the exception that it contributes to Soft Cover instead of Hard Cover.
+
+}
+\newcommand{\ordaineddef}{%
+At the start of step 7 of the Pre-Game Sequence (Spell Selection), add 1 \blessing{} Token to your \blessing{} Token pool for each model with \ordained{} on your Army List.
+}

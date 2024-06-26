@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\frostmammoth{},
+	logo=monster,
+	cost=380,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\beast{},
+	size=\heightgigantic{},
+	basesize=100\timess{}150,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	globalrules={\hidebf{\freezingaura{}}},
+	defense@HP=6,
+	defense@Df=3,
+	defense@Re=6,
+	defense@Arm=3,
+	offensename={\rider{} (2)},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	offensenameB=\frostmammoth{},
+	offenseB@At=4,
+	offenseB@Of=3,
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=2,
+	offenserulesB={\impacthits{\Dthree{}},\harnessed{}},
+	options={%
+		\optionschoice{\eachridermusttake{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+			\huntingspear{} (3+)=\free{},
+			\ogrecrossbow{} (3+)=5,
+		}},
+	},
+	modelrulesdef={
+		\modelruledef{\freezingaura}{\ruletype{\universalrule}\freezingauradef}
+	}
+}% END UNIT ENTRY

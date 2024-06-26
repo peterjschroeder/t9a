@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\greybeards{},
+	logo=core,
+	cost=180,
+	unitsize=10,
+	maxunitsize=30,
+	costpermodel=16,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\scoring{},\fearless{},\holdtheline{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\ha{}},
+	defenserules={\shieldwall{}},
+	offensename=\greybeard{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\sturdy{}},
+	options={%
+		{\vanguard{} (\zerotoXmodelsperarmy{20},\newline \zerotoXunitsperarmy{1}\refsymbol{})}=2\permodel{},
+		\shield{}=2\permodel{},
+		\throwingweapons{} (5+)=3\permodel{},
+		\gw{}=1\permodel{},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+			\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\runicbannerenchantment{}=\nolimit{}%
+	},
+	endtext={%
+		\refsymbolbis{}\sharedvanguardlimitation{}%
+	},
+}% END UNIT ENTRY

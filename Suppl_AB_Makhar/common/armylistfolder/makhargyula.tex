@@ -1,0 +1,63 @@
+
+\unitentry{%
+	name=\makhargyula{},
+	fluff=\makhargyulafluff{},
+	logo=character,
+	cost=110,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=9,
+	globalrules={\makharbattlefever{}},
+	defense@HP=3,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+    defensearmour={\ha{}},
+	offensename=\makhargyula{},
+	offense@Ag=5,
+	offense@At=3,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=1,
+	offenserules={\textbf{\deedsnotwords{}}},
+	options={%
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\suboptionindent{}\Ifgeneral{}=\upto{}150,
+		\lightgyula{} (\standardcavalryonly{}) (\zerotoXmodelsperarmy{2})=25,
+		\onechoiceonlyACO{%
+			\textbf{\stallionstempest{}} (\generalonly{})=\newrule{40},
+			\textbf{\maresshelter{}} (\generalonly{})=\newrule{20},
+		},
+		\shield{}=5,
+		\throwingweapons{} (4+)=5,
+		\recurvebow{} (2+) \wordand{} \partingshot{}=10,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\lightlance{}=5,
+			\makharlance{}=5,
+			\spear{}=5,
+			\gw{}=10,
+		},
+	},
+	mounts={%
+		\blackstallion{}=\newrule{80},
+		\shadowchaser{}=65,
+		\wardais{}=50,
+		\greatelk{}=95,
+		\darkchariot{}=120,
+		\chimera{}=160,
+		\wastelandbehemoth{}=365,
+	},
+	modelrulesdef={%
+		\modelruledef{\deedsnotwords{}}{\ruletype{\attackattribute{}}\deedsnotwordsdef{}}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\stallionstempest{}}{\ruletype{\universalrule{}}\stallionstempestdef{}}%
+		\modelruledef{\maresshelter{}}{\ruletype{\universalrule{}}\maresshelterdef{}}%
+	},
+}% END UNIT ENTRY

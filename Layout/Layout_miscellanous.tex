@@ -1,0 +1,149 @@
+
+\def\columnseprulecolor{\color{\greycolor}}
+\setlength{\columnsep}{1cm}
+
+\newcommand{\void}[1]{}
+
+\newcommand{\costdown}{\textcolor{green}{$\searrow$}}
+\newcommand{\costup}{\textcolor{red}{$\nearrow$}}
+\newcommand{\baddown}{\textcolor{red}{$\searrow$}}
+\newcommand{\goodup}{\textcolor{green}{$\nearrow$}}
+
+\ifdef{\eastereggA}{}{%
+	\newcommand{\eastereggA}{Where you see one title, there are thousands of rats sneakily working in your back you don't.}
+}
+\ifdef{\eastereggB}{}{%
+	\newcommand{\eastereggB}{They shall rise and dominate while you sleep!}
+}
+
+%%% Captions %%%
+
+\newcommand{\captionpar}{\vspace{5pt}\newline}
+\newcommand{\captionposttitle}{\vspace{3pt}\newline}
+\newcommand{\captionposttitlepremc}{\vspace{-8pt}}
+
+%%% References and index %%%
+
+\ifdefined\totalrefwithpartname
+\newcommand{\totalref}[1]{\autoref*{#1} \enquote{\nameref{#1}}, \pageforref{} \pageref{#1}}%
+\else
+\newcommand{\totalref}[1]{\enquote{\nameref{#1}}, \pageforref{} \pageref{#1}}%
+\fi
+
+% Code to link to the place where the index entry is defined instead of the beginning of the page (https://tex.stackexchange.com/questions/405813/link-to-line-instead-of-page/405893#405893) tweaked to allow for bold link
+\newcommand{\hyperlinkbf}[2]{\hyperlink{#1}{\textbf{#2}}}%
+\AtBeginDocument{%
+	\LetLtxMacro\egregs@index\index%
+	\RenewDocumentCommand{\index}{o+m}{%
+	\begingroup%
+	%\phantomsection% if this is uncommented, the anchor will be placed right at the place the \idx comment was placed, but it means that the hyperlink will aim below the section title, if the title is the target. As it is now, the hyperlink will aim to the last title.
+	\IfValueTF{#1}{%
+		\imki@wrindexentry{\jobname}{#2|hyperlinkbf{\@currentHref}}{\thepage}%
+	}{%
+		\imki@wrindexentry{\jobname}{#2|hyperlink{\@currentHref}}{\thepage}%
+	}%
+	\endgroup%
+	}%
+}%
+\def\indexbf{\index[bf]}%
+
+% Index command optional keywords definition
+\define@key{idx}{main}{\def\idx@main{#1}}
+\define@key{idx}{sortlabel}{\def\idx@sortlabel{#1}}
+\define@key{idx}{subentry}{\def\idx@subentry{#1}}
+\define@key{idx}{subsortlabel}{\def\idx@subsortlabel{#1}}
+\newcommand{\defidx}{%
+	\setkeys{idx}{main=, sortlabel=, subentry=, subsortlabel=,}%
+	\setkeys{idx}%
+}
+
+% Index command
+\newcommand{\idx}[2][]{%
+	\defidx{#1}%
+	\expandafter\ifblank\expandafter{\idx@main}{%
+		\expandafter\ifblank\expandafter{\idx@sortlabel}{%
+			\pdfstringdef\textwithoutformatting{#2}%
+			\pdfsubstitute\textwithoutformatting{'}{}%
+			\dolanguagespecificsubstitute{}%
+			\substitute\textwithoutformatting{\string\376}{}%
+			\substitute\textwithoutformatting{\string\377}{}%
+			\substitute\textwithoutformatting{\string\040}{ }%
+			\substitute\textwithoutformatting{\string\000}{}%
+			\expandafter\index\expandafter{\textwithoutformatting @#2%
+				\expandafter\ifblank\expandafter{\idx@subentry}{}{!%
+					\expandafter\ifblank\expandafter{\idx@subsortlabel}{}{\idx@subsortlabel @}%
+					\idx@subentry%
+				}%
+			}%
+		}{%
+			\expandafter\index\expandafter{\idx@sortlabel @#2%
+				\expandafter\ifblank\expandafter{\idx@subentry}{}{!%
+					\expandafter\ifblank\expandafter{\idx@subsortlabel}{}{\idx@subsortlabel{}@}%
+					\idx@subentry%
+				}%
+			}%
+		}%
+	}{%
+		\expandafter\ifblank\expandafter{\idx@sortlabel}{%
+			\pdfstringdef\textwithoutformatting{#2}%
+			\pdfsubstitute\textwithoutformatting{'}{}%
+			\dolanguagespecificsubstitute{}%
+			\substitute\textwithoutformatting{\string\376}{}%
+			\substitute\textwithoutformatting{\string\377}{}%
+			\substitute\textwithoutformatting{\string\040}{ }%
+			\substitute\textwithoutformatting{\string\000}{}%
+			\expandafter\indexbf\expandafter{\textwithoutformatting @#2%
+				\expandafter\ifblank\expandafter{\idx@subentry}{}{!%
+					\expandafter\ifblank\expandafter{\idx@subsortlabel}{}{\idx@subsortlabel @}%
+					\idx@subentry%
+				}%
+				%|textbf% deprecated with the new code for linking the correct place of the page
+			}%
+		}{%
+			\expandafter\indexbf\expandafter{\idx@sortlabel @#2%
+				\expandafter\ifblank\expandafter{\idx@subentry}{}{!%
+					\expandafter\ifblank\expandafter{\idx@subsortlabel}{}{\idx@subsortlabel{}@}%
+					\idx@subentry%
+				}%
+				%|textbf% deprecated with the new code for linking the correct place of the page
+			}%
+		}%
+	}%
+}%
+
+% Index formatting
+
+\newcommand*{\IndexDelimiter}{{\penalty0\hbox{}\nobreak\def\hfill{\hskip 5pt plus 1fill}\dotfill}\nobreak}
+
+\newcommand{\indexnavigation}{}
+
+\newcommand*{\IndexHeading}[1]{%
+  \begin{minipage}{\columnwidth}\hbadness=10000
+	\tikz\node[
+    rounded corners=5pt,
+    draw=\greycolor,
+    fill=black!5,
+    line width=0.5pt,
+    inner sep=5pt,
+    align=center,
+    font=\sffamily\bfseries\large,
+    minimum width=\linewidth-\pgflinewidth,
+  ] {\hypertarget{idx:#1}{#1}};%
+  \vspace*{-7pt}\newline\debugfooter
+	\end{minipage}\nopagebreak
+  \protected@write\@auxout{}{\string\@indexgroup{idx:#1}{#1}}%
+}
+
+\newcommand*{\@indexgroup}[2]{%
+  \ifdefempty\indexnavigation
+  {\gdef\indexnavigation{\hyperlink{#1}{\textbf{#2}}}}%
+  {\gappto\indexnavigation{ \textbar\ \hyperlink{#1}{\textbf{#2}}}}%
+}
+
+\renewcommand*{\indexspace}{%
+  \par
+  \vspace{15pt plus 3pt minus 2pt}%
+}
+
+
+\def\@idxitem{\par\hangindent 5pt}

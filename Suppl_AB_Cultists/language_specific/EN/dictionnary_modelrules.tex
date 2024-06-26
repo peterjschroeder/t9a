@@ -1,0 +1,56 @@
+% Army Model Rules Names
+
+% Aegis already defined
+
+\newcommand{\nobodyexpects}{Nobody Expects\dots}
+
+\newcommand{\pledgedtodarkness}{Pledged to Darkness}
+
+\newcommand{\sacrificialofferings}{Sacrificial Offerings}
+
+\newcommand{\daemonicsummon}{Daemonic Summon}
+
+
+% Army Model Rules Texts
+
+\newcommand{\aegisdef}{%
+	Unit profiles in this Army Book contain an additional Characteristic, which corresponds to the units' Aegis Saves, shortened \Aeg{}. This Characteristic is treated as if the unit has the Personal Protection Aegis (X+) written on \newrule{its} profile, where X is the \Aeg{} Characteristic value. Not having an \Aeg{} value does not prevent a unit from being the target of an Aegis modifier.%
+}
+
+\newcommand{\nobodyexpectsdef}{%
+	At the start of step 6 of the Pre-Game Sequence (Determine the Deployment Zones), the opponent may choose to gain a +6 or \minuss{}6 modifier to the roll for choosing the Deployment Zone. If so, the Cultists player \textbf{must} nominate one of the opponent's Characters as Destrian Inquisitor. If the Destrian Inquisitor has been removed as a casualty or is Fleeing at the end of the game, the Cultists player gains +200 Victory Points.\newline
+	Ignore \nobodyexpects{} if the opponent's army is also from the Cultists Supplement.%
+}
+
+\newcommand{\waywardchildren}{Wayward Children}
+\newcommand{\fallenheroes}{Fallen Heroes}
+\newcommand{\thedishonoured}{The Dishonoured}
+\newcommand{\kinslayers}{Kinslayers}
+\newcommand{\speciesarchetype}{Species Archetype}
+
+\newcommand{\precharacmodifier}{}% In case you need something in your language between +X/-X and a Characteristics name
+
+\newcommand{\pledgedtodarknessdef}{%
+	Models with Pledged to Darkness can only join or be joined by models with Pledged to Darkness. While joined by one or more Characters, \rnf{} models with Pledged to Darkness gain \textbf{Fearless}.\DTLpar%
+	Certain units with Pledged to Darkness can choose one of the following 4 Species Archetypes, which give the models the changes stated below. If any unit chooses one of these Species Archetypes, all units capable of doing so \textbf{must} choose the same Species Archetype.\DTLpar%
+	\pledgedtodarknesstable%
+}
+
+\newcommand{\resiliencesetto}{\Resilience{} \textbf{set} to}
+\newcommand{\marchratesetto}{\MarchRate{} \textbf{set} to at least}
+\newcommand{\thedishonourednote}{The March Rate of Daemon Symbiotes and Possessed is \textbf{set} to at least \distance{12} instead.}
+
+\newcommand{\sacrificialofferingsdef}{%
+	Immediately before performing a Casting Attempt with a Wizard in a unit containing one or more models with Sacrificial Offerings, you may inflict 1 hit against that unit. This hit wounds automatically with no saves of any kind allowed. If a Health Point loss was caused against a model with Sacrificial Offerings, the Casting Attempt gains a +1 Casting Modifier. Each unit can be affected by Sacrificial Offerings only once per Magic Phase.%
+}
+
+\newcommand{\daemonicsummondef}{%
+	At the end of step 3 of the owner's Magic Phase (Siphon the Veil), before Veil Token Limits are applied, each non-Fleeing model with Daemonic Summon may perform a single Daemonic Summon:
+	\begin{enumerate}
+	\item Choose a unit from the Summoned Daemons Army Category on your Army List.
+	\item Discard a number of Veil Tokens from your Veil Token pool corresponding to the chosen unit's Point Cost divided by 200, rounding fractions up. During the owner's Player Turn 1, only 2 Veil Tokens may be discarded for Daemonic Summon. Otherwise, a maximum of 6 Veil Tokens may be discarded for Daemonic Summon per Player Turn.
+	\item The chosen unit is deployed in a legal formation fully within \distance{12} of the model that performs the Daemonic Summon. All models must be placed at least \distance{1} away from other units and from Impassable Terrain. If the whole unit cannot be deployed, then no models can be deployed.
+	\end{enumerate}
+	The unit counts as as having moved during the Player Turn it arrives on the Battlefield. Any unit that entered the Battlefield on Game Turn 4 or later loses Scoring. If a unit from the Summoned Daemons Army Category has not entered the Battlefield before the end of the game, the unit counts as destroyed.\DTLpar%
+	Until deployed on the Battlefield, units from the Summoned Daemons Army Category cannot perform any actions at all, and all their Special Items, rules, and abilities don't work while off the board.%
+}

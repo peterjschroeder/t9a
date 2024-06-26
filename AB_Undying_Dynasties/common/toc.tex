@@ -1,0 +1,21 @@
+
+\newcommand{\tocfirstcolumn}{%
+  \tocentry{UDArmySpecificRules}{\armyspecificrules}\par
+  \tocentry{UDModelRules}{\armymodelrules}\par
+  \tocentry{UDSpecialEquipment}{\specialequipment}\par
+  \tocentry{UDMonarchsOfUndeath}{\monarchsofundeath}\par
+  \tocentry{UDArmyOrganisation}{\armyorganisation}\par
+  \tocentry{UDQRS}{\quickrefsheet}\par
+  \ifdef{\thereisachangelog}{%
+		\tocentry{UDchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+  \tocentry{UDCharacters}{\characters}\par
+  \tocentry{UDMounts}{\charactermounts}\par
+  \tocentry{UDCore}{\core}\par
+  \tocentry{UDSpecial}{\specialcategory}\par
+  \tocentry{UDAncientOrdnance}{\ancientordnance}\par
+  \tocentry{UDEntombed}{\entombed}\par
+  \tocentry{UDMasonsMenagerie}{\masonsmenagerie}\par
+}

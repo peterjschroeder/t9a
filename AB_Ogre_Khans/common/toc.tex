@@ -1,0 +1,23 @@
+% TOC
+%%%
+
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{OKModelRules}{\armymodelrules}\par
+	\tocentry{OKHereditarySpell}{\hereditaryspell}\par
+	\tocentry{OKBigNames}{\bignames}\par
+	\tocentry{OKSpecialEquipment}{\specialequipment}\par
+	\tocentry{OKArmyOrganisation}{\armyorganisation}\par
+	\tocentry{OKQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{OKchangelog}{\changelog}\par
+	}{}%
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{OKCharacters}{\characters}\par
+	\tocentry{OKMounts}{\charactermounts}\par
+	\tocentry{OKCore}{\core}\par
+	\tocentry{OKSpecial}{\specialcategory}\par
+	\tocentry{OKPowderKeg}{\powderkeg}\par
+	\tocentry{OKChainedBeasts}{\chainedbeasts}\par
+}

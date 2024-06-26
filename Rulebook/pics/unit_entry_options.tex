@@ -1,0 +1,53 @@
+
+\newcommand{\TINMENoptions}{%
+	\ambush{} ({\zerotoXmodelsperunit{25}, \zerotoXunitsperarmy{2}})=20,
+	\onechoiceonlyACO{%
+		\shield{}=1\permodel{},
+		\pw{}=2\permodel{},
+	},
+	\throwingweapons{} (5+)=2\permodel{},	
+}
+\newcommand{\TINMENcommandgroup}{%
+	\champion{}=10,
+	\musician{}=10,
+	\standardbearer{}=10,
+	\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},	
+}
+\newcommand{\TINMENmodelrules}{%
+	\modelruledef{\tinmansheart}{\ruletype{\attackattributeclosecombat}\tinmansheartdef}
+}	
+\vspace*{0.3cm}
+\hspace*{0.18\textwidth}%
+\begin{tikzpicture}[overlay]
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt}]	(6.95,1.63) -- (13.7,1.63) node [black,midway,align=center,yshift=0.45cm] {\figTINMENOptionsTen};
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt,mirror}]
+(0.0,1.58) -- (0.0,0.03) node [align=right,black,midway,left=0.2cm] 
+{\figTINMENOptionsTwelve};
+	\draw [red,decorate,thick,decoration={brace,amplitude=2.5pt,mirror}]
+(0.0,-0.02) -- (0.0,-0.5) node [align=right,midway,black,left=0.2cm] 
+{\figTINMENOptionsEleven};
+%	\draw [->,red,thick]
+%(0.1,-0.2) -- (-0.2,-0.2) node [align=right,black,left=0cm] 
+%{\figTINMENOptionsEleven};
+	\draw [red,decorate,thick,decoration={brace,amplitude=6pt,mirror}]
+(0.0,-0.55) -- (0.0,-1.6) node [align=right,black,midway,left=0.2cm] 
+{\figTINMENOptionsThirteen};
+\end{tikzpicture}
+\scalebox{0.8}{%
+	\def\@minipagerestore{\setlength{\parskip}{\mycurrentparskip}}%
+	\hbadness=10000%
+	\begin{minipage}{\textwidth}
+		\setlength{\columnsep}{10pt}%
+		\setlength{\multicolsep}{0pt}%
+		\raggedcolumns%
+		\begin{multicols}{2}%
+			\strut\options{\TINMENoptions}%
+			\strut\commandgroup{\TINMENcommandgroup}%
+		\end{multicols}%
+		% Additional space if there is a single column rule after
+		\vspace*{8pt}%
+		% Single column
+		\vspace*{-5pt}%
+		\strut\modelrulesdef{\TINMENmodelrules}%
+	\end{minipage}
+}

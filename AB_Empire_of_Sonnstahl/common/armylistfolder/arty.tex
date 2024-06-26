@@ -1,0 +1,57 @@
+
+\unitentry{%
+	name=\arty{},
+	logo=cannonballs,
+	cost=150,
+	unitsize=1,
+	addrestriction=\zerotoXunitsperarmy{4},
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=4,
+	global@Ma=4,
+	global@Di=7,
+	globalrules=\warmachine{},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename=\crew{},
+	forceoffensenameprint=yes,
+	offense@At=3,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules=\moveorfire{},
+	optionalmodelrulesdef={%
+		\modelruledef{\impcannon}{\ruletype{\artilleryweapon}\impcannondef%
+			\begin{itemize}
+				\item \textbf{\cannon{}}, \range{72}, \shots{1}, \St{} 4 [10], \AP{} 0 [10], \alphaorderlistbf{\areaattack{1\timess{}5},{[\multiplewounds{\Dthree{}+1}{}]}}%
+				\item \textbf{\volleygun{}}, \range{12}, \shots{2D6}, \St{} 4, \AP{} 4%
+			\end{itemize}%
+		}
+		\modelruledef{\impvolleygun}{\ruletype{\artilleryweapon}%
+			\textbf{\volleygun{}}, \range{24}, \shots{3D6\timess{}2}, \St{} 5, \AP{} 3.%
+		}
+		\modelruledef{\impmortar}{\ruletype{\artilleryweapon}%
+			\textbf{\catapult{6\timess{}6}}, \range{12--48}, \shots{1}, \St{} 3 [6], \AP{} 1 [4], \textbf{[\multiplewounds{\Dthree{}}{}]}.%
+		}
+		\modelruledef{\improcket}{\ruletype{\artilleryweapon}%
+			\textbf{\catapult{1\timess{}1}}, \range{15--48}, \shots{3}, \St{} 5, \AP{} 3, \textbf{\multiplewounds{\Dthree{}}{}}.\newline%
+			\improcketdef%
+		}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\impcannon{} (4+)} (\NOTESTzerotoXunitsperarmy{2})=85,
+			\textbf{\improcket{} (4+)}\DEnewline{} (\NOTESTzerotoXunitsperarmy{2})=\free{},
+			\textbf{\impmortar{} (4+)} (\NOTESTzerotoXunitsperarmy{2})=30,
+			\textbf{\impvolleygun{} (4+)} (\NOTESTzerotoXunitsperarmy{2})=25,
+		}},
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}
+		\togglefalse{twocolprintoptionalmodelrulesdef}
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,58 @@
+Special Item Eye of the Bull 40 -> 45
+Special Item Mask of Ages 40 -> 35
+Special Item Kadim Binding 30 -> 25
+Special Item Banner of the Twice-Branded 40 -> 30
+Special Item Their Masters Banner 35 -> 20
+Special Item Tablet of Vezodinezh 65 -> 70
+Special Item Icon of Ashuruk 50 -> 30
+Special Item Golden Idol of Shamut 55 -> 40
+Overlord Base Cost 200 -> 180
+Overlord Bull of Shamut 160 -> 180
+Overlord Great Bull of Shamut 400 -> 420
+Prophet Base Cost 170 -> 165
+Prophet shield 10 -> 15
+Prophet Seat of Authority 55 -> 50
+Prophet Infernal Bastion 280 -> 260
+Prophet Great Weapon 10 -> 5
+Vizier Spear 5 -> 0
+Vizier Seat of Authority 60 -> 50
+Vizier Bastion 260 ->240
+Taurukh Commissioner Base Cost 260 -> 250
+Taurukh Commissioner Shield 25 -> 30
+Taurukh Commissioner Paired Weapons 5 -> 0
+Taurukh Commissioner Great Weapon 20 -> 15
+Lamassu Scholar Base Cost 300 -> 290
+Infernal Warriors Base Cost 270 -> 260
+Infernal Warriors Great Weapon 3 -> 2
+Citadel Guard Pistol and Spear 4 -> 2
+Vassal Levies Additional Models 5 -> 4
+Vassal Levies bow 3 -> 4
+Shackled Slaves Shield 1 -> 0
+Immortals Base Cost 290 -> 280
+Immortals Additional Models 24 -> 23
+Immortals Great Weapon 0 -> 1
+Immortals Infernal Weapon 2 -> 1
+Kadim Incarnates Base Cost 275 -> 265
+Kadim Incarnates Additional Models 90 -> 85
+Kadim Chariot Base Cost 235 -> 220
+Kadim Chariot Great Weapon 15 -> 20
+Taurukh Enforcers Base Cost 205 -> 195
+Taurukh Enforcers Additional Models 25 -> 24
+Taurukh Enforcers Blunderbuss 6 -> 5
+Taurukh Enforcers Great Weapon 3 -> 2
+Taurukh Enforcers Infernal Weapon 3 -> 4
+Taurukh Anointed Paired Weapons 2 -> 1
+Taurukh Anointed Great Weapon 5 -> 0
+Vassal Cavalry Base Cost 190 -> 180
+Vassal Cavalry Additional Models 10 -> 9
+Vassal Slingshot Base Cost 105 -> 100
+Gunnery Team Base Cost 160 -> 150
+Gunnery Team Naphtha Thrower 0 -> 10
+Infernal Artillery Titan Mortar 125 -> 120
+Infernal Engine Base Cost 410 -> 400
+Infernal Engine Rock Crusher 60 -> 50
+Infernal Engine Naphtha Thrower 35 -> 25
+Infernal Engine Rocket Battery 40 -> 30
+Infernal Bastion Base Cost 330 -> 320
+Citizen Giant Base Cost 340 -> 330
+Citizen Giant giant club 5 -> 15

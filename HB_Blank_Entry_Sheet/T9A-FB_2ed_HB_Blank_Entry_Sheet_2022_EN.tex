@@ -1,0 +1,36 @@
+
+%Language is defined here
+
+\def\languageisenglish{}
+%\def\thisisanarmybook{}
+%\def\noprintpoints{}
+
+% Preamble
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\import{../Layout}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\import{common/}{layout.tex}
+\import{language_specific/\languagetag/}{dictionnary_armylist.tex}
+\import{common/}{toc.tex}
+\import{common/}{footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Home Brew Blank}
+\newcommand{\balanceversion}{2022}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\betaversion}{1}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{July 1, 2022}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{}% anything related to the version
+\newcommand{\booklogo}{pics/seal_9th.png}
+\def\bookprefix{HBBlank}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+% all main sections are in specific files
+
+\import{../Layout/}{Titlepage.tex}
+\import{common/}{armylist.tex}
+
+\end{document}

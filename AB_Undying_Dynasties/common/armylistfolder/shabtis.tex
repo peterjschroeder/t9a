@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\shabtis{},
+	logo=special,
+	cost=185,
+	unitsize=3,
+	maxunitsize=8,
+	costpermodel=75,
+	scoring=yes,
+	maxunitsperarmy=5,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=8,
+	global@Rsr=2,
+	globalrules={\ensouledstatue{},\fear{},\scoring{},\fearless{},\undead{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=2,
+	defensearmour={\la{}},
+	offensename=\shabti{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=3,
+	options={%
+		\onechoiceonlyACO{%
+			\pw{}=13\permodel{},
+			\halberd{}=15\permodel{},
+		},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+} % END UNIT ENTRY

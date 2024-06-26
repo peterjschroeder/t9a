@@ -1,0 +1,394 @@
+
+\newcommand{\tocfirstcolumn}{}
+\newcommand{\tocsecondcolumn}{}
+
+% Sorting by armies
+
+\newcommand{\getarmysortlabel}[1]{%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{giantsbook}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}% Add entry sortlabel	
+}
+
+\DTLifdbexists{giantsbook}{\DTLcleardb{giantsbook}}{\DTLnewdb{giantsbook}}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\beastherds}
+	\getarmysortlabel{\beastherds}%
+	\DTLnewdbentry{giantsbook}{icon}{BH}
+	\DTLnewdbentry{giantsbook}{TOC}{GIABH}
+	\DTLnewdbentry{giantsbook}{giantpath}{beastgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\beastgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\beastherdsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\beastgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\daemonlegions}
+	\getarmysortlabel{\daemonlegions}%
+	\DTLnewdbentry{giantsbook}{icon}{DL}
+	\DTLnewdbentry{giantsbook}{TOC}{GIADL}
+	\DTLnewdbentry{giantsbook}{giantpath}{possessedgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\possessedgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\daemonlegionsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\possessedgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\dreadelves}
+	\getarmysortlabel{\dreadelves}%
+	\DTLnewdbentry{giantsbook}{icon}{DE}
+	\DTLnewdbentry{giantsbook}{TOC}{GIADE}
+	\DTLnewdbentry{giantsbook}{giantpath}{dreadedgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\dreadedgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\dreadelvesInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\dreadedgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\dwarvenholds}
+	\getarmysortlabel{\dwarvenholds}%
+	\DTLnewdbentry{giantsbook}{icon}{DH}
+	\DTLnewdbentry{giantsbook}{TOC}{GIADH}
+	\DTLnewdbentry{giantsbook}{giantpath}{giantdwarf}
+	\DTLnewdbentry{giantsbook}{giantname}{\giantdwarf}
+	\DTLnewdbentry{giantsbook}{initials}{\dwarvenholdsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\giantdwarffluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\empireofsonnstahl}
+	\getarmysortlabel{\empireofsonnstahl}%
+	\DTLnewdbentry{giantsbook}{icon}{EoS}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAEoS}
+	\DTLnewdbentry{giantsbook}{giantpath}{imperialgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\imperialgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\empireofsonnstahlInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\imperialgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\highbornelves}
+	\getarmysortlabel{\highbornelves}%
+	\DTLnewdbentry{giantsbook}{icon}{HE}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAHE}
+	\DTLnewdbentry{giantsbook}{giantpath}{highborngiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\highborngiant}
+	\DTLnewdbentry{giantsbook}{initials}{\highbornelvesInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\highborngiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\infernaldwarves}
+	\getarmysortlabel{\infernaldwarves}%
+	\DTLnewdbentry{giantsbook}{icon}{ID}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAID}
+	\DTLnewdbentry{giantsbook}{giantpath}{citizengiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\citizengiant}
+	\DTLnewdbentry{giantsbook}{initials}{\infernaldwarvesInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\citizengiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\kingdomofequitaine}
+	\getarmysortlabel{\kingdomofequitaine}%
+	\DTLnewdbentry{giantsbook}{icon}{KoE}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAKoE}
+	\DTLnewdbentry{giantsbook}{giantpath}{feudalgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\feudalgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\kingdomofequitaineInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\feudalgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\ogrekhans}
+	\getarmysortlabel{\ogrekhans}%
+	\DTLnewdbentry{giantsbook}{icon}{OK}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAOK}
+	\DTLnewdbentry{giantsbook}{giantpath}{slavegiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\slavegiant}
+	\DTLnewdbentry{giantsbook}{initials}{\ogrekhansInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\slavegiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\orcsandgoblins}
+	\getarmysortlabel{\orcsandgoblins}%
+	\DTLnewdbentry{giantsbook}{icon}{OnG}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAOnG}
+	\DTLnewdbentry{giantsbook}{giantpath}{giant}
+	\DTLnewdbentry{giantsbook}{giantname}{\giant}
+	\DTLnewdbentry{giantsbook}{initials}{\orcsandgoblinsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\giantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\saurianancients}
+	\getarmysortlabel{\saurianancients}%
+	\DTLnewdbentry{giantsbook}{icon}{SA}
+	\DTLnewdbentry{giantsbook}{TOC}{GIASA}
+	\DTLnewdbentry{giantsbook}{giantpath}{sauriangiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\sauriangiant}
+	\DTLnewdbentry{giantsbook}{initials}{\saurianancientsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\sauriangiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\sylvanelves}
+	\getarmysortlabel{\sylvanelves}%
+	\DTLnewdbentry{giantsbook}{icon}{SE}
+	\DTLnewdbentry{giantsbook}{TOC}{GIASE}
+	\DTLnewdbentry{giantsbook}{giantpath}{sylvangiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\sylvangiant}
+	\DTLnewdbentry{giantsbook}{initials}{\sylvanelvesInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\sylvangiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\theverminswarm}
+	\getarmysortlabel{\theverminswarm}%
+	\DTLnewdbentry{giantsbook}{icon}{VS}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAVS}
+	\DTLnewdbentry{giantsbook}{giantpath}{verminousgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\verminousgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\theverminswarmInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\verminousgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\undyingdynasties}
+	\getarmysortlabel{\undyingdynasties}%
+	\DTLnewdbentry{giantsbook}{icon}{UD}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAUD}
+	\DTLnewdbentry{giantsbook}{giantpath}{ancientgiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\ancientgiant}
+	\DTLnewdbentry{giantsbook}{initials}{\undyingdynastiesInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\ancientgiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\vampirecovenant}
+	\getarmysortlabel{\vampirecovenant}%
+	\DTLnewdbentry{giantsbook}{icon}{VC}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAVC}
+	\DTLnewdbentry{giantsbook}{giantpath}{corpsegiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\corpsegiant}
+	\DTLnewdbentry{giantsbook}{initials}{\vampirecovenantInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\corpsegiantfluff}
+\DTLnewrow{giantsbook}
+	\DTLnewdbentry{giantsbook}{name}{\warriorsofthedarkgods}
+	\getarmysortlabel{\warriorsofthedarkgods}%
+	\DTLnewdbentry{giantsbook}{icon}{WDG}
+	\DTLnewdbentry{giantsbook}{TOC}{GIAWDG}
+	\DTLnewdbentry{giantsbook}{giantpath}{maraudinggiant}
+	\DTLnewdbentry{giantsbook}{giantname}{\maraudinggiant}
+	\DTLnewdbentry{giantsbook}{initials}{\warriorsofthedarkgodsInitial}
+	\DTLnewdbentry{giantsbook}{prefluff}{\maraudinggiantfluff{}}
+\DTLsort*{sortlabel}{giantsbook}% Sort list
+
+\DTLgetvalue{\currentarmyTOCA}{giantsbook}{1}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCB}{giantsbook}{2}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCC}{giantsbook}{3}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCD}{giantsbook}{4}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCE}{giantsbook}{5}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCF}{giantsbook}{6}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCG}{giantsbook}{7}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCH}{giantsbook}{8}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCI}{giantsbook}{9}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCJ}{giantsbook}{10}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCK}{giantsbook}{11}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCL}{giantsbook}{12}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCM}{giantsbook}{13}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCN}{giantsbook}{14}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCO}{giantsbook}{15}{\dtlcolumnindex{giantsbook}{TOC}}
+\DTLgetvalue{\currentarmyTOCP}{giantsbook}{16}{\dtlcolumnindex{giantsbook}{TOC}}
+
+\DTLgetvalue{\currentarmynameA}{giantsbook}{1}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameB}{giantsbook}{2}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameC}{giantsbook}{3}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameD}{giantsbook}{4}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameE}{giantsbook}{5}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameF}{giantsbook}{6}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameG}{giantsbook}{7}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameH}{giantsbook}{8}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameI}{giantsbook}{9}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameJ}{giantsbook}{10}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameK}{giantsbook}{11}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameL}{giantsbook}{12}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameM}{giantsbook}{13}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameN}{giantsbook}{14}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameO}{giantsbook}{15}{\dtlcolumnindex{giantsbook}{name}}
+\DTLgetvalue{\currentarmynameP}{giantsbook}{16}{\dtlcolumnindex{giantsbook}{name}}
+
+\DTLgetvalue{\currentarmygiantnameA}{giantsbook}{1}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameB}{giantsbook}{2}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameC}{giantsbook}{3}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameD}{giantsbook}{4}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameE}{giantsbook}{5}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameF}{giantsbook}{6}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameG}{giantsbook}{7}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameH}{giantsbook}{8}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameI}{giantsbook}{9}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameJ}{giantsbook}{10}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameK}{giantsbook}{11}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameL}{giantsbook}{12}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameM}{giantsbook}{13}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameN}{giantsbook}{14}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameO}{giantsbook}{15}{\dtlcolumnindex{giantsbook}{giantname}}
+\DTLgetvalue{\currentarmygiantnameP}{giantsbook}{16}{\dtlcolumnindex{giantsbook}{giantname}}
+
+\DTLgetvalue{\currentarmyinitialsA}{giantsbook}{1}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsB}{giantsbook}{2}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsC}{giantsbook}{3}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsD}{giantsbook}{4}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsE}{giantsbook}{5}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsF}{giantsbook}{6}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsG}{giantsbook}{7}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsH}{giantsbook}{8}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsI}{giantsbook}{9}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsJ}{giantsbook}{10}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsK}{giantsbook}{11}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsL}{giantsbook}{12}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsM}{giantsbook}{13}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsN}{giantsbook}{14}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsO}{giantsbook}{15}{\dtlcolumnindex{giantsbook}{initials}}
+\DTLgetvalue{\currentarmyinitialsP}{giantsbook}{16}{\dtlcolumnindex{giantsbook}{initials}}
+
+% Army list titles
+
+\newcommand{\armylisttitlelogo}[3]{%
+	\hypertarget{#1}{\begin{center}\includegraphics[height=60pt]{logo_small_#3.png}\end{center}}
+	\vspace*{-10pt}\section*{#2}%
+	\label{#1}%
+	\stepcounter{categorynumber}%
+	\DTLnewrow{categories}%
+	\DTLnewdbentry{categories}{name}{#2}%
+}
+
+% Cultist Giant Manifestations
+
+\renewcommand{\prenameformat}[1]{% command used in explicit options AlCoOrder
+	\raisebox{-.2\height}{\makebox[18pt][c]{%
+	\ifblank{#1}{% nothing
+	}{%
+		\includegraphics[height=10pt]{{pics/#1_5}.pdf}%
+	}%
+	}}%
+	{\fontsize{1}{1.2}\selectfont \textcolor{white}{-}}%This part avoid a huge bug in the layout
+}
+
+
+% Dances of the Sylvan Giant
+
+\newcommand{\startdancestable}{%
+\renewcommand{\arraystretch}{1.5}%
+\DTLifdbexists{danceslist}{\DTLcleardb{danceslist}}{\DTLnewdb{danceslist}}% Create new/discard old list
+\begin{center}\begin{tabular}{>{\raggedleft}m{5cm}m{9cm}}%
+\toprule
+}
+
+\newcommand{\closedancestable}{%
+\DTLsort*{sortlabel}{danceslist}% Sort list
+\DTLforeach*{danceslist}{\name=name,\ruletext=ruletext}{%
+\textbf{\name}&\ruletext{}\DTLiflastrow{}{\tabularnewline}%
+}
+\tabularnewline\bottomrule
+\end{tabular}\end{center}%
+\DTLcleardb{danceslist}%
+}
+
+\newcommand{\adddance}[2]{%
+	\DTLnewrow{danceslist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{danceslist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{danceslist}{name}{#1}%
+	\DTLnewdbentry{danceslist}{ruletext}{#2}%
+}
+
+% Ancient Giant
+
+\newcommand{\bonechariotprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\charioteercrew{} (2)%
+	&%
+	{\ChVal{2}}&%
+	{\ChVal{3}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{2}}&%
+	\strut{\alphaorderlist{\aspenbow{} (5+),\halberd{}}}%
+	\tabularnewline%
+	\end{tabular}%
+}
+
+\newcommand{\scarabgiantprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\scarabs{}%
+	&%
+	{\ChVal{8}}&%
+	{\ChVal{3}}&%
+	{\ChVal{2}}&%
+	{\ChVal{1}}&%
+	{\ChVal{3}}&%
+	\strut{\alphaorderlist{\poisonattacks}}%
+	\tabularnewline%
+	\end{tabular}%
+}
+
+% Beast Giant
+
+\newcommand{\mongrelheraldprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\mongrelherald{}%
+	&%
+	{\ChVal{1}}&%
+	{\ChVal{3}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{3}}&%
+	\strut{\alphaorderlist{\musician{},\primalinstinct{}}}%
+	\tabularnewline%
+	\end{tabular}\vspace*{3pt}%
+}
+
+% Saurian Giant
+
+\newcommand{\skinkcrewprofile}{%
+	\setlength{\textwidth}{\textwidth-9pt}%
+	\greytextcolor{\rule{\textwidth}{0.5pt}}\DTLpar%
+	\vspace*{-5pt}%
+	\startcharacteristicstable{}%
+	\hspace*{3pt}
+	\ChLab{\OffensiveCharacteristics{}}&%
+	{\ChLab{\AttackValueInitials}}&%
+	{\ChLab{\OffensiveSkillInitials}}&%
+	{\ChLab{\StrengthInitials}}& %
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	{\ChLab{\AgilityInitials}}&%
+	{\ChLab{\ModelRules}}%
+	\tabularnewline%
+	\nameindent\skinkcrew{} (6)%
+	&%
+	{\ChVal{1}}&%
+	{\ChVal{2}}&%
+	{\ChVal{3}}&%
+	{\ChVal{0}}&%
+	{\ChVal{4}}&%
+	\strut{\marchandshoot{}, \poisonedjavelin{} (4+)}%
+	\tabularnewline%
+	\end{tabular}%
+}

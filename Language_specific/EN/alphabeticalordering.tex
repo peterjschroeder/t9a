@@ -1,0 +1,20 @@
+
+% For alphabetical ordering. Special characters need to be replaced by one or more normal characters in the process of the alphabetical ordering so they are ordered correctly. For example é need to become e, else it will be supposed to be after z.
+
+\newcommand{\dolanguagespecificsubstitute}{% French here, just for testing, can be removed after - the command need to stay defined even if void
+%\pdfsubstitute\textwithoutformatting{É}{E}%
+%\pdfsubstitute\textwithoutformatting{È}{E}%
+%\pdfsubstitute\textwithoutformatting{Ê}{E}%
+%\pdfsubstitute\textwithoutformatting{é}{e}%
+%\pdfsubstitute\textwithoutformatting{è}{e}%
+%\pdfsubstitute\textwithoutformatting{ê}{e}%
+%\pdfsubstitute\textwithoutformatting{À}{A}%
+%\pdfsubstitute\textwithoutformatting{à}{a}%
+%\pdfsubstitute\textwithoutformatting{ù}{u}%
+%\pdfsubstitute\textwithoutformatting{Æ}{AE}%
+%\pdfsubstitute\textwithoutformatting{æ}{ae}%
+%\pdfsubstitute\textwithoutformatting{ç}{c}%
+%\pdfsubstitute\textwithoutformatting{Ç}{C}%
+\pdfsubstitute\textwithoutformatting{Å}{A}%
+\pdfsubstitute\textwithoutformatting{å}{a}%
+}%

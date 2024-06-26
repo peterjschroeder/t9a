@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\raptorpack{},
+	logo=special,
+	optionallogo=core,
+	cost=130,
+	unitsize=5,
+	maxunitsize=15,
+	costpermodel=15,
+	scoring=,
+	maxunitsperarmy=2,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	categorynote=\raptorrestriction{8},
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=6,
+	globalrules={\swiftreform{},\communalbond{},\strider{\forest},\packhunter{},\minimised{} (\disciplinetest{})},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=2,
+	offensename=\raptor{},
+	offense@At=2,
+	offense@Of=3,
+	offense@St=4,
+	offense@AP=2,
+	offense@Ag=4,
+	options={
+		\onechoiceonlyACO{
+		\textbf{\corrosivespitter{}}=2\permodel{},
+		\ambush{}=2\permodel{},
+		},
+	},
+optionalmodelrulesdef={%
+	\modelruledef{\textbf{\corrosivespitter}}{\ruletype{\universalrule}\corrosivespitterdef}
+	},
+} % END UNIT ENTRY

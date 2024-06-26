@@ -1,0 +1,54 @@
+
+\unitentry{%
+	name=\eidolons{},
+	logo=summoned,
+	categorynote=\summonedcategorynote{},
+	cost=170,
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=30,
+	maxmodelsperarmy=18,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=7,
+	globalrules={\lighttroops{},\skirmisher{},\wizardconclave{},\supernal{},\fearless{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\hardtarget{} (1)},
+	offensename=\eidolon{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=2,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\hidebf{\darkfire{} (3+)}},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\divinationspelltwo}{\divination},
+			\spellformat{\evocationspellthree}{\evocation},
+			\spellformat{\thaumaturgyspellone}{\thaumaturgy},
+			\spellformat{\spearofinfinity}{\hereditaryspell},
+		}
+	},
+	commandgroup={%
+		\champion{}=120,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=kaleidoscopicflesh,name=\kaleidoscopicflesh{},cost=6\permodel{}}
+			\addsortedexploption{prename=sloth,hypertag=auraofdespair,name=\auraofdespair{},cost=5\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=sorcerousantennae,name=\sorcerousantennae{},cost=30}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\darkfire{}}{\ruletype{\shootingweapon}{\range{18}, \shots{2}, \St{} 4, \AP{} 0.\newline\darkfiredef{}}}%
+	},
+}

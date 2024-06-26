@@ -1,0 +1,86 @@
+
+\part{Victory Conditions}
+\idx[main=y]{Victory Conditions}\label{victory_conditions}
+
+At the end of the game, players determine the winner of the battle. For this purpose, calculate each player's Victory Points, check if any player scored the Secondary Objective, and distribute the Battle Points accordingly as described below. Of course players may agree to use a different method to determine the winner, e.g. by creating custom scenarios that set specific goals for each player to claim victory.
+
+\RBbmc
+
+\section{Scoring Victory Points}
+\idx[main=y]{Victory Points (VP)}\label{scoring_victory_points}
+
+At the end of each game, each player is awarded a number of Victory Points (VP) according to the rules below.
+
+\paragraph{Destroyed Units}
+
+For each enemy unit that has been removed as a casualty, you gain a number of \textbf{VP equal to its Point Cost}.
+
+\paragraph{Fleeing Units}
+
+For each enemy unit that is Fleeing at the end of the game, you gain a number of \textbf{VP equal to half its Point Cost, rounding fractions up}.
+
+\paragraph{Shattered Units}
+
+For each enemy unit that is at \SI{25}{\percent} or less of its starting Health Points (of the number taken from the Army List) at the end of the game, you gain a number of \textbf{VP equal to half its Point Cost, rounding fractions up}. Characters are counted separately from the units they have joined. Note that if an enemy unit is both Fleeing and Shattered, you gain a number of VP equal to the unit's total Point Cost.
+
+\paragraph{Defeated General}
+
+If the enemy General was removed as a casualty, you gain \textbf{200 VP}.
+
+\paragraph{Defeated Battle Standard Bearer}
+\idx{Battle Standard Bearer}
+
+If the enemy Battle Standard Bearer was removed as a casualty, you gain \textbf{200 VP}.
+
+\section[Scoring Secondary Objectives]{Scoring Secondary\\ Objectives}
+\label{scoring_secondary_objectives}
+
+The Secondary Objective selected at the start of the game can grant extra Battle Points (see \totalref{secondary_objectives}, and table \ref{table/victory_points} below).
+
+\section{Who is the Winner?}
+\idx[main=y]{Winning the Game}\idx[main=y]{Battle Points}\label{who_is_the_winner}
+
+Once all Victory Points are added together, a total of 20 Battle Points are divided between the players, depending on the Victory Point Difference. Calculate the Victory Point Difference and use table \ref{table/victory_points} below to convert the Victory Points Difference into Battle Points.
+\idx{Secondary Objectives}The winner of the Secondary Objective gains 3 additional Battle Points while the loser of the Secondary Objective loses 3 Battle Points. In case there is no winner, the Secondary Objective ends in a draw and no additional Battle Points are awarded to either player.
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\noindent\begin{tabular}{@{}M{2.55cm}@{}M{2.9cm}cc@{}}
+	\toprule
+	\multicolumn{2}{c}{\textbf{Victory Point Difference}} & \multicolumn{2}{c}{\textbf{Battle Points}} \tabularnewline
+	\textbf{Percentage of\newline Army Points} & (if playing with\newline 4500 Army Points) & \textbf{Winner} & \textbf{Loser} \tabularnewline
+	\midrule
+	0--\SI{5}{\percent} & 0--225 & 10 & 10 \tabularnewline
+	>5--\SI{10}{\percent} & 226--450 & 11 & 9 \tabularnewline
+	>10--\SI{20}{\percent} & 451--900 & 12 & 8 \tabularnewline
+	>20--\SI{30}{\percent} & 901--1350 & 13 & 7 \tabularnewline
+	>30--\SI{40}{\percent} & 1351--1800 & 14 & 6 \tabularnewline
+	>40--\SI{50}{\percent} & 1801--2250 & 15 & 5 \tabularnewline
+	>50--\SI{70}{\percent} & 2251--3150 & 16 & 4 \tabularnewline
+	>\SI{70}{\percent} & >3150 & 17 & 3 \tabularnewline
+	\midrule
+	\multicolumn{2}{c}{Winning Secondary Objective} & +3 & −3 \tabularnewline
+	\bottomrule
+	\end{tabular}
+	\caption{Victory Point Difference and Battle Points.}
+	\label{table/victory_points}
+\end{Figure}
+
+\vspace*{10pt}
+\begin{optionalrules}
+\vspace*{-10pt}
+\subsection[Optional Simplified Rules for Determining the Winner]{Optional Simplified Rules for\\ Determining the Winner}
+
+Winning the Secondary Objective awards the winner a number of Victory Points equal to \SI{20}{\percent} of the Army Points. Once all Victory Points are added together, compare the two results.
+\begin{itemize}
+\item If the Victory Point Difference is less than \SI{10}{\percent} of the Army Points, the result is a \textbf{Draw}.
+\item If the Victory Point Difference is at least \SI{10}{\percent} and up to \SI{50}{\percent} of the Army Points, the result is a \textbf{Win} for the player who scored higher.
+\item If the Victory Point Difference is more than \SI{50}{\percent} of the Army Points, the result is a \textbf{Massacre} for the player who scored higher.
+\end{itemize}
+\end{optionalrules}
+
+\debugfooter % Else footer goes wild for some reason with ocgcolorlinks option
+
+\RBemc

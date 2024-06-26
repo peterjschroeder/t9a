@@ -1,0 +1,128 @@
+
+\documentclass[10pt]{article}
+
+\usepackage{xparse}
+\usepackage{datatool}
+ \usepackage{parskip}	
+
+\usepackage{hyperref}
+
+\makeatletter
+
+%\newlength{\currentparskip}
+%\setlength{\currentparskip}{\parskip}
+%\newcommand{\@minipagerestore}{\setlength{\parskip}{\currentparskip}}
+
+\def\@minipagerestore{%
+    \def\@par{\let\par\@@par\par}
+}
+
+
+
+\newcommand{\addlocallist}{\listadd\locallists@dummy}%
+\NewDocumentCommand{\parsespacelist}{>{\SplitList{ }} m }{%
+	\ProcessList{#1}{\addlocallist}%
+}%
+\NewDocumentCommand{\parsecommalist}{>{\SplitList{,}} m }{%
+	\ProcessList{#1}{\addlocallist}%
+}%
+\newcommand{\parselist}[3][,]{%
+	\renewcommand\addlocallist{\listadd#3}%
+  	\undef#3%
+  	\ifstrequal{#1}{ }{\parsespacelist{#2}}{\parsecommalist{#2}}%
+}
+
+\def\parcommalist{\parselist[,]}%
+
+\newcommand{\sortitem}[2]{%
+	\DTLnewrow{alphaorderlist}% Create a new entry
+	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{#1}% Add entry sortlabel
+	\def\DTLentrycommand{\DTLnewdbentry{alphaorderlist}{description}}%
+	\expandafter\DTLentrycommand\expandafter{#2}% Add entry description
+}
+
+\newcommand{\addtosortedlist}[1]{%
+%	\ifsubstring{#1}{<STICKTO<}{%
+%		\def\prefixforsorting{}%
+%		\def\actualname{}%
+%		\splitatstickto{#1}{\prefixforsorting}{\actualname}%
+%		\pdfstringdef\textwithoutformatting{#1}%
+%		\pdfsubstitute\textwithoutformatting{<STICKTO<}{}%
+%		\pdfsubstitute\textwithoutformatting{'}{}%
+%		\pdfsubstitute\textwithoutformatting{ }{}%
+%		\dolanguagespecificsubstitute{}%
+%		\sortitem{\textwithoutformatting}{\actualname}%	
+%	}{%
+%	\pdfstringdef\textwithoutformatting{#1}%
+%	\pdfsubstitute\textwithoutformatting{'}{}%
+%	\pdfsubstitute\textwithoutformatting{ }{}%
+%	\dolanguagespecificsubstitute{}%
+%	\sortitem{\textwithoutformatting}{#1}%
+%	}%
+\sortitem{#1}{#1}%
+}%
+
+\newcommand{\alphaorderlist}[1]{%
+\DTLifdbexists{alphaorderlist}{\DTLcleardb{alphaorderlist}}{\DTLnewdb{alphaorderlist}}% Create new/discard old list
+\expandafter\parcommalist\expandafter{#1}{\locallists@alphaorderlist}%
+\forlistloop{\addtosortedlist}{\locallists@alphaorderlist}%
+\DTLsort*{sortlabel}{alphaorderlist}% Sort list
+\DTLforeach*{alphaorderlist}{\theDesc=description}{% Print back the ordered list
+\theDesc{}\DTLiflastrow{}{, }%
+}%
+\DTLcleardb{alphaorderlist}%
+}
+
+\newcommand{\printitem}[1]{#1, }
+
+\newcommand{\printcommalist}[1]{%
+\expandafter\parcommalist\expandafter{#1}{\locallists@testlist}%
+\forlistloop{\printitem}{\locallists@testlist}%
+}
+
+\makeatother
+
+
+
+\begin{document}
+
+tabular pp
+
+\hrule
+\begin{tabular}{p{1cm}p{8cm}}
+pEST\hrule&\alphaorderlist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\hrule\tabularnewline
+\end{tabular}
+\hrule
+
+tabular pp lettre
+
+\begin{tabular}{p{1cm}p{8cm}}
+TEST&\strut\alphaorderlist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\tabularnewline
+\end{tabular}
+
+tabular pp minipage [b]
+
+\begin{tabular}{p{1cm}p{8cm}}
+pEST\hrule&\begin{minipage}[b]{8cm}\alphaorderlist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\end{minipage}\hrule\tabularnewline
+\end{tabular}
+
+tabular pp minipage lettre
+
+\begin{tabular}{p{1cm}p{8cm}}
+TEST&\begin{minipage}{8cm}L\alphaorderlist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\end{minipage}\tabularnewline
+\end{tabular}
+
+tabular ll minipage
+
+\begin{tabular}{ll}
+TEST&\begin{minipage}{8cm}\alphaorderlist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\end{minipage}\tabularnewline
+\end{tabular}
+
+tabular ll minipage simple list
+
+\begin{tabular}{ll}
+TEST&\begin{minipage}{8cm}\printcommalist{ahahah,blublu,plopiplop,blob,huhuhu,cyrano}\end{minipage}\tabularnewline
+\end{tabular}
+
+\end{document} 

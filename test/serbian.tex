@@ -1,0 +1,55 @@
+\documentclass[8pt,a4paper]{extarticle}
+
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Times} % default is Latin Modern
+\usepackage{array}				% Additionnal options for arrays.
+\usepackage{diagbox}		% diagonal slash in a cell
+\usepackage[table]{xcolor}		% Auto alternate grey-white rows. Xcolor must be loaded before mdframed.
+\usepackage{colortbl}			% Additionnal options for coloring arrays.
+
+\newcolumntype{M}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\renewcommand{\arraystretch}{1.8}
+\arrayrulecolor{black!30}
+\setlength{\arrayrulewidth}{0.5pt}
+
+\begin{document}
+
+\begin{center}
+{\fontsize{10}{12}\selectfont\textbf{LISTA IZJAVA 1}}
+
+\bigskip 
+
+\begin{tabular}{@{}>{\bfseries}M{3cm}@{}M{3cm}@{}M{3cm}@{}M{3cm}@{}}
+\hline
+& \textbf{A} & \textbf{B} & \textbf{C} \tabularnewline
+Magični predmeti \newline Kakav? & Specifičan za armiju & Specifičan za armiju\newline +\newline Zajednički & Specifičan za armiju\newline +\newline Zajednički \tabularnewline
+Predmeti specifični za armije\newline Gde? & U armijskoj knjiz & U armijskoj knjiz & U armijskoj knjiz \tabularnewline
+Zajednički predmeti\newline Gde? & Bez zajedničkih predmeta & U osnovnoj knjizi pravila & U armijskoj knjizi \tabularnewline
+Zajednički predmeti\newline Cena? & Bez zajedničkih predmeta & Univerzalna cena & Zavisni od armije \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip \bigskip \bigskip 
+
+\begin{center}
+{\fontsize{10}{12}\selectfont\textbf{LISTA IZJAVA 2}}
+
+\bigskip 
+
+\begin{tabular}{@{}>{\bfseries}M{3cm}@{}M{3cm}@{}M{3cm}@{}M{3cm}@{}M{3cm}@{}M{3cm}@{}}
+\hline
+& \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} \tabularnewline
+Magični Predmeti \newline Kakvi? & Specifični za armiju & Specifični za armiju\newline +\newline Zajednički & Specifični za armiju\newline +\newline Zajednički & Specifični za armiju\newline +\newline Zajednički & Specifični za armiju \tabularnewline
+Predmeti specifični za armiju\newline Gde? & U armijskoj knjizi & U armijskoj knjizi & U armijskoj knjizi & U armijskoj knjizi & U armijskoj knjizi \tabularnewline
+Zajednički predmeti\newline Gde? & U osnovnoj knjizi pravila & U armijskoj knjizi & U armijskoj knjizi & U armijskoj knjizi & Bez zajedničkih predmeta \tabularnewline
+Zajednički predmeti\newline Cena? & Univerzalna & Bazirana na armiji & Bazirana na armiji & Bazirana na armiji & Bez zajedničkih predmeta \tabularnewline
+Broj predmeta\newline spram \newline složenosti & Kao što je sada & Složenost Smanjena na drugim mestima u armijskoj knjizi & Zajednički predmeti smanjeni na 60\% & Zajednički predmeti po armiji smanjeni na 60\% na osnovu prirode frakcije & Broj predmeta specifičnih za armiju povećan 3 puta \tabularnewline
+\hline
+\end{tabular}
+\end{center}
+
+
+\end{document}

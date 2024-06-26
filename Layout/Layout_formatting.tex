@@ -1,0 +1,205 @@
+
+%%% Figures %%%
+
+\newcommand{\figbiglettersize}{27}
+\newcommand{\figbigletter}[1]{%
+	\textpdfrender{%
+    TextRenderingMode=FillStroke,
+    LineWidth=0.4pt,
+    FillColor=white,
+    StrokeColor=black,
+  }{\textbf{\fontsize{\figbiglettersize}{1.2\figbiglettersize}\selectfont#1}}
+}
+
+
+%%% Sizes %%%
+
+\newcommand{\verysmallfontsize}{\fontsize{4}{4.8}\selectfont}
+\newcommand{\smallfontsize}{\fontsize{6}{7.2}\selectfont}
+\newcommand{\normalfontsize}{\fontsize{8}{9.6}\selectfont}
+\newcommand{\largefontsize}{\fontsize{10}{12}\selectfont}
+\newcommand{\largerfontsize}{\fontsize{12}{14.4}\selectfont}
+\newcommand{\Largefontsize}{\fontsize{14}{16.8}\selectfont}
+\newcommand{\Largerfontsize}{\fontsize{15}{18}\selectfont}
+\newcommand{\hugefontsize}{\fontsize{18}{21.6}\selectfont}
+\newcommand{\Hugefontsize}{\fontsize{25}{30}\selectfont}
+
+\newcommand{\smallcharacs}[1]{{\normalfontsize#1}}%
+
+%%% Colours and text formatting %%%
+
+\definecolor{brandblue}{RGB}{37,76,115}%{40,70,120}
+\definecolor{brandgold}{RGB}{217,166,51}%{255,200,90}
+\definecolor{brandred}{RGB}{200,40,30}
+
+\newcommand{\greycolor}{black!50}
+\newcommand{\lightgreycolor}{black!5}
+\newcommand{\greytextcolor}{\textcolor{\greycolor}}
+\ifdefined\thisisthepathsbook
+	\newcommand{\newrule}{\textcolor{green!60!black}}
+	\newcommand{\removedrule}[1]{\textcolor{green!60!black}{\sout{#1}}}
+\else
+	\newcommand{\newrule}{\textcolor{blue!80!black}}
+	\newcommand{\removedrule}[1]{\textcolor{blue!80!black}{\sout{#1}}}
+\fi
+\newcommand{\protectednewrule}{\textcolor{blue!80!black}}
+\newcommand{\protectedremovedrule}[1]{\textcolor{green!60!black}{\sout{#1}}}
+\newcommand{\rewordedrule}{\textcolor{green!60!black}}
+\newcommand{\removedreworded}[1]{\textcolor{green!60!black}{\sout{#1}}}
+\newcommand{\protectedrewordedrule}{\textcolor{green!60!black}}
+\newcommand{\flufffont}[1]{\textit{#1}}
+
+\newcommand{\predotfill}{\penalty0\hbox{}\nobreak} % avoiding a cost being printed at the beginning of a new line => it goes to the end of the line instead
+
+\newcommand{\boosted}[1]{\textbf{\textcolor{blue}{\strut$\{$#1$\}$\strut}}}
+\newcommand{\base}[1]{\textcolor{red}{\leftspecialbracket{}#1\rightspecialbracket{}}}
+\newcommand{\specialboosted}[1]{\textbf{\textcolor{olive}{\leftspecialbracket{}\hspace*{-0.4ex}\leftspecialbracket{}#1\rightspecialbracket{}\hspace*{-0.4ex}\rightspecialbracket{}}}}
+
+\newcommand{\cboosted}[1]{\textcolor{blue}{#1}}
+\newcommand{\cbase}[1]{\textcolor{red}{#1}}
+\newcommand{\cspecialboosted}[1]{\textcolor{olive}{#1}}
+
+\newcommand{\replabel}{\newline\textit{\largefontsize\replicablespellnumber}}
+
+\newcommand{\separator}{\noindent\greytextcolor{\rule{\textwidth}{0.5pt}}}
+
+\newcommand{\Scolon}{\spacebeforecolon{}:}
+
+%%% SPELL FORMAT FOR CONSISTENCY %%%
+
+% #1 : Spell name
+% #2 : Spell path
+\newcommand{\spellformat}[2]{\textit{#1}\ifblank{#2}{}{ (#2)}}
+
+
+%%% Symbols %%%
+
+\newcommand{\starsymbol}{$\star$}
+\newcommand{\refsymbol}{*}
+\newcommand{\refsymbolbis}{*}
+\newcommand{\refsymbolB}{$^{\dagger}$}
+\newcommand{\refsymbolBbis}{$^{\dagger}$}
+\newcommand{\refsymbolC}{$^{\ddagger}$}
+\newcommand{\refsymbolCbis}{$^{\ddagger}$}
+\newcommand{\refs}{*}
+\newcommand{\refsbis}{*}
+\newcommand{\refsB}{$^{\dagger}$}
+\newcommand{\refsBbis}{$^{\dagger}$}
+\newcommand{\refsC}{$^{\ddagger}$}
+\newcommand{\refsCbis}{$^{\ddagger}$}
+\DeclareSIUnit[number-unit-product = {}]{\inch}{″}
+\DeclareSIUnit[number-unit-product = {}]{\foot}{′}
+\newcommand{\plusone}{+1} % still used?
+\newcommand{\minuss}{−}
+\newcommand{\timess}{×}
+
+\newcommand{\leftspecialbracket}{% angle bracket that get replaced by a < when copy pasted
+\BeginAccSupp{method=hex,unicode,ActualText=003C}%
+$\langle$%
+\EndAccSupp{}%
+}
+
+\newcommand{\rightspecialbracket}{% angle bracket that get replaced by a > when copy pasted
+\BeginAccSupp{method=hex,unicode,ActualText=003E}%
+$\rangle$%
+\EndAccSupp{}%
+}
+
+%%% Macros %%%
+
+\newcommand{\range}[1] {\labels@range~#1\si{\inch}}
+\newcommand{\distance}[1] {#1\si{\inch}}
+\newcommand{\result}[1] {‘#1’}
+\newcommand{\pts}[1]{\isitoneornot{#1}{#1~\labels@point}{#1~\labels@points}}
+
+%%% Points removal %%%
+
+\newcommand{\pointsblock}[1]{#1}%
+\ifundef{\noprintpoints}{}{%
+	\renewcommand{\pointsblock}[1]{}%
+}
+
+%%% Ballot Box instead of points for scrolls compendiums %%%
+
+\newcommand{\squareblock}{\fbox{\phantom{$\cdot$}}}%
+
+\newcommand{\optionline}{%
+	\suboptionindent\hrulefill
+%	\underline{\null\nobreak\hspace*{3pt}\hfill\nobreak \null}
+%   #1\nobreak\hspace*{3pt}\hfill\nobreak\pointsblock{#2}
+}
+
+%%% RB multicols %%%
+
+\newcommand{\RBbmc}{\raggedcolumns\begin{multicols*}{2}}
+\newcommand{\RBemc}{\end{multicols*}}
+
+\newenvironment{Figure}
+	{\par\medskip\noindent\minipage{\linewidth}}
+	{\endminipage\par\medskip}
+\newcommand{\Fanchor}{\captionsetup{type=figure}}
+\newcommand{\Tanchor}{\captionsetup{type=table}}
+
+%%% Profiles %%%
+
+\newcommand{\ChLab}[1]{{\normalfontsize\greytextcolor{\textit{#1}}}} % Font for Characteristic's labels
+\newcommand{\ChVal}[1]{\textbf{#1}} % Font for Characteristic's values
+
+\newcommand{\suboptionindent}{\hspace*{0.6cm}}
+\newcommand{\optionnewlineindent}{\hspace*{0.3cm}}
+
+
+
+\newlength{\lengthbeforemodelsize}
+\setlength{\lengthbeforemodelsize}{6.5cm}
+\newlength{\lengthbeforemodelsizetwologos}
+
+\newlength{\lengthoftheptsblock}
+
+\newcommand{\nameindent}{\hspace*{8pt}}
+
+%\newcommand{\characteristicsline}{\noalign{\vskip -3.5pt}\hline}% deprecated
+
+\newcommand{\ruletype}[1]{#1.\newline}
+
+%%% Language specific %%%
+
+\newcommand{\onlyinenglish}[1]{#1}%
+\ifundef{\languageisenglish}{%
+	\renewcommand{\onlyinenglish}[1]{}
+}{}
+
+\ifundef{\DEnewline}{%
+	\newcommand{\DEnewline}{}% defined to \newline when language is DE
+}{}%
+
+\ifundef{\RUnewline}{%
+	\newcommand{\RUnewline}{}% defined to \newline when language is DE
+}{}%
+
+\ifundef{\ESnewline}{%
+	\newcommand{\ESnewline}{}% defined to \newline when language is DE
+}{}%
+
+\ifundef{\languageisfrench}{%
+	\newcommand{\onlyinfrench}[1]{}%
+	\newcommand{\frenchsmallcharacs}[1]{#1}%
+	\newcommand{\notinfrench}[1]{#1}%
+}{%
+	\setlist[itemize]{label=--}%
+	\newcommand{\onlyinfrench}[1]{#1}%
+	\newcommand{\frenchsmallcharacs}[1]{{\normalfontsize#1}}%
+	\newcommand{\notinfrench}[1]{}%
+}
+
+\ifundef{\languageisspanish}{%
+	\newcommand{\onlyinspanish}[1]{}%
+}{%
+	\newcommand{\onlyinspanish}[1]{#1}%
+}
+
+\ifundef{\languageisrussian}{%
+	\newcommand{\onlyinrussian}[1]{}%
+}{%
+	\newcommand{\onlyinrussian}[1]{#1}%
+}

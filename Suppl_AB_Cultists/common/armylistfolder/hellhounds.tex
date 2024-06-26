@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\hellhounds{},
+	logo=summoned,
+	categorynote=\summonedcategorynote{},
+	cost=\newrule{170},
+	unitsize=5,
+	maxunitsize=15,
+	costpermodel=\newrule{19},
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=7,
+	globalrules={\hidebf{\hellishgrowl{}},\supernal{},\fearless{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\hellhound{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\lethalstrike{}},
+	modelrulesdef={%
+		\modelruledef{\hellishgrowl}{\ruletype{\universalrule}\hellishgrowldef}
+	},
+	commandgroup={%
+		\champion{}=10,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=1\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=centipedelegs,name=\centipedelegs{},cost=2\permodel{}}
+			\addsortedexploption{prename=greed,hypertag=graspingproboscis,name=\graspingproboscis{},cost=1\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=2\permodel{}}
+		}
+	},
+}

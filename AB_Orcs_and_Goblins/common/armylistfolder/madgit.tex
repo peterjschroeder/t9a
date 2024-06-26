@@ -1,0 +1,29 @@
+
+\unitentry{%
+	name=\madgit{},
+	maxmodelsperarmy=8,
+	costnote=\gitnote{},
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25,
+	scoring=no,
+	global@Ad=\XDsix{2},
+	global@Ma=,
+	global@Di=5,
+	globalrules={\fearless{},{\randommovement{\XDsix{2}}},\shambolic{},{\ricochet{} (\Dsix{})},\runningamok{},\hidebf{\surprise{}}},
+	defense@HP=1,
+	defense@Df=0,
+	defense@Re=3,
+	defense@Arm=0,
+	defenserules={\hardtarget{} (1)},
+	offensename=\madgit{},
+	offense@At=,
+	offense@Of=0,
+	offense@St=5,
+	offense@AP=3,
+	offense@Ag=3,
+	offenserules={\cavegoblin{}},
+	modelrulesdef={%
+		\modelruledef{\surprise}{\ruletype{\universalrule}\surprisedef}%
+	},
+}% END UNIT ENTRY

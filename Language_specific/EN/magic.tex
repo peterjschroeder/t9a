@@ -1,0 +1,548 @@
+
+% General
+
+\newcommand{\wizard}{Wizard}
+\newcommand{\wizards}{Wizards}
+
+\newcommand{\learnedspell}{Learned Spell}
+\newcommand{\learnedspells}{Learned Spells}
+\newcommand{\replicablespell}{Replicable Spell}
+\newcommand{\replicablespells}{Replicable Spells}
+\newcommand{\replicablespellnumber}{rep}
+\newcommand{\attributespell}{Attribute Spell}
+\newcommand{\attributespells}{Attribute Spells}
+\newcommand{\attributespellnumber}{A}
+\newcommand{\hereditaryspell}{Hereditary Spell}
+\newcommand{\hereditaryspells}{Hereditary Spells}
+\newcommand{\hereditaryspellnumber}{H}
+
+\newcommand{\boundspell}[1]{Bound Spell\ifblank{#1}{}{ (Power Level #1)}} % add a parameter for the second value \ifblank{#2}{}{/#2}
+\newcommand{\boundspells}[1]{Bound Spells\ifblank{#1}{}{ (Power Level #1)}}
+
+% Table Titles
+
+\newcommand{\spellsCastingValue}{Casting Value}
+\newcommand{\spellsRange}{Range}
+\newcommand{\spellsType}{Type}
+\newcommand{\spellsDuration}{Duration}
+\newcommand{\spellsEffect}{Effect}
+
+% Casting Vocabulary
+
+\newcommand{\fizzle}{Fizzle}
+\newcommand{\miscast}{Miscast}
+\newcommand{\miscasts}{Miscasts}
+
+\newcommand{\brokenconcentration}{Broken Concentration}
+\newcommand{\witchfire}{Witchfire}
+\newcommand{\magicalinferno}{Magical Inferno}
+\newcommand{\amnesia}{Amnesia}
+\newcommand{\backlash}{Backlash}
+\newcommand{\implosion}{Implosion}
+\newcommand{\breachintheveil}{Breach in the Veil}
+
+% Spell Types
+
+\newcommand{\augment}{Augment}
+\newcommand{\hex}{Hex}
+\newcommand{\universal}{Universal}
+\newcommand{\missile}{Missile}
+\newcommand{\damage}{Damage}
+\newcommand{\direct}{Direct}
+\newcommand{\focused}{Focused}
+\newcommand{\ground}{Ground}
+\newcommand{\specialTYPE}{Special}
+\newcommand{\aura}{Aura}
+\newcommand{\castersunit}{Caster's Unit}
+\newcommand{\caster}{Caster}
+
+\newcommand{\template}{Template}
+
+% Spell Durations
+
+\newcommand{\oneturn}{One Turn}
+\newcommand{\instant}{Instant}
+\newcommand{\permanent}{Permanent}
+
+
+% Spell Names
+
+% Alchemy
+
+\newcommand{\alchemy}{Alchemy}
+\newcommand{\alchemyattribute}{Alchemical Fire}
+\newcommand{\alchemyspellone}{Quicksilver Lash}
+\newcommand{\alchemyspelltwo}{Word of Iron}
+\newcommand{\alchemyspellthree}{Glory of Gold}
+\newcommand{\alchemyspellfour}{Silver Spike}
+\newcommand{\alchemyspellfive}{Corruption of Tin}
+\newcommand{\alchemyspellsix}{Molten Copper}
+
+% Cosmology
+
+\newcommand{\cosmology}{Cosmology}
+\newcommand{\cosmos}{Cosmos}
+\newcommand{\chaos}{Chaos}
+\newcommand{\cosmologypassive}{Duality}
+\newcommand{\cosmologyspellone}{Altered Sight}
+\newcommand{\cosmologyspelltwo}{Truth of Time}
+\newcommand{\cosmologyspellthree}{Ice and Fire}
+\newcommand{\cosmologyspellfour}{Perception of Strength}
+\newcommand{\cosmologyspellfive}{Unity in Divergence}
+\newcommand{\cosmologyspellsix}{Touch the Heart}
+
+% Divination
+
+\newcommand{\divination}{Divination}
+\newcommand{\divinationpassive}{The Conclave}
+\newcommand{\divinationattribute}{Guiding Light}
+\newcommand{\divinationspellone}{Know Thine Enemy}
+\newcommand{\divinationspelltwo}{Fate's Judgement}
+\newcommand{\divinationspellthree}{Scrying}
+\newcommand{\divinationspellfour}{The Stars Align}
+\newcommand{\divinationspellfive}{Unerring Strike}
+\newcommand{\divinationspellsix}{Mirror of the Veil}
+
+% Druidism
+
+\newcommand{\druidism}{Druidism}
+\newcommand{\druidismpassive}{Ley Lines}
+\newcommand{\druidismattribute}{Hidden Paths}
+\newcommand{\druidismspellone}{Fountain of Youth}
+\newcommand{\druidismspelltwo}{Entwining Roots}
+\newcommand{\druidismspellthree}{Healing Waters}
+\newcommand{\druidismspellfour}{Master of Earth}
+\newcommand{\druidismspellfive}{Stone Skin}
+\newcommand{\druidismspellsix}{Summer Growth}
+
+% Evocation
+
+\newcommand{\evocation}{Evocation}
+\newcommand{\evocationattribute}{Evocation of Souls}
+\newcommand{\evocationspellone}{Ancestral Aid}
+\newcommand{\evocationspelltwo}{Whispers of the Veil}
+\newcommand{\evocationspellthree}{Hasten the Hour}
+\newcommand{\evocationspellfour}{Spectral Blades}
+\newcommand{\evocationspellfive}{Touch of the Reaper}
+\newcommand{\evocationspellsix}{Danse Macabre}
+% Occultism
+
+\newcommand{\occultism}{Occultism}
+\newcommand{\occultismpassive}{The Sacrifice}
+\newcommand{\occultismspellone}{Breath of Corruption}
+\newcommand{\occultismspelltwo}{Hand of Glory}
+\newcommand{\occultismspellthree}{The Rot Within}
+\newcommand{\occultismspellfour}{Pentagram of Pain}
+\newcommand{\occultismspellfive}{Marked for Doom}
+\newcommand{\occultismspellsix}{The Grave Calls}
+
+% Pyromancy
+
+\newcommand{\pyromancy}{Pyromancy}
+\newcommand{\pyromancyattribute}{Blaze}
+\newcommand{\pyromancyspellone}{Fireball}
+\newcommand{\pyromancyspelltwo}{Cloak of Cinders}
+\newcommand{\pyromancyspellthree}{Flaming Swords}
+\newcommand{\pyromancyspellfour}{Pyroclastic Flow}
+\newcommand{\pyromancyspellfive}{Scorching Salvo}
+\newcommand{\pyromancyspellsix}{Enveloping Embers}
+
+% Shamanism
+
+\newcommand{\shamanism}{Shamanism}
+\newcommand{\shamanismattribute}{Scarification}
+\newcommand{\shamanismspellone}{Awaken the Beast}
+\newcommand{\shamanismspelltwo}{Swarm of Insects}
+\newcommand{\shamanismspellthree}{Savage Fury}
+\newcommand{\shamanismspellfour}{Chilling Howl}
+\newcommand{\shamanismspellfive}{Totemic Summon}
+\newcommand{\shamanismspellsix}{Break the Spirit}
+\newcommand{\totemicbeast}{Totemic Beast}
+\newcommand{\totemicbeastnameaddon}{(for \shamanismspellfive{})}
+
+% Thaumaturgy
+
+\newcommand{\thaumaturgy}{Thaumaturgy}
+\newcommand{\thaumaturgypassive}{Judgement on High}
+\newcommand{\thaumaturgyspellone}{Hand of Heaven}
+\newcommand{\thaumaturgyspelltwo}{Smite the Unbeliever}
+\newcommand{\thaumaturgyspellthree}{Speaking in Tongues}
+\newcommand{\thaumaturgyspellfour}{Cleansing Fire}
+\newcommand{\thaumaturgyspellfive}{Wrath of God}
+\newcommand{\thaumaturgyspellsix}{Trial of Faith}
+
+% Witchcraft
+
+\newcommand{\witchcraft}{Witchcraft}
+\newcommand{\witchcraftattribute}{Evil Eye}
+\newcommand{\witchcraftspellone}{Raven's Wing}
+\newcommand{\witchcraftspelltwo}{Deceptive Glamour}
+\newcommand{\witchcraftspellthree}{Twisted Effigy}
+\newcommand{\witchcraftspellfour}{The Wheel Turns}
+\newcommand{\witchcraftspellfive}{Will-o'-the-Wisp}
+\newcommand{\witchcraftspellsix}{Bewitching Glare}
+
+% Paths Initials
+
+\newcommand{\alchemyInitials}{Al}
+\newcommand{\shamanismInitials}{Sh}
+\newcommand{\cosmologyInitials}{Co}
+\newcommand{\divinationInitials}{Di}
+\newcommand{\druidismInitials}{Dr}
+\newcommand{\evocationInitials}{Ev}
+\newcommand{\occultismInitials}{Oc}
+\newcommand{\pyromancyInitials}{Py}
+\newcommand{\witchcraftInitials}{Wi}
+\newcommand{\thaumaturgyInitials}{Th}
+
+
+% SPELLS
+% Alchemy
+
+\newcommand{\alchemyattributedef}{%
+	The target gains \flammable{} (against Melee Attacks).%
+}
+%Quicksilver Lash
+\newcommand{\alchemyspellonedef}{%
+	The target suffers D3+1 hits with \flamingattacks{}, \magicalattacks{}, and Armour Penetration 10. These hits \textbf{always} wound on a roll equal to or greater than \enquote{7 minus the Armour of the model that the hit is distributed onto}. A natural \result{6} always wounds and a natural \result{1} always fails to wound.%
+}
+%Word if Iron
+\newcommand{\alchemyspelltwodef}{%
+	The target gains \base{+1} \boosted{+2} Armour.%
+}
+%Glory of Gold
+\newcommand{\alchemyspellthreedef}{%
+	The target gains +1 Armour Penetration, \flamingattacks{}, and \magicalattacks{}.%
+}
+%Silver Spike
+\newcommand{\alchemyspellfourdef}{%
+	The target suffers 1 hit with Strength 4 [6], Armour Penetration 10, \magicalattacks{}, [\multiplewounds{D3}{}], and \areaattack{} (1\timess{}5).%
+}
+%Corruption of Tin
+\newcommand{\alchemyspellfivedef}{%
+	The target suffers \minuss{}1 Armour.%
+}
+%Molten Copper
+\newcommand{\alchemyspellsixdef}{%
+	The target suffers D3+4 hits with Strength X, Armour Penetration 4, \flamingattacks{}, and \magicalattacks{}, where X is equal to the Armour of the model that the hit is distributed onto.%
+}
+
+% Cosmology
+
+% Shift length for fusioned cells, you may adjust if your languages have a different number of lines compared to English
+\newcommand{\cosmologyspellonedurationvshift}{-0.2cm}
+\newcommand{\cosmologyspelltwodurationvshift}{-0.45cm}
+\newcommand{\cosmologyspellthreetypevshift}{-0.45cm}
+\newcommand{\cosmologyspellthreedurationvshift}{-0.45cm}
+\newcommand{\cosmologyspellfourdurationvshift}{0cm}
+\newcommand{\cosmologyspellsixdurationvshift}{-0.45cm}
+
+\newcommand{\cosmologypassivedef}{%
+	All \cosmology{} spells are divided into two versions, representing opposing aspects: \textbf{\cosmos} and \textbf{\chaos}. When casting \cosmology{} spells, always declare which version of the spell you are using. Whenever the Caster successfully casts a non-Bound Cosmology spell, the next Cosmology spell it attempts to cast has its Casting Value reduced by 1, provided this spell is a Cosmology spell of the opposing aspect.%
+}
+\newcommand{\cosmologyspellonecosmosdef}{%
+	The target gains \textbf{+2} Offensive Skill and has its weapons' Aim \textbf{improved} by 1.%
+}
+\newcommand{\cosmologyspellonechaosdef}{%
+	The target suffers \textbf{\minuss{}2} Offensive Skill and has its weapons' Aim \textbf{worsened} by 1.%
+}
+\newcommand{\cosmologyspelltwocosmosdef}{%
+	The target gains +2" Advance Rate and +2 Agility.
+}
+\newcommand{\cosmologyspelltwochaosdef}{%
+	The target suffers -2" Advance Rate, to a minimum of 3", and -2 Agility, to a minimum of 1. %
+}
+\newcommand{\cosmologyspellthreecosmosdef}{%
+	The target suffers 2D6 hits with Strength 4, Armour Penetration 0, and \magicalattacks{}. Successful \textbf{Special Saves} against wounds caused by this spell must be rerolled.%
+}
+\newcommand{\cosmologyspellthreechaosdef}{%
+	The target suffers 2D6 hits with Strength 4, Armour Penetration 0, and \magicalattacks{}. Successful \textbf{Armour Saves} against wounds caused by this spell must be rerolled.%
+}
+\newcommand{\cosmologyspellfourcosmosdef}{%
+	The target gains \textbf{+1} Strength and \textbf{+1} Armour Penetration.%
+}
+\newcommand{\cosmologyspellfourchaosdef}{%
+	The target suffers \textbf{\minuss{}1} Strength and \textbf{\minuss{}1} Armour Penetration.%
+}
+\newcommand{\cosmologyspellfivecosmosdef}{%
+	All models in the target unit \textbf{gain \aegis{5}}.%
+}
+\newcommand{\cosmologyspellfivechaosdef}{%
+	The target suffers 1 hit with Area Attack (6×6), Strength 3, Armour Penetration 0, and Magical Attacks. %
+}
+\newcommand{\cosmologyspellsixcosmosdef}{%
+	The target \textbf{Recovers} 1 Health Point.%
+}
+\newcommand{\cosmologyspellsixchaosdef}{%
+	The target suffers \textbf{1 hit that wounds automatically} with Armour Penetration 10 and Magical Attacks.%
+}
+
+% Divination
+
+\newcommand{\divinationpassivedef}{%
+	Spells from \divination{} gain \distance{+3} range for each additional friendly Wizard within \distance{12} of the Caster. This bonus can never increase the combined modifier beyond \distance{+9}, however other sources may.%
+}
+\newcommand{\divinationattributedef}{%
+	Units with all models affected by the spell gain \minimised{} (Discipline Tests).
+	A unit cannot be affected by this spell more than once per Magic Phase.%
+}
+\newcommand{\divinationspellonedef}{%
+	The target gains +2 Offensive Skill, +2 Defensive Skill, and +2 Agility.%
+}
+\newcommand{\divinationspelltwodef}{%
+	The target suffers \base{D3} \boosted{D6} hits that wound automatically with Armour Penetration 0 and \magicalattacks{}, with no Special Saves allowed (note that Armour Saves are allowed).%
+}
+\newcommand{\divinationspellthreedef}{%
+	The target gains \distracting{} and \hardtarget{} (1).%
+}
+\newcommand{\divinationspellfourdef}{%
+	The target gains \divineattacks{}. In addition, it must reroll failed to-hit rolls with Close Combat \base{and Shooting} Attacks.%
+}
+\newcommand{\divinationspellfivedef}{%
+	The target suffers 2D6 \boosted{with Maximised Roll} hits that wound on 4+ with Armour Penetration 1, \divineattacks{}, and \magicalattacks{}.%
+}
+\newcommand{\divinationspellsixdef}{%
+	The target gains Magic Resistance (3) that is also applied to friendly spells.\newline%
+}
+
+
+% Druidism
+
+\newcommand{\druidismpassivedef}{%
+	Instead of measuring the range of Druidism spells from the Caster as normal, it can be measured from any Forest, Water, or Hill Terrain Feature on the Battlefield. If so, the range is \textbf{set} to \distance{6}. In addition, if the target is in contact with one or more Terrain Features that are Forest, Water, or Hill Terrain Features, the spell's Casting Value is reduced by 1.%
+}
+\newcommand{\druidismattributedef}{%
+	%
+}
+
+%Fountain of Youth
+\newcommand{\druidismspellonedef}{%
+
+	 When resolving the spell, choose one of the following effects:
+	\begin{smallitemize}
+	\item Recover 1 Health Point of a Character in the target unit.
+	\item Raise 4 Health Points of Standard Height \rnf{} models without Tall in the unit.
+	\item Raise 2 Health Points of any other models in the unit.
+\end{smallitemize}
+%
+}
+%Entwining Roots
+\newcommand{\druidismspelltwodef}{%
+	The target suffers \base{\minuss{}1} \boosted{\minuss{}2} Offensive Skill, \base{\minuss{}1} \boosted{\minuss{}2} Defensive Skill, and \base{\minuss{}1} \boosted{\minuss{}2} to hit with Shooting Attacks.%
+}
+%Healing Waters
+\newcommand{\druidismspellthreedef}{%
+	The target gains Fortitude (6+) and Fortitude (+1, max 3+).%
+}
+%Master of Earth
+\newcommand{\druidismspellfourdef}{%
+	The target suffers 2D6 hits with Strength 4, Armour Penetration 1, and Magical Attacks.%
+}
+%Stone Skin
+\newcommand{\druidismspellfivedef}{%
+	Natural to-wound rolls of \result{1}, \result{2}, \result{3}, and \result{4} with Melee Attacks against the target are \textbf{always} considered failed.%
+}
+%Summer Growth
+\newcommand{\druidismspellsixdef}{%
+	When resoving the spell, choose one of the following effects for each friendly unit within 3" of the target point:
+		\begin{smallitemize}
+		\item Recover 1 Health Point of a Character in the target unit.
+		\item Raise 4 Health Points of Standard Height \rnf{} models without Tall in the unit.
+		\item Raise 2 Health Points of any other models in the unit.
+	\end{smallitemize}	%
+}
+
+% Evocation
+\newcommand{\evocationattributedef}{%
+	If your Veil Token pool contains less than 3 Veil Tokens, you gain one Veil Token. No more than 1 Veil Token can be gained from this spell each phase.%
+}
+%Ancestral Aid
+\newcommand{\evocationspellonedef}{%
+	The target must reroll failed to-hit rolls with its Close Combat Attacks.%
+}
+%Whispers of the Veil
+\newcommand{\evocationspelltwodef}{%
+	The target suffers \minuss{}1 Resilience. In addition, a unit with at least one model affected by one or more instances of the spell suffers \minuss{}1 Discipline.%
+}
+%Hasten the Hour
+\newcommand{\evocationspellthreedef}{%
+	Choose \base{1} \boosted{up to 3 different} models in the target unit (which may be Characters or Champions). Each of them suffers 1 hit that wounds automatically with Armour Penetration 10 and \magicalattacks{}.%
+}
+%Spectral Blades
+\newcommand{\evocationspellfourdef}{%
+	The target must reroll failed to-wound rolls with its Melee Attacks \boosted{and gains \lethalstrike{}}.%
+}
+%Touch of the Reaper
+\newcommand{\evocationspellfivedef}{%
+	The target suffers D3 hits with Strength 10, Armour Penetration 10, and \magicalattacks{}. When rolling to wound with this attack, use the Discipline of the model that the hit is distributed onto instead of its Resilience.%
+}
+%Danse Macabre
+\newcommand{\evocationspellsixdef}{%
+	The target may perform a \base{\distance{12}} \boosted{\distance{6}} Magical Move and gains \ghoststep{} during this move.%
+}
+
+% Occultism
+\newcommand{\occultismpassivedef}{%
+	When casting a non-Bound Spell from this Path, immediately after the casting roll, but before any Dispelling Attempt, the Active Player may choose a friendly unengaged unit within \distance{24} or the Caster's unit. A unit may only be chosen once per phase. The chosen unit suffers X hits that wound automatically with Magical Attacks and with no saves of any kind allowed, where X is determined by the Discipline value of the largest fraction of models in the unit, ignoring all Discipline modifiers. In case of a tie, use the lower value:
+	\begin{smallitemize}
+		\item 0 to 4: 3 hits
+		\item 5 to 7: 2 hits
+		\item 8 to 10: 1 hit
+	\end{smallitemize}
+	Any Health Point loss  from \occultismpassive{} that would remove the last model of the chosen unit as a casualty is discarded. These Health Point losses never cause Panic Tests.\newline%
+	If at least one Health Point loss was caused, the spell is cast with the \specialboosted{amplified} version. In that case, use any text marked with \specialboosted{~}.%
+}
+\newcommand{\occultismspellonedef}{%
+	The target gains \breathattack{\magicalattacks{}, \toxicattacks}.\newline
+	\boosted{This spell may only target Characters, Champions, and single model units.}\newline
+	\specialboosted{If the \breathattack{} is used as a Shooting Attack, its range is increased to \distance{18}.}%
+}
+\newcommand{\occultismspelltwodef}{%
+	The target \specialboosted{, all models in its unit when the spell is cast, and Raised models in the unit} gain \aegis{6} \textbf{and} \aegis{+1, max 3+}.\newline
+	\boosted{This spell may only target Characters, Champions, and single model units.}%
+}
+\newcommand{\occultismspellthreedef}{%
+	The target suffers \minuss{}1 Offensive Skill and \minuss{}1 Defensive Skill.\newline
+	\specialboosted{The Caster gains +1 Offensive Skill and +1 Defensive Skill.}%
+}
+\newcommand{\occultismspellfourdef}{%
+	The target suffers D6 hits with Strength 4, Armour Penetration 1, and \magicalattacks{}.\newline
+	\boosted{The Caster's unit is unaffected.}\newline
+	\specialboosted{If one or more unsaved wounds are caused with this spell, the Caster Recovers 1 Health Point.}%
+}
+\newcommand{\occultismspellfivedef}{%
+	The target suffers 1 hit with Strength 10, Armour Penetration 10, \magicalattacks{}, and \multiplewounds{D3}{}.\newline
+	\specialboosted{If the target is within \distance{12} of the Caster, choose a single Character or Champion joined to the target unit. That model suffers the hit.}%
+}
+\newcommand{\occultismspellsixdef}{%
+	The target suffers 2D6 hits with Strength 5, Armour Penetration 2, and \magicalattacks{}. \specialboosted{If the target is within 12" of the Caster, the hits gain +1 Strength and +1 Armour Penetration.}%
+}
+
+
+% Pyromancy
+
+\newcommand{\pyromancyattributedef}{%
+	The target suffers 1 hit with Strength 5, Armour Penetration 2, \flamingattacks{}, and \magicalattacks{}.%
+}
+\newcommand{\pyromancyspellonedef}{%
+	The target suffers D6 hits with Strength 4, Armour Penetration 0, \flamingattacks{}, and \magicalattacks{}%
+}
+\newcommand{\pyromancyspelltwodef}{%
+	Melee \boosted{and Ranged} Attacks against the target suffer \minuss{}1 to wound.%
+}
+\newcommand{\pyromancyspellthreedef}{%
+	The target gains \flamingattacks{} and \magicalattacks{}. In addition, the target's Melee and Shooting Attacks gain a +1 to-wound modifier.%
+}
+\newcommand{\pyromancyspellfourdef}{%
+	The target suffers \base{2D6} \boosted{3D6} hits with Strength 4, Armour Penetration 0, \flamingattacks{}, and \magicalattacks{}.%
+}
+\newcommand{\pyromancyspellfivedef}{%
+	The target suffers D3+1 hits with Strength 4, Armour Penetration 0, \flamingattacks{}, and \magicalattacks{}.%
+}
+\newcommand{\pyromancyspellsixdef}{%
+	The target suffers 1 hit with Area Attack (6×6), Strength 3, Armour Penetration 0, Flaming Attacks, and Magical Attacks. %
+}
+
+
+% Shamanism
+
+\newcommand{\shamanismattributedef}{%
+	Natural to-wound rolls of \result{1}, \result{2}, \result{3}, and \result{4} with Melee Attacks against the target are \textbf{always} considered failed.%
+}
+\newcommand{\shamanismspellonedef}{%
+	The target gains \base{+1 Strength and +1 Armour Penetration} \boosted{+1 Resilience}.%
+}
+\newcommand{\shamanismspelltwodef}{%
+	Immediately after successfully casting this spell, the target suffers 5D6 hits with Strength 1, Armour Penetration 0, and \magicalattacks{}. If one or more unsaved wounds are caused, the target suffers \minuss{}1 to hit with its Shooting Attacks. This spell immediately ends when the target performs an Advance, March, Charge, Failed Charge,  Pursuit,  or Overrun Move.%
+}
+\newcommand{\shamanismspellthreedef}{%
+	The target gains \battlefocus{}, \fearless{}, and \frenzy{}.%
+}
+\newcommand{\shamanismspellfourdef}{%
+	All units within \base{\distance{6}} \boosted{\distance{12}} of the target when the spell is cast suffer a \minuss{}1 to-wound modifier on their \base{Shooting} \boosted{Ranged} Attacks \boosted{including effects of spells cast while affected by \spellformat{\shamanismspellfour}{}}.%
+}
+\newcommand{\shamanismspellfivedef}{%
+	Summon a \totemicbeast{} (profile below). It must be placed within \base{\distance{1}} \boosted{\distance{10}} of the Board Edge.%
+}
+\newcommand{\shamanismspellsixdef}{%
+	The target suffers a \minuss{}1 to-hit modifier and treats all Terrain (including Open Terrain) as Dangerous Terrain~(2).%
+}
+
+
+% Thaumaturgy
+
+\newcommand{\thaumaturgypassivedef}{%
+	When casting non-\boundspells{} from this Path, all Magic Dice that result in \result{1} \textbf{must} be rerolled. Dice causing a Miscast cannot be rerolled. If a Caster Miscasts when casting a spell from this Path, add a +1 Miscast Modifier.%
+}
+%Hand of Heaven
+\newcommand{\thaumaturgyspellonedef}{%
+	The target suffers \base{D6} \boosted{D6+1} hits with Strength \base{D6} \boosted{D6+1}, Armour Penetration \base{2} \boosted{3}, and \magicalattacks{}. Roll once for the number of hits and once for the Strength and apply the rolled Strength  value to all hits.%
+}
+%Smite the Unbeliever
+\newcommand{\thaumaturgyspelltwodef}{%
+	\base{Immediately after successfully casting this spell, roll a D6.} \boosted{Choose which effect to apply when casting the spell.}%
+	\begin{itemize}%
+		\item \base{If 1--3 is rolled,} the target suffers \minuss{}1 Resilience.%
+		\item \base{If 4--6 is rolled,} the target suffers \minuss{}1 Strength and \minuss{}1 Armour Penetration.%
+	\end{itemize}%
+}
+%Speaking in Tongues
+\newcommand{\thaumaturgyspellthreedef}{%
+	The target must take a Discipline Test:
+	\begin{itemize}%
+		\item If the test is passed, the target gains Fearless.%
+		\item If the test is failed, the target becomes Shaken.%
+	\end{itemize}%
+	%
+}
+%Cleansing Fire
+\newcommand{\thaumaturgyspellfourdef}{%
+	The target gains \breathattack{Strength D3+2, Armour Penetration 1, \magicalattacks}.\newline
+	(Roll the D3 immediately after successfully casting this spell.)\newline
+	\boosted{This spell may only target Characters, Champions, and single model units.}%
+}
+%Wrath of God
+\newcommand{\thaumaturgyspellfivedef}{%
+	Place a counter on the target point.\newline{}At the end of each subsequent Magic Phase roll a D6:
+	\begin{itemize}%
+		\item If 1--3 is rolled, nothing happens .%
+		\item If 4--6 is rolled, each unit within \distance{2D6}  suffers 2D6 hits with Strength 5, Armour Penetration 2, and \magicalattacks{}.%
+	\end{itemize}%
+	If a unit fails a Panic Test forced by the spell, it Flees directly away from the marked point (for all other rules, the Caster is considered to be the attacker).\newline{}The spell then ends.%
+}
+\newcommand{\thaumaturgyspellsixdef}{%
+	The Caster rolls D3+1 and the target rolls D3.\newline{}If the Caster's roll is higher, the target suffers a number of hits equal to the difference between their respective rolls.\newline{}These hits wound automatically with Armour Penetration 10 and \magicalattacks{}.%
+}
+
+
+% Witchcraft
+
+\newcommand{\witchcraftattributedef}{%
+	If this spell targets a friendly unit, the target gains +\distance{1} Advance Rate and +\distance{2} March Rate.\newline
+	If this spell targets an enemy unit, the target suffers \minuss{}\distance{1} Advance Rate and \minuss{}\distance{2} March Rate, to a minimum of \distance{3} and \distance{6} respectively.\newline
+	A unit cannot be affected by this spell more than twice in the same Magic Phase.%
+}
+\newcommand{\witchcraftspellonedef}{%
+	The target may perform an \base{\distance{8}} \boosted{\distance{12}} Magical Move and gains Fly and Light Troops until the end of the Player Turn. In addition, the target loses Scoring until the start of the next friendly Magic Phase.\newline{}%
+}
+\newcommand{\witchcraftspelltwodef}{%
+	The target suffers \base{\minuss{}1} \boosted{\minuss{}2} Offensive Skill, \base{\minuss{}1} \boosted{\minuss{}2} Defensive Skill, and \base{\minuss{}1} \boosted{\minuss{}2} Agility.%
+}
+\newcommand{\witchcraftspellthreedef}{%
+	The target cannot use Shooting Attacks \boosted{and suffers a \minuss{}2 modifier to its casting rolls}.%
+}
+\newcommand{\witchcraftspellfourdef}{%
+	Natural \base{to-hit} \boosted{to-wound} rolls of: \newline
+	• ’1’, ’2’, and ’3’ with Melee Attacks against the target are \textbf{always} considered failed.\newline
+	• ’4’, ’5’, and ’6’ with Melee Attacks against the target are \textbf{always} considered successful.
+}
+\newcommand{\witchcraftspellfivedef}{%
+	Choose which effect to apply when casting the spell:
+	\begin{itemize}
+		\item The target gains \randommovement{2D6}
+		\item The target gains \randommovement{3D6}
+	\end{itemize}%
+}
+\newcommand{\witchcraftspellsixdef}{%
+	Melee \boosted{and Shooting} Attacks against the target \textbf{must} reroll failed to-wound rolls.%
+}

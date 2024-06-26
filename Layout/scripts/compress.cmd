@@ -1,0 +1,1 @@
+"C:\pdfsizeopt\pdfsizeopt.exe" --use-pngout=false --use-jbig2=false %cd%\%1 %cd%\%1

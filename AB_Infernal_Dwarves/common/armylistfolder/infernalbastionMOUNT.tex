@@ -1,0 +1,32 @@
+
+\unitentry{%
+	name=\infernalbastion{},
+	logo=character,
+	categorynote={\infernalbastionrestriction{}},
+	maxmountsperarmy=1,
+	type=\construct{},
+	size=\heightgigantic{},
+	basesize=60\timess{}100,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=\ascharacter{},
+	globalrules={\warplatform{},\strider{} (\wall{}),\hidebf{\firingplatform{}},\attached{},\exclusive{} (\rnf{} \model{} \wordwith{} \infernalbrand{})},
+	defense@HP=8,
+	defense@Df=1,
+	defense@Re=5,
+	defense@Arm=4,
+	offensename=\crew{} (6),
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offensenameB=\batteringram{},
+	offenseB@Of=4,
+	offenseB@St=5,
+	offenseB@AP=2,
+	offenserulesB={\harnessed{},\impacthits{} (\Dthree{}+1),\crushattack{}},
+	modelrulesdef={
+		\modelruledef{\firingplatform}{\ruletype{\universalrule}\firingplatformdef}
+	},
+}% END UNIT ENTRY

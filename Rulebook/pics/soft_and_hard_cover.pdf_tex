@@ -1,0 +1,64 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'soft_and_hard_cover.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{844.11687415bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.69953625)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{soft_and_hard_cover.pdf}}%
+    \put(0.64060326,0.45184318){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.1627814,0.37365206){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.14360119,0.08012639){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{soft_and_hard_cover.pdf}}%
+    \put(0.13246758,0.62742537){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCLessthanhalffromsoftcover \\  }}}%
+    \put(0.41737191,0.3850423){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figureSHCMorethanhalftotal}}}%
+    \put(0.24934859,0.03396643){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightLarge}}}%
+    \put(0.69094555,0.55283529){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightLarge}}}%
+    \put(0.00335812,0.51486577){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCHeightStandard}}}%
+    \put(0.76212826,0.2058104){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\figureSHCLessthanhalffromhardcover\\  }}}%
+  \end{picture}%
+\endgroup%

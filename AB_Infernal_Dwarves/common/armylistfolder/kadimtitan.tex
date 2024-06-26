@@ -1,0 +1,51 @@
+
+\def\tempshootydef{%
+	\vspace*{2pt}\newline%
+	\hspace*{0.8cm}\begin{minipage}{\textwidth-1.6cm}%
+		\def\tempaddoptions{%
+			\mustchooseonechoiceonly{\AlCoOrder{%
+				\naphthathrower{} \wordand{} \firesofindustrySHORT{} (2) (\zerotoonemodelsperarmy) =\free{},
+				\rocketbattery{} (4+) \wordand{} \firesofindustrySHORT{} (2) (\zerotoonemodelsperarmy) =45,
+				\titanmortar{} (4+) \wordand{} \firesofindustrySHORT{} (2) (\zerotoonemodelsperarmy) =25,
+			}},
+		}%
+		\addoptions{\tempaddoptions}
+	\end{minipage}%
+}
+
+\unitentry{%
+	name=\kadimtitan{},
+	logo=IoD,
+	cost=450,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=100\timess{}150,
+	global@Ad=7,
+	global@Ma=7,
+	global@Di=7,
+	globalrules={\supernal{},\fearless{},\insignificant{}},
+	defense@HP=7,
+	defense@Df=4,
+	defense@Re=6,
+	defense@Arm=2,
+	defenserules={\aegis{} (5+),{\aegis{} (3+, \againstflamingattacks{})}},
+	offensename=\kadimtitan{},
+	offense@At=6,
+	offense@Of=4,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=3,
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\walkingearthquake{}} (\NOTESTzerotoXunitsperarmy{1})=70,
+			\textbf{\walkingvolcano{}} (\NOTESTzerotoXunitsperarmy{2})=\free{},
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\walkingearthquake}{\ruletype{\universalrule}{\walkingearthquakedef}}%
+		\modelruledef{\walkingvolcano}{\ruletype{\universalrule}{\walkingvolcanodef\tempshootydef}}%
+  },
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

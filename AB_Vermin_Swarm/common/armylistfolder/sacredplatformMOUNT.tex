@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\sacredplatform{},
+	logo=character,
+	type=\construct{},
+	size=\heightgigantic{},
+	basesize=60\timess{}100,
+	maxmountsperarmy=2,
+	categorynote=,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=\ascharacter{},
+	globalrules={\warplatform{},\channel{1},\attached{}},
+	defense@HP=7,
+	defense@Df=1,
+	defense@Re=5,
+	defense@Arm=2,
+	defenserules={\aegis{} (5+)},
+	offensename=\acolyte{} (8),
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\gw{}},
+	offensenameB=\chassis{},
+	offenseB@At=,
+	offenseB@Of=,
+	offenseB@St=5,
+	offenseB@AP=2,
+	offenseB@Ag=,
+	offenserulesB={\impacthits{\Dthree},\harnessed{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\textbf{\whisperingbell{}} (\whisperingbellnote{}) (\zerotoonemodelsperarmy{})=\free{},
+			\textbf{\pestilentpulpit{}} (\pestilentpulpitnote{}) (\zerotoonemodelsperarmy{})=30,
+		}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\pestilentpulpit}{\ruletype{\universalrule}\pestilentpulpitdef}
+		\modelruledef{\whisperingbell}{\ruletype{\universalrule}\whisperingbelldef}
+	},
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT ENTRY

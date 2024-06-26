@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\hoodedmen{},
+	logo=special,
+	cost=120,
+	unitsize=8,
+	maxunitsize=15,
+	costpermodel=8,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={,\scout{},\lighttroops{},\unstable{},\daring{},\ordeal{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	defenserules={},
+	offensename=\hoodedman{},
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=1,
+	offense@Ag=3,
+	offenseweapons={\pw{}},
+	offenserules={},
+	options={%
+		\textbf{\enlistedoutlaws}{}=\free{},
+		\preparedposition{}=\newrule{40},
+	\mustchooseonechoiceonly{\AlCoOrder{%
+			\longbow{} (3+)=\free{},
+			\crossbow{} (3+) \newrule{(\zerotooneunitsperarmy{})}=\newrule{5}\permodel{},
+	}},
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\enlistedoutlaws}{\ruletype{\universalrule}\enlistedoutlawsdef}%
+	},
+}

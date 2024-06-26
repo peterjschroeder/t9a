@@ -1,0 +1,53 @@
+
+\unitentry{%
+	name=\warriors{},
+	fluff=\warriorsfluff{},
+	logo=special,
+	optionallogo=core,
+	categorynote=\newrule{\upgradecategoryreplacementnote{\coreInitial}{\core}{\specialcategory}},
+	cost=\newrule{200},
+	unitsize=10,
+  	maxunitsize=12,
+	costpermodel=20,
+    maxunitsperarmy=2,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\scoring{},\fearless{},\hidebf{\pathofthefavoured{}}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\hidebf{\hellforgedarmour{}},\hidebf{\spikedshield{}}},
+	offensename=\warrior{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	commandgroup={%
+		\champion{}=25,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{}%
+	},
+	options={%
+		\newrule{\commonwarriors{} (\oneofakind{}) [\coreInitial]}=\newrule{\free{}},
+		\onechoiceonlyACO{%
+			\pw{}=\free{},
+			\gw{}=3\permodel{},
+			\halberd{}=4\permodel{},
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\hellforgedarmour{}}{\ruletype{\armour{}}\hellforgedarmourdef{}}
+		\modelruledef{\spikedshield{}}{\ruletype{\armour{}}\spikedshielddef{}}
+		\modelruledef{\pathofthefavoured{}}{\ruletype{\universalrule{}}\pathofthefavoureddef{}}
+	},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+} % END UNIT ENTRY
+

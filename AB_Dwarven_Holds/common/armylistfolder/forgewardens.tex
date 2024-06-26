@@ -1,0 +1,44 @@
+
+\unitentry{%
+	name=\forgewardens{},
+	logo=pistols,
+	cost=190,
+	unitsize=10,
+	maxunitsize=16,
+	costpermodel=18,
+	maxmodelsperarmy=30,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=9,
+	globalrules={\scoring{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\pa{}},
+	defenserules={{\aegis{} (3+, \againstflamingattacks{})}},
+	offensename=\forgewarden{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenseweapons={\hidebf{\forgegun{}}},
+	offenserules={\sturdy{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+			\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\runicbannerenchantment{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		\modelruledef{\forgegun}{\ruletype{\shootingweapon}%
+			\range{18}, \shots{1}, \St{} 4, \AP{} 0, \textbf{\flamingattacks{}}, \textbf{\marchandshoot}, \alwayshitsonthree.%
+		}%
+	},
+	toggles={\toggletrue{twocolprintcommandgroup}\togglefalse{onecolprintcommandgroup}},
+}% END UNIT ENTRY

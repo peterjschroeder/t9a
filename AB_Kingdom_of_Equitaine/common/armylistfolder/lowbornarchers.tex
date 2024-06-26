@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\lowbornarchers{},
+	logo=core,
+	cost=125,
+	unitsize=10,
+	maxunitsize=30,
+	costpermodel=\newrule{9},
+	scoring=yes,
+	maxunitsperarmy=3\refsymbol{},
+	categorynote=\refsymbolbis{}\bowmenrestriction{},
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=6,
+	globalrules={\scoring{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=6+,
+	defenserules={\ordeal{}},
+	offensename=\lowbornarcher{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\longbow{} (4+) \wordand{} \textbf{\archerydrills}{}=\free{},
+			\crossbow{} (4+)=\newrule{1\permodel{}},
+		}},
+		\preparedposition{}=20,
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\textbf{\archerydrills}}{\ruletype{\attackattributeshooting}\archerydrillsdef}%
+		},
+}% END UNIT ENTRY

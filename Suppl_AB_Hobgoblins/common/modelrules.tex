@@ -1,0 +1,28 @@
+\maintitle{HOBModelRules}{\armymodelrules}
+
+\subtitle{\newrule{\universalrules}}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\hobcohesion{}}{\hobcohesiondef}
+\AMRsortedlistentry{\regimentalmascot{}}{\regimentalmascotdef}
+\closeAMRsortedlist
+
+\subtitle{\attackattributes}
+\startAMRsortedlist
+\AMRsortedlistentry[\shooting]{\ironrain{}}{\ironraindef}
+\closeAMRsortedlist %if not commented out this throws an error, but the pdf is still created; if commented out all is fine too
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\armour]{\infernalarmour{}}{\infernalarmourdef}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry[\shootingweapon]{\flintlockaxe{}}{%
+	\range{18}, \shots{1}, \St{} 4, \AP{} 2. \flintlockaxedef{}%
+}
+\AMRsortedlistentry[\shootingweapon]{\blunderbuss{}}{%
+	\range{12}, \shots{1}, \St{} 5, \AP{} 3, \alphaorderlistbf{\accurate{},\quicktofire{},\marchandshoot{}}. \blunderbussdef{}%
+}
+\closeAMRsortedlist

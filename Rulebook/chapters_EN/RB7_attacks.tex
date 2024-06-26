@@ -1,0 +1,228 @@
+
+\part{Attacks}
+\idx[main=y]{Attacks}\label{attacks}
+
+Units in opposing armies fight each other using melee weapons, ranged weapons, spells, and other unique attacks. This chapter will explain how attacks are performed in general and how you determine if they are successful in inflicting damage on their targets.
+
+\newcommand{\figATTAttacks}{Attacks}
+\newcommand{\figATTMeleeAttacks}{%
+	\begin{minipage}{0.17\unitlength}\begin{center}%
+		Melee Attacks%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figATTRangedAttacks}{%
+	\begin{minipage}{0.17\unitlength}\begin{center}%
+		Ranged Attacks%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figATTCCAttacks}{%
+	\begin{minipage}{0.2\unitlength}\begin{center}%
+		Close Combat Attacks%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figATTSpeMeleeAttacks}{%
+	\begin{minipage}{0.2\unitlength}\begin{center}%
+		Special Attacks%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figATTShootingAttacks}{%
+	\begin{minipage}{0.15\unitlength}\begin{center}%
+		Shooting Attacks%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figATTOthers}{Others}
+
+\begin{figure}[!htbp]
+	\centering
+	\def\svgwidth{0.8\textwidth}
+	\subimport{../pics/}{attacks.pdf_tex}
+	\caption{Classification of attacks.}
+	\label{figure/attacks}
+\end{figure}
+
+\RBbmc
+
+\section{Classification of Attacks}
+
+All sources of damage are defined as attacks, which are then divided into Melee and Ranged Attacks (see figure \ref{figure/attacks}). For attacks caused by an action or rule of a model or unit, that model or unit is considered to be the attacker, and its owner the player who makes the attack.\idx[main=y]{Attacker}
+
+\subsection{Melee Attacks}
+\idx[main=y]{Melee Attacks}\idx[main=y]{Close Combat Attacks}\label{melee_attacks}
+
+All attacks made at units in base contact with the attacker's unit in the Melee Phase are \textbf{Melee Attacks}.
+
+The most common type of Melee Attacks are \textbf{Close Combat Attacks}. Model parts perform a number of Close Combat Attacks equal to their Attack Value (see \totalref{which_models_can_attack}).
+
+Special Attacks are considered to be Melee Attacks that are not Close Combat Attacks (see \totalref{special_attacks}).
+
+\subsection{Ranged Attacks}
+\idx[main=y]{Ranged Attacks}\idx[main=y]{Shooting Attacks}\label{ranged_attacks}
+
+All attacks that are not Melee Attacks are \textbf{Ranged Attacks}.
+
+All Ranged Attacks made with a Shooting Weapon in the Shooting Phase or as a Stand and Shoot Charge Reaction are \textbf{Shooting Attacks}.
+
+Other Ranged Attacks include, amongst others, Damage spells, ranged Special Attacks, hits from \hyperref[miscast]{Miscasts}, and hits from failed \hyperref[dangerous_terrain]{Dangerous Terrain Tests}.
+
+\columnbreak
+
+\subsection[Strength and Armour Penetration of Attacks]{Strength and Armour Penetration\\ of Attacks}
+\idx{Strength (\StrengthInitials)}\idx{Armour Penetration (\ArmourPenetrationInitials)}
+
+Attacks have a Strength and an Armour Penetration value, unless specifically stated otherwise:
+\begin{itemize}
+\item Close Combat Attacks use the Strength and Armour Penetration of the model part making the attack, possibly modified by their Close Combat Weapon, Model Rules, spells, Characteristic modifiers, and other effects.
+\item Shooting Attacks use the Strength and Armour Penetration in the profile of the Shooting Weapon they are made with.
+\item Other types of attacks (such as spells and Special Attacks) follow the general rules for their type and the individual rules specified in their description.
+\end{itemize}
+
+\columnbreak
+
+\section{Attack Sequence}
+\idx[main=y]{Attack Sequence}\label{attack_sequence}
+
+Whenever an attack is performed, use the following sequence:
+
+\startseqtablemc
+	1 & Attacker allocates attacks if applicable.\\
+	2 & Determine number of hits.\\
+	3 & Attacker distributes hits if applicable.\\
+	4 & Attacker rolls to wound; if successful, proceed.\\
+	5 & Defender makes Armour Save rolls; if failed, proceed.\\
+	6 & Defender makes Special Save rolls; if failed, proceed.\\
+	7 & Defender suffers unsaved wounds.\\
+	8 & Defender loses Health Points.\\
+	9 & Defender removes casualties.\\
+	10 & Defender takes \hyperref[panic_test]{Panic Tests} if necessary.\\
+\closeseqtablemc
+
+Complete each step for all the attacks that are happening simultaneously (such as all Shooting Attacks from a single unit or all Close Combat Attacks at a given Initiative Step) before moving on to the next step.
+
+\section[Allocating Close Combat Attacks]{Allocating Close Combat\\ Attacks}
+\label{allocating_close_combat_attacks}
+
+Close Combat Attacks are directed against enemy models in base contact. This is referred to as allocating attacks, and will be explained in the \nameref{melee_phase} chapter (see \totalref{allocating_attacks}).
+
+\section[Determining the Number of Hits]{Determining the Number of\\ Hits}
+\idx[main=y]{Determining Number of Hits}\label{determining_the_number_of_hits}
+
+Close Combat Attacks and most Shooting Attacks need to roll to hit (see \totalref{rolling_to_hit} and \totalref{aim}), while Special Attacks and certain spells may hit automatically, inflicting a fixed or random number of hits.
+Whenever an effect inflicts a random number of hits on more than one unit, roll once for the number of hits separately for each unit, unless specifically stated otherwise.
+
+\columnbreak
+
+\section{Distributing Hits}
+\idx[main=y]{Distributing Hits}\label{distributing_hits}
+
+All attacks that target a unit as a whole will under normal circumstances hit the unit's \rnf{} \hyperref[health_pools]{Health Pool}. These include most Ranged Attacks and most Melee Attacks that are not Close Combat Attacks. How hits are distributed may change when Characters are joined to units, as described in \totalref{characters}.
+
+Close Combat Attacks are not distributed, but are allocated before to-hit rolls are made, as mentioned above. Do not redistribute the hits from Close Combat Attacks at this stage.
+
+In cases where not all models of a Health Pool have the same relevant Characteristics or rules (such as different Resilience values or different saves), use the value or rules of the largest fraction of the Health Pool's models, and apply them to all rolls (to-hit, to-wound, saves). In case of a tie, the attacker chooses which fraction to use.
+
+\section{To-Wound Rolls}
+\idx{Resilience (\ResilienceInitials)}\idx{Strength (\StrengthInitials)}\idx[main=y]{To-Wound Rolls}\label{to_wound_rolls}
+
+If an attack has a Strength value, it must wound the target to have a chance to harm it. To make a to-wound roll, roll a D6 for each hit. The difference between the Strength of the attack and the Resilience Characteristic of the defender determines the needed roll to wound the target (see table \ref{table/to-wound_table}).
+
+\idx[main=y]{Wounds}A natural roll of \result{6} will always succeed and a natural roll of \result{1} will always fail. The player whose attack inflicted the hit makes a to-wound roll for each attack that hit the target. A successful to-wound roll causes a wound; proceed to Armour Saves and Armour Modifiers.
+
+If the attack does not have a Strength value, follow the rules given for that particular attack.
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\idx[main=y]{To-Wound Table}
+	\begin{tabular}{>{\raggedleft}m{0.33\linewidth} m{0.27\linewidth}}
+		\hline
+	    \textbf{Strength minus Resilience} & \textbf{Needed roll\newline to wound} \\
+	    2 or more & 2+\\
+	    1 & 3+ \\
+	    0 & 4+ \\
+	    \minuss{}1 & 5+ \\
+	    \minuss{}2 or less & 6+\\
+	    \hline
+	\end{tabular}
+	\caption{To-wound table.}
+	\label{table/to-wound_table}
+\end{Figure}
+
+\newcommand{\figATPAttack}{Attack}
+\newcommand{\figATPTohitroll}{To-hit\\ roll}
+\newcommand{\figATPHit}{Hit}
+\newcommand{\figATPTowoundroll}{To-wound\\ roll}
+\newcommand{\figATPWound}{Wound}
+\newcommand{\figATPArmoursave}{Armour\\ Save}
+\newcommand{\figATPSpecialsave}{Special\\ Save}
+\newcommand{\figATPUnsavedwound}{Unsaved\\ wound}
+\newcommand{\figATPApplymultiplewounds}{Apply\\ Multiple Wounds}
+\newcommand{\figATPHealthpointloss}{Health Point\\ loss}
+\newcommand{\figATPCasualty}{Casualty}
+
+\begin{figure*}[!b]
+	\vspace{-1cm}
+	\centering
+	\subimport{../pics/}{attack_procedure.tex}
+	% If the translated output doesn't look right, we'll need to design a spell_properties.tex specific for each language, please contact Eru.
+	\caption{Flowchart of the steps from an attack to a potential casualty.}
+	\label{figure/attack_procedure}
+	\vspace*{6cm}
+\end{figure*}
+
+\columnbreak
+
+\section{Armour Saves}
+\idx[main=y]{Armour Saves}\idx{Armour Penetration (\ArmourPenetrationInitials)}\idx{Armour (\ArmourInitials)}\label{armour_saves}
+
+If one or more wounds are inflicted, the player whose unit is being wounded now has a chance to save the wound(s) if the wounded models have any Armour. To make an Armour Save roll, roll a D6 for each wound. The following formula determines the needed roll to disregard the wound:
+\begin{center}
+	7 \minuss{} (Armour of the defender)\\ + (Armour Penetration of the attack)
+\end{center}
+
+A natural roll of \result{1} will always fail.
+
+If the Armour Save is passed, the wound is disregarded.
+
+See table \ref{table/armour_save_roll} for the different possible results of the formula.
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\begin{tabular}{>{\raggedleft}m{0.32\linewidth} m{0.42\linewidth}}
+		\hline
+    	\textbf{\Armour{} minus \AP{}} & \textbf{Needed roll to\newline disregard the wound} \\
+    	0 or less & No save possible \\
+    	1 & 6+ \\
+    	2 & 5+ \\
+    	3 & 4+ \\
+    	4 & 3+ \\
+    	5 or 6 & 2+ \\
+    	\hline
+	\end{tabular}
+	\caption{Armour Save rolls.}
+	\label{table/armour_save_roll}
+\end{Figure}
+
+\columnbreak
+
+\section{Special Saves}
+\idx[main=y]{Special Saves}\label{special_saves}
+
+The attacked model now has a final chance to disregard a wound that was not saved by its Armour Save, provided it has a Special Save. There are different types of Special Saves, like \hyperref[aegis]{Aegis (X)}\idx{Aegis} and \hyperref[fortitude]{Fortitude (X)}\idx{Fortitude}, both detailed in \totalref{model_rules}.
+
+To make a Special Save roll, roll a D6 for each wound that was not saved by the model's Armour Save.
+\begin{itemize}
+\item If X is given as a dice roll (e.g. Aegis (4+)), X is the roll needed to successfully disregard the wound.
+\item If X is given as a modifier and with a maximum value (e.g. Fortitude (+1, max 3+)), the model gains this as a modifier to all its Special Save rolls of the same type, which cannot be increased to rolls better than the maximum value given in brackets. If the model doesn't have that type of Special Save, it instead gains a corresponding Special Save ((7 − X)+) (e.g. a model with Aegis (+2, max 4+) will gain Aegis (5+)).
+\end{itemize}
+
+If a model has more than one Special Save, choose which one to use before rolling. Only a single Special Save can be used against each wound.
+
+\section{Losing Health Points}
+\idx[main=y]{Losing Health Points}\idx{Health Points (\HealthPointsInitials)}\label{loosing_health_points}
+
+For each unsaved wound, the attacked model immediately loses a Health Point, which may lead to models being removed as casualties. See \totalref{casualties} for further details.
+
+Figure \ref{figure/attack_procedure} summarises the steps from an attack to a potential casualty.
+
+\RBemc

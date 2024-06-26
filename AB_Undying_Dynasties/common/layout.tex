@@ -1,0 +1,88 @@
+
+%%%% Underground Ambush picture %%%%
+
+\newcommand{\undergroundambushpicture}[1]{%
+\vspace*{-10pt}%
+\begin{center}%
+\includegraphics[#1]{logo_undergroundambush.png}%
+\end{center}%
+}
+
+\newcommand{\bannerentombedpic}[1]{%
+\begin{minipage}{0.14\columnwidth}%
+\includegraphics[width=\textwidth]{logo_undergroundambush.png}%
+\end{minipage}\hfill\begin{minipage}{0.82\columnwidth}%
+#1%
+\end{minipage}%
+}
+
+%%%% Monarchs of Undeath %%%%
+
+\newcommand{\startmonarchsofundeath}{%
+\vspace*{5pt}%
+\raggedcolumns%
+\begin{multicols}{2}%
+}
+
+\newcommand{\monarchsofundeathtitle}[1]{%
+\begin{center}{\Largerfontsize\bfseries#1}\end{center}
+\vspace*{4pt}%
+}
+
+\newcommand{\monarchofundeathbreak}{\columnbreak}
+
+\newcommand{\closemonarchsofundeath}{%
+\end{multicols}%
+}
+
+%%%% Flux Card %%%%
+
+\newcommand{\fluxcard}[4]{%
+\vspace*{5pt}\begin{center}%
+\textbf{#1}\par%
+(#2)\vspace*{5pt}\par%
+\textbf{#3}\par%
+(#4)\par%
+\end{center}%
+}
+
+\newcommand{\wellofsoulsfluxcard}[4]{%
+\begin{center}%
+\textbf{#1}\vspace*{-7pt}\par%
+(#2)\vspace*{5pt}\par%
+\textbf{#3}\vspace*{-7pt}\par%
+(#4)\par%
+\end{center}%
+}
+
+\newcommand{\wellofsoulslayout}[3]{%
+	\mdfsetup{%
+		nobreak=true,%
+		linewidth=0.5pt,%
+		linecolor=black!30,%
+		roundcorner=10pt,%
+		backgroundcolor=black!5,%
+		innerbottommargin=0.5\baselineskip,
+		innertopmargin=0.5\baselineskip,
+		leftmargin=0.06\textwidth,
+		rightmargin=0.06\textwidth,
+	}%
+\vspace*{5pt}\begin{mdframed}%
+	\hspace*{\fill}\begin{minipage}{0.12\textwidth}%
+		\begin{center}%
+			#1%
+		\end{center}%
+	\end{minipage}%
+	\hspace*{5pt}\begin{minipage}{0.22\textwidth}%
+		#2%
+	\end{minipage}\hspace*{5pt}\begin{minipage}{0.55\textwidth}%
+		\begin{center}%
+			#3%
+		\end{center}%
+	\end{minipage}\hspace*{\fill}%
+\end{mdframed}%
+}
+
+\newcommand{\wellofsoulstitle}[2]{%
+\textbf{#1}\par (#2)%
+}

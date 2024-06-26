@@ -1,0 +1,264 @@
+
+\begin{titlepage}
+
+\ifdefined\thisbookhasacover
+	\ifdefined\uncompressedcover
+		\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../Layout/pics/full_cover.jpg}};
+	\else
+		\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{../Layout/pics/full_cover_compressed.jpg}};	
+	\fi
+	\tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt,below=76mm,blur shadow] at (current page.north){\includegraphics[height=170mm]{\thisbookhasacover}};
+	\ifdefined\languageisfrench
+		\ifdefined\thisisnotfantasybattles
+			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB_FR.png}};
+		\else
+			\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_FR.png}};
+		\fi
+	\else
+		\ifdefined\languageisitalian
+			\ifdefined\thisisnotfantasybattles
+				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB_IT.png}};
+			\else
+				\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_IT.png}};
+			\fi
+		\else
+			\ifdefined\languageisspanish
+				\ifdefined\thisisnotfantasybattles
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+				\else
+					\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_ES.png}};
+				\fi
+			\else
+				\ifdefined\languageisrussian
+					\ifdefined\thisisnotfantasybattles
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+					\else
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_RU.png}};
+					\fi
+				\else% German is same as English
+					\ifdefined\thisisnotfantasybattles
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD_noFB.png}};
+					\else
+						\tikz[remember picture,overlay] \node[inner sep=0pt, below=3cm] at (current page.north) {\includegraphics[width=122mm]{../Layout/pics/BRAND9AgeLogotypeGOLD.png}};
+					\fi
+				\fi
+			\fi
+		\fi
+	\fi
+	\ifdefined\addbooktitletocover
+			\newcommand{\titlesmallcaps}[1]{{\fontsize{27}{32.4}\selectfont#1}}
+			\tikz[remember picture,overlay] \node[inner sep=0pt, above=3cm, font=\color{brandgold}\fulltitlefont\fontsize{40}{48}\selectfont] at (current page.south) {\addbooktitletocover};
+	\fi
+	\clearpage
+	\newpage
+	\thispagestyle{empty}
+	\null
+	\newpage
+	\thispagestyle{empty}
+\fi
+
+
+\begin{center}
+
+\ifdef{\booktitle}{}{\newcommand{\booktitle}{Missing book title}}
+
+
+\ifdefined\languageisfrench
+
+\includegraphics[height=3.3cm]{../Layout/pics/BRAND9AgeLogotype_FR.pdf}%
+
+\else
+\ifdefined\languageisitalian
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_IT.pdf}%
+
+\else
+
+\ifdefined\languageisspanish
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_ES.pdf}%
+
+\else
+
+\ifdefined\languageisgerman
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
+
+\else
+
+\ifdefined\languageisrussian
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype_RU.pdf}%
+
+\else
+
+\includegraphics[height=3cm]{../Layout/pics/BRAND9AgeLogotype.pdf}%
+
+\fi
+\fi
+\fi
+\fi
+\fi
+
+\ifdefined\thisisthepathsbook
+
+	\vspace*{10pt}
+
+\else
+
+	\vspace*{0.5cm}
+	\ifdef{\booklogo}{%
+		\includegraphics[height=8cm]{\booklogo}%
+	}{%
+	\includegraphics[height=13cm]{../Layout/pics/logo_9th.png}%
+	}
+
+\fi
+
+{\fulltitlefont\fontsize{40}{48}\selectfont
+	\BeginAccSupp{method=pdfstringdef,unicode,ActualText={\eastereggA}}%
+		\booktitle%
+	\EndAccSupp{}%
+}
+\vspace{0.25cm}
+
+{\fontsize{12}{14.4}\selectfont 
+\ifdefined\thisisanarmybook
+	\ifdefined\thisisasupplementarmy
+		\supplementarmybookname{\thisisasupplementarmy}\vspace{-3pt}\par
+	\else
+		\ifdefined\thisisascrollcompendium
+			\scrollcompendiumname{} \vspace{-3pt}\par
+		\else
+			\armybookname{} (\corerules{})\vspace{-3pt}\par
+		\fi
+	\fi
+\else
+	\ifdefined\thisisasupplement
+		\supplementname{}\vspace{-3pt}\par
+	\fi
+\fi
+	
+	\ifdef{\editionversion}{\editionversion{}, }{}\versionname{} \ifdef{\balanceversion}{\balanceversion{}}{}%
+	\ifdef{\documentversion}{\ifdef{\balanceversion}{.}{}\documentversion{}}{\ifdef{\balanceversion}{}{1}} %
+	\ifdef{\betaversion}{\betaname{} \betaversion{} }{}%
+	\ifdef{\alphaversion}{\alphaname{} \alphaversion{} }{}%
+	\ifdef{\hotfixversion}{\hotfixname{} \hotfixversion{} }{}%
+	-- \BeginAccSupp{method=pdfstringdef,unicode,ActualText={\eastereggB}}
+	\ifdef{\releasedate}{\releasedate}{\today}\EndAccSupp{}\vspace{-3pt}\par
+
+\ifdef{\specialversion}{{\specialversion}}{}
+
+}
+
+\ifdefined\thisisthepathsbook
+
+	\vspace*{20pt}
+
+	\newcommand{\iconheight}{1.6cm}
+	\newcommand{\minipagewidth}{3cm}
+	\newcommand{\spacebetweeniconrows}{0.8cm}
+
+	\hspace*{0.5cm}\begin{minipage}[c]{\minipagewidth}
+	\begin{center}
+	\titlepagelefticons
+
+	\end{center}
+	\end{minipage}
+	\hfill\begin{minipage}[c]{8cm}
+
+	{\fontsize{12}{14.4}\selectfont
+
+	\hfill\textcolor{white}{\verysmallfontsize d}% debug, else everything goes wild with alignment.
+	\begin{center}
+	\hypertarget{tableofcontents}{\tocentry{howtousethisdoc}{\howtousethisdoc}}
+
+	\vspace*{5pt}\par%
+	
+	\tocentry{pathsofmagic}{\pathsofmagic}\vspace*{5pt}\par%
+
+	{\largefontsize
+	\titlepagetoc%
+	
+	}
+	\vspace*{5pt}\par%
+	
+	\tocentry{specialitems}{\specialitems}\vspace*{5pt}\par%
+	
+	{\largefontsize%
+	\hspace*{0.5cm}\tocentry{weapon_enchantments}{\weaponenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{armour_enchantments}{\armourenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{banner_enchantments}{\bannerenchantments}\newline%
+	\hspace*{0.5cm}\tocentry{artefacts}{\artefacts}%
+	
+	}
+
+	\ifdef\thereisachangelog{\vspace*{5pt}\par\tocentry{pathschangelog}{\changelog}}{}
+	\end{center}
+	}
+
+	\end{minipage}\hfill
+	\begin{minipage}[c]{\minipagewidth}
+	\begin{center}
+
+	\titlepagerighticons{}
+	\end{center}
+	\end{minipage}\hspace*{0.5cm}
+
+\fi
+
+\ifdefined\thisisanarmybook
+\ifdefined\thisisascrollcompendium
+\else
+\vfill
+
+{\fontsize{12}{14.4}\selectfont
+
+\begin{multicols}{2}
+
+\hypertarget{tableofcontents}{\tocfirstcolumn}
+
+\vspace*{\fill}\columnbreak
+
+\tocsecondcolumn
+
+\vspace*{\fill}\end{multicols}
+
+}
+\fi
+\fi
+
+\vfill
+
+\ifdefined\thisistherulebook
+
+\strut
+
+\else
+
+\begin{minipage}{2cm}
+	\includegraphics[width=2cm]{../Layout/pics/seal_9th.png}
+\end{minipage}\hspace{10pt}\begin{minipage}{15cm-10pt}
+	{\fontsize{10}{12}\selectfont\greytextcolor{%
+	\ifdefined\thisisthepathsbook%
+		\noindent\frontpagecreditswithoutblue%
+	\else
+		\ifdefined\thisisasupplement%
+			\noindent\frontpagecreditsnohowtoread%
+		\else%
+			\ifdefined\thisisasupplementarmy%
+				\noindent\frontpagecreditssuppl%		
+			\else%
+				\noindent\frontpagecredits%
+			\fi%
+		\fi%
+	\fi%
+	\newline\license{} \latexcredit{}}\par}
+\end{minipage}
+
+\fi
+
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{2}

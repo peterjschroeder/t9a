@@ -1,0 +1,107 @@
+
+\def\languageisenglish{}
+\def\thisisthescenariobook{}
+\def\thisisasupplement{}
+%\def\thereisachangelog{}
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{layout/}{layout.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Scenarios}
+%\newcommand{\balanceversion}{}
+\newcommand{\documentversion}{1}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\betaversion}{2}% 1 if first beta, 2 if second beta, etc.
+\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+%\newcommand\releasedate{November 16, 2018}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{PROOFREADING VERSION}% anything related to the version
+\def\bookprefix{SCE}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+% Footer
+\newcommand{\gamingscenarios}{Gaming Scenarios}
+\newcommand{\narrativescenarios}{Narrative Scenarios}
+\newcommand{\addons}{Add-Ons}
+\subimport{layout/}{footer.tex}
+
+\let\rewordedrule\newrule
+
+\begin{document}
+
+\subimport{../Layout/}{Titlepage.tex}
+\clearpage
+\subimport{chapters_EN/}{SB1_Introduction.tex}
+\clearpage
+\subimport{chapters_EN/}{SB2_Gaming_Scenarios.tex}
+\clearpage
+\subimport{chapters_EN/}{SB3_Misdirections.tex}
+\clearpage
+\subimport{chapters_EN/}{SB4_Hidden_Treasures.tex}
+\clearpage
+\subimport{chapters_EN/}{SB5_Dark_Visions.tex}
+\clearpage
+\subimport{chapters_EN/}{SB6_Lost_Ruins.tex}
+\clearpage
+\subimport{chapters_EN/}{SB7_Ancient_Artefact.tex}
+\clearpage
+\subimport{chapters_EN/}{SB8_The_Adversarys_Task.tex}
+\clearpage
+\subimport{chapters_EN/}{SB9_The_Long_March_Home.tex}
+\clearpage
+\subimport{chapters_EN/}{SB10_Meteor_Shower.tex}
+\clearpage
+\subimport{chapters_EN/}{SB11_The_Holy_Grail.tex}
+\clearpage
+\subimport{chapters_EN/}{SB12_The_Hidden_Kings.tex}
+\clearpage
+\subimport{chapters_EN/}{SB13_Despoilers.tex}
+\clearpage
+\subimport{chapters_EN/}{SB14_Dominating_The_Field.tex}
+\clearpage
+\subimport{chapters_EN/}{SB15_Barrel_Of_Stout.tex}
+\clearpage
+\subimport{chapters_EN/}{SB16_Escape_From_Beyond_The_Veil.tex}
+\clearpage
+\subimport{chapters_EN/}{SB17_Carnage.tex}
+\clearpage
+\subimport{chapters_EN/}{SB18_Hold_The_Line.tex}
+\clearpage
+\subimport{chapters_EN/}{SB19_Foul_Manners.tex}
+\clearpage
+\subimport{chapters_EN/}{SB20_Multiple_Objectives.tex}
+\clearpage
+\subimport{chapters_EN/}{SB21_Narrative_Scenarios.tex}
+\clearpage
+\subimport{chapters_EN/}{SB23_The_Gates_Of_Greed.tex}
+\clearpage
+\subimport{chapters_EN/}{SB24_The_Treasure_Of_The_Dragon.tex}
+\clearpage
+\subimport{chapters_EN/}{SB25_Great_Portals.tex}
+\clearpage
+\subimport{chapters_EN/}{SB26_Divine_Intervention.tex}
+\clearpage
+\subimport{chapters_EN/}{SB27_An_Eye_In_The_Future.tex}
+\clearpage
+\subimport{chapters_EN/}{SB28_Mission_Impossible.tex}
+\clearpage
+\subimport{chapters_EN/}{SB29_March_To_Victory.tex}
+\clearpage
+\subimport{chapters_EN/}{SB30_Strategic_Objections.tex}
+\clearpage
+\subimport{chapters_EN/}{SB31_A_Proper_Battle.tex}
+\clearpage
+\subimport{chapters_EN/}{SB32_Weather_The_Storm.tex}
+\clearpage
+\subimport{chapters_EN/}{SB33_Runaway_Train.tex}
+\clearpage
+\subimport{chapters_EN/}{SB34_In_The_Mountains.tex}
+\clearpage
+\subimport{chapters_EN/}{SB35_Add_Ons.tex}
+\ifdef{\thereisachangelog}{%
+	\newpage
+	\subimport{chapters_EN/}{SB36_Changelog.tex}
+}{}
+\end{document}

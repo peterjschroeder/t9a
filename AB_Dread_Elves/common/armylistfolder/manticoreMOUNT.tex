@@ -1,0 +1,34 @@
+
+\unitentry{%
+	name=\manticore{},
+	logo=character,
+	logo=character_monster,
+	maxmountsperarmy=2,
+	categorynote=\mountcategorynote{\themenagerie},
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=50\timess{}50,
+	global@Ad=6,
+	global@Ma=12,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=\ascharacter{},
+	globalrules={\fly{8}{16},\fear{},\scentofblood{},,\exclusive{}},
+	defense@HP=4,
+	defense@Df=\ascharacter{},
+	defense@Re=5,
+	defense@Arm=\ascharacter{}+1,
+	offensename=\manticore{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=5,
+	offenserules={\harnessed{},\lethalstrike{}},
+	optionalmodelrulesdef={%
+		\modelruledef{\extraordinaryspecimen}{\ruletype{\universalrule}\extraordinaryspecimendef}
+	},
+	options={%
+		\textbf{\extraordinaryspecimen{}}=25,
+	},
+}% END UNIT ENTRY

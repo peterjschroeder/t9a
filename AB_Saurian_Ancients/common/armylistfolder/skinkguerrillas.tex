@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\skinkguerrillas{},
+	logo=arrows,
+	cost=165,
+	unitsize=8,
+	maxunitsize=15,
+	costpermodel=12,
+	scoring=,
+	maxunitsperarmy=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=6,
+	globalrules={\communalbond{},\lighttroops{},,\skirmisher{}, \strider{\waterterrain{}},\minimised{} (\disciplinetest{})},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=2,
+	defense@Arm=0,
+	defenserules={\fortitude{} (6+),\hardtarget{} (1)},
+	offensename=\skinkguerrilla{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	commandgroup={%
+		\champion{}=10,
+	},
+	options={
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\blowpipe{} (4+)=2\permodel{},
+			\magneticshortbow{} (3+)=\free{},
+			}
+		},
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\chameleon{} (\NOTESTzerotoXunitsperarmy{2})=3\permodel{},
+			\vanguard{}=\free{},
+			}
+		},
+		\markinglure{} (\NOTESTzerotoXunitsperarmy{2})=20,
+	},
+}% END UNIT ENTRY

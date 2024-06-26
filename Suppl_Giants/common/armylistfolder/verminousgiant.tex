@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\verminousgiant{},
+	logo=monster,
+	cost=\newrule{260},
+	unitsize=1,
+	maxunitsperarmy=3,
+	categorynote={\themodelcountstowards{\breadandgames}},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=7,
+	globalrules={\hidebf{\giantseegiantdo{}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	defenserules={},
+	offensename=\verminousgiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hidebf{\rage{}}},
+	options={%
+		\textbf{\bigbrother{}}=\newrule{25},
+\mustchooseonechoiceonlyblue{\AlCoOrder{%
+			\textbf{\giantclub{}}=\newrule{\free},
+			\textbf{\livingbomb{}}=\newrule{15},
+			\textbf{\bigsneaker{}}=\newrule{35},
+		},
+	}},
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\VSgiantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\ragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\livingbomb{}}{\ruletype{\universalrule{}}\livingbombdef{}}
+		\modelruledef{\bigsneaker{}}{\ruletype{\universalrule{}}\bigsneakerdef{}}
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}
+% END UNIT ENTRY

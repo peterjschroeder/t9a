@@ -1,0 +1,203 @@
+
+% Document Titles
+
+\newcommand{\howtousethisdoc}{How to Use this Document}
+\newcommand{\pathsofmagic}{Paths of Magic}
+\newcommand{\magicphasesummary}{Magic Phase Summary}
+
+% Footers name for ToC and Summaries
+
+\newcommand{\tableofcontentsInitials}{Contents}
+\newcommand{\pathsofmagicInitials}{PoM}
+\newcommand{\specialitemsInitials}{Special Items}
+\newcommand{\summariesInitials}{Summary}
+
+% Summaries header
+
+\newcommand{\headersummaries}{Magic Phase Summaries v\balanceversion}
+
+% Paths Table of Contents names
+
+\newcommand{\alchemyTOC}{Alchemy}
+\newcommand{\shamanismTOC}{Shamanism}
+\newcommand{\cosmologyTOC}{Cosmology}
+\newcommand{\divinationTOC}{Divination}
+\newcommand{\druidismTOC}{Druidism}
+\newcommand{\evocationTOC}{Evocation}
+\newcommand{\occultismTOC}{Occultism}
+\newcommand{\pyromancyTOC}{Pyromancy}
+\newcommand{\witchcraftTOC}{Witchcraft}
+\newcommand{\thaumaturgyTOC}{Thaumaturgy}
+
+% Chapter Paths
+
+\newcommand{\howtousethisdocdef}{%
+	This document describes the different Paths of Magic and Special Items available for \nameofthegame{} and as such is to be used in conjunction with the main Rulebook. For convenience, we repeated the main rules related to spells and Special Items from the Rulebook in the corresponding sections below, along with the information needed to read the Paths.%
+}
+
+\newcommand{\pathsofmagicdef}{%
+	Spells are cast during the Magic Phase. Most spells belong to a specific Path of Magic.%
+}
+
+\newcommand{\spellproperties}{Spell Properties}
+\newcommand{\spellpropertiesdef}{%
+	All spells are defined by the following 6 properties (see the figure below):%
+}
+
+\newcommand{\spellclassification}{Spell Classification}
+\newcommand{\spellclassificationdef}{%
+	Spells are classified into the different categories Learned Spells, Attribute Spells, and Hereditary Spells by letters or numbers.%
+}
+
+\newcommand{\spellname}{Spell Name}
+\newcommand{\spellnamedef}{%
+	Use the spell name to state which spell you intend to cast.%
+}
+
+\newcommand{\spellcastingvaluedef}{%
+	The Casting Value is the minimum value you need to reach to succeed a Casting Attempt. Spells may have different Casting Values available (see \enquote{Boosted Spells}).%
+}
+
+\newcommand{\spelltypedef}{%
+	The spell type describes how the spell's targets have to be chosen.%
+}
+
+\newcommand{\spelldurationdef}{%
+	The duration of a spell determines how long the effects of the spell are applied.%
+}
+
+\newcommand{\spelleffectdef}{%
+	The effect of a spell defines what happens to the target of the spell when the spell is successfully cast. Spell effects are never affected by any effects affecting the Caster, including Special Items, Model Rules, other spell effects, or similar abilities, unless specifically stated otherwise.%
+}
+
+\newcommand{\SPPRfigSpellName}{Water Jet}
+\newcommand{\SPPRfigSpellEffect}{The target suffers D6 hits with Strength 4, Armour Penetration 0, and \magicalattacks{}.}
+\newcommand{\SPPRfigOne}{1 -- Spell Classification}
+\newcommand{\SPPRfigTwo}{2 -- Spell Name}
+\newcommand{\SPPRfigThree}{3 -- Casting Value}
+\newcommand{\SPPRfigFour}{4 -- Type}
+\newcommand{\SPPRfigFive}{5 -- Duration}
+\newcommand{\SPPRfigSix}{6 -- Effect}
+\newcommand{\spellpropertiescaption}{Spell Properties as presented in this document.}
+
+
+\newcommand{\boostedspells}{Boosted Spells}
+\newcommand{\boostedspellsdef}{%
+	Some spells have two Casting Values, with the greater Casting Value being referred to as the Boosted version of the spell. Boosted versions may have their type (range, target restrictions) modified, and/or the effects of the spell changed. Declare if you are trying to cast the Boosted version before rolling any dice. If no declaration is made, the basic version for the chosen target is assumed to be used.
+
+	The differences between the spell versions are signified by using the following colour coding: \base{non-Boosted version}, \boosted{Boosted version}, and, in some rare cases, \specialboosted{amplified version}.%
+}
+
+\newcommand{\spellclassificationintro}{%
+	All spells are part of one or more of the following categories:%
+}
+
+\newcommand{\learnedspellsdef}{%
+	All spells labelled with a number are Learned Spells, which are the main spells of a Path. They are usually numbered from 1 to 6, which is relevant for the Spell Selection rules.
+
+	Each player may only attempt to cast each \learnedspell{} once per Magic Phase, even if it is known by different Wizards (unless the spell is Replicable, see below).%
+}
+
+\newcommand{\hereditaryspellsdef}{%
+	Most Army Books contain a \hereditaryspell{}, which is labelled \enquote{\textbf{\hereditaryspellnumber}} instead of a number. \hereditaryspells{} follow all the rules for \learnedspells{}.%
+}
+
+\newcommand{\attributespellsdef}{%
+	Attribute Spells are labelled \enquote{\textbf{\attributespellnumber}}. All Wizards that know at least one spell from a Path of Magic automatically know the \attributespell{} from that Path if there is any.
+
+	Path \attributespells{} are special spells that cannot be cast independently. Instead, the Caster may cast the \attributespell{} automatically each time it successfully casts a non-\attributespell{} from the corresponding Path. This means that an \attributespell{} can be cast more than once by the same Caster, and also by different Casters during a Magic Phase. \attributespells{} cannot be dispelled.%
+}
+
+\newcommand{\replicablespellsdef}{%
+	Some \learnedspells{} are \replicablespells{} and are labelled \enquote{\textit{\textbf{\replicablespellnumber}}}. The player may attempt to cast \replicablespells{} multiple times in the same Magic Phase, but each Wizard may only make a single attempt.%
+}
+
+\newcommand{\boundspellsdef}{%
+	Some spells are classified as Bound Spells, which follow different rules than the above (see the main Rulebook).%
+}
+
+\newcommand{\spellselection}{Spell Selection}
+\newcommand{\spellselectiondef}{%
+	The player who chose their Deployment Zone must select spells for their Wizards first. Afterwards, their opponent selects spells for their Wizards. All Magic Paths can be found below. Hereditary Spells can be found in the corresponding Army Books.
+	\begin{itemize}%
+		\item \textbf{\wizardapprentices} know \textbf{1 spell} selected between \textbf{1} and \textbf{\hereditaryspellnumber}.%
+		\item \textbf{\wizardadepts} know \textbf{2} different \textbf{spells} selected from \textbf{1}, \textbf{2}, \textbf{3}, \textbf{4}, and \textbf{\hereditaryspellnumber}.%
+		\item \textbf{\wizardmasters} know \textbf{4} different \textbf{spells} selected from \textbf{1}, \textbf{2}, \textbf{3}, \textbf{4}, \textbf{5}, \textbf{6}, and \textbf{\hereditaryspellnumber}.%
+		\item \textbf{\wizardconclave}: the Champion of a unit with Wizard Conclave is a Wizard Adept and gains +1 Health Point in addition to the normal Attack Value increase associated with being a Champion. This Champion may select up to two spells from predetermined spells given in the unit entry. This overrides the Spell Selection rules for Wizard Adepts.%
+	\end{itemize}%
+}
+\newcommand{\Channel}{Channel}
+\newcommand{\Channeldef}{%
+	During step 3 of the Magic Phase Sequence, each of the Active Player’s models with Channel may add X Veil Tokens to its owner’s Veil Token pool. This Universal Rule is cumulative, adding the X of each instance of Channel to the model’s total Channel value (e.g. a model with Channel (1) and Channel (2) is treated like a model with Channel (3)).
+}
+\newcommand{\spelltypes}{Spell Types}
+\newcommand{\spelltypesdef}{%
+	The spell type describes which targets can be chosen for the spell. Unless specifically stated otherwise, a spell may only have a single target and the target must be a single unit. If a spell has more than one type, apply all the restrictions of each type.
+
+	For example, if a spell has the types \direct{}, \hex{}, and \range{12}, the target must be in the Caster's Front Arc, be an enemy unit, and be within \distance{12} of the Caster.%
+}
+
+\newcommand{\augmentdef}{%
+	The spell may only target friendly units (or friendly models inside units if \focused{}).%
+}
+
+\newcommand{\auradef}{%
+	This spell has an area of effect. Its effects are applied to all possible targets, according to the rest of the spell types, within \distance{X} of the Caster. For example, a spell with \augment{}, \aura{}, and \range{12} targets all friendly units within \distance{12} of the Caster.%
+}
+
+\newcommand{\casterdef}{%
+	The spell targets only the model casting the spell (unless Focused, all model parts are affected).%
+}
+
+\newcommand{\castersunitdef}{%
+	The spell targets only the Caster's unit.%
+}
+
+\newcommand{\damagedef}{%
+	The spell may only target units and/or models not currently Engaged in Combat.%
+}
+
+\newcommand{\directdef}{%
+	The spell may only target units and/or models in the Caster's Front Arc.%
+}
+
+\newcommand{\focuseddef}{%
+	The spell may only target single models (including a Character inside a unit). If the target is a Multipart Model (such as a chariot with riders and pulling beasts, or a knight and its mount), only one model part may be targeted.%
+}
+
+\newcommand{\grounddef}{%
+	The spell doesn't target units or models. Instead, the target is a point on the Battlefield.%
+}
+
+\newcommand{\hexdef}{%
+	The spell may only target enemy units (or enemy models inside units if Focused).%
+}
+
+\newcommand{\missiledef}{%
+	The spell may only target units and/or models within the Caster's Line of Sight. It cannot be cast if the Caster (or its unit) is Engaged in Combat.%
+}
+
+\newcommand{\rangedef}{%
+	The spell has a maximum casting range. Only targets within \distance{X} can be chosen. This casting range is always indicated in the corresponding column in the spell's profile. Note that any effects that alter a spell's range do not affect any other distance specifications that may be part of the spell's effect.%
+}
+
+\newcommand{\universaldef}{%
+	The spell may target both friendly and enemy units (or models inside units if \focused{}).%
+}
+
+\newcommand{\spellduration}{Spell Duration}
+\newcommand{\spelldurationintro}{%
+	The spell duration specifies how long the effects of the spell are applied. A spell duration can either be \instant{}, \oneturn{}, or \permanent{} as described below. Spell duration is not affected by the Caster being removed as a casualty or leaving the Battlefield, unless specifically stated otherwise.%
+}
+
+\newcommand{\instantdef}{%
+	The effect of the spell has no lasting duration: effects are applied when the spell is cast. Afterwards the spell ends automatically.%
+}
+
+\newcommand{\oneturndef}{%
+	The effect of the spell lasts until the start of the Caster's next Magic Phase. If an affected unit is divided into several units (the most common example being a Character leaving its unit), each of the units formed this way keeps being affected by the spell effects. Characters that join a unit affected by \oneturn{} spells are not affected by these spells, and likewise, units joined by Characters affected by \oneturn{} spells are not affected either.%
+}
+
+\newcommand{\permanentdef}{%
+	The effect of the spell lasts until the end of the game or until a designated ending condition (as detailed in the spell effect) is met. The spell can only be removed by the method described in the spell. If an affected unit is divided into several units, follow the same restrictions as for \oneturn{} spells.%
+}

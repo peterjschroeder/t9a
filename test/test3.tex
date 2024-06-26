@@ -1,0 +1,62 @@
+
+\documentclass{article}
+
+\usepackage{xcolor}	
+\usepackage{xstring}														% String parsing, cutting, etc.
+\definecolor{linkcolour}{RGB}{131,25,139}
+\usepackage[unicode, ocgcolorlinks, colorlinks=true, linkcolor=linkcolour, urlcolor=linkcolour, bookmarks=false, pdfdisplaydoctitle=true, pdfstartview=FitH, pdfpagelabels=false]{hyperref} % Links in PDF.
+
+\makeatletter
+
+\newcommand{\ifsubstring}[4]{%
+\protected@edef\split@temp{#1}%
+\protected@edef\split@tempbis{#2}%
+\saveexpandmode%
+\expandarg\IfSubStr{\split@temp}{\split@tempbis}{#3}{#4}%
+\restoreexpandmode%
+}
+
+\begin{document}
+
+\def\bookprefix{AA}
+\newcounter{categorynumber}
+\setcounter{categorynumber}{1}
+\def\testname{Test Name}
+\def\unit@name{\testname}
+
+\def\temphypertag{\testname}
+\StrGobbleLeft{\expandafter\string\unit@name}{1}[\temphypertag]%
+\temphypertag
+
+%\StrGobbleRight{\expandafter\string\temphypertag}{1}[\temphypertag]%
+%\temphypertag
+%
+%\edef\unithypertag{\bookprefix\temphypertag}% using the unit name macro to define an hypertag
+
+\edef\unithypertag{\bookprefix\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}
+
+\expandafter\hypertarget\expandafter{\unithypertag}{VIENS ICI}%
+
+\vspace*{3cm}
+
+\unithypertag
+
+\expandafter\string\expandafter\testname{
+
+\StrGobbleRight{\expandafter\expandafter\expandafter\@gobble\expandafter\string\unit@name}{1}
+
+\StrGobbleRight{\testname{}}{1}
+
+
+
+\newpage
+
+\hyperlink{\unithypertag}{REAL DIRECT LINK}
+
+\expandafter\hyperlink\expandafter{\unithypertag}{REAL EXPANDED LINK}
+
+\hyperlink{AAtestname}{PLAIN LINK}
+
+\hyperlink{AAtestname{}}{PLAIN LINK with brackets}
+
+\end{document} 

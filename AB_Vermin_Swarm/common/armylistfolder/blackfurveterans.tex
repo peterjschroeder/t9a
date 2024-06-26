@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\blackfurveterans{},
+	logo=core,
+	categorynote=\upgradecategoryreplacementnote{\specialInitial}{\specialcategory}{\core},
+	optionallogo=special,
+	cost=225,
+	unitsize=25,
+	maxunitsize=50,
+	costpermodel=13,
+	maxmodelsperarmy=120,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=6,
+	globalrules={,\callous{},\lifeischeap{},\scoring{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=2,
+	defense@Arm=0,
+	defensearmour={\ha{},\shield{}}, 
+	offensename=\blackfurveteran{},
+	offense@At=1,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=5,
+	offenserules={\cohortcoordination{},\fightinextrarank{},\hidebf{\phalanx{}}},
+	offenseweapons={\halberd{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{} \witheaglestandard{}=25,
+		\alphaorderstickto{\standardbearer{} \witheaglestandard{}=25}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+	options={%
+		\textbf{\bloodfurpraetorians{}} [\specialInitial{}]\newline(\zerotoXunitsperarmy{1})=\free{},
+	},
+	modelrulesdef={%
+		\modelruledef{\phalanx}{\ruletype{\attackattributeclosecombat}\phalanxdef}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bloodfurpraetorians}{\ruletype{\universalrule}\bloodfurpraetoriansdef}
+	},
+}% END UNIT ENTRY

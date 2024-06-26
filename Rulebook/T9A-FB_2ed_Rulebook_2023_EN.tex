@@ -1,0 +1,116 @@
+
+% Note to myself: do not forget to compress pictures before adding them to the pics folder!
+
+\def\languageisenglish{}
+\def\thisistherulebook{}
+\def\thereisachangelog{}
+%\def\totalrefwithpartname{}% define if you want \totalref to print "chapter", "section, etc before the title of the referred part
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Rulebook}
+\newcommand{\balanceversion}{2023}
+%\newcommand{\documentversion}{2}% undefined if first version (= version 1), 2 for second version, etc.
+%\newcommand{\betaversion}{2}% 1 if first beta, 2 if second beta, etc.
+%\newcommand{\hotfixversion}{2}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{April 13, 2023}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{INTERNAL Pre-release 2}% anything related to the version
+%\newcommand{\specialversion}{\corerules}% anything related to the version
+\def\bookprefix{RB}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\newcommand{\tableofcontentsfooter}{Contents}
+\newcommand{\pregamesequencefooter}{Pre-Game Sequence}
+\newcommand{\victoryconditionsfooter}{Victory Conditions}
+
+\newcommand{\terrainfooter}{Terrain}
+\newcommand{\specialrulesfooter}{Model Rules}
+\newcommand{\indexfooter}{Index}
+
+\begin{document}
+
+\subimport{../Layout/}{Titlepage.tex}
+
+\subimport{../Layout/}{RB_ToC.tex}
+
+% If need a columnbreak in the toc, add \addtocontents{toc}{\protect\columnbreak} in the right place of the book
+
+\clearpage
+\subimport{chapters_EN/}{RB1_introduction.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB2_general_principles.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB3_models_and_units.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB4_battlefield_logistics.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB5_characteristics.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB6_modifiers.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB7_attacks.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB8_setting_up_a_game.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB9_pre_game_sequence.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB10_deployment_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB11_charge_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB12_movement_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB13_magic_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB14_shooting_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB15_melee_phase.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB16_casualties.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB17_psychology.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB18_victory_conditions.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB19_model_classification.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB20_terrain.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB21_model_rules.tex}
+
+\clearpage
+\subimport{chapters_EN/}{RB22_special_items.tex}
+
+\clearpage
+\subimport{../Layout/}{RB_index.tex}
+
+\ifdef{\thereisachangelog}{%
+	\clearpage
+	\subimport{chapters_EN/}{RB24_change_log.tex}
+}{}
+
+\end{document}

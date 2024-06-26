@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\goblinchief{},
+	logo=character,
+	cost=75,
+	unitsize=1,
+	maxunitsperarmy=6,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	defense@HP=2,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{},\shield{}},
+	offensename=\goblinchief{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={},
+	options={%
+		\ghchoice{%
+			\commongoblin{}=\free{},
+			\cavegoblin{}=\free{},
+			\forestgoblin{} \wordand{} \poisonattacks{}=10,
+		},
+		\bsb{}=50,
+		\specialitemsallowance{}=\upto{}100,
+		\bow{} (3+)=5,
+		\onechoiceonly{\AlCoOrder{%
+			\pw{}=5,
+			\gw{}=10,
+			\lightlance{}=5,
+			\lance{}=10,
+		}},
+	},
+	additionalframe={%
+		\ghentry{\commongoblin{}}{}{%
+			\wolf{}=50,
+			\goblinwolfchariot{}=60,
+		}%
+		\ghentry{\cavegoblin{}}{}{%
+			\cavegnasher{}=65,
+		}%
+		\ghentry{\forestgoblin{}}{}{%
+			\scuttlerspider{}=25,
+			\huntsmenspider{}=40,
+		}%
+	},
+}

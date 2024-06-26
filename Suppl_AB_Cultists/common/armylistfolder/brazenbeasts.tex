@@ -1,0 +1,53 @@
+
+\unitentry{%
+	name=\brazenbeasts{},
+	logo=summoned,
+	categorynote=\summonedcategorynote{},
+	cost=\newrule{340},
+	unitsize=3,
+	maxunitsize=6,
+	costpermodel=95,
+	maxunitsperarmy=3,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	globalrules={\scoring{},\supernal{},\fearless{},\fear{}},
+	scoring=yes,
+	defense@HP=4,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\daredevil{},
+	offense@At=1,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\devastatingcharge{+2 \At{},+2 \St{}, +2 \AP{}},\battlefocus{}},
+	offensenameB=\beast{},
+	offenseB@At=2,
+	offenseB@Of=4,
+	offenseB@St=5,
+	offenseB@AP=2,
+	offenseB@Ag=2,
+	offenserulesB={\harnessed{},\impacthits{2},\battlefocus{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=redhaze,name=\redhaze{},cost=24\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=whipcracktail,name=\whipcracktail{},cost=12\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=centipedelegs,name=\centipedelegs{},cost=8\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=chitinousscales,name=\chitinousscales{},cost=5\permodel{}}
+		}
+	},
+}

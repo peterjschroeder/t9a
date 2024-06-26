@@ -1,0 +1,52 @@
+%Language is defined here
+\def\thisisasupplementarmy{}
+\def\thereisachangelog{}
+\def\languageisenglish{}
+\def\thisisanarmybook{}
+\def\thisbookhasacover{../Suppl_Giants/pics/giants_cover_pic_compressed.jpg}% remove "_compressed" if you want an uncompressed cover picture
+\def\addbooktitletocover{GIANTS}% full caps, use \titlesmallcaps{XXX} for link words
+%\def\uncompressedcover % uncomment if you want an uncompressed background for the cover
+
+% Preamble
+\documentclass[a4paper,10pt]{article}
+\usepackage{import}
+\subimport{../Layout/}{Layout.tex}
+\graphicspath{{pics/}{../Layout/pics/}{../Arcane_Compendium/pics/}}
+\subimport{language_specific/\languagetag/}{dictionnary_armylist.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_fluff.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_intro.tex}
+\subimport{language_specific/\languagetag/}{dictionnary_others.tex}
+\subimport{common/}{layout.tex}
+\subimport{common/}{footer.tex}
+
+\newcommand{\editionversion}{\nth{2} Edition}
+\newcommand{\booktitle}{Giants of the Ninth Age}
+\renewcommand{\supplementarmybookname}{Supplement to Army Books}
+\newcommand{\balanceversion}{2022}
+%\newcommand{\documentversion}{}% undefined if first version (= version 1), 2 for second version, etc.
+\newcommand{\betaversion}{1}% 1 if first beta, 2 if second beta, etc.
+%\renewcommand{\hotfixname}{hotfix}
+%\newcommand{\hotfixversion}{1}% undefined if no hotfix (= version 0), 1 for first hotfix, etc. this version number is language specific, each translation can be in his own hotfix number
+\newcommand\releasedate{June 16, 2022}% Comment if you want to use today's date in your default language
+%\newcommand{\specialversion}{Playtesting v1}% anything related to the version
+\newcommand{\booklogo}{pics/logo_big_GIA.png}
+\def\bookprefix{GIA}
+\hypersetup{pdftitle={T9A-FB -- \booktitle{}}}
+
+\begin{document}
+
+% all main sections are in specific files
+\subimport{../Layout/}{Titlepage.tex}
+\subimport{common/}{toc.tex}
+\additionalspacebeforemaintitle
+\subimport{language_specific/\languagetag/}{credits.tex}
+\newpage
+\subimport{common/}{intro.tex}
+\newpage
+\subimport{common/}{armylist.tex}
+\ifdef{\thereisachangelog}{%
+	\newpage
+	\subimport{language_specific/\languagetag/}{changelog.tex}
+}{}
+
+\end{document}

@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\hellhounds{},
+	logo=special,
+	cost=160,
+	unitsize=5,
+	maxunitsize=15,
+	costpermodel=20,
+	maxunitsperarmy=4,
+	type=\beast{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=7,
+	globalrules={,\supernal{},\fearless{}, \fear{}},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\hellhound{},
+	offense@At=3,
+	offense@Of=5,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=4,
+	offenserules={\lethalstrike{}, \extrasupport{} (2)},
+	commandgroup={%
+		\champion{}=10,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=1\permodel{}}
+			\addsortedexploption{prename=wrath,hypertag=incendiaryichor,name=\incendiaryichor{},cost=1\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=centipedelegs,name=\centipedelegs{},cost=1\permodel{}}
+			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=2\permodel{}}
+			\addsortedexploption{prename=pride,hypertag=hornsofhubris,name=\hornsofhubris{},cost=1\permodel{}}
+		}
+	},
+}

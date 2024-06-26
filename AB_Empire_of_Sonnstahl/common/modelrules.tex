@@ -1,0 +1,37 @@
+
+% ARMY MODEL RULES
+
+\maintitle{EoSModelRules}{\armymodelrules}
+
+\subtitle{\universalrules}
+
+\startAMRsortedlist
+\AMRsortedlistentry{\blessings{}}{\blessingsdef}
+\AMRsortedlistentry{\orders{}}{\ordersdef}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry{\parent{}}{\parentdef}
+\AMRsortedlistentry{\support{}}{\supportdef}
+\closeAMRsortedlist
+
+\subtitle{\armoury}
+
+\startAMRsortedlist
+\AMRsortedlistentry[\shootingweapon]{\longrifle{}}{%
+	\range{48}, \shots{1}, \St{} 5, \AP{} 3, \alphaorderlistbf{{\multiplewounds{}{} (2, \againststandard{})},\unwieldy{}}.%
+}
+\AMRsortedlistentry[\shootingweapon]{\bop{}}{%
+	\range{12}, \shots{2}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. \bopdef%
+}
+\AMRsortedlistentry[\shootingweapon]{\repgun{}}{%
+	\range{24}, \shots{3}, \St{} 4, \AP{} 2, \textbf{\unwieldy{}}.%
+}
+\AMRsortedlistentry[\shootingweapon]{\reppst{}}{%
+	\range{12}, \shots{3}, \St{} 4, \AP{} 2, \textbf{\quicktofire{}}. \reppstdef%
+}
+\closeAMRsortedlist
+
+\startAMRsortedlist
+\AMRsortedlistentry[\closecombatweapon]{\pick{}}{\pickdef}
+\closeAMRsortedlist

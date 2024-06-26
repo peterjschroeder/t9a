@@ -1,0 +1,60 @@
+\unitentry{%
+	name=\mammothhunter{},
+	logo=character,
+	optionallogo=character_monster,
+	categorynote=\charactermountnote{\chainedbeastsInitial}{\chainedbeasts},
+	cost=240,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=9,
+	globalrules={\lighttroops{},\notaleader{},\swiftstride{},\hidebf{\loner{}},\hidebf{\animalmaster{}}},
+	defense@HP=4,
+	defense@Df=5,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={\la{}},
+	offensename=\mammothhunter{},
+	offense@At=4,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=4,
+	offenserules={\sonsoftheavalanche{}},
+	options={%
+		\asinglebigname{}=\nolimit{},
+		\specialitemsallowance{}=\upto{}100,
+		\textbf{\leaderofthepack}=10,
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\huntingspear{} (2+)=\free{},
+			\ogrecrossbow{} (2+)=\free{},
+		}},
+		\onechoiceonlyACO{%
+			\pw{}=15,
+            \ironfist{} (\onfootonly{})=20,
+			\lance{}=10,
+			\gw{}=20,
+		},
+        \optionschoice{\Ifonfoot{} \onechoiceonlyNOC{}\spacebeforecolon{}:}{\AlCoOrder{%
+            \vanguard{}=20,
+			\scout{}=15,
+        }},
+	},
+	modelrulesdef={%
+		\modelruledef{\loner}{\ruletype{\universalrule}\lonerdef}%
+		\modelruledef{\animalmaster}{\ruletype{\universalrule}\animalmasterdef}%
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\leaderofthepack}{\ruletype{\universalrule}\leaderofthepackdef}%
+	},
+	mounts={%
+		\tusker{}\refsymbol{}=25,
+		\rockaurochs{}\refsymbol{} (\chainedbeastsInitial{})=280,
+		\refsymbolbis{}\themodelloseslighttroops{}=\void{9999},
+	},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+}% END UNIT ENTRY

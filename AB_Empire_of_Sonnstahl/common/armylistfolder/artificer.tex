@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\artificer{},
+	logo=character,
+	secondlogo=cannonballs,
+	categorynote=\twocategoriesnote{\characters}{\iar},
+	cost=120,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\hidebf{\mstart{}},\engineer{} (3+)},
+	defense@HP=2,
+	defense@Df=3,
+	defense@Re=3,
+	defense@Arm=0,
+	defensearmour=\la{},
+	offensename=\artificer{},
+	offense@Ag=3,
+	offense@At=1,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	options={%
+		\specialitemsallowance{}=\upto{}50,
+		\onechoiceonlyACO{%
+			\handgun{} (3+)=5,
+			\longrifle{} (3+)=10,
+			\repgun{} (4+)=10,
+			\reppst{} (4+)=5,
+		},
+    },
+	mounts={%
+			\horse{}=20,
+	},
+	modelrulesdef={%
+		\modelruledef{\mstart}{\ruletype{\universalrule}\mstartdef}%
+	},
+} % END UNIT ENTRY

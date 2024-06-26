@@ -1,0 +1,60 @@
+
+\unitentry{%
+	name=\makharflayers{},
+	fluff=\makharflayersfluff{},
+	logo=special,
+	optionallogo=arrows,
+	categorynote={\upgradecategorynote{\rainingdeathinitials}{\rainingdeath}},
+	cost=\newrule{180},
+	unitsize=5,
+	maxunitsize=10,
+	costpermodel=\newrule{15},
+	maxunitsperarmy=4,
+	type=\cavalry{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=10,
+	global@Ma=20,
+	global@Di=8,
+	globalrules={\lighttroops{},\strider{},\makharbattlefever{},\feignedflight{},\vanguard{}},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=3,
+	defense@Arm=1,
+	defenserules={},
+	defensearmour={\la{}},
+	offensename=\makharflayer{},
+	offense@Ag=4,
+	offense@At=1,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=0,
+	offenserules={\textbf{\beasttaker{}}},
+    offensenameB=\shadowchaser{},
+	offenseB@Ag=4,
+	offenseB@At=1,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenserulesB={\harnessed{}},
+	options={%
+		\shield{}=2\permodel{},
+		\lightlance{}=2\permodel{},
+		\onechoiceonlyACO{%
+			\bow{} (4+) [\rainingdeathinitials{}]=1\permodel{},
+			\recurvebow{} (3+) \wordand{} \partingshot{} [\rainingdeathinitials{}]=7\permodel{},
+			\throwingweapons{} (5+)=2\permodel{},
+			\textbf{\skinninglash{}} (\NOTESTzerotoXmodelsperarmy{15})=4\permodel{},
+		},%
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+	},
+	modelrulesdef={%
+		\modelruledef{\beasttaker}{\ruletype{\attackattribute}{\beasttakerdef}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\skinninglash}{\ruletype{\specialattack}{\skinninglashdef}}
+	},
+} % END UNIT ENTRY

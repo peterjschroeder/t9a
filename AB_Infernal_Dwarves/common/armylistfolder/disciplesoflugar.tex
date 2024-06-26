@@ -1,0 +1,45 @@
+
+\unitentry{%
+	name=\disciplesoflugar{},
+	logo=special,
+	cost=340,
+	unitsize=15,
+	maxunitsize=30,
+	costpermodel=17,
+	scoring=yes,
+	maxunitsperarmy=2,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=12,
+	global@Di=9,
+	globalrules={\scoring{},\infernalbrand{},\ghoststep{},\hidebf{\theocraticlitigators{}},},
+	defense@HP=1,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+),{\aegis{} (3+, \againstflamingattacks{})}},
+	offensename=\discipleoflugar{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	offenserules={,\flamingattacks{},\magicalattacks{}},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\pw{}=\free{},
+			\gw{}=2\permodel{},
+		}},
+	},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=10}\suboptionindent{}\bannerallowance{}=\nolimit{},
+	},
+	modelrulesdef={%
+		\modelruledef{\theocraticlitigators}{\ruletype{\universalrule}\theocraticlitigatorsdef}
+	},
+}% END UNIT ENTRY

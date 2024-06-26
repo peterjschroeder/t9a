@@ -1,0 +1,21 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{CUArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{CUModelRules}{\armymodelrules}\par
+	\tocentry{CUHereditarySpell}{\hereditaryspell}\par
+	\tocentry{CUSpecialEquip}{\specialequipment}\par
+	\tocentry{CUDaemonicManifestations}{\daemonicmanifestations}\par
+	\tocentry{CUArmyOrganisation}{\armyorganisation}\par
+	\tocentry{CUQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{CUchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{CUCharacters}{\characters}\par
+	\tocentry{CUCore}{\core}\par
+	\tocentry{CUSpecial}{\specialcategory}\par
+	\tocentry{CUSummoneddaemons}{\summoneddaemons}\par
+	\tocentry{CUAves}{\aves}\par
+}

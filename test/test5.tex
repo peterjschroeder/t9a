@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section{test}
+
+\lipsum
+
+\begin{itemize}
+\item test
+\item test2
+\item \hypertarget{test}{ici}
+\item test 3
+\end{itemize}
+
+\phantomsection\label{testC} Et là, \hypertarget{testB}{ça marche ?}
+
+\section{test2}
+
+\label{lalala}
+
+egzqgerhqrgqergsreerh
+
+\hypertarget{arg}{ARRRRRRRRRRRRGGGHHHHHHHHHH}
+
+\newpage
+
+\hyperlink{test}{ça part par là}
+
+\hyperlink{testB}{ça part par là}
+
+\hyperref[testC]{et là ?}
+
+\hyperref[lalala]{gggrgsgsrgssgr}
+
+\hyperlink{arg}{AAAAAAAARGGGHHHHHHHHHHHHHH}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,21 @@
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{SAArmySpecificRules}{\armyspecificrules}\par
+	\tocentry{SAModelRules}{\armymodelrules}\par
+	\tocentry{SAHereditarySpell}{\hereditaryspell}\par
+	\tocentry{SAHowdahDevices}{\howdahdevices}\par
+	\tocentry{SASpecialItems}{\specialequipment}\par
+	\tocentry{SAArmyOrganisation}{\armyorganisation}\par
+	\tocentry{SAQRS}{\quickrefsheet}\par%
+	\ifdef{\thereisachangelog}{%
+		\tocentry{SAchangelog}{\changelog}\par
+	}{}%
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{SACharacters}{\characters}\par
+	\tocentry{SAMounts}{\charactermounts}\par
+	\tocentry{SACore}{\core}\par
+	\tocentry{SASpecial}{\specialcategory}\par
+	\tocentry{SAGuerrillaWarriors}{\guerrillawarriors}\par
+	\tocentry{SAMagnaSauria}{\magnasauria}%
+}

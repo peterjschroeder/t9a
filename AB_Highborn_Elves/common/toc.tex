@@ -1,0 +1,22 @@
+% TOC
+%%%
+
+\newcommand{\tocfirstcolumn}{%
+	\tocentry{HBEModelRules}{\armymodelrules}\par
+	\tocentry{HBEHereditarySpell}{\hereditaryspell}\par
+	\tocentry{HBEHonours}{\honours}\par
+	\tocentry{HBESpecialEquipment}{\specialequipment}\par
+	\tocentry{HBEArmyOrganisation}{\armyorganisation}\par
+	\tocentry{HBEQRS}{\quickrefsheet}\par
+}
+
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{HBECharacters}{\characters}\par
+	\tocentry{HBEMounts}{\charactermounts}\par
+	\tocentry{HBECore}{\core}\par
+	\tocentry{HBESpecial}{\specialcategory}\par
+	\tocentry{HBEQueensBows}{\queensbows}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{HBEchangelog}{\changelog}\par
+	}{}%
+}

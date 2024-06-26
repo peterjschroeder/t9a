@@ -1,0 +1,118 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'removing_rnf_models.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1218.56620449bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.60508752)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{removing_rnf_models.pdf}}%
+    \put(0.22694656,1.51436245){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{removing_rnf_models.pdf}}%
+    \put(0.32525173,1.44431176){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{removing_rnf_models.pdf}}%
+    \put(0.72708254,1.51436245){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{removing_rnf_models.pdf}}%
+    \put(0.77886351,1.44431184){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{removing_rnf_models.pdf}}%
+    \put(0.13389798,1.24684787){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{removing_rnf_models.pdf}}%
+    \put(0.63403395,1.24684793){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{removing_rnf_models.pdf}}%
+    \put(0.73233916,1.17679728){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{removing_rnf_models.pdf}}%
+    \put(0.06992713,0.85163769){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{removing_rnf_models.pdf}}%
+    \put(0.77360685,0.97933322){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{removing_rnf_models.pdf}}%
+    \put(0.73233919,0.90928264){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{removing_rnf_models.pdf}}%
+    \put(0.57006309,0.85163763){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{removing_rnf_models.pdf}}%
+    \put(0.08737375,0.28146903){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{removing_rnf_models.pdf}}%
+    \put(0.06992713,0.15377346){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0.21749276,0.31057474){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{\textbf{C}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{removing_rnf_models.pdf}}%
+    \put(0.5875097,0.28146904){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{removing_rnf_models.pdf}}%
+    \put(0.57006316,0.15377346){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{removing_rnf_models.pdf}}%
+    \put(0.90736412,0.28146903){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{removing_rnf_models.pdf}}%
+    \put(0.02036653,1.55930369){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
+    \put(0.02258225,1.04753668){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{c)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{removing_rnf_models.pdf}}%
+    \put(0.73233914,0.2114185){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{removing_rnf_models.pdf}}%
+    \put(0.06411159,0.04884771){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{removing_rnf_models.pdf}}%
+    \put(0.56424753,0.04884772){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{E}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{removing_rnf_models.pdf}}%
+    \put(0.26183977,0.63040119){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{removing_rnf_models.pdf}}%
+    \put(0.76197571,0.63040117){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{removing_rnf_models.pdf}}%
+    \put(0.66303242,0.50270561){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{removing_rnf_models.pdf}}%
+    \put(0.06992712,0.50270563){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{B}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{removing_rnf_models.pdf}}%
+    \put(0.27347086,0.97933325){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{A}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{removing_rnf_models.pdf}}%
+    \put(0.01759688,1.3034202){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
+    \put(0.32534742,1.17679719){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0.32525173,0.90928262){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0.01722759,0.75675998){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{d)}}}%
+    \put(0.40141257,0.65950693){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.32525173,0.56035059){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0.82548343,0.56035051){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0.9015485,0.65950693){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.73871362,0.3105747){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{C}}}}%
+    \put(0.32525173,0.21141844){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\figRRMChar}}}%
+    \put(0.40722815,0.28146903){\color[rgb]{1,1,1}\makebox(0,0)[b]{\smash{\figbigletter{D}}}}%
+    \put(0.02036651,0.40782782){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{e)}}}%
+  \end{picture}%
+\endgroup%

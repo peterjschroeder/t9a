@@ -1,0 +1,128 @@
+
+\part{Casualties}
+\idx[main=y]{Casualties}\label{casualties}
+
+Models suffering unsaved wounds lose Health Points.
+
+\RBbmc
+
+\section{Losing Health Points}
+\idx[main=y]{Losing Health Points}\label{losing_health_points}
+
+\subsection{\rnf{} Models}
+\idx{Health Pools}
+
+\rnf{} models except Champions in the same unit share a common Health Pool. If the attack was allocated towards or distributed onto a \rnf{} model, the combined \rnf{} Health Pool loses 1 Health Point for each unsaved wound. If the \rnf{} models have 1 Health Point each, remove one \rnf{} model for each Health Point lost.
+
+If the \rnf{} models have more than 1 Health Point each, remove whole \rnf{} models whenever possible. Keep track of Health Points lost from the Health Pool that are not enough to remove an entire model. These lost Health Points are taken into account for future attacks. For example, a unit of 10 Trolls (3 Health Points each) loses 7 Health Points. Remove two whole models (6 Health Points), leaving 1 lost Health Point, which is kept track of. Later, this unit loses 2 Health Points, which is enough to remove a single Troll since 1 Health Point was lost from the previous attack.
+
+If all non-Champion \rnf{} models in a unit are wiped out, any excess lost Health Points are allotted to the Champion (even if it is fighting a Duel). If there is no Champion, the excess Health Point losses are ignored.
+
+If a unit consists of \rnf{} models with different Types and/or Heights, all \rnf{} models with the same Type and Height have their own separate Health Pool.
+
+\subsection{Champions}
+\idx{Champions}
+
+Even though Champions are \rnf{} models, each Champion has its own Health Pool, and follows the rules for Characters below. If enough Health Points are lost by \rnf{} models in order to wipe out the entire unit, any remaining lost Health Points are allotted to the Champion (even if it is fighting a Duel).
+
+\subsection{Characters}
+
+If the attack was allocated towards or distributed onto a Character, the attacked model loses 1 Health Point for each unsaved wound. If the model reaches 0 Health Points, it is removed as a casualty. Keep track of models that have lost Health Points, but not enough to reach 0 Health Points (placing \enquote{Health Point markers} next to such models works fine). These lost Health Points will be taken into account for future attacks. If the model is removed as a casualty, any excess Health Point losses are ignored.
+
+\subsection{Excess Health Point Losses}
+\idx[main=y]{Excess HP Losses}
+
+Whenever more Health Point losses are inflicted than there are Health Points in a Health Pool, these excess Health Point losses are ignored.
+
+When caused by simultaneous attacks from models from two or more Health Pools and/or units, it may be necessary to determine which models caused the excess Health Point losses. In this case, the owner of the models that inflicted the Health Point losses gets to decide.
+
+\subsection{Losing the Last Health Point}
+\idx[main=y]{Losing the Last Health Point}\idx[main=y]{Removing as a casualty}
+
+Certain effects are triggered by models being removed as a casualty, while others are set off by models losing their last Health Point or reaching 0 Health Points. Note that losing the last Health Point does not apply to situations in which a model is directly removed as a casualty, without actually losing any Health Points, like Fleeing off the board or being destroyed after Breaking from Combat.
+
+\columnbreak
+
+\section{Removing Casualties}
+\idx[main=y]{Removing Casualties}\label{removing_casualties}
+
+Whenever the rules tell you to remove models as casualties, remove the models from the Battlefield following the rules below. Models that have been removed as casualties no longer affect the game in any way, but they may award Victory Points to the opponent (see \totalref{victory_conditions}).
+
+\subsection{Removing \rnf{} Models}
+
+If the unit is in multiple ranks, \rnf{} casualties are removed from the rear rank by the owner one by one, in any order they choose.
+
+If casualties are removed from the first rank, remove models one by one as equally as possible from both sides of the unit. Note that this only applies to each batch of simultaneous attacks.
+
+If a model of a different Health Pool is in a position that would normally be removed as a casualty, remove the next eligible \rnf{} model and redistribute the models in the unit into a legal formation, following the rules described in \totalref{illegal_formation_after_removing_models}.
+
+\subsection[Removing \rnf{} Models from Units Engaged in Combat]{Removing \rnf{} Models from\\ Units Engaged in Combat}
+
+The removal of casualties from Engaged units follows the general rules for Removing \rnf{} models above. In addition, if the unit is in a single rank, remove casualties from either side of the unit so that the following conditions are satisfied as well as possible for each batch of simultaneous casualties after any illegal formations are fixed (see \totalref{illegal_formation_after_removing_models}), in decreasing priority order:
+\begin{itemize}
+	\item \nth{1} priority: As few units as possible Drop out of Combat (see \totalref{losing_base_contact}).
+	\item \nth{2} priority: As few units as possible lose base contact without Dropping out of Combat.
+	\item \nth{3} priority: The number of models in base contact is maximised after nudging all units.
+	\item \nth{4} priority: Casualties are removed as equally as possible from both sides of the unit.
+\end{itemize}
+
+If it is unavoidable to break one or more of the above conditions, you must avoid breaking the higher priority order conditions, even if this means the total number of conditions you break is higher. As long as all above conditions are satisfied as well as possible, the owner is free to remove casualties as they please. See figure \ref{figure/removing_rnf_models} for examples.
+
+\newcommand{\figRRMChar}{\fontsize{7}{8}\selectfont C}
+
+\begin{figure*}[!p]
+	\renewcommand{\figbiglettersize}{16}
+	\centering
+	\begin{minipage}{0.55\textwidth}
+	\def\svgwidth{\textwidth}
+	\strut\vspace*{4.5cm}\newline
+	\subimport{../pics/}{removing_rnf_models.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}{0.43\textwidth}
+	\caption{Removing \rnf{} models from units Engaged in Combat.\captionposttitle
+		This figure shows how models are removed as casualties from a unit that is Engaged with one or more enemy units according to Removing \rnf{} Models from Units Engaged in Combat. In all examples, 3 models are removed as casualties from the green Combined Unit containing a Character in its first rank.\captionpar
+		a) One of these casualties is the model in the second rank, and the other two have to be removed from both sides of the first rank according to the \nth{4} priority. Since there is a Character on the right side of the unit, the \rnf{} model to its left is removed instead, and the Character is slid into the removed model's spot.\vspace{10pt}\captionpar
+		b) In order to maximise the number of models in base contact (\nth{3} priority), the model in the second rank and the two rightmost \rnf{} models from the first rank are removed as casualties. The Character is slid into the spot of a removed \rnf{} model.\vspace{5pt}\captionpar
+		c) In order not to have unit B lose base contact by removing casualties (\nth{2} priority), the model in the second rank and the two rightmost \rnf{} models from the first rank are removed as casualties. The Character is slid into the spot of a removed \rnf{} model.\vspace{8pt}\captionpar
+		d) In order not to cause any units to Drop out of Combat (\nth{1} priority), the model in the second rank and the two leftmost \rnf{} models from the first rank are removed as casualties. Unit B loses contact but is nudged back into combat (see \totalref{losing_base_contact}).\vspace{0.8cm}\captionpar
+		e) In order to cause as few units as possible to Drop out of Combat (1st priority), the model in the second rank and the two rightmost \rnf{} models from the first rank are removed as casualties. The Character is slid into the spot of a removed \rnf{} model. Unit D loses contact and cannot be nudged back into combat, so that it Drops out of Combat (see \totalref{losing_base_contact}).\captionpar
+	}
+	\label{figure/removing_rnf_models}
+	\end{minipage}
+\end{figure*}
+
+\columnbreak
+
+\subsection[Removing Champions and Characters]{Removing Champions and\\ Characters}
+\label{removing_non_RnF_models}
+ 
+When Champions and Characters are removed as casualties, they are removed from their positions within the unit. Depending on the unit's formation, other models may then be moved to fill empty spots, following the same guidelines as for casualty removal above and the rules for Matching Bases (see \totalref{front_rank}).
+
+\subsection{Removing All Models from a Unit}
+\label{removing_all_models_from_a_unit}
+
+When a unit loses all remaining Health Points due to a batch of simultaneous attacks, the models are not removed as casualties one by one but the entire unit is removed as a casualty.
+
+\subsection[Illegal Formation after Removing Models]{Illegal Formation after Removing\\ Models}
+\label{illegal_formation_after_removing_models}
+
+If the removal of a model would lead to an illegal formation (there can only be gaps in an incomplete rear rank; see \totalref{units}), immediately redistribute or slide models in the unit without changing the direction that the unit is facing until the formation is legal, following the rules below: \newline
+a) If the illegal formation is solely caused by a gap in the first rank and there aren't any models outside the first rank that could fill the gap, close the gap by sliding all models from one side of the gap towards the other side of the gap. If the illegal formation is solely caused by a gap in the first rank and there are models outside the first rank, the gap must be filled by redistributing these models.
+Redistribute and/or slide models so that the following conditions are satisfied as well as possible, in decreasing priority order (ignore the first 3 priorites for unengaged units):
+\begin{itemize}
+	\item \nth{1}  priority: As few units as possible Drop out of Combat (see \totalref{losing_base_contact}).
+	\item \nth{2}  priority: As few units as possible lose base contact without Dropping out of Combat.
+	\item \nth{3}  priority: The number of models in base contact is maximised after nudging all units.
+	\item \nth{4}  priority: Change the width of the unit as little as possible.
+	\item \nth{5}  priority: Slide as few models as possible; in case of a draw, the owner decides which half of the models to slide. If the illegal formation cannot be resolved by sliding models, redistribute as few models as possible.
+\end{itemize}
+
+b) If the illegal formation is also caused by gaps outside the first rank, fill the gaps following the rules for Matching Bases (see \totalref{front_rank}).
+
+If a legal formation cannot be achieved by sliding and/or redistributing models, remove as few models in illegal positions as possible as casualties until the legal formation can be achieved by sliding and/or redistributing models.
+
+\subsection{Removing Lasting Effects}
+\idx[main=y]{Lasting Effects}\label{removing_lasting_effects}
+
+Whenever a model that applies any effects to other elements in the game is removed as a casualty, unless specifically stated otherwise, these effects end immediately. This also applies to effects with a specified duration like activated effects with One use only.
+
+\RBemc

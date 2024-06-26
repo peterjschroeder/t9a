@@ -1,0 +1,61 @@
+
+\unitentry{%
+	name=\pteradonriders{},
+	logo=arrows,
+	cost=200,
+	unitsize=3,
+	maxunitsize=5,
+	costpermodel=40,
+	maxunitsperarmy=2,
+	type=\cavalry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=2,
+	global@Ma=4,
+	global@Adfly=8,
+	global@Mafly=16,
+	global@Di=6,
+	globalrules={\communalbond{},\feignedflight{},\skirmisher{},\lighttroops{},\vanguard{},\fly{8}{16},\minimised{} (\disciplinetest{})},
+	defense@HP=2,
+	defense@Df=2,
+	defense@Re=3,
+	defense@Arm=2,
+	defenserules={\hardtarget{} (1),\fortitude{} (6+)},
+	defensearmour=\shield{},
+	offensename=\skinkrider{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenseweapons={\lightlance{}},
+	offensenameB=\pteradon{},
+	offenseB@At=2,
+	offenseB@Of=2,
+	offenseB@St=4,
+	offenseB@AP=1,
+	offenseB@Ag=4,
+	offenserulesB={\harnessed{},\hidebf{\aerialassault{}}},
+		wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\shamanismspellfour}{\shamanism},
+			\spellformat{\enlightenment}{\hereditaryspell},
+			\spellformat{\druidismspelltwo}{\druidism},
+			\spellformat{\druidismspellfour}{\druidism},
+		}
+	},
+	options={%
+			\mustchooseonechoiceonly{\AlCoOrder{%
+			\poisonedjavelin{} (4+)=\free{},
+			\magneticshortbow{} (3+)=\free{},
+		}},
+		\markinglure{}=20,
+		\specialambush{} (\pteradonambushdef{}) (\zerotoXunitsperarmy{1})=20,
+	},
+	commandgroup={%
+		\champion{} \withenclavewizard{}=100,
+	},
+	modelrulesdef={%
+		\modelruledef{\aerialassault}{\ruletype{\specialattack}\aerialassaultdef}%
+	},
+}% END UNIT ENTRY

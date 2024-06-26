@@ -1,0 +1,76 @@
+	\vspace*{0.6cm}%
+	\begin{center}\hbadness=10000% remove warnings for underfull lines
+			\begin{minipage}{0.8\linewidth}
+			\normalfontsize%
+			\renewcommand{\Largefontsize}{\fontsize{11.2}{13.44}\selectfont}
+			\setlength{\tabcolsep}{0pt}
+			\renewcommand{\arraystretch}{1.55}
+			\newlength{\spelltypeboxwidth}%
+			\setlength{\spelltypeboxwidth}{%
+				\maxof{%
+					\maxof{%
+						\widthof{\hex}%
+					}{%
+						\widthof{\missile}%
+					}
+				}{%
+					\widthof{\damage}%
+				}%
+			}
+			\begin{tabular}{p{\linewidth}}
+			\tablelabels
+			\spelllabelandtitle{\strut\tikz[remember picture] \node [inner sep=0pt] (SpellClassification) {\strut{}1};\strut}{\strut\tikz[remember picture] \node [inner sep=0pt] (SpellName) {\strut\SPPRfigSpellName};\strut}
+		
+			\tablespellcastingvalue{\strut\tikz[remember picture] \node [inner sep=0pt] (SpellCastingValue) {4+};\strut}
+			\tablespellrange{\strut\tikz[remember picture] \node [inner sep=0pt] (SpellRange) {\distance{36}};\strut}
+			{\strut\tikz[remember picture] \node [inner sep=0pt,text width=\spelltypeboxwidth] (SpellType) {\alphaorderlistpar{\damage{},\hex{},\missile}};\strut} &
+			\tablespellduration{\strut\tikz[remember picture] \node [inner sep=0pt] (SpellDuration) {\instant};\strut}
+			\tablespelleffect{%
+				\strut\tikz[remember picture] \node [inner sep=0pt] (SpellEffect) {\begin{minipage}{\textwidth}\SPPRfigSpellEffect\end{minipage}};\strut%
+			}
+			\spellrule
+			\end{minipage}
+	\end{center}
+	\vspace*{0.6cm}%
+	\newlength{\spellnameboxwidth}%
+	\setlength{\spellnameboxwidth}{\widthof{\Largefontsize\textbf{\pyromancyspellone}}}%
+	\newlength{\spellnameboxheight}%
+	\setlength{\spellnameboxheight}{\heightof{\Largefontsize\textbf{\pyromancyspellone}}}%
+	\newlength{\spellclassificationboxwidth}%
+	\setlength{\spellclassificationboxwidth}{\widthof{\Largefontsize\textbf{1}}}%
+	\newlength{\spellclassificationboxheight}%
+	\setlength{\spellclassificationboxheight}{\heightof{\Largefontsize\textbf{1}}}%
+	\newlength{\spellcastingvalueboxwidth}%
+	\setlength{\spellcastingvalueboxwidth}{\widthof{\textbf{4+}}}%
+	\newlength{\spellcastingvalueboxheight}%
+	\setlength{\spellcastingvalueboxheight}{\heightof{\textbf{4+}}}%
+	\newlength{\spelltypeboxheight}%
+	\setbox0=\vbox{\begin{minipage}{0.26\linewidth}\hex\newline\missile\newline\damage\end{minipage}}%
+	\spelltypeboxheight=\ht0 \advance\spelltypeboxheight by \dp0%
+	\newlength{\spelldurationboxwidth}%
+	\setlength{\spelldurationboxwidth}{\widthof{\instant}}%
+	\newlength{\spelldurationboxheight}%
+	\setlength{\spelldurationboxheight}{\heightof{\instant}}%
+	\newlength{\spelleffectboxheight}%
+	\setbox0=\vbox{\begin{minipage}{0.47\linewidth}\SPPRfigSpellEffect\end{minipage}}%
+	\spelleffectboxheight=\ht0 \advance\spelleffectboxheight by \dp0%
+	\begin{tikzpicture}[remember  picture, overlay, highlight/.style = {draw=red,rounded corners=3pt,thick},comment/.style = {align=center, fill= black!5},every edge/.append style = { ->, thick, >=stealth,black!50,dashed,line width=1pt},]
+		\node [highlight,yshift=0.03cm,minimum width=\spellclassificationboxwidth,minimum height=\spellclassificationboxheight+4pt] (SpellClassificationFrame) at (SpellClassification) {};
+		\node [highlight,yshift=0.03cm,minimum width=\spellnameboxwidth-2pt,minimum height=\spellnameboxheight+4pt] (SpellNameFrame) at (SpellName) {};
+		\node [highlight,minimum width=\spellcastingvalueboxwidth+2pt,minimum height=\spellcastingvalueboxheight+4pt] (SpellCastingValueFrame) at (SpellCastingValue) {};
+		\node [highlight,xshift=0.1cm,minimum width=2.5cm,minimum height=\spelltypeboxheight-4pt] (SpellTypeFrame) at (SpellType.west) {};
+		\node [highlight,minimum width=\spelldurationboxwidth,minimum height=\spelldurationboxheight+2pt] (SpellDurationFrame) at (SpellDuration) {};
+		\node [highlight,yshift=.1\baselineskip,minimum width=0.47\linewidth-10pt,minimum height=\spelleffectboxheight+5pt] (SpellEffectFrame) at (SpellEffect) {};
+		\node [comment,above left = 1.2cm and -1.6cm of SpellClassificationFrame.center] (SpellClassificationComment) {\SPPRfigOne};
+		\node [comment,right=2cm of SpellClassificationComment] (SpellTypeComment) {\SPPRfigFour};
+		\node [comment,right=4.3cm of SpellTypeComment] (SpellEffectComment) {\SPPRfigSix};
+		\draw (SpellClassificationComment.210) edge (SpellClassificationFrame.130);
+		\draw (SpellTypeComment) edge (SpellTypeFrame);
+		\draw (SpellEffectComment) edge (SpellEffectFrame);
+		\node [comment,below left = 1cm and 0.3cm of SpellCastingValueFrame.center] (SpellNameComment) {\SPPRfigTwo};
+		\node [comment,right=0.8cm of SpellNameComment] (SpellCastingValueComment) {\SPPRfigThree};
+		\node [comment,right=1.2cm of SpellCastingValueComment] (SpellDurationComment) {\SPPRfigFive};
+		\draw (SpellNameComment.100) edge (SpellNameFrame.197);
+		\draw (SpellCastingValueComment) edge (SpellCastingValueFrame);
+		\draw (SpellDurationComment) edge (SpellDurationFrame);
+	\end{tikzpicture}

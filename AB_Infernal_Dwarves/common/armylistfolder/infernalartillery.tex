@@ -1,0 +1,36 @@
+
+\unitentry{%
+	name=\infernalartillery{},
+	logo=special,
+	cost=155,
+	unitsize=1,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=75,
+	global@Ad=3,
+	global@Ma=3,
+	global@Di=9,
+	globalrules={\infernalbrand{},\hidebf{\highercalibre{}},\warmachine{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\infernalarmour{}},
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=2,
+	offenserules={\moveorfire{},\accurate{}},
+	modelrulesdef={%
+		\modelruledef{\highercalibre}{\ruletype{\universalrule}\highercalibredef{}}
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\naphthathrower{} \wordand{} \firesofindustrySHORT{} (1)=\free{},
+			\rocketbattery{} (4+) \wordand{} \firesofindustrySHORT{} (2)=135,
+			\titanmortar{} (4+) \wordand{} \firesofindustrySHORT{} (2)=120,
+		}},	
+	},
+}% END UNIT ENTRY

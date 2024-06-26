@@ -1,0 +1,42 @@
+
+\unitentry{%
+	name=\tombarchitect{},
+	logo=character,
+	cost=200,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	global@Rsr=1,
+	globalrules={\undead{},\dusttodust{},\hidebf{\masterofstone},\fearless{}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la{}},
+	defenserules={\flammable{}},
+	offensename=\tombarchitect{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=3,
+	options={%
+		\specialitemsallowance{}=\upto{}100,
+		\onechoiceonlyACO{%
+			\pw{}=5,
+			\lance{}=5,
+		},
+	},
+	modelrulesdef={%
+		\modelruledef{\masterofstone}{\ruletype{\universalrule}\masterofstonedef}%
+	},
+	mounts={%
+		\skeletalhorse{}=10,
+		\skeletonchariot{}=25,
+		\amuut{}=25,
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,91 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'align.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{2418.89758012bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.62499999)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{align.pdf}}%
+    \put(0.53822592,0.23832201){\color[rgb]{1,1,1}\rotatebox{-60.00000001}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignFlyingCharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{align.pdf}}%
+    \put(0.01437432,0.59654782){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignA\end{tabular}}}}%
+    \put(0.33925226,0.5965478){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignB\end{tabular}}}}%
+    \put(0.68277803,0.5965478){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignC\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{align.pdf}}%
+    \put(0.17175764,0.57911785){\color[rgb]{1,1,1}\rotatebox{-60.00000001}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignCharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{align.pdf}}%
+    \put(0.55925763,0.57911784){\color[rgb]{1,1,1}\rotatebox{-60.00000001}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignCharge\end{tabular}}}}}%
+    \put(0.14606501,0.52255822){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0.15645791,0.39035606){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.44395793,0.39035605){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0.53356498,0.52255821){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{align.pdf}}%
+    \put(0.78145797,0.39035606){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{align.pdf}}%
+    \put(0.90101357,0.49126441){\color[rgb]{1,1,1}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\figbigletter{A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{align.pdf}}%
+    \put(0.87601695,0.50907878){\color[rgb]{1,1,1}\rotatebox{60.00000001}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignCharge\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{align.pdf}}%
+    \put(0.01437431,0.2965478){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignD\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{align.pdf}}%
+    \put(0.24395793,0.06535606){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{align.pdf}}%
+    \put(0.43937431,0.2965478){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignE\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{align.pdf}}%
+    \put(0.07118394,0.19953822){\color[rgb]{1,1,1}\rotatebox{-60.00000001}{\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\alignCharge\end{tabular}}}}}%
+    \put(0.13523969,0.19130817){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{align.pdf}}%
+    \put(0.66895794,0.0653561){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{B}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{align.pdf}}%
+    \put(0.62106502,0.19755821){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}\figbigletter{A}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{align.pdf}}%
+  \end{picture}%
+\endgroup%

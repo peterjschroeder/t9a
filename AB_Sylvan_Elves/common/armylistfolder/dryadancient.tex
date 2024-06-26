@@ -1,0 +1,37 @@
+
+\unitentry{%
+	name=\dryadancient{},
+	logo=character,
+	cost=100,
+	unitsize=1,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=9,
+	globalrules={\forestwalker{},\treesinging{},\sylvanspirit{}},
+	defense@HP=3,
+	defense@Df=6,
+	defense@Re=4,
+	defense@Arm=0,
+	defenserules={\aegis{} (5+)},
+	offensename=\dryadancient{},
+	offense@At=3,
+	offense@Of=6,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=7,
+	offenserules={\hatred{}},
+	magic={\wizardapprentice{}=25,\wizardadept{}=120},
+	paths={\druidism{}=druidism,\divination{}=divination},
+	options={%
+		\asingleaspectofnature{}=\nolimit{},
+		**\optionline,
+	},	
+	scrollmodelrulesdef={%
+		\modelruledef{\forestwalker{}}{\ruletype{\universalrule}\forestwalkerdef}
+		\modelruledef{\treesinging{}}{\ruletype{\universalrule}\treesingingdef}
+		\modelruledef{\sylvanspirit{}}{\ruletype{\universalrule}\sylvanspiritdef}
+	},
+} % END UNIT ENTRY

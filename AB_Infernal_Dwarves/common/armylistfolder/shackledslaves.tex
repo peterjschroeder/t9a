@@ -1,0 +1,39 @@
+
+\unitentry{%
+	name=\shackledslaves{},
+	logo=core,
+	cost=100,
+	unitsize=20,
+	maxunitsize=40,
+	costpermodel=4,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=12,
+	global@Di=4,
+	globalrules={\insignificant{},\textbf{\chainedtogether},\unstable{}},
+	defense@HP=1,
+	defense@Df=2,
+	defense@Re=4,
+	defense@Arm=0,
+	offensename=\shackledslave{},
+	offense@At=1,
+	offense@Of=2,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=1,
+	offenserules=,
+	commandgroup={%
+		\musician{}=10,
+	},
+	options={%
+		\mustchooseonechoiceonly{\AlCoOrder{%
+			\shield{}=\free{},
+			\pw{}=\free{},
+		}},
+	},
+	modelrulesdef={%
+	\modelruledef{\chainedtogether{}}{\ruletype{\universalrule{}}\chainedtogetherdef{}}
+	}
+}% END UNIT ENTRY

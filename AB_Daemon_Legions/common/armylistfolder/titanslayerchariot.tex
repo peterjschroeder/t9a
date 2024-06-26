@@ -1,0 +1,54 @@
+
+\unitentry{%
+	name=\titanslayerchariot{},
+	logo=special,
+	cost=200,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\construct{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=8,
+	global@Ma=8,
+	global@Di=8,
+	globalrules={\swiftstride{},\supernal{},\fearless{},\hidebf{\mountainbreaker}},
+	defense@HP=4,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\myrmidon{} (2),
+	offense@At=1,
+	offense@Of=5,
+	offense@St=5,
+	offense@AP=1,
+	offense@Ag=4,
+	offenserules={\devastatingcharge{\battlefocus{}}},
+	offensenameB=\chtonicmachinator{},
+	offenseB@At=3,
+	offenseB@Of=3,
+	offenseB@St=6,
+	offenseB@AP=3,
+	offenseB@Ag=3,
+	offenserulesB={\harnessed{}},
+	offensenameI=\chassis{},
+	offenseI@St=7,
+	offenseI@AP=2,
+	offenserulesI={\impacthits{\Dthree{}+1},\inanimate{}},
+	commandgroup={%
+		\standardbearer{}=10,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=gluttony,hypertag=digestivevomit,name=\digestivevomit{},cost=10}
+			\addsortedexploption{prename=pride,hypertag=stiffupperlip,name=\stiffupperlip{},cost=5}
+			\addsortedexploption{prename=greed,hypertag=segmentedshell,name=\segmentedshell{},cost=5}
+			\addsortedexploption{prename=chaos,hypertag=centipedelegs,name=\centipedelegs{},cost=15}
+			\addsortedexploption{prename=chaos,hypertag=hammerhand,name=\hammerhand{},cost=35}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\mountainbreaker}{\ruletype{\universalrule}\mountainbreakerdef}
+	},
+}% END UNIT ENTRY

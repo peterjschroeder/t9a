@@ -1,0 +1,32 @@
+
+\unitentry{%
+	name=\hobballista{},
+	fluff=\hobballistafluff{},
+	logo=arrows,
+	cost=100,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\construct{},
+	size=\heightstandard{},
+	basesize=60,
+	global@Ad=4,
+	global@Ma=4,
+	global@Di=7,
+	globalrules={\warmachine{}},
+	defense@HP=5,
+	defense@Df=1,
+	defense@Re=4,
+	defense@Arm=0,
+	defensearmour={\la},
+	offensename=\crew{},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=3,
+	offense@AP=0,
+	offense@Ag=3,
+	offenserules={\moveorfire{},\ironrain{}},
+	offenseweapons={\hidebf{\ballista{}} (4+)},
+	modelrulesdef={%
+		\modelruledef{\ballista}{\ruletype{\artilleryweapon}\range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \alphaorderlistbf{[\multiplewounds{\Dthree{}}{}],\areaattack{1\timess{}5}}.}
+	},
+}% END UNIT ENTRY

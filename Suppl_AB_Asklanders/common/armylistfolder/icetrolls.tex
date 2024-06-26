@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\newrule{\icetrolls{}},
+	fluff=\icetrollsfluff{},
+	logo=special,
+	cost=\newrule{200},
+	unitsize=3,
+	maxunitsize=10,
+	costpermodel=\newrule{80},
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=6,
+	global@Ma=12,
+	global@Di=4,
+	globalrules={\fearless{},\fear{},\hidebf{\stupid{}}},
+	defense@HP=3,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=\newrule{2},
+	defenserules={\fortitude{} (4+),\newrule{\unburnt{}}},
+	offensename=\newrule{\icetroll{}},
+	offense@At=3,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=1,
+	offenserules={\hidebf{\trollbelch{}}},
+	toggles={\toggletrue{onecolprintmodelrulesdef}\togglefalse{twocolprintmodelrulesdef}},
+	options={%
+		\removedrule{\textbf{\icetroll{}}}=\removedrule{12\permodel{}},
+	},
+	modelrulesdef={%
+		\modelruledef{\stupid}{\ruletype{\universalrule}\stupiddef}%
+		\modelruledef{\trollbelch}{\ruletype{\specialattack}\trollbelchdef}%		
+	},
+	optionalmodelrulesdef={%
+			\modelruledef{\removedrule{\icetroll}}{\ruletype{\removedrule{\universalrule}}\icetrolldefx}%
+	},
+} % END UNIT ENTRY

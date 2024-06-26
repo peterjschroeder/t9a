@@ -1,0 +1,30 @@
+
+\unitentry{%
+	name=\cavegnasher{},
+	logo=character,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	maxmountsperarmy=3,
+	global@Ad=5,
+	global@Ma=10,
+	global@Adfly=6,
+	global@Mafly=12,
+	global@Di=\ascharacter{},
+	globalrules={\fly{6}{12},\lighttroops{},\fearless{},\oiitbites{},\hidebf{\bouncers{}}},
+	defense@HP=3,
+	defense@Df=\ascharacter{},
+	defense@Re=\ascharacter{},
+	defense@Arm=\ascharacter{}+1,
+	defenserules={\hardtarget{} (1)},
+	offensename=\cavegnasher{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=3,
+	offenserules={\harnessed{},\impacthits{} (1)},
+	modelrulesdef={%
+		\modelruledef{\bouncers}{\ruletype{\universalrule}\bouncersdef}%
+	},
+}%

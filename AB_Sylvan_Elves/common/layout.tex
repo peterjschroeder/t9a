@@ -1,0 +1,29 @@
+
+\newcommand{\startdancestable}{%
+\renewcommand{\arraystretch}{1.5}%
+\DTLifdbexists{danceslist}{\DTLcleardb{danceslist}}{\DTLnewdb{danceslist}}% Create new/discard old list
+\begin{center}\begin{tabular}{>{\raggedleft}m{5cm}m{9cm}}%
+\toprule
+}
+
+\newcommand{\closedancestable}{%
+\DTLsort*{sortlabel}{danceslist}% Sort list
+\DTLforeach*{danceslist}{\name=name,\ruletext=ruletext}{%
+\textbf{\name}&\ruletext{}\DTLiflastrow{}{\tabularnewline}%
+}
+\tabularnewline\bottomrule
+\end{tabular}\end{center}%
+\DTLcleardb{danceslist}%
+}
+
+\newcommand{\adddance}[2]{%
+	\DTLnewrow{danceslist}%
+	\pdfstringdef\textwithoutformatting{#1}%
+	\pdfsubstitute\textwithoutformatting{'}{}%
+	\pdfsubstitute\textwithoutformatting{ }{}%
+	\dolanguagespecificsubstitute{}%
+	\def\DTLentrycommand{\DTLnewdbentry{danceslist}{sortlabel}}%
+	\expandafter\DTLentrycommand\expandafter{\textwithoutformatting}%
+	\DTLnewdbentry{danceslist}{name}{#1}%
+	\DTLnewdbentry{danceslist}{ruletext}{#2}%
+}

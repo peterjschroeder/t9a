@@ -1,0 +1,209 @@
+
+% Unit Entry Names
+
+% Characters
+
+\newcommand{\highprince}{High Prince}
+\newcommand{\commander}{Commander}
+\newcommand{\mage}{Mage}
+
+
+% Mounts
+
+\newcommand{\elvenhorse}{Elven Horse}
+\newcommand{\gianteagle}{Giant Eagle}
+\newcommand{\griffon}{Griffon}
+\newcommand{\youngdragon}{Young Dragon}
+\newcommand{\dragon}{Dragon}
+\newcommand{\ancientdragon}{Ancient Dragon}
+
+\newcommand{\reaverchariot}{Reaver Chariot}
+\newcommand{\crew}{Crew}
+\newcommand{\chassis}{Chassis}
+
+\newcommand{\lionchariot}{Lion Chariot}
+\newcommand{\lion}{Lion}
+
+\newcommand{\skysloop}{Sky Sloop}
+\newcommand{\hawk}{Hawk}
+
+
+% Core
+
+\newcommand{\citizenspears}{Citizen Spears}
+\newcommand{\citizenspear}{Citizen Spear}
+
+\newcommand{\highbornlancers}{Highborn Lancers}
+\newcommand{\highbornlancer}{Highborn Lancer}
+
+\newcommand{\citizenarchers}{Citizen Archers}
+\newcommand{\citizenarcher}{Citizen Archer}
+
+\newcommand{\seaguard}{Sea Guard}
+\newcommand{\seaguardSINGULAR}{Sea Guard}
+
+\newcommand{\eleinreavers}{Elein Reavers}
+\newcommand{\eleinreaver}{Elein Reaver}
+
+
+% Special
+
+\newcommand{\swordmasters}{Sword Masters}
+\newcommand{\swordmaster}{Sword Master}
+
+\newcommand{\lionguard}{Lion Guard}
+\newcommand{\lionguardSINGULAR}{Lion Guard}
+
+\newcommand{\flamewardens}{Flame Wardens}
+\newcommand{\flamewarden}{Flame Warden}
+
+\newcommand{\knightsofryma}{Knights of Ryma}
+\newcommand{\knightofryma}{Knight of Ryma}
+
+% Reaver and Lion Chariot and Giant Eagle already defined in Mounts
+\newcommand{\reaverchariots}{Reaver Chariots}
+\newcommand{\gianteagles}{Giant Eagles}
+
+\newcommand{\initiateofthefieryheart}{Initiate of the Fiery Heart}
+\newcommand{\dragonmage}{Dragon Mage}
+
+
+% Queen's Bows
+
+\newcommand{\queensguard}{Queen's Guard}
+\newcommand{\queensguardSINGULAR}{Queen's Guard}
+
+\newcommand{\greywatchers}{Grey Watchers}
+\newcommand{\greywatcher}{Grey Watcher}
+
+
+% Naval Ordnance
+
+\newcommand{\seaguardreaper}{Sea Guard Reaper}
+
+% Sky Sloop already defined in Mounts
+
+
+% Ancient Allies
+
+\newcommand{\phoenix}{Phoenix}
+
+
+
+% Unit Entry Rules
+
+%%% CHARACTERS
+
+% High Prince
+
+\newcommand{\asinglehonour}{A single Honour}
+
+
+%%% MOUNTS
+
+% Dragon
+
+\newcommand{\dragonnote}{Dragon and Ancient Dragon share the same \zerotoXmountsperarmy{X} limitation.}
+
+% Sky Sloop
+
+\newcommand{\skysloopnote}{The model also counts towards the maximum number of Sky Sloops allowed from Special.}
+\newcommand{\skyreaper}{Sky Reaper}
+\newcommand{\skyreaperdef}{%
+\range{24}, \shots{4}, \St{} 5, \AP{} 3, \textbf{\quicktofire}.%
+}
+
+
+%%% CORE
+
+\newcommand{\covervolley}{Cover Volley}
+%\newcommand{\covervolleydef}{%
+%When an enemy unit declares a Charge against another unit containing one or more models with \martialdiscipline{} in the Charge Phase, a single friendly unit containing one or more models with \covervolley{} may immediately perform a Stand and Shoot Charge Reaction with the following conditions and restrictions:%
+%\begin{smallitemize}%
+%\item The distance between the Charger and the Charged unit \textbf{must} be greater than the Charger's Advance Rate (using the lowest value among the Charging models if there is more than one).%
+%\item The unit with \covervolley{} is within \distance{12} of the Charged unit.%
+%\item Only model parts with \covervolley{} may shoot, and they may only shoot once per Charge Phase.%
+%\item The unit \textbf{must} use Stand and Shoot before the Charged unit declares its Charge Reaction. If the Charge is no longer possible after the unit's Stand and Shoot (e.g. due to the Charging unit being destroyed or failing a Panic Test), the Charged unit does not declare any Charge Reaction.%
+%\item The Stand and Shoot Charge Reaction is performed as if the enemy had declared the Charge against the unit with \covervolley{} in their current position (apply the normal rules for the Stand and Shoot Charge Reaction, i.e. the Charging unit must be Located in the Front Arc of the unit with \covervolley{}, the unit with \covervolley{} cannot be Shaken or Fleeing, etc.).
+%\end{smallitemize}%
+%}
+
+\newcommand{\marinetraining}{Marine Training}
+\newcommand{\marinetrainingdef}{%
+	The model part may use Shooting Attacks from any rank.%
+}
+
+%%% SPECIAL
+
+% Sword Masters
+
+\newcommand{\swordsworn}{Sword Sworn}
+\newcommand{\swordsworndef}{%
+The model part gains a +1 to-hit modifier when attacking with a \gw{}.%
+}
+
+% Lion Guard
+
+\newcommand{\highprincegeneral}{\highprince{} that is the \general{}}% both conditions must be met
+
+\newcommand{\baleighighlanders}{Baleig Highlander}
+\newcommand{\baleighighlandersdef}{%
+	The model gains \textbf{\hardtarget{} (1)}, \textbf{\lighttroops{}}, and \textbf{\skirmisher{}} and loses \scoring{}.%
+}
+
+% Sea Guard Reaper
+
+\newcommand{\seaguardreapernote}{%
+	For each \skysloop{} from Character Mounts or from Special in the army, the maximum number is reduced by 1.
+}%
+\newcommand{\elvenboltthrower}{Elven Bolt Thrower}
+\newcommand{\elvenboltthrowerdef}{%
+This Artillery Weapon can be fired in two ways:%
+\begin{smallitemize}%
+\item \range{48}, \shots{1}, \St{} 3 [6], \AP{} 10, \textbf{\areaattack{} (1\timess{}5)}, [\textbf{\multiplewounds{D3}{}}]%
+\item \range{48}, \shots{6}, \St{} 4, \AP{} 2%
+\end{smallitemize}%
+}
+
+
+% Phoneix
+
+\newcommand{\rebirth}{Rebirth}
+\newcommand{\rebirthdef}{%
+	When the model loses its last Health Point, unless it is a Summoned model, the owner \textbf{must} roll a \Dsix{}. The roll is successful on a roll of 5+ (or 3+ if the model has Warden’s Bond):
+	\begin{itemize}
+		\item Before removing the model as a casualty, mark the centre of its final position.
+		\item At the start of the next friendly Movement Phase, Summon a new \phoenix{} within \distance{3} of the marked point. The Summoned model has the same upgrades as the original \phoenix{} and its \HealthPoints{} are \textbf{set} to 1.
+	\end{itemize}
+If the roll fails, the model is removed as a casualty as normal.
+}
+
+\newcommand{\firephoenix}{Fire Phoenix}
+\newcommand{\firephoenixdef}{%
+The Phoenix model part gains \textbf{\aegis{} (3+, \against{} \flamingattacks{})}, \textbf{\flamingattacks}, and \textbf{\grindattacks{} (\Dsix{})}\refsymbol{}.\newline%
+The model may perform a \sweepingattack{}\refsymbol{}. The enemy unit suffers \Dsix{} hits and an additional \Dthree{} hits for each rank after the first.\newline%
+\refsymbolbis{}These Grind Attacks and Sweeping Attacks are resolved with Strength 4, Armour Penetration 1, and \textbf{\flamingattacks}.%
+}
+
+\newcommand{\frostphoenix}{Frost Phoenix}
+\newcommand{\frostphoenixdef}{%
+The model gains \textbf{\aegis{} (5+)}, \textbf{\fearless{}}, and \textbf{\supernal{}}. Enemy units in base contact with one or more Frost Phoenixes suffer \minuss{}2 Agility, \minuss{}2 Offensive Skill, and \minuss{}2 Defensive Skill.%
+}
+
+\newcommand{\wardensbond}{Warden's Bond}
+\newcommand{\warden}{Warden}
+\newcommand{\wardensbonddef}{%
+The model gains +1 Discipline, \textbf{\martialdiscipline}, and passes its \rebirth{} roll on 3+ instead of 5+. The Phoenix model part gains \textbf{\harnessed}. The model gains an additional model part:\newline%
+\wardenprofile{}%
+}
+
+\newcommand{\incendiaryalliance}{Incendiary Alliance}
+\newcommand{\incendiaryalliancedef}{%
+The model is a \textbf{\wizardapprentice{}} that does not select spells as normal, but instead \textbf{must} select 2 spells from:%
+\begin{itemize}%
+\item \spellformat{\pyromancyspelltwo}{\pyromancy}%
+\item \spellformat{\alchemyspellthree}{\alchemy}%
+\item \spellformat{\pyromancyspellfour}{\pyromancy}%
+\item \spellformat{\alchemyspellfour}{\alchemy}%
+\end{itemize}%
+}

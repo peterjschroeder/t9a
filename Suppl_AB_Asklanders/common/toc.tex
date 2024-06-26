@@ -1,0 +1,19 @@
+ 
+\newcommand{\tocfirstcolumn}%
+{%
+	\tocentry{ASKModelRules}{\armymodelrules}\par
+	\tocentry{ASKHereditarySpell}{\hereditaryspell}\par
+	\tocentry{ASKSpecialEquip}{\specialequipment}\par
+	\tocentry{ASKArmyOrganisation}{\armyorganisation}\par
+	\tocentry{ASKQRS}{\quickrefsheet}\par
+	\ifdef{\thereisachangelog}{%
+		\tocentry{ASKchangelog}{\changelog}\par
+	}{}%
+}
+\newcommand{\tocsecondcolumn}{%
+	\tocentry{ASKCharacters}{\characters}\par
+	\tocentry{ASKMounts}{\charactermounts}\par
+	\tocentry{ASKCore}{\core}\par
+	\tocentry{ASKSpecial}{\specialcategory}\par
+	\tocentry{ASKLegendaryBeasts}{\legendarybeasts}\par
+}

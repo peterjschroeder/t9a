@@ -1,0 +1,88 @@
+% Special Equipment Names
+
+\newcommand{\swarmmaster}{Swarm Master}
+\newcommand{\rodentiumbullets}{Rodentium Bullets}
+\newcommand{\secretsofthedoomblade}{Secrets of the Doom Blade}
+\newcommand{\stormrocket}{Storm Rocket}
+
+\newcommand{\bellofthedeeproads}{Bell of the Deep Roads}
+\newcommand{\sacredaquila}{Sacred Aquila}
+
+\newcommand{\plaguehermitsblessing}{Plague-Hermit's Blessing}
+
+\newcommand{\oratorstoga}{Orator's Toga}
+\newcommand{\cowloftheapostate}{Cowl of the Apostate}
+\newcommand{\tomeoftheratking}{Tome of the Ratking}
+\newcommand{\crownofhubris}{Crown of Hubris}
+\newcommand{\orbofateus}{Orb of Ateus}
+\newcommand{\tarinaslyre}{Tarina's Lyre}
+\newcommand{\darkstonedetonator}{Darkstone Detonator}
+
+
+% Special Equipment Texts
+
+\newcommand{\swarmmasterrestriction}{Infantry models only}
+\newcommand{\swarmmasterdef}{%
+	While using this weapon, the wielder gains \textbf{\grindattacks{} (X)}, where X is the number of Full Ranks in the wielder's unit, up to a maximum of 10. These Grind Attacks are resolved with Strength 3 and Armour Penetration 1.%
+}
+\newcommand{\rodentiumbulletsdef}{%
+	The weapon's range is \textbf{set} to \distance{18}. The weapon gains +2 Shots, +1 Armour Penetration, and \textbf{\accurate{}}.%
+}
+
+\newcommand{\stormrocketrestriction}{Vermin Senators and Skorchit Alchemists only}
+\newcommand{\stormrocketdef}{
+	Aim 2+. Range is \textbf{set} to \distance{24}. The weapon gains \textbf{\flamingattacks{}}, \textbf{\volleyfire{}}, and \textbf{Mishap (To-hit roll)}.  If the weapon hits, it causes D6 hits whose Strength is \textbf{set} to 5 and whose Armour Penetration is \textbf{set} to 2.
+}
+
+\newcommand{\doombladerestriction}{Standard Height models only}
+\newcommand{\secretsofthedoombladedef}{%
+	While using this weapon, the wielder gains +1 Attack Value. Attacks made with this weapon gain \textbf{\multiplewounds{}{} (\Dsix{})} and become \textbf{\divineattacks{}}  and their Strength is \textbf{always} set to 10 and their Armour Penetration is \textbf{always} set to 3. At the end of each friendly Movement Phase, if the wielder is not Engaged in Combat, it suffers 1 hit with \textbf{\toxicattacks{}}.
+	The wielder may not take any other Special Items.%
+}
+\newcommand{\bellofthedeeproadsdef}{%
+	The bearer's unit may start the game in Tunnel Reserve. %
+}
+\newcommand{\sacredaquiladef}{%
+	The bearer and \rnf{} models in the bearer's unit gain \textbf{\battlefocus{}}. Additionally, for each natural to-hit roll of \result{1} with a Close Combat Attack made by the bearer's unit, the bearer's unit suffers 1 hit with Strength 3 and Armour Penetration 0 in the same Initiative Step. This is considered a Special Attack.%
+}
+
+\newcommand{\plaguehermitsblessingrestriction}{Models on foot only}
+\newcommand{\plaguehermitsblessingdef}{%
+	The wearer gains +1 Health Point and \textbf{\fortitude{} (5+)}. Successful to-hit rolls with Close Combat Attacks against the wearer \textbf{must} be rerolled.%
+}
+\newcommand{\oratorstogarestriction}{Models on foot only}
+\newcommand{\oratorstogadef}{%
+	The bearer gains \textbf{\standbehind{}} and cannot issue Duels.%
+}
+\newcommand{\cowloftheapostaterestriction}{Cannot be taken by Wizards}
+\newcommand{\cowloftheapostatedef}{%
+	The model gains \textbf{\holytriumvirate{}}, and for the purpose of this rule, it must select either \textbf{\caelysianpantheon{}} or \textbf{\cultoferrahman{}} at the start of step 7 of the Pre-Game Sequence (Spell Selection).%
+}
+\newcommand{\tomeoftheratkingdef}{%
+	The bearer can cast \spellformat{\theawakenedswarm}{\hereditaryspell} as a Bound Spell with Power Level (4/8).\columnbreak%
+}
+\newcommand{\crownofhubrisdef}{%
+	At the start of any friendly Magic Phase,  the bearer may choose to inflict 3 hits on its unit that wound automatically with no saves of any kind allowed. If so, the owner gains 3 additional Veil Tokens.%
+}
+\newcommand{\orbofateusrestriction}{Vermin Senators and Rakachit Technocrats only}
+\newcommand{\orbofateusdef}{%
+	Once per Shooting Phase, the bearer may discard 2 Veil Tokens from
+	its owner's Veil Token pool and nominate a friendly unit within \distance{6}.  Weapons with \trialandterror{} in
+	this unit gain +\distance{6} range and \textbf{\magicalattacks{}}, and the number of hits from each
+	Mishap is increased by 2. The effects last until the end of the phase.%
+}
+\newcommand{\tarinaslyrerestriction}{Vermin Senators and Fetthis Fleshmasters only}
+\newcommand{\tarinaslyredef}{%
+	Stomp Attacks made by enemy units within \distance{8} of the bearer suffer a \minuss{}2 to-wound modifier.%
+}
+
+\newcommand{\darkstonedetonatorrestriction}{Vermin Senators and Stygian Overseers only}
+\newcommand{\darkstonedetonatordef}{%
+	At the end of any friendly Movement Phase after the first, the bearer may detonate a single friendly Tunnel Marker within \distance{24} of it.
+	If so, apply the following effects before removing the Tunnel Marker:
+	\begin{itemize}
+		\item Each unengaged unit within \distance{4} of the Tunnel Marker suffers 2D6 hits with Strength 4 and Armour Penetration 1.
+		\item If one or more units that are Engaged in the same Combat are within \distance{4} of the Tunnel Marker, a total of 2D6 hits with Strength 4 and Armour Penetration 1 is inflicted.
+			Roll a \Dsix{} for each hit: on a roll of 4+, the hit is distributed onto a randomly chosen friendly unit; otherwise, the hit is distributed onto a randomly chosen enemy unit.
+	\end{itemize}
+}

@@ -1,0 +1,48 @@
+
+\unitentry{%
+	name=\ancientgiant{},
+	logo=monster,
+	cost=\newrule{275},
+	unitsize=1,
+	maxunitsperarmy=2,
+	categorynote={\themodelcountstowards{\masonsmenagerie} \ancientgiantrestriction{}},
+	type=\infantry{},
+	size=\heightgigantic{},
+	basesize=50\timess{}75,
+	global@Ad=7,
+	global@Ma=14,
+	global@Di=8,
+	global@Rsr=1,
+	globalrules={\hidebf{\giantseegiantdo{}}},
+	defense@HP=7,
+	defense@Df=3,
+	defense@Re=5,
+	defense@Arm=1,
+	defenserules={},
+	offensename=\ancientgiant{},
+	offense@Ag=3,
+	offense@At=5,
+	offense@Of=3,
+	offense@St=5,
+	offense@AP=2,
+	offenserules={\hidebf{\rage{}}},
+	options={%
+		\textbf{\bigbrother{}}=\newrule{25},
+	\mustchooseonechoiceonlyblue{\AlCoOrder{%
+			\textbf{\giantclub{}}=\newrule{\free},
+			\textbf{\bonechariot{}}=\newrule{20},
+			\textbf{\scarabgiant{}}=\newrule{20},
+		},
+	}},
+	modelrulesdef={%
+		\modelruledef{\giantseegiantdo{}}{\ruletype{\universalrule{}}\UDgiantseegiantdodef{}}
+		\modelruledef{\rage{}}{\ruletype{\attackattributeclosecombat{}}\UDragedef{}}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\bigbrother{}}{\ruletype{\universalrule{}}\bigbrotherdef{}}
+		\modelruledef{\giantclub{}}{\ruletype{\closecombatweapon{}}\giantclubdef{}}
+		\modelruledef{\bonechariot{}}{\ruletype{\universalrule{}}\bonechariotdef{}\newline\bonechariotprofile{}}
+		\modelruledef{\scarabgiant{}}{\ruletype{\universalrule{}}\scarabgiantdef{}\newline\scarabgiantprofile{}}
+	},%
+	toggles={\toggletrue{onecolprintoptionalmodelrulesdef}\togglefalse{twocolprintoptionalmodelrulesdef}},
+}% END UNIT

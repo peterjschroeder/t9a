@@ -1,0 +1,176 @@
+
+%%% Gaming Scenarios
+
+\newcommand{\startgamingscenarioheadings}{%
+	\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0.1cm, itemsep=0.15cm, parsep=0cm]%
+}
+
+\newcommand{\gamingscenarioheading}[1]{\item[\textbf{#1 --}]}
+
+\newcommand{\closegamingscenarioheadings}{%
+	\end{description}%
+}
+
+\newcommand{\startgamingscenariolist}{%
+	\vspace*{10pt}
+	\begin{center}
+	\begin{tabular}{c c l c}
+	\hline
+}
+
+\newcommand{\closegamingscenariolist}{%
+	\hline
+	\end{tabular}
+	\end{center}
+}
+
+\newcommand{\newgamingscenario}[3]{\section*{#1 -- #2. #3}\phantomsection}
+
+\newcommand{\printmap}[1]{%
+\vspace*{10pt}
+	\begin{center}
+	\def\svgwidth{0.8\textwidth}
+	\input{#1}
+	\end{center}
+\vspace*{10pt}
+}
+
+\newcommand{\printmapwithborders}[1]{%
+\vspace*{10pt}
+	\begin{center}
+	\def\svgwidth{0.935\textwidth}
+	\input{#1}
+	\end{center}
+\vspace*{10pt}
+}
+
+\newcommand{\printmapportals}[1]{%
+\vspace*{10pt}
+	\begin{center}
+	\def\svgwidth{0.85\textwidth}
+	\input{#1}
+	\end{center}
+\vspace*{10pt}
+}
+
+\newcommand{\printmapmountains}[1]{%
+\vspace*{10pt}
+	\begin{center}
+	\def\svgwidth{0.872\textwidth}
+	\input{#1}
+	\end{center}
+\vspace*{10pt}
+}
+
+\newcommand{\startswiftstrikingtable}{%
+	\vspace*{10pt}
+	\begin{tabular}{r l}
+	\hline
+}
+
+\newcommand{\closeswiftstrikingtable}{%
+	\end{tabular}
+}
+
+
+\newcommand{\startmultipletaskstable}[3]{%
+	\renewcommand{\arraystretch}{1.69}
+	\vspace*{10pt}
+	\begin{tabular}{P{0.1\textwidth} P{0.1\textwidth} p{0.72\textwidth}}
+	\hline
+	\textbf{#1}&
+	\textbf{#2}&
+	\textbf{#3}\tabularnewline
+}
+
+\newcommand{\closemultipletaskstable}{%
+	\hline	
+	\end{tabular}
+}
+
+\newcommand{\newtaskfortable}[4]{%
+	#1&%
+	#2&%
+	\textbf{#3}\vspace*{3pt}\newline%
+	#4%
+	\tabularnewline%
+}
+
+
+%%% Narrative Scenarios
+
+\newcommand{\titleruletype}[1]{\textnormal{\largefontsize{} -- #1}}
+
+\newcommand{\startnarrativescenariolist}{%
+	\vspace*{10pt}
+	\begin{center}
+	\begin{tabular}{c l c}
+	\hline
+}
+
+\newcommand{\closenarrativescenariolist}{%
+	\hline
+	\end{tabular}
+	\end{center}
+}
+
+\newcommand{\newnarrativescenario}[2]{\section*{#1. #2}\phantomsection}
+
+\newcommand{\marchtovictorytable}[4]{%
+	\vspace*{10pt}
+	\begingroup
+	\setlength{\tabcolsep}{3pt}
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabular}{M{0.165\textwidth}M{0.098\textwidth}M{0.11\textwidth}M{0.11\textwidth}M{0.11\textwidth}M{0.11\textwidth}M{0.11\textwidth}M{0.08\textwidth}}
+	\hline
+	\textbf{#1}&
+	\SI{0}{\percent}--\SI{10}{\percent}&
+	>\SI{10}{\percent}--\SI{20}{\percent}&
+	>\SI{20}{\percent}--\SI{25}{\percent}&
+	>\SI{25}{\percent}--\SI{30}{\percent}&
+	>\SI{30}{\percent}--\SI{35}{\percent}&
+	>\SI{35}{\percent}--\SI{40}{\percent}&
+	>\SI{40}{\percent}\\
+	\textbf{(#2)}&
+	0--450&
+	451--900&
+	901--1125&
+	1126--1350&
+	1351--1575&
+	1576--1800&
+	>1800\\
+	\textbf{#3}&
+	\minuss{}3&
+	\minuss{}2&
+	\minuss{}1&
+	0&
+	+1&
+	+2&
+	+3\\
+	\textbf{#4}&
+	+3&
+	+2&
+	+1&
+	0&
+	\minuss{}1&
+	\minuss{}2&
+	\minuss{}3\\
+	\hline
+	\end{tabular}
+	\endgroup
+}
+
+\newcommand{\startweatherthestormtable}{%
+	\vspace*{10pt}
+	\begin{center}\begin{tabular}{>{\bfseries}M{0.02\textwidth}>{\bfseries}M{0.15\textwidth}m{0.73\textwidth}}
+	\hline
+}
+
+\newcommand{\closeweatherthestormtable}{%
+	\hline
+	\end{tabular}\end{center}
+}
+
+\newcommand{\weatherthestormtableentry}[3]{%
+	#1 & #2 & #3\\
+}

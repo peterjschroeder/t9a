@@ -1,0 +1,349 @@
+
+% Switch the hideinQRS command to void, since we're getting to the QRS
+
+\renewcommand{\hideinQRS}[1]{}
+\renewcommand{\hidebf}[1]{#1}
+\ifundef{\languageisfrench}{}{%
+	\renewcommand{\frenchsmallcharacs}[1]{{\smallfontsize#1}}
+}
+\renewcommand{\smallcharacs}[1]{{\smallfontsize#1}}
+
+% Script to automatically draw the Quick Ref Sheet
+
+\def\categoryname{}%
+\newcounter{categorycounter}%
+\newtoggle{greyrow}%
+
+\newcommand{\greyrowtest}{%
+	\iftoggle{greyrow}{%
+		\global\togglefalse{greyrow}%
+	}{%
+		\rowcolor{\lightgreycolor}[][]\global\toggletrue{greyrow}%
+	}%
+}%
+
+%%% New attempt at QRS
+
+\renewcommand{\nameindent}{\hspace*{3pt}}%
+
+\newcommand{\startcharacteristicstableQRS}{%
+\begin{tabular}{@{}p{0.185\textwidth-3pt}@{}p{3pt}@{}P{0.03\textwidth}@{}P{0.045\textwidth}@{}P{0.03\textwidth}@{}P{0.045\textwidth}@{}P{0.03\textwidth}@{}P{0.045\textwidth}@{}P{0.03\textwidth}@{}P{0.045\textwidth}@{}P{0.03\textwidth}@{}P{0.045\textwidth}@{}p{3pt}@{}p{0.44\textwidth-3pt}@{}}%
+}
+
+\newcommand{\printthecurrentQRSentry}{%
+	\normalfontsize%
+	\def\minipagerestore{\setlength{\parskip}{\mycurrentparskip}}%
+	\begin{minipage}[t]{\textwidth}% To avoid splitted profiles between 2 pages
+	\renewcommand{\arraystretch}{1.2}%
+	\global\togglefalse{greyrow}%
+	%
+	% Global Profile
+	%
+	\startcharacteristicstableQRS{}%
+	\expandafter\ifblank\expandafter{\rowunitQRSname}{%
+		\nameindent\expandafter\hyperlink\expandafter{\rowhypertag}{\textbf{\rowunitname}}%
+	}{%
+		\nameindent\expandafter\hyperlink\expandafter{\rowhypertag}{\textbf{\rowunitQRSname}}%
+	}%
+	&&%
+	{\ChLab{\AdvanceRateInitials}}&%
+	\expandafter\ifblank\expandafter{\rowglobalAd}{-}{%
+	\ifsubstring{\rowglobalAd}{\ascharacter}{\ChVal{{\rowglobalAd}}}{\ChVal{\distance{\rowglobalAd}}}%
+	}%
+	&%	
+	{\ChLab{\MarchRateInitials}}&%
+	\expandafter\ifblank\expandafter{\rowglobalMa}{-}{%
+	\ifsubstring{\rowglobalMa}{\ascharacter}{\ChVal{{\rowglobalMa}}}{\ChVal{\distance{\rowglobalMa}}}%
+	}%
+	&%	
+	{\ChLab{\DisciplineInitials}}&%
+	\expandafter\ifblank\expandafter{\rowglobalDi}{-}{\ChVal{\rowglobalDi}}&%	
+	\expandafter\ifblank\expandafter{\rowglobalRsr}{%
+			&&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+	}{%
+		\iftoggle{twocellsRsr}{%
+				{\ChLab{\resurrectedInitials}}&%
+				\multicolumn{3}{@{}P{0.12\textwidth}@{}}{\hspace*{8.4pt}{\ChVal{\rowglobalRsr}}\expandafter\ifblank\expandafter{\rowscoring}{\hspace*{\fill}\strut}{\hspace*{\fill}\strut\includegraphics[height=5pt]{logo_scoring.png}\strut\hspace*{4pt}\strut}}%
+		}{%
+			{\ChLab{\resurrectedInitials}}&{\ChVal{\rowglobalRsr}}&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+		}%
+	}%
+	&&%
+	\strut\expandafter\ifblank\expandafter{\rowglobalrules}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrules}}%	
+	\tabularnewline%
+	%
+	% Global Profile B
+	%
+	\expandafter\ifblank\expandafter{\rowglobalnameB}{}{%
+		\greyrowtest{}%
+		\nameindent\rowglobalnameB{}%
+		&&%
+		{\ChLab{\AdvanceRateInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalBAd}{-}{%
+		\ifsubstring{\rowglobalBAd}{\ascharacter}{\ChVal{{\rowglobalBAd}}}{\ChVal{\distance{\rowglobalBAd}}}%
+		}%
+		&%	
+		{\ChLab{\MarchRateInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalBMa}{-}{%
+		\ifsubstring{\rowglobalBMa}{\ascharacter}{\ChVal{{\rowglobalBMa}}}{\ChVal{\distance{\rowglobalBMa}}}%
+		}%
+		&%	
+		{\ChLab{\DisciplineInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalBDi}{-}{\ChVal{\rowglobalBDi}}&%	
+		\expandafter\ifblank\expandafter{\rowglobalBRsr}{%
+				&&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+		}{%
+			\iftoggle{twocellsRsr}{%
+					{\ChLab{\resurrectedInitials}}&%
+					\multicolumn{3}{@{}P{0.12\textwidth}@{}}{\hspace*{8.4pt}{\ChVal{\rowglobalBRsr}}\expandafter\ifblank\expandafter{\rowscoring}{\hspace*{\fill}\strut}{\hspace*{\fill}\strut\includegraphics[height=5pt]{logo_scoring.png}\strut\hspace*{4pt}\strut}}%
+			}{%
+				{\ChLab{\resurrectedInitials}}&{\ChVal{\rowglobalBRsr}}&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+			}%
+		}%
+		&&%
+		\strut\expandafter\ifblank\expandafter{\rowglobalrulesB}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrulesB}}%	
+		\tabularnewline%
+	}%
+	%
+	% Global Profile C
+	%
+	\expandafter\ifblank\expandafter{\rowglobalnameC}{}{%
+		\greyrowtest{}%
+		\nameindent\rowglobalnameC{}%
+		&&%
+		{\ChLab{\AdvanceRateInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalCAd}{-}{%
+		\ifsubstring{\rowglobalCAd}{\ascharacter}{\ChVal{{\rowglobalCAd}}}{\ChVal{\distance{\rowglobalCAd}}}%
+		}%
+		&%	
+		{\ChLab{\MarchRateInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalCMa}{-}{%
+		\ifsubstring{\rowglobalCMa}{\ascharacter}{\ChVal{{\rowglobalCMa}}}{\ChVal{\distance{\rowglobalCMa}}}%
+		}%
+		&%	
+		{\ChLab{\DisciplineInitials}}&%
+		\expandafter\ifblank\expandafter{\rowglobalCDi}{-}{\ChVal{\rowglobalCDi}}&%	
+		\expandafter\ifblank\expandafter{\rowglobalCRsr}{%
+				&&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+		}{%
+			\iftoggle{twocellsRsr}{%
+					{\ChLab{\resurrectedInitials}}&%
+					\multicolumn{3}{@{}P{0.12\textwidth}@{}}{\hspace*{8.4pt}{\ChVal{\rowglobalCRsr}}\expandafter\ifblank\expandafter{\rowscoring}{\hspace*{\fill}\strut}{\hspace*{\fill}\strut\includegraphics[height=5pt]{logo_scoring.png}\strut\hspace*{4pt}\strut}}%
+			}{%
+				{\ChLab{\resurrectedInitials}}&{\ChVal{\rowglobalCRsr}}&\multicolumn{2}{@{}c@{}}{\expandafter\ifblank\expandafter{\rowscoring}{}{\strut\includegraphics[height=5pt]{logo_scoring.png}}}%
+			}%
+		}%
+		&&%
+		\strut\expandafter\ifblank\expandafter{\rowglobalrulesC}{}{\expandafter\alphaorderlist\expandafter{\rowglobalrulesC}}%	
+		\tabularnewline%
+	}%
+	%
+	% Defensive Profile
+	%
+	\greyrowtest{}%
+	\nameindent\expandafter\ifblank\expandafter{\rowdefensename}{%
+		\rowsize{}, \rowtype{}%
+	}{%
+		\rowdefensename{}%
+	}&&%
+	{\ChLab{\HealthPointsInitials}}&%
+	\expandafter\ifblank\expandafter{\rowdefenseHP}{-}{\ChVal{\rowdefenseHP}}&%
+	{\ChLab{\DefensiveSkillInitials}}&%
+	\expandafter\ifblank\expandafter{\rowdefenseDf}{-}{\ChVal{\rowdefenseDf}}&%
+	{\ChLab{\ResilienceInitials}}& %
+	\expandafter\ifblank\expandafter{\rowdefenseRe}{-}{\ChVal{\rowdefenseRe}}&%
+	{\ChLab{\ArmourInitials}}&%
+	\expandafter\ifblank\expandafter{\rowdefenseArm}{\ChVal{0}}{\ChVal{\rowdefenseArm}}&%
+	\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
+	\expandafter\ifblank\expandafter{\rowdefenseAeg}{}{\ChVal{\rowdefenseAeg}}&%
+	&%
+	\strut\expandafter\ifblank\expandafter{\rowdefenserules}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserules}}%
+	\expandafter\ifblank\expandafter{\rowdefensearmour}{}{%
+	\expandafter\ifblank\expandafter{\rowdefenserules}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\rowdefensearmour}}%
+	\tabularnewline%
+	%
+	% Defensive Profile B
+	%
+	\expandafter\ifblank\expandafter{\rowdefensenameB}{}{%
+		\greyrowtest{}%
+		\nameindent\rowdefensenameB{}&&%
+		{\ChLab{\HealthPointsInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseBHP}{-}{\ChVal{\rowdefenseBHP}}&%
+		{\ChLab{\DefensiveSkillInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseBDf}{-}{\ChVal{\rowdefenseBDf}}&%
+		{\ChLab{\ResilienceInitials}}& %
+		\expandafter\ifblank\expandafter{\rowdefenseBRe}{-}{\ChVal{\rowdefenseBRe}}&%
+		{\ChLab{\ArmourInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseBArm}{\ChVal{0}}{\ChVal{\rowdefenseBArm}}&%
+		\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseBAeg}{}{\ChVal{\rowdefenseBAeg}}&%
+		&%
+		\strut\expandafter\ifblank\expandafter{\rowdefenserulesB}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserulesB}}%
+		\expandafter\ifblank\expandafter{\rowdefensearmourB}{}{%
+		\expandafter\ifblank\expandafter{\rowdefenserulesB}{}{, }%
+		\expandafter\alphaorderlist\expandafter{\rowdefensearmourB}}%
+		\tabularnewline%
+	}%
+	%
+	% Defensive Profile C
+	%
+	\expandafter\ifblank\expandafter{\rowdefensenameC}{}{%
+		\greyrowtest{}%
+		\nameindent\rowdefensenameC{}&&%
+		{\ChLab{\HealthPointsInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseCHP}{-}{\ChVal{\rowdefenseCHP}}&%
+		{\ChLab{\DefensiveSkillInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseCDf}{-}{\ChVal{\rowdefenseCDf}}&%
+		{\ChLab{\ResilienceInitials}}& %
+		\expandafter\ifblank\expandafter{\rowdefenseCRe}{-}{\ChVal{\rowdefenseCRe}}&%
+		{\ChLab{\ArmourInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseCArm}{\ChVal{0}}{\ChVal{\rowdefenseCArm}}&%
+		\expandafter\ifblank\expandafter{\rowprintAeg}{}{\ChLab{\AegisInitials}}&%
+		\expandafter\ifblank\expandafter{\rowdefenseCAeg}{}{\ChVal{\rowdefenseCAeg}}&%
+		&%
+		\strut\expandafter\ifblank\expandafter{\rowdefenserulesC}{}{\expandafter\alphaorderlist\expandafter{\rowdefenserulesC}}%
+		\expandafter\ifblank\expandafter{\rowdefensearmourC}{}{%
+		\expandafter\ifblank\expandafter{\rowdefenserulesC}{}{, }%
+		\expandafter\alphaorderlist\expandafter{\rowdefensearmourC}}%
+		\tabularnewline%
+	}%
+	%
+	% Offensive Profile
+	%
+	\greyrowtest{}%
+%	\togglefalse{printoffensename}% reset
+	\toggletrue{printoffensename}% now we always print the offense name
+%	\expandafter\ifblank\expandafter{\rowforceoffensenameprint}{}{\toggletrue{printoffensename}}% not in the database yet
+%	\expandafter\ifblank\expandafter{\rowoffensenameB}{}{\toggletrue{printoffensename}}%
+%	\expandafter\ifblank\expandafter{\rowoffensenameI}{}{\toggletrue{printoffensename}}%
+	\iftoggle{printoffensename}{%
+		\nameindent\rowoffensename{}%
+	}{}%
+	&&%
+	{\ChLab{\AttackValueInitials}}&%
+	\expandafter\ifblank\expandafter{\rowoffenseAt}{-}{\ChVal{\rowoffenseAt}}&%	
+	{\ChLab{\OffensiveSkillInitials}}&%
+	\expandafter\ifblank\expandafter{\rowoffenseOf}{-}{\ChVal{\rowoffenseOf}}&%	
+	{\ChLab{\StrengthInitials}}&%
+	\expandafter\ifblank\expandafter{\rowoffenseSt}{-}{\ChVal{\rowoffenseSt}}&%	
+	{\ChLab{\ArmourPenetrationInitials}}&%
+	\expandafter\ifblank\expandafter{\rowoffenseAP}{}{\ChVal{\rowoffenseAP}}&%	
+	{\ChLab{\AgilityInitials}}&%
+	\expandafter\ifblank\expandafter{\rowoffenseAg}{-}{\ChVal{\rowoffenseAg}}&%	
+	&%
+	\strut\expandafter\ifblank\expandafter{\rowoffenserules}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserules}}%
+	\expandafter\ifblank\expandafter{\rowoffenseweapons}{}{%
+	\expandafter\ifblank\expandafter{\rowoffenserules}{}{, }%
+	\expandafter\alphaorderlist\expandafter{\rowoffenseweapons}}%	
+	\tabularnewline%
+	%
+	% Offensive Profile B
+	%
+	\expandafter\ifblank\expandafter{\rowoffensenameB}{}{%
+		\greyrowtest{}%
+		\nameindent\rowoffensenameB{}&&%
+		{\ChLab{\AttackValueInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseBAt}{-}{\ChVal{\rowoffenseBAt}}&%
+		{\ChLab{\OffensiveSkillInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseBOf}{-}{\ChVal{\rowoffenseBOf}}&%
+		{\ChLab{\StrengthInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseBSt}{-}{\ChVal{\rowoffenseBSt}}&%
+		{\ChLab{\ArmourPenetrationInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseBAP}{}{\ChVal{\rowoffenseBAP}}&%
+		{\ChLab{\AgilityInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseBAg}{-}{\ChVal{\rowoffenseBAg}}&%
+		&%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesB}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesB}}%
+		\expandafter\ifblank\expandafter{\rowoffenseweaponsB}{}{%
+		\expandafter\ifblank\expandafter{\rowoffenserulesB}{}{, }%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsB}}%
+		\tabularnewline%
+	}%
+	%
+	% Offensive Profile C
+	%
+	\expandafter\ifblank\expandafter{\rowoffensenameC}{}{%
+		\greyrowtest{}%
+		\nameindent\rowoffensenameC{}&&%
+		{\ChLab{\AttackValueInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseCAt}{-}{\ChVal{\rowoffenseCAt}}&%
+		{\ChLab{\OffensiveSkillInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseCOf}{-}{\ChVal{\rowoffenseCOf}}&%
+		{\ChLab{\StrengthInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseCSt}{-}{\ChVal{\rowoffenseCSt}}&%
+		{\ChLab{\ArmourPenetrationInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseCAP}{}{\ChVal{\rowoffenseCAP}}&%
+		{\ChLab{\AgilityInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseCAg}{-}{\ChVal{\rowoffenseCAg}}&%
+		&%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesC}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesC}}%
+		\expandafter\ifblank\expandafter{\rowoffenseweaponsC}{}{%
+		\expandafter\ifblank\expandafter{\rowoffenserulesC}{}{, }%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsC}}%
+		\expandafter\ifblank\expandafter{\rowoffenseCcomment}{}{\newline\rowoffenseCcomment}%
+		\tabularnewline%
+	}%
+	%
+	% Offensive Profile I
+	%
+	\expandafter\ifblank\expandafter{\rowoffensenameI}{}{%
+		\greyrowtest{}%
+		\nameindent\rowoffensenameI{}&&%
+		&&%
+		&&%
+		{\ChLab{\StrengthInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseISt}{}{\ChVal{\rowoffenseISt}}&%
+		{\ChLab{\ArmourPenetrationInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseIAP}{}{\ChVal{\rowoffenseIAP}}&%
+		{\ChLab{\AgilityInitials}}&%
+		\expandafter\ifblank\expandafter{\rowoffenseIAg}{}{\ChVal{\rowoffenseIAg}}&%
+		&%
+		\strut\expandafter\ifblank\expandafter{\rowoffenserulesI}{}{\expandafter\alphaorderlist\expandafter{\rowoffenserulesI}}%
+		\expandafter\ifblank\expandafter{\rowoffenseweaponsI}{}{%
+		\expandafter\ifblank\expandafter{\rowoffenserulesI}{}{, }%
+		\expandafter\alphaorderlist\expandafter{\rowoffenseweaponsI}}%
+		\tabularnewline%
+	}%
+	\end{tabular}\newline%
+	\hfill{\verysmallfontsize\textcolor{white}{d}} % Else footer goes wild for some reason with ocgcolorlinks option
+	\end{minipage}%
+	\vspace{-10pt}%
+	\DTLpar%
+}
+
+\DTLforeach*{profiles}{\rowunitname=unitname,\rowunitQRSname=unitQRSname,\rowhypertag=hypertag,\rowcategorytag=categorytag,\rowsize=size,\rowtype=type,\rowscoring=scoring,\rowglobalname=globalname,\rowglobalAd=globalAd,\rowglobalMa=globalMa,\rowglobalAdfly=globalAdfly,\rowglobalMafly=globalMafly,\rowglobalDi=globalDi,\rowglobalRsr=globalRsr,\rowglobalrules=globalrules,\rowglobalnameB=globalnameB,\rowglobalBAd=globalBAd,\rowglobalBMa=globalBMa,\rowglobalBAdfly=globalBAdfly,\rowglobalBMafly=globalBMafly,\rowglobalBDi=globalBDi,\rowglobalBRsr=globalBRsr,\rowglobalrulesB=globalrulesB,\rowglobalnameC=globalnameC,\rowglobalCAd=globalCAd,\rowglobalCMa=globalCMa,\rowglobalCAdfly=globalCAdfly,\rowglobalCMafly=globalCMafly,\rowglobalCDi=globalCDi,\rowglobalCRsr=globalCRsr,\rowglobalrulesC=globalrulesC,\rowdefensename=defensename,\rowdefenseHP=defenseHP,\rowdefenseDf=defenseDf,\rowdefenseRe=defenseRe,\rowdefenseArm=defenseArm,\rowdefenseAeg=defenseAeg,\rowprintAeg=printAeg,\rowdefenserules=defenserules,\rowdefensearmour=defensearmour,\rowdefensenameB=defensenameB,\rowdefenseBHP=defenseBHP,\rowdefenseBDf=defenseBDf,\rowdefenseBRe=defenseBRe,\rowdefenseBArm=defenseBArm,\rowdefenseBAeg=defenseBAeg,\rowdefenserulesB=defenserulesB,\rowdefensearmourB=defensearmourB,\rowdefensenameC=defensenameC,\rowdefenseCHP=defenseCHP,\rowdefenseCDf=defenseCDf,\rowdefenseCRe=defenseCRe,\rowdefenseCArm=defenseCArm,\rowdefenseCAeg=defenseCAeg,\rowdefenserulesC=defenserulesC,\rowdefensearmourC=defensearmourC,\rowoffensename=offensename,\rowoffenseAg=offenseAg,\rowoffenseAt=offenseAt,\rowoffenseOf=offenseOf,\rowoffenseSt=offenseSt,\rowoffenseAP=offenseAP,\rowoffenserules=offenserules,\rowoffenseweapons=offenseweapons,\rowoffensenameB=offensenameB,\rowoffenseBAg=offenseBAg,\rowoffenseBAt=offenseBAt,\rowoffenseBOf=offenseBOf,\rowoffenseBSt=offenseBSt,\rowoffenseBAP=offenseBAP,\rowoffenserulesB=offenserulesB,\rowoffenseweaponsB=offenseweaponsB,\rowoffensenameC=offensenameC,\rowoffenseCAg=offenseCAg,\rowoffenseCAt=offenseCAt,\rowoffenseCOf=offenseCOf,\rowoffenseCSt=offenseCSt,\rowoffenseCAP=offenseCAP,\rowoffenserulesC=offenserulesC,\rowoffenseweaponsC=offenseweaponsC,\rowoffenseCcomment=offenseCcomment,\rowoffensenameI=offensenameI,\rowoffenseIAg=offenseIAg,\rowoffenseISt=offenseISt,\rowoffenseIAP=offenseIAP,\rowoffenserulesI=offenserulesI,\rowoffenseweaponsI=offenseweaponsI}{% Print the list of units with hyperlink
+	\ifnumequal{\value{categorycounter}}{\rowcategorytag}{%
+		\noindent\greytextcolor{\rule{\textwidth}{0.5pt}}\newline%
+		\printthecurrentQRSentry{}%
+	}{%
+		\stepcounter{categorycounter}%
+		\DTLgetvalue{\categoryname}{categories}{\rowcategorytag}{1}%
+		\subsubsection{\categoryname}%
+		\printthecurrentQRSentry{}%
+	}%
+}%
+
+%%% Just a list of the unit names with an hyperlink
+
+%\begin{multicols}{3}\raggedcolumns%
+%\stepcounter{categorycounter}%
+%\DTLgetvalue{\categoryname}{categories}{\value{categorycounter}}{1}%
+%\subsubsection{\categoryname}%
+%\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, noitemsep]%
+%\DTLforeach*{profiles}{\rowunitname=unitname,\rowhypertag=hypertag,\rowcategorytag=categorytag}{% Print the list of units with hyperlink
+%	\ifnumequal{\value{categorycounter}}{\rowcategorytag}{%
+%		\item\expandafter\hyperlink\expandafter{\rowhypertag}{\rowunitname}%
+%	}{%
+%		\end{description}\end{samepage}%
+%		\stepcounter{categorycounter}%
+%		\DTLgetvalue{\categoryname}{categories}{\rowcategorytag}{1}%
+%		\subsubsection{\categoryname}%
+%		\begin{samepage}\begin{description}[leftmargin=0.3cm, labelindent=0cm, labelsep=0cm, noitemsep]%
+%		\item\expandafter\hyperlink\expandafter{\rowhypertag}{\rowunitname}%
+%	}%
+%}%
+%\end{description}\end{samepage}%
+%\end{multicols}%
+
+\setlength{\parskip}{\mycurrentparskip}%

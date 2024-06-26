@@ -1,0 +1,100 @@
+%%%% Unit entries names
+% CHARACTERS
+\newcommand{\satrap}{Satrap}
+\newcommand{\hobgoblinconjurer}{Hobgoblin Beschwörer}
+% REITTIERE
+\newcommand{\mountainwolf}{Gebirgswolf}
+\newcommand{\beardog}{Bärenhund}
+\newcommand{\plainstusker}{Steppenstoßzahn}
+\newcommand{\drumgogyag}{Trommelgogyag}
+% KERNEINHEITEN
+\newcommand{\hoblevies}{Einberufene Hobs}
+\newcommand{\hoblevy}{Einberufener Hob}
+\newcommand{\hobauxiliaries}{Hob Hilfstruppen}
+\newcommand{\hobauxiliary}{Hob Hilfstruppler}
+% SPEZIALEINHEITEN
+\newcommand{\mountainwolfcavalry}{Gebirgswolfkavallerie}
+\newcommand{\hobgoblinrider}{Hobgoblinreiter}
+\newcommand{\tuskermahouts}{Stoßzahnmahuts}
+\newcommand{\hobgoblinmahout}{Hobgoblin Mahut}
+\newcommand{\drummer}{Trommler}
+\newcommand{\gogyag}{Gogyag}
+\newcommand{\hobcataphracts}{Hob Kataphrakte}
+\newcommand{\veteran}{Veteran}
+% Sonne verdunkeln
+\newcommand{\blastedplainemissaries}{Gesandte der gesprengten Ebene}
+\newcommand{\blastedplainemissariesQRS}{Gesandte g.E.}
+\newcommand{\emissary}{Gesandter}
+\newcommand{\hobballista}{Hob Ballista}
+\newcommand{\crew}{Besatzung}
+\newcommand{\skymountainemissaries}{Gesandte des Himmelsbergs}
+\newcommand{\skymountainemissariesQRS}{Gesandte HB.}
+\newcommand{\colossalcamel}{Kolossales Kamel}
+%%%% Einheitenregeln
+%% CHARAKTERE
+% Satrap
+\newcommand{\cavalrycommander}{Kavalleriekommandeur}
+\newcommand{\cavalrycommanderdef}{%
+\newrule{Der Modellteil des Satrapen erhält +1 Offensivfertigkeit und \textbf{Waffenmeister}.
+Der Satrap \textbf{muss} ein Reittier wählen.
+Kavallerieeinheiten denen ein oder mehr Modelle mit Kavalleriekommandeur angeschlossen sind, \textbf{müssen} jedes natürliche Ergebnis von \result{1} wiederholen, wenn sie für Angriffsrecihweite in der Angriffsphase würfeln.}%
+}
+\newcommand{\archerycommander}{Bogenschützenkommandeur}
+\newcommand{\archerycommanderdef}{%
+\newrule {Einheiten in Linienformation, denen ein oder mehr Modelle mit Bogenschützenkommandeur angeschlossen sind}, zählen für Salvenfeuer \textbf{nie} als bewegt.%
+}
+\newcommand{\shah}{\newrule{Schah}}
+\newcommand{\shahdef}{%
+\newrule{Das Modell des Satrapen erhält +1 Agilität, +1 Disziplin und +1 Attackewert und sein Budget für besondere Gegenstände wird auf 200 Punkte \newrule{\textbf{gesetzt}}.}%
+}
+\newcommand{\generalonly}{Nur General}
+% Hobgoblin Beschwörer
+\newcommand{\ifnotwizardapprentice}{Wenn nicht Zauberadept oder Meister}
+\newcommand{\infernallackey}{Lackei des Infernos}
+\newcommand{\infernallackeydef}{%
+Das Modell erhält \infernalarmour{} und \flintlockaxe{} (3+).
+Seine Disziplin wird auf 8 \textbf{gesetzt} und es \textbf{muss} Pyromantie \newrule{als seinen Magiepfad wählen.}%
+}
+%%% CORE
+%% Hob Auxiliaries
+\newcommand{\boilingoil}{Kochendes Öl}
+\newcommand{\boilingoildef}{%
+Wenn eine oder mehr gleichzeitige Attacken mit \boilingoil{} treffen, erhält die Zielenheit einen \boilingoil{} Marker nachdem die Attacken durchgeführt wurden.
+Wenn eine Einheit mit einem oder mehreren \boilingoil{} Markern von Schussattacken mit \ironrain{} anvisiert werden, zählen die schießenden Modelle für \ironrain{} als im Rückenbereich des Zies befindlich (nicht aber für andere Regeln wie Flächenattacke).
+Entferne alle Marker von einer Einheit wenn sie \newrule{von einer oder mehreren} Attacken mit \ironrain{} getroffen wird oder am Ende der Schussphase, je nachdem, was früher eintritt.%
+}
+\newcommand{\slingers}{\newrule{Schleuderer}}
+\newcommand{\slingersdef}{%
+\newrule{Das Modell erhält \textbf{Schwieriges Ziel (1)}, \textbf{unbedeutend}, \textbf{Plänkler} und Schleuder.}%
+}
+\newcommand{\disciples}{\newrule{Jünger}}
+\newcommand{\disciplesdef}{%
+\newrule{Einheiten, die vollständig aus Modellen mit Jünger bestehen erhalten \textbf{\swiftstride{}} für den Angriffswurf, sofern sie in der Flanke oder dem Rücken der angegriffen Einheit sind, wenn sie den Angriffswurf in der Angriffsphase würfeln.
+Zusätzlich  erhalten die Nahkampfwaffenattacken des Modells +1 auf Trefferwürfe und +1 Rüstungsdurchschlag, solange die Einheit des Modells in Kontakt mit der Flanke oder dem Rücken einer feindlichen Einheit in Kontakt ist.}%
+}
+\newcommand{\sling}{Schleuder}
+\newcommand{\slingdef}{%
+\newrule{Die Attacke erhält +1 Stärke w}enn aus kurzer Reichweite geschossen wird.%
+}
+%%% SPECIAL
+%% Hob Cataphracts
+\newcommand{\cataphractii}{\newrule{Kataphrakte}}
+\newcommand{\cataphractiidef}{%
+\newrule{Das Modell erhält Lanze, Waffenpaar, Schwere Rüstung, Schild und \textbf{Waffenmeister}.}%
+}
+\newcommand{\eternals}{\newrule{Ewige}}
+\newcommand{\eternalsdef}{%
+\newrule{Das Modell erhält Zweihandwaffe, Infernorüstung und \textbf{Hass (gegen Bestien und Kavallerie)}.}%
+}
+%% Trommel Gogyag
+\newcommand{\giantdrum}{Riesentrommel}
+\newcommand{\giantdrumdef}{%
+Das Modell muss in Einheiten von \blastedplainemissaries{} oder \hoblevies{} aufgestellt werden und kann sich auch nur solchen Einheiten anschließen.
+Das Modell kann seine Einheit nicht freiwillig verlassen.
+Zusätzlich werden die Reichweite der Marschmusik des Modells und zu feindlichen Einheiten, die einen Marschtest wegen der Einheit \drumgogyag{}s durchführen müssen, beide auf eine Entfernung von \newrule{\distance{18}} erhöht.%
+}
+%%% Sonne verdunkeln
+%% Hob Ballista
+\newcommand{\ballista}{Ballista}
+%%% Gesandte des Himmelsberges
+\newcommand{\saddlecannon}{Sattelkanone}

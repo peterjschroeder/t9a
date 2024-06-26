@@ -1,0 +1,131 @@
+
+\raggedcolumns
+\begin{multicols}{2}
+
+\basictitle{howtousethisdoc}{\howtousethisdoc}
+
+\howtousethisdocdef{}
+
+\basictitle{pathsofmagic}{\pathsofmagic}
+
+\pathsofmagicdef{}
+
+\basicsubtitle{\spellproperties}
+
+\spellpropertiesdef{}
+
+\basicsubsubtitle{1 -- \spellclassification}
+
+\spellclassificationdef{}
+
+\basicsubsubtitle{2 -- \spellname}
+
+\spellnamedef{}
+
+\basicsubsubtitle{3 -- \spellsCastingValue}
+
+\spellcastingvaluedef{}
+
+\basicsubsubtitle{4 -- \spellsType}
+
+\spelltypedef{}
+
+\basicsubsubtitle{5 -- \spellsDuration}
+
+\spelldurationdef{}
+
+\basicsubsubtitle{6 -- \spellsEffect}
+
+\spelleffectdef{}
+
+\end{multicols}
+
+\vspace*{15pt}
+\begingroup
+	\subimport{../../Rulebook/pics/}{spell_properties.tex}
+	% If the translated output doesn't look right, we'll need to design a spell_properties.tex specific for each language, please contact Eru.
+	\par%
+	\begin{center}\greytextcolor{\spellpropertiescaption}\end{center}%
+\endgroup
+
+\raggedcolumns
+\begin{multicols*}{2}
+
+\basicsubtitle{\boostedspells{}}
+
+\boostedspellsdef{}
+
+\basicsubtitle{\spellclassification{}}
+
+\spellclassificationintro{}
+
+\basicsubsubtitle{\learnedspells{}}
+
+\learnedspellsdef{}
+
+\basicsubsubtitle{\hereditaryspells{}}
+
+\hereditaryspellsdef{}
+
+\basicsubsubtitle{\attributespells{}}
+
+\attributespellsdef{}
+
+\basicsubsubtitle{\replicablespells{}}
+
+\replicablespellsdef{}
+
+\basicsubsubtitle{\boundspells{}}
+
+\boundspellsdef{}
+
+\basicsubtitle{\spellselection{}}
+
+\spellselectiondef{}
+
+\basicsubtitle{\spelltypes{}}
+
+\spelltypesdef{}
+
+\startspelltypestable{}% no longer a table!
+	\addnewspelltype{\augment}{\augmentdef}%
+	\addnewspelltype{\aura}{\auradef}%
+	\addnewspelltype{\caster}{\casterdef}%
+	\addnewspelltype{\castersunit}{\castersunitdef}%
+	\addnewspelltype{\damage}{\damagedef}%
+	\addnewspelltype{\direct}{\directdef}%
+	\addnewspelltype{\focused}{\focuseddef}%
+	\addnewspelltype{\ground}{\grounddef}%
+	\addnewspelltype{\hex}{\hexdef}%
+	\addnewspelltype{\missile}{\missiledef}%
+	\addnewspelltype{\range{X}}{\rangedef}%
+	\addnewspelltype{\universal}{\universaldef}%
+\closespelltypestable{}
+
+\basicsubtitle{\spellduration}
+
+\spelldurationintro{}
+
+\basicsubsubtitle{\instant}
+
+\instantdef{}
+
+\basicsubsubtitle{\oneturn}
+
+\oneturndef{}
+
+\basicsubsubtitle{\permanent}
+
+\permanentdef{}
+
+\end{multicols*}
+
+\ifdef{\languageisfrench}{\renewcommand{\augment}{Amélio.}}{}
+\ifdef{\languageisrussian}{%
+	\renewcommand{\focused}{Сфокус.}%
+	\renewcommand{\universal}{Унив.}%
+}{}
+
+\DTLforeach*{pathsbook}{\pathtag=tag}{%
+	\subimport{../common/}{\pathtag.tex}
+}%

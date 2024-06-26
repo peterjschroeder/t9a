@@ -1,0 +1,40 @@
+
+\unitentry{%
+	name=\holdguardians{},
+	logo=special,
+	cost=250,
+	unitsize=3,
+	maxunitsize=8,
+	costpermodel=100,
+	maxunitsperarmy=2,
+	scoring=yes,
+	type=\infantry{},
+	size=\heightlarge{},
+	basesize=40\timess{}40,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=10,
+	globalrules={\scoring{},\fearless{},\hidebf{\runicengravings{}}},
+	defense@HP=3,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=1,
+	defensearmour={\pa{}},
+	offensename=\holdguardian{},
+	offense@At=3,
+	offense@Of=4,
+	offense@St=5,
+	offense@AP=2,
+	offense@Ag=2,
+	offenseweapons={\magicalattacks{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+		\alphaorderstickto{\standardbearer{}=20}\suboptionindent{}\runicbannerenchantment{}=\nolimit{}%
+	},
+	modelrulesdef={%
+		\modelruledef{\runicengravings}{\ruletype{\universalrule}{\runicengravingsdef}}%
+	},
+	toggles={\toggletrue{twocolprintcommandgroup}\togglefalse{onecolprintcommandgroup}},
+}% END UNIT ENTRY

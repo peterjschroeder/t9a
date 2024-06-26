@@ -1,0 +1,46 @@
+
+\unitentry{%
+	name=\tegumystics{},
+	logo=special,
+	cost=180,
+	unitsize=10,
+	maxunitsize=20,
+	maxunitsperarmy=2,
+	costpermodel=13,
+	scoring=,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=25\timess{}25,
+	global@Ad=4,
+	global@Ma=8,
+	global@Di=7,
+	globalrules={\hidebf{\cantrips{}}, \communalbond{},\lighttroops{}, \skirmisher{}, ,\strider{\waterterrain{}},\minimised{} (\disciplinetest{})},
+	defense@HP=1,
+	defense@Df=3,
+	defense@Re=4,
+	defense@Arm=2,
+	defenserules={\distracting{}, \hardtarget{} (1)},
+	offensename=\tegumystic{},
+	offense@At=2,
+	offense@Of=4,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=2,
+	offenserules={\magicalattacks{}, \weaponmaster{} \hidebf{\vitalistcombat{}}},
+	wizardconclave={%
+		\wizardconclavespellsintro{%
+			\spellformat{\shamanismspellone}{\shamanism},
+			\spellformat{\evocationspellone}{\evocation},
+			\spellformat{\enlightenment}{\hereditaryspell},
+			\spellformat{\druidismspellone}{\druidism},
+			\spellformat{\divinationspellone}{\divination},
+			\spellformat{\alchemyspellfour}{\alchemy},
+		}
+	},
+	commandgroup={%
+		\champion{} \withenclavewizard{}=90,
+	},
+	modelrulesdef={%
+		\modelruledef{\cantrips}{\ruletype{\universalrule}\cantripsdef}%
+	},
+}% END UNIT ENTRY

@@ -1,0 +1,289 @@
+
+% Text for the Soft Cover picture need to be generally defined:
+\newcommand{\figureLoSCSoftcover}{\Largefontsize{Soft Cover (\minuss{}1 to hit)}}
+\newcommand{\figureLoSCNocover}{\Largefontsize{No cover}}
+\newcommand{\figureLoSCStandard}{Standard}
+\newcommand{\figureLoSCLarge}{Large}
+\newcommand{\figureLoSCGigantic}{Gigantic}
+
+\part{Shooting Phase}
+\idx[main=y]{Shooting Phase}\label{shooting_phase}
+
+In the Shooting Phase, models with Shooting Attacks get a chance to use them.
+
+\RBbmc
+
+\section{Shooting Phase Sequence}
+\label{shooting_phase_sequence}
+
+The Shooting Phase is divided into the following steps:
+
+\startseqtablemc
+	1 & Start of the Shooting Phase\\
+	2 & Select one of your units and perform a Shooting Attack\\
+	3 & Repeat step 2 with a different unit that has not performed a Shooting Attack during this phase yet\\
+	4 & When all units that can (and want to) shoot have done so, the Shooting Phase ends\\
+\closeseqtablemc
+
+\subsection{Shooting With a Unit}
+\label{shooting_with_a_unit}
+
+Some units have Shooting Weapons or Model Rules that allow them to perform Shooting Attacks. Apply the following rules for shooting with a unit:
+
+\paragraph{1. Choose a shooting unit}
+
+Each unit that can perform a Shooting Attack can do so once per Shooting Phase, with the following conditions and restrictions:
+\begin{itemize}
+	\item \idx{Engaged in Combat}Fleeing models, \hyperref[shaken]{Shaken} models, models that are Engaged in Combat or were Engaged in Combat at any point during the Player Turn, and models that have Marched or Reformed this Player Turn cannot perform Shooting Attacks.
+	\item All models in the same unit must shoot at the same target, and \textbf{only models in the first and second rank may shoot}.
+	\item If models in the unit have more than one type of Shooting Attack, declare which one is used. All \rnf{} models except Champions must use the same type. Champions and Characters are free to use other types of Shooting Attacks (still maximum one attack per model, and directed at the same target as the unit).
+	\item In case of Multipart Models, each model part can make a Shooting Attack in the same phase and is not limited to using the same type of Shooting Attack as the other model parts.
+\end{itemize}
+
+\paragraph{2. Choose a target}
+
+Nominate an enemy unit within the shooting unit's Line of Sight as target. Units Engaged in Combat cannot be chosen as targets.
+
+\columnbreak
+
+\paragraph{3. Choose models to shoot with}
+
+Now determine which models from the shooting unit will shoot at the target unit:
+\begin{itemize}
+	\item Check the Line of Sight for each shooting model. Remember that Line of Sight is always drawn from the model's Front Facing. Models that do not have Line of Sight to at least one model in the target unit cannot shoot.
+	\item Measure the range to the target unit for each individual shooting model. This is measured from the actual position of each shooting model to the closest point of the target's Unit Boundary (even if this particular point is not within Line of Sight). Models that are farther away from their target than the range of their weapon cannot shoot (unless performing a Stand and Shoot Charge Reaction).
+	\item If the Shooting Attack has a minimum range, the model can only shoot if the target is at least partially outside the minimum range.
+	\item Any model part in the unit is free to choose not to shoot.
+\end{itemize}
+
+\paragraph{4. Shoot!}
+
+\idx[main=y]{Shots}Once you have established which models will shoot, these models shoot as many times as indicated in their weapon's profile. For each shot, roll to hit with each model, as described below, and then follow the Attack Sequence rules (page \pageref{attack_sequence}) after determining the number of hits.
+
+\section{Aim}
+\idx[main=y]{Aim}\label{aim}
+
+A Shooting Weapon's Aim tells you what the model needs to roll on a D6 to successfully hit its target. This roll is called a \textbf{to-hit roll}. A weapon's Aim is written in brackets after the weapon's name. Each unit has its own Aim for a given Shooting Weapon available to it. For example, an elven archer might have a Longbow (3+) while a human peasant only has a Longbow (4+). The elf would hit its target if it rolls 3 or higher on a D6, while the human would need to roll 4 or higher.
+
+\columnbreak
+
+\section{To-Hit Modifiers}
+\idx{To-Hit Modifiers}\idx[main=y]{Shooting To-Hit Modifiers}\label{to_hit_modifiers}
+
+Shooting Attacks may suffer one or more to-hit modifiers to their to-hit rolls. If so, simply modify the dice roll for the shot with the given modifiers. The most common to-hit modifiers are explained below and summarised in table \ref{table/to_hit_modifiers}. If one or more hits are scored, follow the procedure described under \totalref{attacks}. A natural roll of \result{1} is always a miss.
+
+\begin{Figure}
+	\Tanchor
+	\centering
+	\begin{tabular}{p{4cm} r}
+		\toprule
+		Long Range & \minuss{}1 \\
+		\hspace*{0.3cm}(if \hyperref[accurate]{Accurate}\idx{Accurate}) & 0 \\
+		Moving and Shooting & \minuss{}1 \\
+		\hspace*{0.3cm}(if \hyperref[quick_to_fire]{Quick to Fire}) & 0 \\
+		\hspace*{0.3cm}(if \hyperref[unwieldy]{Unwieldy}) & \minuss{}2 \\
+		\hspace*{0.3cm}(if both) & \minuss{}1 \\
+		Stand and Shoot & \minuss{}1 \\
+		Soft Cover & \minuss{}1 \\
+		Hard Cover & \minuss{}2 \\
+		\hyperref[hard_target]{Hard Target (X)} & \minuss{}X \\
+		\bottomrule
+	\end{tabular}
+	\caption{Summary of to-hit modifiers.}
+	\label{table/to_hit_modifiers}
+\end{Figure}
+
+\subsection{Long Range (\minuss{}1 to hit)}
+\idx[main=y]{Long Range}\label{long_range}
+
+If the distance from the shooting model to the target is more than half the weapon's maximum  range, the shooting model suffers a \minuss{}1 to-hit modifier. Remember that you measure range for each shooting model individually.
+
+\idx[main=y]{Short Range}For rules purposes, any model not shooting at Long Range is considered to be at Short Range.
+
+\subsection{Moving and Shooting (\minuss{}1 to hit)}
+\idx[main=y]{Moving and Shooting}\label{moving_and_shooting}
+
+A model that has moved during this Player Turn suffers a \minuss{}1 to-hit modifier.
+
+\subsection[Stand and Shoot Charge Reaction (\minuss{}1 to hit)]{Stand and Shoot Charge Reaction\\ (\minuss{}1 to hit)}
+\label{stand_and_shoot_charge_reaction}
+
+Shooting Attacks made as part of a Stand and Shoot Charge Reaction suffer a \minuss{}1 to-hit modifier.
+
+\columnbreak
+
+\subsection{Cover}
+\idx[main=y]{Cover}\label{cover}\label{target_facing}
+
+Cover is determined individually for each shooting model. There are two types of Cover: Soft Cover and Hard Cover. The most common reason for applying Cover is the target being obscured by Terrain or other models, or the target being inside a Terrain Feature.
+
+Determine if the target benefits from Cover as follows:
+
+\startseqtablemc
+	1 & \idx[main=y]{Target Facing}Determine which Arc of the target the shooting model is Located in. The corresponding Facing is referred to as Target Facing.\\
+	2 & Choose any point on the shooting model's Front Facing.\\
+	3 & For targets on rectangular bases:
+			\begin{itemize}
+			\item From the chosen point, check how large the fraction of the Target Facing is that is behind obstructions (see figures \ref{figure/hard_cover} and \ref{figure/soft_and_hard_cover}).
+			\item If half or more of the Target Facing is obscured, the target benefits from Cover.
+			\end{itemize}
+		\idx{Round Bases}For targets on round bases:
+			\begin{itemize}
+			\item From the chosen point, check whether the nearest point on the Target Facing, referred to as Target Point, is behind obstructions.
+			\item If this point is obscured, the target benefits from Cover.
+			\end{itemize}\vspace*{-12pt}\strut
+		\\
+\closeseqtablemc
+
+Note that:
+\begin{itemize}
+\item This is not Line of Sight. Check what is behind obstructions even outside of the shooting model's Front Arc.
+
+\item Models always ignore their own unit and the Terrain Feature they are inside for Cover purposes (e.g. a model shooting from a Forest doesn't suffer a Soft Cover modifier for shooting through or at a target inside that Forest).
+\end{itemize}
+
+\subsubsection[Target Benefiting from Soft Cover (\minuss{}1 to hit)]{Target Benefiting from Soft Cover\\ (\minuss{}1 to hit)}
+\idx[main=y]{Soft Cover}
+
+\newcommand{\figCITA}{a)}
+\newcommand{\figCITB}{b)}
+
+\begin{figure*}[!t]
+	\renewcommand{\figbiglettersize}{19}
+	\centering
+	\vspace*{-10pt}
+	\def\svgwidth{0.75\textwidth}
+	\subimport{../pics/}{cover_inside_terrain.pdf_tex}
+	\caption{%
+		Example of Soft Cover inside a Terrain Feature.\captionposttitlepremc%
+		\raggedcolumns\begin{multicols}{2}%
+		a) The left model in unit A is Located in unit B's Flank Arc, so unit B's Flank Facing is the Target Facing. More than half of the Target Facing is obscured inside the Forest, so unit B benefits from Soft Cover against the left model.\columnbreak\newline
+		b) The right model in unit A is Located in unit B's Front Arc, so unit B's Front Facing is the Target Facing. Less than half of the Target Facing is obscured inside the Forest, so unit B does not benefit from Soft Cover against the right model.%
+		\end{multicols}%
+	}
+	\label{figure/cover_inside_terrain}
+	\vspace*{10pt}
+\end{figure*}
+
+A model shooting at a target that benefits from Soft Cover suffers a \minuss{}1 to-hit modifier. Soft Cover applies if more than half of the Target Facing or the Target Point is obscured by either:
+\begin{itemize}
+	\item Covering Terrain that contributes to Soft Cover
+	\item Models that \textbf{do not} block Line of Sight, except if the target and/or the shooting model is of Gigantic Height (see \totalref{model_classification}), and the obscuring model is of Standard Height (in which case no cover is applied) (remember that \hyperref[skirmisher]{Skirmisher} and \hyperref[tall]{Tall} affect what blocks Line of Sight)
+\end{itemize}
+
+For examples, see figure \ref{figure/cover_inside_terrain} for Cover inside Terrain, and figure \ref{figure/soft_cover_and_intervening_models} for Cover behind intervening models.
+
+\columnbreak
+
+\subsubsection[Target Benefiting from Hard Cover (\minuss{}2 to hit)]{Target Benefiting from Hard Cover\\ (\minuss{}2 to hit)}
+\idx[main=y]{Hard Cover}
+
+A model shooting at a target that benefits from Hard Cover suffers a \minuss{}2 to-hit modifier. Hard Cover applies if more than half of the Target Facing or the Target Point is obscured by either:
+\begin{itemize}
+	\item Covering Terrain that contributes to Hard Cover
+	\item Models that \textbf{do} block Line of Sight (remember that \hyperref[skirmisher]{Skirmisher} and \hyperref[tall]{Tall} affect what blocks Line of Sight)
+\end{itemize}
+
+See figure \ref{figure/hard_cover} for an example of Hard Cover.
+
+\subsubsection[Target Benefiting from Soft and Hard\\ Cover]{Target Benefiting from Soft and Hard Cover}
+
+If a target benefits from both Soft and Hard Cover, only apply the Hard Cover modifier.
+
+If parts of the Target Facing are obscured by obstructions that contribute to Soft and Hard Cover, but not enough to grant either Soft Cover or Hard Cover, apply only the Soft Cover modifier if more than half of the Target Facing is obscured. For example, if \SI{30}{\percent} of the Target Facing is obscured by Terrain contributing to Soft Cover, and another \SI{30}{\percent} by Terrain contributing to Hard Cover, then apply the Soft Cover modifier as \SI{60}{\percent} of the Target Facing is obscured in total (see figure \ref{figure/soft_and_hard_cover}).
+
+\columnbreak
+
+\section{Hopeless Shots}
+\idx[main=y]{Hopeless Shots}\label{hopeless_shots}
+
+When to-hit modifiers make the needed roll to hit with a Shooting Attack 7+, apply the following procedure:
+
+\startseqtablemc
+	1 & Roll to hit. Rolls of \result{6} are considered successful.\\
+	2 & For each successful roll, roll to hit again: this second to-hit roll is \textbf{always} successful on a roll of 4+, and the shot hits.\\
+	3 & Proceed as described under \totalref{attacks}.\\
+\closeseqtablemc
+
+If there are enough modifiers to make the needed roll to hit 8 or more, the shot cannot hit.
+
+For example, a model with Bow (4+) shoots at a target benefiting from Hard Cover (\minuss{}2 to hit), and is Moving and Shooting (\minuss{}1). This would require the shooter to roll 7+ on a D6, which means that this shot follows the Hopeless Shots rule. If a \result{6} is rolled, roll to-hit again. If the shooter manages to roll 4+ on the second attempt, the shot hits.
+
+\RBemc
+
+\newcommand{\figureSCA}{a)}
+\newcommand{\figureSCB}{b)}
+\newcommand{\figureSCC}{c)}
+\newcommand{\figureHCSizeGreen}{\normalfontsize{Height: Standard}}
+\newcommand{\figureHCSizeBlue}{\normalfontsize{Height: Standard}}
+\newcommand{\figureHCSizePurple}{\normalfontsize{Height: Standard}}
+\newcommand{\figureHCNotwithinlightofsight}{%
+	\begin{minipage}{0.08\unitlength}\begin{center}%
+		\smallfontsize{Not within Line of Sight}%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figureHCWithinlightofsight}{\smallfontsize{Within Line of Sight}}
+\newcommand{\figureHCLessthanhalfoffootprintobscured}{%
+	\begin{minipage}{0.08\unitlength}\begin{center}%
+		\smallfontsize{Less than half of the Target Facing is obscured}%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figureHCMorethanhalfoffootprintobscured}{%
+	\begin{minipage}{0.08\unitlength}\begin{center}%
+		\smallfontsize{More than half of the Target Facing is obscured}%
+	\end{center}\end{minipage}%
+}
+
+\begin{figure}[!hpt]
+	\centering
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{hard_cover.pdf_tex}
+	\caption{Example of Hard Cover.\captionposttitlepremc%
+	\raggedcolumns\begin{multicols}{2}%
+		a) The model cannot shoot (as its Line of Sight is blocked).\captionpar
+		b) The model can shoot (as the enemy is within Line of Sight). Hard Cover is applied since more than half of the Target Facing is obscured by a Terrain Feature that contributes to Hard Cover.\columnbreak\newline
+		c) The model can shoot (enemy within Line of Sight). No cover is applied since half or less of the Target Facing is obscured by a Terrain Feature that contributes to Hard Cover.%
+	\end{multicols}%
+	}
+	\label{figure/hard_cover}
+\end{figure}
+
+\newcommand{\figureSHCHeightLarge}{\normalfontsize{Height: Large}}
+\newcommand{\figureSHCHeightStandard}{\normalfontsize{Height: Standard}}
+\newcommand{\figureSHCLessthanhalffromhardcover}{%
+	\normalfontsize{Less than half of the Target Facing is in Hard Cover}%
+}
+\newcommand{\figureSHCLessthanhalffromsoftcover}{%
+	\begin{minipage}{0.3\unitlength}\begin{center}%
+		\normalfontsize{Less than half of the Target Facing is in Soft Cover}%
+	\end{center}\end{minipage}%
+}
+\newcommand{\figureSHCMorethanhalftotal}{%
+	\begin{minipage}{0.23\unitlength}\begin{center}%
+		\normalfontsize{{More than half of the total Target Facing is in Cover}}%
+	\end{center}\end{minipage}%
+}
+
+\begin{figure}[!hpb]
+	\begin{minipage}{0.55\textwidth}
+	\renewcommand{\figbiglettersize}{22}
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{soft_and_hard_cover.pdf_tex}
+	\end{minipage}\hfill\begin{minipage}[b]{0.42\textwidth}
+	\caption{Example of Soft and Hard Cover.\captionposttitle
+		Less than half of the Target Facing is obscured by obstructions contributing either to Soft or Hard Cover. However, more than half is obscured by the combination of both. In this case, the target counts as benefiting from Soft Cover.}
+	\label{figure/soft_and_hard_cover}
+	\end{minipage}
+\end{figure}
+
+% Text for the figure defined at the beginning of the chapter
+
+\begin{figure}[!phtb]
+	\centering
+	\def\svgwidth{\textwidth}
+	\subimport{../pics/}{soft_cover_and_intervening_models.pdf_tex}
+	\caption{Soft Cover from intervening models.\captionposttitle%
+		This diagram shows all possible Height combinations between shooting, target, and intervening models that result in Soft Cover or no cover. The intervening model is assumed to be placed in such a way that it is sufficiently obscuring the target from the shooter. All other Height combinations yield either Hard Cover or no Line of Sight, depending on whether the target is completely obscured by the intervening model or not.%
+	}
+	\label{figure/soft_cover_and_intervening_models}
+\end{figure}

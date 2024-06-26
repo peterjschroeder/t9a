@@ -1,0 +1,41 @@
+
+\unitentry{%
+	name=\dragonseeker{},
+	logo=character,
+	optionallogo=,
+	categorynote=,
+	cost=190,
+	unitsize=1,
+	maxunitsperarmy=3,
+	type=\infantry{},
+	size=\heightstandard{},
+	basesize=20\timess{}20,
+	global@Ad=3,
+	global@Ma=9,
+	global@Di=10,
+	globalrules={\notaleader{},\unbreakable{},\fearless{},\vanguard{},\magicresistance{1},\thebiggertheyare{}},
+	defense@HP=3,
+	defense@Df=7,
+	defense@Re=5,
+	defense@Arm=0,
+	defenserules={\aegis{} (6+)},
+	offensename=\dragonseeker{},
+	offense@Ag=5,
+	offense@At=5,
+	offense@Of=7,
+	offense@St=5,
+	offense@AP=2,
+	offenseweapons={\gw{},\pw{}},
+	offenserules={\sturdy{},\weaponmaster{},\lethalstrike{},\yercomingwithme{}},
+	options={%
+		\onechoiceonlyACO{%
+			\textbf{\monsterseeker{}}=85,
+			\textbf{\grimresolve{}}=70,
+		},
+		\runicweaponenchantments{}=\upto{}150,
+     },
+	optionalmodelrulesdef={%
+		\modelruledef{\monsterseeker}{\ruletype{\attackattributeclosecombat}{\monsterseekerdef}}%
+		\modelruledef{\grimresolve}{\ruletype{\attackattributeclosecombat}{\grimresolvedef}}%
+	},
+}% END UNIT ENTRY

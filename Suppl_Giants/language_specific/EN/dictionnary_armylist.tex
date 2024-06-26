@@ -1,0 +1,308 @@
+
+%%%% Unit entries names
+
+\newcommand{\beastgiant}{Beast Giant}
+\newcommand{\possessedgiant}{Possessed Giant}
+\newcommand{\dreadedgiant}{Dreaded Giant}
+\newcommand{\giantdwarf}{Giant Dwarf}
+\newcommand{\imperialgiant}{Imperial Giant}
+\newcommand{\highborngiant}{Highborn Giant}
+\newcommand{\citizengiant}{Citizen Giant}
+\newcommand{\feudalgiant}{Feudal Giant}
+\newcommand{\slavegiant}{Slave Giant}
+\newcommand{\giant}{Giant}
+\newcommand{\sauriangiant}{Saurian Giant}
+\newcommand{\sylvangiant}{Sylvan Giant}
+\newcommand{\verminousgiant}{Verminous Giant}
+\newcommand{\ancientgiant}{Ancient Giant}
+\newcommand{\corpsegiant}{Corpse Giant}
+\newcommand{\maraudinggiant}{Marauding Giant}
+
+
+%%%% Unit entries rules
+
+% General
+\newcommand{\mustchooseonechoiceonlyblue}{\optionschoice{\newrule{\textbf{Must} choose} (one choice only):}}
+\newcommand{\themodelcountstowards}[1]{The unit counts towards #1.}
+\newcommand{\nongiantgiganticrestriction}{This Duplication Limit is reduced by 1 for each non-Giant Gigantic model in the Army.}
+
+\newcommand{\giantseegiantdo}{Giant See, Giant Do}
+
+\newcommand{\ragedef}{%
+	Whenever the model loses a Health Point, it gains +1 Attack Value. Whenever it gains a Health Point, it suffers \minuss{}1 Attack Value.%
+}
+
+\newcommand{\giantclub}{Giant Club}
+\newcommand{\giantclubdef}{Attacks made with this weapon gain +1 Strength and +1 Armour Penetration.}
+
+\newcommand{\bigbrother}{Big Brother}
+\newcommand{\bigbrotherdef}{%
+	The model's Health Points are \textbf{set} to 8, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.%
+}
+% Beast Giant
+
+\newcommand{\BHgiantseegiantdodef}{%
+	The model gains \textbf{Drunkard} and \textbf{\strider{\forest}}. At the end of a friendly Movement Phase, if the model is in contact with a Forest Terrain Feature it may lose its current weapon (if applicable) and gain \uprootedtree{}.%
+}
+
+\newcommand{\uprootedtree}{Uprooted Tree}
+\newcommand{\beerbarrel}{Beer Barrel}
+\newcommand{\fame}{Fame}
+\newcommand{\uprootedtreedef}{%
+	Attacks made with this weapon hit automatically and have their Strength \textbf{set} to 5 and their Armour Penetration \textbf{set} to 0.%
+}
+\newcommand{\beerbarreldef}{%
+	The bearer gains \textbf{Looted Booze}. Once per game, the weapon may be used as a Shooting Weapon with the following profile:\newline
+	\range{8}, \shots{1}, \St{} 4, \AP{} 0, \textbf{\areaattack{3\timess{}3}}, \textbf{\reload}, hits automatically. After being used as a Shooting Weapon, the bearer loses Looted Booze.%
+}
+\newcommand{\mongrelherald}{Mongrel Herald}
+\newcommand{\primalinstinct}{Primal Instinct}
+\newcommand{\famedef}{%
+	The Beast Giant model part gains \textbf{\harnessed} and the model gains an additional model part:\newline%
+	\mongrelheraldprofile{}\newline%
+	Friendly units within \distance{6} of one or more models with Fame gain a +2 Discipline modifier for Discipline Tests for Primal Instinct. The model's range of Fame is increased to:%
+	\begin{itemize}%
+		\item \distance{9} the first time an enemy Large Height model is removed as a casualty due to the model's attacks.%
+		\item \distance{12} the first time an enemy Gigantic Height model is removed as a casualty due to the model's attacks.%
+	\end{itemize}%
+}
+
+% Possessed Giant
+
+\newcommand{\DLgiantseegiantdodef}{%
+	The model gains \textbf{Fearless}, \newrule{\textbf{Frenzy},} and \textbf{Supernal}. \removedrule{In addition, at the start of each friendly Player Turn, before taking any Frenzy Tests, the model must take a Discipline Test that is modified by \minuss{}X, where X corresponds to the difference between the number of Health Points that the model started the game with and its current number of Health Points. If failed, the model gains \textbf{Battle Focus} and \textbf{Frenzy} until the end of the game.}%
+}
+\newcommand{\uptotwomanifestations}{\newrule{\textbf{Must} choose (at least 1 and up to 2 choices):}}
+\newcommand{\markoftheeternalchampion}{Mark of the Eternal Champion}
+\newcommand{\witheringvapour}{Withering Vapour}
+\newcommand{\sorcerousantennae}{Sorcerous Antennae}
+\newcommand{\livingshield}{Living Shield}
+\newcommand{\unnaturalroots}{Unnatural Roots}
+\newcommand{\dexteroustentacles}{Dexterous Tentacles}
+\newcommand{\generalmanifestation}{\newrule{A single Manifestation available to the General\refsymbol{}}}
+\newcommand{\seedlbook}{\newrule{\refsymbol{}See DL Army Book for points}}
+
+
+% Dreaded Giant
+
+\newcommand{\themenagerie}{The Menagerie}
+\newcommand{\DEgiantseegiantdodef}{The model gains \textbf{Scent of Blood}.}
+\newcommand{\monstrouswhip}{Monstrous Whip}
+\newcommand{\monstrouswhipdef}{%
+	Rolls for Charge Range of other friendly Gigantic models that are within \distance{12} of one or more models with Monstrous Whip are subject to Maximised Roll.%
+}
+\newcommand{\dreadmask}{Dread Mask}
+\newcommand{\dreadmaskdef}{%
+	The model gains \textbf{\devastatingcharge{} (\distracting{})} and can cast \spellformat{\witchcraftspellthree}{\witchcraft} as a Bound Spell with Power Level (4/8). In addition, Fear Tests caused by the model and rolls for Flee Distance of enemy units that Break from Combat while in base contact with the model are subject to Maximised Roll.%
+}
+
+% Giant Dwarf
+
+\newcommand{\enginesofwar}{Engines of War}
+\newcommand{\DHgiantseegiantdodef}{The model gains \textbf{\hatred{} (against Gigantic)} and \textbf{Sturdy}.}
+\newcommand{\giantseeker}{Giant Seeker}
+\newcommand{\giantseekerdef}{%
+	The model gains \textbf{\aegis{} (6+)}, \textbf{\fearless{}}, \textbf{The bigger they are\dots{}}, \textbf{\unbreakable{}}, \textbf{Yer comin' with me!}, and loses Shield.%
+}
+\newcommand{\giantofthedeep}{Giant of the Deep}
+\newcommand{\giantofthedeepdef}{%
+	The model gains \textbf{Shield Wall} and \la{}.%
+}
+\newcommand{\bigbrothergiantdwarfdef}{%
+	The model's Health Points are \textbf{set} to 7, and its base size is changed to 75\timess{}100 \si{\milli\meter}. The roll for the number of hits from its Stomp Attacks is subject to Maximised Roll.%
+}
+
+% Imperial Giant
+
+\newcommand{\sunnasfury}{Sunna's Fury}
+\newcommand{\imperialgiantcategorynote}{A model with an upgrade marked with \{IA\} counts towards Imperial Armoury instead.}
+\newcommand{\imperialarmouryInitial}{IA}
+\newcommand{\EoSgiantseegiantdodef}{The model gains \textbf{Support Unit}.}
+\newcommand{\giantrepeater}{Giant Repeater}
+\newcommand{\bigfanofsunna}{Big Fan of Sunna}
+\newcommand{\bigfanofsunnadef}{%
+	The model gains \textbf{\battlefocus{}}, \textbf{\fearless{}}, and \textbf{Fanatical} (see Flagellants unit).%
+}
+
+% Highborn Giant
+
+\newcommand{\HEgiantseegiantdodef}{The model gains \la{} and \textbf{Martial Discipline}.}
+\newcommand{\lioncloakandaxe}{Lion Cloak and Axe}
+\newcommand{\lioncloakandaxedef}{%
+	The model replaces its Light Armour with Lion's Fur and gains \textbf{Multiple Wounds (2, against Large and Beasts, Large and Cavalry, Gigantic)}.%
+}
+\newcommand{\shoreguardianbow}{Shoreguardian Bow}
+\newcommand{\AncientAllies}{\newrule{Ancient Allies (1)}}
+
+% Citizen Giant
+
+\newcommand{\IDgiantseegiantdodef}{The model gains Infernal Armour and \textbf{Infernal Brand}.}
+\newcommand{\infernalarmour}{Infernal Armour}
+
+\newcommand{\towershield}{Tower Shield}
+\newcommand{\infernallash}{Infernal Lash}
+\newcommand{\towershielddef}{%
+	The model gains Soft Cover against attacks from models Located in its Front Arc, and \textbf{\parry{}}.%
+}
+\newcommand{\infernallashdef}{%
+	The model gains +2 Agility. At the start of each Melee Phase, you may choose a single friendly unit within \distance{6} of the wielder (including the wielder itself). The chosen unit's Close Combat Attacks become \textbf{Flaming Attacks} and \textbf{Magical Attacks} until the end of the Melee Phase.%
+}
+\newcommand{\oilkegs}{Oil Kegs}
+\newcommand{\oilkegsdef}{%
+	The model loses Infernal Brand and Infernal Armour and gains \newrule{{\la{}}, {\textbf{Oil Flasks}}}, \textbf{Flammable}, \textbf{\insignificant{}}, and \textbf{Throwing Weapons (4+)} \newrule{with Shots 4}. \removedrule{Any unit that suffers one or more hits from the model's Shooting Attacks gains 1 Incendiary marker.}%
+}
+
+% Feudal Giant
+
+\newcommand{\feudalgiantrestriction}{\removedrule{This Duplication Limit is reduced by 1 for each mounted Duke in the army.}}
+\newcommand{\KoEgiantseegiantdodef}{The model gains \newrule{\textbf{Shield}}, \removedrule{\textbf{Insignificant}, \textbf{Serf}, and \la{}}, \newrule{\textbf{The Blessing}, and \textbf{Ordeal}, and its Aegis can never be improved beyond Aegis (5+)}.}
+\newcommand{\serfhelper}{Serf Helper}
+\newcommand{\serfhelperdef}{%
+	The model gains \newrule{\textbf{Honesty} and \textbf{Orison} (0), and loses \textbf{Ordeal} and Shield}.%
+}
+\newcommand{\knightedgiant}{Knighted Giant}
+\newcommand{\knightedgiantdef}{%
+	The model gains \textbf{\devastatingcharge{} (+3 \St{}, +3 \AP{})}, \removedrule{\textbf{Impetuous}, \textbf{Oath of Fealty}, \ha{}}, \newrule{\la{}, and \textbf{Courage}}, and loses \removedrule{Insignificant and Serf}  \newrule{\textbf{Ordeal} and Shield}.%
+}
+
+% Slave Giant
+
+\newcommand{\OKgiantseegiantdodef}{%
+	The model gains \textbf{Sons of the Avalanche} and counts as a Character for the purpose of Sons of the Avalanche.\newline%
+	The model is a \textbf{\musician{}}. The range of the model's March to the Beat, and to enemy units that are required to take a March Test due to the Slave Giant, are both extended to \distance{18}.%
+}
+
+\newcommand{\ironfist}{Iron Fist}
+\newcommand{\trollstewcauldron}{Troll Stew Cauldron}
+\newcommand{\trollstewcauldrondef}{%
+	The model gains \textbf{\breathattack{} (\St{} 3, \AP{} 1)} and \textbf{\fortitude{} (5+)}. If the model has used this Breath Attack, it regains \textbf{\breathattack{} (\St{} 3, \AP{} 1)} at the end of a Melee Phase during which the bearer caused at least four Health Point losses against enemy units with Close Combat Attacks and Stomp Attacks.%
+}
+
+% Giant
+
+\newcommand{\OnGgiantseegiantdodef}{The model gains \textbf{Born to Fight}.}
+
+\newcommand{\nets}{Nets}
+\newcommand{\wreckingball}{Wrecking Ball}
+\newcommand{\wreckingballdef}{%
+	The wielder gains \textbf{\fearless}, \textbf{\randommovement{} (\distance{\XDsix{3}})}, \textbf{Shambolic}, and \textbf{\grindattacks{} (\Dsix{}+X)}, where X is equal to the Attack Value modifier the model gains from Rage. The wielder cannot perform any Close Combat Attacks.%
+}
+\newcommand{\bellyflop}{Belly Flop}
+\newcommand{\bellyflopdef}{%
+	When declaring a Charge, the model may declare to perform a Belly Flop in the First Round of Combat. If so, this Special Attack must be made against the Charged unit at the model's Agility.%
+	\begin{itemize}%
+		\item The Charged unit suffers 1 hit with Str 5, AP 2, and \textbf{\areaattack{} (3\timess{}4)}.%
+		\item The model's Defensive Skill is \textbf{set} to 1, it cannot perform any other Special Attacks nor Close Combat Attacks, and it becomes Shaken.%
+	\end{itemize}%
+	The effects last until the end of the Round of Combat.%
+}
+
+% Saurian Ancient
+
+\newcommand{\thunderlizards}{Thunder Lizards}
+\newcommand{\SAgiantseegiantdodef}{The model gains +1 Armour and \textbf{Cold Blooded}.}
+\newcommand{\petsalamander}{Pet Salamander}
+\newcommand{\petsalamanderdef}{%
+	Whenever a Misfire is rolled, instead of rolling on the Misfire Table, the model suffers D3 hits that wound automatically with no saves of any kind allowed.%
+}
+\newcommand{\skinkcompanion}{Skink Companion}
+\newcommand{\skinkcompaniondef}{%
+	The Saurian Giant model part gains \textbf{\poisonattacks}. The model gains the following additional model parts:%
+}
+\newcommand{\skinkcrew}{Skink Crew}
+\newcommand{\poisonedjavelin}{Poisoned Javelin}
+
+% Sylvan Giant
+
+\newcommand{\unseenarrows}{Unseen Arrows}
+\newcommand{\SEgiantseegiantdodef}{%
+	The model gains \textbf{\feignedflight{}}, \removedrule{\textbf{\lighttroops{}}}, and \textbf{\strider{} (\forest{})}.%
+}
+\newcommand{\bonebreakdancer}{Bone Break Dancer}
+\newcommand{\sylvanblades}{Sylvan Blades}
+\newcommand{\bonebreakdancerdef}{%
+	At the start of each Round of Combat, choose one of the dances listed below and apply its effects until the end of the Round of Combat. The model cannot choose this dance again until after one of the following has happened:%
+	\begin{itemize}%
+		\item The model is no longer Engaged in Combat.%
+		\item The model has chosen a different dance.%
+	\end{itemize}%
+}
+\newcommand{\danceofthebigdip}{The Twist}
+\newcommand{\danceofthebigdipdef}{Enemy units in base contact do not receive any Rank Bonus to their Combat Score.}
+\newcommand{\danceofthebigfist}{Jump!}
+\newcommand{\danceofthebigbelly}{Belly Dancing}
+\newcommand{\danceofthebigfeet}{Tap Dancing}
+\newcommand{\giantsentinel}{Giant Sentinel}
+\newcommand{\giantsentineldef}{%
+	The model gains \newrule{\textbf{\lighttroops{}}}, \textbf{\poisonattacks}, and \textbf{\saplingbow{} (4+)}.%
+}
+\newcommand{\saplingbow}{Sapling Bow}
+
+% Verminous Giant
+
+\newcommand{\breadandgames}{\newrule{Bread and Games}}
+\newcommand{\VSgiantseegiantdodef}{The model gains \newrule{\textbf{Eagle Standard} \removedrule{\textbf{Brood's Courage (Rats-at-Arms)} and \textbf{Safety in Numbers}}}. In addition, the range of the General's Commanding Presence is \textbf{always} set to \distance{18} when measured to a Verminous Giant.}
+\newcommand{\livingbomb}{Living Bomb}
+\newcommand{\livingbombdef}{%
+	When the model is removed as a casualty, all units within \distance{6} suffer 2D6 hits with Strength 4 and Armour Penetration 1.%
+}
+\newcommand{\bigsneaker}{Big Sneaker}
+\newcommand{\bigsneakerdef}{%
+	The model gains \textbf{\multiplewounds{}{} (2, against \removedrule{Character} \newrule{Large, Gigantic})} and \newrule{\pw} \removedrule{\textbf{\poisonattacks{}}}. In addition, while within \distance{6} of any other Large or Gigantic unit or any Terrain Feature other than Open Terrain, the model gains \textbf{\hardtarget{} (1)}.%
+}
+
+% Ancient Giant
+
+\newcommand{\masonsmenagerie}{Mason's Menagerie}
+\newcommand{\resurrectedInitials}{Rsr}
+\newcommand{\ancientgiantrestriction}{Cannot be taken in Monarchs of Undeath armies.}
+\newcommand{\UDgiantseegiantdodef}{The Ancient Giant model part gains \textbf{Dust to Dust}, \textbf{\fearless{}}, \textbf{\lethalstrike{}}, and \textbf{\undead{}}.}
+\newcommand{\UDragedef}{%
+	Whenever the model loses a Health Point, the model part gains +1 Attack Value. Whenever it gains a Health Point, the model part suffers \minuss{}1 Attack Value.%
+}
+\newcommand{\bonechariot}{Bone Chariot}
+\newcommand{\bonechariotdef}{%
+	The model part gains \textbf{\harnessed{}}, \textbf{\impacthits{} (D6)}, \newrule{\textbf{Swiftstride}}, and the model gains the following additional model parts:%
+}
+\newcommand{\charioteercrew}{Charioteer Crew}
+\newcommand{\aspenbow}{Aspen Bow}
+\newcommand{\scarabgiant}{Scarab Giant}
+\newcommand{\scarabgiantdef}{%
+	The Ancient Giant model part gains \textbf{\harnessed}. The model gains \textbf{\distracting} and the following additional model part that is not affected by Undying Will:%
+}
+\newcommand{\scarabs}{Scarabs}
+
+% Corpse Giant
+\newcommand{\swiftdeath}{Swift Death}
+\newcommand{\armylimit}{\newrule{*This Duplication Limit is reduced by 1 for each non-Giant Gigantic model in the Army.}}
+\newcommand{\reanimatedInitials}{Rea}
+\newcommand{\VCgiantseegiantdodef}{The model gains \textbf{Ashes to Ashes}, \textbf{\fearless{}}, and \textbf{\undead{}}.}
+\newcommand{\barrowgiant}{Barrow Giant}
+\newcommand{\barrowgiantdef}{%
+	The model gains a Halberd and \textbf{\multiplewounds{}{} (2, against Standard)}.%
+}
+\newcommand{\ghoulgiant}{Ghoul Giant}
+\newcommand{\ghoulgiantdef}{%
+	The model gains \textbf{\poisonattacks{}} and \textbf{Unholy Appetite}.%
+}
+\newcommand{\zombiegiant}{Zombie Giant}
+\newcommand{\zombiegiantdef}{%
+	The model gains \textbf{\stubborn{}}, its Reanimated is \textbf{set} to D6+1, and its Offensive Skill and Defensive Skill are \textbf{set} to 1. The model does not count as a model with Towering Presence for the purpose of \spellformat{Arise!}{\hereditaryspell}.%
+}
+
+% Marauding Giant
+
+\newcommand{\WDGgiantseegiantdodef}{The model gains \textbf{Battle Fever}.}
+\newcommand{\legendarybeasts}{Legendary Beasts (1)}
+\newcommand{\monstrousfamiliar}{Monstrous Familiar}
+\newcommand{\monstrousfamiliardef}{%
+	The model gains \textbf{\wizardapprentice}. Instead of selecting spells as normal, it \textbf{must} select one of the following spells (during Spell Selection): \spellformat{\alchemyspellthree}{\alchemy}, \spellformat{\occultismspellfour}{\occultism}, or \spellformat{Hellfire}{\hereditaryspell}.%
+}
+\newcommand{\tribalwarspear}{Tribal Warspear}
+\newcommand{\tribalwarspeardef}{%
+	Attacks with a \tribalwarspear{} gain +1 Strength and \textbf{Multiple Wounds (D3, against Towering Presence)}. Charging enemy units in base contact with the wielder suffer \minuss{}1 Agility. The wielder gains \textbf{War Platform} and \textbf{\notaleader} with the following exception: it can only join units that include at least one Barbarians model.%
+}
+\newcommand{\favouredgiant}{Favoured Giant}
+\newcommand{\favouredgiantdef}{%
+	The model loses Battle Fever and gains \textbf{Trophy Rack}, Hellforged Armour, Paired Weapons, and counts as a Character for the purpose of issuing, accepting, and refusing Duels.%
+}

@@ -1,0 +1,55 @@
+
+\unitentry{%
+	name=\sirens{},
+	logo=summoned,
+	categorynote=\summonedcategorynote{},
+	cost=\newrule{180},
+	unitsize=5,
+	maxunitsize=15,
+	costpermodel=\newrule{18},
+	maxunitsperarmy=3,
+	type=\cavalry{},
+	size=\heightstandard{},
+	basesize=25\timess{}50,
+	global@Ad=9,
+	global@Ma=18,
+	global@Di=9,
+	globalrules={\supernal{},\fearless{},\strider{},\hidebf{\elusive},\feignedflight{},\lighttroops{}},
+	defense@HP=1,
+	defense@Df=5,
+	defense@Re=3,
+	defense@Arm=0,
+	defense@Aeg=5+,
+	printAeg=defined,
+	defenserules={\hardtarget{} (1)},
+	offensename=\siren{},
+	offense@At=2,
+	offense@Of=5,
+	offense@St=4,
+	offense@AP=1,
+	offense@Ag=4,
+	offensenameB=\symbioticsteed{},
+	offenseB@At=1,
+	offenseB@Of=3,
+	offenseB@St=3,
+	offenseB@AP=0,
+	offenseB@Ag=3,
+	offenserulesB={\harnessed{}},
+	commandgroup={%
+		\champion{}=10,
+		\musician{}=10,
+		\standardbearer{}=10,
+	},
+	explicitoptions={%
+		\manifestationonechoice{%
+			\addsortedexploption{prename=lust,hypertag=mesmerisingplumage,name=\mesmerisingplumage{},cost=5\permodel{}}
+			\addsortedexploption{prename=lust,hypertag=roaminghands,name=\roaminghands{},cost=6\permodel{}}
+			\addsortedexploption{prename=lust,hypertag=hotblood,name=\hotblood{},cost=1\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=centipedelegs,name=\centipedelegs{},cost=1\permodel{}}
+			\addsortedexploption{prename=chaos,hypertag=hammerhand,name=\hammerhand{},cost=9\permodel{}}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\elusive}{\ruletype{\universalrule}\elusivedef}
+	},
+}

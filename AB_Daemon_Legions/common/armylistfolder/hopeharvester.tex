@@ -1,0 +1,52 @@
+
+\unitentry{%
+	name=\hopeharvester{},
+	logo=special,
+	categorynote=\engineofdamnationrestriction{},	
+	cost=285,
+	unitsize=1,
+	maxunitsperarmy=2,
+	type=\beast{},
+	size=\heightlarge{},
+	basesize=50\timess{}100,
+	global@Ad=5,
+	global@Ma=10,
+	global@Di=7,
+	globalrules={\supernal{},\fearless{},\fear{},\warplatform{},\notaleader{}},
+	defense@HP=5,
+	defense@Df=4,
+	defense@Re=5,
+	defense@Arm=3,
+	defense@Aeg=5+,
+	printAeg=defined,
+	offensename=\hopeharvester{},
+	offense@At=4,
+	offense@Of=4,
+	offense@St=6,
+	offense@AP=3,
+	offense@Ag=1,
+	offenseweapons={\hidebf{\aetherbattery{} (3+)}},
+	explicitoptions={%
+		\setexploption{\textbf{\engineofdamnation{}}}{80}
+		\manifestationonechoice{%
+			\addsortedexploption{prename=sloth,hypertag=auraofdespair,name=\auraofdespair{},cost=25}
+			\addsortedexploption{prename=sloth,hypertag=chillingyawn,name=\chillingyawn{},cost=55}
+			\addsortedexploption{prename=sloth,hypertag=sorcerousantennae,name=\sorcerousantennae{},cost=30}
+			\addsortedexploption{prename=chaos,hypertag=ironhusk,name=\ironhusk{},cost=65}
+			\addsortedexploption{prename=chaos,hypertag=markoftheeternalchampion,name=\markoftheeternalchampion{},cost=50}
+		}
+	},
+	modelrulesdef={%
+		\modelruledef{\aetherbattery}{\ruletype{\artilleryweapon}%
+		\volleygun{}. \range{18}, \shots{\XDsix{2}\timess{}2}, \St{}~4, \AP{}~1.\newline%
+		\aetherbatterydef%
+		}
+	},
+	optionalmodelrulesdef={%
+		\modelruledef{\engineofdamnation}{\ruletype{\universalrule}\engineofdamnationdef}
+	},
+	toggles={%
+		\toggletrue{onecolprintoptionalmodelrulesdef}
+		\togglefalse{twocolprintoptionalmodelrulesdef}
+	},
+}
